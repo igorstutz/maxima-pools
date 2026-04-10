@@ -169,47 +169,99 @@ export default function PoolsPage() {
       {/*  Sticky filter bar                                            */}
       {/* ============================================================ */}
       <div className="sticky top-20 z-40 bg-white/80 backdrop-blur-xl border-b border-gray-200/60 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
-          {/* Search bar */}
-          <div className="relative mb-3">
-            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              value={nameSearch}
-              onChange={(e) => setNameSearch(e.target.value)}
-              placeholder="Search by pool name..."
-              className="w-full pl-9 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all"
-            />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          {/* Mobile: search + selects */}
+          <div className="sm:hidden space-y-2">
+            <div className="relative">
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                value={nameSearch}
+                onChange={(e) => setNameSearch(e.target.value)}
+                placeholder="Search by name..."
+                className="w-full pl-9 pr-4 py-2 bg-gray-50 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              {([
+                { value: typeFilter, onChange: (v: string) => applyTypeFilter(v as TypeFilter), options: typeFilters, allLabel: "All Types" },
+                { value: shapeFilter, onChange: (v: string) => applyShapeFilter(v as ShapeFilter), options: shapeFilters, allLabel: "All Shapes" },
+                { value: sizeFilter, onChange: (v: string) => applySizeFilter(v as SizeFilter), options: sizeFilters, allLabel: null },
+                { value: widthFilter, onChange: (v: string) => applyWidthFilter(v as WidthFilter), options: widthFilters, allLabel: null },
+              ] as const).map((sel, i) => (
+                <select
+                  key={i}
+                  value={sel.value}
+                  onChange={(e) => sel.onChange(e.target.value)}
+                  className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-xl text-xs font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_8px_center] bg-no-repeat"
+                >
+                  {sel.options.map((f) => (
+                    <option key={f} value={f}>{sel.allLabel && f === sel.options[0] ? sel.allLabel : f}</option>
+                  ))}
+                </select>
+              ))}
+            </div>
           </div>
 
-          {/* Mobile: compact selects */}
-          <div className="grid grid-cols-2 sm:hidden gap-2">
-            <select
-              value={typeFilter}
-              onChange={(e) => applyTypeFilter(e.target.value as TypeFilter)}
-              className="px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_10px_center] bg-no-repeat"
-            >
-              {typeFilters.map((f) => (
-                <option key={f} value={f}>
-                  {f === "All" ? "All Types" : f}
-                </option>
+          {/* Desktop: single compact row */}
+          <div className="hidden sm:flex items-center gap-3">
+            {/* Search */}
+            <div className="relative w-52 shrink-0">
+              <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+              <input
+                type="text"
+                value={nameSearch}
+                onChange={(e) => setNameSearch(e.target.value)}
+                placeholder="Search name..."
+                className="w-full pl-8 pr-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent"
+              />
+            </div>
+
+            <div className="w-px h-7 bg-gray-200" />
+
+            {/* Type pills */}
+            <div className="flex gap-1">
+              {typeFilters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => applyTypeFilter(filter)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer whitespace-nowrap ${
+                    typeFilter === filter
+                      ? "bg-accent text-white shadow-sm shadow-accent/25"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  }`}
+                >
+                  {filter === "All" ? "All" : filter}
+                </button>
               ))}
-            </select>
-            <select
-              value={shapeFilter}
-              onChange={(e) => applyShapeFilter(e.target.value as ShapeFilter)}
-              className="px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_10px_center] bg-no-repeat"
-            >
-              {shapeFilters.map((f) => (
-                <option key={f} value={f}>
-                  {f === "All" ? "All Shapes" : f}
-                </option>
+            </div>
+
+            <div className="w-px h-7 bg-gray-200" />
+
+            {/* Shape pills */}
+            <div className="flex gap-1">
+              {shapeFilters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => applyShapeFilter(filter)}
+                  className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                    shapeFilter === filter
+                      ? "bg-accent text-white shadow-sm shadow-accent/25"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  }`}
+                >
+                  {filter}
+                </button>
               ))}
-            </select>
+            </div>
+
+            <div className="w-px h-7 bg-gray-200" />
+
+            {/* Length & Width selects */}
             <select
               value={sizeFilter}
               onChange={(e) => applySizeFilter(e.target.value as SizeFilter)}
-              className="px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_10px_center] bg-no-repeat"
+              className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_8px_center] bg-no-repeat pr-7"
             >
               {sizeFilters.map((f) => (
                 <option key={f} value={f}>{f}</option>
@@ -218,101 +270,12 @@ export default function PoolsPage() {
             <select
               value={widthFilter}
               onChange={(e) => applyWidthFilter(e.target.value as WidthFilter)}
-              className="px-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_10px_center] bg-no-repeat"
+              className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_8px_center] bg-no-repeat pr-7"
             >
               {widthFilters.map((f) => (
                 <option key={f} value={f}>{f}</option>
               ))}
             </select>
-          </div>
-
-          {/* Desktop: pill buttons */}
-          <div className="hidden sm:flex flex-wrap gap-x-6 gap-y-3 items-end">
-            {/* Type filters */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Type</span>
-              <div className="flex flex-wrap gap-1.5">
-                {typeFilters.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => applyTypeFilter(filter)}
-                    className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                      typeFilter === filter
-                        ? "bg-accent text-white shadow-md shadow-accent/25"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
-                    {filter === "All" ? "All" : filter}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-px h-10 bg-gray-200" />
-
-            {/* Shape filters */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Shape</span>
-              <div className="flex gap-1.5">
-                {shapeFilters.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => applyShapeFilter(filter)}
-                    className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                      shapeFilter === filter
-                        ? "bg-accent text-white shadow-md shadow-accent/25"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-px h-10 bg-gray-200" />
-
-            {/* Length filters */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Length</span>
-              <div className="flex gap-1.5">
-                {sizeFilters.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => applySizeFilter(filter)}
-                    className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                      sizeFilter === filter
-                        ? "bg-accent text-white shadow-md shadow-accent/25"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-px h-10 bg-gray-200" />
-
-            {/* Width filters */}
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Width</span>
-              <div className="flex gap-1.5">
-                {widthFilters.map((filter) => (
-                  <button
-                    key={filter}
-                    onClick={() => applyWidthFilter(filter)}
-                    className={`px-3.5 py-1.5 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer ${
-                      widthFilter === filter
-                        ? "bg-accent text-white shadow-md shadow-accent/25"
-                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>
