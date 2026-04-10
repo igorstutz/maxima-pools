@@ -82,7 +82,7 @@ export default function PoolSimulatorPage() {
 
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="absolute top-0 right-[15%] w-80 h-80 rounded-full bg-accent/8 blur-3xl" />
@@ -230,7 +230,7 @@ export default function PoolSimulatorPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/50" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">

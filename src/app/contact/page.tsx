@@ -92,7 +92,7 @@ export default function FreeEstimatePage() {
 
       {/* ── Hero + Form ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-24">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
         <div className="absolute top-0 right-[15%] w-80 h-80 rounded-full bg-accent/8 blur-3xl" />
         <div className="absolute bottom-0 left-[10%] w-96 h-96 rounded-full bg-primary-light/8 blur-3xl" />
@@ -142,7 +142,7 @@ export default function FreeEstimatePage() {
                   {["SM", "JL", "MR"].map((initials, i) => (
                     <div
                       key={initials}
-                      className={`w-10 h-10 rounded-full border-2 border-[#042a45] flex items-center justify-center text-xs font-bold text-white ${
+                      className={`w-10 h-10 rounded-full border-2 border-[#0369a1] flex items-center justify-center text-xs font-bold text-white ${
                         i === 0
                           ? "bg-gradient-to-br from-cyan-400 to-blue-500"
                           : i === 1
@@ -262,7 +262,7 @@ export default function FreeEstimatePage() {
 
       {/* ── Why Maxima — trust signals ── */}
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

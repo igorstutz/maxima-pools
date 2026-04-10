@@ -33,7 +33,7 @@ export function OutdoorLiving() {
   return (
     <section className="relative py-20 sm:py-28 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
       <div className="absolute inset-0 water-caustics opacity-15" />
 
       {/* Decorative orbs */}
@@ -87,7 +87,7 @@ export function OutdoorLiving() {
                   className="w-full aspect-[16/10] object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-transparent" />
                 {/* Floating label */}
                 <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
                   <p className="text-white font-semibold text-sm">Complete Outdoor Entertainment</p>
@@ -115,7 +115,7 @@ export function OutdoorLiving() {
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021526] via-[#021526]/70 to-[#021526]/20 group-hover:via-[#021526]/60 transition-all duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/70 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
 
                 {/* Content */}
                 <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">

@@ -3,7 +3,7 @@
 @theme {
   --color-primary: #0c4a6e;
   --color-primary-light: #0369a1;
-  --color-primary-dark: #082f49;
+  --color-primary-dark: #0c4a6e;
   --color-accent: #06b6d4;
   --color-accent-light: #22d3ee;
   --color-accent-dark: #0891b2;
@@ -291,6 +291,6 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-track { background: #082f49; }
+::-webkit-scrollbar-track { background: #0c4a6e; }
 ::-webkit-scrollbar-thumb { background: #0891b2; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #22d3ee; }

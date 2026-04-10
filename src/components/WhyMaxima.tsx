@@ -109,7 +109,7 @@ export function WhyMaxima() {
 
           {/* Card 1 — Hero card with pool image (spans 7) */}
           <ScrollReveal className="md:col-span-2 lg:col-span-7">
-            <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#063554] h-full min-h-[320px] sm:min-h-[380px]">
+            <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] h-full min-h-[320px] sm:min-h-[380px]">
               <Image
                 src="/images/pools/clear-water-beach.png"
                 alt="Clear Water Beach pool installation"
@@ -280,7 +280,7 @@ export function WhyMaxima() {
 
           {/* Card 5 — San Juan Partnership badge (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={3}>
-            <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#063554] p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative">
+            <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative">
               <div className="absolute inset-0 water-caustics opacity-20" />
               <div className="relative">
                 <Image

@@ -192,8 +192,8 @@ export default function PoolColorsPage() {
             sizes="100vw"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/60 via-transparent to-[#021526]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -246,7 +246,7 @@ export default function PoolColorsPage() {
       <SectionDivider />
 
       {/* ── Color Selector ── */}
-      <section className="py-16 sm:py-24 bg-[#021526]">
+      <section className="py-16 sm:py-24 bg-[#0c4a6e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="max-w-3xl mb-12">
@@ -507,7 +507,7 @@ export default function PoolColorsPage() {
 
       {/* ── Finish Types ── */}
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -670,7 +670,7 @@ export default function PoolColorsPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/50" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">

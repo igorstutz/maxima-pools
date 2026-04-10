@@ -140,8 +140,8 @@ export default function SanJuanVsCompetitorsPage() {
           alt="San Juan Pools vs competitors comparison"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/80 to-[#021526]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/70 via-transparent to-[#021526]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/80 to-[#0c4a6e]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/70 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -195,7 +195,7 @@ export default function SanJuanVsCompetitorsPage() {
       <SectionDivider />
 
       {/* ── Stats Strip ── */}
-      <section className="bg-[#021526] py-12 sm:py-16">
+      <section className="bg-[#0c4a6e] py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -302,7 +302,7 @@ export default function SanJuanVsCompetitorsPage() {
 
       {/* ── Hand-Laid vs Chopped — dark section ── */}
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -499,7 +499,7 @@ export default function SanJuanVsCompetitorsPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/50" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">

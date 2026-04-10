@@ -127,8 +127,8 @@ export default function FrozenPoolsPage() {
           alt="Frozen fiberglass pool in winter — ice-ready San Juan pool"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/80 to-[#021526]/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/70 via-transparent to-[#021526]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/80 to-[#0c4a6e]/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/70 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -185,7 +185,7 @@ export default function FrozenPoolsPage() {
       <SectionDivider />
 
       {/* ── Stats Strip ── */}
-      <section className="bg-[#021526] py-12 sm:py-16">
+      <section className="bg-[#0c4a6e] py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
@@ -315,7 +315,7 @@ export default function FrozenPoolsPage() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 66vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#021526] via-[#021526]/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/50 to-transparent" />
                 <div className="relative h-full flex flex-col justify-end p-7 sm:p-9">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-11 h-11 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/25 flex items-center justify-center">
@@ -376,7 +376,7 @@ export default function FrozenPoolsPage() {
 
       {/* ── Winter Advantages — dark section with image gallery ── */}
       <section className="relative py-16 sm:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -581,7 +581,7 @@ export default function FrozenPoolsPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/50" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/50" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">

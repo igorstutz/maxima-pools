@@ -163,7 +163,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526]/92 via-[#021526]/85 to-[#021526]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e]/92 via-[#0c4a6e]/85 to-[#0c4a6e]/95" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -316,7 +316,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
             {/* Right — San Juan quality card */}
             <div className="lg:col-span-2">
               <ScrollReveal delay={1}>
-                <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#031c30] to-[#063554] p-7 sm:p-8 relative overflow-hidden h-full">
+                <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#031c30] to-[#075985] p-7 sm:p-8 relative overflow-hidden h-full">
                   <div className="absolute inset-0 water-caustics opacity-15" />
                   <div className="relative">
                     <Image
@@ -446,7 +446,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
       {/* ── CTA ── */}
       <section className="relative overflow-hidden py-20 sm:py-28">
         <Image src={pool.image} alt="" fill className="object-cover blur-md scale-110" sizes="100vw" />
-        <div className="absolute inset-0 bg-[#021526]/92" />
+        <div className="absolute inset-0 bg-[#0c4a6e]/92" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

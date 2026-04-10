@@ -31,7 +31,7 @@ const moreLinks = [
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#021526] text-white overflow-hidden">
+    <footer className="relative bg-[#0c4a6e] text-white overflow-hidden">
       {/* Top accent line */}
       <div className="h-1 bg-gradient-to-r from-transparent via-accent to-transparent" />
 

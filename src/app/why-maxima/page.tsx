@@ -170,7 +170,7 @@ export default function WhyMaximaPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/80 to-[#021526]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/80 to-[#0c4a6e]/50" />
         <div className="absolute inset-0 water-caustics opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 w-full">
@@ -367,7 +367,7 @@ export default function WhyMaximaPage() {
       {/* SAN JUAN PARTNERSHIP SECTION (Dark)                              */}
       {/* ================================================================ */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-15" />
         <div className="absolute top-0 right-[20%] w-[500px] h-[500px] rounded-full bg-accent/8 blur-3xl" />
         <div className="absolute bottom-0 left-[10%] w-[400px] h-[400px] rounded-full bg-primary-light/8 blur-3xl" />
@@ -494,7 +494,7 @@ export default function WhyMaximaPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#021526] via-[#021526]/70 to-[#021526]/20 group-hover:via-[#021526]/60 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/70 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
 
                   <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">
                     <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
@@ -587,7 +587,7 @@ export default function WhyMaximaPage() {
       {/* INVESTMENT SECTION (Dark)                                        */}
       {/* ================================================================ */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#021526] via-[#042a45] to-[#063554]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e] via-[#0369a1] to-[#075985]" />
         <div className="absolute inset-0 water-caustics opacity-10" />
         <div className="absolute top-0 left-[30%] w-[500px] h-[500px] rounded-full bg-accent/5 blur-3xl" />
 
@@ -654,7 +654,7 @@ export default function WhyMaximaPage() {
                     className="w-full aspect-[16/11] object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-transparent" />
                   <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
                     <p className="text-white font-semibold text-sm">
                       Huntington Beach - Granite
@@ -719,7 +719,7 @@ export default function WhyMaximaPage() {
 
             {/* Map / Visual */}
             <ScrollReveal direction="right" delay={1}>
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#063554] p-8 sm:p-10 min-h-[380px] flex flex-col items-center justify-center text-center">
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] p-8 sm:p-10 min-h-[380px] flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 water-caustics opacity-20" />
                 <div className="relative">
                   <div className="w-20 h-20 rounded-full bg-accent/15 border border-accent/20 flex items-center justify-center mx-auto mb-6">
@@ -761,7 +761,7 @@ export default function WhyMaximaPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526]/95 via-[#021526]/85 to-[#021526]/60" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/60" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative w-full px-8 sm:px-12 lg:px-16 py-14 sm:py-16">
