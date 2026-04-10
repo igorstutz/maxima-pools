@@ -77,7 +77,9 @@
       "Bash(read name:*)",
       "Bash(GITHUB_PAGES=true npx next build)",
       "Bash(gh auth:*)",
-      "Bash(gh repo:*)"
+      "Bash(gh repo:*)",
+      "Bash(echo '{\"build_type\":\"workflow\",\"source\":{\"branch\":\"main\",\"path\":\"/\"}}')",
+      "Bash(gh api:*)"
     ]
   }
 }
