@@ -10,6 +10,7 @@ const whyMaximaSubmenu = [
   { label: "Our Process", href: "/our-process" },
   { label: "Financing", href: "/financing" },
   { label: "Areas We Serve", href: "/areas-we-serve" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const poolsSubmenu = [
