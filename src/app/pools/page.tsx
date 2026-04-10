@@ -341,15 +341,8 @@ export default function PoolsPage() {
           {/* Grid */}
           {filteredPools.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
-              {filteredPools.map((pool, index) => (
-                <ScrollReveal
-                  key={pool.name}
-                  delay={
-                    (((index % 3) + 1) as 1 | 2 | 3) <= 3
-                      ? (((index % 3) + 1) as 1 | 2 | 3)
-                      : undefined
-                  }
-                >
+              {filteredPools.map((pool) => (
+                <div key={pool.name} className="animate-fadeInUp">
                   <Link href={`/pools/${slugify(pool.name)}`} className="block">
                     <div className="pool-card group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm">
                       {/* Image container */}
@@ -433,7 +426,7 @@ export default function PoolsPage() {
                       </div>
                     </div>
                   </Link>
-                </ScrollReveal>
+                </div>
               ))}
             </div>
           )}
