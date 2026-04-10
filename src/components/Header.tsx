@@ -5,6 +5,13 @@ import Image from "@/components/Image";
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
+const whyMaximaSubmenu = [
+  { label: "About Us", href: "/why-maxima" },
+  { label: "Our Process", href: "/our-process" },
+  { label: "Financing", href: "/financing" },
+  { label: "Areas We Serve", href: "/areas-we-serve" },
+];
+
 const poolsSubmenu = [
   { label: "Pools", href: "/pools" },
   { label: "Spas", href: "/pools" },
@@ -26,6 +33,7 @@ const poolInfoSubmenu = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [whyOpen, setWhyOpen] = useState(false);
   const [poolsOpen, setPoolsOpen] = useState(false);
   const [infoOpen, setInfoOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -63,22 +71,46 @@ export function Header() {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-1">
-            {[
-              { label: "Home", href: "/" },
-              { label: "Why Maxima", href: "/why-maxima" },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+            <Link
+              href="/"
+              className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
+                scrolled
+                  ? "text-gray-700 hover:text-primary hover:bg-gray-50"
+                  : "text-white/80 hover:text-white hover:bg-white/10"
+              }`}
+            >
+              Home
+            </Link>
+
+            {/* Why Maxima dropdown */}
+            <div className="relative group">
+              <button
+                className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? "text-gray-700 hover:text-primary hover:bg-gray-50"
                     : "text-white/80 hover:text-white hover:bg-white/10"
                 }`}
               >
-                {item.label}
-              </Link>
-            ))}
+                Why Maxima
+                <ChevronDown
+                  size={14}
+                  className="group-hover:rotate-180 transition-transform duration-300"
+                />
+              </button>
+              <div className="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 translate-y-2 group-hover:translate-y-0">
+                <div className="bg-white rounded-2xl shadow-2xl shadow-black/10 border border-gray-100 py-3 min-w-[220px] overflow-hidden">
+                  {whyMaximaSubmenu.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-5 py-3 text-sm text-gray-600 hover:bg-accent/5 hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* Pools & Spas dropdown */}
             <div className="relative group">
@@ -205,7 +237,7 @@ export function Header() {
       {/* Mobile menu */}
       <div
         className={`lg:hidden transition-all duration-500 overflow-hidden ${
-          mobileOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
+          mobileOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="bg-white border-t border-gray-100 shadow-2xl">
@@ -217,13 +249,36 @@ export function Header() {
             >
               Home
             </Link>
-            <Link
-              href="/why-maxima"
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
-              onClick={() => setMobileOpen(false)}
-            >
-              Why Maxima
-            </Link>
+            <div>
+              <button
+                onClick={() => setWhyOpen(!whyOpen)}
+                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+              >
+                Why Maxima
+                <ChevronDown
+                  size={16}
+                  className={`transition-transform duration-300 ${whyOpen ? "rotate-180" : ""}`}
+                />
+              </button>
+              <div
+                className={`overflow-hidden transition-all duration-300 ${
+                  whyOpen ? "max-h-96" : "max-h-0"
+                }`}
+              >
+                <div className="pl-4 space-y-1 py-2">
+                  {whyMaximaSubmenu.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-4 py-2 text-sm text-gray-500 hover:text-primary rounded-lg"
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             <div>
               <button
