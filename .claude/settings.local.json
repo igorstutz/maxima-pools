@@ -83,7 +83,8 @@
       "Bash(gh run:*)",
       "Bash(xargs sed:*)",
       "Bash(grep -c 'src=\"/maxima-pools/' out/index.html)",
-      "Bash(grep -c 'href=\"/maxima-pools/' out/index.html)"
+      "Bash(grep -c 'href=\"/maxima-pools/' out/index.html)",
+      "WebFetch(domain:www.lyonfinancial.net)"
     ]
   }
 }
