@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 
 interface HeroImageCycleProps {
   images: string[];
@@ -26,17 +25,16 @@ export function HeroImageCycle({
 
   return (
     <>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       {images.map((src, i) => (
-        <Image
+        <img
           key={src}
           src={src}
           alt={alt}
-          fill
-          className={`object-cover transition-opacity duration-[2000ms] ease-in-out ${
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
             i === activeIndex ? "opacity-100" : "opacity-0"
           }`}
-          priority={i === 0}
-          sizes="100vw"
+          loading={i === 0 ? "eager" : "lazy"}
         />
       ))}
     </>
