@@ -9,6 +9,7 @@ const whyMaximaSubmenu = [
   { label: "About Us", href: "/why-maxima" },
   { label: "Our Process", href: "/our-process" },
   { label: "Financing", href: "/financing" },
+  { label: "Reviews", href: "/reviews" },
   { label: "Areas We Serve", href: "/areas-we-serve" },
   { label: "Contact Us", href: "/contact" },
 ];
