@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { X, ZoomIn } from "lucide-react";
+import { asset } from "@/lib/base-path";
 
 interface ImageLightboxProps {
   src: string;
@@ -75,7 +76,7 @@ export function ImageLightbox({
           </button>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={src}
+            src={asset(src)}
             alt={alt}
             className="max-w-full max-h-full object-contain select-none"
             onClick={(e) => e.stopPropagation()}

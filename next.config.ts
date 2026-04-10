@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   output: isGhPages ? "export" : undefined,
   basePath: isGhPages ? "/maxima-pools" : "",
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: isGhPages ? "/maxima-pools" : "",
+  },
   images: {
     unoptimized: true,
     remotePatterns: [

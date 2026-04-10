@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { asset } from "@/lib/base-path";
 
 interface HeroImageCycleProps {
   images: string[];
@@ -29,7 +30,7 @@ export function HeroImageCycle({
       {images.map((src, i) => (
         <img
           key={src}
-          src={src}
+          src={asset(src)}
           alt={alt}
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[2000ms] ease-in-out ${
             i === activeIndex ? "opacity-100" : "opacity-0"

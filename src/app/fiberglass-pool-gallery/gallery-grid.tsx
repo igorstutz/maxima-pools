@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { X, ChevronLeft, ChevronRight, Grid3X3, LayoutGrid, ZoomIn } from "lucide-react";
+import { asset } from "@/lib/base-path";
 import { galleryImages, categories, type GalleryCategory } from "./gallery-data";
 
 const BATCH = 16;
@@ -139,7 +140,7 @@ export function GalleryGrid() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={img.src}
+                src={asset(img.src)}
                 alt={`${img.category} fiberglass pool`}
                 loading={i < 8 ? "eager" : "lazy"}
                 decoding="async"
@@ -243,7 +244,7 @@ export function GalleryGrid() {
             {/* Image */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={filtered[lightbox].src}
+              src={asset(filtered[lightbox].src)}
               alt={`${filtered[lightbox].category} fiberglass pool`}
               className="max-w-[90vw] max-h-[85vh] object-contain select-none"
               onClick={(e) => e.stopPropagation()}
