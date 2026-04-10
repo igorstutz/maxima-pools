@@ -143,7 +143,6 @@ export function Header() {
             {[
               { label: "Outdoor Living", href: "/outdoor-living" },
               { label: "Gallery", href: "/fiberglass-pool-gallery" },
-              { label: "Pool Simulator", href: "/pool-simulator" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -157,6 +156,16 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="/pool-simulator"
+              className={`px-4 py-2 text-sm font-semibold rounded-lg border transition-all duration-300 ${
+                scrolled
+                  ? "text-accent border-accent/30 bg-accent/5 hover:bg-accent/10"
+                  : "text-accent-light border-accent/40 bg-accent/10 hover:bg-accent/20"
+              }`}
+            >
+              Pool Simulator
+            </Link>
           </div>
 
           {/* CTA + Phone + Mobile toggle */}
@@ -294,7 +303,7 @@ export function Header() {
             </Link>
             <Link
               href="/pool-simulator"
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+              className="block px-4 py-3 text-accent font-semibold bg-accent/5 border border-accent/20 hover:bg-accent/10 rounded-xl"
               onClick={() => setMobileOpen(false)}
             >
               Pool Simulator
