@@ -262,6 +262,38 @@ export default async function LocationPage({ params }: PageProps) {
 
       <SectionDivider />
 
+      {/* ── Other Locations ── */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
+              Other Areas We Serve
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+              {locations
+                .filter((l) => l.name !== location.name)
+                .map((l) => (
+                  <Link
+                    key={l.name}
+                    href={`/locations/${slugify(l.name)}`}
+                    className="group flex items-center gap-2 px-3 py-2.5 rounded-xl bg-gray-50 border border-gray-100 hover:border-accent/30 hover:bg-accent/5 transition-all"
+                  >
+                    <MapPin
+                      size={12}
+                      className="text-gray-300 group-hover:text-accent transition-colors shrink-0"
+                    />
+                    <span className="text-xs sm:text-sm font-medium text-gray-600 group-hover:text-gray-900 transition-colors truncate">
+                      {l.name}
+                    </span>
+                  </Link>
+                ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <SectionDivider />
+
       {/* ── CTA ── */}
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

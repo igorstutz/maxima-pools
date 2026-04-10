@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "@/components/Image";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { locations, slugify } from "@/lib/locations";
 
 const poolsLinks = [
   { label: "Pool Collection", href: "/pools" },
@@ -27,15 +28,6 @@ const moreLinks = [
   { label: "Free Estimate", href: "/contact" },
 ];
 
-const serviceAreas = [
-  "Columbus",
-  "Delaware",
-  "Franklin County",
-  "Delaware County",
-  "Union County",
-  "Licking County",
-  "Fairfield County",
-];
 
 export function Footer() {
   return (
@@ -186,39 +178,22 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Map + Service Areas */}
+          {/* Service Areas */}
           <div className="col-span-2 lg:col-span-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white/25 mb-5">
               Service Areas
             </h3>
-            <div className="flex flex-wrap gap-1.5 mb-5">
-              {serviceAreas.map((area) => (
-                <span
-                  key={area}
-                  className="text-xs text-white/35 bg-white/[0.03] border border-white/[0.05] rounded-full px-3 py-1 font-medium"
+            <div className="flex flex-wrap gap-1.5">
+              {locations.map((loc) => (
+                <Link
+                  key={loc.name}
+                  href={`/locations/${slugify(loc.name)}`}
+                  className="text-xs text-white/35 bg-white/[0.03] border border-white/[0.05] rounded-full px-3 py-1 font-medium hover:text-accent hover:border-accent/25 transition-colors"
                 >
-                  {area}
-                </span>
+                  {loc.name}
+                </Link>
               ))}
             </div>
-
-            {/* Mini map */}
-            <a
-              href="https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block rounded-xl overflow-hidden border border-white/[0.06] hover:border-accent/25 transition-colors"
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.3!2d-82.96602510025286!3d40.337707411614765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838f9bae20028f9%3A0x661e61be64f26be7!2sMaxima%20Pools!5e0!3m2!1sen!2sus!4v1775790742497!5m2!1sen!2sus"
-                width="100%"
-                className="h-[250px] sm:h-[150px]"
-                style={{ border: 0, pointerEvents: "none" }}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Maxima Pools location"
-              />
-            </a>
           </div>
         </div>
 
