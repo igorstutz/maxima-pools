@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "@/components/Image";
 import Link from "next/link";
+import { locations, slugify } from "@/lib/locations";
 import {
   Eye,
   ShieldCheck,
@@ -130,14 +131,6 @@ const enhancements = [
   },
 ];
 
-const serviceAreas = [
-  "Columbus",
-  "Delaware",
-  "Franklin County",
-  "Union County",
-  "Licking County",
-  "Fairfield County",
-];
 
 export default function WhyMaximaPage() {
   return (
@@ -701,19 +694,26 @@ export default function WhyMaximaPage() {
                   unique soil conditions, climate considerations, and
                   permitting requirements of Central Ohio.
                 </p>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                  {serviceAreas.map((area) => (
-                    <div
-                      key={area}
-                      className="flex items-center gap-2.5 bg-gray-50 border border-gray-100 rounded-xl px-4 py-3 hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
+                  {locations.map((loc) => (
+                    <Link
+                      key={loc.name}
+                      href={`/locations/${slugify(loc.name)}`}
+                      className="group flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-3 py-2.5 hover:border-accent/30 hover:bg-accent/5 transition-all duration-300"
                     >
-                      <MapPin size={14} className="text-accent shrink-0" />
-                      <span className="text-sm text-gray-700 font-medium">
-                        {area}
+                      <MapPin size={12} className="text-gray-300 group-hover:text-accent transition-colors shrink-0" />
+                      <span className="text-xs sm:text-sm text-gray-700 group-hover:text-gray-900 font-medium truncate">
+                        {loc.name}
                       </span>
-                    </div>
+                    </Link>
                   ))}
                 </div>
+                <Link
+                  href="/areas-we-serve"
+                  className="text-accent font-semibold text-sm hover:underline"
+                >
+                  View all service areas &rarr;
+                </Link>
               </div>
             </ScrollReveal>
 
