@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/Image";
 import { ArrowRight, ArrowUpRight, Ruler, Layers, Droplets } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 

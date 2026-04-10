@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "next/link";
 import { ArrowRight, Maximize2 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";

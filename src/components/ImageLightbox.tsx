@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Image from "next/image";
+import Image from "@/components/Image";
 import { X, ZoomIn } from "lucide-react";
 import { asset } from "@/lib/base-path";
 

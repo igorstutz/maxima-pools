@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "next/link";
 import {
   ArrowRight,

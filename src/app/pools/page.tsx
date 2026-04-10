@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useRef, useCallback } from "react";
-import Image from "next/image";
+import Image from "@/components/Image";
 import Link from "next/link";
 import { Ruler, Droplets, Maximize2, Waves } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";

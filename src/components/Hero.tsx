@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import Image from "@/components/Image";
 import { ArrowRight, Star, Play } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 
