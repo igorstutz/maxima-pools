@@ -31,20 +31,8 @@ jobs:
         env:
           GITHUB_PAGES: "true"
 
-      - name: Fix asset paths for GitHub Pages
-        run: |
-          # Fix image src paths that don't have basePath prefix
-          find out -name '*.html' -exec sed -i \
-            -e 's|src="/images/|src="/maxima-pools/images/|g' \
-            -e 's|src="/favicon|src="/maxima-pools/favicon|g' \
-            -e 's|src="/apple-|src="/maxima-pools/apple-|g' \
-            {} +
-          # Fix any remaining local asset paths in JS chunks
-          find out/_next -name '*.js' -exec sed -i \
-            -e 's|"/images/|"/maxima-pools/images/|g' \
-            {} +
-          # Add .nojekyll
-          touch out/.nojekyll
+      - name: Prepare GitHub Pages output
+        run: touch out/.nojekyll
 
       - uses: actions/upload-pages-artifact@v3
         with:
