@@ -16,16 +16,9 @@ const shapes = [
   {
     name: "Freeform",
     description:
-      "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. 27 models available.",
+      "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. Includes Roman and oval shapes.",
     models: ["Atlantic", "Costa Azul", "Oasis", "Dallas", "Desert Falls", "Huntington Beach"],
     image: "/images/pools/atlantic.jpg",
-  },
-  {
-    name: "Rounded",
-    description:
-      "Elegant Roman and oval shapes with curved sides for a classic, sophisticated aesthetic. Perfect for compact spaces.",
-    models: ["Pompano Beach", "Crystal Cove", "Crystal Springs", "Margarita Beach"],
-    image: "/images/pools/venetian.jpg",
   },
 ];
 
