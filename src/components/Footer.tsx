@@ -48,7 +48,7 @@ export function Footer() {
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
 
       {/* Main grid */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-12 gap-10 lg:gap-8 mb-14">
           {/* Brand + Contact */}
           <div className="col-span-2 md:col-span-3 lg:col-span-4">
