@@ -24,6 +24,8 @@ export const metadata: Metadata = {
 
 const GOOGLE_PROFILE =
   "https://www.google.com/maps/place/Maxima+Pools/@40.3377074,-82.9660251,17z/";
+const GOOGLE_WRITE_REVIEW =
+  "https://search.google.com/local/writereview?placeid=ChIJ-SgA4rr5OIgR52vyZL5hHmY";
 
 const reviews = [
   {
@@ -259,7 +261,7 @@ export default function ReviewsPage() {
               </div>
               <div className="w-px h-12 bg-gray-200 hidden sm:block" />
               <a
-                href={GOOGLE_PROFILE}
+                href={GOOGLE_WRITE_REVIEW}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-dark transition-colors shadow-md shadow-accent/20"
@@ -332,7 +334,7 @@ export default function ReviewsPage() {
                 Had a great experience with Maxima Pools?
               </p>
               <a
-                href={GOOGLE_PROFILE}
+                href={GOOGLE_WRITE_REVIEW}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
