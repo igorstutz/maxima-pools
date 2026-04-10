@@ -9,30 +9,23 @@ const shapes = [
   {
     name: "Rectangular",
     description:
-      "Clean lines and a timeless choice. Optimal for lap swimming — simple, elegant, and infinitely versatile.",
-    models: ["Great Lakes", "Grand Manhattan", "Niagara"],
+      "Clean lines and a timeless choice. Optimal for lap swimming — simple, elegant, and infinitely versatile. 49 models available.",
+    models: ["Great Lakes", "Grand Manhattan", "Niagara", "Monte Carlo", "Caesar's Palace", "Wylela Beach Grande"],
     image: "/images/pools/great-lakes.jpg",
   },
   {
-    name: "Free-form",
+    name: "Freeform",
     description:
-      "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes.",
-    models: ["Atlantic", "Costa Azul", "Oasis"],
+      "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. 27 models available.",
+    models: ["Atlantic", "Costa Azul", "Oasis", "Dallas", "Desert Falls", "Huntington Beach"],
     image: "/images/pools/atlantic.jpg",
   },
   {
-    name: "Roman",
+    name: "Rounded",
     description:
-      "Inspired by ancient villas — straight edges flanked by graceful arched half-circles at each end.",
-    models: ["Venetian", "Monte Carlo"],
+      "Elegant Roman and oval shapes with curved sides for a classic, sophisticated aesthetic. Perfect for compact spaces.",
+    models: ["Pompano Beach", "Crystal Cove", "Crystal Springs", "Margarita Beach"],
     image: "/images/pools/venetian.jpg",
-  },
-  {
-    name: "Kidney",
-    description:
-      "Sleek, contemporary asymmetry that fits smaller spaces while delivering maximum style.",
-    models: ["Vegas", "Dallas"],
-    image: "/images/pools/vegas.jpg",
   },
 ];
 
@@ -56,7 +49,7 @@ export function PoolShapes() {
               </span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-              Every backyard is unique. Choose from four distinct pool shapes,
+              Every backyard is unique. Choose from three distinct pool shapes,
               each designed to complement different spaces and styles.
             </p>
           </div>
@@ -101,7 +94,7 @@ export function PoolShapes() {
                         {shape.models.map((model) => (
                           <span
                             key={model}
-                            className="text-xs font-semibold text-gray-500 bg-gray-50 rounded-full px-3 py-1.5 border border-gray-100"
+                            className="text-xs font-semibold text-accent bg-accent/[0.06] rounded-full px-3 py-1.5 border border-accent/15"
                           >
                             {model}
                           </span>

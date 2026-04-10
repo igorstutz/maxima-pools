@@ -212,7 +212,7 @@ export default function FiberglassPoolQualityPage() {
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/free-estimate"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
                 Get a Free Estimate
@@ -640,7 +640,7 @@ export default function FiberglassPoolQualityPage() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="/free-estimate"
+                      href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
                       Schedule Your Consultation

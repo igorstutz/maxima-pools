@@ -79,7 +79,11 @@
       "Bash(gh auth:*)",
       "Bash(gh repo:*)",
       "Bash(echo '{\"build_type\":\"workflow\",\"source\":{\"branch\":\"main\",\"path\":\"/\"}}')",
-      "Bash(gh api:*)"
+      "Bash(gh api:*)",
+      "Bash(gh run:*)",
+      "Bash(xargs sed:*)",
+      "Bash(grep -c 'src=\"/maxima-pools/' out/index.html)",
+      "Bash(grep -c 'href=\"/maxima-pools/' out/index.html)"
     ]
   }
 }

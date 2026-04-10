@@ -173,7 +173,7 @@ export function Header() {
               (614) 384-5917
             </a>
             <Link
-              href="/free-estimate"
+              href="/contact"
               className="hidden sm:inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-accent to-accent-light text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-accent/25 transition-all duration-300 hover:scale-105"
             >
               Free Estimate
@@ -301,7 +301,7 @@ export function Header() {
             </Link>
             <div className="pt-4">
               <Link
-                href="/free-estimate"
+                href="/contact"
                 className="block px-4 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white rounded-xl font-semibold text-center shadow-lg"
                 onClick={() => setMobileOpen(false)}
               >

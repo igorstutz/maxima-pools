@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/why-maxima`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/pools`, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/free-estimate`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/contact`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/fiberglass-pool-gallery`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/pool-simulator`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/outdoor-living`, changeFrequency: "monthly", priority: 0.8 },

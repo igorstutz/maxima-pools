@@ -146,7 +146,7 @@ export function PoolSizes() {
               Not sure which size is right? We&apos;ll help you decide.
             </p>
             <Link
-              href="/free-estimate"
+              href="/contact"
               className="group inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all"
             >
               Get a Free Consultation

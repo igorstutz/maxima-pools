@@ -5,7 +5,7 @@ const isGhPages = process.env.GITHUB_PAGES === "true";
 const nextConfig: NextConfig = {
   output: isGhPages ? "export" : undefined,
   basePath: isGhPages ? "/maxima-pools" : "",
-  assetPrefix: isGhPages ? "/maxima-pools/" : undefined,
+  trailingSlash: true,
   images: {
     unoptimized: true,
     remotePatterns: [

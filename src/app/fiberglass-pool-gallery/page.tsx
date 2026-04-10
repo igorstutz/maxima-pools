@@ -136,7 +136,7 @@ export default function GalleryPage() {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <Link
-                      href="/free-estimate"
+                      href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
                       Get a Free Estimate

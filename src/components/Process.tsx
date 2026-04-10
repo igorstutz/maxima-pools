@@ -12,7 +12,7 @@ const steps = [
     description:
       "Every San Juan pool starts with a precisely waxed mold to ensure perfect shape accuracy. Each mold is engineered for exact dimensions and contours.",
     image: "/images/process/mold.webp",
-    gradient: "from-cyan-500 to-blue-500",
+    gradient: "from-accent-light to-accent",
   },
   {
     step: "02",
@@ -20,31 +20,47 @@ const steps = [
     description:
       "All fiberglass is 100% hand-laid — never sprayed. Expert laminators with 20+ years of experience lay minimum five layers of woven roving for superior structural consistency.",
     image: "/images/process/glass.webp",
-    gradient: "from-blue-500 to-indigo-500",
+    gradient: "from-accent to-accent-dark",
   },
   {
     step: "03",
+    title: "Build the Panels",
+    description:
+      "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.",
+    image: "/images/process/panels.webp",
+    gradient: "from-accent-dark to-primary-light",
+  },
+  {
+    step: "04",
     title: "Structural Reinforcement",
     description:
       "Structural ribs are positioned to reinforce wall strength. Using Vinyl Ester resin throughout — the same marine-grade standard used in boat building.",
     image: "/images/process/ribs.webp",
-    gradient: "from-indigo-500 to-violet-500",
-  },
-  {
-    step: "04",
-    title: "Inspect & Outfit",
-    description:
-      "Every pool is thoroughly cleaned and inspected. All imperfections are repaired — only perfection ships. Then tiled, outfitted, and prepared for delivery.",
-    image: "/images/process/final-prep.webp",
-    gradient: "from-violet-500 to-purple-500",
+    gradient: "from-primary-light to-primary",
   },
   {
     step: "05",
+    title: "Clean & Inspect",
+    description:
+      "Every pool is thoroughly cleaned and inspected. All imperfections are repaired — only perfection is good enough for a San Juan pool.",
+    image: "/images/process/final-prep.webp",
+    gradient: "from-primary to-primary-dark",
+  },
+  {
+    step: "06",
+    title: "Tile & Outfit",
+    description:
+      "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.",
+    image: "/images/process/outfitting.webp",
+    gradient: "from-primary-dark to-primary",
+  },
+  {
+    step: "07",
     title: "Expert Installation",
     description:
       "Our Maxima crew handles excavation, pool placement, plumbing, electrical, concrete patios, and all finishing touches. Your backyard paradise — complete.",
     image: "/images/process/completed.webp",
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-primary to-accent",
   },
 ];
 
@@ -169,7 +185,7 @@ export function Process() {
         <ScrollReveal>
           <div className="mt-16 sm:mt-20 text-center">
             <Link
-              href="/free-estimate"
+              href="/contact"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 text-sm sm:text-base"
             >
               Start Your Project Today

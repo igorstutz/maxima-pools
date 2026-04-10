@@ -24,7 +24,7 @@ const learnLinks = [
 const moreLinks = [
   { label: "Outdoor Living", href: "/outdoor-living" },
   { label: "Gallery", href: "/fiberglass-pool-gallery" },
-  { label: "Free Estimate", href: "/free-estimate" },
+  { label: "Free Estimate", href: "/contact" },
 ];
 
 const serviceAreas = [
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
           <div className="flex gap-3 shrink-0">
             <Link
-              href="/free-estimate"
+              href="/contact"
               className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-accent/25 hover:scale-105 transition-all duration-300"
             >
               Free Estimate

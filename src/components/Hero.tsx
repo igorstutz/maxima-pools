@@ -97,7 +97,7 @@ export function Hero() {
             {/* CTAs */}
             <div className="hero-animate hero-animate-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
-                href="/free-estimate"
+                href="/contact"
                 className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-3 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base lg:text-sm xl:text-base"
               >
                 <span className="relative z-10">Get Your Free Estimate</span>

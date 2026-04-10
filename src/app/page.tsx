@@ -46,6 +46,7 @@ export default function Home() {
         }}
       />
       <Hero />
+      <SectionDivider />
       <WhyMaxima />
       <SectionDivider />
       <FeaturedPools />
@@ -53,9 +54,13 @@ export default function Home() {
       <Process />
       <SectionDivider />
       <PoolShapes />
+      <SectionDivider />
       <OutdoorLiving />
+      <SectionDivider />
       <PoolSizes />
+      <SectionDivider />
       <Testimonials />
+      <SectionDivider />
       <CTA />
     </>
   );
