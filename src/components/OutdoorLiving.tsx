@@ -105,7 +105,7 @@ export function OutdoorLiving() {
               key={service.title}
               delay={((index + 1) as 1 | 2 | 3)}
             >
-              <div className="group rounded-3xl overflow-hidden bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-500 h-full flex flex-col">
+              <div className="group rounded-3xl overflow-hidden bg-white shadow-lg hover:shadow-xl transition-all duration-500 h-full flex flex-col">
                 {/* Image — clean, no overlay */}
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
@@ -116,17 +116,17 @@ export function OutdoorLiving() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 </div>
-                {/* Text below */}
+                {/* Text below — white bg, dark text */}
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
                       <service.icon size={20} className="text-accent" />
                     </div>
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className="text-lg font-bold text-gray-900">
                       {service.title}
                     </h3>
                   </div>
-                  <p className="text-white/55 text-sm leading-relaxed flex-1">
+                  <p className="text-gray-500 text-sm leading-relaxed flex-1">
                     {service.description}
                   </p>
                   <Link
