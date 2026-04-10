@@ -93,8 +93,8 @@ export default function PoolsPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/75 via-[#0c4a6e]/60 to-[#0c4a6e]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
         <div className="absolute inset-0 water-caustics opacity-40 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
