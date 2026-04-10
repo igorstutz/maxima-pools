@@ -57,8 +57,8 @@ export function Hero() {
         />
       ))}
       {/* Dark overlay with pool-water tint */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/80 via-transparent to-[#0c4a6e]/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/75 via-[#0c4a6e]/60 to-[#0c4a6e]/60" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/50 via-transparent to-[#0c4a6e]/40" />
 
       {/* Water caustics overlay */}
       <div className="absolute inset-0 water-caustics opacity-60" />

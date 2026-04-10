@@ -163,7 +163,7 @@ export default function WhyMaximaPage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/80 to-[#0c4a6e]/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/75 via-[#0c4a6e]/50 to-[#0c4a6e]/50" />
         <div className="absolute inset-0 water-caustics opacity-10" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 sm:py-40 w-full">
@@ -487,7 +487,7 @@ export default function WhyMaximaPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/70 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/40 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
 
                   <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">
                     <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
@@ -761,7 +761,7 @@ export default function WhyMaximaPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/60" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/75 via-[#0c4a6e]/60 to-[#0c4a6e]/60" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative w-full px-8 sm:px-12 lg:px-16 py-14 sm:py-16">

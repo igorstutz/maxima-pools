@@ -87,7 +87,7 @@ export function OutdoorLiving() {
                   className="w-full aspect-[16/10] object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                 {/* Floating label */}
                 <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
                   <p className="text-white font-semibold text-sm">Complete Outdoor Entertainment</p>
@@ -114,25 +114,26 @@ export function OutdoorLiving() {
                   className="object-cover group-hover:scale-110 transition-transform duration-700"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/70 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
+                {/* Light gradient for bottom contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
 
-                {/* Content */}
-                <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">
-                  <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
-                    <service.icon size={22} className="text-accent" />
-                  </div>
-                  <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
-                    {service.title}
-                  </h3>
-                  <p className="text-white/55 text-sm leading-relaxed max-w-sm">
-                    {service.description}
-                  </p>
-                  {/* Hover arrow */}
-                  <div className="mt-4 overflow-hidden h-0 group-hover:h-8 transition-all duration-500">
+                {/* Content — frosted card at bottom */}
+                <div className="relative h-full flex flex-col justify-end p-4 sm:p-5">
+                  <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                        <service.icon size={20} className="text-accent" />
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                     <Link
                       href="/outdoor-living"
-                      className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold"
+                      className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     >
                       Learn more
                       <ArrowRight size={14} />

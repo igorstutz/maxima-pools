@@ -163,7 +163,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e]/92 via-[#0c4a6e]/85 to-[#0c4a6e]/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0c4a6e]/92 via-[#0c4a6e]/60 to-[#0c4a6e]/75" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

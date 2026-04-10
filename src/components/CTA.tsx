@@ -20,7 +20,7 @@ export function CTA() {
               sizes="100vw"
             />
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/95 via-[#0c4a6e]/85 to-[#0c4a6e]/60" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e]/75 via-[#0c4a6e]/60 to-[#0c4a6e]/60" />
             <div className="absolute inset-0 water-caustics opacity-10" />
 
             {/* Content */}

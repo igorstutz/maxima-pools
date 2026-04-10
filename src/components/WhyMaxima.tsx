@@ -109,42 +109,43 @@ export function WhyMaxima() {
 
           {/* Card 1 — Hero card with pool image (spans 7) */}
           <ScrollReveal className="md:col-span-2 lg:col-span-7">
-            <div className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] h-full min-h-[320px] sm:min-h-[380px]">
+            <div className="group relative rounded-3xl overflow-hidden h-full min-h-[320px] sm:min-h-[380px]">
               <Image
                 src="/images/pools/clear-water-beach.png"
                 alt="Clear Water Beach pool installation"
                 fill
-                className="object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                className="object-cover group-hover:scale-105 transition-all duration-700"
                 sizes="(max-width: 1024px) 100vw, 58vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#031c30] via-[#031c30]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
               <div className="relative h-full flex flex-col justify-end p-7 sm:p-9">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center">
-                    <Award size={24} className="text-accent" />
+                <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 sm:p-6 shadow-lg">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
+                      <Award size={20} className="text-accent" />
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900">
+                      Authorized San Juan Pools Dealer
+                    </h3>
                   </div>
-                  <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                  Authorized San Juan Pools Dealer
-                </h3>
-                <p className="text-white/60 leading-relaxed max-w-md text-sm sm:text-base">
-                  We exclusively offer San Juan fiberglass pools — the strongest,
-                  most durable pool shells manufactured in America since 1958.
-                </p>
-                <div className="flex flex-wrap gap-2 mt-5">
-                  {highlights.map((item) => (
-                    <span
-                      key={item}
-                      className="inline-flex items-center gap-1.5 text-xs font-medium text-white/70 bg-white/[0.08] backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/10"
-                    >
-                      <CheckCircle2
-                        size={12}
-                        className="text-accent shrink-0"
-                      />
-                      {item}
-                    </span>
-                  ))}
+                  <p className="text-gray-600 leading-relaxed text-sm mb-4">
+                    We exclusively offer San Juan fiberglass pools — the strongest,
+                    most durable pool shells manufactured in America since 1958.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {highlights.map((item) => (
+                      <span
+                        key={item}
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-gray-600 bg-gray-100 rounded-full px-3 py-1.5"
+                      >
+                        <CheckCircle2
+                          size={12}
+                          className="text-accent shrink-0"
+                        />
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
