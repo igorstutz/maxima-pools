@@ -487,7 +487,7 @@ export default function WhyMaximaPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-700"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e] via-[#0c4a6e]/40 to-[#0c4a6e]/20 group-hover:via-[#0c4a6e]/60 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/90 via-[#021526]/30 to-transparent" />
 
                   <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">
                     <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
