@@ -56,9 +56,9 @@ export function Hero() {
           sizes="100vw"
         />
       ))}
-      {/* Left-to-right gradient: solid blue fading to transparent so the pool image shows on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
+      {/* Left-to-right gradient: solid navy fading to transparent so the pool image shows on the right */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
 
       {/* Water caustics overlay */}
       <div className="absolute inset-0 water-caustics opacity-60" />
