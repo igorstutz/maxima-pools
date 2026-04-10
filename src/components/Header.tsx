@@ -237,15 +237,15 @@ export function Header() {
 
       {/* Mobile menu */}
       <div
-        className={`lg:hidden transition-all duration-500 overflow-hidden ${
-          mobileOpen ? "max-h-[800px] opacity-100" : "max-h-0 opacity-0"
+        className={`lg:hidden transition-all duration-500 ${
+          mobileOpen ? "max-h-[calc(100dvh-5rem)] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <div className="bg-white border-t border-gray-100 shadow-2xl">
-          <div className="px-4 py-6 space-y-1">
+        <div className="bg-white border-t border-gray-100 shadow-2xl max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
+          <div className="px-4 py-4 space-y-0.5">
             <Link
               href="/"
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+              className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               onClick={() => setMobileOpen(false)}
             >
               Home
@@ -253,7 +253,7 @@ export function Header() {
             <div>
               <button
                 onClick={() => setWhyOpen(!whyOpen)}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+                className="flex items-center justify-between w-full px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               >
                 Why Maxima
                 <ChevronDown
@@ -284,7 +284,7 @@ export function Header() {
             <div>
               <button
                 onClick={() => setPoolsOpen(!poolsOpen)}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+                className="flex items-center justify-between w-full px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               >
                 Pools & Spas
                 <ChevronDown
@@ -315,7 +315,7 @@ export function Header() {
             <div>
               <button
                 onClick={() => setInfoOpen(!infoOpen)}
-                className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+                className="flex items-center justify-between w-full px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               >
                 Pool Info
                 <ChevronDown
@@ -345,29 +345,29 @@ export function Header() {
 
             <Link
               href="/outdoor-living"
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+              className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               onClick={() => setMobileOpen(false)}
             >
               Outdoor Living
             </Link>
             <Link
               href="/fiberglass-pool-gallery"
-              className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-xl font-medium"
+              className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
               onClick={() => setMobileOpen(false)}
             >
               Gallery
             </Link>
             <Link
               href="/pool-simulator"
-              className="block px-4 py-3 text-accent font-semibold bg-accent/5 border border-accent/20 hover:bg-accent/10 rounded-xl"
+              className="block px-4 py-2.5 text-accent font-semibold bg-accent/5 border border-accent/20 hover:bg-accent/10 rounded-xl text-[15px]"
               onClick={() => setMobileOpen(false)}
             >
               Pool Simulator
             </Link>
-            <div className="pt-4">
+            <div className="pt-3 mt-2 border-t border-gray-100">
               <Link
                 href="/contact"
-                className="block px-4 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white rounded-xl font-semibold text-center shadow-lg"
+                className="block px-4 py-3 bg-gradient-to-r from-accent to-accent-light text-white rounded-xl font-semibold text-center shadow-lg text-[15px]"
                 onClick={() => setMobileOpen(false)}
               >
                 Get a Free Estimate
