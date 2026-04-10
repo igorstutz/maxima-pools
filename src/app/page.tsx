@@ -7,6 +7,7 @@ import { OutdoorLiving } from "@/components/OutdoorLiving";
 import { PoolSizes } from "@/components/PoolSizes";
 import { Testimonials } from "@/components/Testimonials";
 import { CTA } from "@/components/CTA";
+import { LocationsWeServe } from "@/components/LocationsWeServe";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export default function Home() {
@@ -60,6 +61,8 @@ export default function Home() {
       <PoolSizes />
       <SectionDivider />
       <Testimonials />
+      <SectionDivider />
+      <LocationsWeServe />
       <SectionDivider />
       <CTA />
     </>
