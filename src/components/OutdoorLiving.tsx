@@ -105,40 +105,37 @@ export function OutdoorLiving() {
               key={service.title}
               delay={((index + 1) as 1 | 2 | 3)}
             >
-              <div className="group relative rounded-3xl overflow-hidden h-full min-h-[360px] sm:min-h-[400px]">
-                {/* Background image */}
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
-                {/* Light gradient for bottom contrast */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-
-                {/* Content — frosted card at bottom */}
-                <div className="relative h-full flex flex-col justify-end p-4 sm:p-5">
-                  <div className="bg-white/90 backdrop-blur-md rounded-2xl p-5 shadow-lg">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
-                        <service.icon size={20} className="text-accent" />
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900">
-                        {service.title}
-                      </h3>
+              <div className="group rounded-3xl overflow-hidden bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-500 h-full flex flex-col">
+                {/* Image — clean, no overlay */}
+                <div className="relative aspect-[4/3] overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </div>
+                {/* Text below */}
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
+                      <service.icon size={20} className="text-accent" />
                     </div>
-                    <p className="text-gray-600 text-sm leading-relaxed">
-                      {service.description}
-                    </p>
-                    <Link
-                      href="/outdoor-living"
-                      className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold mt-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    >
-                      Learn more
-                      <ArrowRight size={14} />
-                    </Link>
+                    <h3 className="text-lg font-bold text-white">
+                      {service.title}
+                    </h3>
                   </div>
+                  <p className="text-white/55 text-sm leading-relaxed flex-1">
+                    {service.description}
+                  </p>
+                  <Link
+                    href="/outdoor-living"
+                    className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold mt-4"
+                  >
+                    Learn more
+                    <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                  </Link>
                 </div>
               </div>
             </ScrollReveal>
