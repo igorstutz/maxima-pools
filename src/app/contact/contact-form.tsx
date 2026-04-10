@@ -98,8 +98,8 @@ export function ContactForm() {
         </p>
         <p className="text-gray-400 text-sm">
           You can also call us at{" "}
-          <a href="tel:6143845917" className="text-accent font-semibold hover:underline">
-            (614) 384-5917
+          <a href="tel:+16143845081" className="text-accent font-semibold hover:underline">
+            (614) 384-5081
           </a>{" "}
           for immediate assistance.
         </p>

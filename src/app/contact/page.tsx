@@ -18,7 +18,7 @@ import { ContactForm } from "./contact-form";
 export const metadata: Metadata = {
   title: "Free Estimate | Maxima Pools - Columbus, OH",
   description:
-    "Get a free, no-obligation estimate for your fiberglass pool project. Fill out our form or call (614) 384-5917. Serving Columbus, OH and surrounding areas.",
+    "Get a free, no-obligation estimate for your fiberglass pool project. Fill out our form or call (614) 384-5081. Serving Columbus, OH and surrounding areas.",
   openGraph: {
     title: "Free Estimate | Maxima Pools",
     description:
@@ -38,8 +38,8 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "(614) 384-5917",
-    href: "tel:6143845917",
+    value: "(614) 384-5081",
+    href: "tel:+16143845081",
     description: "Mon–Sat 8am–6pm",
   },
   {
@@ -62,7 +62,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Maxima Pools",
-  telephone: "+1-614-384-5917",
+  telephone: "+1-614-384-5081",
   email: "info@maximapools.com",
   address: {
     "@type": "PostalAddress",
@@ -168,14 +168,14 @@ export default function FreeEstimatePage() {
 
               {/* Phone CTA — prominent on mobile */}
               <a
-                href="tel:6143845917"
+                href="tel:+16143845081"
                 className="mt-8 w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/[0.06] border border-white/[0.12] rounded-xl text-white font-semibold hover:bg-white/[0.10] transition-all"
               >
                 <div className="w-10 h-10 rounded-lg bg-accent/20 border border-accent/25 flex items-center justify-center">
                   <Phone size={18} className="text-accent" />
                 </div>
                 <div className="text-left">
-                  <p className="text-white font-bold">(614) 384-5917</p>
+                  <p className="text-white font-bold">(614) 384-5081</p>
                   <p className="text-white/40 text-xs">Call now for immediate assistance</p>
                 </div>
               </a>

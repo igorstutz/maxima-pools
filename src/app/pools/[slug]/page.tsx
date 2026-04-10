@@ -215,7 +215,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href="tel:6143845081"
+              href="tel:+16143845081"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
             >
               <Phone size={16} />
@@ -467,7 +467,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="tel:6143845081"
+                href="tel:+16143845081"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
               >
                 <Phone size={18} />

@@ -162,7 +162,7 @@ export function Header() {
           {/* CTA + Phone + Mobile toggle */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:6143845917"
+              href="tel:+16143845081"
               className={`hidden lg:inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
                 scrolled
                   ? "text-gray-600 hover:text-primary"
@@ -170,7 +170,7 @@ export function Header() {
               }`}
             >
               <Phone size={14} />
-              (614) 384-5917
+              (614) 384-5081
             </a>
             <Link
               href="/contact"

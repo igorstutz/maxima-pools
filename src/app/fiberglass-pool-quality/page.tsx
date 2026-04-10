@@ -647,11 +647,11 @@ export default function FiberglassPoolQualityPage() {
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <a
-                      href="tel:6143845917"
+                      href="tel:+16143845081"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5917
+                      (614) 384-5081
                     </a>
                   </div>
                 </div>

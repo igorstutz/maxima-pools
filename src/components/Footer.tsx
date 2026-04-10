@@ -69,14 +69,14 @@ export function Footer() {
             {/* Contact cards */}
             <div className="space-y-2.5 mb-5">
               <a
-                href="tel:6143845917"
+                href="tel:+16143845081"
                 className="group flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-accent/10 border border-white/[0.05] hover:border-accent/20 transition-all"
               >
                 <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                   <Phone size={15} className="text-accent" />
                 </div>
                 <div>
-                  <p className="text-white/80 font-semibold text-sm">(614) 384-5917</p>
+                  <p className="text-white/80 font-semibold text-sm">(614) 384-5081</p>
                   <p className="text-white/25 text-xs">Mon–Sat, 8am–6pm</p>
                 </div>
               </a>

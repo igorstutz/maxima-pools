@@ -21,7 +21,7 @@ export default function Home() {
             name: "Maxima Pools",
             description:
               "Premium fiberglass pool installation and outdoor living services in Columbus, OH. Authorized San Juan Pools dealer.",
-            telephone: "+1-614-384-5917",
+            telephone: "+1-614-384-5081",
             email: "info@maximapools.com",
             url: "https://maximapools.com",
             address: {
