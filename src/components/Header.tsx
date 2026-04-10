@@ -45,6 +45,16 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
@@ -236,13 +246,18 @@ export function Header() {
       </nav>
 
       {/* Mobile menu */}
-      <div
-        className={`lg:hidden transition-all duration-500 ${
-          mobileOpen ? "max-h-[calc(100dvh-5rem)] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
-        }`}
-      >
-        <div className="bg-white border-t border-gray-100 shadow-2xl max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain">
-          <div className="px-4 py-4 space-y-0.5">
+      {mobileOpen && (
+        <div className="lg:hidden fixed inset-x-0 top-20 bottom-0 z-40">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/20"
+            onClick={() => setMobileOpen(false)}
+          />
+          <div
+            className="relative bg-white border-t border-gray-100 shadow-2xl overflow-y-auto overscroll-contain"
+            style={{ maxHeight: "calc(100dvh - 5rem)", WebkitOverflowScrolling: "touch" }}
+          >
+            <div className="px-4 py-4 space-y-0.5">
             <Link
               href="/"
               className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
@@ -375,7 +390,8 @@ export function Header() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      )}
     </header>
   );
 }
