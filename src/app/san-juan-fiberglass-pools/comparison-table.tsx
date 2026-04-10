@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, XCircle } from "lucide-react";
+import { CheckCircle2, XCircle, ChevronDown } from "lucide-react";
 
 interface Row {
   feature: string;
@@ -130,30 +130,44 @@ export function ComparisonTable() {
       </div>
 
       {/* Mobile */}
-      <div className="lg:hidden space-y-3">
+      <div className="lg:hidden space-y-2.5">
         {rows.map((row, i) => {
           const isExpanded = expandedRow === i;
           return (
-            <button
+            <div
               key={row.feature}
-              onClick={() => setExpandedRow(isExpanded ? null : i)}
-              className="w-full text-left rounded-xl border border-gray-200 overflow-hidden transition-all duration-300 cursor-pointer hover:shadow-md"
+              className={`rounded-xl border overflow-hidden transition-all duration-300 ${
+                isExpanded
+                  ? "border-accent/20 shadow-md bg-white"
+                  : "border-gray-200 bg-white"
+              }`}
             >
-              <div className="flex items-center justify-between p-4 bg-white">
-                <span className="font-semibold text-sm text-gray-900">
-                  {row.feature}
-                </span>
-                <CheckCircle2 size={18} className="text-accent shrink-0" />
-              </div>
+              <button
+                onClick={() => setExpandedRow(isExpanded ? null : i)}
+                className="w-full text-left flex items-center justify-between gap-3 p-4 cursor-pointer"
+              >
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <CheckCircle2 size={16} className="text-accent shrink-0" />
+                  <span className="font-semibold text-sm text-gray-900 truncate">
+                    {row.feature}
+                  </span>
+                </div>
+                <ChevronDown
+                  size={16}
+                  className={`text-gray-400 shrink-0 transition-transform duration-300 ${
+                    isExpanded ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
               <div
                 className={`grid transition-all duration-300 ${
                   isExpanded ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
                 }`}
               >
                 <div className="overflow-hidden">
-                  <div className="p-4 pt-0 space-y-3">
+                  <div className="px-4 pb-4 space-y-2.5">
                     <div className="bg-accent/[0.05] border border-accent/15 rounded-lg p-3">
-                      <p className="text-xs font-bold text-accent uppercase tracking-wider mb-1">
+                      <p className="text-[11px] font-bold text-accent uppercase tracking-wider mb-1">
                         San Juan
                       </p>
                       <p className="text-sm text-gray-700 leading-relaxed">
@@ -161,7 +175,7 @@ export function ComparisonTable() {
                       </p>
                     </div>
                     <div className="bg-gray-50 border border-gray-100 rounded-lg p-3">
-                      <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">
+                      <p className="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1">
                         Competitors
                       </p>
                       <p className="text-sm text-gray-500 leading-relaxed">
@@ -171,7 +185,7 @@ export function ComparisonTable() {
                   </div>
                 </div>
               </div>
-            </button>
+            </div>
           );
         })}
       </div>

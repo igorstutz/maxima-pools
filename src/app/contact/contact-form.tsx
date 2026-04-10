@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
 const hearAboutOptions = [
@@ -38,6 +38,13 @@ type Status = "idle" | "submitting" | "success" | "error";
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const successRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (status === "success") {
+      successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, [status]);
 
   function validate(form: FormData): Record<string, string> {
     const errs: Record<string, string> = {};
@@ -78,7 +85,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="text-center py-16 px-8">
+      <div ref={successRef} className="text-center py-16 px-8">
         <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
           <CheckCircle2 size={40} className="text-green-600" />
         </div>
@@ -169,7 +176,7 @@ export function ContactForm() {
           name="message"
           rows={4}
           placeholder="Tell us about your project — pool size, backyard layout, timeline, or any questions..."
-          className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all resize-none text-sm"
+          className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all resize-none text-base sm:text-sm"
         />
       </div>
 
@@ -241,7 +248,7 @@ function Field({
         placeholder={placeholder}
         required={required}
         autoComplete={autoComplete}
-        className={`w-full px-4 py-3.5 bg-gray-50 border rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all text-sm ${
+        className={`w-full px-4 py-3.5 bg-gray-50 border rounded-xl text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all text-base sm:text-sm ${
           error ? "border-red-300 bg-red-50/50" : "border-gray-200"
         }`}
       />
@@ -274,7 +281,7 @@ function SelectField({
       <select
         name={name}
         defaultValue=""
-        className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all text-sm appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_16px_center] bg-no-repeat"
+        className="w-full px-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all text-base sm:text-sm appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_16px_center] bg-no-repeat"
       >
         <option value="" disabled className="text-gray-400">
           {placeholder}

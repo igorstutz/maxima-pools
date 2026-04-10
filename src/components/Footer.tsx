@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, ArrowRight, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 
 const poolsLinks = [
   { label: "Pool Collection", href: "/pools" },
@@ -46,36 +46,6 @@ export function Footer() {
       {/* Decorative orbs */}
       <div className="absolute top-20 right-0 w-80 h-80 rounded-full bg-accent/5 blur-3xl" />
       <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-primary/5 blur-3xl" />
-
-      {/* CTA Banner */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/15 rounded-2xl p-6 sm:p-8">
-          <div>
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-              Ready to start your pool project?
-            </h3>
-            <p className="text-white/50 text-sm">
-              Get a free, no-obligation estimate today.
-            </p>
-          </div>
-          <div className="flex gap-3 shrink-0">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white text-sm font-semibold rounded-full hover:shadow-lg hover:shadow-accent/25 hover:scale-105 transition-all duration-300"
-            >
-              Free Estimate
-              <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
-            </Link>
-            <a
-              href="tel:6143845917"
-              className="inline-flex items-center gap-2 px-5 py-3 bg-white/[0.06] border border-white/[0.1] text-white text-sm font-semibold rounded-full hover:bg-white/[0.1] transition-all"
-            >
-              <Phone size={14} />
-              <span className="hidden sm:inline">Call Now</span>
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* Main grid */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-8">
@@ -242,7 +212,7 @@ export function Footer() {
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3046.3!2d-82.96602510025286!3d40.337707411614765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8838f9bae20028f9%3A0x661e61be64f26be7!2sMaxima%20Pools!5e0!3m2!1sen!2sus!4v1775790742497!5m2!1sen!2sus"
                 width="100%"
-                height="150"
+                className="h-[250px] sm:h-[150px]"
                 style={{ border: 0, pointerEvents: "none" }}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

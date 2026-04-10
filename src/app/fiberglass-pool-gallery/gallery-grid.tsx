@@ -132,10 +132,9 @@ export function GalleryGrid() {
             <button
               key={`${img.src}-${filter}`}
               onClick={() => setLightbox(i)}
-              className="group relative block w-full mb-3 sm:mb-4 break-inside-avoid cursor-zoom-in rounded-xl sm:rounded-2xl overflow-hidden"
+              className="group relative block w-full mb-3 sm:mb-4 break-inside-avoid cursor-zoom-in rounded-xl sm:rounded-2xl overflow-hidden animate-fadeInUp"
               style={{
                 animationDelay: `${Math.min(i, 8) * 50}ms`,
-                animation: "fadeInUp 0.5s ease-out backwards",
               }}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -253,18 +252,6 @@ export function GalleryGrid() {
         </dialog>
       )}
 
-      <style jsx>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </>
   );
 }
