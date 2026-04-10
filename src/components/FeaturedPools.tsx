@@ -91,7 +91,7 @@ export function FeaturedPools() {
               href="/pools"
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary-dark text-white rounded-full font-semibold hover:bg-primary transition-colors shrink-0 shadow-lg shadow-primary-dark/20 text-sm"
             >
-              View All 50+ Models
+              View All 100+ Models
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"

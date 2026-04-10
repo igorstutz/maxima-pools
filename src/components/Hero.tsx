@@ -134,7 +134,7 @@ export function Hero() {
               <div className="w-px h-10 sm:h-14 bg-white/10" />
               <div className="group">
                 <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
-                  50<span className="text-accent">+</span>
+                  100<span className="text-accent">+</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white/80 font-medium">
                   Pool

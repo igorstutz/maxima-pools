@@ -64,7 +64,7 @@ function AnimatedCounter({
 const highlights = [
   "100% Hand-Laid Fiberglass",
   "Lifetime Structural Warranty",
-  "50+ Pool Models Available",
+  "100+ Pool Models Available",
   "Licensed & Fully Insured",
 ];
 

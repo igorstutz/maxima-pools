@@ -144,7 +144,7 @@ export default function PoolsPage() {
                 <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
                   <Waves size={14} className="text-accent" />
                 </div>
-                <span className="text-white/70 font-medium">85+ Models</span>
+                <span className="text-white/70 font-medium">100+ Models</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
