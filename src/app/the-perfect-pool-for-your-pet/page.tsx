@@ -498,7 +498,7 @@ export default function PetPoolPage() {
                       own pace. It&apos;s the ultimate pet-friendly feature.
                     </p>
                     <Link
-                      href="/tanning-ledges"
+                      href="/pools"
                       className="group inline-flex items-center gap-2 text-accent-light font-semibold hover:text-white transition-colors"
                     >
                       Explore tanning ledges

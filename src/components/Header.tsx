@@ -7,8 +7,8 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react";
 
 const poolsSubmenu = [
   { label: "Pools", href: "/pools" },
-  { label: "Spas", href: "/spas" },
-  { label: "Tanning Ledges", href: "/tanning-ledges" },
+  { label: "Spas", href: "/pools" },
+  { label: "Tanning Ledges", href: "/pools" },
   { label: "Frozen Pools", href: "/frozen-pools" },
   { label: "Auto Cover Pool", href: "/auto-cover-pool" },
   { label: "Pool Closing", href: "/pool-closing" },
