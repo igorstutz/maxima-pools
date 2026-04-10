@@ -133,7 +133,7 @@ export function FeaturedPools() {
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
                   {featuredPool.name}
                 </h3>
-                <p className="text-white/55 leading-relaxed mb-8 max-w-md">
+                <p className="text-white/80 leading-relaxed mb-8 max-w-md">
                   {featuredPool.description}
                 </p>
 
@@ -200,7 +200,7 @@ export function FeaturedPools() {
                         <h3 className="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">
                           {pool.name}
                         </h3>
-                        <p className="text-white/50 text-sm">{pool.size}</p>
+                        <p className="text-white/80 text-sm">{pool.size}</p>
                       </div>
                       <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:border-accent transition-all duration-300">
                         <ArrowUpRight

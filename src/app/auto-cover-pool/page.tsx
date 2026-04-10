@@ -169,7 +169,7 @@ export default function AutoCoverPage() {
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -190,7 +190,7 @@ export default function AutoCoverPage() {
               <span className="shimmer-text">Cover</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Protect your pool, enhance your backyard, and enjoy effortless
               operation with a motorized cover built for durability and elegance.
             </p>
@@ -506,7 +506,7 @@ export default function AutoCoverPage() {
                   Under-Track{" "}
                   <span className="shimmer-text">Auto Cover</span> System
                 </h2>
-                <p className="text-white/55 text-lg leading-relaxed mb-8">
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
                   For a seamless, timeless design, the Under-Track application
                   houses the auto cover inside a concealed track attached directly
                   to the pool wall. This keeps the mechanism completely out of sight
@@ -564,7 +564,7 @@ export default function AutoCoverPage() {
                     Ready to Add an{" "}
                     <span className="shimmer-text">Auto Cover?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and get a personalized quote. We&apos;ll
                     help you choose the right system for your pool.
                   </p>

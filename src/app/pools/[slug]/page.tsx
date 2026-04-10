@@ -168,7 +168,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/pools" className="hover:text-accent transition-colors font-medium">
               Pools
             </Link>
@@ -195,7 +195,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
           </h1>
 
           {/* Specs inline */}
-          <div className="hero-animate hero-animate-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/50 mb-8">
+          <div className="hero-animate hero-animate-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80 mb-8">
             {specs(pool).map((s) => (
               <div key={s.label} className="flex items-center gap-2">
                 <s.icon size={14} className={`text-accent ${s.rotate ? "rotate-90" : ""}`} />
@@ -454,7 +454,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
               Interested in the <span className="shimmer-text">{pool.name}</span>?
             </h2>
-            <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-xl mx-auto">
+            <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-xl mx-auto">
               Get a free, no-obligation estimate and start planning your dream{" "}
               {pool.type.toLowerCase()} today.
             </p>

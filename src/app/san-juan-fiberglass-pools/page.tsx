@@ -145,7 +145,7 @@ export default function SanJuanVsCompetitorsPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -166,7 +166,7 @@ export default function SanJuanVsCompetitorsPage() {
               <span className="shimmer-text">Competitors</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               One simple truth drives everything we do: building the highest
               quality fiberglass pools in the world. See how San Juan&apos;s hand-laid
               process compares — point by point.
@@ -357,7 +357,7 @@ export default function SanJuanVsCompetitorsPage() {
                 </div>
                 <ul className="space-y-3">
                   {chopDownsides.map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-white/50">
+                    <li key={item} className="flex items-start gap-3 text-white/80">
                       <XCircle size={15} className="text-red-400/50 shrink-0 mt-0.5" />
                       <span className="text-sm leading-relaxed">{item}</span>
                     </li>
@@ -508,7 +508,7 @@ export default function SanJuanVsCompetitorsPage() {
                     Choose the Pool That{" "}
                     <span className="shimmer-text">Outlasts Them All</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Talk to our team and get a personalized quote for a San Juan
                     fiberglass pool — the strongest pool on the market.
                   </p>

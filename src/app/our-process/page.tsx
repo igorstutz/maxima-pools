@@ -53,7 +53,7 @@ export default function OurProcessPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">Home</Link>
             <ChevronRight size={14} className="text-white/30" />
             <span className="text-white/80 font-medium">Our Process</span>
@@ -72,7 +72,7 @@ export default function OurProcessPage() {
               <span className="shimmer-text">Process</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               From your first call to your first swim — here&apos;s how we turn your
               backyard into a paradise, step by step.
             </p>

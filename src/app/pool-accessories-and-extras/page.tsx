@@ -193,7 +193,7 @@ export default function PoolAccessoriesPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -214,7 +214,7 @@ export default function PoolAccessoriesPage() {
               <span className="shimmer-text">& Extras</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Elevate your pool experience with premium accessories — heating,
               lighting, water features, fire bowls, and more. All professionally
               installed in-house.
@@ -373,7 +373,7 @@ export default function PoolAccessoriesPage() {
                 The Power of Pool{" "}
                 <span className="shimmer-text">Automation</span>
               </h2>
-              <p className="text-white/55 text-lg leading-relaxed">
+              <p className="text-white/80 text-lg leading-relaxed">
                 Manage lights, heaters, water features, pumps, filtration, and chemical
                 dosing — all from your phone. Monitor water temperature and chemistry
                 in real-time from anywhere.
@@ -393,7 +393,7 @@ export default function PoolAccessoriesPage() {
                     <h3 className="text-lg font-bold text-white mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-white/50 text-sm leading-relaxed">
+                    <p className="text-white/80 text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -493,7 +493,7 @@ export default function PoolAccessoriesPage() {
                       Get Everything in{" "}
                       <span className="shimmer-text">One Place</span>
                     </h2>
-                    <p className="text-white/55 text-lg leading-relaxed mb-8">
+                    <p className="text-white/80 text-lg leading-relaxed mb-8">
                       When you choose Maxima Pools, every accessory is seamlessly
                       integrated during construction — not bolted on as an afterthought.
                       The result is a cleaner finish, better performance, and zero headaches.
@@ -557,7 +557,7 @@ export default function PoolAccessoriesPage() {
                     Ready to Upgrade{" "}
                     <span className="shimmer-text">Your Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Tell us what you envision and we&apos;ll make it happen. One team,
                     one timeline, one stunning result.
                   </p>

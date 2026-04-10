@@ -111,7 +111,7 @@ export default function PoolsPage() {
               <span className="shimmer-text">Collection</span>
             </h1>
 
-            <p className="hero-animate hero-animate-3 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-3 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Explore 80+ San Juan fiberglass pools and spas. Filter by type,
               shape, or size to find the perfect fit for your backyard.
             </p>

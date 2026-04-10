@@ -295,7 +295,7 @@ export function WhyMaxima() {
                 <h3 className="text-lg font-bold text-white mb-2">
                   Best of the Best
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+                <p className="text-white/80 text-sm leading-relaxed max-w-xs">
                   Quality Fiberglass Pools since 1958. The strongest pool shells
                   manufactured in America.
                 </p>

@@ -194,7 +194,7 @@ export default function PetPoolPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -215,7 +215,7 @@ export default function PetPoolPage() {
               <span className="shimmer-text">Your Pet</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               San Juan fiberglass pools are a dog&apos;s best friend. Smooth on paws,
               resistant to scratches, and built with safe shallow areas for
               pets to wade, play, and cool off.
@@ -397,7 +397,7 @@ export default function PetPoolPage() {
                 Which Pool is Safest for{" "}
                 <span className="shimmer-text">Your Pet?</span>
               </h2>
-              <p className="text-white/55 text-lg leading-relaxed">
+              <p className="text-white/80 text-lg leading-relaxed">
                 Not all pool types are created equal when it comes to pet safety.
                 Here&apos;s how they compare.
               </p>
@@ -491,7 +491,7 @@ export default function PetPoolPage() {
                       Built-In{" "}
                       <span className="shimmer-text">Tanning Ledges</span>
                     </h2>
-                    <p className="text-white/55 text-lg leading-relaxed mb-8">
+                    <p className="text-white/80 text-lg leading-relaxed mb-8">
                       Many San Juan pool models include integrated tanning ledges
                       and sun shelves — shallow areas just 6–12 inches deep where
                       pets can safely wade, cool off, and enjoy the water at their
@@ -596,7 +596,7 @@ export default function PetPoolPage() {
                     Ready for a Pet-Friendly{" "}
                     <span className="shimmer-text">Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Give your family — four-legged members included — a pool
                     designed for everyone to enjoy safely.
                   </p>

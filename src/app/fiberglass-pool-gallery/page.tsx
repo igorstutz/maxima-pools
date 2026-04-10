@@ -59,7 +59,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -80,7 +80,7 @@ export default function GalleryPage() {
               <span className="shimmer-text">Gallery</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Browse real installations by Maxima Pools. Filter by color finish
               to find your inspiration — from classic White to vibrant Blue Lagoon.
             </p>
@@ -130,7 +130,7 @@ export default function GalleryPage() {
                     Love What You{" "}
                     <span className="shimmer-text">See?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Let&apos;s make your dream pool a reality. Get a free estimate
                     and start planning your backyard transformation.
                   </p>

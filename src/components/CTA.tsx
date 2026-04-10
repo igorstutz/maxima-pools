@@ -33,7 +33,7 @@ export function CTA() {
                     <br />
                     <span className="shimmer-text">Dive In?</span>
                   </h2>
-                  <p className="text-lg sm:text-xl text-white/55 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
                     Your dream pool is just one conversation away. Get in touch
                     for a free consultation and estimate — no obligation.
                   </p>

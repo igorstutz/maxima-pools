@@ -380,7 +380,7 @@ export default function WhyMaximaPage() {
                   Backed by{" "}
                   <span className="shimmer-text">San Juan Pools</span>
                 </h2>
-                <p className="text-lg text-white/55 leading-relaxed mb-6">
+                <p className="text-lg text-white/80 leading-relaxed mb-6">
                   Maxima Pools is proud to partner with San Juan Pools, the
                   industry leader in fiberglass pool manufacturing since 1958.
                   San Juan is known for their hand-laid, woven fiberglass
@@ -496,7 +496,7 @@ export default function WhyMaximaPage() {
                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                       {service.title}
                     </h3>
-                    <p className="text-white/55 text-sm leading-relaxed max-w-sm">
+                    <p className="text-white/80 text-sm leading-relaxed max-w-sm">
                       {service.description}
                     </p>
                   </div>
@@ -599,7 +599,7 @@ export default function WhyMaximaPage() {
                   More Than Just a Pool —{" "}
                   <span className="shimmer-text">It&apos;s an Investment</span>
                 </h2>
-                <p className="text-lg text-white/55 leading-relaxed mb-6">
+                <p className="text-lg text-white/80 leading-relaxed mb-6">
                   A Maxima pool doesn&apos;t just transform your backyard — it
                   adds lasting value to your home. Fiberglass pools are
                   recognized by real estate professionals as one of the best
@@ -652,7 +652,7 @@ export default function WhyMaximaPage() {
                     <p className="text-white font-semibold text-sm">
                       Huntington Beach - Granite
                     </p>
-                    <p className="text-white/50 text-xs">
+                    <p className="text-white/80 text-xs">
                       Premium fiberglass finish
                     </p>
                   </div>
@@ -728,7 +728,7 @@ export default function WhyMaximaPage() {
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
                     Columbus, Ohio
                   </h3>
-                  <p className="text-white/50 leading-relaxed max-w-sm mb-6">
+                  <p className="text-white/80 leading-relaxed max-w-sm mb-6">
                     Based in Delaware, Ohio, we serve the greater Columbus
                     metropolitan area and surrounding counties.
                   </p>
@@ -770,7 +770,7 @@ export default function WhyMaximaPage() {
                     Ready to{" "}
                     <span className="shimmer-text">Get Started?</span>
                   </h2>
-                  <p className="text-lg sm:text-xl text-white/55 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
                     Your dream backyard is one conversation away. Reach out
                     for a free estimate and let us show you the Maxima
                     difference.

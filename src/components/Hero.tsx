@@ -125,7 +125,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
                   100<span className="text-accent">%</span>
                 </div>
-                <div className="text-xs sm:text-sm text-white/50 font-medium">
+                <div className="text-xs sm:text-sm text-white/80 font-medium">
                   Hand-Laid
                   <br />
                   Fiberglass
@@ -136,7 +136,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
                   50<span className="text-accent">+</span>
                 </div>
-                <div className="text-xs sm:text-sm text-white/50 font-medium">
+                <div className="text-xs sm:text-sm text-white/80 font-medium">
                   Pool
                   <br />
                   Models
@@ -147,7 +147,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
                   #1
                 </div>
-                <div className="text-xs sm:text-sm text-white/50 font-medium">
+                <div className="text-xs sm:text-sm text-white/80 font-medium">
                   Rated in
                   <br />
                   Columbus

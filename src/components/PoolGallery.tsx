@@ -126,7 +126,7 @@ export function PoolGallery({ images, poolName, mainImage }: PoolGalleryProps) {
             />
           </div>
 
-          <div className="absolute bottom-4 text-white/50 text-sm">
+          <div className="absolute bottom-4 text-white/80 text-sm">
             {selected + 1} / {allImages.length}
           </div>
         </div>

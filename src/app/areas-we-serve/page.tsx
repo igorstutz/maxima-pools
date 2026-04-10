@@ -57,7 +57,7 @@ export default function AreasWeServePage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">Home</Link>
             <ChevronRight size={14} className="text-white/30" />
             <span className="text-white/80 font-medium">Areas We Serve</span>
@@ -76,7 +76,7 @@ export default function AreasWeServePage() {
               <span className="shimmer-text">Serve</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed max-w-2xl">
               Maxima Pools proudly serves {locations.length} cities and counties
               across Central Ohio with premium San Juan fiberglass pool installations.
             </p>

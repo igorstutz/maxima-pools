@@ -56,7 +56,7 @@ export function OutdoorLiving() {
                 Complete Outdoor{" "}
                 <span className="shimmer-text">Living</span>
               </h2>
-              <p className="text-lg text-white/55 leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-lg">
                 Your pool is just the beginning. We design and build complete
                 backyard retreats — from custom patios and outdoor kitchens to
                 fire features and shade structures.
@@ -91,7 +91,7 @@ export function OutdoorLiving() {
                 {/* Floating label */}
                 <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
                   <p className="text-white font-semibold text-sm">Complete Outdoor Entertainment</p>
-                  <p className="text-white/50 text-xs">Designed & built by Maxima</p>
+                  <p className="text-white/80 text-xs">Designed & built by Maxima</p>
                 </div>
               </div>
             </div>

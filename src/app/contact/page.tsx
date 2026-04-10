@@ -98,7 +98,7 @@ export default function FreeEstimatePage() {
         <div className="absolute bottom-0 left-[10%] w-96 h-96 rounded-full bg-primary-light/8 blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -121,7 +121,7 @@ export default function FreeEstimatePage() {
                 <span className="shimmer-text">Free Estimate</span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-lg">
                 Tell us about your dream pool and we&apos;ll provide a
                 personalized quote — no obligation, no pressure.
               </p>
@@ -278,7 +278,7 @@ export default function FreeEstimatePage() {
                 You&apos;re in{" "}
                 <span className="shimmer-text">Good Hands</span>
               </h2>
-              <p className="text-white/55 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
+              <p className="text-white/80 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
                 Maxima Pools is a family-owned pool builder serving Columbus, Ohio
                 and surrounding areas — Franklin, Delaware, Union, Licking, and
                 Fairfield counties.

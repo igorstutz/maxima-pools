@@ -197,7 +197,7 @@ export default function PoolColorsPage() {
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -218,7 +218,7 @@ export default function PoolColorsPage() {
               <span className="shimmer-text">Colors</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Choose from four stunning gelcoat finishes. Each color is
               UV-stabilized, corrosion-resistant, and engineered to last decades.
             </p>
@@ -291,7 +291,7 @@ export default function PoolColorsPage() {
                   />
                   <span
                     className={`font-semibold text-sm transition-colors ${
-                      i === activeIndex ? "text-white" : "text-white/50 group-hover:text-white/70"
+                      i === activeIndex ? "text-white" : "text-white/80 group-hover:text-white/70"
                     }`}
                   >
                     {color.name}
@@ -366,7 +366,7 @@ export default function PoolColorsPage() {
                     </div>
                   </div>
 
-                  <p className="text-white/50 text-base leading-relaxed mb-6">
+                  <p className="text-white/80 text-base leading-relaxed mb-6">
                     {active.description}
                   </p>
 
@@ -563,7 +563,7 @@ export default function PoolColorsPage() {
                     NPG/ISO-Based Gelcoat
                   </p>
 
-                  <p className="text-white/50 leading-relaxed mb-6">
+                  <p className="text-white/80 leading-relaxed mb-6">
                     Our standard finish uses a high-quality NPG/ISO-based gelcoat
                     that is UV-stabilized and corrosion-resistant from day one.
                     This proven formulation has protected fiberglass pools for
@@ -581,7 +581,7 @@ export default function PoolColorsPage() {
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                         </div>
-                        <span className="text-white/55 text-sm leading-relaxed">{item}</span>
+                        <span className="text-white/80 text-sm leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -626,7 +626,7 @@ export default function PoolColorsPage() {
                     Solid Surface Material
                   </p>
 
-                  <p className="text-white/50 leading-relaxed mb-6">
+                  <p className="text-white/80 leading-relaxed mb-6">
                     The Iridium finish is a premium solid surface material
                     featuring oven-cured colored chips suspended in a UV and
                     chemical-resistant resin. This advanced system is backed by a
@@ -645,7 +645,7 @@ export default function PoolColorsPage() {
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                         </div>
-                        <span className="text-white/55 text-sm leading-relaxed">{item}</span>
+                        <span className="text-white/80 text-sm leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -679,7 +679,7 @@ export default function PoolColorsPage() {
                     Find Your Perfect{" "}
                     <span className="shimmer-text">Color</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Not sure which gelcoat finish is right for your backyard?
                     Our team will help you choose the perfect color to match
                     your landscape and style.

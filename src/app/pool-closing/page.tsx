@@ -288,7 +288,7 @@ export default function PoolClosingPage() {
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -309,7 +309,7 @@ export default function PoolClosingPage() {
               <span className="shimmer-text">Winterizing</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Professional winterization to protect your pool from freeze damage,
               prevent algae growth, and ensure a smooth opening in spring.
             </p>
@@ -478,7 +478,7 @@ export default function PoolClosingPage() {
                 Before We{" "}
                 <span className="shimmer-text">Arrive</span>
               </h2>
-              <p className="text-white/55 text-lg leading-relaxed">
+              <p className="text-white/80 text-lg leading-relaxed">
                 A few things to have ready for a smooth winterization visit.
               </p>
             </div>
@@ -701,7 +701,7 @@ export default function PoolClosingPage() {
                     Ready to Close{" "}
                     <span className="shimmer-text">Your Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Schedule your winterization service today and protect your
                     investment all winter long.
                   </p>

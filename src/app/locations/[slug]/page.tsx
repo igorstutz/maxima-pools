@@ -127,7 +127,7 @@ export default async function LocationPage({ params }: PageProps) {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -148,7 +148,7 @@ export default async function LocationPage({ params }: PageProps) {
               <span className="shimmer-text">{areaShort}</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Maxima Pools proudly serves {area} with premium San Juan fiberglass
               pool installations. Family-owned, fully in-house — from excavation
               to your first swim.
@@ -315,7 +315,7 @@ export default async function LocationPage({ params }: PageProps) {
                     Ready to Dive In,{" "}
                     <span className="shimmer-text">{areaShort}?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Get a free, no-obligation estimate for your fiberglass pool
                     project. Our team will walk you through every step.
                   </p>

@@ -162,7 +162,7 @@ export default function WhyFiberglassPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -183,7 +183,7 @@ export default function WhyFiberglassPage() {
               <span className="shimmer-text">Make Sense</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Strength through precision. Each San Juan pool includes a minimum
               of five hand-laid fiberglass layers, creating a structure built to
               last for decades.
@@ -393,7 +393,7 @@ export default function WhyFiberglassPage() {
                   Our Pools Are{" "}
                   <span className="shimmer-text">Much Stronger</span>
                 </h2>
-                <p className="text-white/55 text-lg leading-relaxed mb-8">
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
                   Despite clear evidence that hand-laid fiberglass produces a
                   stronger result, many competitors still use chopped fiberglass
                   methods — reducing quality and consistency.
@@ -522,7 +522,7 @@ export default function WhyFiberglassPage() {
                     Ready for a Pool That{" "}
                     <span className="shimmer-text">Makes Sense?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and discover why fiberglass is the
                     smartest investment for your backyard.
                   </p>

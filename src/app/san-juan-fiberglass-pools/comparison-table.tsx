@@ -83,7 +83,7 @@ export function ComparisonTable() {
         <div className="grid grid-cols-[280px_1fr_1fr]">
           {/* Header */}
           <div className="bg-primary-dark p-5 flex items-center">
-            <span className="text-white/50 text-xs font-bold uppercase tracking-wider">
+            <span className="text-white/80 text-xs font-bold uppercase tracking-wider">
               Feature
             </span>
           </div>

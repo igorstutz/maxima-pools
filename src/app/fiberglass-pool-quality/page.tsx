@@ -176,7 +176,7 @@ export default function FiberglassPoolQualityPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
@@ -197,7 +197,7 @@ export default function FiberglassPoolQualityPage() {
               <span className="shimmer-text">Quality</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               What separates a standard swimming pool from one that truly lasts a
               lifetime? It starts with design precision, the choice of materials,
               and the craftsmanship behind every layer.
@@ -340,7 +340,7 @@ export default function FiberglassPoolQualityPage() {
                   Hand-Laid vs.{" "}
                   <span className="shimmer-text">Chopped Fiberglass</span>
                 </h2>
-                <p className="text-white/55 text-lg leading-relaxed mb-8">
+                <p className="text-white/80 text-lg leading-relaxed mb-8">
                   Not all fiberglass is created equal. The construction method defines
                   the strength, durability, and lifespan of your pool. Here&apos;s how
                   San Juan compares.
@@ -634,7 +634,7 @@ export default function FiberglassPoolQualityPage() {
                     Ready for the Highest{" "}
                     <span className="shimmer-text">Quality Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and get a personalized quote for a
                     San Juan fiberglass pool built to outlast everything else.
                   </p>

@@ -155,7 +155,7 @@ export default function FinancingPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">Home</Link>
             <ChevronRight size={14} className="text-white/30" />
             <span className="text-white/80 font-medium">Financing</span>
@@ -174,7 +174,7 @@ export default function FinancingPage() {
               <span className="shimmer-text">Dream Pool</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/55 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
               Your backyard paradise doesn&apos;t have to wait. Through our partnership
               with Lyon Financial — America&apos;s #1 pool financing company for over 40
               years — you can get low rates, flexible terms up to 30 years, and
@@ -414,7 +414,7 @@ export default function FinancingPage() {
                     Ready to Make It{" "}
                     <span className="shimmer-text">Happen?</span>
                   </h2>
-                  <p className="text-lg text-white/50 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
                     Apply online in minutes. No obligation, no credit impact until
                     you decide to proceed. Your dream pool is closer than you think.
                   </p>
