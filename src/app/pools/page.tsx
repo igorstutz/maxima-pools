@@ -116,8 +116,8 @@ export default function PoolsPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
         <div className="absolute inset-0 water-caustics opacity-40 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -134,7 +134,7 @@ export default function PoolsPage() {
               <span className="shimmer-text">Collection</span>
             </h1>
 
-            <p className="hero-animate hero-animate-3 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-3 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Explore 80+ San Juan fiberglass pools and spas. Filter by type,
               shape, or size to find the perfect fit for your backyard.
             </p>

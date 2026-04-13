@@ -127,8 +127,8 @@ export default function FrozenPoolsPage() {
           alt="Frozen fiberglass pool in winter — ice-ready San Juan pool"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -157,7 +157,7 @@ export default function FrozenPoolsPage() {
               <span className="shimmer-text">Winter</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               San Juan fiberglass pools are so strong and durable that even fully
               frozen, they&apos;re built to perform. Who said pools are only for summer?
             </p>
@@ -430,7 +430,7 @@ export default function FrozenPoolsPage() {
                   Built to Survive{" "}
                   <span className="shimmer-text">Ohio Winters</span>
                 </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                <p className="text-white text-lg leading-relaxed mb-8">
                   While concrete pools crack and vinyl liners tear under the stress of
                   freeze-thaw cycles, San Juan fiberglass pools are engineered with
                   reinforced composite structures that absorb movement without damage.
@@ -545,7 +545,7 @@ export default function FrozenPoolsPage() {
                     How San Juan Pools{" "}
                     <span className="shimmer-text">Are Made</span>
                   </h2>
-                  <p className="text-white/80 text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
+                  <p className="text-white text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
                     Discover the hand-layup process, proprietary resin blends, and
                     reinforced composite engineering that make San Juan the most
                     freeze-resistant fiberglass pool on the market.
@@ -581,7 +581,7 @@ export default function FrozenPoolsPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -590,7 +590,7 @@ export default function FrozenPoolsPage() {
                     Ready for a Pool That Performs{" "}
                     <span className="shimmer-text">Year-Round?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Get a fiberglass pool that handles Ohio&apos;s harshest winters
                     without breaking a sweat — or a shell.
                   </p>

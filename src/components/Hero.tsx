@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "@/components/Image";
 import { ArrowRight, Star, Play } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
+import { asset } from "@/lib/base-path";
 
 const heroPoolImages = [
   { src: "/images/pools/atlantic.jpg", alt: "Atlantic fiberglass pool" },
@@ -42,34 +43,32 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen lg:h-svh lg:max-h-screen flex items-center overflow-hidden">
-      {/* Background pool images — synced with card carousel */}
-      {heroPoolImages.map((img, i) => (
-        <Image
-          key={img.src}
-          src={img.src}
-          alt=""
-          fill
-          className={`object-cover transition-opacity duration-1000 ${
-            i === activeImage ? "opacity-100" : "opacity-0"
-          }`}
-          priority={i === 0}
-          sizes="100vw"
-        />
-      ))}
+      {/* Background pool video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        poster={asset("/images/pools/atlantic.jpg")}
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={asset("/videos/pool-background-video.mp4")} type="video/mp4" />
+      </video>
       {/* Left-to-right gradient: solid navy fading to transparent so the pool image shows on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
 
       {/* Water caustics overlay */}
       <div className="absolute inset-0 water-caustics opacity-60" />
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 pb-20 sm:pt-32 sm:pb-24 lg:pt-24 lg:pb-10 w-full lg:h-full lg:flex lg:items-center">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 pb-20 sm:pt-32 sm:pb-24 lg:pt-24 lg:pb-24 w-full lg:h-full lg:flex lg:items-center">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-8 items-center w-full">
           {/* Text content */}
           <div className="lg:col-span-7 xl:col-span-6">
             {/* Badge */}
-            <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 glass rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-4 sm:mb-6 lg:mb-3 xl:mb-5">
+            <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 glass rounded-full px-4 sm:px-5 py-2 sm:py-2.5 mb-4 sm:mb-6 lg:mb-2 xl:mb-5">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} size={12} className="text-gold fill-gold" />
@@ -82,14 +81,19 @@ export function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.08] mb-3 sm:mb-5 lg:mb-3 xl:mb-5 tracking-tight">
+            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[2.25rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] mb-3 sm:mb-5 lg:mb-2 xl:mb-5 tracking-tight">
               Dive into
               <br />
               <span className="shimmer-text">Luxury</span>
             </h1>
 
+            {/* Slogan */}
+            <p className="hero-animate hero-animate-2 text-xl sm:text-2xl md:text-3xl lg:text-lg xl:text-3xl font-semibold text-white mb-3 sm:mb-5 lg:mb-2 xl:mb-5 italic">
+              Live Your <span className="text-[#D4A853]">Maxima</span>zing Pool Life!
+            </p>
+
             {/* Subtitle */}
-            <p className="hero-animate hero-animate-3 text-base sm:text-lg md:text-xl lg:text-base xl:text-lg text-white/70 leading-relaxed mb-5 sm:mb-8 lg:mb-5 xl:mb-7 max-w-lg">
+            <p className="hero-animate hero-animate-3 text-base sm:text-lg md:text-xl lg:text-sm xl:text-lg text-white leading-snug lg:leading-snug mb-5 sm:mb-8 lg:mb-3 xl:mb-7 max-w-lg">
               Premium fiberglass pools and custom outdoor living spaces, crafted
               and installed by Columbus&apos;s most trusted pool experts.
             </p>
@@ -98,7 +102,7 @@ export function Hero() {
             <div className="hero-animate hero-animate-4 flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Link
                 href="/contact"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-3 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base lg:text-sm xl:text-base"
+                className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-2.5 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base lg:text-sm xl:text-base"
               >
                 <span className="relative z-10">Get Your Free Estimate</span>
                 <ArrowRight
@@ -109,7 +113,7 @@ export function Hero() {
               </Link>
               <Link
                 href="/fiberglass-pool-gallery"
-                className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-3 xl:py-3.5 glass rounded-full text-white font-semibold hover:bg-white/15 transition-all duration-300 text-sm sm:text-base lg:text-sm xl:text-base"
+                className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-2.5 xl:py-3.5 glass rounded-full text-white font-semibold hover:bg-white/15 transition-all duration-300 text-sm sm:text-base lg:text-sm xl:text-base"
               >
                 <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors shrink-0">
                   <Play size={14} className="text-white ml-0.5 sm:hidden" />
@@ -120,9 +124,9 @@ export function Hero() {
             </div>
 
             {/* Stats bar */}
-            <div className="hero-animate hero-animate-5 mt-8 sm:mt-12 lg:mt-6 xl:mt-10 flex items-center gap-5 sm:gap-8 lg:gap-6 xl:gap-10">
+            <div className="hero-animate hero-animate-5 mt-5 sm:mt-8 lg:mt-3 xl:mt-6 flex items-center gap-5 sm:gap-8 lg:gap-6 xl:gap-10">
               <div className="group">
-                <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
+                <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   100<span className="text-accent">%</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white/80 font-medium">
@@ -133,7 +137,7 @@ export function Hero() {
               </div>
               <div className="w-px h-10 sm:h-14 bg-white/10" />
               <div className="group">
-                <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
+                <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   100<span className="text-accent">+</span>
                 </div>
                 <div className="text-xs sm:text-sm text-white/80 font-medium">
@@ -144,7 +148,7 @@ export function Hero() {
               </div>
               <div className="w-px h-10 sm:h-14 bg-white/10" />
               <div className="group">
-                <div className="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-1 group-hover:text-accent transition-colors">
+                <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   #1
                 </div>
                 <div className="text-xs sm:text-sm text-white/80 font-medium">

@@ -116,8 +116,6 @@ export function FeaturedPools() {
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-gray-900/90 hidden lg:block" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/40 to-transparent lg:hidden" />
                 {/* Shape badge */}
                 <div className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm rounded-full px-4 py-1.5 text-xs font-bold text-primary-dark shadow-lg">
                   Most Popular
@@ -125,7 +123,7 @@ export function FeaturedPools() {
               </div>
 
               {/* Content */}
-              <div className="relative p-8 sm:p-10 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-gray-900 to-[#0c1a2e]">
+              <div className="relative p-8 sm:p-10 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#075985]">
                 <div className="inline-flex items-center gap-1.5 text-accent text-xs font-semibold uppercase tracking-wider mb-4">
                   <Droplets size={14} />
                   Featured Model
@@ -133,7 +131,7 @@ export function FeaturedPools() {
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
                   {featuredPool.name}
                 </h3>
-                <p className="text-white/80 leading-relaxed mb-8 max-w-md">
+                <p className="text-white leading-relaxed mb-8 max-w-md">
                   {featuredPool.description}
                 </p>
 
@@ -186,7 +184,7 @@ export function FeaturedPools() {
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/30 to-transparent group-hover:via-gray-900/40 transition-all duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-gray-900/10 to-transparent group-hover:via-gray-900/20 transition-all duration-500" />
 
                   {/* Shape badge */}
                   <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-semibold text-primary-dark">

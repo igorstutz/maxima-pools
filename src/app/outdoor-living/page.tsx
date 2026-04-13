@@ -128,8 +128,8 @@ export default function OutdoorLivingPage() {
           alt="Custom outdoor living spaces by Maxima Pools"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -154,7 +154,7 @@ export default function OutdoorLivingPage() {
               <span className="shimmer-text">Outdoor Oasis</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Beautifully designed outdoor living spaces crafted to enhance
               comfort, entertainment, and relaxation — seamlessly integrated
               with your pool and home.
@@ -390,7 +390,7 @@ export default function OutdoorLivingPage() {
                   Culinary Experiences{" "}
                   <span className="shimmer-text">Under the Open Sky</span>
                 </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                <p className="text-white text-lg leading-relaxed mb-8">
                   Our custom outdoor kitchens are designed for performance and
                   style. From built-in grills and pizza ovens to full bars with
                   durable concrete countertops — everything is engineered for
@@ -445,7 +445,7 @@ export default function OutdoorLivingPage() {
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                     Lighting That Elevates Every Moment
                   </h3>
-                  <p className="text-white/80 leading-relaxed max-w-lg">
+                  <p className="text-white leading-relaxed max-w-lg">
                     Professional landscape and architectural lighting extends
                     your enjoyment after sunset — adding beauty, ambiance, and
                     safety to every corner of your outdoor space.
@@ -475,7 +475,7 @@ export default function OutdoorLivingPage() {
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                     Comfort, Style, and Protection
                   </h3>
-                  <p className="text-white/80 leading-relaxed max-w-lg">
+                  <p className="text-white leading-relaxed max-w-lg">
                     Custom pergolas, gazebos, and pavilions engineered to blend
                     with your home while providing shade and structure for
                     outdoor gatherings all year long.
@@ -501,7 +501,7 @@ export default function OutdoorLivingPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -510,7 +510,7 @@ export default function OutdoorLivingPage() {
                     Ready to Elevate Your{" "}
                     <span className="shimmer-text">Outdoor Living?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Tell us your vision and we&apos;ll bring it to life. One team,
                     one timeline, one stunning outdoor space.
                   </p>

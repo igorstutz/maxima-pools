@@ -152,8 +152,8 @@ export default function HowItsMadePage() {
           alt="San Juan fiberglass pool manufacturing process"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#021526]/40 via-transparent to-[#021526]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -178,7 +178,7 @@ export default function HowItsMadePage() {
               <span className="shimmer-text">Are Made</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Not all fiberglass pools are built the same. Each San Juan pool is
               carefully built with a minimum of five hand-laid fiberglass layers,
               ensuring superior strength, precision, and long-term durability.
@@ -360,12 +360,12 @@ export default function HowItsMadePage() {
                   What Does This Mean{" "}
                   <span className="shimmer-text">For Your Pool?</span>
                 </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-4">
+                <p className="text-white text-lg leading-relaxed mb-4">
                   Hand-laid fiberglass creates a continuous, uniform shell — like a
                   single unbroken rope. Sprayed fiberglass is like glued-together
                   pieces: one endures, the other breaks under stress.
                 </p>
-                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                <p className="text-white text-lg leading-relaxed mb-8">
                   In the freeze-thaw cycles of Ohio winters, there is constant ground
                   movement. It&apos;s this movement that causes most fiberglass pool
                   failures — and why hand-laid construction matters.
@@ -583,7 +583,7 @@ export default function HowItsMadePage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -592,7 +592,7 @@ export default function HowItsMadePage() {
                     Ready for a Pool Built to{" "}
                     <span className="shimmer-text">Last a Lifetime?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and get a personalized quote for a
                     San Juan fiberglass pool — the strongest pool on the market.
                   </p>

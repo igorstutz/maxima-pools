@@ -164,7 +164,7 @@ export default function AutoCoverPage() {
           alt="Automatic pool cover system"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
@@ -190,7 +190,7 @@ export default function AutoCoverPage() {
               <span className="shimmer-text">Cover</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Protect your pool, enhance your backyard, and enjoy effortless
               operation with a motorized cover built for durability and elegance.
             </p>
@@ -506,7 +506,7 @@ export default function AutoCoverPage() {
                   Under-Track{" "}
                   <span className="shimmer-text">Auto Cover</span> System
                 </h2>
-                <p className="text-white/80 text-lg leading-relaxed mb-8">
+                <p className="text-white text-lg leading-relaxed mb-8">
                   For a seamless, timeless design, the Under-Track application
                   houses the auto cover inside a concealed track attached directly
                   to the pool wall. This keeps the mechanism completely out of sight
@@ -555,7 +555,7 @@ export default function AutoCoverPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -564,7 +564,7 @@ export default function AutoCoverPage() {
                     Ready to Add an{" "}
                     <span className="shimmer-text">Auto Cover?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and get a personalized quote. We&apos;ll
                     help you choose the right system for your pool.
                   </p>

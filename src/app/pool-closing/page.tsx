@@ -283,7 +283,7 @@ export default function PoolClosingPage() {
           alt="Pool winterization service"
           interval={6000}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
@@ -309,7 +309,7 @@ export default function PoolClosingPage() {
               <span className="shimmer-text">Winterizing</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Professional winterization to protect your pool from freeze damage,
               prevent algae growth, and ensure a smooth opening in spring.
             </p>
@@ -478,7 +478,7 @@ export default function PoolClosingPage() {
                 Before We{" "}
                 <span className="shimmer-text">Arrive</span>
               </h2>
-              <p className="text-white/80 text-lg leading-relaxed">
+              <p className="text-white text-lg leading-relaxed">
                 A few things to have ready for a smooth winterization visit.
               </p>
             </div>
@@ -692,7 +692,7 @@ export default function PoolClosingPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -701,7 +701,7 @@ export default function PoolClosingPage() {
                     Ready to Close{" "}
                     <span className="shimmer-text">Your Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Schedule your winterization service today and protect your
                     investment all winter long.
                   </p>

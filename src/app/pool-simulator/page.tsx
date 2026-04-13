@@ -110,7 +110,7 @@ export default function PoolSimulatorPage() {
               <span className="shimmer-text">Simulator</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Visualize your fiberglass pool in your own backyard. Enter your
               address, view your property on the map, and position your pool with
               real-life scale and dimensions before installation.
@@ -230,7 +230,7 @@ export default function PoolSimulatorPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -239,7 +239,7 @@ export default function PoolSimulatorPage() {
                     Found Your{" "}
                     <span className="shimmer-text">Dream Pool?</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Talk to our team today and get a personalized quote. We&apos;ll
                     help you bring your simulation to life.
                   </p>

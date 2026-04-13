@@ -192,7 +192,7 @@ export default function PoolColorsPage() {
             sizes="100vw"
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/60 via-transparent to-[#0c4a6e]/30" />
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
@@ -218,7 +218,7 @@ export default function PoolColorsPage() {
               <span className="shimmer-text">Colors</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
               Choose from four stunning gelcoat finishes. Each color is
               UV-stabilized, corrosion-resistant, and engineered to last decades.
             </p>
@@ -563,7 +563,7 @@ export default function PoolColorsPage() {
                     NPG/ISO-Based Gelcoat
                   </p>
 
-                  <p className="text-white/80 leading-relaxed mb-6">
+                  <p className="text-white leading-relaxed mb-6">
                     Our standard finish uses a high-quality NPG/ISO-based gelcoat
                     that is UV-stabilized and corrosion-resistant from day one.
                     This proven formulation has protected fiberglass pools for
@@ -626,7 +626,7 @@ export default function PoolColorsPage() {
                     Solid Surface Material
                   </p>
 
-                  <p className="text-white/80 leading-relaxed mb-6">
+                  <p className="text-white leading-relaxed mb-6">
                     The Iridium finish is a premium solid surface material
                     featuring oven-cured colored chips suspended in a UV and
                     chemical-resistant resin. This advanced system is backed by a
@@ -670,7 +670,7 @@ export default function PoolColorsPage() {
                 className="object-cover"
                 sizes="100vw"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
               <div className="absolute inset-0 water-caustics opacity-10" />
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
@@ -679,7 +679,7 @@ export default function PoolColorsPage() {
                     Find Your Perfect{" "}
                     <span className="shimmer-text">Color</span>
                   </h2>
-                  <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
                     Not sure which gelcoat finish is right for your backyard?
                     Our team will help you choose the perfect color to match
                     your landscape and style.

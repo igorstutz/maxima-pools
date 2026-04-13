@@ -454,7 +454,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
               Interested in the <span className="shimmer-text">{pool.name}</span>?
             </h2>
-            <p className="text-lg text-white/80 leading-relaxed mb-10 max-w-xl mx-auto">
+            <p className="text-lg text-white leading-relaxed mb-10 max-w-xl mx-auto">
               Get a free, no-obligation estimate and start planning your dream{" "}
               {pool.type.toLowerCase()} today.
             </p>

@@ -121,7 +121,7 @@ export default function FreeEstimatePage() {
                 <span className="shimmer-text">Free Estimate</span>
               </h1>
 
-              <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-lg">
                 Tell us about your dream pool and we&apos;ll provide a
                 personalized quote — no obligation, no pressure.
               </p>
@@ -131,7 +131,7 @@ export default function FreeEstimatePage() {
                 {trustPoints.map((point) => (
                   <li key={point} className="flex items-center gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0" />
-                    <span className="text-white/70 font-medium text-sm">{point}</span>
+                    <span className="text-white font-medium text-sm">{point}</span>
                   </li>
                 ))}
               </ul>
@@ -160,7 +160,7 @@ export default function FreeEstimatePage() {
                       <Star key={s} size={14} className="text-gold fill-gold" />
                     ))}
                   </div>
-                  <p className="text-white/40 text-xs">
+                  <p className="text-white text-xs">
                     Trusted by Columbus-area families
                   </p>
                 </div>
@@ -176,7 +176,7 @@ export default function FreeEstimatePage() {
                 </div>
                 <div className="text-left">
                   <p className="text-white font-bold">(614) 384-5081</p>
-                  <p className="text-white/40 text-xs">Call now for immediate assistance</p>
+                  <p className="text-white text-xs">Call now for immediate assistance</p>
                 </div>
               </a>
             </div>
@@ -278,7 +278,7 @@ export default function FreeEstimatePage() {
                 You&apos;re in{" "}
                 <span className="shimmer-text">Good Hands</span>
               </h2>
-              <p className="text-white/80 text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
+              <p className="text-white text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
                 Maxima Pools is a family-owned pool builder serving Columbus, Ohio
                 and surrounding areas — Franklin, Delaware, Union, Licking, and
                 Fairfield counties.
@@ -298,7 +298,7 @@ export default function FreeEstimatePage() {
                     <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center">
                       <badge.icon size={20} className="text-accent" />
                     </div>
-                    <span className="text-white/60 text-xs font-semibold uppercase tracking-wider text-center">
+                    <span className="text-white text-xs font-semibold uppercase tracking-wider text-center">
                       {badge.label}
                     </span>
                   </div>

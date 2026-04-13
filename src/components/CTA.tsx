@@ -20,7 +20,7 @@ export function CTA() {
               sizes="100vw"
             />
             {/* Dark overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#021526] via-[#021526]/80 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
             <div className="absolute inset-0 water-caustics opacity-10" />
 
             {/* Content */}
@@ -33,7 +33,7 @@ export function CTA() {
                     <br />
                     <span className="shimmer-text">Dive In?</span>
                   </h2>
-                  <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-10 max-w-lg">
+                  <p className="text-lg sm:text-xl text-white leading-relaxed mb-10 max-w-lg">
                     Your dream pool is just one conversation away. Get in touch
                     for a free consultation and estimate — no obligation.
                   </p>
@@ -85,13 +85,13 @@ export function CTA() {
                       className="group flex items-center gap-4 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 hover:bg-white/[0.1] transition-all duration-300"
                     >
                       <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
-                        <item.icon size={20} className="text-accent" />
+                        <item.icon size={20} className="text-white" />
                       </div>
                       <div className="min-w-0">
                         <p className="text-white font-semibold text-sm sm:text-base truncate">
                           {item.detail}
                         </p>
-                        <p className="text-white/40 text-xs sm:text-sm truncate">
+                        <p className="text-white text-xs sm:text-sm truncate">
                           {item.sub}
                         </p>
                       </div>

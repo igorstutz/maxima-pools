@@ -56,7 +56,7 @@ export function OutdoorLiving() {
                 Complete Outdoor{" "}
                 <span className="shimmer-text">Living</span>
               </h2>
-              <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-lg">
+              <p className="text-lg text-white leading-relaxed mb-8 max-w-lg">
                 Your pool is just the beginning. We design and build complete
                 backyard retreats — from custom patios and outdoor kitchens to
                 fire features and shade structures.
