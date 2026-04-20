@@ -20,6 +20,7 @@ import {
   Gem,
   PawPrint,
   HandMetal,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -196,6 +197,13 @@ export default function WhyFiberglassPage() {
               >
                 Get a Free Estimate
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
+              >
+                <Sparkles size={16} className="text-accent" />
+                Pool Simulator
               </Link>
               <a
                 href="tel:+16143845081"

@@ -10,6 +10,7 @@ import {
   CheckCircle2,
   Star,
   MessageCircle,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -179,6 +180,14 @@ export default function FreeEstimatePage() {
                   <p className="text-white text-xs">Call now for immediate assistance</p>
                 </div>
               </a>
+
+              <Link
+                href="/pool-simulator"
+                className="mt-3 sm:mt-4 sm:ml-3 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
+              >
+                <Sparkles size={18} className="text-accent" />
+                Pool Simulator
+              </Link>
             </div>
 
             {/* Right — form card */}

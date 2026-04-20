@@ -151,17 +151,20 @@ export function OutdoorLiving() {
               { label: "Fire Features", value: "Gas & Wood" },
               { label: "Shade Structures", value: "Pergolas" },
             ].map((item) => (
-              <div
+              <a
                 key={item.label}
-                className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/[0.08] transition-colors"
+                href="https://www.maximaconcrete.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/[0.08] hover:border-white/20 transition-colors"
               >
                 <p className="text-white font-bold text-lg sm:text-xl mb-1">
                   {item.value}
                 </p>
-                <p className="text-white/40 text-xs sm:text-sm font-medium">
+                <p className="text-white text-xs sm:text-sm font-medium">
                   {item.label}
                 </p>
-              </div>
+              </a>
             ))}
           </div>
         </ScrollReveal>

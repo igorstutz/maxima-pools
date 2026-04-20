@@ -201,16 +201,6 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href="/pool-simulator"
-              className={`px-4 py-2 text-sm font-semibold rounded-lg border transition-all duration-300 ${
-                scrolled
-                  ? "text-accent border-accent/30 bg-accent/5 hover:bg-accent/10"
-                  : "text-accent-light border-accent/40 bg-accent/10 hover:bg-accent/20"
-              }`}
-            >
-              Pool Simulator
-            </Link>
           </div>
 
           {/* CTA + Phone + Mobile toggle */}

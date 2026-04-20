@@ -7,6 +7,7 @@ import {
   ChevronRight,
   Camera,
   Waves,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -85,7 +86,7 @@ export default function GalleryPage() {
               to find your inspiration — from classic White to vibrant Blue Lagoon.
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-4 text-sm">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-4 text-sm mb-6">
               {[
                 { label: "60+ Photos", icon: Camera },
                 { label: "5 Color Finishes", icon: Waves },
@@ -97,6 +98,16 @@ export default function GalleryPage() {
                   <span className="text-white/70 font-medium">{item.label}</span>
                 </div>
               ))}
+            </div>
+
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
+              >
+                <Sparkles size={18} className="text-accent" />
+                Pool Simulator
+              </Link>
             </div>
           </div>
         </div>

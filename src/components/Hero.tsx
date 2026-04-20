@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "@/components/Image";
-import { ArrowRight, Star, Play } from "lucide-react";
+import { ArrowRight, Star, Play, Sparkles } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 import { asset } from "@/lib/base-path";
 
@@ -110,6 +110,13 @@ export function Hero() {
                   className="relative z-10 group-hover:translate-x-1 transition-transform"
                 />
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
+              </Link>
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 lg:py-2.5 xl:py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all duration-300 text-sm sm:text-base lg:text-sm xl:text-base"
+              >
+                <Sparkles size={18} className="text-accent" />
+                Pool Simulator
               </Link>
               <Link
                 href="/fiberglass-pool-gallery"

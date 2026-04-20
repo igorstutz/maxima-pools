@@ -3,7 +3,7 @@
 import { useState, useMemo, useRef, useCallback } from "react";
 import Image from "@/components/Image";
 import Link from "next/link";
-import { Ruler, Droplets, Maximize2, Waves, Search } from "lucide-react";
+import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { pools, slugify, type Pool } from "@/lib/pools";
@@ -139,7 +139,7 @@ export default function PoolsPage() {
               shape, or size to find the perfect fit for your backyard.
             </p>
 
-            <div className="hero-animate hero-animate-4 flex flex-wrap gap-6 text-sm">
+            <div className="hero-animate hero-animate-4 flex flex-wrap gap-6 text-sm mb-6">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
                   <Waves size={14} className="text-accent" />
@@ -158,6 +158,16 @@ export default function PoolsPage() {
                 </div>
                 <span className="text-white/70 font-medium">100% Hand-Laid</span>
               </div>
+            </div>
+
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
+              >
+                <Sparkles size={18} className="text-accent" />
+                Pool Simulator
+              </Link>
             </div>
           </div>
         </div>

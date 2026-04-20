@@ -6,6 +6,7 @@ import {
   MapPin,
   ArrowRight,
   Phone,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -76,10 +77,20 @@ export default function AreasWeServePage() {
               <span className="shimmer-text">Serve</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-8">
               Maxima Pools proudly serves {locations.length} cities and counties
               across Central Ohio with premium San Juan fiberglass pool installations.
             </p>
+
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
+              >
+                <Sparkles size={18} className="text-accent" />
+                Pool Simulator
+              </Link>
+            </div>
           </div>
         </div>
       </section>

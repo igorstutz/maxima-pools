@@ -6,6 +6,7 @@ import {
   Star,
   ExternalLink,
   MessageSquareQuote,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -222,16 +223,25 @@ export default function ReviewsPage() {
               families trust Maxima Pools with their backyard transformations.
             </p>
 
-            <a
-              href={GOOGLE_PROFILE}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hero-animate hero-animate-5 group inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-6 py-3 hover:bg-white/15 transition-all"
-            >
-              <GoogleIcon className="w-5 h-5" />
-              <span className="text-white font-semibold text-sm">See us on Google</span>
-              <ExternalLink size={14} className="text-white/50 group-hover:text-white transition-colors" />
-            </a>
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+              <a
+                href={GOOGLE_PROFILE}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-6 py-3 hover:bg-white/15 transition-all"
+              >
+                <GoogleIcon className="w-5 h-5" />
+                <span className="text-white font-semibold text-sm">See us on Google</span>
+                <ExternalLink size={14} className="text-white/50 group-hover:text-white transition-colors" />
+              </a>
+              <Link
+                href="/pool-simulator"
+                className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-6 py-3 text-white font-semibold text-sm hover:bg-white/15 transition-all"
+              >
+                <Sparkles size={16} className="text-accent" />
+                Pool Simulator
+              </Link>
+            </div>
           </div>
         </div>
       </section>

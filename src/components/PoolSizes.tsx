@@ -2,7 +2,7 @@
 
 import Image from "@/components/Image";
 import Link from "next/link";
-import { ArrowRight, Maximize2 } from "lucide-react";
+import { ArrowRight, Maximize2, Sparkles } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
 const sizes = [
@@ -143,13 +143,14 @@ export function PoolSizes() {
         <ScrollReveal>
           <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
             <p className="text-gray-500">
-              Not sure which size is right? We&apos;ll help you decide.
+              Not sure which size is right? Visualize it in your own backyard.
             </p>
             <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 text-accent font-semibold text-sm hover:gap-3 transition-all"
+              href="/pool-simulator"
+              className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
             >
-              Get a Free Consultation
+              <Sparkles size={16} className="group-hover:rotate-12 transition-transform duration-300" />
+              Simulate Pool in Your Backyard
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"

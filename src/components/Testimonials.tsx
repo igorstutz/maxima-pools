@@ -1,6 +1,7 @@
 "use client";
 
-import { Star } from "lucide-react";
+import Link from "next/link";
+import { Star, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
 const reviews = [
@@ -152,6 +153,22 @@ export function Testimonials() {
             ))}
           </div>
         </div>
+
+        {/* CTA to reviews page */}
+        <ScrollReveal>
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/reviews"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
+            >
+              See All Reviews
+              <ArrowRight
+                size={16}
+                className="group-hover:translate-x-1 transition-transform"
+              />
+            </Link>
+          </div>
+        </ScrollReveal>
 
         {/* Bottom trust bar */}
         <ScrollReveal>
