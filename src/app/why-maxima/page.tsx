@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import { InvestmentCarousel } from "@/components/InvestmentCarousel";
 
 export const metadata: Metadata = {
   title: "Why Maxima Pools | Columbus, OH Pool Contractor",
@@ -62,13 +63,21 @@ const pillars = [
   },
 ];
 
-const services = [
+const services: {
+  icon: typeof Shovel;
+  title: string;
+  description: string;
+  image: string;
+  href?: string;
+  external?: boolean;
+}[] = [
   {
     icon: Shovel,
     title: "Expert Excavation",
     description:
       "Proper foundation starts with expert excavation. Our experienced crew ensures precise grading and site preparation for a flawless installation.",
     image: "/images/process/mold.webp",
+    href: "/our-process",
   },
   {
     icon: HardHat,
@@ -76,6 +85,7 @@ const services = [
     description:
       "Seamless pool setting with meticulous attention to leveling, alignment, and structural integrity for a perfect fit every time.",
     image: "/images/process/completed.webp",
+    href: "/our-process",
   },
   {
     icon: Pipette,
@@ -83,6 +93,7 @@ const services = [
     description:
       "Meticulous pool plumbing designed for optimal water flow, efficient filtration, and long-term reliability.",
     image: "/images/process/ribs.webp",
+    href: "/our-process",
   },
   {
     icon: Plug,
@@ -90,6 +101,7 @@ const services = [
     description:
       "Complete electrical work for pumps, lighting, and automation systems, followed by precision backfilling for a solid, lasting installation.",
     image: "/images/process/glass.webp",
+    href: "/our-process",
   },
   {
     icon: Fence,
@@ -97,6 +109,8 @@ const services = [
     description:
       "Custom-designed concrete and paver patios that complement your pool and define your outdoor living space with lasting beauty.",
     image: "/images/outdoor/kitchen.jpg",
+    href: "https://www.maximaconcrete.com",
+    external: true,
   },
   {
     icon: Flame,
@@ -104,6 +118,8 @@ const services = [
     description:
       "Complete your backyard retreat with fire pits, outdoor kitchens, pergolas, and shade structures designed and built by our team.",
     image: "/images/outdoor/living-1.jpg",
+    href: "https://www.maximaconcrete.com",
+    external: true,
   },
 ];
 
@@ -120,7 +136,7 @@ const enhancements = [
     title: "Automatic Covers",
     description:
       "Effortless pool maintenance and safety with automatic covers. Keep debris out, retain heat, and add peace of mind with the push of a button.",
-    image: "/images/pools/clear-water-beach.png",
+    image: "/images/pools/grand-manhattan.png",
   },
   {
     icon: Sparkles,
@@ -484,8 +500,8 @@ export default function WhyMaximaPage() {
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {services.map((service, index) => (
-              <ScrollReveal key={service.title} delay={((index % 3 + 1) as 1 | 2 | 3)}>
+            {services.map((service, index) => {
+              const cardInner = (
                 <div className="group relative rounded-3xl overflow-hidden h-full min-h-[360px] sm:min-h-[400px]">
                   <Image
                     src={service.image}
@@ -506,10 +522,38 @@ export default function WhyMaximaPage() {
                     <p className="text-white/80 text-sm leading-relaxed max-w-sm">
                       {service.description}
                     </p>
+                    {service.href && (
+                      <div className="mt-4 inline-flex items-center gap-1.5 text-accent text-sm font-semibold">
+                        Learn more
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    )}
                   </div>
                 </div>
-              </ScrollReveal>
-            ))}
+              );
+              return (
+                <ScrollReveal key={service.title} delay={((index % 3 + 1) as 1 | 2 | 3)}>
+                  {service.href ? (
+                    service.external ? (
+                      <a
+                        href={service.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block h-full"
+                      >
+                        {cardInner}
+                      </a>
+                    ) : (
+                      <Link href={service.href} className="block h-full">
+                        {cardInner}
+                      </Link>
+                    )
+                  ) : (
+                    cardInner
+                  )}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -641,30 +685,42 @@ export default function WhyMaximaPage() {
               </div>
             </ScrollReveal>
 
-            {/* Image */}
+            {/* Image carousel */}
             <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
-                <div className="relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                  <Image
-                    src="/images/why-maxima/huntington-granite.jpg"
-                    alt="Huntington Beach pool in Granite color finish"
-                    width={800}
-                    height={550}
-                    className="w-full aspect-[16/11] object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
-                    <p className="text-white font-semibold text-sm">
-                      Huntington Beach - Granite
-                    </p>
-                    <p className="text-white/80 text-xs">
-                      Premium fiberglass finish
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <InvestmentCarousel
+                slides={[
+                  {
+                    src: "/images/why-maxima/huntington-granite.jpg",
+                    alt: "Huntington Beach pool in Granite color finish",
+                    label: "Huntington Beach - Granite",
+                    subtitle: "Premium fiberglass finish",
+                  },
+                  {
+                    src: "/images/pools/grand-manhattan.png",
+                    alt: "Grand Manhattan rectangular pool",
+                    label: "Grand Manhattan - White",
+                    subtitle: "Premium fiberglass finish",
+                  },
+                  {
+                    src: "/images/pools/atlantic.jpg",
+                    alt: "Atlantic pool",
+                    label: "Atlantic - Sully Blue",
+                    subtitle: "Premium fiberglass finish",
+                  },
+                  {
+                    src: "/images/pools/oasis.jpg",
+                    alt: "Oasis pool",
+                    label: "Oasis - Blue Lagoon",
+                    subtitle: "Premium fiberglass finish",
+                  },
+                  {
+                    src: "/images/pools/niagara.png",
+                    alt: "Niagara pool",
+                    label: "Niagara - Granite",
+                    subtitle: "Premium fiberglass finish",
+                  },
+                ]}
+              />
             </ScrollReveal>
           </div>
         </div>
@@ -726,7 +782,7 @@ export default function WhyMaximaPage() {
 
             {/* Map / Visual */}
             <ScrollReveal direction="right" delay={1}>
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] p-8 sm:p-10 min-h-[380px] flex flex-col items-center justify-center text-center">
+              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-8 sm:p-10 min-h-[380px] flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 water-caustics opacity-20" />
                 <div className="relative">
                   <div className="w-20 h-20 rounded-full bg-accent/15 border border-accent/20 flex items-center justify-center mx-auto mb-6">
