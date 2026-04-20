@@ -83,13 +83,13 @@ export function ComparisonTable() {
         <div className="grid grid-cols-[280px_1fr_1fr]">
           {/* Header */}
           <div className="bg-primary-dark p-5 flex items-center">
-            <span className="text-white/80 text-xs font-bold uppercase tracking-wider">
+            <span className="text-white text-xs font-bold uppercase tracking-wider">
               Feature
             </span>
           </div>
           <div className="bg-gradient-to-r from-accent-dark to-accent p-5 text-center">
             <p className="text-white font-bold text-sm">San Juan Pools</p>
-            <p className="text-white/60 text-xs">Hand-Laid Fiberglass</p>
+            <p className="text-white text-xs">Hand-Laid Fiberglass</p>
           </div>
           <div className="bg-gray-200 p-5 text-center">
             <p className="text-gray-700 font-bold text-sm">Competitors</p>

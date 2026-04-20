@@ -168,12 +168,12 @@ export default async function PoolDetailPage({ params }: PageProps) {
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/pools" className="hover:text-accent transition-colors font-medium">
               Pools
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">{pool.name}</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">{pool.name}</span>
           </nav>
 
           {/* Badges */}
@@ -181,10 +181,10 @@ export default async function PoolDetailPage({ params }: PageProps) {
             <span className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/30 rounded-full px-3 py-1 text-xs font-bold text-accent uppercase tracking-wider">
               {pool.type}
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white/70 uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
               {pool.shape}
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white/70 uppercase tracking-wider">
+            <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
               {pool.size}
             </span>
           </div>
@@ -195,11 +195,11 @@ export default async function PoolDetailPage({ params }: PageProps) {
           </h1>
 
           {/* Specs inline */}
-          <div className="hero-animate hero-animate-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/80 mb-8">
+          <div className="hero-animate hero-animate-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white mb-8">
             {specs(pool).map((s) => (
               <div key={s.label} className="flex items-center gap-2">
                 <s.icon size={14} className={`text-accent ${s.rotate ? "rotate-90" : ""}`} />
-                <span className="text-white/40 font-medium">{s.label}:</span>
+                <span className="text-white font-medium">{s.label}:</span>
                 <span className="text-white font-semibold">{s.value}</span>
               </div>
             ))}
@@ -233,7 +233,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                 href={media.sketchfab}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white/80 font-medium hover:bg-white/[0.12] hover:text-white transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-medium hover:bg-white/[0.12] hover:text-white transition-all text-sm"
               >
                 <Box size={16} />
                 View in 3D
@@ -244,7 +244,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                 href={media.pdf}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white/80 font-medium hover:bg-white/[0.12] hover:text-white transition-all text-sm"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-medium hover:bg-white/[0.12] hover:text-white transition-all text-sm"
               >
                 <FileText size={16} />
                 Detail Sheet
@@ -340,7 +340,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                       {highlights.map((item) => (
                         <div key={item} className="flex items-center gap-2.5">
                           <CheckCircle2 size={14} className="text-accent shrink-0" />
-                          <span className="text-sm text-white/70">{item}</span>
+                          <span className="text-sm text-white">{item}</span>
                         </div>
                       ))}
                     </div>

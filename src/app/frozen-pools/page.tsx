@@ -133,16 +133,16 @@ export default function FrozenPoolsPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
+            <ChevronRight size={14} className="text-white" />
             <Link href="/pools" className="hover:text-accent transition-colors font-medium">
               Pools & Spas
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Frozen Pools</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Frozen Pools</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -207,7 +207,7 @@ export default function FrozenPoolsPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -448,7 +448,7 @@ export default function FrozenPoolsPage() {
                   {winterAdvantages.map((item) => (
                     <li
                       key={item}
-                      className="flex items-start gap-3 text-white/70"
+                      className="flex items-start gap-3 text-white"
                     >
                       <CheckCircle2
                         size={18}

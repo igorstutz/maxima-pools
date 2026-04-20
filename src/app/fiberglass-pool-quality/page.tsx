@@ -176,12 +176,12 @@ export default function FiberglassPoolQualityPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Fiberglass Pool Quality</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Fiberglass Pool Quality</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -246,7 +246,7 @@ export default function FiberglassPoolQualityPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -370,13 +370,13 @@ export default function FiberglassPoolQualityPage() {
               <div className="space-y-3">
                 {/* Header */}
                 <div className="grid grid-cols-3 gap-3 px-4 pb-2">
-                  <span className="text-white/40 text-xs font-semibold uppercase tracking-wider">
+                  <span className="text-white text-xs font-semibold uppercase tracking-wider">
                     Feature
                   </span>
                   <span className="text-accent text-xs font-semibold uppercase tracking-wider text-center">
                     San Juan
                   </span>
-                  <span className="text-white/40 text-xs font-semibold uppercase tracking-wider text-center">
+                  <span className="text-white text-xs font-semibold uppercase tracking-wider text-center">
                     Competitors
                   </span>
                 </div>
@@ -386,13 +386,13 @@ export default function FiberglassPoolQualityPage() {
                     key={row.feature}
                     className="grid grid-cols-3 gap-3 bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 hover:bg-white/[0.07] transition-colors"
                   >
-                    <span className="text-white/70 text-sm font-medium">
+                    <span className="text-white text-sm font-medium">
                       {row.feature}
                     </span>
                     <span className="text-accent text-sm font-semibold text-center">
                       {row.sanjuan}
                     </span>
-                    <span className="text-white/35 text-sm text-center">
+                    <span className="text-white text-sm text-center">
                       {row.competitor}
                     </span>
                   </div>

@@ -199,10 +199,10 @@ export default function ReviewsPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/50 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">Home</Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Reviews</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Reviews</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -232,7 +232,7 @@ export default function ReviewsPage() {
               >
                 <GoogleIcon className="w-5 h-5" />
                 <span className="text-white font-semibold text-sm">See us on Google</span>
-                <ExternalLink size={14} className="text-white/50 group-hover:text-white transition-colors" />
+                <ExternalLink size={14} className="text-white group-hover:text-white transition-colors" />
               </a>
               <Link
                 href="/pool-simulator"

@@ -197,12 +197,12 @@ export default function PoolColorsPage() {
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Pool Colors</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Pool Colors</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -267,7 +267,7 @@ export default function PoolColorsPage() {
                 Explore Our{" "}
                 <span className="shimmer-text">Color Options</span>
               </h2>
-              <p className="text-white/45 text-lg leading-relaxed">
+              <p className="text-white text-lg leading-relaxed">
                 Click a color below to preview how it transforms your pool.
                 Each finish is available on every pool model in our collection.
               </p>
@@ -298,7 +298,7 @@ export default function PoolColorsPage() {
                   />
                   <span
                     className={`font-semibold text-sm transition-colors ${
-                      i === activeIndex ? "text-white" : "text-white/80 group-hover:text-white/70"
+                      i === activeIndex ? "text-white" : "text-white group-hover:text-white"
                     }`}
                   >
                     {color.name}
@@ -373,7 +373,7 @@ export default function PoolColorsPage() {
                     </div>
                   </div>
 
-                  <p className="text-white/80 text-base leading-relaxed mb-6">
+                  <p className="text-white text-base leading-relaxed mb-6">
                     {active.description}
                   </p>
 
@@ -389,7 +389,7 @@ export default function PoolColorsPage() {
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                         </div>
-                        <span className="text-white/60 text-sm font-medium">{feature}</span>
+                        <span className="text-white text-sm font-medium">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -398,7 +398,7 @@ export default function PoolColorsPage() {
                   <div className="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-1.5">
                       <Layers size={14} className="text-accent" />
-                      <span className="text-white/70 text-xs font-semibold uppercase tracking-wider">
+                      <span className="text-white text-xs font-semibold uppercase tracking-wider">
                         Finish Type
                       </span>
                     </div>
@@ -407,7 +407,7 @@ export default function PoolColorsPage() {
                         ? "Iridium Finish"
                         : "Standard Finish"}
                     </p>
-                    <p className="text-white/40 text-xs mt-0.5">
+                    <p className="text-white text-xs mt-0.5">
                       {active.id === "blue-lagoon" || active.id === "granite"
                         ? "Premium solid surface with oven-cured colored chips"
                         : "NPG/ISO-based UV-stabilized gelcoat"}
@@ -530,7 +530,7 @@ export default function PoolColorsPage() {
                 Two Premium{" "}
                 <span className="shimmer-text">Finish Types</span>
               </h2>
-              <p className="text-white/45 text-lg leading-relaxed">
+              <p className="text-white text-lg leading-relaxed">
                 Depending on the color you choose, your pool will feature one of
                 two advanced finish systems, each engineered for exceptional
                 longevity.
@@ -558,7 +558,7 @@ export default function PoolColorsPage() {
                       style={{ backgroundColor: "#7dd3fc" }}
                       title="Sully Blue"
                     />
-                    <span className="text-white/30 text-xs font-medium ml-2">
+                    <span className="text-white text-xs font-medium ml-2">
                       White &amp; Sully Blue
                     </span>
                   </div>
@@ -588,7 +588,7 @@ export default function PoolColorsPage() {
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                         </div>
-                        <span className="text-white/80 text-sm leading-relaxed">{item}</span>
+                        <span className="text-white text-sm leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -621,7 +621,7 @@ export default function PoolColorsPage() {
                       style={{ backgroundColor: "#57534e" }}
                       title="Granite"
                     />
-                    <span className="text-white/30 text-xs font-medium ml-2">
+                    <span className="text-white text-xs font-medium ml-2">
                       Blue Lagoon &amp; Granite
                     </span>
                   </div>
@@ -652,7 +652,7 @@ export default function PoolColorsPage() {
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
                         </div>
-                        <span className="text-white/80 text-sm leading-relaxed">{item}</span>
+                        <span className="text-white text-sm leading-relaxed">{item}</span>
                       </div>
                     ))}
                   </div>

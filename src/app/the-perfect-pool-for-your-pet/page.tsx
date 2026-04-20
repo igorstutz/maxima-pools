@@ -194,12 +194,12 @@ export default function PetPoolPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Pool for Your Pet</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Pool for Your Pet</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -265,7 +265,7 @@ export default function PetPoolPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -439,12 +439,12 @@ export default function PetPoolPage() {
                       >
                         <pool.icon
                           size={20}
-                          className={isFirst ? "text-accent" : "text-white/40"}
+                          className={isFirst ? "text-accent" : "text-white"}
                         />
                       </div>
                       <h3
                         className={`text-lg font-bold ${
-                          isFirst ? "text-white" : "text-white/60"
+                          isFirst ? "text-white" : "text-white"
                         }`}
                       >
                         {pool.type}
@@ -457,11 +457,11 @@ export default function PetPoolPage() {
                           {isFirst ? (
                             <CheckCircle2 size={15} className="text-accent shrink-0 mt-0.5" />
                           ) : (
-                            <Heart size={15} className="text-white/20 shrink-0 mt-0.5" />
+                            <Heart size={15} className="text-white shrink-0 mt-0.5" />
                           )}
                           <span
                             className={`text-sm leading-relaxed ${
-                              isFirst ? "text-white/70" : "text-white/40"
+                              isFirst ? "text-white" : "text-white"
                             }`}
                           >
                             {item}

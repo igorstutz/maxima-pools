@@ -75,7 +75,7 @@ export function Hero() {
                 ))}
               </div>
               <div className="w-px h-4 bg-white/20" />
-              <span className="text-white/90 text-xs sm:text-sm font-medium">
+              <span className="text-white text-xs sm:text-sm font-medium">
                 Authorized San Juan Pools Dealer
               </span>
             </div>
@@ -136,7 +136,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   100<span className="text-accent">%</span>
                 </div>
-                <div className="text-xs sm:text-sm text-white/80 font-medium">
+                <div className="text-xs sm:text-sm text-white font-medium">
                   Hand-Laid
                   <br />
                   Fiberglass
@@ -147,7 +147,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   100<span className="text-accent">+</span>
                 </div>
-                <div className="text-xs sm:text-sm text-white/80 font-medium">
+                <div className="text-xs sm:text-sm text-white font-medium">
                   Pool
                   <br />
                   Models
@@ -158,7 +158,7 @@ export function Hero() {
                 <div className="text-2xl sm:text-3xl lg:text-xl xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   #1
                 </div>
-                <div className="text-xs sm:text-sm text-white/80 font-medium">
+                <div className="text-xs sm:text-sm text-white font-medium">
                   Rated in
                   <br />
                   Columbus

@@ -88,7 +88,7 @@ export function Header() {
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                 scrolled
                   ? "text-gray-700 hover:text-primary hover:bg-gray-50"
-                  : "text-white/80 hover:text-white hover:bg-white/10"
+                  : "text-white hover:text-white hover:bg-white/10"
               }`}
             >
               Home
@@ -100,7 +100,7 @@ export function Header() {
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? "text-gray-700 hover:text-primary hover:bg-gray-50"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-white/10"
                 }`}
               >
                 Why Maxima
@@ -130,7 +130,7 @@ export function Header() {
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? "text-gray-700 hover:text-primary hover:bg-gray-50"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-white/10"
                 }`}
               >
                 Pools & Spas
@@ -160,7 +160,7 @@ export function Header() {
                 className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? "text-gray-700 hover:text-primary hover:bg-gray-50"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-white/10"
                 }`}
               >
                 Pool Info
@@ -195,7 +195,7 @@ export function Header() {
                 className={`px-4 py-2 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? "text-gray-700 hover:text-primary hover:bg-gray-50"
-                    : "text-white/80 hover:text-white hover:bg-white/10"
+                    : "text-white hover:text-white hover:bg-white/10"
                 }`}
               >
                 {item.label}
@@ -210,7 +210,7 @@ export function Header() {
               className={`hidden lg:inline-flex items-center gap-1.5 text-sm font-medium transition-colors ${
                 scrolled
                   ? "text-gray-600 hover:text-primary"
-                  : "text-white/70 hover:text-white"
+                  : "text-white hover:text-white"
               }`}
             >
               <Phone size={14} />

@@ -151,16 +151,16 @@ export function PoolComparison() {
       <div className="hidden lg:block rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
         {/* Header */}
         <div className="grid grid-cols-4 bg-gradient-to-r from-primary-dark to-primary text-white">
-          <div className="p-5 font-semibold text-sm uppercase tracking-wider text-white/60">
+          <div className="p-5 font-semibold text-sm uppercase tracking-wider text-white">
             Feature
           </div>
           <div className="p-5 font-bold text-sm text-center bg-accent/20 border-x border-white/10">
             San Juan Fiberglass
           </div>
-          <div className="p-5 font-semibold text-sm text-center text-white/70">
+          <div className="p-5 font-semibold text-sm text-center text-white">
             Gunite (Concrete)
           </div>
-          <div className="p-5 font-semibold text-sm text-center text-white/70">
+          <div className="p-5 font-semibold text-sm text-center text-white">
             Vinyl Liner
           </div>
         </div>

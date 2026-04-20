@@ -60,12 +60,12 @@ export default function GalleryPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Gallery</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Gallery</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -95,7 +95,7 @@ export default function GalleryPage() {
                   <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
                     <item.icon size={14} className="text-accent" />
                   </div>
-                  <span className="text-white/70 font-medium">{item.label}</span>
+                  <span className="text-white font-medium">{item.label}</span>
                 </div>
               ))}
             </div>

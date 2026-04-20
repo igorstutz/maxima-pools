@@ -163,12 +163,12 @@ export default function WhyFiberglassPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Why Fiberglass Pools</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Why Fiberglass Pools</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -234,7 +234,7 @@ export default function WhyFiberglassPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -430,7 +430,7 @@ export default function WhyFiberglassPage() {
                   </h3>
                   <ul className="space-y-3">
                     {chopDownsides.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-white/60">
+                      <li key={item} className="flex items-start gap-3 text-white">
                         <XCircle size={14} className="text-red-400/60 shrink-0 mt-1" />
                         <span className="text-sm leading-relaxed">{item}</span>
                       </li>
@@ -446,7 +446,7 @@ export default function WhyFiberglassPage() {
                   </h3>
                   <ul className="space-y-3">
                     {handlaidBenefits.map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-white/70">
+                      <li key={item} className="flex items-start gap-3 text-white">
                         <CheckCircle2 size={14} className="text-accent shrink-0 mt-1" />
                         <span className="text-sm leading-relaxed">{item}</span>
                       </li>

@@ -289,12 +289,12 @@ export default function PoolClosingPage() {
         <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Pool Closing</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Pool Closing</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -364,7 +364,7 @@ export default function PoolClosingPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -499,7 +499,7 @@ export default function PoolClosingPage() {
                   <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
                     <item.icon size={18} className="text-accent" />
                   </div>
-                  <p className="text-white/70 text-sm leading-relaxed pt-2">
+                  <p className="text-white text-sm leading-relaxed pt-2">
                     {item.text}
                   </p>
                 </div>

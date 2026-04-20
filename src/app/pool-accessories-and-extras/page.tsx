@@ -193,12 +193,12 @@ export default function PoolAccessoriesPage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Pool Accessories & Extras</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Pool Accessories & Extras</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -264,7 +264,7 @@ export default function PoolAccessoriesPage() {
                   </div>
                   <div>
                     <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white/40 font-medium uppercase tracking-wider">
+                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
                       {s.label}
                     </p>
                   </div>
@@ -400,7 +400,7 @@ export default function PoolAccessoriesPage() {
                     <h3 className="text-lg font-bold text-white mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-white/80 text-sm leading-relaxed">
+                    <p className="text-white text-sm leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -516,7 +516,7 @@ export default function PoolAccessoriesPage() {
                       ].map((item) => (
                         <div key={item} className="flex items-center gap-2">
                           <CheckCircle2 size={14} className="text-accent-light shrink-0" />
-                          <span className="text-white/70 text-sm font-medium">{item}</span>
+                          <span className="text-white text-sm font-medium">{item}</span>
                         </div>
                       ))}
                     </div>

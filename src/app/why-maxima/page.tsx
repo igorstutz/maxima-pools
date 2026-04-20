@@ -394,7 +394,7 @@ export default function WhyMaximaPage() {
                   construction — a process that produces the strongest,
                   most durable pool shells on the market.
                 </p>
-                <p className="text-white/45 leading-relaxed mb-8">
+                <p className="text-white leading-relaxed mb-8">
                   Unlike competitors who use sprayed fiberglass, every San Juan
                   pool features multiple layers of hand-laid woven roving with
                   marine-grade Vinyl Ester resin. This is the same standard
@@ -441,7 +441,7 @@ export default function WhyMaximaPage() {
                       <p className="text-2xl sm:text-3xl font-bold text-white mb-1">
                         {stat.value}
                       </p>
-                      <p className="text-white/40 text-xs sm:text-sm font-medium">
+                      <p className="text-white text-xs sm:text-sm font-medium">
                         {stat.label}
                       </p>
                     </div>
@@ -612,7 +612,7 @@ export default function WhyMaximaPage() {
                   recognized by real estate professionals as one of the best
                   home improvements for return on investment.
                 </p>
-                <p className="text-white/45 leading-relaxed mb-8">
+                <p className="text-white leading-relaxed mb-8">
                   Customize your setup with hot tub combos, color-changing LED
                   lighting, tanning ledges, and water features. Every element
                   is designed to match your lifestyle while increasing
@@ -632,7 +632,7 @@ export default function WhyMaximaPage() {
                       <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
                         <CheckCircle2 size={12} className="text-accent" />
                       </div>
-                      <span className="text-sm text-white/70 font-medium">
+                      <span className="text-sm text-white font-medium">
                         {item}
                       </span>
                     </div>
@@ -741,7 +741,7 @@ export default function WhyMaximaPage() {
                   </p>
                   <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    <span className="text-white/70 text-sm font-medium">
+                    <span className="text-white text-sm font-medium">
                       Now scheduling for 2026
                     </span>
                   </div>

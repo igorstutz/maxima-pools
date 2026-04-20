@@ -140,17 +140,17 @@ export function FeaturedPools() {
                   <div className="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-center">
                     <Layers size={18} className="text-accent mx-auto mb-2" />
                     <p className="text-white font-bold text-sm">{featuredPool.shape}</p>
-                    <p className="text-white/40 text-xs mt-0.5">Shape</p>
+                    <p className="text-white text-xs mt-0.5">Shape</p>
                   </div>
                   <div className="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-center">
                     <Ruler size={18} className="text-accent mx-auto mb-2" />
                     <p className="text-white font-bold text-sm">{featuredPool.size}</p>
-                    <p className="text-white/40 text-xs mt-0.5">Size</p>
+                    <p className="text-white text-xs mt-0.5">Size</p>
                   </div>
                   <div className="bg-white/[0.06] border border-white/10 rounded-xl p-4 text-center">
                     <Droplets size={18} className="text-accent mx-auto mb-2" />
                     <p className="text-white font-bold text-sm">{featuredPool.depth}</p>
-                    <p className="text-white/40 text-xs mt-0.5">Depth</p>
+                    <p className="text-white text-xs mt-0.5">Depth</p>
                   </div>
                 </div>
 

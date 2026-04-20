@@ -99,12 +99,12 @@ export default function FreeEstimatePage() {
         <div className="absolute bottom-0 left-[10%] w-96 h-96 rounded-full bg-primary-light/8 blur-3xl" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">
               Home
             </Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Free Estimate</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Free Estimate</span>
           </nav>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">

@@ -58,10 +58,10 @@ export default function AreasWeServePage() {
         <div className="absolute inset-0 water-caustics opacity-15 pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white/80 mb-8">
+          <nav className="hero-animate hero-animate-1 flex items-center gap-2 text-sm text-white mb-8">
             <Link href="/" className="hover:text-accent transition-colors font-medium">Home</Link>
-            <ChevronRight size={14} className="text-white/30" />
-            <span className="text-white/80 font-medium">Areas We Serve</span>
+            <ChevronRight size={14} className="text-white" />
+            <span className="text-white font-medium">Areas We Serve</span>
           </nav>
 
           <div className="max-w-3xl">
