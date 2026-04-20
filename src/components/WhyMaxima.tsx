@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Image from "@/components/Image";
 import {
   Shield,
@@ -7,6 +8,7 @@ import {
   Wrench,
   HeartHandshake,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useEffect, useRef, useState } from "react";
@@ -100,6 +102,13 @@ export function WhyMaxima() {
               Backed by San Juan Pools — the industry leader in fiberglass pool
               quality since 1958.
             </p>
+            <Link
+              href="/pool-simulator"
+              className="group inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
+            >
+              <Sparkles size={18} className="group-hover:rotate-12 transition-transform duration-300" />
+              Pool Simulator
+            </Link>
           </ScrollReveal>
         </div>
 
@@ -282,7 +291,7 @@ export function WhyMaxima() {
 
           {/* Card 5 — San Juan Partnership badge (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={3}>
-            <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-[#031c30] to-[#075985] p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative">
+            <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative">
               <div className="absolute inset-0 water-caustics opacity-20" />
               <div className="relative">
                 <Image

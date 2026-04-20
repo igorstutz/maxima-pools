@@ -187,6 +187,7 @@ export function Header() {
             {[
               { label: "Outdoor Living", href: "/outdoor-living" },
               { label: "Gallery", href: "/fiberglass-pool-gallery" },
+              { label: "Blog", href: "/blog" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -372,6 +373,13 @@ export function Header() {
               onClick={() => setMobileOpen(false)}
             >
               Gallery
+            </Link>
+            <Link
+              href="/blog"
+              className="block px-4 py-2.5 text-gray-700 hover:bg-gray-50 rounded-xl font-medium text-[15px]"
+              onClick={() => setMobileOpen(false)}
+            >
+              Blog
             </Link>
             <Link
               href="/pool-simulator"
