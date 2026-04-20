@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo, useRef, useCallback, useEffect } from "react";
+import { useState, useMemo, useRef, useCallback, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "@/components/Image";
 import Link from "next/link";
 import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-react";
@@ -71,7 +72,8 @@ const sizeBadgeColor: Record<Pool["size"], string> = {
 /*  Page component                                                     */
 /* ------------------------------------------------------------------ */
 
-export default function PoolsPage() {
+function PoolsPageInner() {
+  const searchParams = useSearchParams();
   const [typeFilter, setTypeFilter] = useState<TypeFilter>("All");
   const [shapeFilter, setShapeFilter] = useState<ShapeFilter>("All");
   const [sizeFilter, setSizeFilter] = useState<SizeFilter>("All Lengths");
@@ -84,13 +86,14 @@ export default function PoolsPage() {
   }, []);
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const typeParam = params.get("type");
+    const typeParam = searchParams.get("type");
     if (typeParam && (typeFilters as readonly string[]).includes(typeParam)) {
       setTypeFilter(typeParam as TypeFilter);
       setTimeout(scrollToGrid, 100);
+    } else {
+      setTypeFilter("All");
     }
-  }, [scrollToGrid]);
+  }, [searchParams, scrollToGrid]);
 
   const applyTypeFilter = useCallback((v: TypeFilter) => { setTypeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
   const applyShapeFilter = useCallback((v: ShapeFilter) => { setShapeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
@@ -452,5 +455,13 @@ export default function PoolsPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function PoolsPage() {
+  return (
+    <Suspense fallback={null}>
+      <PoolsPageInner />
+    </Suspense>
   );
 }
