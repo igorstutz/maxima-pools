@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useRef, useCallback } from "react";
+import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import Image from "@/components/Image";
 import Link from "next/link";
 import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-react";
@@ -82,6 +82,15 @@ export default function PoolsPage() {
   const scrollToGrid = useCallback(() => {
     gridRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const typeParam = params.get("type");
+    if (typeParam && (typeFilters as readonly string[]).includes(typeParam)) {
+      setTypeFilter(typeParam as TypeFilter);
+      setTimeout(scrollToGrid, 100);
+    }
+  }, [scrollToGrid]);
 
   const applyTypeFilter = useCallback((v: TypeFilter) => { setTypeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
   const applyShapeFilter = useCallback((v: ShapeFilter) => { setShapeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);

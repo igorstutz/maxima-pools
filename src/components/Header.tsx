@@ -16,8 +16,8 @@ const whyMaximaSubmenu = [
 
 const poolsSubmenu = [
   { label: "Pools", href: "/pools" },
-  { label: "Spas", href: "/pools" },
-  { label: "Tanning Ledges", href: "/pools" },
+  { label: "Spas", href: "/pools?type=Spa" },
+  { label: "Tanning Ledges", href: "/pools?type=Tanning+Ledge" },
   { label: "Frozen Pools", href: "/frozen-pools" },
   { label: "Auto Cover Pool", href: "/auto-cover-pool" },
   { label: "Pool Closing", href: "/pool-closing" },
