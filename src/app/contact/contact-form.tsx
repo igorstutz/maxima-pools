@@ -21,6 +21,12 @@ const hearAboutOptions = [
   "Other",
 ];
 
+const poolSizeOptions = [
+  "Small (Up to 300 sq ft)",
+  "Medium (300–500 sq ft)",
+  "Large (500+ sq ft)",
+];
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 export function ContactForm() {
@@ -68,6 +74,7 @@ export function ContactForm() {
     const phone = (form.get("phone") as string)?.trim();
     const address = (form.get("address") as string)?.trim();
     const source = (form.get("source") as string)?.trim();
+    const poolSize = (form.get("poolSize") as string)?.trim();
     const message = (form.get("message") as string)?.trim();
 
     if (!name || name.length < 2) errs.name = "Please enter your full name";
@@ -80,6 +87,7 @@ export function ContactForm() {
       errs.zip = "Please enter a valid 5-digit ZIP code";
     if (!city.trim()) errs.city = "Please enter your city";
     if (!state.trim()) errs.state = "Please enter your state";
+    if (!poolSize) errs.poolSize = "Please select a pool size";
     if (!source) errs.source = "Please select an option";
     if (!message) errs.message = "Please enter a message";
 
@@ -224,6 +232,16 @@ export function ContactForm() {
           />
         </div>
       </div>
+
+      {/* Pool size */}
+      <SelectField
+        label="Pool Size"
+        name="poolSize"
+        options={poolSizeOptions}
+        placeholder="Select a pool size"
+        required
+        error={errors.poolSize}
+      />
 
       {/* How heard */}
       <SelectField
