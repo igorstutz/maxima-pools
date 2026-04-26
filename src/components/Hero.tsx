@@ -60,7 +60,9 @@ export function Hero() {
       {/* Vertical: navy at top, warm golden reflection at bottom (sunset on water) */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#D4A853]/15 via-transparent to-[#0c4a6e]/20" />
       {/* Warm sunset glow radiating from bottom-right corner */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(212,168,83,0.22),transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(212,168,83,0.22),transparent_60%)] mix-blend-screen" />
+      {/* Warm sunrise glow on top-left to break up the cold navy area */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,168,83,0.28),transparent_55%)] mix-blend-screen" />
 
       {/* Water caustics overlay */}
       <div className="absolute inset-0 water-caustics opacity-60" />
