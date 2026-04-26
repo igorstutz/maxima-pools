@@ -293,7 +293,7 @@ export default function ReviewsPage() {
             {reviews.map((review, i) => (
               <ScrollReveal key={review.name} delay={((i % 3 + 1) as 1 | 2 | 3)}>
                 <a
-                  href={GOOGLE_PROFILE}
+                  href={GOOGLE_WRITE_REVIEW}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white rounded-2xl border border-gray-100 shadow-sm p-6 h-full hover:shadow-lg hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
