@@ -56,8 +56,11 @@ export function Hero() {
         <source src={asset("/videos/pool-background-video.mp4")} type="video/mp4" />
       </video>
       {/* Left-to-right gradient: solid navy fading to transparent so the pool image shows on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/80 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-[#0c4a6e]/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0c4a6e] via-[#0c4a6e]/70 to-transparent" />
+      {/* Vertical: navy at top, warm golden reflection at bottom (sunset on water) */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#D4A853]/15 via-transparent to-[#0c4a6e]/20" />
+      {/* Warm sunset glow radiating from bottom-right corner */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,rgba(212,168,83,0.22),transparent_60%)]" />
 
       {/* Water caustics overlay */}
       <div className="absolute inset-0 water-caustics opacity-60" />
