@@ -72,7 +72,7 @@ export function CTA() {
                       icon: Phone,
                       title: "Call Us",
                       detail: "(614) 384-5081",
-                      sub: "Mon–Sat, 8am–6pm",
+                      sub: "Mon–Fri, 8am–5pm",
                     },
                     {
                       icon: MapPin,

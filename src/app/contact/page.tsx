@@ -41,7 +41,7 @@ const contactMethods = [
     label: "Call Us",
     value: "(614) 384-5081",
     href: "tel:+16143845081",
-    description: "Mon–Sat 8am–6pm",
+    description: "Mon–Fri 8am–5pm",
   },
   {
     icon: Mail,

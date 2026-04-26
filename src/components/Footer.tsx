@@ -69,7 +69,7 @@ export function Footer() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-sm">(614) 384-5081</p>
-                  <p className="text-white text-xs">Mon–Sat, 8am–6pm</p>
+                  <p className="text-white text-xs">Mon–Fri, 8am–5pm</p>
                 </div>
               </a>
               <a
