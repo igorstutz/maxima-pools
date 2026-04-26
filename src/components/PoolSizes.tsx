@@ -2,7 +2,7 @@
 
 import Image from "@/components/Image";
 import Link from "next/link";
-import { ArrowRight, Maximize2, Sparkles } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Maximize2, Sparkles } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
 const sizes = [
@@ -72,7 +72,9 @@ export function PoolSizes() {
         <div className="grid lg:grid-cols-3 gap-4 sm:gap-5">
           {sizes.map((size, index) => (
             <ScrollReveal key={size.category} delay={((index + 1) as 1 | 2 | 3)}>
-              <div
+              <Link
+                href={`/pools?size=${size.category}`}
+                aria-label={`View all ${size.category} pools`}
                 className={`group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white border h-full flex flex-col transition-all duration-500 hover:shadow-xl hover:-translate-y-1 ${
                   size.featured
                     ? "border-accent/30 shadow-lg ring-1 ring-accent/10"
@@ -110,9 +112,17 @@ export function PoolSizes() {
 
                 {/* Content */}
                 <div className="p-6 sm:p-7 flex flex-col flex-1">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    {size.category}
-                  </h3>
+                  <div className="flex items-start justify-between gap-2 mb-2">
+                    <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                      {size.category}
+                    </h3>
+                    <div className="w-9 h-9 rounded-full bg-gray-100 group-hover:bg-accent flex items-center justify-center shrink-0 transition-colors duration-300">
+                      <ArrowUpRight
+                        size={16}
+                        className="text-gray-400 group-hover:text-white transition-colors"
+                      />
+                    </div>
+                  </div>
                   <p className="text-gray-500 text-sm leading-relaxed mb-6 flex-1">
                     {size.description}
                   </p>
@@ -134,7 +144,7 @@ export function PoolSizes() {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

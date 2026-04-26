@@ -15,6 +15,7 @@ import { pools, slugify, type Pool } from "@/lib/pools";
 
 const typeFilters = ["All", "Pool", "Spa", "Pool with Spa", "Tanning Ledge"] as const;
 const shapeFilters = ["All", "Rectangular", "Freeform"] as const;
+const sizeCategoryFilters = ["All Sizes", "Small", "Medium", "Large"] as const;
 const sizeFilters = [
   "All Lengths",
   "Under 20'",
@@ -31,6 +32,7 @@ const widthFilters = [
 
 type TypeFilter = (typeof typeFilters)[number];
 type ShapeFilter = (typeof shapeFilters)[number];
+type SizeCategoryFilter = (typeof sizeCategoryFilters)[number];
 type SizeFilter = (typeof sizeFilters)[number];
 type WidthFilter = (typeof widthFilters)[number];
 
@@ -76,6 +78,7 @@ function PoolsPageInner() {
   const searchParams = useSearchParams();
   const [typeFilter, setTypeFilter] = useState<TypeFilter>("All");
   const [shapeFilter, setShapeFilter] = useState<ShapeFilter>("All");
+  const [sizeCategoryFilter, setSizeCategoryFilter] = useState<SizeCategoryFilter>("All Sizes");
   const [sizeFilter, setSizeFilter] = useState<SizeFilter>("All Lengths");
   const [widthFilter, setWidthFilter] = useState<WidthFilter>("All Widths");
   const [nameSearch, setNameSearch] = useState("");
@@ -93,13 +96,22 @@ function PoolsPageInner() {
     } else {
       setTypeFilter("All");
     }
+
+    const sizeParam = searchParams.get("size");
+    if (sizeParam && (sizeCategoryFilters as readonly string[]).includes(sizeParam)) {
+      setSizeCategoryFilter(sizeParam as SizeCategoryFilter);
+      setTimeout(scrollToGrid, 100);
+    } else {
+      setSizeCategoryFilter("All Sizes");
+    }
   }, [searchParams, scrollToGrid]);
 
   const applyTypeFilter = useCallback((v: TypeFilter) => { setTypeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
   const applyShapeFilter = useCallback((v: ShapeFilter) => { setShapeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
+  const applySizeCategoryFilter = useCallback((v: SizeCategoryFilter) => { setSizeCategoryFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
   const applySizeFilter = useCallback((v: SizeFilter) => { setSizeFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
   const applyWidthFilter = useCallback((v: WidthFilter) => { setWidthFilter(v); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
-  const clearFilters = useCallback(() => { setTypeFilter("All"); setShapeFilter("All"); setSizeFilter("All Lengths"); setWidthFilter("All Widths"); setNameSearch(""); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
+  const clearFilters = useCallback(() => { setTypeFilter("All"); setShapeFilter("All"); setSizeCategoryFilter("All Sizes"); setSizeFilter("All Lengths"); setWidthFilter("All Widths"); setNameSearch(""); setTimeout(scrollToGrid, 50); }, [scrollToGrid]);
 
   const filteredPools = useMemo(() => {
     const q = nameSearch.toLowerCase().trim();
@@ -107,11 +119,12 @@ function PoolsPageInner() {
       if (q && !pool.name.toLowerCase().includes(q)) return false;
       const matchesType = typeFilter === "All" || pool.type === typeFilter;
       const matchesShape = shapeFilter === "All" || pool.shape === shapeFilter;
+      const matchesSizeCategory = sizeCategoryFilter === "All Sizes" || pool.size === sizeCategoryFilter;
       const matchesSize = matchesSizeFilter(pool, sizeFilter);
       const matchesWidth = matchesWidthFilter(pool, widthFilter);
-      return matchesType && matchesShape && matchesSize && matchesWidth;
+      return matchesType && matchesShape && matchesSizeCategory && matchesSize && matchesWidth;
     });
-  }, [typeFilter, shapeFilter, sizeFilter, widthFilter, nameSearch]);
+  }, [typeFilter, shapeFilter, sizeCategoryFilter, sizeFilter, widthFilter, nameSearch]);
 
   return (
     <>
@@ -208,6 +221,7 @@ function PoolsPageInner() {
               {([
                 { value: typeFilter, onChange: (v: string) => applyTypeFilter(v as TypeFilter), options: typeFilters, allLabel: "All Types" },
                 { value: shapeFilter, onChange: (v: string) => applyShapeFilter(v as ShapeFilter), options: shapeFilters, allLabel: "All Shapes" },
+                { value: sizeCategoryFilter, onChange: (v: string) => applySizeCategoryFilter(v as SizeCategoryFilter), options: sizeCategoryFilters, allLabel: null },
                 { value: sizeFilter, onChange: (v: string) => applySizeFilter(v as SizeFilter), options: sizeFilters, allLabel: null },
                 { value: widthFilter, onChange: (v: string) => applyWidthFilter(v as WidthFilter), options: widthFilters, allLabel: null },
               ] as const).map((sel, i) => (
@@ -279,7 +293,16 @@ function PoolsPageInner() {
 
             <div className="w-px h-7 bg-gray-200" />
 
-            {/* Length & Width selects */}
+            {/* Size, Length & Width selects */}
+            <select
+              value={sizeCategoryFilter}
+              onChange={(e) => applySizeCategoryFilter(e.target.value as SizeCategoryFilter)}
+              className="px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-xs font-semibold text-gray-700 appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns%3d%22http%3a%2f%2fwww.w3.org%2f2000%2fsvg%22%20width%3d%2212%22%20height%3d%2212%22%20viewBox%3d%220%200%2012%2012%22%3e%3cpath%20fill%3d%22%239ca3af%22%20d%3d%22M2%204l4%204%204-4%22%2f%3e%3c%2fsvg%3e')] bg-[length:12px] bg-[right_8px_center] bg-no-repeat pr-7"
+            >
+              {sizeCategoryFilters.map((f) => (
+                <option key={f} value={f}>{f}</option>
+              ))}
+            </select>
             <select
               value={sizeFilter}
               onChange={(e) => applySizeFilter(e.target.value as SizeFilter)}
@@ -325,7 +348,7 @@ function PoolsPageInner() {
                 <span className="font-bold text-gray-900">{pools.length}</span>{" "}
                 pools
               </p>
-              {(typeFilter !== "All" || shapeFilter !== "All" || sizeFilter !== "All Lengths" || widthFilter !== "All Widths" || nameSearch) && (
+              {(typeFilter !== "All" || shapeFilter !== "All" || sizeCategoryFilter !== "All Sizes" || sizeFilter !== "All Lengths" || widthFilter !== "All Widths" || nameSearch) && (
                 <button
                   onClick={clearFilters}
                   className="text-sm font-semibold text-accent hover:text-accent-dark transition-colors cursor-pointer"

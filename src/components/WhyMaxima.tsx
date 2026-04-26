@@ -9,6 +9,7 @@ import {
   HeartHandshake,
   CheckCircle2,
   Sparkles,
+  ArrowUpRight,
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useEffect, useRef, useState } from "react";
@@ -291,7 +292,13 @@ export function WhyMaxima() {
 
           {/* Card 5 — San Juan Partnership badge (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={3}>
-            <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative">
+            <a
+              href="https://sanjuanpools.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"
+              aria-label="Visit San Juan Pools website (opens in new tab)"
+            >
               <div className="absolute inset-0 water-caustics opacity-20" />
               <div className="relative">
                 <Image
@@ -299,7 +306,7 @@ export function WhyMaxima() {
                   alt="San Juan Pools - Best of the Best"
                   width={140}
                   height={140}
-                  className="w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto mb-5 drop-shadow-2xl"
+                  className="w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto mb-5 drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
                 <h3 className="text-lg font-bold text-white mb-2">
                   Best of the Best
@@ -308,8 +315,12 @@ export function WhyMaxima() {
                   Quality Fiberglass Pools since 1958. The strongest pool shells
                   manufactured in America.
                 </p>
+                <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-white/80 group-hover:text-white transition-colors">
+                  Visit sanjuanpools.com
+                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </span>
               </div>
-            </div>
+            </a>
           </ScrollReveal>
         </div>
       </div>
