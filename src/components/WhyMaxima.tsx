@@ -179,7 +179,7 @@ export function WhyMaxima() {
               <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-100">
                 <div className="text-center">
                   <div className="text-3xl sm:text-4xl font-bold text-gray-900 mb-1">
-                    <AnimatedCounter end={50} suffix="+" />
+                    <AnimatedCounter end={100} suffix="+" />
                   </div>
                   <div className="text-xs text-gray-400 font-medium">
                     Pool Models
