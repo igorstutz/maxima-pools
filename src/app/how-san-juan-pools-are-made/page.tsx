@@ -612,6 +612,13 @@ export default function HowItsMadePage() {
                       Schedule Your Consultation
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
+                    <Link
+                      href="/pool-simulator"
+                      className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
+                    >
+                      <Sparkles size={18} className="text-accent" />
+                      Pool Simulator
+                    </Link>
                     <a
                       href="tel:+16143845081"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"

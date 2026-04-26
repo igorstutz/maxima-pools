@@ -187,6 +187,13 @@ export default function AreasWeServePage() {
                   Get a Free Estimate
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <Link
+                  href="/pool-simulator"
+                  className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-100 rounded-full text-gray-700 font-semibold hover:bg-gray-200 transition-all"
+                >
+                  <Sparkles size={18} className="text-accent" />
+                  Pool Simulator
+                </Link>
                 <a
                   href="tel:+16143845081"
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-100 rounded-full text-gray-700 font-semibold hover:bg-gray-200 transition-all"
