@@ -17,7 +17,7 @@ const shapes = [
     name: "Freeform",
     description:
       "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. Includes Roman and oval shapes.",
-    models: ["Atlantic", "Costa Azul", "Oasis", "Dallas", "Desert Falls", "Huntington Beach"],
+    models: ["Atlantic", "Costa Azul", "Oasis", "Clearwater Beach", "Desert Falls", "Huntington Beach"],
     image: "/images/pools/atlantic.jpg",
   },
 ];
