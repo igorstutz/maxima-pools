@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "@/components/Image";
 
 type Slide = {
@@ -8,6 +9,7 @@ type Slide = {
   alt: string;
   label: string;
   subtitle: string;
+  href?: string;
 };
 
 export function InvestmentCarousel({
@@ -45,20 +47,29 @@ export function InvestmentCarousel({
             priority={i === 0}
           />
         ))}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/40 via-transparent to-transparent pointer-events-none" />
 
-        <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5">
+        {/* Clickable overlay for the active slide */}
+        {current.href && (
+          <Link
+            href={current.href}
+            aria-label={`View ${current.label} pool details`}
+            className="absolute inset-0 z-10"
+          />
+        )}
+
+        <div className="absolute bottom-4 left-4 z-20 bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl px-4 py-2.5 pointer-events-none">
           <p className="text-white font-semibold text-sm">{current.label}</p>
           <p className="text-white text-xs">{current.subtitle}</p>
         </div>
 
-        <div className="absolute bottom-4 right-4 flex gap-1.5">
+        <div className="absolute bottom-4 right-4 z-20 flex gap-1.5">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setActive(i)}
               aria-label={`Show slide ${i + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
+              className={`h-1.5 rounded-full transition-all duration-300 cursor-pointer ${
                 i === active ? "w-6 bg-white" : "w-1.5 bg-white/50 hover:bg-white/70"
               }`}
             />

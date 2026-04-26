@@ -77,7 +77,7 @@ const services: {
     title: "Expert Excavation",
     description:
       "Proper foundation starts with expert excavation. Our experienced crew ensures precise grading and site preparation for a flawless installation.",
-    image: "/images/process/mold.webp",
+    image: "/images/process/final-prep.webp",
     href: "/our-process",
   },
   {
@@ -93,7 +93,7 @@ const services: {
     title: "Pool Plumbing",
     description:
       "Meticulous pool plumbing designed for optimal water flow, efficient filtration, and long-term reliability.",
-    image: "/images/process/ribs.webp",
+    image: "/images/accessories/pool-pump.jpg",
     href: "/our-process",
   },
   {
@@ -101,7 +101,7 @@ const services: {
     title: "Electrical & Backfilling",
     description:
       "Complete electrical work for pumps, lighting, and automation systems, followed by precision backfilling for a solid, lasting installation.",
-    image: "/images/process/glass.webp",
+    image: "/images/process/outfitting.webp",
     href: "/our-process",
   },
   {
@@ -109,7 +109,7 @@ const services: {
     title: "Concrete & Paver Patios",
     description:
       "Custom-designed concrete and paver patios that complement your pool and define your outdoor living space with lasting beauty.",
-    image: "/images/outdoor/kitchen.jpg",
+    image: "/images/outdoor/living-1.jpg",
     href: "https://www.maximaconcrete.com",
     external: true,
   },
@@ -118,7 +118,7 @@ const services: {
     title: "Outdoor Living",
     description:
       "Complete your backyard retreat with fire pits, outdoor kitchens, pergolas, and shade structures designed and built by our team.",
-    image: "/images/outdoor/living-1.jpg",
+    image: "/images/outdoor/kitchen.jpg",
     href: "https://www.maximaconcrete.com",
     external: true,
   },
@@ -446,8 +446,14 @@ export default function WhyMaximaPage() {
             {/* Logo + Stats */}
             <ScrollReveal direction="right">
               <div className="flex flex-col items-center">
-                <div className="relative mb-10">
-                  <div className="absolute -inset-6 bg-accent/10 rounded-full blur-2xl" />
+                <a
+                  href="https://sanjuanpools.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit San Juan Pools website (opens in new tab)"
+                  className="group relative mb-10 transition-transform duration-300 hover:scale-105"
+                >
+                  <div className="absolute -inset-6 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition-colors" />
                   <Image
                     src="/images/logo/sanjuan-logo.png"
                     alt="San Juan Pools - Authorized Dealer"
@@ -455,7 +461,7 @@ export default function WhyMaximaPage() {
                     height={220}
                     className="relative w-44 h-44 sm:w-52 sm:h-52 object-contain drop-shadow-2xl"
                   />
-                </div>
+                </a>
                 <div className="grid grid-cols-2 gap-4 w-full max-w-md">
                   {[
                     { value: "100%", label: "Hand-Laid Fiberglass" },
@@ -607,7 +613,10 @@ export default function WhyMaximaPage() {
           <div className="grid lg:grid-cols-3 gap-4 sm:gap-5">
             {enhancements.map((item, index) => (
               <ScrollReveal key={item.title} delay={((index + 1) as 1 | 2 | 3)}>
-                <div className="group rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full">
+                <Link
+                  href="/pool-accessories-and-extras"
+                  className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
+                >
                   {/* Image */}
                   <div className="relative aspect-[16/10] overflow-hidden">
                     <Image
@@ -627,11 +636,15 @@ export default function WhyMaximaPage() {
                     <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-gray-500 leading-relaxed">
+                    <p className="text-gray-500 leading-relaxed mb-4">
                       {item.description}
                     </p>
+                    <span className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold">
+                      Learn more
+                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                    </span>
                   </div>
-                </div>
+                </Link>
               </ScrollReveal>
             ))}
           </div>
@@ -678,21 +691,25 @@ export default function WhyMaximaPage() {
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    "Hot Tub Combos",
-                    "LED Color Lighting",
-                    "Tanning Ledges",
-                    "Water Features",
-                    "Automatic Covers",
-                    "Custom Patios",
+                    { label: "Hot Tub Combos", href: "/pools?type=Pool+with+Spa" },
+                    { label: "LED Color Lighting", href: "/pool-accessories-and-extras" },
+                    { label: "Tanning Ledges", href: "/pools?type=Tanning+Ledge" },
+                    { label: "Water Features", href: "/pool-accessories-and-extras" },
+                    { label: "Automatic Covers", href: "/auto-cover-pool" },
+                    { label: "Custom Patios", href: "/outdoor-living" },
                   ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center shrink-0">
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="group flex items-center gap-2.5 hover:bg-white/[0.06] rounded-lg -mx-2 px-2 py-1.5 transition-colors"
+                    >
+                      <div className="w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
                         <CheckCircle2 size={12} className="text-accent" />
                       </div>
-                      <span className="text-sm text-white font-medium">
-                        {item}
+                      <span className="text-sm text-white font-medium group-hover:text-accent transition-colors">
+                        {item.label}
                       </span>
-                    </div>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -707,30 +724,35 @@ export default function WhyMaximaPage() {
                     alt: "Huntington Beach pool in Granite color finish",
                     label: "Huntington Beach - Granite",
                     subtitle: "Premium fiberglass finish",
+                    href: "/pools/huntington-beach",
                   },
                   {
                     src: "/images/pools/grand-manhattan.png",
                     alt: "Grand Manhattan rectangular pool",
                     label: "Grand Manhattan - White",
                     subtitle: "Premium fiberglass finish",
+                    href: "/pools/grand-manhattan",
                   },
                   {
                     src: "/images/pools/atlantic.jpg",
                     alt: "Atlantic pool",
                     label: "Atlantic - Sully Blue",
                     subtitle: "Premium fiberglass finish",
+                    href: "/pools/atlantic",
                   },
                   {
                     src: "/images/pools/oasis.jpg",
                     alt: "Oasis pool",
                     label: "Oasis - Blue Lagoon",
                     subtitle: "Premium fiberglass finish",
+                    href: "/pools/oasis",
                   },
                   {
                     src: "/images/pools/niagara.png",
                     alt: "Niagara pool",
                     label: "Niagara - Granite",
                     subtitle: "Premium fiberglass finish",
+                    href: "/pools/niagara",
                   },
                 ]}
               />
