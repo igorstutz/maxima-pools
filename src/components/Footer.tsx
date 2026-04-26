@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "@/components/Image";
-import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { Phone, Mail, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
 import { locations, slugify } from "@/lib/locations";
 
 const poolsLinks = [
@@ -96,6 +96,15 @@ export function Footer() {
                 </div>
               </a>
             </div>
+
+            {/* Pool Simulator CTA */}
+            <Link
+              href="/pool-simulator"
+              className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 mb-5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 whitespace-nowrap"
+            >
+              <Sparkles size={16} />
+              Pool Simulator
+            </Link>
 
             {/* Social */}
             <div className="flex gap-2.5">
