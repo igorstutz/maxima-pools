@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "@/components/Image";
-import { ArrowRight, Flame, UtensilsCrossed, Lamp, TreePine } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Flame, UtensilsCrossed, Lamp, TreePine } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 
 const services = [
@@ -166,6 +166,24 @@ export function OutdoorLiving() {
                 </p>
               </a>
             ))}
+          </div>
+        </ScrollReveal>
+
+        {/* Explore More CTA — links to Maxima Concrete */}
+        <ScrollReveal>
+          <div className="mt-10 sm:mt-12 flex justify-center">
+            <a
+              href="https://www.maximaconcrete.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"
+            >
+              Explore More
+              <ArrowUpRight
+                size={18}
+                className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+              />
+            </a>
           </div>
         </ScrollReveal>
       </div>
