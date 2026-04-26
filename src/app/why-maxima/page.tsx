@@ -448,7 +448,7 @@ export default function WhyMaximaPage() {
                     { value: "100%", label: "Hand-Laid Fiberglass" },
                     { value: "5+", label: "Layers of Woven Roving" },
                     { value: "1958", label: "Established Since" },
-                    { value: "50+", label: "Pool Models Available" },
+                    { value: "100+", label: "Pool Models Available" },
                   ].map((stat) => (
                     <div
                       key={stat.label}

@@ -56,7 +56,7 @@ const benefits = [
   {
     icon: Shield,
     title: "Authorized San Juan Dealer",
-    text: "Access to 70+ premium fiberglass pool models backed by industry-leading warranties.",
+    text: "Access to 100+ premium fiberglass pool models backed by industry-leading warranties.",
   },
   {
     icon: Waves,
@@ -212,7 +212,7 @@ export default async function LocationPage({ params }: PageProps) {
               </h2>
               <p className="text-gray-500 leading-relaxed mb-8">
                 As an authorized San Juan Pools dealer, we bring Central Ohio
-                homeowners access to 70+ fiberglass pool models plus complete
+                homeowners access to 100+ fiberglass pool models plus complete
                 outdoor living solutions — all installed by our own crew.
               </p>
               <ul className="space-y-3 mb-8">
