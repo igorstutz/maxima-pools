@@ -100,7 +100,7 @@ export default function GalleryPage() {
               ))}
             </div>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
                 href="/pool-simulator"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
@@ -145,7 +145,7 @@ export default function GalleryPage() {
                     Let&apos;s make your dream pool a reality. Get a free estimate
                     and start planning your backyard transformation.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"

@@ -160,7 +160,7 @@ export default function OutdoorLivingPage() {
               with your pool and home.
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
@@ -521,7 +521,7 @@ export default function OutdoorLivingPage() {
                     Tell us your vision and we&apos;ll bring it to life. One team,
                     one timeline, one stunning outdoor space.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"

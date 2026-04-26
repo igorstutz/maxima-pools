@@ -223,7 +223,7 @@ export default function ReviewsPage() {
               families trust Maxima Pools with their backyard transformations.
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <a
                 href={GOOGLE_PROFILE}
                 target="_blank"

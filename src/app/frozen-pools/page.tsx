@@ -163,7 +163,7 @@ export default function FrozenPoolsPage() {
               frozen, they&apos;re built to perform. Who said pools are only for summer?
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
@@ -495,7 +495,7 @@ export default function FrozenPoolsPage() {
                   giving you complete peace of mind for decades to come.
                 </p>
 
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-4 *:whitespace-nowrap">
                   <div className="flex items-center gap-3 bg-green-50 border border-green-200/60 rounded-xl px-5 py-3.5">
                     <Award size={20} className="text-green-600 shrink-0" />
                     <div>
@@ -602,7 +602,7 @@ export default function FrozenPoolsPage() {
                     Get a fiberglass pool that handles Ohio&apos;s harshest winters
                     without breaking a sweat — or a shell.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"

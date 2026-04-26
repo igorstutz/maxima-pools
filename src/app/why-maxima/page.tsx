@@ -198,7 +198,7 @@ export default function WhyMaximaPage() {
               Buy your inground swimming pool from the people who actually do
               the work.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 hero-animate hero-animate-4">
+            <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap hero-animate hero-animate-4">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"
@@ -838,7 +838,7 @@ export default function WhyMaximaPage() {
                     for a free estimate and let us show you the Maxima
                     difference.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                  <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"

@@ -155,7 +155,7 @@ export default async function LocationPage({ params }: PageProps) {
               to your first swim.
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
                 href="/contact"
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
@@ -327,7 +327,7 @@ export default async function LocationPage({ params }: PageProps) {
                     Get a free, no-obligation estimate for your fiberglass pool
                     project. Our team will walk you through every step.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"

@@ -182,7 +182,7 @@ export default function FinancingPage() {
               loans up to $200K.
             </p>
 
-            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3">
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <a
                 href={APPLY_URL}
                 target="_blank"
@@ -426,7 +426,7 @@ export default function FinancingPage() {
                     Apply online in minutes. No obligation, no credit impact until
                     you decide to proceed. Your dream pool is closer than you think.
                   </p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <a
                       href={APPLY_URL}
                       target="_blank"
