@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "@/components/Image";
-import { ArrowRight, Star, Play, Sparkles } from "lucide-react";
+import { Star, Play, Sparkles } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 import { asset } from "@/lib/base-path";
 
@@ -86,7 +86,7 @@ export function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[1.875rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] mb-3 sm:mb-5 lg:mb-1.5 xl:mb-5 tracking-tight">
+            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[1.5rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] lg:leading-[1] mb-3 sm:mb-5 lg:mb-1 xl:mb-5 tracking-tight">
               Dive into
               <br />
               <span className="shimmer-text">Luxury</span>
@@ -106,21 +106,10 @@ export function Hero() {
             {/* CTAs */}
             <div className="hero-animate hero-animate-4 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 lg:gap-2.5 xl:gap-4 *:whitespace-nowrap">
               <Link
-                href="/contact"
-                className="group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 lg:px-5 xl:px-8 py-3 sm:py-3.5 lg:py-2 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base lg:text-xs xl:text-base"
-              >
-                <span className="relative z-10">Get Your Free Estimate</span>
-                <ArrowRight
-                  size={18}
-                  className="relative z-10 group-hover:translate-x-1 transition-transform"
-                />
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-accent-light to-accent opacity-0 group-hover:opacity-100 transition-opacity" />
-              </Link>
-              <Link
                 href="/pool-simulator"
-                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 lg:px-5 xl:px-8 py-3 sm:py-3.5 lg:py-2 xl:py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all duration-300 text-sm sm:text-base lg:text-xs xl:text-base"
+                className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 lg:px-5 xl:px-8 py-3 sm:py-3.5 lg:py-2 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 transition-all duration-300 text-sm sm:text-base lg:text-xs xl:text-base"
               >
-                <Sparkles size={18} className="text-accent" />
+                <Sparkles size={18} className="text-white" />
                 Pool Simulator
               </Link>
               <Link
