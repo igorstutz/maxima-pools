@@ -59,7 +59,7 @@ Concrete cracks under repeated stress. The damage is invisible at first — hair
 
 Fiberglass shells **flex by 1–2% under load** — barely perceptible visually, but enough to absorb the soil movement that destroys concrete. Same reason the marine industry uses fiberglass for boat hulls: water and ground pressure aren't constant, and rigid materials lose to flexible ones over time.
 
-This isn't a minor edge case. Anyone who's owned a concrete pool through 15 Central Ohio winters has a repair history. We've quoted dozens of those repairs on pools we didn't build. [See how we approach Frozable Pools](/frozen-pools) — fiberglass shells engineered specifically for this climate.
+This isn't a minor edge case. Anyone who's owned a concrete pool through 15 Central Ohio winters has a repair history. We've quoted dozens of those repairs on pools we didn't build. [See how we approach Freezable Pools](/frozen-pools) — fiberglass shells engineered specifically for this climate.
 
 ![Rectangular fiberglass pool with travertine coping installed by Maxima Pools](/images/gallery/lagoon-03.jpg)
 
@@ -146,7 +146,7 @@ A properly installed San Juan fiberglass shell is engineered to outlast the hous
 
 ### Are fiberglass pools good for cold climates?
 
-Yes — better than concrete in cold climates, in fact. The shell flexes with freeze-thaw movement instead of cracking. Pools stay full through winter (water level lowered just below the skimmer), and the shell structure is protected by the water itself. [Learn about our Frozable Pools approach](/frozen-pools).
+Yes — better than concrete in cold climates, in fact. The shell flexes with freeze-thaw movement instead of cracking. Pools stay full through winter (water level lowered just below the skimmer), and the shell structure is protected by the water itself. [Learn about our Freezable Pools approach](/frozen-pools).
 
 ### What's the average cost of a fiberglass pool in Columbus?
 

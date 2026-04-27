@@ -24,11 +24,11 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
-  title: "Frozable Pools — Ice-Ready Fiberglass Pools | Maxima Pools - Columbus, OH",
+  title: "Freezable Pools — Ice-Ready Fiberglass Pools | Maxima Pools - Columbus, OH",
   description:
     "San Juan fiberglass pools are built to handle extreme freezing conditions. Durable, flexible, and warranty-backed — your pool performs year-round, even in Ohio winters.",
   openGraph: {
-    title: "Frozable Pools — Built for Every Season | Maxima Pools",
+    title: "Freezable Pools — Built for Every Season | Maxima Pools",
     description:
       "San Juan fiberglass pools handle extreme freeze-thaw cycles without cracking. Turn your pool into a winter playground.",
     type: "website",
@@ -77,7 +77,7 @@ const benefits = [
     icon: ShieldCheck,
     title: "Warranty Protected",
     description:
-      "The Frozable Pool process is fully compatible with San Juan Pools standards and does not void the manufacturer's structural warranty.",
+      "The Freezable Pool process is fully compatible with San Juan Pools standards and does not void the manufacturer's structural warranty.",
   },
 ];
 
@@ -93,7 +93,7 @@ const winterAdvantages = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Frozable Pools — Ice-Ready Fiberglass Pool Installation",
+  name: "Freezable Pools — Ice-Ready Fiberglass Pool Installation",
   provider: {
     "@type": "LocalBusiness",
     name: "Maxima Pools",
@@ -142,7 +142,7 @@ export default function FrozenPoolsPage() {
               Pools & Spas
             </Link>
             <ChevronRight size={14} className="text-white" />
-            <span className="text-white font-medium">Frozable Pools</span>
+            <span className="text-white font-medium">Freezable Pools</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -479,19 +479,19 @@ export default function FrozenPoolsPage() {
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Frozable Pool Compatibility{" "}
+                  Freezable Pool Compatibility{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                     & Warranty
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  The Frozable Pool process offered by Maxima Pools is fully compatible
+                  The Freezable Pool process offered by Maxima Pools is fully compatible
                   with San Juan Pools standards and does not void the manufacturer&apos;s
                   warranty.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
                   Every San Juan pool is engineered with a reinforced composite
-                  structure specifically designed to support the Frozable Pool process,
+                  structure specifically designed to support the Freezable Pool process,
                   giving you complete peace of mind for decades to come.
                 </p>
 
