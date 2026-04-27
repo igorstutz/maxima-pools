@@ -39,7 +39,7 @@ const colors: PoolColor[] = [
     tagline: "Tropical & Refreshing",
     description:
       "Bring vacation vibes right to your backyard. Blue Lagoon captures the essence of the Caribbean \u2014 a bright, inviting hue that makes your pool water look crystal clear and vibrant.",
-    swatch: "#2563eb",
+    swatch: "#1e63d6",
     hero: "https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg",
     gallery: [
       "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.43.37-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
@@ -55,7 +55,7 @@ const colors: PoolColor[] = [
     tagline: "Modern & Timeless",
     description:
       "Granite offers a sleek, elegant look that pairs perfectly with modern landscapes. Its deep, stone-like tone enhances the contrast of surrounding pavers and greenery.",
-    swatch: "#57534e",
+    swatch: "#42434a",
     hero: "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PM-1Granite-Pool-Images-768x576.jpeg",
     gallery: [
       "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PMGranite-Pool-Images-768x576.jpeg",
@@ -70,7 +70,7 @@ const colors: PoolColor[] = [
     tagline: "Calm & Elegant",
     description:
       "Soft and soothing, Sully Blue evokes a sense of calm and balance. It\u2019s ideal for homeowners who love minimalist design and subtle luxury.",
-    swatch: "#7dd3fc",
+    swatch: "#a8d3e6",
     hero: "https://maximapools.com/wp-content/uploads/2025/01/Ariella-Sully-Blue-768x576.jpeg",
     gallery: [
       "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.51.41-PMSully-Blue-Pool-Images-768x576.jpeg",
@@ -85,7 +85,7 @@ const colors: PoolColor[] = [
     tagline: "Clean & Classic",
     description:
       "A timeless favorite. White gives your pool a bright, clear appearance and highlights the water\u2019s natural shimmer. Perfect for a clean, classic aesthetic.",
-    swatch: "#e7e5e4",
+    swatch: "#f5f5f5",
     hero: "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-6White-Pool-Images-768x576.jpeg",
     gallery: [
       "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-5White-Pool-Images-768x576.jpeg",
@@ -289,7 +289,7 @@ export default function PoolColorsPage() {
                 >
                   {/* Swatch circle */}
                   <span
-                    className={`w-6 h-6 rounded-full border-2 shrink-0 transition-all duration-300 ${
+                    className={`granite-swatch w-6 h-6 rounded-full border-2 shrink-0 transition-all duration-300 ${
                       i === activeIndex
                         ? "border-accent scale-110 shadow-[0_0_12px_rgba(6,182,212,0.4)]"
                         : "border-white/20 group-hover:border-white/40"
@@ -344,7 +344,7 @@ export default function PoolColorsPage() {
                   {/* Tagline badge on image */}
                   <div className="absolute bottom-4 left-4 inline-flex items-center gap-2 glass rounded-full px-4 py-2">
                     <span
-                      className="w-3 h-3 rounded-full"
+                      className="granite-swatch w-3 h-3 rounded-full"
                       style={{ backgroundColor: active.swatch }}
                     />
                     <span className="text-white/90 text-sm font-medium">
@@ -360,7 +360,7 @@ export default function PoolColorsPage() {
                   {/* Color swatch bar */}
                   <div className="flex items-center gap-4 mb-6">
                     <div
-                      className="w-14 h-14 rounded-2xl shadow-lg border border-white/10"
+                      className="granite-swatch granite-swatch--strong w-14 h-14 rounded-2xl shadow-lg border border-white/10"
                       style={{ backgroundColor: active.swatch }}
                     />
                     <div>
