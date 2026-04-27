@@ -45,8 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 const services = [
   "New Fiberglass Pool Installation",
-  "Pool Closing & Winterization",
-  "Pool Opening",
+  "Close/Opening Pools & Winterization",
   "Auto Cover Installation",
   "Outdoor Living & Hardscaping",
   "Pool Accessories & Extras",

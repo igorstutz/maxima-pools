@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description:
     "High-quality fiberglass pools and custom patios installed by trusted experts in Columbus, Ohio. Authorized San Juan Pools dealer. Free estimates available.",
   keywords:
-    "fiberglass pools, pool installation, Columbus Ohio, San Juan Pools, inground pools, pool builder, pool closing, outdoor living, fiberglass pool gallery",
+    "fiberglass pools, pool installation, Columbus Ohio, San Juan Pools, inground pools, pool builder, close/opening pools, outdoor living, fiberglass pool gallery",
   authors: [{ name: "Maxima Pools" }],
   creator: "Maxima Pools",
   publisher: "Maxima Pools",

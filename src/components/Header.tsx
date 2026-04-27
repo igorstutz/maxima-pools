@@ -18,9 +18,9 @@ const poolsSubmenu = [
   { label: "Pools", href: "/pools" },
   { label: "Spas", href: "/pools?type=Spa" },
   { label: "Tanning Ledges", href: "/pools?type=Tanning+Ledge" },
-  { label: "Frozen Pools", href: "/frozen-pools" },
+  { label: "Frozable Pools", href: "/frozen-pools" },
   { label: "Auto Cover Pool", href: "/auto-cover-pool" },
-  { label: "Pool Closing", href: "/pool-closing" },
+  { label: "Close/Opening Pools", href: "/pool-closing" },
   { label: "Pool Accessories & Extras", href: "/pool-accessories-and-extras" },
 ];
 
