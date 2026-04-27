@@ -14,6 +14,15 @@ import {
   Check,
   AlertCircle,
 } from "lucide-react";
+import { asset } from "@/lib/base-path";
+
+const markdownComponents = {
+  img({ src, alt, ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) {
+    const resolved = typeof src === "string" ? asset(src) : src;
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    return <img {...rest} src={resolved} alt={alt ?? ""} loading="lazy" />;
+  },
+};
 
 const ADMIN_PASSWORD = "maxima2026";
 
@@ -483,7 +492,7 @@ export default function AdminBlogPage() {
                   </p>
                   <div className="blog-prose">
                     {draft.body.trim() ? (
-                      <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                      <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
                         {draft.body}
                       </ReactMarkdown>
                     ) : (

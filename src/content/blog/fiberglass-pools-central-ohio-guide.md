@@ -1,7 +1,7 @@
 ---
 title: "Fiberglass Pools in Central Ohio: A Homeowner's Guide"
 excerpt: "Comparing fiberglass, concrete, and vinyl liner pools for Central Ohio's freeze-thaw climate. Real cost numbers, lifespan data, and the construction details that matter."
-coverImage: "/images/gallery/featured-02.jpg"
+coverImage: "/images/gallery/lagoon-02.jpg"
 author: "Maxima Pools Team"
 publishedAt: "2026-04-15"
 tags: ["Fiberglass", "Buying Guide", "Central Ohio"]

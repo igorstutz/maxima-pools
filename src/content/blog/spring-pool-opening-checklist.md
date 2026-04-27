@@ -1,7 +1,7 @@
 ---
 title: "Spring Pool Opening: An 8-Step Checklist for Fiberglass Owners"
 excerpt: "A pro-grade spring pool opening checklist for Central Ohio homeowners. The exact 8-step sequence we run on every fiberglass pool — and the five mistakes that cost a season of swim time."
-coverImage: "/images/gallery/featured-04.jpg"
+coverImage: "/images/gallery/lagoon-05.jpg"
 author: "Maxima Pools Team"
 publishedAt: "2026-04-22"
 tags: ["Maintenance", "Spring Opening", "How-To"]

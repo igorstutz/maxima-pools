@@ -17,12 +17,23 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import { asset } from "@/lib/base-path";
 import {
   getAllPosts,
   getPostBySlug,
   getRelatedPosts,
   formatPublishedDate,
 } from "@/lib/blog";
+
+/* Markdown renderer overrides — prefix the deploy basePath on inline image src
+   so /images/... markdown references resolve under /maxima-pools on GH Pages. */
+const markdownComponents = {
+  img({ src, alt, ...rest }: React.ImgHTMLAttributes<HTMLImageElement>) {
+    const resolved = typeof src === "string" ? asset(src) : src;
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    return <img {...rest} src={resolved} alt={alt ?? ""} loading="lazy" />;
+  },
+};
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -145,7 +156,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
       <section className="py-12 sm:py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <article className="blog-prose">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
               {post.content}
             </ReactMarkdown>
           </article>
