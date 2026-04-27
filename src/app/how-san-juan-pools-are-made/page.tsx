@@ -85,7 +85,7 @@ const strengthPoints = [
 
 const finishes = [
   {
-    title: "Classic White & Sulli Blue",
+    title: "Classic White & Sully Blue",
     description:
       "NPG/ISO (Neopentyl Glycol Isophthalic) based gelcoat — UV stabilized and corrosion resistant. Many pools with this finish are well over 25 years old and still look stunning. Crystal clear water will always have a sparkling blue look.",
     tags: ["UV Stabilized", "Corrosion Resistant", "25+ Year Track Record"],
