@@ -51,7 +51,7 @@ export function Footer() {
                 alt="Maxima Pools"
                 width={160}
                 height={50}
-                className="h-12 w-auto"
+                className="h-12 w-auto brightness-0 invert"
               />
             </div>
             <p className="text-white text-sm leading-relaxed mb-6 max-w-sm">
