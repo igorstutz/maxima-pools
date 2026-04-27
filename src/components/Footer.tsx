@@ -25,6 +25,7 @@ const learnLinks = [
 const moreLinks = [
   { label: "Outdoor Living", href: "/outdoor-living" },
   { label: "Gallery", href: "/fiberglass-pool-gallery" },
+  { label: "Blog", href: "/blog" },
   { label: "Free Estimate", href: "/contact" },
 ];
 
