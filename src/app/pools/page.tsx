@@ -97,6 +97,14 @@ function PoolsPageInner() {
       setTypeFilter("All");
     }
 
+    const shapeParam = searchParams.get("shape");
+    if (shapeParam && (shapeFilters as readonly string[]).includes(shapeParam)) {
+      setShapeFilter(shapeParam as ShapeFilter);
+      setTimeout(scrollToGrid, 100);
+    } else {
+      setShapeFilter("All");
+    }
+
     const sizeParam = searchParams.get("size");
     if (sizeParam && (sizeCategoryFilters as readonly string[]).includes(sizeParam)) {
       setSizeCategoryFilter(sizeParam as SizeCategoryFilter);

@@ -210,7 +210,10 @@ export function WhyMaxima() {
 
           {/* Card 3 — Full-Service (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={1}>
-            <div className="group rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full">
+            <Link
+              href="/our-process"
+              className="group block rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
+            >
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                 <Wrench size={24} className="text-white" />
               </div>
@@ -236,12 +239,15 @@ export function WhyMaxima() {
                   </div>
                 ))}
               </div>
-            </div>
+            </Link>
           </ScrollReveal>
 
           {/* Card 4 — Family Owned (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={2}>
-            <div className="group rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full">
+            <Link
+              href="/why-maxima"
+              className="group block rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
+            >
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center mb-6 shadow-lg shadow-sky-500/20 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
                 <HeartHandshake size={24} className="text-white" />
               </div>
@@ -287,7 +293,7 @@ export function WhyMaxima() {
                   </p>
                 </div>
               </div>
-            </div>
+            </Link>
           </ScrollReveal>
 
           {/* Card 5 — San Juan Partnership badge (spans 4) */}

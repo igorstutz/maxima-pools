@@ -53,7 +53,7 @@ export function PoolShapes() {
           {shapes.map((shape, index) => (
             <ScrollReveal key={shape.name} delay={index < 2 ? ((index + 1) as 1 | 2) : undefined}>
               <Link
-                href="/pools"
+                href={`/pools?shape=${shape.name}`}
                 className="group block rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 hover:border-gray-200 bg-white hover:shadow-xl transition-all duration-500"
               >
                 <div className="grid md:grid-cols-5 lg:grid-cols-2">
