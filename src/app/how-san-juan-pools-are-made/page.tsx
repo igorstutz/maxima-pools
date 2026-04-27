@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   ArrowRight,
+  ArrowUpRight,
   Phone,
   ChevronRight,
   Layers,
@@ -235,6 +236,74 @@ export default function HowItsMadePage() {
                   </div>
                 </div>
               ))}
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ── Authorized San Juan Dealer Strip ── */}
+      <section className="py-16 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="rounded-3xl bg-gradient-to-br from-primary to-accent-dark relative overflow-hidden">
+              <div className="absolute inset-0 water-caustics opacity-20" />
+              <div className="absolute top-0 right-0 w-72 h-72 rounded-full bg-accent/10 blur-3xl" />
+              <div className="absolute bottom-0 left-0 w-72 h-72 rounded-full bg-white/5 blur-3xl" />
+
+              <div className="relative grid lg:grid-cols-12 gap-8 lg:gap-10 items-center p-8 sm:p-12 lg:p-14">
+                {/* Logo */}
+                <div className="lg:col-span-4 flex justify-center">
+                  <a
+                    href="https://sanjuanpools.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit San Juan Pools website (opens in new tab)"
+                    className="group relative transition-transform duration-300 hover:scale-105"
+                  >
+                    <div className="absolute -inset-6 bg-accent/20 rounded-full blur-2xl group-hover:bg-accent/30 transition-colors" />
+                    <Image
+                      src="/images/logo/sanjuan-logo.png"
+                      alt="San Juan Pools - Authorized Dealer"
+                      width={240}
+                      height={240}
+                      className="relative w-40 h-40 sm:w-48 sm:h-48 lg:w-56 lg:h-56 object-contain drop-shadow-2xl"
+                    />
+                  </a>
+                </div>
+
+                {/* Content */}
+                <div className="lg:col-span-8 text-center lg:text-left">
+                  <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-5 py-2 mb-5">
+                    <Award size={14} className="text-accent" />
+                    <span className="text-white font-semibold text-sm uppercase tracking-wider">
+                      Authorized Dealer
+                    </span>
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-4">
+                    Backed by{" "}
+                    <span className="shimmer-text">San Juan Pools</span>
+                  </h2>
+                  <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-6 max-w-2xl mx-auto lg:mx-0">
+                    Maxima Pools is proud to be an authorized San Juan dealer.
+                    Every pool we install is built by the industry leader in
+                    fiberglass pool manufacturing since 1958.
+                  </p>
+                  <a
+                    href="https://sanjuanpools.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 px-7 py-3.5 bg-white text-primary font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm whitespace-nowrap"
+                  >
+                    Visit sanjuanpools.com
+                    <ArrowUpRight
+                      size={16}
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
           </ScrollReveal>
         </div>
