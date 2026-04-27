@@ -304,10 +304,10 @@ export default function WhyMaximaPage() {
                 <div className="absolute -inset-3 bg-primary/8 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-2xl">
                   <Image
-                    src="/images/why-maxima/hero-aerial.jpg"
-                    alt="Maxima Pools team in front of headquarters"
-                    width={800}
-                    height={550}
+                    src="/images/why-maxima/team-headquarters.jpg"
+                    alt="Maxima Concrete and Maxima Pools team in front of the Delaware, Ohio headquarters"
+                    width={1600}
+                    height={900}
                     className="w-full aspect-[16/11] object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
