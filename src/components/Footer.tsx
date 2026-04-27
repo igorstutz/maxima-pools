@@ -8,7 +8,7 @@ const poolsLinks = [
   { label: "Pool Colors", href: "/fiberglass-pool-colors" },
   { label: "Auto Cover Pool", href: "/auto-cover-pool" },
   { label: "Freezable Pools", href: "/frozen-pools" },
-  { label: "Close/Opening Pools", href: "/pool-closing" },
+  { label: "Pool Closing/Opening", href: "/pool-closing" },
   { label: "Pool Accessories", href: "/pool-accessories-and-extras" },
   { label: "Pool Simulator", href: "/pool-simulator" },
 ];

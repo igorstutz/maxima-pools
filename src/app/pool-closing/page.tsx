@@ -34,11 +34,11 @@ import { Testimonials } from "@/components/Testimonials";
 import { PoolClosingFAQ } from "./faq";
 
 export const metadata: Metadata = {
-  title: "Close/Opening Pools & Winterizing | Maxima Pools - Columbus, OH",
+  title: "Pool Closing/Opening & Winterizing | Maxima Pools - Columbus, OH",
   description:
     "Professional pool winterization services in Columbus, OH. Protect your pool from freeze damage, prevent algae growth, and ensure an easy spring opening. Starting at $450.",
   openGraph: {
-    title: "Close/Opening Pools & Winterizing | Maxima Pools",
+    title: "Pool Closing/Opening & Winterizing | Maxima Pools",
     description:
       "Professional winterization to protect your pool from freeze damage, prevent algae growth, and ensure a smooth opening in spring.",
     type: "website",
@@ -201,9 +201,9 @@ const faqData = [
       "Skipping winterization can lead to frozen and cracked plumbing lines, damaged pumps and filters, algae blooms, and staining. Repair costs from freeze damage often exceed $3,000–$5,000, far more than the cost of professional winterization.",
   },
   {
-    question: "How long does the close/opening process take?",
+    question: "How long does the pool closing/opening process take?",
     answer:
-      "A standard close/opening service takes approximately 1.5 to 2.5 hours depending on pool size, equipment, and any additional services needed. Our technicians handle every step efficiently so you can get back to your day.",
+      "A standard pool closing/opening service takes approximately 1.5 to 2.5 hours depending on pool size, equipment, and any additional services needed. Our technicians handle every step efficiently so you can get back to your day.",
   },
   {
     question: "Do I need to drain my pool completely?",
@@ -227,7 +227,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Service",
-      name: "Close/Opening Pools & Winterization",
+      name: "Pool Closing/Opening & Winterization",
       provider: {
         "@type": "LocalBusiness",
         name: "Maxima Pools",
@@ -294,7 +294,7 @@ export default function PoolClosingPage() {
               Home
             </Link>
             <ChevronRight size={14} className="text-white" />
-            <span className="text-white font-medium">Close/Opening Pools</span>
+            <span className="text-white font-medium">Pool Closing/Opening</span>
           </nav>
 
           <div className="max-w-3xl">
@@ -306,7 +306,7 @@ export default function PoolClosingPage() {
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Close/Opening Pools &amp; </span>
+              <span className="text-white">Pool Closing/Opening &amp; </span>
               <span className="shimmer-text">Winterizing</span>
             </h1>
 
@@ -377,7 +377,7 @@ export default function PoolClosingPage() {
 
       <SectionDivider />
 
-      {/* ── Why Proper Close/Opening Matters ── */}
+      {/* ── Why Proper Pool Closing/Opening Matters ── */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -389,7 +389,7 @@ export default function PoolClosingPage() {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Why Proper Close/Opening{" "}
+                Why Proper Pool Closing/Opening{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   Matters
                 </span>
@@ -530,7 +530,7 @@ export default function PoolClosingPage() {
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Close/Opening services start at $450, with variations based on pool
+                  Pool Closing/Opening services start at $450, with variations based on pool
                   type, size, and additional features like heaters or saltwater systems.
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
@@ -662,7 +662,7 @@ export default function PoolClosingPage() {
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Everything you need to know about our close/opening service. Can&apos;t find what you&apos;re looking for? Give us a call.
+                  Everything you need to know about our pool closing/opening service. Can&apos;t find what you&apos;re looking for? Give us a call.
                 </p>
                 <a
                   href="tel:+16143845081"
