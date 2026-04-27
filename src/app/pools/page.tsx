@@ -387,11 +387,11 @@ function PoolsPageInner() {
           {filteredPools.length > 0 && (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
               {filteredPools.map((pool) => (
-                <div key={pool.name} className="animate-fadeInUp">
-                  <Link href={`/pools/${slugify(pool.name)}`} className="block">
-                    <div className="pool-card group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm">
+                <div key={pool.name} className="animate-fadeInUp h-full">
+                  <Link href={`/pools/${slugify(pool.name)}`} className="block h-full">
+                    <div className="pool-card group rounded-2xl sm:rounded-3xl overflow-hidden bg-white border border-gray-100 shadow-sm h-full flex flex-col">
                       {/* Image container */}
-                      <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
+                      <div className="relative aspect-[4/3] overflow-hidden bg-gray-50 shrink-0">
                         <Image
                           src={pool.image}
                           alt={`${pool.name} fiberglass pool`}
@@ -417,7 +417,7 @@ function PoolsPageInner() {
                       </div>
 
                       {/* Content */}
-                      <div className="p-4 sm:p-6">
+                      <div className="p-4 sm:p-6 flex-1 flex flex-col">
                         <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4 group-hover:text-primary transition-colors duration-300">
                           {pool.name}
                         </h3>
