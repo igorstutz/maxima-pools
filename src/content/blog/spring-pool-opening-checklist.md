@@ -111,6 +111,10 @@ After the shock, the filter pulls out the killed particulates over the next day.
 
 By the next morning, water should be crystal clear and chlorine in the 1–3 ppm range. **Now you swim.**
 
+![Freshly opened fiberglass pool with crystal-clear Sully Blue water](/images/gallery/sully-01.jpg)
+
+*A clean opening sets the tone for the whole season. Crystal-clear Sully Blue water, balanced chemistry, and the filter doing the rest of the work for the next 20 weeks.*
+
 ## The Five Mistakes That Cost a Season
 
 We get called in to rescue pools every spring. Five mistakes account for roughly 80% of the rescue calls.

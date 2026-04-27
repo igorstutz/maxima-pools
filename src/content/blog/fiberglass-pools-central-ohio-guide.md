@@ -61,6 +61,10 @@ Fiberglass shells **flex by 1–2% under load** — barely perceptible visually,
 
 This isn't a minor edge case. Anyone who's owned a concrete pool through 15 Central Ohio winters has a repair history. We've quoted dozens of those repairs on pools we didn't build. [See how we approach Frozable Pools](/frozen-pools) — fiberglass shells engineered specifically for this climate.
 
+![Rectangular fiberglass pool with travertine coping installed by Maxima Pools](/images/gallery/lagoon-03.jpg)
+
+*A 14'×30' San Juan fiberglass pool installed in Central Ohio. The gel-coat surface is smooth and non-porous — algae doesn't anchor to it the way it does to concrete plaster.*
+
 ## 20-Year Cost of Ownership
 
 Sticker prices favor vinyl. Total cost of ownership tells a different story. Here's a realistic 20-year accounting for a mid-size pool in Central Ohio (assumes a 14'×28' or equivalent).
@@ -120,6 +124,10 @@ That speed isn't a marketing claim — it's the natural result of factory pre-fa
 ## What Separates a Quality Fiberglass Shell
 
 If you decide fiberglass is right, the brand and construction method matter enormously. Two shells that look identical from the dealer floor can have a 20-year lifespan difference.
+
+![San Juan craftsmen hand-laying woven fiberglass roving](/images/process/glass.webp)
+
+*Hand-laid woven roving at the San Juan factory. Continuous strands instead of spray-on chopped fiber — the same technique used on aerospace and marine hulls.*
 
 What to look for:
 
