@@ -39,7 +39,7 @@ const colors: PoolColor[] = [
     tagline: "Tropical & Refreshing",
     description:
       "Bring vacation vibes right to your backyard. Blue Lagoon captures the essence of the Caribbean \u2014 a bright, inviting hue that makes your pool water look crystal clear and vibrant.",
-    swatch: "#1e63d6",
+    swatch: "#3b82d8",
     hero: "https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg",
     gallery: [
       "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.43.37-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
@@ -613,7 +613,7 @@ export default function PoolColorsPage() {
                   <div className="flex items-center gap-2 mb-6">
                     <span
                       className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#1e63d6" }}
+                      style={{ backgroundColor: "#3b82d8" }}
                       title="Blue Lagoon"
                     />
                     <span
