@@ -281,7 +281,7 @@ export default function PoolColorsPage() {
                 <button
                   key={color.id}
                   onClick={() => handleColorChange(i)}
-                  className={`group relative flex items-center gap-3 px-5 py-3 rounded-full border transition-all duration-300 cursor-pointer ${
+                  className={`group relative flex items-center gap-3 sm:gap-4 pl-2 pr-5 sm:pr-6 py-2 rounded-full border transition-all duration-300 cursor-pointer ${
                     i === activeIndex
                       ? "bg-white/[0.12] border-accent/50 shadow-[0_0_20px_rgba(6,182,212,0.15)]"
                       : "bg-white/[0.04] border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.15]"
@@ -289,9 +289,9 @@ export default function PoolColorsPage() {
                 >
                   {/* Swatch circle */}
                   <span
-                    className={`granite-swatch w-6 h-6 rounded-full border-2 shrink-0 transition-all duration-300 ${
+                    className={`granite-swatch w-10 h-10 sm:w-11 sm:h-11 rounded-full border-2 shrink-0 transition-all duration-300 ${
                       i === activeIndex
-                        ? "border-accent scale-110 shadow-[0_0_12px_rgba(6,182,212,0.4)]"
+                        ? "border-accent scale-110 shadow-[0_0_16px_rgba(6,182,212,0.45)]"
                         : "border-white/20 group-hover:border-white/40"
                     }`}
                     style={{ backgroundColor: color.swatch }}
@@ -549,13 +549,13 @@ export default function PoolColorsPage() {
                   {/* Color swatches */}
                   <div className="flex items-center gap-2 mb-6">
                     <span
-                      className="w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#e7e5e4" }}
+                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                      style={{ backgroundColor: "#f5f5f5" }}
                       title="White"
                     />
                     <span
-                      className="w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#7dd3fc" }}
+                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                      style={{ backgroundColor: "#a8d3e6" }}
                       title="Sully Blue"
                     />
                     <span className="text-white text-xs font-medium ml-2">
@@ -612,13 +612,13 @@ export default function PoolColorsPage() {
                   {/* Color swatches */}
                   <div className="flex items-center gap-2 mb-6">
                     <span
-                      className="w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#2563eb" }}
+                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                      style={{ backgroundColor: "#1e63d6" }}
                       title="Blue Lagoon"
                     />
                     <span
-                      className="w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#57534e" }}
+                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                      style={{ backgroundColor: "#42434a" }}
                       title="Granite"
                     />
                     <span className="text-white text-xs font-medium ml-2">
