@@ -1,0 +1,70 @@
+# Maxima Pools — Hostinger / Apache configuration
+# Lives at public_html/.htaccess
+
+Options -Indexes -MultiViews +FollowSymLinks
+DirectoryIndex index.html
+
+# ── Force HTTPS + canonical (non-www) host ──────────────────────────────
+RewriteEngine On
+
+# Redirect www → apex
+RewriteCond %{HTTP_HOST} ^www\.maximapools\.com$ [NC]
+RewriteRule ^(.*)$ https://maximapools.com/$1 [L,R=301]
+
+# Force HTTPS once SSL is enabled
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^maximapools\.com$ [NC]
+RewriteRule ^(.*)$ https://maximapools.com/$1 [L,R=301]
+
+# ── Pretty URLs for the Next.js static export ──────────────────────────
+# Each route is exported as <route>/index.html. Apache's DirectorySlash
+# already redirects /about → /about/, but we ALSO want /about.html style
+# paths to work without forcing the user to type the slash.
+
+# If a request hits an existing file or directory, serve it directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise, try /<path>/index.html before falling back to 404.
+RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+# ── Custom 404 ─────────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── Caching + compression (longer-lived assets, short-lived HTML) ──────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault                              "access plus 1 hour"
+  ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/css                      "access plus 1 year"
+  ExpiresByType application/javascript        "access plus 1 year"
+  ExpiresByType image/jpeg                    "access plus 6 months"
+  ExpiresByType image/png                     "access plus 6 months"
+  ExpiresByType image/webp                    "access plus 6 months"
+  ExpiresByType image/svg+xml                 "access plus 6 months"
+  ExpiresByType font/woff2                    "access plus 1 year"
+  ExpiresByType application/font-woff2        "access plus 1 year"
+</IfModule>
+
+# Hashed Next chunks are immutable — they can be cached forever.
+<FilesMatch "^_next/static/.*\.(?:js|css|woff2|woff|jpg|jpeg|png|webp|svg)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# ── Security headers ───────────────────────────────────────────────────
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+</IfModule>
+
+# Block direct access to dotfiles (.env, .git*, etc.)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
