@@ -2,23 +2,31 @@
 declare(strict_types=1);
 
 /* ----------------------------------------------------------------------
- *  Maxima Pools — contact form handler
- *  Receives a POST from /contact and emails the lead to RECIPIENT.
- *  Drop this file at public_html/api/submit.php on the Hostinger account.
+ *  Maxima Pools — contact form handler (SMTP via cURL)
+ *  Authenticates against the Hostinger SMTP server using the no-reply@
+ *  mailbox so delivery is reliable on shared hosting where the bare
+ *  mail() function is restricted or silently dropped.
+ *
+ *  Edit the SMTP_PASS constant below with the no-reply@ password
+ *  set when the mailbox was created in the Hostinger panel.
  * ---------------------------------------------------------------------- */
 
 // === Configuration ====================================================
-// Change this to wherever new estimate requests should land.
 $RECIPIENT  = 'info@maximapools.com';
-// Must be a mailbox on a domain you control (Hostinger blocks spoofed senders).
 $FROM_NAME  = 'Maxima Pools Website';
 $FROM_EMAIL = 'no-reply@maximapools.com';
+
+// Hostinger SMTP credentials. Edit SMTP_PASS on the server.
+$SMTP_HOST = 'smtp.hostinger.com';
+$SMTP_PORT = 465;
+$SMTP_USER = 'no-reply@maximapools.com';
+$SMTP_PASS = 'PUT_NO_REPLY_PASSWORD_HERE';
 // ======================================================================
 
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-store');
 
-// Allow CORS only from the production domain (and same-origin).
+// CORS — allow only the production domain.
 $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 if (
     $origin === '' ||
@@ -43,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Strip CR/LF — defense against email-header injection.
+// CR/LF defense for fields used in headers.
 function clean_line(string $v): string {
     $v = trim($v);
     return str_replace(["\r", "\n", "%0a", "%0d"], '', $v);
@@ -52,7 +60,7 @@ function field(string $k): string {
     return clean_line((string)($_POST[$k] ?? ''));
 }
 
-// Honeypot — bots fill the hidden _gotcha; humans never see it.
+// Honeypot — silently accept and drop.
 if (trim((string)($_POST['_gotcha'] ?? '')) !== '') {
     echo json_encode(['ok' => true]);
     exit;
@@ -67,7 +75,6 @@ $city     = field('city');
 $state    = field('state');
 $poolSize = field('poolSize');
 $source   = field('source');
-// Multi-line message — keep newlines, just trim and limit length.
 $message  = substr(trim((string)($_POST['message'] ?? '')), 0, 5000);
 
 $errors = [];
@@ -103,22 +110,59 @@ $body .= str_repeat('-', 60) . "\n";
 $body .= "Message:\n\n";
 $body .= $message . "\n\n";
 $body .= str_repeat('-', 60) . "\n";
-$body .= "Submitted: " . gmdate('Y-m-d H:i:s') . " UTC\n";
-$body .= "From IP:   " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
+$body .= "Submitted:   " . gmdate('Y-m-d H:i:s') . " UTC\n";
+$body .= "From IP:     " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 
-$headers   = [];
-$headers[] = "From: $FROM_NAME <$FROM_EMAIL>";
-$headers[] = "Reply-To: $name <$email>";
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-Type: text/plain; charset=utf-8";
-$headers[] = "X-Mailer: Maxima Pools Website";
+// Build RFC 5322 message (CRLF line endings, dot-stuffing handled by curl).
+$eol = "\r\n";
+$payload  = "Date: " . date('r') . $eol;
+$payload .= "To: <$RECIPIENT>" . $eol;
+$payload .= "From: $FROM_NAME <$FROM_EMAIL>" . $eol;
+$payload .= "Reply-To: $name <$email>" . $eol;
+$payload .= "Subject: $subject" . $eol;
+$payload .= "MIME-Version: 1.0" . $eol;
+$payload .= "Content-Type: text/plain; charset=utf-8" . $eol;
+$payload .= "Content-Transfer-Encoding: 8bit" . $eol;
+$payload .= "X-Mailer: Maxima Pools Website" . $eol;
+$payload .= $eol;
+// Body must use CRLF too.
+$payload .= str_replace("\n", $eol, $body);
 
-$ok = @mail($RECIPIENT, $subject, $body, implode("\r\n", $headers));
+$stream = fopen('php://temp', 'r+');
+fwrite($stream, $payload);
+rewind($stream);
 
-if ($ok) {
+$ch = curl_init();
+curl_setopt_array($ch, [
+    CURLOPT_URL            => "smtps://$SMTP_HOST:$SMTP_PORT",
+    CURLOPT_USERNAME       => $SMTP_USER,
+    CURLOPT_PASSWORD       => $SMTP_PASS,
+    CURLOPT_MAIL_FROM      => "<$FROM_EMAIL>",
+    CURLOPT_MAIL_RCPT      => ["<$RECIPIENT>"],
+    CURLOPT_UPLOAD         => true,
+    CURLOPT_INFILE         => $stream,
+    CURLOPT_INFILESIZE     => strlen($payload),
+    CURLOPT_USE_SSL        => CURLUSESSL_ALL,
+    CURLOPT_SSL_VERIFYPEER => true,
+    CURLOPT_SSL_VERIFYHOST => 2,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_TIMEOUT        => 30,
+    CURLOPT_CONNECTTIMEOUT => 10,
+]);
+
+$result    = curl_exec($ch);
+$curl_err  = curl_error($ch);
+$curl_no   = curl_errno($ch);
+curl_close($ch);
+fclose($stream);
+
+if ($result !== false && $curl_no === 0) {
     echo json_encode(['ok' => true]);
     exit;
 }
+
+// Log the failure so we can see what happened on the server.
+@error_log("[submit.php] SMTP send failed (errno=$curl_no): $curl_err");
 
 http_response_code(500);
 echo json_encode([
