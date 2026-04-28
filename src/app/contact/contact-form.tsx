@@ -3,6 +3,10 @@
 import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 
+const FORMSPREE_ENDPOINT =
+  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ||
+  "https://formspree.io/f/REPLACE_WITH_FORM_ID";
+
 const hearAboutOptions = [
   "Google Search",
   "Facebook",
@@ -96,7 +100,8 @@ export function ContactForm() {
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
+    const formEl = e.currentTarget;
+    const form = new FormData(formEl);
     const errs = validate(form);
 
     if (Object.keys(errs).length > 0) {
@@ -104,14 +109,42 @@ export function ContactForm() {
       return;
     }
 
+    // Honeypot — silently drop bots that filled the hidden field
+    if ((form.get("_gotcha") as string)?.trim()) {
+      setStatus("success");
+      return;
+    }
+
+    // Build a useful subject line so the inbox is scannable
+    const name = (form.get("name") as string) || "Website visitor";
+    form.set("_subject", `New estimate request from ${name}`);
+
     setErrors({});
     setStatus("submitting");
 
-    // Simulate submission — replace with actual API call
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setStatus("success");
-    } catch {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: form,
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        formEl.reset();
+        return;
+      }
+
+      // Formspree returns { errors: [{ message }] } on validation failure
+      const data: unknown = await res.json().catch(() => null);
+      if (typeof console !== "undefined" && data) {
+        console.error("Formspree error response:", data);
+      }
+      setStatus("error");
+    } catch (err) {
+      if (typeof console !== "undefined") {
+        console.error("Form submission failed:", err);
+      }
       setStatus("error");
     }
   }
@@ -142,6 +175,17 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
+      {/* Honeypot — bots fill it, humans never see it */}
+      <input
+        type="text"
+        name="_gotcha"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+      />
+      {/* Reply-to is taken from the email field by Formspree automatically */}
+
       {/* Name + Phone */}
       <div className="grid sm:grid-cols-2 gap-4">
         <Field
@@ -279,7 +323,11 @@ export function ContactForm() {
         <div className="flex items-center gap-3 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
           <AlertCircle size={18} className="text-red-500 shrink-0" />
           <p className="text-sm text-red-700">
-            Something went wrong. Please try again or call us directly.
+            Something went wrong. Please try again or call us directly at{" "}
+            <a href="tel:+16143845081" className="font-semibold underline">
+              (614) 384-5081
+            </a>
+            .
           </p>
         </div>
       )}
