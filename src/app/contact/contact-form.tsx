@@ -2,10 +2,11 @@
 
 import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { asset } from "@/lib/base-path";
 
-const FORMSPREE_ENDPOINT =
-  process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT ||
-  "https://formspree.io/f/REPLACE_WITH_FORM_ID";
+// PHP endpoint that lives at public_html/api/submit.php on Hostinger.
+// asset() prefixes the deploy basePath when present (GH Pages preview).
+const SUBMIT_ENDPOINT = asset("/api/submit.php");
 
 const hearAboutOptions = [
   "Google Search",
@@ -115,30 +116,33 @@ export function ContactForm() {
       return;
     }
 
-    // Build a useful subject line so the inbox is scannable
-    const name = (form.get("name") as string) || "Website visitor";
-    form.set("_subject", `New estimate request from ${name}`);
-
     setErrors({});
     setStatus("submitting");
 
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      const res = await fetch(SUBMIT_ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json" },
         body: form,
       });
 
-      if (res.ok) {
+      const data = await res.json().catch(() => null);
+
+      if (res.ok && data?.ok) {
         setStatus("success");
         formEl.reset();
         return;
       }
 
-      // Formspree returns { errors: [{ message }] } on validation failure
-      const data: unknown = await res.json().catch(() => null);
-      if (typeof console !== "undefined" && data) {
-        console.error("Formspree error response:", data);
+      // Server returned validation errors → surface them on the form
+      if (data && typeof data === "object" && "errors" in data && data.errors) {
+        setErrors(data.errors as Record<string, string>);
+        setStatus("idle");
+        return;
+      }
+
+      if (typeof console !== "undefined") {
+        console.error("Form submission rejected:", res.status, data);
       }
       setStatus("error");
     } catch (err) {
