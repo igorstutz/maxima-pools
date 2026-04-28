@@ -42,7 +42,7 @@ export function Hero() {
   }, [nextImage, nextTestimonial]);
 
   return (
-    <section className="relative min-h-screen lg:h-svh lg:max-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-[88vh] sm:min-h-[90vh] lg:h-svh lg:max-h-screen lg:flex lg:items-center overflow-hidden">
       {/* Background pool video */}
       <video
         autoPlay
@@ -68,12 +68,12 @@ export function Hero() {
       <div className="absolute inset-0 water-caustics opacity-60" />
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-28 pb-20 sm:pt-32 sm:pb-24 lg:pt-28 lg:pb-20 w-full lg:h-full lg:flex lg:items-center">
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-6 xl:gap-8 items-center w-full">
+      <div className="relative max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 pt-24 pb-12 sm:pt-32 sm:pb-20 lg:pt-28 lg:pb-20 w-full lg:h-full lg:flex lg:items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-6 xl:gap-8 items-center w-full">
           {/* Text content */}
           <div className="lg:col-span-7 xl:col-span-6">
             {/* Badge */}
-            <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 glass rounded-full px-4 sm:px-5 py-2 sm:py-2.5 lg:py-1.5 mb-4 sm:mb-6 lg:mb-2 xl:mb-5">
+            <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 glass rounded-full px-4 sm:px-5 py-2 sm:py-2.5 lg:py-1.5 mb-3 sm:mb-6 lg:mb-2 xl:mb-5">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star key={i} size={12} className="text-gold fill-gold" />
@@ -86,19 +86,19 @@ export function Hero() {
             </div>
 
             {/* Headline */}
-            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[1.5rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] lg:leading-[1] mb-3 sm:mb-5 lg:mb-1 xl:mb-5 tracking-tight">
+            <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[1.5rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] lg:leading-[1] mb-2 sm:mb-5 lg:mb-1 xl:mb-5 tracking-tight">
               Dive into
               <br />
               <span className="shimmer-text">Luxury</span>
             </h1>
 
             {/* Slogan */}
-            <p className="hero-animate hero-animate-2 text-xl sm:text-2xl md:text-3xl lg:text-base xl:text-3xl font-semibold text-white mb-3 sm:mb-5 lg:mb-1.5 xl:mb-5 italic">
+            <p className="hero-animate hero-animate-2 text-xl sm:text-2xl md:text-3xl lg:text-base xl:text-3xl font-semibold text-white mb-2 sm:mb-5 lg:mb-1.5 xl:mb-5 italic">
               Live Your <span className="text-[#D4A853]">Maxima</span>zing Pool Life!
             </p>
 
             {/* Subtitle */}
-            <p className="hero-animate hero-animate-3 text-base sm:text-lg md:text-xl lg:text-xs xl:text-lg text-white leading-snug lg:leading-snug mb-5 sm:mb-8 lg:mb-2.5 xl:mb-7 max-w-lg lg:max-w-md">
+            <p className="hero-animate hero-animate-3 text-base sm:text-lg md:text-xl lg:text-xs xl:text-lg text-white leading-snug lg:leading-snug mb-4 sm:mb-8 lg:mb-2.5 xl:mb-7 max-w-lg lg:max-w-md">
               Premium fiberglass pools and custom outdoor living spaces, crafted
               and installed by Columbus&apos;s most trusted pool experts.
             </p>
@@ -126,7 +126,7 @@ export function Hero() {
             </div>
 
             {/* Stats bar */}
-            <div className="hero-animate hero-animate-5 mt-5 sm:mt-8 lg:mt-2.5 xl:mt-6 flex items-center gap-5 sm:gap-8 lg:gap-5 xl:gap-10">
+            <div className="hero-animate hero-animate-5 mt-4 sm:mt-8 lg:mt-2.5 xl:mt-6 flex items-center gap-5 sm:gap-8 lg:gap-5 xl:gap-10">
               <div className="group">
                 <div className="text-2xl sm:text-3xl lg:text-lg xl:text-3xl 2xl:text-4xl font-bold text-white mb-0.5 lg:mb-0 group-hover:text-accent transition-colors">
                   100<span className="text-accent">%</span>
