@@ -26,27 +26,21 @@ jobs:
       - name: Build static export (root-domain build, no basePath)
         run: npx next build
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to Hostinger via rsync over SSH
+        uses: easingthemes/ssh-deploy@v5.1.0
         with:
-          server: ${{ secrets.HOSTINGER_FTP_HOST }}
-          username: ${{ secrets.HOSTINGER_FTP_USER }}
-          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
-          # Many Hostinger plans expose FTPS on port 21 with explicit TLS.
-          # If your plan only has plain FTP, change protocol to 'ftp'.
-          protocol: ftps
-          port: 21
-          server-dir: public_html/
-          local-dir: ./out/
-          # Skip both upload AND delete on these paths so that:
-          #   - the customized api/submit.php (with the real SMTP password)
-          #     stays intact on the server, and
-          #   - the legacy wp-content/uploads/ folder (where the pool photos
-          #     live) is not deleted by the sync.
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            api/submit.php
-            wp-content/**
-            .private/**
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          REMOTE_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          REMOTE_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SOURCE: "out/"
+          TARGET: "domains/maximapools.com/public_html/"
+          # rsync flags:
+          #   -r recursive, -l symlinks, -t times, -z compress
+          #   --delete removes files on the server that no longer exist locally
+          ARGS: "-rltzv --delete"
+          # Excluded paths are NOT uploaded AND NOT deleted on the server, so
+          # the customized api/submit.php (with the real SMTP password) and the
+          # legacy wp-content/ folder (where the pool photos still live) stay
+          # intact across deploys.
+          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
