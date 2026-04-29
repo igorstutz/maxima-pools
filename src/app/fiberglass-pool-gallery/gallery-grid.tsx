@@ -142,6 +142,8 @@ export function GalleryGrid() {
               <img
                 src={asset(img.src)}
                 alt={`${img.category} fiberglass pool`}
+                width={img.width}
+                height={img.height}
                 loading={i < 8 ? "eager" : "lazy"}
                 decoding="async"
                 className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
