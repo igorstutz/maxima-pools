@@ -1,0 +1,52 @@
+name: Deploy to Hostinger
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export (root-domain build, no basePath)
+        run: npx next build
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.HOSTINGER_FTP_HOST }}
+          username: ${{ secrets.HOSTINGER_FTP_USER }}
+          password: ${{ secrets.HOSTINGER_FTP_PASSWORD }}
+          # Many Hostinger plans expose FTPS on port 21 with explicit TLS.
+          # If your plan only has plain FTP, change protocol to 'ftp'.
+          protocol: ftps
+          port: 21
+          server-dir: public_html/
+          local-dir: ./out/
+          # Skip both upload AND delete on these paths so that:
+          #   - the customized api/submit.php (with the real SMTP password)
+          #     stays intact on the server, and
+          #   - the legacy wp-content/uploads/ folder (where the pool photos
+          #     live) is not deleted by the sync.
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            api/submit.php
+            wp-content/**
+            .private/**
