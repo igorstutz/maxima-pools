@@ -5,7 +5,9 @@ import { Maximize2, Loader2 } from "lucide-react";
 
 const CANIBUILD_TOKEN = "69b8ee8e-1707-4e34-bb03-7defa06ecef6";
 const SEARCH_SCRIPT_SRC = "https://search-widget.canibuild.com/embed.js";
-const LC_SCRIPT_SRC = `https://widget.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
+// Updated host: Canibuild migrated the main simulator from
+// widget.canibuild.com (deprecated, returns 401) to leadconverter.canibuild.com.
+const LC_SCRIPT_SRC = `https://leadconverter.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
 
 export function SimulatorEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);

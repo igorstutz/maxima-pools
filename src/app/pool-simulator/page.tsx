@@ -9,11 +9,12 @@ import {
   Monitor,
   MousePointerClick,
   MessageSquare,
+  Maximize2,
   Sparkles,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
-// Re-import { SimulatorEmbed } from "./simulator-embed"; when Canibuild is back.
+import { SimulatorEmbed } from "./simulator-embed";
 
 export const metadata: Metadata = {
   title: "Pool Simulator | Maxima Pools - Columbus, OH",
@@ -183,68 +184,35 @@ export default function PoolSimulatorPage() {
 
       <SectionDivider />
 
-      {/* ── Simulator (temporarily offline — maintenance card) ── */}
-      {/* When the Canibuild widget is back online, restore <SimulatorEmbed />
-          inside this section and revert the heading/copy. */}
+      {/* ── Simulator Embed ── */}
       <section id="simulator" className="py-16 sm:py-24 bg-gray-50 texture-noise scroll-mt-20">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary to-accent-dark text-white shadow-2xl overflow-hidden">
-              <div className="absolute inset-0 water-caustics opacity-20 pointer-events-none" />
-              <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-primary-light/20 rounded-full blur-3xl" />
-
-              <div className="relative p-8 sm:p-12 lg:p-14 text-center">
-                <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-6">
-                  <Sparkles size={14} className="text-accent" />
-                  <span className="text-white text-xs font-semibold uppercase tracking-wider">
-                    Currently being upgraded
-                  </span>
-                </div>
-
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-5">
-                  Pool Simulator <span className="shimmer-text">Coming Back Soon</span>
-                </h2>
-
-                <p className="text-white/90 text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto">
-                  We&apos;re upgrading the interactive simulator. While it&apos;s
-                  offline, our team is happy to walk you through San Juan models
-                  in person — we&apos;ll review your yard with you, talk
-                  dimensions, and recommend the right fit. Often more useful than
-                  the simulator anyway.
-                </p>
-
-                <div className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-3 *:whitespace-nowrap">
-                  <Link
-                    href="/contact"
-                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white text-primary font-semibold rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 text-sm sm:text-base"
-                  >
-                    Get a Free Estimate
-                    <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <a
-                    href="tel:+16143845081"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-white font-semibold hover:bg-white/20 transition-all text-sm sm:text-base"
-                  >
-                    <Phone size={16} />
-                    (614) 384-5081
-                  </a>
-                </div>
-
-                <p className="text-white/60 text-xs sm:text-sm mt-6">
-                  Browse our{" "}
-                  <Link href="/pools" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white">
-                    full collection of pools
-                  </Link>{" "}
-                  or{" "}
-                  <Link href="/fiberglass-pool-gallery" className="text-white underline underline-offset-4 decoration-white/40 hover:decoration-white">
-                    finished installation gallery
-                  </Link>{" "}
-                  while the simulator is back.
-                </p>
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                <Sparkles size={14} className="text-accent" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                  Try It Now
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                Search Your Address{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  Below
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto mb-3">
+                See which fiberglass pool looks best in your yard. For the best
+                experience, use a computer and click the fullscreen button.
+              </p>
+              <div className="inline-flex items-center gap-2 text-sm text-amber-700 bg-amber-50 border border-amber-200/60 rounded-full px-4 py-2">
+                <Maximize2 size={14} />
+                <span className="font-medium">Best experienced on desktop in fullscreen mode</span>
               </div>
             </div>
           </ScrollReveal>
+
+          <SimulatorEmbed />
         </div>
       </section>
 
