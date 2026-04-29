@@ -3,28 +3,44 @@
 import { useEffect, useRef, useState } from "react";
 import { Maximize2, Loader2 } from "lucide-react";
 
+const CANIBUILD_TOKEN = "69b8ee8e-1707-4e34-bb03-7defa06ecef6";
+const SEARCH_SCRIPT_SRC = "https://search-widget.canibuild.com/embed.js";
+const LC_SCRIPT_SRC = `https://widget.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
+
 export function SimulatorEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src =
-      "https://search-widget.canibuild.com/embed.js?cache-buster=" + Date.now();
-    script.type = "module";
-    script.onload = () => {
-      // Give the widget time to render
-      setTimeout(() => setLoading(false), 3000);
+    // Address search widget — renders into #canibuild-widget-search-root
+    const searchScript = document.createElement("script");
+    searchScript.src = `${SEARCH_SCRIPT_SRC}?cache-buster=${Date.now()}`;
+    searchScript.type = "module";
+    searchScript.async = true;
+    document.body.appendChild(searchScript);
+
+    // Main interactive simulator — renders into #lc-widget
+    const lcScript = document.createElement("script");
+    lcScript.src = LC_SCRIPT_SRC;
+    lcScript.defer = true;
+    lcScript.onload = () => {
+      // Give the widget a moment to inject its iframe / DOM before hiding the loader
+      setTimeout(() => setLoading(false), 2500);
     };
-    script.onerror = () => setLoading(false);
-    document.body.appendChild(script);
+    lcScript.onerror = () => setLoading(false);
+    document.body.appendChild(lcScript);
 
     return () => {
       try {
-        document.body.removeChild(script);
+        document.body.removeChild(searchScript);
       } catch {
-        // script may already be removed
+        // already removed
+      }
+      try {
+        document.body.removeChild(lcScript);
+      } catch {
+        // already removed
       }
     };
   }, []);
@@ -52,7 +68,7 @@ export function SimulatorEmbed() {
     <div
       ref={containerRef}
       className="relative bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-2xl overflow-hidden"
-      style={{ minHeight: "700px" }}
+      style={{ minHeight: "880px" }}
     >
       {/* Fullscreen button */}
       <button
@@ -65,7 +81,7 @@ export function SimulatorEmbed() {
 
       {/* Loading state */}
       {loading && (
-        <div className="absolute inset-0 z-10 bg-white flex flex-col items-center justify-center gap-4">
+        <div className="absolute inset-0 z-10 bg-white flex flex-col items-center justify-center gap-4 pointer-events-none">
           <div className="relative">
             <div className="w-16 h-16 rounded-full border-4 border-gray-100" />
             <Loader2
@@ -84,6 +100,16 @@ export function SimulatorEmbed() {
           </div>
         </div>
       )}
+
+      {/* Address search widget */}
+      <div
+        id="canibuild-widget-search-root"
+        data-token={CANIBUILD_TOKEN}
+        className="px-4 sm:px-6 pt-6 pb-2"
+      />
+
+      {/* Main interactive simulator (canvas / map / drag-and-drop) */}
+      <div id="lc-widget" style={{ height: 800 }} />
     </div>
   );
 }
