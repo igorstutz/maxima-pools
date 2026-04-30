@@ -40,7 +40,9 @@ jobs:
           #   --delete removes files on the server that no longer exist locally
           ARGS: "-rltzv --delete"
           # Excluded paths are NOT uploaded AND NOT deleted on the server, so
-          # the customized api/submit.php (with the real SMTP password) and the
-          # legacy wp-content/ folder (where the pool photos still live) stay
+          # the customized api/submit.php (with the real SMTP password), the
+          # legacy wp-content/ folder (where the pool photos still live), the
+          # backup/ subdomain (a restored WordPress install used for diagnosing
+          # the Canibuild widget) and the canibuild-test.html static probe stay
           # intact across deploys.
-          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, /backup/, /canibuild-test.html, .git*, node_modules/"
