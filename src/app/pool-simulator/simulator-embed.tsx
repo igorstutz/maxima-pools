@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import { Maximize2, Loader2 } from "lucide-react";
 
 const CANIBUILD_TOKEN = "69b8ee8e-1707-4e34-bb03-7defa06ecef6";
+// Reference name configured on the Canibuild Pro account — required by the
+// search widget to know which design palette/copy to render. Without this
+// attribute the widget fails to authenticate (returns 401 from searchbar/config).
+const CANIBUILD_DESIGN_NAME = "SJP - Maxima Concrete";
 const SEARCH_SCRIPT_SRC = "https://search-widget.canibuild.com/embed.js";
-// Updated host: Canibuild migrated the main simulator from
-// widget.canibuild.com (deprecated, returns 401) to leadconverter.canibuild.com.
 const LC_SCRIPT_SRC = `https://leadconverter.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
 
 export function SimulatorEmbed() {
@@ -107,11 +109,16 @@ export function SimulatorEmbed() {
       <div
         id="canibuild-widget-search-root"
         data-token={CANIBUILD_TOKEN}
+        data-design-name={CANIBUILD_DESIGN_NAME}
         className="px-4 sm:px-6 pt-6 pb-2"
       />
 
       {/* Main interactive simulator (canvas / map / drag-and-drop) */}
-      <div id="lc-widget" style={{ height: 800 }} />
+      <div
+        id="lc-widget"
+        data-design-name={CANIBUILD_DESIGN_NAME}
+        style={{ height: 800 }}
+      />
     </div>
   );
 }
