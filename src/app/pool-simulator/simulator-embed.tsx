@@ -4,12 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import { Maximize2, Loader2 } from "lucide-react";
 
 const CANIBUILD_TOKEN = "69b8ee8e-1707-4e34-bb03-7defa06ecef6";
-// Reference name configured on the Canibuild Pro account — required by the
-// search widget to know which design palette/copy to render. Without this
-// attribute the widget fails to authenticate (returns 401 from searchbar/config).
+// Reference name of the design preset on the Canibuild Pro account. The LC
+// widget uses it to load the right pool collection/copy for this customer.
 const CANIBUILD_DESIGN_NAME = "SJP - Maxima Concrete";
-const SEARCH_SCRIPT_SRC = "https://search-widget.canibuild.com/embed.js";
 const LC_SCRIPT_SRC = `https://leadconverter.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
+
+// The standalone search-widget (search-widget.canibuild.com/embed.js) is
+// intentionally NOT loaded here — its searchbar/config endpoint is currently
+// returning 401 on this account. The LC widget below has its own internal
+// address search and map, so the simulator is fully functional without it.
 
 export function SimulatorEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -17,30 +20,16 @@ export function SimulatorEmbed() {
   const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
-    // Address search widget — renders into #canibuild-widget-search-root
-    const searchScript = document.createElement("script");
-    searchScript.src = `${SEARCH_SCRIPT_SRC}?cache-buster=${Date.now()}`;
-    searchScript.type = "module";
-    searchScript.async = true;
-    document.body.appendChild(searchScript);
-
-    // Main interactive simulator — renders into #lc-widget
     const lcScript = document.createElement("script");
     lcScript.src = LC_SCRIPT_SRC;
     lcScript.defer = true;
     lcScript.onload = () => {
-      // Give the widget a moment to inject its iframe / DOM before hiding the loader
       setTimeout(() => setLoading(false), 2500);
     };
     lcScript.onerror = () => setLoading(false);
     document.body.appendChild(lcScript);
 
     return () => {
-      try {
-        document.body.removeChild(searchScript);
-      } catch {
-        // already removed
-      }
       try {
         document.body.removeChild(lcScript);
       } catch {
@@ -104,14 +93,6 @@ export function SimulatorEmbed() {
           </div>
         </div>
       )}
-
-      {/* Address search widget */}
-      <div
-        id="canibuild-widget-search-root"
-        data-token={CANIBUILD_TOKEN}
-        data-design-name={CANIBUILD_DESIGN_NAME}
-        className="px-4 sm:px-6 pt-6 pb-2"
-      />
 
       {/* Main interactive simulator (canvas / map / drag-and-drop) */}
       <div
