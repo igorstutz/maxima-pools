@@ -4,3 +4,5 @@ out
 .env*
 *.tsbuildinfo
 maxima-pools-deploy.zip
+maxima-deploy-private-key.txt
+LeadconverterGuide.pdf
