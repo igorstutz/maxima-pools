@@ -45,4 +45,4 @@ jobs:
           # backup/ subdomain (a restored WordPress install used for diagnosing
           # the Canibuild widget) and the canibuild-test.html static probe stay
           # intact across deploys.
-          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, /backup/, /canibuild-test.html, .git*, node_modules/"
+          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, /backup/, /canibuild-test.html, /test-design-*.html, .git*, node_modules/"
