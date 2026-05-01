@@ -1,39 +1,81 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Loader2 } from "lucide-react";
 
 const CANIBUILD_TOKEN = "69b8ee8e-1707-4e34-bb03-7defa06ecef6";
-// Reference name of the design preset on the Canibuild Pro account. The LC
-// widget uses it to load the right pool collection/copy for this customer.
-const CANIBUILD_DESIGN_NAME = "SJP - Maxima Concrete";
-const LC_SCRIPT_SRC = `https://leadconverter.canibuild.com/embed.js?id=lc-widget&token=${CANIBUILD_TOKEN}`;
 
-// The standalone search-widget (search-widget.canibuild.com/embed.js) is
-// intentionally NOT loaded here — its searchbar/config endpoint is currently
-// returning 401 on this account. The LC widget below has its own internal
-// address search and map, so the simulator is fully functional without it.
+// We render the LC iframe directly instead of loading
+// leadconverter.canibuild.com/embed.js. The embed.js script declares many
+// top-level `const`s (iframe, observer, targetId, mountIframe, etc.) in the
+// global lexical environment — on SPA navigations those declarations persist
+// after unmount, so re-executing the script throws "Identifier has already been
+// declared" and the widget silently fails to mount. A direct iframe avoids the
+// whole script lifecycle and works identically across hard reloads and Next.js
+// client-side navigations.
+const IFRAME_SRC = `https://leadconverter.canibuild.com?token=${CANIBUILD_TOKEN}&username=&useremail=&userphone=`;
 
 export function SimulatorEmbed() {
   const [loading, setLoading] = useState(true);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
-    const lcScript = document.createElement("script");
-    lcScript.src = LC_SCRIPT_SRC;
-    lcScript.defer = true;
-    lcScript.onload = () => {
-      setTimeout(() => setLoading(false), 2500);
-    };
-    lcScript.onerror = () => setLoading(false);
-    document.body.appendChild(lcScript);
+    const iframe = iframeRef.current;
+    if (!iframe) return;
 
-    return () => {
-      try {
-        document.body.removeChild(lcScript);
-      } catch {
-        // already removed
-      }
+    const setFullscreenStyle = () => {
+      iframe.style.cssText = `position:fixed !important;
+                              top:0 !important;
+                              left:0 !important;
+                              bottom:0 !important;
+                              right:0 !important;
+                              width:100% !important;
+                              height:100% !important;
+                              border:none !important;
+                              margin:0 !important;
+                              padding:0 !important;
+                              overflow:hidden !important;
+                              z-index:999999 !important;
+                              transform:none !important;`;
     };
+    const unsetFullscreenStyle = () => {
+      iframe.style.cssText = "border:0;width:100%;height:100%;";
+    };
+
+    type FsIframe = HTMLIFrameElement & {
+      webkitRequestFullscreen?: () => Promise<void>;
+      msRequestFullscreen?: () => Promise<void>;
+    };
+    type FsDocument = Document & {
+      webkitExitFullscreen?: () => void;
+      msExitFullscreen?: () => void;
+    };
+
+    const goFullScreen = () => {
+      const fs = iframe as FsIframe;
+      const req =
+        fs.requestFullscreen?.bind(fs) ??
+        fs.webkitRequestFullscreen?.bind(fs) ??
+        fs.msRequestFullscreen?.bind(fs);
+      const promise = req ? req() : Promise.reject(new Error("Fullscreen unavailable"));
+      promise.catch(() => setFullscreenStyle());
+    };
+
+    const exitFullscreen = () => {
+      const doc = document as FsDocument;
+      if (doc.exitFullscreen) doc.exitFullscreen();
+      else if (doc.webkitExitFullscreen) doc.webkitExitFullscreen();
+      else if (doc.msExitFullscreen) doc.msExitFullscreen();
+      unsetFullscreenStyle();
+    };
+
+    const onMessage = (event: MessageEvent) => {
+      if (event.data === "GO_FULLSCREEN") goFullScreen();
+      else if (event.data === "EXIT_FULLSCREEN") exitFullscreen();
+    };
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
   }, []);
 
   return (
@@ -41,7 +83,6 @@ export function SimulatorEmbed() {
       className="relative bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-2xl overflow-hidden"
       style={{ minHeight: "880px" }}
     >
-      {/* Loading state */}
       {loading && (
         <div className="absolute inset-0 z-10 bg-white flex flex-col items-center justify-center gap-4 pointer-events-none">
           <div className="relative">
@@ -63,11 +104,14 @@ export function SimulatorEmbed() {
         </div>
       )}
 
-      {/* Main interactive simulator (canvas / map / drag-and-drop) */}
-      <div
-        id="lc-widget"
-        data-design-name={CANIBUILD_DESIGN_NAME}
-        style={{ height: 800 }}
+      <iframe
+        ref={iframeRef}
+        src={IFRAME_SRC}
+        title="Pool Simulator"
+        allow="geolocation"
+        allowFullScreen
+        onLoad={() => setTimeout(() => setLoading(false), 2500)}
+        style={{ border: 0, width: "100%", height: 800 }}
       />
     </div>
   );

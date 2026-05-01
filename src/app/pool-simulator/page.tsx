@@ -10,10 +10,12 @@ import {
   MousePointerClick,
   MessageSquare,
   Sparkles,
+  PlayCircle,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { SimulatorEmbed } from "./simulator-embed";
+import { SimulatorVideo } from "./simulator-video";
 
 export const metadata: Metadata = {
   title: "Pool Simulator | Maxima Pools - Columbus, OH",
@@ -178,6 +180,38 @@ export default function PoolSimulatorPage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ── Demo video ── */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14">
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                <PlayCircle size={14} className="text-accent" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                  Watch the Demo
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                See the Simulator{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  in Action
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Watch a quick walkthrough of how to drop a fiberglass pool into your
+                own backyard before trying it yourself.
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <ScrollReveal delay={1}>
+            <SimulatorVideo />
+          </ScrollReveal>
         </div>
       </section>
 
