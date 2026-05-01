@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { pools, slugify } from "@/lib/pools";
+import { locations, slugify as slugifyLocation } from "@/lib/locations";
 import { getAllPosts } from "@/lib/blog";
 
 export const dynamic = "force-static";
@@ -11,8 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE, changeFrequency: "weekly", priority: 1.0 },
     { url: `${BASE}/blog`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/why-maxima`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/our-process`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/pools`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/contact`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/reviews`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/fiberglass-pool-gallery`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/pool-simulator`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/outdoor-living`, changeFrequency: "monthly", priority: 0.8 },
@@ -34,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
+  const locationPages: MetadataRoute.Sitemap = locations.map((loc) => ({
+    url: `${BASE}/locations/${slugifyLocation(loc.name)}`,
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
   const blogPages: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
     url: `${BASE}/blog/${post.slug}`,
     lastModified: post.publishedAt,
@@ -41,5 +50,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...poolPages, ...blogPages];
+  return [...staticPages, ...poolPages, ...locationPages, ...blogPages];
 }
