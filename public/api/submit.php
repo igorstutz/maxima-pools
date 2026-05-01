@@ -60,6 +60,18 @@ function field(string $k): string {
     return clean_line((string)($_POST[$k] ?? ''));
 }
 
+// Append one JSON-line per submission to /.private/submissions.log so the
+// lead is preserved even when SMTP delivery fails. Directory is web-blocked
+// by its own .htaccess (Deny from all).
+function log_submission(array $entry): void {
+    $dir = __DIR__ . '/../.private';
+    if (!is_dir($dir)) {
+        @mkdir($dir, 0700, true);
+    }
+    $line = json_encode($entry, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
+    @file_put_contents($dir . '/submissions.log', $line, FILE_APPEND | LOCK_EX);
+}
+
 // Honeypot — silently accept and drop.
 if (trim((string)($_POST['_gotcha'] ?? '')) !== '') {
     echo json_encode(['ok' => true]);
@@ -156,7 +168,27 @@ $curl_no   = curl_errno($ch);
 curl_close($ch);
 fclose($stream);
 
-if ($result !== false && $curl_no === 0) {
+$ok = ($result !== false && $curl_no === 0);
+
+log_submission([
+    'ts'           => gmdate('Y-m-d\TH:i:s\Z'),
+    'ip'           => $_SERVER['REMOTE_ADDR'] ?? 'unknown',
+    'ua'           => $_SERVER['HTTP_USER_AGENT'] ?? '',
+    'name'         => $name,
+    'email'        => $email,
+    'phone'        => $phone,
+    'address'      => $address,
+    'city'         => $city,
+    'state'        => $state,
+    'zip'          => $zip,
+    'poolSize'     => $poolSize,
+    'source'       => $source,
+    'message'      => $message,
+    'email_status' => $ok ? 'sent' : 'failed',
+    'email_error'  => $ok ? null : "errno=$curl_no $curl_err",
+]);
+
+if ($ok) {
     echo json_encode(['ok' => true]);
     exit;
 }
