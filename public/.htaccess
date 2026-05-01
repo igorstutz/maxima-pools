@@ -16,6 +16,15 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^maximapools\.com$ [NC]
 RewriteRule ^(.*)$ https://maximapools.com/$1 [L,R=301]
 
+# ── Legacy WordPress sitemap redirects ─────────────────────────────────
+# The old WP install (Yoast/RankMath) exposed /pools-sitemap.xml and
+# /page-sitemap.xml. Those URLs now return HTTP 500 from rewrite
+# remnants, which Google interprets as "retry later" and keeps polling
+# for months. 301 them to the new Next.js /sitemap.xml so Google
+# updates its records and drops the old entries.
+RewriteRule ^pools-sitemap\.xml$ /sitemap.xml [L,R=301]
+RewriteRule ^page-sitemap\.xml$ /sitemap.xml [L,R=301]
+
 # ── Pretty URLs for the Next.js static export ──────────────────────────
 # Each route is exported as <route>/index.html. Apache's DirectorySlash
 # already redirects /about → /about/, but we ALSO want /about.html style
