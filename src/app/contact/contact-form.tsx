@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { asset } from "@/lib/base-path";
+import { analytics } from "@/lib/analytics";
 
 // PHP endpoint that lives at public_html/api/submit.php on Hostinger.
 // asset() prefixes the deploy basePath when present (GH Pages preview).
@@ -129,6 +130,13 @@ export function ContactForm() {
       const data = await res.json().catch(() => null);
 
       if (res.ok && data?.ok) {
+        analytics.lead({
+          pool_size: (form.get("poolSize") as string) || undefined,
+          source: (form.get("source") as string) || undefined,
+          zip: zip || undefined,
+          city: city || undefined,
+          state: state || undefined,
+        });
         setStatus("success");
         formEl.reset();
         return;

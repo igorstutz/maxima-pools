@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { AnalyticsListener } from "@/components/AnalyticsListener";
 
 const GTM_ID = "GTM-54JXZHLW";
 
@@ -94,6 +95,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+        <AnalyticsListener />
         <Header />
         <main>{children}</main>
         <Footer />
