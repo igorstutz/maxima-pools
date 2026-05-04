@@ -2,25 +2,18 @@
 declare(strict_types=1);
 
 /* ----------------------------------------------------------------------
- *  Maxima Pools — contact form handler (SMTP via cURL)
- *  Authenticates against the Hostinger SMTP server using the no-reply@
- *  mailbox so delivery is reliable on shared hosting where the bare
- *  mail() function is restricted or silently dropped.
+ *  Maxima Pools — contact form handler
+ *  Receives a POST from /contact and emails the lead to RECIPIENT via
+ *  the local mail() function (Hostinger handles internal delivery).
  *
- *  Edit the SMTP_PASS constant below with the no-reply@ password
- *  set when the mailbox was created in the Hostinger panel.
+ *  Every submission is also appended to /.private/submissions.log so the
+ *  lead is preserved even if the email layer breaks.
  * ---------------------------------------------------------------------- */
 
 // === Configuration ====================================================
 $RECIPIENT  = 'info@maximapools.com';
 $FROM_NAME  = 'Maxima Pools Website';
 $FROM_EMAIL = 'no-reply@maximapools.com';
-
-// Hostinger SMTP credentials. Edit SMTP_PASS on the server.
-$SMTP_HOST = 'smtp.hostinger.com';
-$SMTP_PORT = 465;
-$SMTP_USER = 'no-reply@maximapools.com';
-$SMTP_PASS = 'PUT_NO_REPLY_PASSWORD_HERE';
 // ======================================================================
 
 header('Content-Type: application/json; charset=utf-8');
@@ -61,7 +54,7 @@ function field(string $k): string {
 }
 
 // Append one JSON-line per submission to /.private/submissions.log so the
-// lead is preserved even when SMTP delivery fails. Directory is web-blocked
+// lead is preserved even when mail() delivery fails. Directory is web-blocked
 // by its own .htaccess (Deny from all).
 function log_submission(array $entry): void {
     $dir = __DIR__ . '/../.private';
@@ -125,50 +118,14 @@ $body .= str_repeat('-', 60) . "\n";
 $body .= "Submitted:   " . gmdate('Y-m-d H:i:s') . " UTC\n";
 $body .= "From IP:     " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 
-// Build RFC 5322 message (CRLF line endings, dot-stuffing handled by curl).
-$eol = "\r\n";
-$payload  = "Date: " . date('r') . $eol;
-$payload .= "To: <$RECIPIENT>" . $eol;
-$payload .= "From: $FROM_NAME <$FROM_EMAIL>" . $eol;
-$payload .= "Reply-To: $name <$email>" . $eol;
-$payload .= "Subject: $subject" . $eol;
-$payload .= "MIME-Version: 1.0" . $eol;
-$payload .= "Content-Type: text/plain; charset=utf-8" . $eol;
-$payload .= "Content-Transfer-Encoding: 8bit" . $eol;
-$payload .= "X-Mailer: Maxima Pools Website" . $eol;
-$payload .= $eol;
-// Body must use CRLF too.
-$payload .= str_replace("\n", $eol, $body);
+$headers   = [];
+$headers[] = "From: $FROM_NAME <$FROM_EMAIL>";
+$headers[] = "Reply-To: $name <$email>";
+$headers[] = "MIME-Version: 1.0";
+$headers[] = "Content-Type: text/plain; charset=utf-8";
+$headers[] = "X-Mailer: Maxima Pools Website";
 
-$stream = fopen('php://temp', 'r+');
-fwrite($stream, $payload);
-rewind($stream);
-
-$ch = curl_init();
-curl_setopt_array($ch, [
-    CURLOPT_URL            => "smtps://$SMTP_HOST:$SMTP_PORT",
-    CURLOPT_USERNAME       => $SMTP_USER,
-    CURLOPT_PASSWORD       => $SMTP_PASS,
-    CURLOPT_MAIL_FROM      => "<$FROM_EMAIL>",
-    CURLOPT_MAIL_RCPT      => ["<$RECIPIENT>"],
-    CURLOPT_UPLOAD         => true,
-    CURLOPT_INFILE         => $stream,
-    CURLOPT_INFILESIZE     => strlen($payload),
-    CURLOPT_USE_SSL        => CURLUSESSL_ALL,
-    CURLOPT_SSL_VERIFYPEER => true,
-    CURLOPT_SSL_VERIFYHOST => 2,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_TIMEOUT        => 30,
-    CURLOPT_CONNECTTIMEOUT => 10,
-]);
-
-$result    = curl_exec($ch);
-$curl_err  = curl_error($ch);
-$curl_no   = curl_errno($ch);
-curl_close($ch);
-fclose($stream);
-
-$ok = ($result !== false && $curl_no === 0);
+$ok = @mail($RECIPIENT, $subject, $body, implode("\r\n", $headers));
 
 log_submission([
     'ts'           => gmdate('Y-m-d\TH:i:s\Z'),
@@ -185,7 +142,7 @@ log_submission([
     'source'       => $source,
     'message'      => $message,
     'email_status' => $ok ? 'sent' : 'failed',
-    'email_error'  => $ok ? null : "errno=$curl_no $curl_err",
+    'email_error'  => $ok ? null : 'mail() returned false',
 ]);
 
 if ($ok) {
@@ -193,8 +150,7 @@ if ($ok) {
     exit;
 }
 
-// Log the failure so we can see what happened on the server.
-@error_log("[submit.php] SMTP send failed (errno=$curl_no): $curl_err");
+@error_log('[submit.php] mail() returned false');
 
 http_response_code(500);
 echo json_encode([
