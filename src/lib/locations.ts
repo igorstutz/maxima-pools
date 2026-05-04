@@ -18,6 +18,7 @@ export const locations: Location[] = [
   { name: "Columbus", type: "city", query: "Columbus,OH" },
   { name: "Dublin", type: "city", query: "Dublin,OH" },
   { name: "Powell", type: "city", query: "Powell,OH" },
+  { name: "Delaware", type: "city", query: "Delaware,OH" },
   { name: "Westerville", type: "city", query: "Westerville,OH" },
   { name: "Worthington", type: "city", query: "Worthington,OH" },
   { name: "Upper Arlington", type: "city", query: "Upper+Arlington,OH" },
