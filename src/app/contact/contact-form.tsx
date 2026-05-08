@@ -136,6 +136,10 @@ export function ContactForm() {
           zip: zip || undefined,
           city: city || undefined,
           state: state || undefined,
+          email: (form.get("email") as string) || undefined,
+          phone: (form.get("phone") as string) || undefined,
+          full_name: (form.get("name") as string) || undefined,
+          street: (form.get("address") as string) || undefined,
         });
         setStatus("success");
         formEl.reset();
