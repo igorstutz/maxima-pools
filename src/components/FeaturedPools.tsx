@@ -19,7 +19,7 @@ const pools = [
   {
     name: "Grand Manhattan",
     shape: "Rectangle",
-    size: "14' x 32'",
+    size: "16' x 35'",
     image: "/images/pools/grand-manhattan.png",
     span: "lg:col-span-4 lg:row-span-2",
     aspect: "aspect-[3/4]",
