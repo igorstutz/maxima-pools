@@ -35,10 +35,23 @@ RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Otherwise, try /<path>/index.html before falling back to 404.
+# If /<path>/index.html exists (the pretty URL of an exported route),
+# serve it. The RewriteCond's $1 is the capture from the RewriteRule
+# below — only routes that were actually exported pass this test.
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ $1/index.html [L]
 
+# ── Unknown pages → home ───────────────────────────────────────────────
+# Anything that reaches here is a path that does not exist on the site
+# (no real file/dir, no exported route). Per Igor's request (2026-05-15)
+# send the visitor to the home page with a permanent 301 instead of
+# showing an error page.
+RewriteRule ^ / [R=301,L]
+
 # ── Custom 404 ─────────────────────────────────────────────────────────
+# Last-resort safety net only. With the 301 above a visitor should never
+# reach this during normal navigation, but it stays for odd edge cases
+# (e.g. an existing directory with no index.html).
 ErrorDocument 404 /404.html
 
 # ── Caching + compression (longer-lived assets, short-lived HTML) ──────
