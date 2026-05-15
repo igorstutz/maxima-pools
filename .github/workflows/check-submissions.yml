@@ -38,11 +38,29 @@ jobs:
           echo "=== total entries in log (all time) ==="
           wc -l < "$LOG"
           echo
+          cat > /tmp/parse_sub.php <<'PHP'
+          <?php
+          $log = $argv[1];
+          $fh = fopen($log, "r");
+          $n = 0; $rows = [];
+          while (($line = fgets($fh)) !== false) {
+            $line = trim($line);
+            if ($line === "") continue;
+            $d = json_decode($line, true);
+            if (!is_array($d)) { echo "[unparseable line]\n"; continue; }
+            if (($d["name"] ?? "") === "Log Test User") continue;
+            $n++;
+            echo ($d["ts"] ?? "-") . "  |  "
+               . ($d["source"] ?? "-") . "  |  "
+               . ($d["poolSize"] ?? "-") . "  |  "
+               . ($d["email_status"] ?? "-") . "  |  "
+               . (($d["email_error"] ?? null) === null ? "-" : $d["email_error"]) . "\n";
+          }
+          echo "TOTAL_NON_TEST=$n\n";
+          PHP
           echo "=== ts | source | poolSize | email_status | email_error  (Log Test User excluded) ==="
-          jq -rR 'fromjson? | select(.name != "Log Test User") | [.ts,(.source//"-"),(.poolSize//"-"),(.email_status//"-"),(.email_error//"-")] | @tsv' "$LOG"
-          echo
-          echo "=== last 5 raw timestamps only (to confirm ts format) ==="
-          jq -rR 'fromjson? | .ts' "$LOG" | tail -5
+          php /tmp/parse_sub.php "$LOG"
+          rm -f /tmp/parse_sub.php
           EOF
 
           ssh -i ~/.ssh/id_deploy -p "$REMOTE_PORT" \
