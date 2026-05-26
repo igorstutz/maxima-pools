@@ -82,6 +82,7 @@ export default async function LocationPage({ params }: PageProps) {
   const area = location.type === "county" ? location.name : `${location.name}, Ohio`;
   const areaShort = location.name;
   const mapSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${location.query}&zoom=11`;
+  const heroImage = `/images/locations/${slug}.webp`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -115,7 +116,7 @@ export default async function LocationPage({ params }: PageProps) {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
-          src="/images/gallery/featured-02.jpg"
+          src={heroImage}
           alt={`Fiberglass pool installation in ${area}`}
           fill
           priority
@@ -305,7 +306,7 @@ export default async function LocationPage({ params }: PageProps) {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/gallery/featured-02.jpg"
+                src={heroImage}
                 alt=""
                 fill
                 className="object-cover"

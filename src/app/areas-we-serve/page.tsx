@@ -120,22 +120,39 @@ export default function AreasWeServePage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Cities & Towns
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mb-14">
-              {cities.map((loc) => (
-                <Link
-                  key={loc.name}
-                  href={`/locations/${slugify(loc.name)}`}
-                  className="group flex items-center gap-2 px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 hover:border-accent/30 hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
-                >
-                  <MapPin
-                    size={14}
-                    className="text-gray-300 group-hover:text-accent transition-colors shrink-0"
-                  />
-                  <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors truncate">
-                    {loc.name}
-                  </span>
-                </Link>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-14">
+              {cities.map((loc) => {
+                const slug = slugify(loc.name);
+                return (
+                  <Link
+                    key={loc.name}
+                    href={`/locations/${slug}`}
+                    className="group relative aspect-[16/10] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-accent/10 transition-all duration-300"
+                  >
+                    <Image
+                      src={`/images/locations/${slug}.webp`}
+                      alt={`Fiberglass pool installation in ${loc.name}, Ohio`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <div className="flex items-center gap-1.5 text-accent text-[11px] font-semibold uppercase tracking-wider mb-1">
+                        <MapPin size={11} />
+                        <span>Service Area</span>
+                      </div>
+                      <h3 className="text-white font-bold text-base sm:text-lg leading-tight">
+                        {loc.name}
+                      </h3>
+                      <div className="flex items-center gap-1 text-white/80 group-hover:text-accent text-xs mt-1.5 transition-colors">
+                        <span>View area</span>
+                        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </ScrollReveal>
 
@@ -144,22 +161,39 @@ export default function AreasWeServePage() {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Counties
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
-              {counties.map((loc) => (
-                <Link
-                  key={loc.name}
-                  href={`/locations/${slugify(loc.name)}`}
-                  className="group flex items-center gap-2 px-4 py-3 rounded-xl bg-gray-50 border border-gray-100 hover:border-accent/30 hover:shadow-md hover:shadow-accent/5 transition-all duration-300"
-                >
-                  <MapPin
-                    size={14}
-                    className="text-gray-300 group-hover:text-accent transition-colors shrink-0"
-                  />
-                  <span className="text-sm font-medium text-gray-700 group-hover:text-gray-900 transition-colors truncate">
-                    {loc.name}
-                  </span>
-                </Link>
-              ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {counties.map((loc) => {
+                const slug = slugify(loc.name);
+                return (
+                  <Link
+                    key={loc.name}
+                    href={`/locations/${slug}`}
+                    className="group relative aspect-[16/10] rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:shadow-accent/10 transition-all duration-300"
+                  >
+                    <Image
+                      src={`/images/locations/${slug}.webp`}
+                      alt={`Fiberglass pool installation in ${loc.name}, Ohio`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <div className="flex items-center gap-1.5 text-accent text-[11px] font-semibold uppercase tracking-wider mb-1">
+                        <MapPin size={11} />
+                        <span>Service Area</span>
+                      </div>
+                      <h3 className="text-white font-bold text-base sm:text-lg leading-tight">
+                        {loc.name}
+                      </h3>
+                      <div className="flex items-center gap-1 text-white/80 group-hover:text-accent text-xs mt-1.5 transition-colors">
+                        <span>View area</span>
+                        <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
