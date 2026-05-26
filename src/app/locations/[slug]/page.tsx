@@ -210,9 +210,7 @@ export default async function LocationPage({ params }: PageProps) {
                 <span className="text-accent">{areaShort}</span>
               </h2>
               <p className="text-gray-500 leading-relaxed mb-8">
-                As an authorized San Juan Pools dealer, we bring Central Ohio
-                homeowners access to 100+ fiberglass pool models plus complete
-                outdoor living solutions — all installed by our own crew.
+                {location.copy}
               </p>
               <ul className="space-y-3 mb-8">
                 {services.map((s) => (
