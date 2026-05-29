@@ -10,3 +10,6 @@ LeadconverterGuide.pdf
 # Source/uncompressed assets (large originals — compressed copies live in public/)
 imagens piscinas-cidades/
 MAXIMA POOLS - COPY CIDADES.docx
+
+# Lead exports — contain customer PII; NEVER commit (repo is public)
+leads/
