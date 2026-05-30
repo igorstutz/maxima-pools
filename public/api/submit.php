@@ -3,17 +3,38 @@ declare(strict_types=1);
 
 /* ----------------------------------------------------------------------
  *  Maxima Pools — contact form handler
- *  Receives a POST from /contact and emails the lead to RECIPIENT via
- *  the local mail() function (Hostinger handles internal delivery).
+ *  Receives a POST from /contact and emails the lead to RECIPIENT.
+ *
+ *  Delivery: the domain's email lives on Microsoft 365 (MX = *.ppe-hosted.com,
+ *  SPF authorizes only Microsoft/Proofpoint). Sending through Hostinger's
+ *  mail() got blocked by the inbound anti-spoofing filter (SPF/DKIM fail).
+ *  So we send via AUTHENTICATED Microsoft 365 SMTP (smtp.office365.com:587,
+ *  STARTTLS) using a real mailbox on the domain — that path passes SPF, is
+ *  DKIM-signed by Microsoft, and aligns DMARC, so it lands in the inbox.
  *
  *  Every submission is also appended to /.private/submissions.log so the
  *  lead is preserved even if the email layer breaks.
+ *
+ *  SETUP REQUIRED (one time):
+ *    - SMTP_USER must be a real M365 mailbox on the domain.
+ *    - "Authenticated SMTP" (SMTP AUTH) must be ENABLED for that mailbox in
+ *      the Microsoft 365 admin center (it is OFF by default on new tenants).
+ *    - Put the real mailbox password in SMTP_PASS on the SERVER only. The
+ *      repo copy keeps the placeholder; /api/submit.php is in the deploy
+ *      rsync EXCLUDE list, so deploys never overwrite the live file.
  * ---------------------------------------------------------------------- */
 
 // === Configuration ====================================================
-$RECIPIENT  = 'info@maximapools.com';
+$RECIPIENT  = 'info@maximapools.com';            // where leads are delivered
 $FROM_NAME  = 'Maxima Pools Website';
-$FROM_EMAIL = 'no-reply@maximapools.com';
+
+// Microsoft 365 authenticated SMTP. FROM_EMAIL must equal SMTP_USER (or have
+// "Send As" rights) or M365 rejects with 5.7.60 SendAsDenied.
+$SMTP_HOST  = 'smtp.office365.com';
+$SMTP_PORT  = 587;
+$SMTP_USER  = 'no-reply@maximapools.com';        // real M365 mailbox
+$SMTP_PASS  = 'PUT_M365_PASSWORD_HERE';          // <-- set on server only
+$FROM_EMAIL = $SMTP_USER;
 // ======================================================================
 
 header('Content-Type: application/json; charset=utf-8');
@@ -53,8 +74,64 @@ function field(string $k): string {
     return clean_line((string)($_POST[$k] ?? ''));
 }
 
+// RFC 2047 encode a header value when it contains non-ASCII (accents etc).
+function enc_header(string $s): string {
+    return preg_match('/[^\x20-\x7E]/', $s)
+        ? '=?UTF-8?B?' . base64_encode($s) . '?='
+        : $s;
+}
+
+// Send one plain-text message via authenticated SMTP (STARTTLS) using cURL.
+// Returns true on success; on failure sets $err and returns false.
+function send_via_smtp(
+    string $host, int $port, string $user, string $pass,
+    string $fromName, string $fromEmail,
+    string $to, string $replyName, string $replyEmail,
+    string $subject, string $body, ?string &$err
+): bool {
+    if (!function_exists('curl_init')) { $err = 'cURL not available'; return false; }
+
+    $eol = "\r\n";
+    $msg  = 'Date: ' . date('r') . $eol;
+    $msg .= 'To: ' . $to . $eol;
+    $msg .= 'From: ' . enc_header($fromName) . ' <' . $fromEmail . '>' . $eol;
+    $msg .= 'Reply-To: ' . enc_header($replyName) . ' <' . $replyEmail . '>' . $eol;
+    $msg .= 'Subject: ' . enc_header($subject) . $eol;
+    $msg .= 'Message-ID: <' . bin2hex(random_bytes(16)) . '@maximapools.com>' . $eol;
+    $msg .= 'MIME-Version: 1.0' . $eol;
+    $msg .= 'Content-Type: text/plain; charset=utf-8' . $eol;
+    $msg .= 'Content-Transfer-Encoding: 8bit' . $eol;
+    $msg .= 'X-Mailer: Maxima Pools Website' . $eol;
+    $msg .= $eol . $body . $eol;
+
+    $fp = fopen('php://temp', 'r+');
+    fwrite($fp, $msg);
+    rewind($fp);
+
+    $ch = curl_init();
+    curl_setopt_array($ch, [
+        CURLOPT_URL            => 'smtp://' . $host . ':' . $port,
+        CURLOPT_USE_SSL        => CURLUSESSL_ALL,           // require STARTTLS
+        CURLOPT_USERNAME       => $user,
+        CURLOPT_PASSWORD       => $pass,
+        CURLOPT_MAIL_FROM      => '<' . $fromEmail . '>',
+        CURLOPT_MAIL_RCPT      => ['<' . $to . '>'],
+        CURLOPT_UPLOAD         => true,
+        CURLOPT_READDATA       => $fp,
+        CURLOPT_CONNECTTIMEOUT => 15,
+        CURLOPT_TIMEOUT        => 30,
+    ]);
+    $sent = curl_exec($ch);
+    if ($sent === false) {
+        $err = 'cURL errno ' . curl_errno($ch) . ': ' . curl_error($ch);
+    }
+    curl_close($ch);
+    fclose($fp);
+    return $sent !== false;
+}
+
 // Append one JSON-line per submission to /.private/submissions.log so the
-// lead is preserved even when mail() delivery fails. Directory is web-blocked
+// lead is preserved even when delivery fails. Directory is web-blocked
 // by its own .htaccess (Deny from all).
 function log_submission(array $entry): void {
     $dir = __DIR__ . '/../.private';
@@ -118,14 +195,13 @@ $body .= str_repeat('-', 60) . "\n";
 $body .= "Submitted:   " . gmdate('Y-m-d H:i:s') . " UTC\n";
 $body .= "From IP:     " . ($_SERVER['REMOTE_ADDR'] ?? 'unknown') . "\n";
 
-$headers   = [];
-$headers[] = "From: $FROM_NAME <$FROM_EMAIL>";
-$headers[] = "Reply-To: $name <$email>";
-$headers[] = "MIME-Version: 1.0";
-$headers[] = "Content-Type: text/plain; charset=utf-8";
-$headers[] = "X-Mailer: Maxima Pools Website";
-
-$ok = @mail($RECIPIENT, $subject, $body, implode("\r\n", $headers));
+$err = null;
+$ok  = send_via_smtp(
+    $SMTP_HOST, $SMTP_PORT, $SMTP_USER, $SMTP_PASS,
+    $FROM_NAME, $FROM_EMAIL,
+    $RECIPIENT, $name, $email,
+    $subject, $body, $err
+);
 
 log_submission([
     'ts'           => gmdate('Y-m-d\TH:i:s\Z'),
@@ -142,7 +218,7 @@ log_submission([
     'source'       => $source,
     'message'      => $message,
     'email_status' => $ok ? 'sent' : 'failed',
-    'email_error'  => $ok ? null : 'mail() returned false',
+    'email_error'  => $ok ? null : $err,
 ]);
 
 if ($ok) {
@@ -150,7 +226,7 @@ if ($ok) {
     exit;
 }
 
-@error_log('[submit.php] mail() returned false');
+@error_log('[submit.php] SMTP send failed: ' . (string)$err);
 
 http_response_code(500);
 echo json_encode([
