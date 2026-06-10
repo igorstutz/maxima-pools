@@ -118,7 +118,7 @@ const features = [
 
 const highlights = [
   "100% Hand-Laid Fiberglass",
-  "Lifetime Structural Warranty",
+  "Structural Warranty",
   "Marine-Grade Vinyl Ester Resin",
   "Non-Porous Gelcoat Finish",
   "Algae-Resistant Surface",
@@ -313,7 +313,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                 </p>
                 <p className="text-gray-600 leading-relaxed text-lg">
                   Manufactured by San Juan Pools using 100% hand-laid fiberglass construction,
-                  the {pool.name} offers unmatched durability, a lifetime structural warranty,
+                  the {pool.name} offers unmatched durability, a structural warranty,
                   and a smooth, non-porous gelcoat finish that resists algae and simplifies
                   maintenance.
                 </p>

@@ -42,7 +42,7 @@ const stats = [
   { value: "100%", label: "Hand-Laid", icon: HandMetal },
   { value: "5+", label: "Fiberglass Layers", icon: Layers },
   { value: "25+yr", label: "Proven Finishes", icon: Clock },
-  { value: "Lifetime", label: "Structural Warranty", icon: Shield },
+  { value: "Structural", label: "Warranty", icon: Shield },
 ];
 
 const handlaidVsChop = [
@@ -293,7 +293,7 @@ export default function FiberglassPoolQualityPage() {
                     { icon: HandMetal, text: "100% Hand Made" },
                     { icon: Layers, text: "Solid Sheets Only" },
                     { icon: FlaskConical, text: "Vinyl Ester Resin" },
-                    { icon: Award, text: "Lifetime Warranty" },
+                    { icon: Award, text: "Structural Warranty" },
                   ].map((item) => (
                     <span
                       key={item.text}

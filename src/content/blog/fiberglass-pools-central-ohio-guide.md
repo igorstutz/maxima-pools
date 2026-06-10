@@ -136,7 +136,7 @@ What to look for:
 3. **Multiple structural layers** — at least five hand-laid layers per shell, with structural ribs reinforcing the walls without adding deadweight.
 4. **A real warranty** — not just "structural" with eight pages of exclusions. Read what's actually covered, for how long, and what voids it.
 
-We install [San Juan Pools](https://sanjuanpools.com/) exclusively because they meet all four standards better than any other manufacturer we've evaluated. Hand-laid construction, full Vinyl Ester laminate, lifetime structural warranty. [See exactly how San Juan pools are made](/how-san-juan-pools-are-made), or [compare San Juan against competitors](/san-juan-fiberglass-pools).
+We install [San Juan Pools](https://sanjuanpools.com/) exclusively because they meet all four standards better than any other manufacturer we've evaluated. Hand-laid construction, full Vinyl Ester laminate, structural warranty. [See exactly how San Juan pools are made](/how-san-juan-pools-are-made), or [compare San Juan against competitors](/san-juan-fiberglass-pools).
 
 ## Common Questions
 
