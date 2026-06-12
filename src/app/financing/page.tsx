@@ -24,15 +24,19 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import {
+  LyonFinancingBanner,
+  LYON_APPLY_URL,
+} from "@/components/LyonFinancingBanner";
 
 export const metadata: Metadata = {
   title: "Pool Financing | Maxima Pools - Columbus, OH",
   description:
-    "Affordable fiberglass pool financing through Lyon Financial. Loans up to $200K, terms up to 30 years, fast approvals. Make your dream pool a reality with Maxima Pools.",
+    "Affordable fiberglass pool financing through Lyon Financial. Loans up to $250K, terms up to 30 years, fast approvals. Make your dream pool a reality with Maxima Pools.",
   openGraph: {
     title: "Pool Financing | Maxima Pools",
     description:
-      "Affordable pool financing with industry-leading rates through Lyon Financial. Loans up to $200K with terms up to 30 years.",
+      "Affordable pool financing with industry-leading rates through Lyon Financial. Loans up to $250K with terms up to 30 years.",
     type: "website",
   },
 };
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
 const stats = [
   { value: "40+", label: "Years in Business", icon: Calendar },
   { value: "500K+", label: "Happy Customers", icon: Users },
-  { value: "$200K", label: "Max Loan Amount", icon: Banknote },
+  { value: "$250K", label: "Max Loan Amount", icon: Banknote },
   { value: "30", label: "Year Terms Available", icon: Clock },
 ];
 
@@ -107,7 +111,7 @@ const faqs = [
   },
   {
     q: "How much can I borrow?",
-    a: "Lyon Financial offers loans up to $200,000, covering pool installation, outdoor living, landscaping, and related improvements.",
+    a: "Lyon Financial offers loans up to $250,000, covering pool installation, outdoor living, landscaping, and related improvements.",
   },
   {
     q: "What can I finance?",
@@ -123,7 +127,7 @@ const faqs = [
   },
 ];
 
-const APPLY_URL = "https://www.lyonfinancial.net/apply/?lid=11-19241";
+const APPLY_URL = LYON_APPLY_URL;
 
 export default function FinancingPage() {
   return (
@@ -179,7 +183,7 @@ export default function FinancingPage() {
               Your backyard paradise doesn&apos;t have to wait. Through our partnership
               with Lyon Financial — America&apos;s #1 pool financing company for over 40
               years — you can get low rates, flexible terms up to 30 years, and
-              loans up to $200K.
+              loans up to $250K.
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
@@ -208,6 +212,17 @@ export default function FinancingPage() {
               </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ── Official Lyon Financial animated banner ── */}
+      <section className="py-10 sm:py-14 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <LyonFinancingBanner />
+          </ScrollReveal>
         </div>
       </section>
 

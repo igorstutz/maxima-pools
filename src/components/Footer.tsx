@@ -23,6 +23,7 @@ const learnLinks = [
 ];
 
 const moreLinks = [
+  { label: "Financing", href: "/financing" },
   { label: "Outdoor Living", href: "/outdoor-living" },
   { label: "Gallery", href: "/fiberglass-pool-gallery" },
   { label: "Blog", href: "/blog" },

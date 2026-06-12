@@ -5,6 +5,7 @@ import { Process } from "@/components/Process";
 import { PoolShapes } from "@/components/PoolShapes";
 import { OutdoorLiving } from "@/components/OutdoorLiving";
 import { PoolSizes } from "@/components/PoolSizes";
+import { FinancingCTA } from "@/components/FinancingCTA";
 import { Testimonials } from "@/components/Testimonials";
 import { SocialFeed } from "@/components/SocialFeed";
 import { CTA } from "@/components/CTA";
@@ -60,6 +61,8 @@ export default function Home() {
       <OutdoorLiving />
       <SectionDivider />
       <PoolSizes />
+      <SectionDivider />
+      <FinancingCTA />
       <SectionDivider />
       <Testimonials />
       <SectionDivider />
