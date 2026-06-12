@@ -1,8 +1,24 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+
+// Maxima Pools Facebook page (provided by client). The Page Plugin only renders
+// for Facebook Pages — if this URL is a personal profile it must be converted
+// to a Page for the embedded timeline to show.
+const FB_PAGE_URL =
+  "https://www.facebook.com/profile.php?id=61582788479318";
+
+// The Facebook Page Plugin only accepts a fixed pixel width between 180 and 500.
+const FB_MIN_WIDTH = 180;
+const FB_MAX_WIDTH = 500;
+
+declare global {
+  interface Window {
+    FB?: { XFBML: { parse: (el?: HTMLElement) => void } };
+  }
+}
 
 // Facebook "f" logo — lucide-react dropped its brand icons, so we inline it.
 function FacebookIcon({ className = "" }: { className?: string }) {
@@ -20,36 +36,50 @@ function FacebookIcon({ className = "" }: { className?: string }) {
   );
 }
 
-// Maxima Pools Facebook page (provided by client). The Page Plugin only renders
-// for Facebook Pages — if this URL is a personal profile it must be converted
-// to a Page for the embedded timeline to show.
-const FB_PAGE_URL =
-  "https://www.facebook.com/profile.php?id=61582788479318";
-
-declare global {
-  interface Window {
-    FB?: { XFBML: { parse: (el?: HTMLElement) => void } };
-  }
+function loadFbSdk() {
+  if (document.getElementById("facebook-jssdk")) return;
+  const script = document.createElement("script");
+  script.id = "facebook-jssdk";
+  script.async = true;
+  script.defer = true;
+  script.crossOrigin = "anonymous";
+  script.src =
+    "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0";
+  document.body.appendChild(script);
 }
 
 export function SocialFeed() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [width, setWidth] = useState<number | null>(null);
+
+  // Measure the container so we can hand the plugin an explicit pixel width
+  // (clamped to its 180–500px range). The plugin doesn't reflow on its own, so
+  // we re-measure on resize/orientation change.
   useEffect(() => {
-    // Load the Facebook SDK once. With #xfbml=1 it auto-parses .fb-* widgets on
-    // load; on client-side navigation the SDK is already present, so re-parse.
-    const existing = document.getElementById("facebook-jssdk");
-    if (!existing) {
-      const script = document.createElement("script");
-      script.id = "facebook-jssdk";
-      script.async = true;
-      script.defer = true;
-      script.crossOrigin = "anonymous";
-      script.src =
-        "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v21.0";
-      document.body.appendChild(script);
-    } else if (window.FB) {
-      window.FB.XFBML.parse();
-    }
+    const el = containerRef.current;
+    if (!el) return;
+    const measure = () => {
+      const w = Math.round(el.getBoundingClientRect().width);
+      const clamped = Math.max(FB_MIN_WIDTH, Math.min(FB_MAX_WIDTH, w));
+      setWidth((prev) => (prev === clamped ? prev : clamped));
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    return () => ro.disconnect();
   }, []);
+
+  // Load the SDK once, then (re)parse whenever the width changes so the plugin
+  // re-renders at the new size. The `key={width}` on .fb-page gives parse a
+  // fresh, un-rendered node to work with.
+  useEffect(() => {
+    if (width == null) return;
+    loadFbSdk();
+    const id = window.requestAnimationFrame(() => {
+      window.FB?.XFBML.parse(containerRef.current ?? undefined);
+    });
+    return () => window.cancelAnimationFrame(id);
+  }, [width]);
 
   return (
     <section className="relative py-20 sm:py-28 bg-white overflow-hidden">
@@ -99,25 +129,52 @@ export function SocialFeed() {
           {/* ── Right — live Facebook feed ── */}
           <ScrollReveal direction="right" delay={1}>
             <div className="flex justify-center lg:justify-end">
-              <div className="rounded-3xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-3 sm:p-4 shadow-xl shadow-gray-200/50 w-full max-w-[500px] overflow-hidden">
-                <div id="fb-root" />
-                <div
-                  className="fb-page"
-                  data-href={FB_PAGE_URL}
-                  data-tabs="timeline"
-                  data-width="500"
-                  data-height="600"
-                  data-small-header="false"
-                  data-adapt-container-width="true"
-                  data-hide-cover="false"
-                  data-show-facepile="true"
-                >
-                  <blockquote
-                    cite={FB_PAGE_URL}
-                    className="fb-xfbml-parse-ignore"
-                  >
-                    <a href={FB_PAGE_URL}>Maxima Pools on Facebook</a>
-                  </blockquote>
+              <div className="rounded-3xl border border-gray-100 bg-gradient-to-br from-gray-50 to-white p-3 sm:p-4 shadow-xl shadow-gray-200/50 w-full max-w-[500px]">
+                <div ref={containerRef} className="w-full overflow-hidden rounded-2xl">
+                  <div id="fb-root" />
+                  {width != null && (
+                    <div
+                      key={width}
+                      className="fb-page"
+                      data-href={FB_PAGE_URL}
+                      data-tabs="timeline"
+                      data-width={width}
+                      data-height="600"
+                      data-small-header="false"
+                      data-adapt-container-width="true"
+                      data-hide-cover="false"
+                      data-show-facepile="true"
+                    >
+                      {/* Fallback shown when the SDK is blocked (e.g. Firefox
+                          tracking protection, ad-blockers) or still loading. */}
+                      <blockquote
+                        cite={FB_PAGE_URL}
+                        className="fb-xfbml-parse-ignore"
+                      >
+                        <span className="flex flex-col items-center text-center gap-3 py-12 px-6">
+                          <span className="w-14 h-14 rounded-2xl bg-[#1877F2] flex items-center justify-center text-white">
+                            <FacebookIcon className="w-7 h-7" />
+                          </span>
+                          <span className="font-bold text-gray-900">
+                            Maxima Pools on Facebook
+                          </span>
+                          <span className="text-sm text-gray-500 max-w-xs">
+                            See our latest posts, photos, and project updates on
+                            our Facebook page.
+                          </span>
+                          <a
+                            href={FB_PAGE_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 mt-1 px-5 py-2.5 bg-[#1877F2] text-white text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
+                          >
+                            Open Facebook
+                            <ArrowUpRight size={15} />
+                          </a>
+                        </span>
+                      </blockquote>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
