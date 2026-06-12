@@ -1,0 +1,68 @@
+# Maxima Pools
+
+> Maxima Pools is a family-owned, authorized San Juan Pools dealer installing premium fiberglass swimming pools and complete outdoor living spaces across Central Ohio. With 100+ pool models, in-house installation crews (no subcontractors), and full-service backyard transformations, we serve homeowners throughout 33 cities and 17 counties from a single base of operations in Delaware, Ohio.
+
+Key facts:
+
+- **Business name:** Maxima Pools
+- **Type:** Authorized San Juan Pools dealer; fiberglass pool installer and outdoor living contractor
+- **Phone:** (614) 384-5081
+- **Email:** info@maximapools.com
+- **Address:** 4059 State Route 37 East, Suite A, Delaware, OH 43015
+- **Service region:** Central Ohio — 33 cities + 17 counties (full list below)
+- **Pool brand:** San Juan Pools (exclusive dealer)
+- **Catalog size:** 100+ fiberglass pool models
+- **Crew:** In-house from excavation to walkthrough — no subcontracted installers
+- **Website:** https://maximapools.com
+
+## Company
+
+- [Why Maxima Pools](https://maximapools.com/why-maxima): Family ownership, mission, and what differentiates Maxima from other Central Ohio pool builders.
+- [Our Process](https://maximapools.com/our-process): Step-by-step look at how a Maxima fiberglass pool installation flows from design consultation to first swim.
+- [Reviews](https://maximapools.com/reviews): Verified homeowner reviews and Google ratings.
+- [Contact / Free Estimate](https://maximapools.com/contact): Free, no-obligation in-home consultation form and direct phone/email.
+- [Financing](https://maximapools.com/financing): Pool financing through Lyon Financial (America's #1 pool lender since 1979) — loans up to $250K, terms up to 30 years, no credit impact to apply.
+
+## Fiberglass pool products
+
+- [All Pool Models](https://maximapools.com/pools): Browse the full 100+ San Juan fiberglass pool catalog with filters by size, depth, shape, and features (tanning ledge, deep end, lap, spa combo, etc.).
+- [San Juan Fiberglass Pools](https://maximapools.com/san-juan-fiberglass-pools): About the San Juan Pools brand and why Maxima is an exclusive dealer.
+- [Pool Gallery](https://maximapools.com/fiberglass-pool-gallery): Photo gallery of completed Maxima pool installations.
+- [Why Fiberglass Pools Make Sense](https://maximapools.com/why-fiberglass-pools-make-sense): Cost, maintenance, lifespan, and installation-time comparison vs. concrete and vinyl liner pools.
+- [Fiberglass Pool Quality](https://maximapools.com/fiberglass-pool-quality): How San Juan fiberglass pools are engineered for durability, especially in freeze-thaw climates.
+- [How San Juan Pools Are Made](https://maximapools.com/how-san-juan-pools-are-made): Inside the San Juan factory — the manufacturing process from mold to shipped pool.
+- [Pool Color Options](https://maximapools.com/fiberglass-pool-colors): All available gel-coat colors and how each affects water appearance.
+- [The Perfect Pool for Your Pet](https://maximapools.com/the-perfect-pool-for-your-pet): Pet-friendly fiberglass pool features (shallow ledges, gradual entries, dog-safe surfaces).
+
+## Services & add-ons
+
+- [Outdoor Living](https://maximapools.com/outdoor-living): Concrete pool decks, stamped patios, pergolas, fire pits, outdoor kitchens, retaining walls, and full backyard transformations.
+- [Auto Cover Installation](https://maximapools.com/auto-cover-pool): Automatic pool covers for safety, heat retention, evaporation control, and reduced maintenance.
+- [Pool Accessories & Extras](https://maximapools.com/pool-accessories-and-extras): LED lighting, water features, tanning ledges, heating systems, salt chlorine generators, and other add-ons.
+- [Pool Closing & Winterization](https://maximapools.com/pool-closing): End-of-season closing, chemical balancing, and full winterization for Ohio winters.
+- [Frozen Pools](https://maximapools.com/frozen-pools): How fiberglass pools handle hard freezes and what to do if your pool ices over.
+
+## Interactive tools
+
+- [Pool Simulator](https://maximapools.com/pool-simulator): Interactive visualizer that lets homeowners see a fiberglass pool placed in their own backyard before committing.
+
+## Service area
+
+Maxima Pools serves Central Ohio from its Delaware, OH base. See [Areas We Serve](https://maximapools.com/areas-we-serve) for the full list with photos and individual location pages.
+
+**Cities & towns served (33):** Ashley, Blacklick, Buckeye Lake, Cardington, Centerburg, Columbus, Delaware, Dublin, Etna, Gahanna, Galena, Galloway, Grove City, Groveport, Hilliard, Johnstown, Lewis Center, Lithopolis, Marysville, New Albany, Ostrander, Pataskala, Pickerington, Plain City, Powell, Prospect, Reynoldsburg, Sunbury, Thornville, Upper Arlington, West Jefferson, Westerville, Worthington.
+
+**Counties served (17):** Champaign, Clark, Crawford, Delaware, Fairfield, Franklin, Hardin, Knox, Licking, Logan, Madison, Marion, Morrow, Pickaway, Richland, Union, Wyandot.
+
+Each city and county has a dedicated page at `https://maximapools.com/locations/<slug>` — e.g. [Columbus](https://maximapools.com/locations/columbus), [Dublin](https://maximapools.com/locations/dublin), [Franklin County](https://maximapools.com/locations/franklin-county).
+
+## Blog
+
+- [Blog index](https://maximapools.com/blog): All articles.
+- [Fiberglass Pools in Central Ohio: A Homeowner's Guide](https://maximapools.com/blog/fiberglass-pools-central-ohio-guide): Comparing fiberglass, concrete, and vinyl liner pools for Ohio's freeze-thaw climate — costs, lifespan, and the construction details that matter.
+- [Spring Pool Opening: An 8-Step Checklist for Fiberglass Owners](https://maximapools.com/blog/spring-pool-opening-checklist): Pro-grade spring pool opening checklist for Central Ohio fiberglass pool owners.
+
+## Optional
+
+- [XML sitemap](https://maximapools.com/sitemap.xml): Full machine-readable list of every indexed page on maximapools.com.
+- [robots.txt](https://maximapools.com/robots.txt): Crawler directives.

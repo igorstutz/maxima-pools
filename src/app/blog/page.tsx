@@ -13,10 +13,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { getAllPosts, formatPublishedDate } from "@/lib/blog";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/blog/" },
   title: "Blog — Pool Tips, Insights & Stories | Maxima Pools",
   description:
     "Honest advice on fiberglass pools, maintenance, design ideas, and what we've learned installing pools across Central Ohio.",
   openGraph: {
+    url: "/blog/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Maxima Pools Blog — Pool Tips & Insights",
     description:
       "Pool ownership tips, design ideas, and the experience of building and maintaining fiberglass pools in Central Ohio.",

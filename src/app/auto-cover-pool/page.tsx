@@ -24,10 +24,13 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/auto-cover-pool/" },
   title: "Automatic Pool Cover | Maxima Pools - Columbus, OH",
   description:
     "Protect your pool with a premium automatic cover system. Safety, heat retention, reduced maintenance, and elegant design. Get a free quote from Maxima Pools.",
   openGraph: {
+    url: "/auto-cover-pool/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Automatic Pool Cover | Maxima Pools",
     description:
       "Safety and convenience in one system. Motorized pool covers that protect, retain heat, and look elegant.",

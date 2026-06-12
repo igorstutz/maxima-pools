@@ -12,10 +12,13 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/our-process/" },
   title: "Our Process | Maxima Pools - Columbus, OH",
   description:
     "Learn how Maxima Pools installs your fiberglass pool from start to finish. Transparent, efficient, in-house process — serving Columbus, OH and Central Ohio.",
   openGraph: {
+    url: "/our-process/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Our Process | Maxima Pools",
     description:
       "From first consultation to your first swim — see how Maxima Pools delivers a seamless pool installation experience.",

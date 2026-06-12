@@ -13,10 +13,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { locations, slugify } from "@/lib/locations";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/areas-we-serve/" },
   title: "Areas We Serve | Maxima Pools - Columbus, OH",
   description:
     "Maxima Pools serves 49 cities and counties across Central Ohio. Find fiberglass pool installation services near you — Columbus, Dublin, Powell, Westerville, and more.",
   openGraph: {
+    url: "/areas-we-serve/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Areas We Serve | Maxima Pools",
     description:
       "Premium fiberglass pool installation across Central Ohio. Browse all 49 service areas.",

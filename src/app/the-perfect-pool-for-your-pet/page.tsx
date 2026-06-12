@@ -26,10 +26,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/the-perfect-pool-for-your-pet/" },
   title: "The Perfect Pool for Your Pet | Maxima Pools - Columbus, OH",
   description:
     "San Juan fiberglass pools are a dog's best friend. Smooth surface, scratch-resistant, low chemical maintenance, and built-in shallow areas for safe pet swimming.",
   openGraph: {
+    url: "/the-perfect-pool-for-your-pet/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "The Perfect Pool for Your Pet | Maxima Pools",
     description:
       "Fiberglass pools designed with pets in mind — smooth, durable, low-maintenance, and safe for dogs and families alike.",

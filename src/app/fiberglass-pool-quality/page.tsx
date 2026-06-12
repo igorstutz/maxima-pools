@@ -27,10 +27,13 @@ import { ImageLightbox } from "@/components/ImageLightbox";
 import { QualityLayers } from "./quality-layers";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/fiberglass-pool-quality/" },
   title: "Fiberglass Pool Quality | Maxima Pools - Columbus, OH",
   description:
     "Learn what sets our fiberglass pool quality apart. Premium hand-laid construction, marine-grade Vinyl Ester resin, and expert craftsmanship that ensure lasting strength and durability.",
   openGraph: {
+    url: "/fiberglass-pool-quality/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Fiberglass Pool Quality | Maxima Pools",
     description:
       "Discover the premium materials and expert hand-laid construction that make San Juan the highest quality fiberglass pool in the world.",

@@ -17,10 +17,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact/" },
   title: "Free Estimate | Maxima Pools - Columbus, OH",
   description:
     "Get a free, no-obligation estimate for your fiberglass pool project. Fill out our form or call (614) 384-5081. Serving Columbus, OH and surrounding areas.",
   openGraph: {
+    url: "/contact/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Free Estimate | Maxima Pools",
     description:
       "Start your pool project today. Get a free estimate from the #1 fiberglass pool installer in Columbus, OH.",

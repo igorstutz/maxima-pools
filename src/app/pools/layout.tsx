@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   description:
     "Explore 85+ San Juan fiberglass pool and spa models. Filter by type, shape, and size to find the perfect fit for your backyard. Maxima Pools — Columbus, OH.",
   openGraph: {
+    url: "/pools/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Pool Collection | Maxima Pools",
     description:
       "Browse 85+ San Juan fiberglass pools and spas. Filter by type, shape, or size.",

@@ -53,12 +53,14 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: { canonical: `/pools/${slug}/` },
     openGraph: {
       title,
       description,
       type: "website",
       locale: "en_US",
       siteName: "Maxima Pools",
+      url: `/pools/${slug}/`,
       images: [{ url: pool.image, width: 1200, height: 630, alt: pool.name }],
     },
   };

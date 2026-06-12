@@ -35,10 +35,20 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `Fiberglass Pool Installation in ${area} | Maxima Pools`,
     description: `Premium fiberglass pool installation and outdoor living services in ${area}. Authorized San Juan Pools dealer serving ${location.name}. Get a free estimate today.`,
+    alternates: { canonical: `/locations/${slug}/` },
     openGraph: {
       title: `Fiberglass Pools in ${area} | Maxima Pools`,
       description: `Maxima Pools serves ${area} with premium San Juan fiberglass pool installations. Family-owned, in-house team, and full-service builds.`,
       type: "website",
+      url: `/locations/${slug}/`,
+      images: [
+        {
+          url: "/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: `Fiberglass pool installation in ${area} — Maxima Pools`,
+        },
+      ],
     },
   };
 }

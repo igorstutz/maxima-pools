@@ -26,11 +26,14 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { ManufacturingSteps } from "./manufacturing-steps";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/how-san-juan-pools-are-made/" },
   title:
     "How San Juan Pools Are Made | Maxima Pools - Columbus, OH",
   description:
     "Discover the hand-laid fiberglass process, proprietary Vinyl Ester resin, and 7-step manufacturing that make San Juan the strongest, most durable pool on the market.",
   openGraph: {
+    url: "/how-san-juan-pools-are-made/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "How San Juan Pools Are Made | Maxima Pools",
     description:
       "5+ hand-laid fiberglass layers, marine-grade Vinyl Ester resin, and expert craftsmanship. See why San Juan pools outlast every competitor.",

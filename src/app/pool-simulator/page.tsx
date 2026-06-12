@@ -18,10 +18,13 @@ import { SimulatorEmbed } from "./simulator-embed";
 import { SimulatorVideo } from "./simulator-video";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pool-simulator/" },
   title: "Pool Simulator | Maxima Pools - Columbus, OH",
   description:
     "Visualize your fiberglass pool in your own backyard. Enter your address, view your property on the map, and position your pool with real-life scale before installation.",
   openGraph: {
+    url: "/pool-simulator/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Pool Simulator | Maxima Pools",
     description:
       "Design your dream fiberglass pool and see exactly how it fits in your backyard with our interactive Pool Simulator.",

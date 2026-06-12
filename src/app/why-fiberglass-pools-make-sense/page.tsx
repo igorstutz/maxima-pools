@@ -28,10 +28,13 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { PoolComparison } from "./pool-comparison";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/why-fiberglass-pools-make-sense/" },
   title: "Why Fiberglass Pools Make Sense | Maxima Pools - Columbus, OH",
   description:
     "Discover why fiberglass pool construction outperforms gunite and vinyl. Hand-laid layers, 17x stronger than concrete, less maintenance, faster installation. San Juan Pools dealer in Columbus, OH.",
   openGraph: {
+    url: "/why-fiberglass-pools-make-sense/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Why Fiberglass Pools Make Sense | Maxima Pools",
     description:
       "Compare fiberglass vs gunite vs vinyl. See why San Juan hand-laid fiberglass pools are stronger, lower maintenance, and built to last decades.",

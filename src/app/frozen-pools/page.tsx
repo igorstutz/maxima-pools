@@ -24,10 +24,13 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/frozen-pools/" },
   title: "Freezable Pools — Ice-Ready Fiberglass Pools | Maxima Pools - Columbus, OH",
   description:
     "San Juan fiberglass pools are built to handle extreme freezing conditions. Durable, flexible, and warranty-backed — your pool performs year-round, even in Ohio winters.",
   openGraph: {
+    url: "/frozen-pools/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Freezable Pools — Built for Every Season | Maxima Pools",
     description:
       "San Juan fiberglass pools handle extreme freeze-thaw cycles without cracking. Turn your pool into a winter playground.",

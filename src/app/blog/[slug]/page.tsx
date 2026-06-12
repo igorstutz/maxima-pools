@@ -51,13 +51,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${post.title} | Maxima Pools Blog`,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${slug}/` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      url: `/blog/${slug}/`,
       publishedTime: post.publishedAt,
       authors: [post.author],
-      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
+      images: post.coverImage
+        ? [{ url: post.coverImage }]
+        : [{ url: "/og-image.jpg", width: 1200, height: 630 }],
     },
   };
 }

@@ -12,10 +12,13 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/reviews/" },
   title: "Customer Reviews | Maxima Pools - Columbus, OH",
   description:
     "Read what Columbus-area homeowners say about Maxima Pools. 5-star Google reviews from real fiberglass pool installation customers.",
   openGraph: {
+    url: "/reviews/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Customer Reviews | Maxima Pools",
     description:
       "See why homeowners across Central Ohio trust Maxima Pools for their fiberglass pool installations.",

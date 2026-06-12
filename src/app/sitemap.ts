@@ -15,6 +15,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/our-process`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/pools`, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/contact`, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${BASE}/financing`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/areas-we-serve`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/reviews`, changeFrequency: "weekly", priority: 0.8 },
     { url: `${BASE}/fiberglass-pool-gallery`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/pool-simulator`, changeFrequency: "monthly", priority: 0.8 },

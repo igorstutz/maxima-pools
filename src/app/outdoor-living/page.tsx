@@ -22,10 +22,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/outdoor-living/" },
   title: "Outdoor Living | Maxima Pools - Columbus, OH",
   description:
     "Transform your backyard into an outdoor oasis. Custom kitchens, fire features, shade structures, lighting, and entertainment — designed and built in-house by Maxima Pools.",
   openGraph: {
+    url: "/outdoor-living/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Outdoor Living | Maxima Pools",
     description:
       "Beautifully designed outdoor living spaces crafted to enhance comfort, entertainment, and relaxation. Serving Columbus, OH.",

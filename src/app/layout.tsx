@@ -39,12 +39,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Maxima Pools",
     url: "https://maximapools.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Maxima Pools - Premium Fiberglass Pools & Spas",
     description:
       "High-quality fiberglass pools and custom patios in Columbus, OH. Authorized San Juan Pools dealer.",
+    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -58,15 +67,19 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://maximapools.com",
+    canonical: "/",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/icon-512.png", type: "image/png", sizes: "512x512" },
+    ],
     apple: "/apple-touch-icon.png",
   },
   other: {
     "theme-color": "#0c4a6e",
-    "google-site-verification": "",
   },
 };
 
@@ -87,6 +100,45 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </Script>
       </head>
       <body className="bg-white text-gray-900 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://maximapools.com/#organization",
+                  name: "Maxima Pools",
+                  url: "https://maximapools.com",
+                  logo: "https://maximapools.com/icon-512.png",
+                  image: "https://maximapools.com/og-image.jpg",
+                  telephone: "+1-614-384-5081",
+                  email: "info@maximapools.com",
+                  address: {
+                    "@type": "PostalAddress",
+                    streetAddress: "4059 State Route 37 East, Suite A",
+                    addressLocality: "Delaware",
+                    addressRegion: "OH",
+                    postalCode: "43015",
+                    addressCountry: "US",
+                  },
+                  sameAs: [
+                    "https://www.facebook.com/profile.php?id=61582788479318",
+                    "https://www.instagram.com/maxima.pools/",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://maximapools.com/#website",
+                  name: "Maxima Pools",
+                  url: "https://maximapools.com",
+                  publisher: { "@id": "https://maximapools.com/#organization" },
+                },
+              ],
+            }),
+          }}
+        />
         <noscript>
           <iframe
             src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}

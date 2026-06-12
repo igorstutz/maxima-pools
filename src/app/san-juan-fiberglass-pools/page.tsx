@@ -27,10 +27,13 @@ import { ImageLightbox } from "@/components/ImageLightbox";
 import { ComparisonTable } from "./comparison-table";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/san-juan-fiberglass-pools/" },
   title: "San Juan VS Competitors | Maxima Pools - Columbus, OH",
   description:
     "See how San Juan's hand-laid fiberglass construction compares to chopped/sprayed competitors. 32-mil gel coat, Vinyl Ester resin throughout, and 5+ guaranteed layers.",
   openGraph: {
+    url: "/san-juan-fiberglass-pools/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "San Juan VS Competitors | Maxima Pools",
     description:
       "Hand-laid vs chopped fiberglass — see the 10-point comparison that proves San Juan builds the strongest pool on the market.",

@@ -15,10 +15,13 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { GalleryGrid } from "./gallery-grid";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/fiberglass-pool-gallery/" },
   title: "Fiberglass Pool Gallery | Maxima Pools - Columbus, OH",
   description:
     "Browse 60+ photos of San Juan fiberglass pool installations. Filter by color — White, Sully Blue, Blue Lagoon, and Granite. Real projects by Maxima Pools in Columbus, OH.",
   openGraph: {
+    url: "/fiberglass-pool-gallery/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Fiberglass Pool Gallery | Maxima Pools",
     description:
       "See our real fiberglass pool installations. Browse by color finish — White, Sully Blue, Blue Lagoon, Granite, and more.",

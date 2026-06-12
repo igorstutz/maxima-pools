@@ -34,10 +34,13 @@ import { Testimonials } from "@/components/Testimonials";
 import { PoolClosingFAQ } from "./faq";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pool-closing/" },
   title: "Pool Closing/Opening & Winterizing | Maxima Pools - Columbus, OH",
   description:
     "Professional pool winterization services in Columbus, OH. Protect your pool from freeze damage, prevent algae growth, and ensure an easy spring opening. Starting at $450.",
   openGraph: {
+    url: "/pool-closing/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Pool Closing/Opening & Winterizing | Maxima Pools",
     description:
       "Professional winterization to protect your pool from freeze damage, prevent algae growth, and ensure a smooth opening in spring.",

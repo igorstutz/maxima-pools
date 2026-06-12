@@ -27,10 +27,13 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { InvestmentCarousel } from "@/components/InvestmentCarousel";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/why-maxima/" },
   title: "Why Maxima Pools | Columbus, OH Pool Contractor",
   description:
     "Discover why Maxima Pools is Columbus, Ohio's trusted pool contractor. In-house expertise, San Juan Pools partnership, transparency, and full-service installation.",
   openGraph: {
+    url: "/why-maxima/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Why Maxima Pools | The Maxima Advantage",
     description:
       "Buy your inground swimming pool from the people who actually do the work. In-house team, San Juan Pools partnership, and full-service installation in Columbus, OH.",

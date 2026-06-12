@@ -30,10 +30,13 @@ import {
 } from "@/components/LyonFinancingBanner";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/financing/" },
   title: "Pool Financing | Maxima Pools - Columbus, OH",
   description:
     "Affordable fiberglass pool financing through Lyon Financial. Loans up to $250K, terms up to 30 years, fast approvals. Make your dream pool a reality with Maxima Pools.",
   openGraph: {
+    url: "/financing/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Pool Financing | Maxima Pools",
     description:
       "Affordable pool financing with industry-leading rates through Lyon Financial. Loans up to $250K with terms up to 30 years.",
@@ -141,6 +144,20 @@ export default function FinancingPage() {
             name: "Pool Financing",
             description:
               "Affordable fiberglass pool financing through Lyon Financial, offered by Maxima Pools in Columbus, OH.",
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map((faq) => ({
+              "@type": "Question",
+              name: faq.q,
+              acceptedAnswer: { "@type": "Answer", text: faq.a },
+            })),
           }),
         }}
       />

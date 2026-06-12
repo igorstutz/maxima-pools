@@ -29,10 +29,13 @@ import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { AccessoryShowcase } from "./accessory-showcase";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/pool-accessories-and-extras/" },
   title: "Pool Accessories & Extras | Maxima Pools - Columbus, OH",
   description:
     "Premium pool accessories and extras: heating, LED lighting, water features, auto covers, fire bowls, and recreation. Professional in-house installation in Columbus, OH.",
   openGraph: {
+    url: "/pool-accessories-and-extras/",
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
     title: "Pool Accessories & Extras | Maxima Pools",
     description:
       "Elevate your pool with premium accessories — heating, lighting, water features, fire bowls, and more. All installed in-house by Maxima Pools.",
