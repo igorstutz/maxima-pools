@@ -6,6 +6,7 @@ import { PoolShapes } from "@/components/PoolShapes";
 import { OutdoorLiving } from "@/components/OutdoorLiving";
 import { PoolSizes } from "@/components/PoolSizes";
 import { Testimonials } from "@/components/Testimonials";
+import { SocialFeed } from "@/components/SocialFeed";
 import { CTA } from "@/components/CTA";
 import { LocationsWeServe } from "@/components/LocationsWeServe";
 import { SectionDivider } from "@/components/SectionDivider";
@@ -61,6 +62,8 @@ export default function Home() {
       <PoolSizes />
       <SectionDivider />
       <Testimonials />
+      <SectionDivider />
+      <SocialFeed />
       <SectionDivider />
       <LocationsWeServe />
       <SectionDivider />
