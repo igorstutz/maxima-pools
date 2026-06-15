@@ -140,7 +140,16 @@ $PAGEBG = '#eef3f7';
 $CHIPBG = '#e6f4fb';
 
 // --- Build HTML body --------------------------------------------------
-$h  = '<body style="margin:0;padding:0;background:' . $PAGEBG . ';">';
+// Full document wrapper + table-based layout below: this email is written in
+// English (Igor forwards it to Paul), but Igor's Gmail auto-translates it to
+// Portuguese in preview, and Google's translator reflows loose <div>s — which
+// used to re-nest the lead cards inside one another. Tables are rigid and
+// survive both translation and Outlook.
+$h  = '<!DOCTYPE html><html lang="en"><head>'
+    . '<meta charset="utf-8">'
+    . '<meta name="viewport" content="width=device-width,initial-scale=1">'
+    . '</head>';
+$h .= '<body style="margin:0;padding:0;background:' . $PAGEBG . ';">';
 $h .= '<div style="background:' . $PAGEBG . ';padding:24px 12px;'
     . 'font-family:Arial,Helvetica,sans-serif;color:' . $INK . ';">';
 $h .= '<div style="max-width:660px;margin:0 auto;background:#ffffff;border-radius:14px;'
@@ -192,8 +201,14 @@ if ($nReais === 0) {
         $email = e($d['email'] ?? '');
         $phone = e($d['phone'] ?? '');
 
-        $h .= '<div style="border:1px solid #e1e9f0;border-left:5px solid ' . $ACCENT . ';'
-            . 'border-radius:10px;padding:14px 16px;margin:0 0 14px;">';
+        // Card wrapper as a rigid 2-cell table: a thin colored bar cell (the
+        // old border-left) + the content cell. Survives Gmail translation and
+        // Outlook, where loose bordered <div>s get reflowed/re-nested.
+        $h .= '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" '
+            . 'style="width:100%;border-collapse:separate;margin:0 0 14px;'
+            . 'border:1px solid #e1e9f0;border-radius:10px;overflow:hidden;"><tr>';
+        $h .= '<td width="5" style="width:5px;background:' . $ACCENT . ';font-size:0;line-height:0;">&nbsp;</td>';
+        $h .= '<td style="padding:14px 16px;">';
 
         // Name + time
         $h .= '<table style="width:100%;border-collapse:collapse;"><tr>'
@@ -219,7 +234,7 @@ if ($nReais === 0) {
                 . 'border-radius:8px;font-size:13px;line-height:1.5;white-space:pre-wrap;color:' . $INK . ';">'
                 . e($d['message']) . '</div>';
         }
-        $h .= '</div>';
+        $h .= '</td></tr></table>';
     }
 }
 
@@ -243,7 +258,7 @@ $h .= '<div style="background:' . $BRAND . ';padding:16px 32px;color:#cfe6f4;fon
     . 'Automated weekly report from the maximapools.com website contact form. '
     . 'Times shown in US Eastern (ET).</div>';
 
-$h .= '</div></div></body>';
+$h .= '</div></div></body></html>';
 
 $subject = sprintf('Maxima Pools — Weekly Leads: %s (%d %s)',
     $periodo, $nReais, $nReais === 1 ? 'lead' : 'leads');
