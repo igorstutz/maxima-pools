@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
-import { pools, slugify, type Pool } from "@/lib/pools";
+import { visiblePools as pools, slugify, type Pool } from "@/lib/pools";
 
 /* ------------------------------------------------------------------ */
 /*  Filter options                                                     */

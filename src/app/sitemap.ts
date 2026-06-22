@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { pools, slugify } from "@/lib/pools";
+import { visiblePools as pools, slugify } from "@/lib/pools";
 import { locations, slugify as slugifyLocation } from "@/lib/locations";
 import { getAllPosts } from "@/lib/blog";
 

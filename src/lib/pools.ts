@@ -14,6 +14,13 @@ export interface Pool {
   shape: "Rectangular" | "Freeform";
   size: "Small" | "Medium" | "Large";
   type: "Pool" | "Spa" | "Tanning Ledge" | "Pool with Spa";
+  /**
+   * Temporarily out of catalog. Hidden pools stay in this array (so they can
+   * be restored later) but are excluded from the catalog grid, the sitemap,
+   * "similar pools", and static page generation — so their /pools/[slug] URL
+   * is not built and returns 404 while hidden.
+   */
+  hidden?: boolean;
 }
 
 /**
@@ -34,7 +41,7 @@ export const pools: Pool[] = [
   { name: "Atlantic Deep", image: "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep.webp", width: "15'7\"", length: "33'1\"", depth: "8'", area: "375 sq ft", volume: "11,300 gal", shape: "Freeform", size: "Large", type: "Pool" },
   { name: "Ariella", image: "https://maximapools.com/wp-content/uploads/2024/08/ariella.webp", width: "12'7\"", length: "21'1\"", depth: "4'10\"", area: "186 sq ft", volume: "4,794 gal", shape: "Freeform", size: "Small", type: "Pool" },
   { name: "Barcelona", image: "https://maximapools.com/wp-content/uploads/2025/03/barcelona-768x627.webp", width: "16'", length: "28'4\"", depth: "6'", area: "321 sq ft", volume: "7,907 gal", shape: "Freeform", size: "Medium", type: "Pool with Spa" },
-  { name: "Biloxi", image: "https://maximapools.com/wp-content/uploads/2024/08/biloxi.webp", width: "12'", length: "27'", depth: "4'3\"", area: "289 sq ft", volume: "6,400 gal", shape: "Rectangular", size: "Medium", type: "Pool" },
+  { name: "Biloxi", image: "https://maximapools.com/wp-content/uploads/2024/08/biloxi.webp", width: "12'", length: "27'", depth: "4'3\"", area: "289 sq ft", volume: "6,400 gal", shape: "Rectangular", size: "Medium", type: "Pool", hidden: true },
   { name: "Biloxi Beach", image: "https://maximapools.com/wp-content/uploads/2025/03/biloxi-beach.webp", width: "12'", length: "27'", depth: "4'3\"", area: "303 sq ft", volume: "7,510 gal", shape: "Rectangular", size: "Medium", type: "Pool" },
   { name: "Broadway", image: "https://maximapools.com/wp-content/uploads/2024/08/broadway.webp", width: "11'8\"", length: "21'8\"", depth: "4'", area: "240 sq ft", volume: "4,500 gal", shape: "Rectangular", size: "Small", type: "Pool" },
   { name: "Caesar's Palace", image: "https://maximapools.com/wp-content/uploads/2024/08/caesar-s-palace.webp", width: "16'", length: "33'9\"", depth: "5'8\"", area: "417 sq ft", volume: "11,400 gal", shape: "Rectangular", size: "Large", type: "Pool with Spa" },
@@ -56,7 +63,7 @@ export const pools: Pool[] = [
   { name: "Fort Myers", image: "https://maximapools.com/wp-content/uploads/2024/08/fort-myers.webp", width: "8'2\"", length: "16'2\"", depth: "4'1\"", area: "95 sq ft", volume: "2,650 gal", shape: "Rectangular", size: "Small", type: "Pool" },
   { name: "Fun Deck", image: "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-1.webp", width: "16'", length: "14'", depth: "1'6\"", area: "224 sq ft", volume: "1,600 gal", shape: "Rectangular", size: "Small", type: "Pool with Spa" },
   { name: "Grand Manhattan", image: "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan.webp", width: "16'", length: "35'", depth: "5'6\"", area: "526 sq ft", volume: "14,532 gal", shape: "Rectangular", size: "Large", type: "Pool" },
-  { name: "Grand Manhattan West Coast", image: "/images/pools/grand-manhattan-west-coast/cover.webp", width: "15'10\"", length: "33'10\"", depth: "5'1\"", area: "476 sq ft", volume: "12,528 gal", shape: "Rectangular", size: "Large", type: "Pool" },
+  { name: "Grand Manhattan West Coast", image: "/images/pools/grand-manhattan-west-coast/cover.webp", width: "15'10\"", length: "33'10\"", depth: "5'1\"", area: "476 sq ft", volume: "12,528 gal", shape: "Rectangular", size: "Large", type: "Pool", hidden: true },
   { name: "Great Lake Beach", image: "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach.webp", width: "16'2\"", length: "41'8\"", depth: "6'4\"", area: "585 sq ft", volume: "14,874 gal", shape: "Rectangular", size: "Large", type: "Pool" },
   { name: "Great Lakes", image: "https://maximapools.com/wp-content/uploads/2024/08/great-lakes.webp", width: "16'2\"", length: "37'", depth: "6'4\"", area: "540 sq ft", volume: "14,500 gal", shape: "Rectangular", size: "Large", type: "Pool" },
   { name: "Gulf Breeze", image: "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze.webp", width: "12'", length: "20'", depth: "3'10\"", area: "212 sq ft", volume: "5,600 gal", shape: "Rectangular", size: "Medium", type: "Pool" },
@@ -132,3 +139,11 @@ export const pools: Pool[] = [
   { name: "Round Spill Over Tanning Ledge", image: "https://maximapools.com/wp-content/uploads/2024/08/round-spill-over-tanning-ledge.webp", width: "7'7\"", length: "11'7\"", depth: "1'", area: "65 sq ft", volume: "50 gal", shape: "Freeform", size: "Small", type: "Tanning Ledge" },
   { name: "Scottsdale Spill Over Tanning Ledge", image: "https://maximapools.com/wp-content/uploads/2024/08/scottsdale-spill-over-tanning-ledge.webp", width: "8'", length: "12'", depth: "1'", area: "80 sq ft", volume: "100 gal", shape: "Rectangular", size: "Small", type: "Tanning Ledge" },
 ];
+
+/**
+ * Catalog-facing list: everything in `pools` except models flagged `hidden`.
+ * Use this for anything the public sees (catalog grid, sitemap, similar pools,
+ * static page generation). Use the full `pools` array only when you need every
+ * model regardless of visibility.
+ */
+export const visiblePools: Pool[] = pools.filter((p) => !p.hidden);
