@@ -48,10 +48,16 @@ const PRESETS: { value: Preset; label: string }[] = [
   { value: "all", label: "All time" },
 ];
 
-function startOfDay(d: Date): Date {
-  const x = new Date(d);
-  x.setHours(0, 0, 0, 0);
-  return x;
+/**
+ * Parse a "YYYY-MM-DD" value from <input type="date"> as LOCAL midnight.
+ * `new Date("2026-06-16")` would parse as UTC midnight, which lands on the
+ * previous day in negative-offset timezones — shifting the whole range back a
+ * day relative to the local-time grouping/display. Building from parts avoids that.
+ */
+function parseLocalDate(s: string): Date | null {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s);
+  if (!m) return null;
+  return new Date(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
 }
 
 function dayKey(ts: string): string {
@@ -141,10 +147,10 @@ export default function AdminDashboardPage() {
     const now = Date.now();
     if (preset === "all") return [0, now + 86400000];
     if (preset === "custom") {
-      const f = customFrom ? startOfDay(new Date(customFrom)).getTime() : 0;
-      const t = customTo
-        ? startOfDay(new Date(customTo)).getTime() + 86400000 - 1
-        : now + 86400000;
+      const fd = customFrom ? parseLocalDate(customFrom) : null;
+      const td = customTo ? parseLocalDate(customTo) : null;
+      const f = fd ? fd.getTime() : 0;
+      const t = td ? td.getTime() + 86400000 - 1 : now + 86400000;
       return [f, t];
     }
     const days = Number(preset);
