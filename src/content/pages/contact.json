@@ -1,0 +1,64 @@
+{
+  "seo": {
+    "title": "Free Estimate | Maxima Pools - Columbus, OH",
+    "description": "Get a free, no-obligation estimate for your fiberglass pool project. Fill out our form or call (614) 384-5081. Serving Columbus, OH and surrounding areas.",
+    "ogTitle": "Free Estimate | Maxima Pools",
+    "ogDescription": "Start your pool project today. Get a free estimate from the #1 fiberglass pool installer in Columbus, OH."
+  },
+  "hero": {
+    "badge": "Get Started",
+    "headingLead": "Get Your ",
+    "headingHighlight": "Free Estimate",
+    "subtitle": "Tell us about your dream pool and we'll provide a personalized quote — no obligation, no pressure.",
+    "trustPoints": [
+      "No-obligation free estimate",
+      "Response within 24 hours",
+      "Licensed & insured",
+      "Family-owned since day one"
+    ],
+    "socialProof": "Trusted by Columbus-area families",
+    "phone": {
+      "display": "(614) 384-5081",
+      "href": "tel:+16143845081",
+      "note": "Call now for immediate assistance"
+    }
+  },
+  "formCard": {
+    "title": "Request Your Estimate",
+    "subtitle": "Fill out the form and we'll get back to you within 24 hours"
+  },
+  "contactMethodsSection": {
+    "badge": "Reach Out",
+    "headingLead": "Other Ways to ",
+    "headingHighlight": "Contact Us"
+  },
+  "contactMethods": [
+    {
+      "icon": "Phone",
+      "label": "Call Us",
+      "value": "(614) 384-5081",
+      "href": "tel:+16143845081",
+      "description": "Mon–Fri 8am–5pm"
+    },
+    {
+      "icon": "Mail",
+      "label": "Email Us",
+      "value": "info@maximapools.com",
+      "href": "mailto:info@maximapools.com",
+      "description": "We reply within 24hrs"
+    },
+    {
+      "icon": "MapPin",
+      "label": "Visit Us",
+      "value": "4059 State Route 37 East, Suite A",
+      "href": "https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5",
+      "description": "Delaware, OH 43015"
+    }
+  ],
+  "whyMaxima": {
+    "badge": "Why Maxima",
+    "headingLead": "You're in ",
+    "headingHighlight": "Good Hands",
+    "body": "Maxima Pools is a family-owned pool builder serving Columbus, Ohio and surrounding areas — Franklin, Delaware, Union, Licking, and Fairfield counties."
+  }
+}

@@ -15,52 +15,23 @@ import {
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { ContactForm } from "./contact-form";
+import content from "@/content/pages/contact.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact/" },
-  title: "Free Estimate | Maxima Pools - Columbus, OH",
-  description:
-    "Get a free, no-obligation estimate for your fiberglass pool project. Fill out our form or call (614) 384-5081. Serving Columbus, OH and surrounding areas.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/contact/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Free Estimate | Maxima Pools",
-    description:
-      "Start your pool project today. Get a free estimate from the #1 fiberglass pool installer in Columbus, OH.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
 
-const trustPoints = [
-  "No-obligation free estimate",
-  "Response within 24 hours",
-  "Licensed & insured",
-  "Family-owned since day one",
-];
-
-const contactMethods = [
-  {
-    icon: Phone,
-    label: "Call Us",
-    value: "(614) 384-5081",
-    href: "tel:+16143845081",
-    description: "Mon–Fri 8am–5pm",
-  },
-  {
-    icon: Mail,
-    label: "Email Us",
-    value: "info@maximapools.com",
-    href: "mailto:info@maximapools.com",
-    description: "We reply within 24hrs",
-  },
-  {
-    icon: MapPin,
-    label: "Visit Us",
-    value: "4059 State Route 37 East, Suite A",
-    href: "https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5",
-    description: "Delaware, OH 43015",
-  },
-];
+// Lucide icons referenced by name from the editable content file.
+const contactIcons = { Phone, Mail, MapPin } as const;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -116,23 +87,22 @@ export default function FreeEstimatePage() {
               <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
                 <MessageCircle size={14} className="text-accent" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Get Started
+                  {content.hero.badge}
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-                <span className="text-white">Get Your </span>
-                <span className="shimmer-text">Free Estimate</span>
+                <span className="text-white">{content.hero.headingLead}</span>
+                <span className="shimmer-text">{content.hero.headingHighlight}</span>
               </h1>
 
               <p className="text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-lg">
-                Tell us about your dream pool and we&apos;ll provide a
-                personalized quote — no obligation, no pressure.
+                {content.hero.subtitle}
               </p>
 
               {/* Trust points */}
               <ul className="space-y-3 mb-10">
-                {trustPoints.map((point) => (
+                {content.hero.trustPoints.map((point) => (
                   <li key={point} className="flex items-center gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0" />
                     <span className="text-white font-medium text-sm">{point}</span>
@@ -165,22 +135,22 @@ export default function FreeEstimatePage() {
                     ))}
                   </div>
                   <p className="text-white text-xs">
-                    Trusted by Columbus-area families
+                    {content.hero.socialProof}
                   </p>
                 </div>
               </div>
 
               {/* Phone CTA — prominent on mobile */}
               <a
-                href="tel:+16143845081"
+                href={content.hero.phone.href}
                 className="mt-8 w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-white/[0.06] border border-white/[0.12] rounded-xl text-white font-semibold hover:bg-white/[0.10] transition-all"
               >
                 <div className="w-10 h-10 rounded-lg bg-accent/20 border border-accent/25 flex items-center justify-center">
                   <Phone size={18} className="text-accent" />
                 </div>
                 <div className="text-left">
-                  <p className="text-white font-bold">(614) 384-5081</p>
-                  <p className="text-white text-xs">Call now for immediate assistance</p>
+                  <p className="text-white font-bold">{content.hero.phone.display}</p>
+                  <p className="text-white text-xs">{content.hero.phone.note}</p>
                 </div>
               </a>
 
@@ -204,10 +174,10 @@ export default function FreeEstimatePage() {
                     </div>
                     <div>
                       <h2 className="text-lg font-bold text-gray-900">
-                        Request Your Estimate
+                        {content.formCard.title}
                       </h2>
                       <p className="text-xs text-gray-400">
-                        Fill out the form and we&apos;ll get back to you within 24 hours
+                        {content.formCard.subtitle}
                       </p>
                     </div>
                   </div>
@@ -230,42 +200,45 @@ export default function FreeEstimatePage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Reach Out
+                  {content.contactMethodsSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Other Ways to{" "}
+                {content.contactMethodsSection.headingLead}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Contact Us
+                  {content.contactMethodsSection.headingHighlight}
                 </span>
               </h2>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {contactMethods.map((method, i) => (
-              <ScrollReveal key={method.label} delay={((i + 1) as 1 | 2 | 3)}>
-                <a
-                  href={method.href}
-                  target={method.label === "Visit Us" ? "_blank" : undefined}
-                  rel={method.label === "Visit Us" ? "noopener noreferrer" : undefined}
-                  className="group block rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full"
-                >
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <method.icon size={24} className="text-accent" />
-                  </div>
-                  <p className="text-sm text-accent font-semibold uppercase tracking-wider mb-1">
-                    {method.label}
-                  </p>
-                  <p className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">
-                    {method.value}
-                  </p>
-                  <p className="text-sm text-gray-400">
-                    {method.description}
-                  </p>
-                </a>
-              </ScrollReveal>
-            ))}
+            {content.contactMethods.map((method, i) => {
+              const Icon = contactIcons[method.icon as keyof typeof contactIcons];
+              return (
+                <ScrollReveal key={method.label} delay={((i + 1) as 1 | 2 | 3)}>
+                  <a
+                    href={method.href}
+                    target={method.label === "Visit Us" ? "_blank" : undefined}
+                    rel={method.label === "Visit Us" ? "noopener noreferrer" : undefined}
+                    className="group block rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                      {Icon && <Icon size={24} className="text-accent" />}
+                    </div>
+                    <p className="text-sm text-accent font-semibold uppercase tracking-wider mb-1">
+                      {method.label}
+                    </p>
+                    <p className="text-lg font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">
+                      {method.value}
+                    </p>
+                    <p className="text-sm text-gray-400">
+                      {method.description}
+                    </p>
+                  </a>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -283,17 +256,15 @@ export default function FreeEstimatePage() {
               <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                 <Shield size={14} className="text-accent" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Why Maxima
+                  {content.whyMaxima.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                You&apos;re in{" "}
-                <span className="shimmer-text">Good Hands</span>
+                {content.whyMaxima.headingLead}
+                <span className="shimmer-text">{content.whyMaxima.headingHighlight}</span>
               </h2>
               <p className="text-white text-lg leading-relaxed mb-12 max-w-2xl mx-auto">
-                Maxima Pools is a family-owned pool builder serving Columbus, Ohio
-                and surrounding areas — Franklin, Delaware, Union, Licking, and
-                Fairfield counties.
+                {content.whyMaxima.body}
               </p>
 
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">

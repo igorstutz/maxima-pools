@@ -1,0 +1,93 @@
+backend:
+  name: github
+  repo: igorstutz/maxima-pools
+  branch: main
+  # The OAuth handshake is served by our own PHP proxy on Hostinger,
+  # so login stays on our domain (no third-party service).
+  base_url: https://maximapools.com
+  auth_endpoint: api/oauth/authorize.php
+  commit_messages:
+    create: 'content: create {{collection}} “{{slug}}” (via CMS)'
+    update: 'content: update {{collection}} “{{slug}}” (via CMS)'
+    delete: 'content: delete {{collection}} “{{slug}}” (via CMS)'
+    uploadMedia: 'content: upload “{{path}}” (via CMS)'
+    deleteMedia: 'content: delete “{{path}}” (via CMS)'
+
+site_url: https://maximapools.com
+display_url: https://maximapools.com
+
+# Uploaded images are committed into the repo and deployed with the site.
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: pages
+    label: "Pages"
+    description: "Edit the text and images of your website pages."
+    files:
+      - name: contact
+        label: "Contact / Free Estimate Page"
+        file: "src/content/pages/contact.json"
+        format: json
+        preview_path: "contact/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string, hint: "Shown in the browser tab and as the headline in Google results." }
+              - { label: "Meta Description", name: description, widget: text, hint: "The summary Google shows under the title (~155 characters)." }
+              - { label: "Social Share Title", name: ogTitle, widget: string, hint: "Title used when the page is shared on Facebook/LinkedIn." }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string, hint: "Plain white text. Keep the trailing space at the end." }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string, hint: "Shown with the colored shimmer effect." }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - label: "Trust points (checklist)"
+                name: trustPoints
+                widget: list
+                field: { label: "Point", name: point, widget: string }
+              - { label: "Social proof line", name: socialProof, widget: string }
+              - label: "Phone button"
+                name: phone
+                widget: object
+                fields:
+                  - { label: "Number (shown)", name: display, widget: string }
+                  - { label: "Dial link", name: href, widget: string, hint: "Format must be: tel:+16143845081" }
+                  - { label: "Small note under the number", name: note, widget: string }
+          - label: "Form card heading"
+            name: formCard
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: string }
+          - label: "'Other ways to contact' heading"
+            name: contactMethodsSection
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Contact method cards"
+            name: contactMethods
+            widget: list
+            summary: "{{fields.label}} — {{fields.value}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Phone", "Mail", "MapPin"] }
+              - { label: "Label", name: label, widget: string, hint: "Keep 'Visit Us' exactly if this card should open in a new tab (map)." }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Link", name: href, widget: string }
+              - { label: "Description", name: description, widget: string }
+          - label: "'Why Maxima' section"
+            name: whyMaxima
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Body paragraph", name: body, widget: text }
