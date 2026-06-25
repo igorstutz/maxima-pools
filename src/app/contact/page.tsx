@@ -92,7 +92,7 @@ export default function FreeEstimatePage() {
               </div>
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-                <span className="text-white">{content.hero.headingLead}</span>
+                <span className="text-white">{content.hero.headingLead}</span>{" "}
                 <span className="shimmer-text">{content.hero.headingHighlight}</span>
               </h1>
 
@@ -204,7 +204,7 @@ export default function FreeEstimatePage() {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                {content.contactMethodsSection.headingLead}
+                {content.contactMethodsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                   {content.contactMethodsSection.headingHighlight}
                 </span>
@@ -260,7 +260,7 @@ export default function FreeEstimatePage() {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                {content.whyMaxima.headingLead}
+                {content.whyMaxima.headingLead}{" "}
                 <span className="shimmer-text">{content.whyMaxima.headingHighlight}</span>
               </h2>
               <p className="text-white text-lg leading-relaxed mb-12 max-w-2xl mx-auto">

@@ -45,7 +45,7 @@ collections:
             widget: object
             fields:
               - { label: "Small badge", name: badge, widget: string }
-              - { label: "Heading — first part", name: headingLead, widget: string, hint: "Plain white text. Keep the trailing space at the end." }
+              - { label: "Heading — first part", name: headingLead, widget: string, hint: "Plain white text (first part of the heading). A space before the highlighted part is added automatically." }
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string, hint: "Shown with the colored shimmer effect." }
               - { label: "Subtitle paragraph", name: subtitle, widget: text }
               - label: "Trust points (checklist)"
