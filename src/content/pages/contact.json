@@ -7,8 +7,8 @@
   },
   "hero": {
     "badge": "Get Started",
-    "headingLead": "Get Your ",
-    "headingHighlight": "Free Estimate",
+    "headingLead": "Get Your",
+    "headingHighlight": "Free Estimate Now",
     "subtitle": "Tell us about your dream pool and we'll provide a personalized quote — no obligation, no pressure.",
     "trustPoints": [
       "No-obligation free estimate",
@@ -29,7 +29,7 @@
   },
   "contactMethodsSection": {
     "badge": "Reach Out",
-    "headingLead": "Other Ways to ",
+    "headingLead": "Other Ways to",
     "headingHighlight": "Contact Us"
   },
   "contactMethods": [
@@ -57,7 +57,7 @@
   ],
   "whyMaxima": {
     "badge": "Why Maxima",
-    "headingLead": "You're in ",
+    "headingLead": "You're in",
     "headingHighlight": "Good Hands",
     "body": "Maxima Pools is a family-owned pool builder serving Columbus, Ohio and surrounding areas — Franklin, Delaware, Union, Licking, and Fairfield counties."
   }
