@@ -8,141 +8,41 @@ import {
   Shield,
   Layers,
   Gem,
-  CheckCircle2,
   Sparkles,
   Clock,
   Droplets,
   HandMetal,
   Award,
-  Wrench,
   Palette,
   FlaskConical,
   Factory,
   Hammer,
+  type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { ImageLightbox } from "@/components/ImageLightbox";
 import { QualityLayers } from "./quality-layers";
+import content from "@/content/pages/fiberglass-pool-quality.json";
+
+const icons: Record<string, LucideIcon> = {
+  HandMetal, Layers, Clock, Shield, FlaskConical, Award, Sparkles, Droplets,
+  Factory, Palette,
+};
 
 export const metadata: Metadata = {
   alternates: { canonical: "/fiberglass-pool-quality/" },
-  title: "Fiberglass Pool Quality | Maxima Pools - Columbus, OH",
-  description:
-    "Learn what sets our fiberglass pool quality apart. Premium hand-laid construction, marine-grade Vinyl Ester resin, and expert craftsmanship that ensure lasting strength and durability.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/fiberglass-pool-quality/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Fiberglass Pool Quality | Maxima Pools",
-    description:
-      "Discover the premium materials and expert hand-laid construction that make San Juan the highest quality fiberglass pool in the world.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
-
-const stats = [
-  { value: "100%", label: "Hand-Laid", icon: HandMetal },
-  { value: "5+", label: "Fiberglass Layers", icon: Layers },
-  { value: "25+yr", label: "Proven Finishes", icon: Clock },
-  { value: "Structural", label: "Warranty", icon: Shield },
-];
-
-const handlaidVsChop = [
-  {
-    feature: "Construction Method",
-    sanjuan: "Hand-laid solid sheets",
-    competitor: "Chopped fiberglass sprayed from gun",
-  },
-  {
-    feature: "Layer Consistency",
-    sanjuan: "Uniform, even thickness",
-    competitor: "Inconsistent, variable thickness",
-  },
-  {
-    feature: "Structural Integrity",
-    sanjuan: "Continuous fibers — no weak points",
-    competitor: "Glued-together shards — many weak points",
-  },
-  {
-    feature: "Resin Type",
-    sanjuan: "Vinyl Ester throughout entire shell",
-    competitor: "Polyester (cheaper, less durable)",
-  },
-  {
-    feature: "Freeze-Thaw Performance",
-    sanjuan: "Flexes with ground movement",
-    competitor: "Prone to cracking and delamination",
-  },
-  {
-    feature: "Industry Standard",
-    sanjuan: "Aerospace & marine grade",
-    competitor: "Below marine specifications",
-  },
-];
-
-const materialCards = [
-  {
-    icon: Layers,
-    title: "Premium Fiberglass Layers",
-    description:
-      "At the heart of every pool is a carefully engineered shell made with hand-laid fiberglass layers. Unlike sprayed or chopped fiberglass, this process guarantees even thickness, consistent strength, and superior flexibility — the same standards used in marine and aerospace applications.",
-  },
-  {
-    icon: Sparkles,
-    title: "Advanced Gelcoat Protection",
-    description:
-      "An advanced gelcoat surface finish that provides a smooth, non-porous barrier resisting staining, algae growth, and chemical damage. This coating delivers aesthetic brilliance while preserving quality against everyday wear, UV rays, and environmental stress.",
-  },
-  {
-    icon: Shield,
-    title: "Reinforced Structural Design",
-    description:
-      "Multiple reinforcement layers using woven roving and Vinyl Ester resin — the same materials found in boat hulls. This combination prevents cracking, blistering, and delamination, even under extreme weather conditions.",
-  },
-];
-
-const benefits = [
-  {
-    icon: Clock,
-    title: "Durability & Longevity",
-    description:
-      "A high-quality fiberglass shell won't crack, chip, or degrade over time. It maintains its structure and surface integrity for decades, giving you confidence your investment will stand strong.",
-  },
-  {
-    icon: Shield,
-    title: "Resistant to Fading & Cracking",
-    description:
-      "Proprietary gelcoat finish and reinforced materials protect against common issues affecting lower-quality models. Less repair, less worry, more time enjoying your pool.",
-  },
-  {
-    icon: Droplets,
-    title: "Low Maintenance",
-    description:
-      "A smooth, non-porous surface means fewer chemicals, less cleaning, and no resurfacing. High quality translates into less effort and lower lifetime costs — water stays cleaner, longer.",
-  },
-];
-
-const compareCards = [
-  {
-    title: "How It's Made",
-    description: "See the 7-step hand-laid manufacturing process behind every San Juan pool.",
-    href: "/how-san-juan-pools-are-made",
-    icon: Factory,
-  },
-  {
-    title: "San Juan VS Competitors",
-    description: "Side-by-side comparison of construction methods, materials, and warranties.",
-    href: "/san-juan-fiberglass-pools",
-    icon: Award,
-  },
-  {
-    title: "Fiberglass Pool Colors",
-    description: "Explore the full range of gelcoat and Iridium finish color options.",
-    href: "/fiberglass-pool-colors",
-    icon: Palette,
-  },
-];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -165,12 +65,7 @@ export default function FiberglassPoolQualityPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 min-h-[520px] flex items-end">
         <HeroImageCycle
-          images={[
-            "/images/pool-quality/blue-lagoon.jpg",
-            "/images/pool-quality/wylela-beach.png",
-            "/images/pool-quality/handlaid-vs-chop.webp",
-            "/images/pool-quality/layers-spec.webp",
-          ]}
+          images={content.hero.images}
           alt="San Juan fiberglass pool quality craftsmanship"
           interval={6000}
         />
@@ -191,41 +86,39 @@ export default function FiberglassPoolQualityPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <Gem size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Built to Last a Lifetime
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Fiberglass Pool </span>
-              <span className="shimmer-text">Quality</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              What separates a standard swimming pool from one that truly lasts a
-              lifetime? It starts with design precision, the choice of materials,
-              and the craftsmanship behind every layer.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/fiberglass-pool-colors"
+                href={content.hero.primaryHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
               >
-                See Pool Colors
+                {content.hero.primaryLabel}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <Link
-                href="/contact"
+                href={content.hero.tertiaryHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
-                Get a Free Estimate
+                {content.hero.tertiaryLabel}
               </Link>
             </div>
           </div>
@@ -239,22 +132,25 @@ export default function FiberglassPoolQualityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                    <s.icon size={20} className="text-accent" />
+              {content.stats.map((s) => {
+                const Icon = icons[s.icon];
+                return (
+                  <div
+                    key={s.label}
+                    className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
+                      {Icon && <Icon size={20} className="text-accent" />}
+                    </div>
+                    <div>
+                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
+                      <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
+                        {s.label}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
-                      {s.label}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
@@ -271,41 +167,34 @@ export default function FiberglassPoolQualityPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    World-Class Quality
+                    {content.highestQuality.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  The Highest Quality Pools{" "}
+                  {content.highestQuality.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    in the World
+                    {content.highestQuality.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  All fiberglass is hand-laid using only solid sheets. We do not use
-                  chop fiberglass — a common practice that involves gluing shards of
-                  fiberglass to create layers. These are not solid layers and create
-                  weaker walls at a reduced price.
+                  {content.highestQuality.paragraph1}
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  At San Juan Pools, we do not compromise price for quality. We invest
-                  in people who construct every pool from scratch — talented tradesmen
-                  with decades of experience who know our products best.
+                  {content.highestQuality.paragraph2}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { icon: HandMetal, text: "100% Hand Made" },
-                    { icon: Layers, text: "Solid Sheets Only" },
-                    { icon: FlaskConical, text: "Vinyl Ester Resin" },
-                    { icon: Award, text: "Structural Warranty" },
-                  ].map((item) => (
-                    <span
-                      key={item.text}
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-50 border border-gray-100 rounded-full px-4 py-2"
-                    >
-                      <item.icon size={14} className="text-accent" />
-                      {item.text}
-                    </span>
-                  ))}
+                  {content.highestQuality.chips.map((item) => {
+                    const Icon = icons[item.icon];
+                    return (
+                      <span
+                        key={item.text}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-50 border border-gray-100 rounded-full px-4 py-2"
+                      >
+                        {Icon && <Icon size={14} className="text-accent" />}
+                        {item.text}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </ScrollReveal>
@@ -315,8 +204,8 @@ export default function FiberglassPoolQualityPage() {
                 <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/pool-quality/blue-lagoon.jpg"
-                    alt="San Juan fiberglass pool — highest quality construction"
+                    src={content.highestQuality.image}
+                    alt={content.highestQuality.imageAlt}
                     width={800}
                     height={600}
                     className="w-full aspect-[4/3] object-cover"
@@ -343,23 +232,21 @@ export default function FiberglassPoolQualityPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                   <Hammer size={14} className="text-accent" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    The Difference
+                    {content.comparison.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-                  Hand-Laid vs.{" "}
-                  <span className="shimmer-text">Chopped Fiberglass</span>
+                  {content.comparison.headingLead}{" "}
+                  <span className="shimmer-text">{content.comparison.headingHighlight}</span>
                 </h2>
                 <p className="text-white text-lg leading-relaxed mb-8">
-                  Not all fiberglass is created equal. The construction method defines
-                  the strength, durability, and lifespan of your pool. Here&apos;s how
-                  San Juan compares.
+                  {content.comparison.paragraph}
                 </p>
 
                 <div className="rounded-2xl overflow-hidden border border-white/10 bg-white/5">
                   <ImageLightbox
-                    src="/images/pool-quality/handlaid-vs-chop.webp"
-                    alt="Hand-laid vs chopped fiberglass comparison"
+                    src={content.comparison.image}
+                    alt={content.comparison.imageAlt}
                     width={600}
                     height={400}
                     className="w-full object-contain"
@@ -374,17 +261,17 @@ export default function FiberglassPoolQualityPage() {
                 {/* Header */}
                 <div className="grid grid-cols-3 gap-3 px-4 pb-2">
                   <span className="text-white text-xs font-semibold uppercase tracking-wider">
-                    Feature
+                    {content.comparison.headerFeature}
                   </span>
                   <span className="text-accent text-xs font-semibold uppercase tracking-wider text-center">
-                    San Juan
+                    {content.comparison.headerSanJuan}
                   </span>
                   <span className="text-white text-xs font-semibold uppercase tracking-wider text-center">
-                    Competitors
+                    {content.comparison.headerCompetitors}
                   </span>
                 </div>
 
-                {handlaidVsChop.map((row) => (
+                {content.comparison.rows.map((row) => (
                   <div
                     key={row.feature}
                     className="grid grid-cols-3 gap-3 bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 hover:bg-white/[0.07] transition-colors"
@@ -416,18 +303,17 @@ export default function FiberglassPoolQualityPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Explore Each Layer
+                  {content.layersSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Anatomy of a{" "}
+                {content.layersSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Premium Pool Shell
+                  {content.layersSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Click each layer to understand how every component contributes to
-                unmatched strength and longevity.
+                {content.layersSection.intro}
               </p>
             </div>
           </ScrollReveal>
@@ -448,38 +334,40 @@ export default function FiberglassPoolQualityPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Materials
+                  {content.materialsSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Materials That Ensure{" "}
+                {content.materialsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Lasting Quality
+                  {content.materialsSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Each component plays a vital role in maintaining exceptional quality
-                and long-term performance.
+                {content.materialsSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {materialCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
-                <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <card.icon size={24} className="text-accent" />
+            {content.materialCards.map((card, i) => {
+              const Icon = icons[card.icon];
+              return (
+                <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
+                  <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                      {Icon && <Icon size={24} className="text-accent" />}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                      {card.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {card.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {card.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -496,8 +384,8 @@ export default function FiberglassPoolQualityPage() {
                 <div className="grid grid-cols-2 gap-3 sm:gap-4 relative">
                   <div className="rounded-2xl overflow-hidden col-span-2 shadow-xl">
                     <Image
-                      src="/images/pool-quality/wylela-beach.png"
-                      alt="Premium fiberglass pool installation"
+                      src={content.benefitsSection.imageMain}
+                      alt={content.benefitsSection.imageMainAlt}
                       width={800}
                       height={500}
                       className="w-full aspect-[16/10] object-cover"
@@ -506,8 +394,8 @@ export default function FiberglassPoolQualityPage() {
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg bg-white">
                     <ImageLightbox
-                      src="/images/pool-quality/layers-spec.webp"
-                      alt="Fiberglass pool layers specification"
+                      src={content.benefitsSection.imageSpec}
+                      alt={content.benefitsSection.imageSpecAlt}
                       width={400}
                       height={500}
                       className="w-full object-contain"
@@ -516,8 +404,8 @@ export default function FiberglassPoolQualityPage() {
                   </div>
                   <div className="rounded-xl overflow-hidden shadow-lg bg-white">
                     <ImageLightbox
-                      src="/images/pool-quality/handlaid-vs-chop.webp"
-                      alt="Hand-laid fiberglass quality"
+                      src={content.benefitsSection.imageHandlaid}
+                      alt={content.benefitsSection.imageHandlaidAlt}
                       width={400}
                       height={500}
                       className="w-full object-contain"
@@ -533,39 +421,41 @@ export default function FiberglassPoolQualityPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Benefits
+                    {content.benefitsSection.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-5">
-                  Benefits of{" "}
+                  {content.benefitsSection.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Superior Quality
+                    {content.benefitsSection.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Investing in superior quality pays off in countless ways — from
-                  long-term reliability to a flawless finish that never fades.
+                  {content.benefitsSection.paragraph}
                 </p>
 
                 <div className="space-y-4">
-                  {benefits.map((b) => (
-                    <div
-                      key={b.title}
-                      className="group flex gap-4 bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md hover:border-accent/20 transition-all duration-300"
-                    >
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                        <b.icon size={18} className="text-accent" />
+                  {content.benefits.map((b) => {
+                    const Icon = icons[b.icon];
+                    return (
+                      <div
+                        key={b.title}
+                        className="group flex gap-4 bg-white border border-gray-100 rounded-xl p-5 hover:shadow-md hover:border-accent/20 transition-all duration-300"
+                      >
+                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                          {Icon && <Icon size={18} className="text-accent" />}
+                        </div>
+                        <div>
+                          <h4 className="font-bold text-gray-900 text-sm mb-1">
+                            {b.title}
+                          </h4>
+                          <p className="text-sm text-gray-500 leading-relaxed">
+                            {b.description}
+                          </p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-bold text-gray-900 text-sm mb-1">
-                          {b.title}
-                        </h4>
-                        <p className="text-sm text-gray-500 leading-relaxed">
-                          {b.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </ScrollReveal>
@@ -583,40 +473,43 @@ export default function FiberglassPoolQualityPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Learn More
+                  {content.compareSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Compare &{" "}
+                {content.compareSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Explore
+                  {content.compareSection.headingHighlight}
                 </span>
               </h2>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {compareCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
-                <Link href={card.href} className="block h-full">
-                  <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full flex flex-col">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                      <card.icon size={20} className="text-accent" />
+            {content.compareCards.map((card, i) => {
+              const Icon = icons[card.icon];
+              return (
+                <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
+                  <Link href={card.href} className="block h-full">
+                    <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full flex flex-col">
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                        {Icon && <Icon size={20} className="text-accent" />}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">
+                        {card.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-accent font-semibold text-sm">
+                        Read more
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">
-                      {card.description}
-                    </p>
-                    <div className="flex items-center gap-2 text-accent font-semibold text-sm">
-                      Read more
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -629,7 +522,7 @@ export default function FiberglassPoolQualityPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/pool-quality/wylela-beach.png"
+                src={content.finalCta.image}
                 alt=""
                 fill
                 className="object-cover"
@@ -641,34 +534,33 @@ export default function FiberglassPoolQualityPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Ready for the Highest{" "}
-                    <span className="shimmer-text">Quality Pool?</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Talk to our team today and get a personalized quote for a
-                    San Juan fiberglass pool built to outlast everything else.
+                    {content.finalCta.paragraph}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.primaryHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Schedule Your Consultation
+                      {content.finalCta.primaryLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

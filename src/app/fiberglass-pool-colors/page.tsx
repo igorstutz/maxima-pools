@@ -14,114 +14,15 @@ import {
   Palette,
   Layers,
   ChevronLeft,
+  type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import content from "@/content/pages/fiberglass-pool-colors.json";
 
-/* ────────────────────────────────────────────
-   Color Data
-   ──────────────────────────────────────────── */
+const benefitIcons: Record<string, LucideIcon> = { Sun, Sparkles, ShieldCheck, Clock };
 
-interface PoolColor {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  swatch: string;
-  hero: string;
-  gallery: string[];
-}
-
-const colors: PoolColor[] = [
-  {
-    id: "blue-lagoon",
-    name: "Blue Lagoon",
-    tagline: "Tropical & Refreshing",
-    description:
-      "Bring vacation vibes right to your backyard. Blue Lagoon captures the essence of the Caribbean \u2014 a bright, inviting hue that makes your pool water look crystal clear and vibrant.",
-    swatch: "#3b82d8",
-    hero: "https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg",
-    gallery: [
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.43.37-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.47.15-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.57.22-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-10-at-9.10.14-AM-5Blue-Lagoon-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-9.06.04-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
-    ],
-  },
-  {
-    id: "granite",
-    name: "Granite",
-    tagline: "Modern & Timeless",
-    description:
-      "Granite offers a sleek, elegant look that pairs perfectly with modern landscapes. Its deep, stone-like tone enhances the contrast of surrounding pavers and greenery.",
-    swatch: "#42434a",
-    hero: "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PM-1Granite-Pool-Images-768x576.jpeg",
-    gallery: [
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PMGranite-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-8.44.22-PM-1Granite-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-8.44.22-PM-3Granite-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-9.06.05-PM-1Granite-Pool-Images-768x576.jpeg",
-    ],
-  },
-  {
-    id: "sully-blue",
-    name: "Sully Blue",
-    tagline: "Calm & Elegant",
-    description:
-      "Soft and soothing, Sully Blue evokes a sense of calm and balance. It\u2019s ideal for homeowners who love minimalist design and subtle luxury.",
-    swatch: "#a8d3e6",
-    hero: "https://maximapools.com/wp-content/uploads/2025/01/Ariella-Sully-Blue-768x576.jpeg",
-    gallery: [
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.51.41-PMSully-Blue-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.03.27-PM-1Sully-Blue-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-23-at-7.29.17-AM-1Sully-Blue-Pool-Image-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-23-at-7.29.17-AM-2Sully-Blue-Pool-Image-768x576.jpeg",
-    ],
-  },
-  {
-    id: "white",
-    name: "White",
-    tagline: "Clean & Classic",
-    description:
-      "A timeless favorite. White gives your pool a bright, clear appearance and highlights the water\u2019s natural shimmer. Perfect for a clean, classic aesthetic.",
-    swatch: "#f5f5f5",
-    hero: "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-6White-Pool-Images-768x576.jpeg",
-    gallery: [
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-5White-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-4White-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.25-PMWhite-Pool-Images-768x576.jpeg",
-      "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.59.19-PMWhite-Pool-Images-768x576.jpeg",
-    ],
-  },
-];
-
-const benefits = [
-  {
-    icon: Sun,
-    title: "UV Protection",
-    description: "Built-in UV inhibitors prevent fading and discoloration, even under direct sunlight year after year.",
-  },
-  {
-    icon: Sparkles,
-    title: "Low Maintenance",
-    description: "Smooth gelcoat surface requires minimal upkeep \u2014 no resurfacing or repainting needed.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Corrosion Resistant",
-    description: "Engineered to withstand pool chemicals, salt systems, and harsh weather without degradation.",
-  },
-  {
-    icon: Clock,
-    title: "Decades of Beauty",
-    description: "Colors stay vibrant for 25+ years thanks to advanced gelcoat technology and premium pigments.",
-  },
-];
-
-/* ────────────────────────────────────────────
-   Page Component
-   ──────────────────────────────────────────── */
+const colors = content.colors;
 
 // All hero images from all colors for the background carousel
 const allHeroImages = colors.flatMap((c) => [c.hero, ...c.gallery.slice(0, 2)]);
@@ -175,6 +76,8 @@ export default function PoolColorsPage() {
     });
   }
 
+  const isIridium = active.id === "blue-lagoon" || active.id === "granite";
+
   return (
     <>
       {/* ── Hero ── */}
@@ -209,41 +112,40 @@ export default function PoolColorsPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <Palette size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Color Palette
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Fiberglass Pool </span>
-              <span className="shimmer-text">Colors</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Choose from four stunning gelcoat finishes. Each color is
-              UV-stabilized, corrosion-resistant, and engineered to last decades.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/contact"
+                href={content.hero.primaryHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
               >
-                Free Estimate
+                {content.hero.primaryLabel}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={content.hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
                 <Phone size={16} />
-                (614) 384-5081
+                {content.hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -260,16 +162,15 @@ export default function PoolColorsPage() {
               <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Choose Your Finish
+                  {content.selector.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                Explore Our{" "}
-                <span className="shimmer-text">Color Options</span>
+                {content.selector.headingLead}{" "}
+                <span className="shimmer-text">{content.selector.headingHighlight}</span>
               </h2>
               <p className="text-white text-lg leading-relaxed">
-                Click a color below to preview how it transforms your pool.
-                Each finish is available on every pool model in our collection.
+                {content.selector.intro}
               </p>
             </div>
           </ScrollReveal>
@@ -379,12 +280,7 @@ export default function PoolColorsPage() {
 
                   {/* Color properties */}
                   <div className="space-y-3 mb-6">
-                    {[
-                      "UV-Stabilized Finish",
-                      "Corrosion & Chemical Resistant",
-                      "25+ Year Color Retention",
-                      "Available on All Models",
-                    ].map((feature) => (
+                    {content.colorFeatures.map((feature) => (
                       <div key={feature} className="flex items-center gap-3">
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -403,12 +299,10 @@ export default function PoolColorsPage() {
                       </span>
                     </div>
                     <p className="text-white font-semibold text-sm">
-                      {active.id === "blue-lagoon" || active.id === "granite"
-                        ? "Iridium Finish"
-                        : "Standard Finish"}
+                      {isIridium ? "Iridium Finish" : "Standard Finish"}
                     </p>
                     <p className="text-white text-xs mt-0.5">
-                      {active.id === "blue-lagoon" || active.id === "granite"
+                      {isIridium
                         ? "Premium solid surface with oven-cured colored chips"
                         : "NPG/ISO-based UV-stabilized gelcoat"}
                     </p>
@@ -474,38 +368,40 @@ export default function PoolColorsPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Quality & Durability
+                  {content.benefitsSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Built to Last,{" "}
+                {content.benefitsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Built to Shine
+                  {content.benefitsSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed">
-                Every gelcoat finish is precision-engineered to deliver
-                beauty and performance that stands the test of time.
+                {content.benefitsSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={(Math.min(i + 1, 3)) as 1 | 2 | 3}>
-                <div className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-6 sm:p-7 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <b.icon size={22} className="text-accent" />
+            {content.benefits.map((b, i) => {
+              const Icon = benefitIcons[b.icon];
+              return (
+                <ScrollReveal key={b.title} delay={(Math.min(i + 1, 3)) as 1 | 2 | 3}>
+                  <div className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-6 sm:p-7 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                      {Icon && <Icon size={22} className="text-accent" />}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                      {b.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {b.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                    {b.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {b.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -523,17 +419,15 @@ export default function PoolColorsPage() {
               <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                 <Layers size={14} className="text-accent" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Finish Technology
+                  {content.finishSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                Two Premium{" "}
-                <span className="shimmer-text">Finish Types</span>
+                {content.finishSection.headingLead}{" "}
+                <span className="shimmer-text">{content.finishSection.headingHighlight}</span>
               </h2>
               <p className="text-white text-lg leading-relaxed">
-                Depending on the color you choose, your pool will feature one of
-                two advanced finish systems, each engineered for exceptional
-                longevity.
+                {content.finishSection.intro}
               </p>
             </div>
           </ScrollReveal>
@@ -548,42 +442,32 @@ export default function PoolColorsPage() {
                 <div className="relative">
                   {/* Color swatches */}
                   <div className="flex items-center gap-2 mb-6">
-                    <span
-                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#f5f5f5" }}
-                      title="White"
-                    />
-                    <span
-                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#a8d3e6" }}
-                      title="Sully Blue"
-                    />
+                    {content.finishStandard.swatches.map((sw) => (
+                      <span
+                        key={sw.title}
+                        className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                        style={{ backgroundColor: sw.color }}
+                        title={sw.title}
+                      />
+                    ))}
                     <span className="text-white text-xs font-medium ml-2">
-                      White &amp; Sully Blue
+                      {content.finishStandard.swatchLabel}
                     </span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Standard Finish
+                    {content.finishStandard.title}
                   </h3>
                   <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-5">
-                    NPG/ISO-Based Gelcoat
+                    {content.finishStandard.subtitle}
                   </p>
 
                   <p className="text-white leading-relaxed mb-6">
-                    Our standard finish uses a high-quality NPG/ISO-based gelcoat
-                    that is UV-stabilized and corrosion-resistant from day one.
-                    This proven formulation has protected fiberglass pools for
-                    decades.
+                    {content.finishStandard.paragraph}
                   </p>
 
                   <div className="space-y-3">
-                    {[
-                      "UV-stabilized pigments",
-                      "Chemical & corrosion resistant",
-                      "Smooth, easy-to-clean surface",
-                      "Pools with this finish are well over 25 years old",
-                    ].map((item) => (
+                    {content.finishStandard.items.map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -602,7 +486,7 @@ export default function PoolColorsPage() {
                 {/* Premium badge */}
                 <div className="absolute -top-3 right-6 inline-flex items-center gap-1.5 bg-gradient-to-r from-accent to-accent-light text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-lg shadow-accent/20">
                   <Sparkles size={12} />
-                  Premium
+                  {content.finishIridium.premiumLabel}
                 </div>
 
                 {/* Decorative corner accent */}
@@ -611,43 +495,32 @@ export default function PoolColorsPage() {
                 <div className="relative">
                   {/* Color swatches */}
                   <div className="flex items-center gap-2 mb-6">
-                    <span
-                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#3b82d8" }}
-                      title="Blue Lagoon"
-                    />
-                    <span
-                      className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
-                      style={{ backgroundColor: "#42434a" }}
-                      title="Granite"
-                    />
+                    {content.finishIridium.swatches.map((sw) => (
+                      <span
+                        key={sw.title}
+                        className="granite-swatch w-8 h-8 rounded-lg border border-white/15 shadow-md"
+                        style={{ backgroundColor: sw.color }}
+                        title={sw.title}
+                      />
+                    ))}
                     <span className="text-white text-xs font-medium ml-2">
-                      Blue Lagoon &amp; Granite
+                      {content.finishIridium.swatchLabel}
                     </span>
                   </div>
 
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Iridium Finish
+                    {content.finishIridium.title}
                   </h3>
                   <p className="text-accent text-sm font-semibold uppercase tracking-wider mb-5">
-                    Solid Surface Material
+                    {content.finishIridium.subtitle}
                   </p>
 
                   <p className="text-white leading-relaxed mb-6">
-                    The Iridium finish is a premium solid surface material
-                    featuring oven-cured colored chips suspended in a UV and
-                    chemical-resistant resin. This advanced system is backed by a
-                    color-matched gelcoat barrier coat for unmatched depth and
-                    durability.
+                    {content.finishIridium.paragraph}
                   </p>
 
                   <div className="space-y-3">
-                    {[
-                      "Oven-cured colored chips in resin",
-                      "UV & chemical-resistant formulation",
-                      "Color-matched gelcoat barrier coat",
-                      "Premium depth and visual richness",
-                    ].map((item) => (
+                    {content.finishIridium.items.map((item) => (
                       <div key={item} className="flex items-start gap-3">
                         <div className="w-5 h-5 rounded-full bg-accent/15 border border-accent/25 flex items-center justify-center shrink-0 mt-0.5">
                           <div className="w-1.5 h-1.5 rounded-full bg-accent" />
@@ -671,7 +544,7 @@ export default function PoolColorsPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg"
+                src={content.finalCta.image}
                 alt="Premium fiberglass pool"
                 fill
                 className="object-cover"
@@ -683,35 +556,33 @@ export default function PoolColorsPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Find Your Perfect{" "}
-                    <span className="shimmer-text">Color</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Not sure which gelcoat finish is right for your backyard?
-                    Our team will help you choose the perfect color to match
-                    your landscape and style.
+                    {content.finalCta.paragraph}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.primaryHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Get a Free Estimate
+                      {content.finalCta.primaryLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

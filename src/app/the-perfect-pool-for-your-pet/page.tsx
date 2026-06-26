@@ -20,148 +20,30 @@ import {
   Factory,
   ThermometerSun,
   HandMetal,
+  type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
+import content from "@/content/pages/the-perfect-pool-for-your-pet.json";
+
+const icons: Record<string, LucideIcon> = {
+  Shield, Clock, Layers, PawPrint, HandMetal, Droplets, Sun, ThermometerSun,
+  Wrench, Award, Gem, Factory,
+};
 
 export const metadata: Metadata = {
   alternates: { canonical: "/the-perfect-pool-for-your-pet/" },
-  title: "The Perfect Pool for Your Pet | Maxima Pools - Columbus, OH",
-  description:
-    "San Juan fiberglass pools are a dog's best friend. Smooth surface, scratch-resistant, low chemical maintenance, and built-in shallow areas for safe pet swimming.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/the-perfect-pool-for-your-pet/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "The Perfect Pool for Your Pet | Maxima Pools",
-    description:
-      "Fiberglass pools designed with pets in mind — smooth, durable, low-maintenance, and safe for dogs and families alike.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
-
-const stats = [
-  { value: "0", label: "Scratches from Nails", icon: Shield },
-  { value: "<1hr", label: "Weekly Maintenance", icon: Clock },
-  { value: "17x", label: "Stronger Than Concrete", icon: Layers },
-  { value: "100%", label: "Pet Friendly", icon: PawPrint },
-];
-
-const petBenefits = [
-  {
-    icon: HandMetal,
-    title: "Smooth, Gentle Surface",
-    description:
-      "The non-abrasive gel coat finish is gentle on pet paws and won't cause scratches or irritation — unlike the rough, sandpaper-like texture of concrete pools.",
-  },
-  {
-    icon: Shield,
-    title: "Scratch & Claw Resistant",
-    description:
-      "Fiberglass is incredibly resistant to nail damage. Unlike vinyl liners that rip and tear from claws, the gel coat surface stays intact swim after swim.",
-  },
-  {
-    icon: Droplets,
-    title: "Fewer Chemicals, Safer Water",
-    description:
-      "The smooth, non-porous surface requires significantly fewer chemicals to stay clean — meaning safer water for pets who love to drink from the pool.",
-  },
-  {
-    icon: Sun,
-    title: "Built-In Shallow Areas",
-    description:
-      "Tanning ledges and sun shelves provide safe, shallow areas where pets can wade, cool off, and relax without being in deep water.",
-  },
-  {
-    icon: ThermometerSun,
-    title: "Cool Off in Ohio Summers",
-    description:
-      "A fiberglass pool creates the perfect backyard retreat for hot Ohio weather — your pets can cool down naturally while the family enjoys the pool together.",
-  },
-  {
-    icon: Wrench,
-    title: "Virtually Maintenance-Free",
-    description:
-      "No acid washes, no replastering, no liner replacements. The durable fiberglass shell is designed to last decades with minimal upkeep — even with active pets.",
-  },
-];
-
-const whyFiberglass = [
-  "Smooth gel coat won't hurt paws or skin",
-  "Resistant to scratches from dog nails",
-  "Non-porous surface prevents algae buildup",
-  "Fewer chemicals = safer for pets and kids",
-  "Tanning ledges provide safe shallow wading",
-  "17x stronger than concrete — built to last",
-  "No vinyl liner to rip, tear, or replace",
-  "Less than 1 hour of maintenance per week",
-];
-
-const vsOthers = [
-  {
-    type: "Fiberglass",
-    icon: PawPrint,
-    color: "accent",
-    borderColor: "border-accent/20",
-    bgColor: "bg-accent/[0.04]",
-    items: [
-      "Smooth, paw-friendly surface",
-      "Scratch-resistant gel coat",
-      "Minimal chemicals needed",
-      "Built-in tanning ledges",
-      "No liner to damage",
-    ],
-  },
-  {
-    type: "Concrete / Gunite",
-    icon: Shield,
-    color: "gray-400",
-    borderColor: "border-gray-200",
-    bgColor: "bg-gray-50",
-    items: [
-      "Rough surface — like 80-grit sandpaper",
-      "Can scrape paw pads raw",
-      "Requires heavy chemical treatment",
-      "No built-in shallow areas",
-      "Needs replastering every 10–15 years",
-    ],
-  },
-  {
-    type: "Vinyl Liner",
-    icon: Droplets,
-    color: "gray-400",
-    borderColor: "border-gray-200",
-    bgColor: "bg-gray-50",
-    items: [
-      "Punctures easily from claws",
-      "Slippery with rough seams",
-      "Liner replacements every 5–9 years",
-      "Algae grows in seams",
-      "Not recommended for pet owners",
-    ],
-  },
-];
-
-const compareCards = [
-  {
-    title: "San Juan VS Competitors",
-    description: "See the full hand-laid vs chopped fiberglass comparison.",
-    href: "/san-juan-fiberglass-pools",
-    icon: Award,
-  },
-  {
-    title: "Fiberglass Pool Quality",
-    description: "The materials and engineering behind premium pool shells.",
-    href: "/fiberglass-pool-quality",
-    icon: Gem,
-  },
-  {
-    title: "How It's Made",
-    description: "The 7-step manufacturing process behind every San Juan pool.",
-    href: "/how-san-juan-pools-are-made",
-    icon: Factory,
-  },
-];
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -184,11 +66,7 @@ export default function PetPoolPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 min-h-[520px] flex items-end">
         <HeroImageCycle
-          images={[
-            "/images/pet-pool/dog-pool.jpg",
-            "/images/why-fiberglass/canyon-beach.webp",
-            "/images/pool-quality/wylela-beach.png",
-          ]}
+          images={content.hero.images}
           alt="Dog enjoying a San Juan fiberglass pool"
           interval={6000}
         />
@@ -209,42 +87,40 @@ export default function PetPoolPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <PawPrint size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Pet Friendly
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">The Perfect Pool for </span>
-              <span className="shimmer-text">Your Pet</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              San Juan fiberglass pools are a dog&apos;s best friend. Smooth on paws,
-              resistant to scratches, and built with safe shallow areas for
-              pets to wade, play, and cool off.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/contact"
+                href={content.hero.primaryHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
               >
-                Get a Free Estimate
+                {content.hero.primaryLabel}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={content.hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
                 <Phone size={16} />
-                (614) 384-5081
+                {content.hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -258,22 +134,25 @@ export default function PetPoolPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                    <s.icon size={20} className="text-accent" />
+              {content.stats.map((s) => {
+                const Icon = icons[s.icon];
+                return (
+                  <div
+                    key={s.label}
+                    className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
+                      {Icon && <Icon size={20} className="text-accent" />}
+                    </div>
+                    <div>
+                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
+                      <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
+                        {s.label}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
-                      {s.label}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
@@ -290,29 +169,24 @@ export default function PetPoolPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    A Dog&apos;s Best Friend
+                    {content.whyPetsLove.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Why Pets Love{" "}
+                  {content.whyPetsLove.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Fiberglass Pools
+                    {content.whyPetsLove.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  Fiberglass is the safest, most durable, and lowest-maintenance
-                  pool type for households with pets. The smooth gel coat surface
-                  protects paws, resists nail damage, and requires far fewer
-                  chemicals — creating a healthier environment for the whole family.
+                  {content.whyPetsLove.paragraph1}
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Built-in tanning ledges and shallow areas give your dog a safe
-                  place to wade, cool off, and enjoy the water without being in
-                  over their head.
+                  {content.whyPetsLove.paragraph2}
                 </p>
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {whyFiberglass.map((item) => (
+                  {content.whyPetsLove.checklist.map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
                       <span className="text-sm text-gray-700 font-medium">{item}</span>
@@ -327,8 +201,8 @@ export default function PetPoolPage() {
                 <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/pet-pool/dog-pool.jpg"
-                    alt="Happy dog enjoying a San Juan fiberglass pool"
+                    src={content.whyPetsLove.image}
+                    alt={content.whyPetsLove.imageAlt}
                     width={800}
                     height={533}
                     className="w-full aspect-[3/2] object-cover"
@@ -351,38 +225,40 @@ export default function PetPoolPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Key Benefits
+                  {content.benefitsSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Designed With{" "}
+                {content.benefitsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Pets in Mind
+                  {content.benefitsSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Every feature of a San Juan fiberglass pool benefits pet owners —
-                from the surface texture to the structural design.
+                {content.benefitsSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {petBenefits.map((item, i) => (
-              <ScrollReveal key={item.title} delay={((i % 3 === 0 ? 1 : i % 3 === 1 ? 2 : 3) as 1 | 2 | 3)}>
-                <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white to-gray-50/50 border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                    <item.icon size={24} className="text-accent" />
+            {content.petBenefits.map((item, i) => {
+              const Icon = icons[item.icon];
+              return (
+                <ScrollReveal key={item.title} delay={((i % 3 === 0 ? 1 : i % 3 === 1 ? 2 : 3) as 1 | 2 | 3)}>
+                  <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white to-gray-50/50 border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                      {Icon && <Icon size={24} className="text-accent" />}
+                    </div>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">
+                      {item.description}
+                    </p>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -400,23 +276,23 @@ export default function PetPoolPage() {
               <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                 <PawPrint size={14} className="text-accent" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Pet Safety Comparison
+                  {content.comparison.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                Which Pool is Safest for{" "}
-                <span className="shimmer-text">Your Pet?</span>
+                {content.comparison.headingLead}{" "}
+                <span className="shimmer-text">{content.comparison.headingHighlight}</span>
               </h2>
               <p className="text-white text-lg leading-relaxed">
-                Not all pool types are created equal when it comes to pet safety.
-                Here&apos;s how they compare.
+                {content.comparison.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {vsOthers.map((pool, i) => {
+            {content.comparison.pools.map((pool, i) => {
               const isFirst = i === 0;
+              const Icon = icons[pool.icon];
               return (
                 <ScrollReveal key={pool.type} delay={((i + 1) as 1 | 2 | 3)}>
                   <div
@@ -428,7 +304,7 @@ export default function PetPoolPage() {
                   >
                     {isFirst && (
                       <div className="absolute -top-3 left-6 bg-gradient-to-r from-accent to-accent-light text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-lg shadow-accent/25">
-                        Best for Pets
+                        {content.comparison.bestForPetsLabel}
                       </div>
                     )}
 
@@ -440,16 +316,14 @@ export default function PetPoolPage() {
                             : "bg-white/[0.06] border border-white/[0.08]"
                         }`}
                       >
-                        <pool.icon
-                          size={20}
-                          className={isFirst ? "text-accent" : "text-white"}
-                        />
+                        {Icon && (
+                          <Icon
+                            size={20}
+                            className={isFirst ? "text-accent" : "text-white"}
+                          />
+                        )}
                       </div>
-                      <h3
-                        className={`text-lg font-bold ${
-                          isFirst ? "text-white" : "text-white"
-                        }`}
-                      >
+                      <h3 className="text-lg font-bold text-white">
                         {pool.type}
                       </h3>
                     </div>
@@ -462,11 +336,7 @@ export default function PetPoolPage() {
                           ) : (
                             <Heart size={15} className="text-white shrink-0 mt-0.5" />
                           )}
-                          <span
-                            className={`text-sm leading-relaxed ${
-                              isFirst ? "text-white" : "text-white"
-                            }`}
-                          >
+                          <span className="text-sm leading-relaxed text-white">
                             {item}
                           </span>
                         </li>
@@ -494,24 +364,21 @@ export default function PetPoolPage() {
                     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 rounded-full px-5 py-2 mb-6">
                       <Sun size={14} className="text-accent-light" />
                       <span className="text-accent-light font-semibold text-sm uppercase tracking-wider">
-                        Perfect for Pets
+                        {content.tanningLedge.badge}
                       </span>
                     </div>
                     <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-                      Built-In{" "}
-                      <span className="shimmer-text">Tanning Ledges</span>
+                      {content.tanningLedge.headingLead}{" "}
+                      <span className="shimmer-text">{content.tanningLedge.headingHighlight}</span>
                     </h2>
                     <p className="text-white text-lg leading-relaxed mb-8">
-                      Many San Juan pool models include integrated tanning ledges
-                      and sun shelves — shallow areas just 6–12 inches deep where
-                      pets can safely wade, cool off, and enjoy the water at their
-                      own pace. It&apos;s the ultimate pet-friendly feature.
+                      {content.tanningLedge.paragraph}
                     </p>
                     <Link
-                      href="/pools"
+                      href={content.tanningLedge.ctaHref}
                       className="group inline-flex items-center gap-2 text-accent-light font-semibold hover:text-white transition-colors"
                     >
-                      Explore tanning ledges
+                      {content.tanningLedge.ctaLabel}
                       <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </div>
@@ -519,8 +386,8 @@ export default function PetPoolPage() {
                   <div className="relative hidden lg:block">
                     <div className="rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
                       <Image
-                        src="/images/pet-pool/dog-pool.jpg"
-                        alt="Dog on tanning ledge in fiberglass pool"
+                        src={content.tanningLedge.image}
+                        alt={content.tanningLedge.imageAlt}
                         width={600}
                         height={400}
                         className="w-full aspect-[3/2] object-cover"
@@ -545,40 +412,43 @@ export default function PetPoolPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Explore More
+                  {content.diveDeeper.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Dive{" "}
+                {content.diveDeeper.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Deeper
+                  {content.diveDeeper.headingHighlight}
                 </span>
               </h2>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {compareCards.map((card, i) => (
-              <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
-                <Link href={card.href} className="block h-full">
-                  <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white to-gray-50/50 border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full flex flex-col">
-                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                      <card.icon size={20} className="text-accent" />
+            {content.diveDeeper.cards.map((card, i) => {
+              const Icon = icons[card.icon];
+              return (
+                <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
+                  <Link href={card.href} className="block h-full">
+                    <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-white to-gray-50/50 border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full flex flex-col">
+                      <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
+                        {Icon && <Icon size={20} className="text-accent" />}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                        {card.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">
+                        {card.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-accent font-semibold text-sm">
+                        Read more
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">
-                      {card.description}
-                    </p>
-                    <div className="flex items-center gap-2 text-accent font-semibold text-sm">
-                      Read more
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -591,7 +461,7 @@ export default function PetPoolPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/pet-pool/dog-pool.jpg"
+                src={content.finalCta.image}
                 alt=""
                 fill
                 className="object-cover"
@@ -603,34 +473,33 @@ export default function PetPoolPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Ready for a Pet-Friendly{" "}
-                    <span className="shimmer-text">Pool?</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Give your family — four-legged members included — a pool
-                    designed for everyone to enjoy safely.
+                    {content.finalCta.paragraph}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.primaryHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Schedule Your Consultation
+                      {content.finalCta.primaryLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

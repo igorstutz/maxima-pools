@@ -1,0 +1,154 @@
+{
+  "seo": {
+    "title": "Fiberglass Pool Colors — Gelcoat & Iridium Finishes",
+    "description": "Explore the full range of San Juan fiberglass pool colors. Classic gelcoat finishes and premium Iridium options — UV stabilized, chemical resistant, and stunning.",
+    "ogTitle": "Fiberglass Pool Colors | Maxima Pools",
+    "ogDescription": "Browse all fiberglass pool color finishes. Gelcoat and Iridium options from San Juan Pools."
+  },
+  "hero": {
+    "badge": "Color Palette",
+    "headingLead": "Fiberglass Pool",
+    "headingHighlight": "Colors",
+    "subtitle": "Choose from four stunning gelcoat finishes. Each color is UV-stabilized, corrosion-resistant, and engineered to last decades.",
+    "primaryLabel": "Free Estimate",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "selector": {
+    "badge": "Choose Your Finish",
+    "headingLead": "Explore Our",
+    "headingHighlight": "Color Options",
+    "intro": "Click a color below to preview how it transforms your pool. Each finish is available on every pool model in our collection."
+  },
+  "colors": [
+    {
+      "id": "blue-lagoon",
+      "name": "Blue Lagoon",
+      "tagline": "Tropical & Refreshing",
+      "description": "Bring vacation vibes right to your backyard. Blue Lagoon captures the essence of the Caribbean — a bright, inviting hue that makes your pool water look crystal clear and vibrant.",
+      "swatch": "#3b82d8",
+      "hero": "https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg",
+      "gallery": [
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.43.37-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.47.15-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.57.22-PMBlue-Lagoon-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-10-at-9.10.14-AM-5Blue-Lagoon-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-9.06.04-PMBlue-Lagoon-Pool-Images-768x576.jpeg"
+      ]
+    },
+    {
+      "id": "granite",
+      "name": "Granite",
+      "tagline": "Modern & Timeless",
+      "description": "Granite offers a sleek, elegant look that pairs perfectly with modern landscapes. Its deep, stone-like tone enhances the contrast of surrounding pavers and greenery.",
+      "swatch": "#42434a",
+      "hero": "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PM-1Granite-Pool-Images-768x576.jpeg",
+      "gallery": [
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.01.56-PMGranite-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-8.44.22-PM-1Granite-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-8.44.22-PM-3Granite-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-9.06.05-PM-1Granite-Pool-Images-768x576.jpeg"
+      ]
+    },
+    {
+      "id": "sully-blue",
+      "name": "Sully Blue",
+      "tagline": "Calm & Elegant",
+      "description": "Soft and soothing, Sully Blue evokes a sense of calm and balance. It's ideal for homeowners who love minimalist design and subtle luxury.",
+      "swatch": "#a8d3e6",
+      "hero": "https://maximapools.com/wp-content/uploads/2025/01/Ariella-Sully-Blue-768x576.jpeg",
+      "gallery": [
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.51.41-PMSully-Blue-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.03.27-PM-1Sully-Blue-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-23-at-7.29.17-AM-1Sully-Blue-Pool-Image-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-23-at-7.29.17-AM-2Sully-Blue-Pool-Image-768x576.jpeg"
+      ]
+    },
+    {
+      "id": "white",
+      "name": "White",
+      "tagline": "Clean & Classic",
+      "description": "A timeless favorite. White gives your pool a bright, clear appearance and highlights the water's natural shimmer. Perfect for a clean, classic aesthetic.",
+      "swatch": "#f5f5f5",
+      "hero": "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-6White-Pool-Images-768x576.jpeg",
+      "gallery": [
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-5White-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.26-PM-4White-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-3.15.25-PMWhite-Pool-Images-768x576.jpeg",
+        "https://maximapools.com/wp-content/uploads/2025/01/WhatsApp-Image-2021-02-09-at-2.59.19-PMWhite-Pool-Images-768x576.jpeg"
+      ]
+    }
+  ],
+  "colorFeatures": [
+    "UV-Stabilized Finish",
+    "Corrosion & Chemical Resistant",
+    "25+ Year Color Retention",
+    "Available on All Models"
+  ],
+  "benefitsSection": {
+    "badge": "Quality & Durability",
+    "headingLead": "Built to Last,",
+    "headingHighlight": "Built to Shine",
+    "intro": "Every gelcoat finish is precision-engineered to deliver beauty and performance that stands the test of time."
+  },
+  "benefits": [
+    { "icon": "Sun", "title": "UV Protection", "description": "Built-in UV inhibitors prevent fading and discoloration, even under direct sunlight year after year." },
+    { "icon": "Sparkles", "title": "Low Maintenance", "description": "Smooth gelcoat surface requires minimal upkeep — no resurfacing or repainting needed." },
+    { "icon": "ShieldCheck", "title": "Corrosion Resistant", "description": "Engineered to withstand pool chemicals, salt systems, and harsh weather without degradation." },
+    { "icon": "Clock", "title": "Decades of Beauty", "description": "Colors stay vibrant for 25+ years thanks to advanced gelcoat technology and premium pigments." }
+  ],
+  "finishSection": {
+    "badge": "Finish Technology",
+    "headingLead": "Two Premium",
+    "headingHighlight": "Finish Types",
+    "intro": "Depending on the color you choose, your pool will feature one of two advanced finish systems, each engineered for exceptional longevity."
+  },
+  "finishStandard": {
+    "swatches": [
+      { "color": "#f5f5f5", "title": "White" },
+      { "color": "#a8d3e6", "title": "Sully Blue" }
+    ],
+    "swatchLabel": "White & Sully Blue",
+    "title": "Standard Finish",
+    "subtitle": "NPG/ISO-Based Gelcoat",
+    "paragraph": "Our standard finish uses a high-quality NPG/ISO-based gelcoat that is UV-stabilized and corrosion-resistant from day one. This proven formulation has protected fiberglass pools for decades.",
+    "items": [
+      "UV-stabilized pigments",
+      "Chemical & corrosion resistant",
+      "Smooth, easy-to-clean surface",
+      "Pools with this finish are well over 25 years old"
+    ]
+  },
+  "finishIridium": {
+    "premiumLabel": "Premium",
+    "swatches": [
+      { "color": "#3b82d8", "title": "Blue Lagoon" },
+      { "color": "#42434a", "title": "Granite" }
+    ],
+    "swatchLabel": "Blue Lagoon & Granite",
+    "title": "Iridium Finish",
+    "subtitle": "Solid Surface Material",
+    "paragraph": "The Iridium finish is a premium solid surface material featuring oven-cured colored chips suspended in a UV and chemical-resistant resin. This advanced system is backed by a color-matched gelcoat barrier coat for unmatched depth and durability.",
+    "items": [
+      "Oven-cured colored chips in resin",
+      "UV & chemical-resistant formulation",
+      "Color-matched gelcoat barrier coat",
+      "Premium depth and visual richness"
+    ]
+  },
+  "finalCta": {
+    "image": "https://maximapools.com/wp-content/uploads/2025/01/Venetian-4.jpg",
+    "headingLead": "Find Your Perfect",
+    "headingHighlight": "Color",
+    "paragraph": "Not sure which gelcoat finish is right for your backyard? Our team will help you choose the perfect color to match your landscape and style.",
+    "primaryLabel": "Get a Free Estimate",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

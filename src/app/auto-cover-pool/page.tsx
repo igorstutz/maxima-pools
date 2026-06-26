@@ -10,126 +10,34 @@ import {
   Zap,
   Eye,
   Wrench,
-  Settings,
-  Monitor,
   ChevronRight,
-  CheckCircle2,
-  Timer,
-  Droplets,
   Baby,
   Sparkles,
+  Timer,
+  Droplets,
+  type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { SectionDivider } from "@/components/SectionDivider";
+import content from "@/content/pages/auto-cover-pool.json";
+
+const icons: Record<string, LucideIcon> = {
+  Shield, Thermometer, Leaf, Zap, Eye, Wrench, Baby, Timer, Droplets,
+};
 
 export const metadata: Metadata = {
   alternates: { canonical: "/auto-cover-pool/" },
-  title: "Automatic Pool Cover | Maxima Pools - Columbus, OH",
-  description:
-    "Protect your pool with a premium automatic cover system. Safety, heat retention, reduced maintenance, and elegant design. Get a free quote from Maxima Pools.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/auto-cover-pool/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Automatic Pool Cover | Maxima Pools",
-    description:
-      "Safety and convenience in one system. Motorized pool covers that protect, retain heat, and look elegant.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
-
-const stats = [
-  { value: "<60s", label: "To Open or Close", icon: Timer },
-  { value: "70%", label: "Less Evaporation", icon: Droplets },
-  { value: "50%", label: "Less Chemical Use", icon: Leaf },
-  { value: "ASTM", label: "Safety Certified", icon: Shield },
-];
-
-const benefits = [
-  {
-    icon: Shield,
-    title: "Safety First",
-    description:
-      "A sealed cover supports weight and prevents unsupervised access, giving you peace of mind for children and pets.",
-  },
-  {
-    icon: Thermometer,
-    title: "Heat Retention",
-    description:
-      "Traps warmth overnight and extends your swim season by weeks — reducing heating costs significantly.",
-  },
-  {
-    icon: Leaf,
-    title: "Less Maintenance",
-    description:
-      "Keeps leaves, debris, and insects out of your pool, cutting cleaning time and chemical use in half.",
-  },
-  {
-    icon: Zap,
-    title: "One-Touch Operation",
-    description:
-      "Open or close your pool in under a minute with the press of a button. Effortless daily use.",
-  },
-  {
-    icon: Eye,
-    title: "Elegant Design",
-    description:
-      "Integrates discreetly into the pool structure, preserving the clean aesthetics of your backyard.",
-  },
-  {
-    icon: Wrench,
-    title: "Built to Last",
-    description:
-      "Heavy-duty materials and engineering designed for years of reliable, maintenance-free performance.",
-  },
-];
-
-const howItWorks = [
-  {
-    step: "01",
-    title: "Press the Button",
-    description: "A single keyswitch or remote activates the motorized system.",
-  },
-  {
-    step: "02",
-    title: "Cover Glides Smoothly",
-    description:
-      "The fabric rolls across the water surface on concealed under-track rails.",
-  },
-  {
-    step: "03",
-    title: "Pool is Sealed",
-    description:
-      "Your pool is protected, insulated, and safe — in under 60 seconds.",
-  },
-];
-
-const specifications = [
-  {
-    icon: Wrench,
-    title: "Easy-Out Pulley Assembly",
-    description:
-      "Quick-access pulleys can be serviced in minutes, reducing downtime and ensuring long-term reliability.",
-  },
-  {
-    icon: Settings,
-    title: "Universal Compatibility",
-    description:
-      "Adapts to rectangular, freeform, and custom pool layouts with seamless integration into any construction style.",
-  },
-  {
-    icon: Monitor,
-    title: "SmartMotion Diagnostics",
-    description:
-      "Real-time monitoring of cover movement, tension, and motor performance with instant alerts.",
-  },
-  {
-    icon: Zap,
-    title: "Electric Drive Mechanism",
-    description:
-      "High-efficiency motor delivers smooth, quiet, consistent operation for years of dependable use.",
-  },
-];
 
 export default function AutoCoverPage() {
   return (
@@ -159,12 +67,7 @@ export default function AutoCoverPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <HeroImageCycle
-          images={[
-            "/images/auto-cover/undertrack-3.jpg",
-            "/images/auto-cover/hero.jpg",
-            "/images/auto-cover/undertrack-1.jpg",
-            "/images/auto-cover/undertrack-2.jpg",
-          ]}
+          images={content.hero.images}
           alt="Automatic pool cover system"
           interval={6000}
         />
@@ -185,41 +88,40 @@ export default function AutoCoverPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <Shield size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Safety & Convenience
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Automatic Pool </span>
-              <span className="shimmer-text">Cover</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Protect your pool, enhance your backyard, and enjoy effortless
-              operation with a motorized cover built for durability and elegance.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/contact"
+                href={content.hero.primaryHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
               >
-                Get a Free Quote
+                {content.hero.primaryLabel}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={content.hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
                 <Phone size={16} />
-                (614) 384-5081
+                {content.hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -233,22 +135,25 @@ export default function AutoCoverPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                    <s.icon size={20} className="text-accent" />
+              {content.stats.map((s) => {
+                const Icon = icons[s.icon];
+                return (
+                  <div
+                    key={s.label}
+                    className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
+                      {Icon && <Icon size={20} className="text-accent" />}
+                    </div>
+                    <div>
+                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
+                      <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
+                        {s.label}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
-                      {s.label}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
@@ -265,41 +170,34 @@ export default function AutoCoverPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Overview
+                    {content.overview.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  What Is an Automatic{" "}
+                  {content.overview.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Pool Cover?
+                    {content.overview.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  An automatic pool cover is a motorized system that closes and
-                  seals your pool with the touch of a button. It provides safety,
-                  reduces maintenance, helps retain heat, and protects your pool
-                  from debris — all while maintaining a clean, elegant look.
+                  {content.overview.paragraph1}
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  Maxima Pools works with premium Auto Cover systems that integrate
-                  discreetly into the pool structure, preserving the design of your
-                  backyard.
+                  {content.overview.paragraph2}
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {[
-                    { icon: Zap, text: "One-Touch Open/Close" },
-                    { icon: Baby, text: "Child & Pet Safe" },
-                    { icon: Leaf, text: "Reduces Chemical Use" },
-                    { icon: Thermometer, text: "Extends Swim Season" },
-                  ].map((item) => (
-                    <span
-                      key={item.text}
-                      className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-50 border border-gray-100 rounded-full px-4 py-2"
-                    >
-                      <item.icon size={14} className="text-accent" />
-                      {item.text}
-                    </span>
-                  ))}
+                  {content.overview.chips.map((item) => {
+                    const Icon = icons[item.icon];
+                    return (
+                      <span
+                        key={item.text}
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-50 border border-gray-100 rounded-full px-4 py-2"
+                      >
+                        {Icon && <Icon size={14} className="text-accent" />}
+                        {item.text}
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
             </ScrollReveal>
@@ -309,8 +207,8 @@ export default function AutoCoverPage() {
                 <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/auto-cover/undertrack-1.jpg"
-                    alt="Pool with automatic cover system"
+                    src={content.overview.image}
+                    alt={content.overview.imageAlt}
                     width={800}
                     height={600}
                     className="w-full aspect-[4/3] object-cover"
@@ -333,20 +231,20 @@ export default function AutoCoverPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  How It Works
+                  {content.howItWorksSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Simple as{" "}
+                {content.howItWorksSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  1-2-3
+                  {content.howItWorksSection.headingHighlight}
                 </span>
               </h2>
             </div>
           </ScrollReveal>
 
           <div className="grid md:grid-cols-3 gap-5">
-            {howItWorks.map((item, i) => (
+            {content.howItWorks.map((item, i) => (
               <ScrollReveal key={item.step} delay={((i + 1) as 1 | 2 | 3)}>
                 <div className="relative bg-white rounded-2xl sm:rounded-3xl p-7 sm:p-8 border border-gray-100 h-full">
                   {/* Connector line */}
@@ -379,13 +277,13 @@ export default function AutoCoverPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Benefits
+                  {content.benefitsSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Why Choose an{" "}
+                {content.benefitsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Auto Cover?
+                  {content.benefitsSection.headingHighlight}
                 </span>
               </h2>
             </div>
@@ -396,7 +294,7 @@ export default function AutoCoverPage() {
             <ScrollReveal className="md:col-span-2 lg:col-span-8">
               <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden h-full min-h-[280px]">
                 <Image
-                  src="/images/auto-cover/hero.jpg"
+                  src={content.benefitsHeroImage}
                   alt="Auto cover providing safety"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -411,10 +309,10 @@ export default function AutoCoverPage() {
                     <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                    {benefits[0].title}
+                    {content.benefits[0].title}
                   </h3>
                   <p className="text-white/60 max-w-lg leading-relaxed">
-                    {benefits[0].description}
+                    {content.benefits[0].description}
                   </p>
                 </div>
               </div>
@@ -422,11 +320,34 @@ export default function AutoCoverPage() {
 
             {/* Side stack — 2 benefits */}
             <div className="lg:col-span-4 flex flex-col gap-4 sm:gap-5">
-              {benefits.slice(1, 3).map((b, i) => (
-                <ScrollReveal key={b.title} delay={((i + 1) as 1 | 2)}>
+              {content.benefits.slice(1, 3).map((b, i) => {
+                const Icon = icons[b.icon];
+                return (
+                  <ScrollReveal key={b.title} delay={((i + 1) as 1 | 2)}>
+                    <div className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-6 sm:p-7 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
+                      <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
+                        {Icon && <Icon size={20} className="text-accent" />}
+                      </div>
+                      <h3 className="text-lg font-bold text-gray-900 mb-1.5 group-hover:text-primary transition-colors">
+                        {b.title}
+                      </h3>
+                      <p className="text-sm text-gray-500 leading-relaxed">
+                        {b.description}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
+            </div>
+
+            {/* Bottom row — 3 benefits */}
+            {content.benefits.slice(3).map((b, i) => {
+              const Icon = icons[b.icon];
+              return (
+                <ScrollReveal key={b.title} className="lg:col-span-4" delay={((i + 1) as 1 | 2 | 3)}>
                   <div className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-6 sm:p-7 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                      <b.icon size={20} className="text-accent" />
+                      {Icon && <Icon size={20} className="text-accent" />}
                     </div>
                     <h3 className="text-lg font-bold text-gray-900 mb-1.5 group-hover:text-primary transition-colors">
                       {b.title}
@@ -436,25 +357,8 @@ export default function AutoCoverPage() {
                     </p>
                   </div>
                 </ScrollReveal>
-              ))}
-            </div>
-
-            {/* Bottom row — 3 benefits */}
-            {benefits.slice(3).map((b, i) => (
-              <ScrollReveal key={b.title} className="lg:col-span-4" delay={((i + 1) as 1 | 2 | 3)}>
-                <div className="group rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-6 sm:p-7 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-500">
-                    <b.icon size={20} className="text-accent" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1.5 group-hover:text-primary transition-colors">
-                    {b.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {b.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -473,8 +377,8 @@ export default function AutoCoverPage() {
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="rounded-2xl overflow-hidden col-span-2 border border-white/10">
                   <Image
-                    src="/images/auto-cover/undertrack-3.jpg"
-                    alt="Under-track auto cover pool"
+                    src={content.underTrack.images[0].src}
+                    alt={content.underTrack.images[0].alt}
                     width={800}
                     height={500}
                     className="w-full aspect-[16/10] object-cover"
@@ -483,8 +387,8 @@ export default function AutoCoverPage() {
                 </div>
                 <div className="rounded-xl overflow-hidden border border-white/10">
                   <Image
-                    src="/images/auto-cover/undertrack-2.jpg"
-                    alt="Under-track cover detail"
+                    src={content.underTrack.images[1].src}
+                    alt={content.underTrack.images[1].alt}
                     width={400}
                     height={300}
                     className="w-full aspect-[4/3] object-cover"
@@ -493,8 +397,8 @@ export default function AutoCoverPage() {
                 </div>
                 <div className="rounded-xl overflow-hidden border border-white/10">
                   <Image
-                    src="/images/auto-cover/undertrack-1.jpg"
-                    alt="Pool with cover open"
+                    src={content.underTrack.images[2].src}
+                    alt={content.underTrack.images[2].alt}
                     width={400}
                     height={300}
                     className="w-full aspect-[4/3] object-cover"
@@ -510,22 +414,19 @@ export default function AutoCoverPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                   <Eye size={14} className="text-accent" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Concealed Design
+                    {content.underTrack.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-                  Under-Track{" "}
-                  <span className="shimmer-text">Auto Cover</span> System
+                  {content.underTrack.headingLead}{" "}
+                  <span className="shimmer-text">{content.underTrack.headingHighlight}</span>{content.underTrack.headingTail}
                 </h2>
                 <p className="text-white text-lg leading-relaxed mb-8">
-                  For a seamless, timeless design, the Under-Track application
-                  houses the auto cover inside a concealed track attached directly
-                  to the pool wall. This keeps the mechanism completely out of sight
-                  while maintaining high structural integrity.
+                  {content.underTrack.paragraph}
                 </p>
 
                 <div className="space-y-3">
-                  {specifications.map((spec, i) => (
+                  {content.underTrack.specifications.map((spec, i) => (
                     <div
                       key={spec.title}
                       className="group flex gap-4 bg-white/[0.05] border border-white/[0.08] rounded-xl p-4 hover:bg-white/[0.08] transition-colors"
@@ -560,7 +461,7 @@ export default function AutoCoverPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/auto-cover/undertrack-1.jpg"
+                src={content.finalCta.image}
                 alt=""
                 fill
                 className="object-cover"
@@ -572,34 +473,33 @@ export default function AutoCoverPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Ready to Add an{" "}
-                    <span className="shimmer-text">Auto Cover?</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Talk to our team today and get a personalized quote. We&apos;ll
-                    help you choose the right system for your pool.
+                    {content.finalCta.paragraph}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.primaryHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Schedule Your Consultation
+                      {content.finalCta.primaryLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

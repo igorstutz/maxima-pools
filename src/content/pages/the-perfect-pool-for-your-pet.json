@@ -1,0 +1,138 @@
+{
+  "seo": {
+    "title": "The Perfect Pool for Your Pet | Maxima Pools - Columbus, OH",
+    "description": "San Juan fiberglass pools are a dog's best friend. Smooth surface, scratch-resistant, low chemical maintenance, and built-in shallow areas for safe pet swimming.",
+    "ogTitle": "The Perfect Pool for Your Pet | Maxima Pools",
+    "ogDescription": "Fiberglass pools designed with pets in mind — smooth, durable, low-maintenance, and safe for dogs and families alike."
+  },
+  "hero": {
+    "badge": "Pet Friendly",
+    "images": [
+      "/images/pet-pool/dog-pool.jpg",
+      "/images/why-fiberglass/canyon-beach.webp",
+      "/images/pool-quality/wylela-beach.png"
+    ],
+    "headingLead": "The Perfect Pool for",
+    "headingHighlight": "Your Pet",
+    "subtitle": "San Juan fiberglass pools are a dog's best friend. Smooth on paws, resistant to scratches, and built with safe shallow areas for pets to wade, play, and cool off.",
+    "primaryLabel": "Get a Free Estimate",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "icon": "Shield", "value": "0", "label": "Scratches from Nails" },
+    { "icon": "Clock", "value": "<1hr", "label": "Weekly Maintenance" },
+    { "icon": "Layers", "value": "17x", "label": "Stronger Than Concrete" },
+    { "icon": "PawPrint", "value": "100%", "label": "Pet Friendly" }
+  ],
+  "whyPetsLove": {
+    "badge": "A Dog's Best Friend",
+    "headingLead": "Why Pets Love",
+    "headingHighlight": "Fiberglass Pools",
+    "paragraph1": "Fiberglass is the safest, most durable, and lowest-maintenance pool type for households with pets. The smooth gel coat surface protects paws, resists nail damage, and requires far fewer chemicals — creating a healthier environment for the whole family.",
+    "paragraph2": "Built-in tanning ledges and shallow areas give your dog a safe place to wade, cool off, and enjoy the water without being in over their head.",
+    "checklist": [
+      "Smooth gel coat won't hurt paws or skin",
+      "Resistant to scratches from dog nails",
+      "Non-porous surface prevents algae buildup",
+      "Fewer chemicals = safer for pets and kids",
+      "Tanning ledges provide safe shallow wading",
+      "17x stronger than concrete — built to last",
+      "No vinyl liner to rip, tear, or replace",
+      "Less than 1 hour of maintenance per week"
+    ],
+    "image": "/images/pet-pool/dog-pool.jpg",
+    "imageAlt": "Happy dog enjoying a San Juan fiberglass pool"
+  },
+  "benefitsSection": {
+    "badge": "Key Benefits",
+    "headingLead": "Designed With",
+    "headingHighlight": "Pets in Mind",
+    "intro": "Every feature of a San Juan fiberglass pool benefits pet owners — from the surface texture to the structural design."
+  },
+  "petBenefits": [
+    { "icon": "HandMetal", "title": "Smooth, Gentle Surface", "description": "The non-abrasive gel coat finish is gentle on pet paws and won't cause scratches or irritation — unlike the rough, sandpaper-like texture of concrete pools." },
+    { "icon": "Shield", "title": "Scratch & Claw Resistant", "description": "Fiberglass is incredibly resistant to nail damage. Unlike vinyl liners that rip and tear from claws, the gel coat surface stays intact swim after swim." },
+    { "icon": "Droplets", "title": "Fewer Chemicals, Safer Water", "description": "The smooth, non-porous surface requires significantly fewer chemicals to stay clean — meaning safer water for pets who love to drink from the pool." },
+    { "icon": "Sun", "title": "Built-In Shallow Areas", "description": "Tanning ledges and sun shelves provide safe, shallow areas where pets can wade, cool off, and relax without being in deep water." },
+    { "icon": "ThermometerSun", "title": "Cool Off in Ohio Summers", "description": "A fiberglass pool creates the perfect backyard retreat for hot Ohio weather — your pets can cool down naturally while the family enjoys the pool together." },
+    { "icon": "Wrench", "title": "Virtually Maintenance-Free", "description": "No acid washes, no replastering, no liner replacements. The durable fiberglass shell is designed to last decades with minimal upkeep — even with active pets." }
+  ],
+  "comparison": {
+    "badge": "Pet Safety Comparison",
+    "headingLead": "Which Pool is Safest for",
+    "headingHighlight": "Your Pet?",
+    "intro": "Not all pool types are created equal when it comes to pet safety. Here's how they compare.",
+    "bestForPetsLabel": "Best for Pets",
+    "pools": [
+      {
+        "type": "Fiberglass",
+        "icon": "PawPrint",
+        "items": [
+          "Smooth, paw-friendly surface",
+          "Scratch-resistant gel coat",
+          "Minimal chemicals needed",
+          "Built-in tanning ledges",
+          "No liner to damage"
+        ]
+      },
+      {
+        "type": "Concrete / Gunite",
+        "icon": "Shield",
+        "items": [
+          "Rough surface — like 80-grit sandpaper",
+          "Can scrape paw pads raw",
+          "Requires heavy chemical treatment",
+          "No built-in shallow areas",
+          "Needs replastering every 10–15 years"
+        ]
+      },
+      {
+        "type": "Vinyl Liner",
+        "icon": "Droplets",
+        "items": [
+          "Punctures easily from claws",
+          "Slippery with rough seams",
+          "Liner replacements every 5–9 years",
+          "Algae grows in seams",
+          "Not recommended for pet owners"
+        ]
+      }
+    ]
+  },
+  "tanningLedge": {
+    "badge": "Perfect for Pets",
+    "headingLead": "Built-In",
+    "headingHighlight": "Tanning Ledges",
+    "paragraph": "Many San Juan pool models include integrated tanning ledges and sun shelves — shallow areas just 6–12 inches deep where pets can safely wade, cool off, and enjoy the water at their own pace. It's the ultimate pet-friendly feature.",
+    "ctaLabel": "Explore tanning ledges",
+    "ctaHref": "/pools",
+    "image": "/images/pet-pool/dog-pool.jpg",
+    "imageAlt": "Dog on tanning ledge in fiberglass pool"
+  },
+  "diveDeeper": {
+    "badge": "Explore More",
+    "headingLead": "Dive",
+    "headingHighlight": "Deeper",
+    "cards": [
+      { "icon": "Award", "title": "San Juan VS Competitors", "description": "See the full hand-laid vs chopped fiberglass comparison.", "href": "/san-juan-fiberglass-pools" },
+      { "icon": "Gem", "title": "Fiberglass Pool Quality", "description": "The materials and engineering behind premium pool shells.", "href": "/fiberglass-pool-quality" },
+      { "icon": "Factory", "title": "How It's Made", "description": "The 7-step manufacturing process behind every San Juan pool.", "href": "/how-san-juan-pools-are-made" }
+    ]
+  },
+  "finalCta": {
+    "image": "/images/pet-pool/dog-pool.jpg",
+    "headingLead": "Ready for a Pet-Friendly",
+    "headingHighlight": "Pool?",
+    "paragraph": "Give your family — four-legged members included — a pool designed for everyone to enjoy safely.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

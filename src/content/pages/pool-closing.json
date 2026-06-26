@@ -1,0 +1,136 @@
+{
+  "seo": {
+    "title": "Pool Closing/Opening & Winterizing | Maxima Pools - Columbus, OH",
+    "description": "Professional pool winterization services in Columbus, OH. Protect your pool from freeze damage, prevent algae growth, and ensure an easy spring opening. Starting at $450.",
+    "ogTitle": "Pool Closing/Opening & Winterizing | Maxima Pools",
+    "ogDescription": "Professional winterization to protect your pool from freeze damage, prevent algae growth, and ensure a smooth opening in spring."
+  },
+  "hero": {
+    "badge": "Winterization Services",
+    "images": [
+      "/images/pools/atlantic.jpg",
+      "/images/pools/grand-manhattan.png",
+      "/images/pools/great-lakes.jpg",
+      "/images/pools/vegas.jpg"
+    ],
+    "headingLead": "Pool Closing/Opening &",
+    "headingHighlight": "Winterizing",
+    "subtitle": "Professional winterization to protect your pool from freeze damage, prevent algae growth, and ensure a smooth opening in spring.",
+    "priceBadge": "Starting at $450",
+    "primaryLabel": "Book Now",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "icon": "Snowflake", "value": "500+", "label": "Pools Winterized" },
+    { "icon": "ShieldCheck", "value": "$5K+", "label": "Avg. Damage Prevented" },
+    { "icon": "ClipboardCheck", "value": "8-Step", "label": "Thorough Process" },
+    { "icon": "Users", "value": "100%", "label": "Satisfaction Rate" }
+  ],
+  "whyMattersSection": {
+    "badge": "Why It Matters",
+    "headingLead": "Why Proper Pool Closing/Opening",
+    "headingHighlight": "Matters"
+  },
+  "whyItMatters": [
+    { "icon": "ThermometerSnowflake", "title": "Prevent Freeze Damage", "description": "Protect your plumbing, equipment, and pool shell from costly freeze-thaw damage during Ohio winters." },
+    { "icon": "Leaf", "title": "Avoid Algae Growth", "description": "Proper chemical treatment and covering prevents algae from taking hold over the off-season." },
+    { "icon": "Sun", "title": "Easy Spring Opening", "description": "A properly winterized pool opens faster and cleaner, saving you time and money in spring." }
+  ],
+  "processSection": {
+    "badge": "Our Process",
+    "headingLead": "Our Winterization",
+    "headingHighlight": "Process",
+    "intro": "Every step handled with precision by our experienced technicians."
+  },
+  "processSteps": [
+    { "step": "01", "title": "Blow Out All Plumbing Lines", "description": "We use high-powered air to force water from all plumbing lines, preventing pipe freeze and cracks." },
+    { "step": "02", "title": "Reduce Water Level", "description": "Water is lowered to the appropriate level below the skimmer to protect against ice expansion." },
+    { "step": "03", "title": "Cap All Returns", "description": "All return jets and skimmer are sealed with winterizing plugs to prevent water re-entry." },
+    { "step": "04", "title": "Install Gizzmo", "description": "A specialized device is placed in the skimmer to absorb ice pressure and protect the skimmer body." },
+    { "step": "05", "title": "Add Winterization Chemicals", "description": "Balanced chemical treatment prevents algae, staining, and scale buildup through the winter months." },
+    { "step": "06", "title": "Install Winter Cover", "description": "Your cover is secured with anchors and springs to protect the pool from debris and weather." },
+    { "step": "07", "title": "Drain Equipment", "description": "All pumps, filters, heaters, and chlorinators are drained and plugs removed to prevent freeze damage." },
+    { "step": "08", "title": "Cartridge Filter Care", "description": "Cartridge elements are removed, cleaned, and stored properly to extend their lifespan." }
+  ],
+  "beforeSection": {
+    "badge": "Preparation",
+    "headingLead": "Before We",
+    "headingHighlight": "Arrive",
+    "intro": "A few things to have ready for a smooth winterization visit."
+  },
+  "beforeWeArrive": [
+    { "icon": "Key", "text": "Pool and equipment pad fully accessible" },
+    { "icon": "Shield", "text": "Winter cover ready and placed near the pool" },
+    { "icon": "Wrench", "text": "All anchors must be functional (replaceable at additional cost)" },
+    { "icon": "Lock", "text": "Provide codes for automatic covers" },
+    { "icon": "Zap", "text": "Grant access to electrical breakers" },
+    { "icon": "Droplets", "text": "Pool should be clean (cleaning available for extra fee)" }
+  ],
+  "pricing": {
+    "badge": "Pricing",
+    "headingLead": "Simple, Transparent",
+    "headingHighlight": "Pricing",
+    "paragraph1": "Pool Closing/Opening services start at $450, with variations based on pool type, size, and additional features like heaters or saltwater systems.",
+    "paragraph2": "Payment required at booking via credit or debit card.",
+    "paragraph3": "We recommend scheduling in early fall to avoid last-minute delays.",
+    "note": "Book early — slots fill fast in September and October!",
+    "startingLabel": "Starting at",
+    "price": "$450",
+    "priceCaption": "Pool Winterization",
+    "includedChecklist": [
+      "Blow out all plumbing lines",
+      "Reduce water level",
+      "Cap all returns",
+      "Install Gizzmo",
+      "Add winterization chemicals",
+      "Install winter cover",
+      "Drain all equipment",
+      "Cartridge filter care"
+    ],
+    "bookLabel": "Book Now",
+    "bookHref": "/contact"
+  },
+  "whyChooseSection": {
+    "badge": "Why Maxima",
+    "headingLead": "Why Choose",
+    "headingHighlight": "Maxima"
+  },
+  "whyChoose": [
+    { "icon": "Award", "title": "Expertise & Reliability", "description": "Trained technicians using the latest pool maintenance techniques and industry-best practices." },
+    { "icon": "ClipboardCheck", "title": "Comprehensive Service", "description": "We handle every single step of winterization so you don't have to worry about a thing." },
+    { "icon": "Eye", "title": "Customized Approach", "description": "Tailored to your specific pool type — inground, saltwater, cartridge filter, or auto cover." },
+    { "icon": "ShieldCheck", "title": "Peace of Mind", "description": "Avoid costly freeze damage repairs and enjoy a stress-free winter knowing your pool is protected." }
+  ],
+  "faqSection": {
+    "badge": "FAQ",
+    "headingLead": "Common",
+    "headingHighlight": "Questions",
+    "intro": "Everything you need to know about our pool closing/opening service. Can't find what you're looking for? Give us a call.",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "faqs": [
+    { "question": "When should I close my pool for winter?", "answer": "We recommend closing your pool when water temperatures consistently stay below 65°F, typically between mid-September and mid-October in Columbus, OH. Scheduling early in the season ensures availability and avoids last-minute rushes before the first freeze." },
+    { "question": "What happens if I don't winterize my pool?", "answer": "Skipping winterization can lead to frozen and cracked plumbing lines, damaged pumps and filters, algae blooms, and staining. Repair costs from freeze damage often exceed $3,000–$5,000, far more than the cost of professional winterization." },
+    { "question": "How long does the pool closing/opening process take?", "answer": "A standard pool closing/opening service takes approximately 1.5 to 2.5 hours depending on pool size, equipment, and any additional services needed. Our technicians handle every step efficiently so you can get back to your day." },
+    { "question": "Do I need to drain my pool completely?", "answer": "No. We lower the water level to just below the skimmer opening — typically 4 to 6 inches below. Draining a pool completely can cause structural damage from groundwater pressure, especially with fiberglass pools." },
+    { "question": "Is the winter cover included in the price?", "answer": "The $450 starting price includes installation of your existing winter cover. If you need a new cover, we can supply and install one at an additional cost. We'll assess your cover's condition during the service and let you know if replacement is recommended." },
+    { "question": "Do you service saltwater and heated pools?", "answer": "Yes. We winterize all pool types including saltwater systems, heated pools, pools with automatic covers, and those with cartridge or DE filters. Pricing may vary slightly based on additional equipment that needs to be serviced." }
+  ],
+  "finalCta": {
+    "image": "/images/pools/grand-manhattan.png",
+    "headingLead": "Ready to Close",
+    "headingHighlight": "Your Pool?",
+    "paragraph": "Schedule your winterization service today and protect your investment all winter long.",
+    "primaryLabel": "Book Now",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "seo": {
+    "title": "Automatic Pool Cover | Maxima Pools - Columbus, OH",
+    "description": "Protect your pool with a premium automatic cover system. Safety, heat retention, reduced maintenance, and elegant design. Get a free quote from Maxima Pools.",
+    "ogTitle": "Automatic Pool Cover | Maxima Pools",
+    "ogDescription": "Safety and convenience in one system. Motorized pool covers that protect, retain heat, and look elegant."
+  },
+  "hero": {
+    "badge": "Safety & Convenience",
+    "images": [
+      "/images/auto-cover/undertrack-3.jpg",
+      "/images/auto-cover/hero.jpg",
+      "/images/auto-cover/undertrack-1.jpg",
+      "/images/auto-cover/undertrack-2.jpg"
+    ],
+    "headingLead": "Automatic Pool",
+    "headingHighlight": "Cover",
+    "subtitle": "Protect your pool, enhance your backyard, and enjoy effortless operation with a motorized cover built for durability and elegance.",
+    "primaryLabel": "Get a Free Quote",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "icon": "Timer", "value": "<60s", "label": "To Open or Close" },
+    { "icon": "Droplets", "value": "70%", "label": "Less Evaporation" },
+    { "icon": "Leaf", "value": "50%", "label": "Less Chemical Use" },
+    { "icon": "Shield", "value": "ASTM", "label": "Safety Certified" }
+  ],
+  "overview": {
+    "badge": "Overview",
+    "headingLead": "What Is an Automatic",
+    "headingHighlight": "Pool Cover?",
+    "paragraph1": "An automatic pool cover is a motorized system that closes and seals your pool with the touch of a button. It provides safety, reduces maintenance, helps retain heat, and protects your pool from debris — all while maintaining a clean, elegant look.",
+    "paragraph2": "Maxima Pools works with premium Auto Cover systems that integrate discreetly into the pool structure, preserving the design of your backyard.",
+    "chips": [
+      { "icon": "Zap", "text": "One-Touch Open/Close" },
+      { "icon": "Baby", "text": "Child & Pet Safe" },
+      { "icon": "Leaf", "text": "Reduces Chemical Use" },
+      { "icon": "Thermometer", "text": "Extends Swim Season" }
+    ],
+    "image": "/images/auto-cover/undertrack-1.jpg",
+    "imageAlt": "Pool with automatic cover system"
+  },
+  "howItWorksSection": {
+    "badge": "How It Works",
+    "headingLead": "Simple as",
+    "headingHighlight": "1-2-3"
+  },
+  "howItWorks": [
+    { "step": "01", "title": "Press the Button", "description": "A single keyswitch or remote activates the motorized system." },
+    { "step": "02", "title": "Cover Glides Smoothly", "description": "The fabric rolls across the water surface on concealed under-track rails." },
+    { "step": "03", "title": "Pool is Sealed", "description": "Your pool is protected, insulated, and safe — in under 60 seconds." }
+  ],
+  "benefitsSection": {
+    "badge": "Benefits",
+    "headingLead": "Why Choose an",
+    "headingHighlight": "Auto Cover?"
+  },
+  "benefits": [
+    { "icon": "Shield", "title": "Safety First", "description": "A sealed cover supports weight and prevents unsupervised access, giving you peace of mind for children and pets." },
+    { "icon": "Thermometer", "title": "Heat Retention", "description": "Traps warmth overnight and extends your swim season by weeks — reducing heating costs significantly." },
+    { "icon": "Leaf", "title": "Less Maintenance", "description": "Keeps leaves, debris, and insects out of your pool, cutting cleaning time and chemical use in half." },
+    { "icon": "Zap", "title": "One-Touch Operation", "description": "Open or close your pool in under a minute with the press of a button. Effortless daily use." },
+    { "icon": "Eye", "title": "Elegant Design", "description": "Integrates discreetly into the pool structure, preserving the clean aesthetics of your backyard." },
+    { "icon": "Wrench", "title": "Built to Last", "description": "Heavy-duty materials and engineering designed for years of reliable, maintenance-free performance." }
+  ],
+  "benefitsHeroImage": "/images/auto-cover/hero.jpg",
+  "underTrack": {
+    "badge": "Concealed Design",
+    "headingLead": "Under-Track",
+    "headingHighlight": "Auto Cover",
+    "headingTail": " System",
+    "paragraph": "For a seamless, timeless design, the Under-Track application houses the auto cover inside a concealed track attached directly to the pool wall. This keeps the mechanism completely out of sight while maintaining high structural integrity.",
+    "images": [
+      { "src": "/images/auto-cover/undertrack-3.jpg", "alt": "Under-track auto cover pool" },
+      { "src": "/images/auto-cover/undertrack-2.jpg", "alt": "Under-track cover detail" },
+      { "src": "/images/auto-cover/undertrack-1.jpg", "alt": "Pool with cover open" }
+    ],
+    "specifications": [
+      { "title": "Easy-Out Pulley Assembly", "description": "Quick-access pulleys can be serviced in minutes, reducing downtime and ensuring long-term reliability." },
+      { "title": "Universal Compatibility", "description": "Adapts to rectangular, freeform, and custom pool layouts with seamless integration into any construction style." },
+      { "title": "SmartMotion Diagnostics", "description": "Real-time monitoring of cover movement, tension, and motor performance with instant alerts." },
+      { "title": "Electric Drive Mechanism", "description": "High-efficiency motor delivers smooth, quiet, consistent operation for years of dependable use." }
+    ]
+  },
+  "finalCta": {
+    "image": "/images/auto-cover/undertrack-1.jpg",
+    "headingLead": "Ready to Add an",
+    "headingHighlight": "Auto Cover?",
+    "paragraph": "Talk to our team today and get a personalized quote. We'll help you choose the right system for your pool.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

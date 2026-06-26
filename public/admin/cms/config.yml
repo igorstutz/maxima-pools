@@ -992,3 +992,898 @@ collections:
               - { label: "Review text", name: text, widget: text }
               - { label: "Rating (1–5)", name: rating, widget: number, default: 5, min: 1, max: 5 }
               - { label: "Date label (e.g. 2 months ago)", name: date, widget: string }
+
+      - name: auto-cover-pool
+        label: "Auto Cover Pool Page"
+        file: "src/content/pages/auto-cover-pool.json"
+        format: json
+        preview_path: "auto-cover-pool/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name (e.g. Timer, Droplets, Leaf, Shield)" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Overview section"
+            name: overview
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Feature chips"
+                name: chips
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "'How it works' heading"
+            name: howItWorksSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "How it works (steps)"
+            name: howItWorks
+            widget: list
+            summary: "{{fields.step}} — {{fields.title}}"
+            fields:
+              - { label: "Step number", name: step, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "'Benefits' heading"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Benefits"
+            name: benefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - { label: "Benefits hero image", name: benefitsHeroImage, widget: image }
+          - label: "Under-track section"
+            name: underTrack
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Heading — tail", name: headingTail, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Images"
+                name: images
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Image", name: src, widget: image }
+                  - { label: "Alt text", name: alt, widget: string }
+              - label: "Specifications"
+                name: specifications
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: pool-closing
+        label: "Pool Closing / Winterizing Page"
+        file: "src/content/pages/pool-closing.json"
+        format: json
+        preview_path: "pool-closing/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Price badge", name: priceBadge, widget: string }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "'Why it matters' heading"
+            name: whyMattersSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Why it matters (cards)"
+            name: whyItMatters
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Process heading"
+            name: processSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Process steps"
+            name: processSteps
+            widget: list
+            summary: "{{fields.step}} — {{fields.title}}"
+            fields:
+              - { label: "Step number", name: step, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "'Before we arrive' heading"
+            name: beforeSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Before we arrive (checklist)"
+            name: beforeWeArrive
+            widget: list
+            summary: "{{fields.text}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Text", name: text, widget: string }
+          - label: "Pricing section"
+            name: pricing
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - { label: "Paragraph 3", name: paragraph3, widget: text }
+              - { label: "Highlight note", name: note, widget: string }
+              - { label: "'Starting at' label", name: startingLabel, widget: string }
+              - { label: "Price", name: price, widget: string }
+              - { label: "Price caption", name: priceCaption, widget: string }
+              - label: "Included checklist"
+                name: includedChecklist
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+              - { label: "Book button label", name: bookLabel, widget: string }
+              - { label: "Book button link", name: bookHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "'Why Maxima' heading"
+            name: whyChooseSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Why choose (cards)"
+            name: whyChoose
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "FAQ heading"
+            name: faqSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "FAQ items"
+            name: faqs
+            widget: list
+            summary: "{{fields.question}}"
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Answer", name: answer, widget: text }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: frozen-pools
+        label: "Frozen / Freezable Pools Page"
+        file: "src/content/pages/frozen-pools.json"
+        format: json
+        preview_path: "frozen-pools/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Winter playground section"
+            name: playground
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Feature chips"
+                name: chips
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "'Benefits' heading"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Benefits"
+            name: benefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - { label: "Benefits hero image", name: benefitsHeroImage, widget: image }
+          - label: "Advantages (dark) section"
+            name: advantages
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Images"
+                name: images
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Image", name: src, widget: image }
+                  - { label: "Alt text", name: alt, widget: string }
+              - label: "Advantage items"
+                name: items
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+          - label: "Warranty section"
+            name: warranty
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Badge 1 (green)"
+                name: badge1
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Subtitle", name: sub, widget: string }
+              - label: "Badge 2 (blue)"
+                name: badge2
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Subtitle", name: sub, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "Craftsmanship CTA section"
+            name: craftsmanship
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: the-perfect-pool-for-your-pet
+        label: "Pool for Your Pet Page"
+        file: "src/content/pages/the-perfect-pool-for-your-pet.json"
+        format: json
+        preview_path: "the-perfect-pool-for-your-pet/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "'Why pets love' section"
+            name: whyPetsLove
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Checklist"
+                name: checklist
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "'Benefits' heading"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Pet benefits"
+            name: petBenefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Comparison section"
+            name: comparison
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - { label: "'Best for pets' label", name: bestForPetsLabel, widget: string }
+              - label: "Pool columns"
+                name: pools
+                widget: list
+                summary: "{{fields.type}}"
+                fields:
+                  - { label: "Type", name: type, widget: string }
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - label: "Items"
+                    name: items
+                    widget: list
+                    field: { label: "Item", name: item, widget: string }
+          - label: "Tanning ledge callout"
+            name: tanningLedge
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Link label", name: ctaLabel, widget: string }
+              - { label: "Link", name: ctaHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "'Dive deeper' section"
+            name: diveDeeper
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - label: "Cards"
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Link", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: fiberglass-pool-quality
+        label: "Fiberglass Pool Quality Page"
+        file: "src/content/pages/fiberglass-pool-quality.json"
+        format: json
+        preview_path: "fiberglass-pool-quality/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Third button label", name: tertiaryLabel, widget: string }
+              - { label: "Third button link", name: tertiaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Highest quality section"
+            name: highestQuality
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Feature chips"
+                name: chips
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "Comparison table section"
+            name: comparison
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+              - { label: "Column header — Feature", name: headerFeature, widget: string }
+              - { label: "Column header — San Juan", name: headerSanJuan, widget: string }
+              - { label: "Column header — Competitors", name: headerCompetitors, widget: string }
+              - label: "Rows"
+                name: rows
+                widget: list
+                summary: "{{fields.feature}}"
+                fields:
+                  - { label: "Feature", name: feature, widget: string }
+                  - { label: "San Juan", name: sanjuan, widget: string }
+                  - { label: "Competitor", name: competitor, widget: string }
+          - label: "Layers section heading"
+            name: layersSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Materials section heading"
+            name: materialsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Material cards"
+            name: materialCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Benefits section"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Main image", name: imageMain, widget: image }
+              - { label: "Main image alt", name: imageMainAlt, widget: string }
+              - { label: "Spec image", name: imageSpec, widget: image }
+              - { label: "Spec image alt", name: imageSpecAlt, widget: string }
+              - { label: "Hand-laid image", name: imageHandlaid, widget: image }
+              - { label: "Hand-laid image alt", name: imageHandlaidAlt, widget: string }
+          - label: "Benefits"
+            name: benefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "'Compare & explore' heading"
+            name: compareSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Compare cards"
+            name: compareCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Link", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: fiberglass-pool-colors
+        label: "Fiberglass Pool Colors Page"
+        file: "src/content/pages/fiberglass-pool-colors.json"
+        format: json
+        preview_path: "fiberglass-pool-colors/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Selector heading"
+            name: selector
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Colors"
+            name: colors
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "ID (do not change)", name: id, widget: string, hint: "Used internally — keep as-is for blue-lagoon / granite to show the Iridium finish." }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Tagline", name: tagline, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Swatch color (hex)", name: swatch, widget: string, hint: "Hex color, e.g. #3b82d8" }
+              - { label: "Hero image URL", name: hero, widget: string, hint: "Image URL (https://...)" }
+              - label: "Gallery image URLs"
+                name: gallery
+                widget: list
+                field: { label: "Image URL", name: url, widget: string }
+          - label: "Color feature checklist"
+            name: colorFeatures
+            widget: list
+            field: { label: "Feature", name: feature, widget: string }
+          - label: "Benefits section heading"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Benefits"
+            name: benefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name (Sun, Sparkles, ShieldCheck, Clock)" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Finish types heading"
+            name: finishSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Standard finish card"
+            name: finishStandard
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Swatches"
+                name: swatches
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Color (hex)", name: color, widget: string }
+                  - { label: "Title", name: title, widget: string }
+              - { label: "Swatch label", name: swatchLabel, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Items"
+                name: items
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+          - label: "Iridium finish card"
+            name: finishIridium
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Premium badge label", name: premiumLabel, widget: string }
+              - label: "Swatches"
+                name: swatches
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Color (hex)", name: color, widget: string }
+                  - { label: "Title", name: title, widget: string }
+              - { label: "Swatch label", name: swatchLabel, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Items"
+                name: items
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+          - label: "Final Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image URL", name: image, widget: string, hint: "Image URL (https://...)" }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }

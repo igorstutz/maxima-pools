@@ -1,0 +1,112 @@
+{
+  "seo": {
+    "title": "Freezable Pools — Ice-Ready Fiberglass Pools | Maxima Pools - Columbus, OH",
+    "description": "San Juan fiberglass pools are built to handle extreme freezing conditions. Durable, flexible, and warranty-backed — your pool performs year-round, even in Ohio winters.",
+    "ogTitle": "Freezable Pools — Built for Every Season | Maxima Pools",
+    "ogDescription": "San Juan fiberglass pools handle extreme freeze-thaw cycles without cracking. Turn your pool into a winter playground."
+  },
+  "hero": {
+    "badge": "Built for Every Season",
+    "images": [
+      "/images/frozen-pools/frozen-1.png",
+      "/images/frozen-pools/frozen-2.png",
+      "/images/frozen-pools/frozen-3.png",
+      "/images/frozen-pools/frozen-4.png"
+    ],
+    "headingLead": "A Pool Ready for",
+    "headingHighlight": "Winter",
+    "subtitle": "San Juan fiberglass pools are so strong and durable that even fully frozen, they're built to perform. Who said pools are only for summer?",
+    "primaryLabel": "Start Your Project",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "icon": "ThermometerSnowflake", "value": "-20°F", "label": "Freeze Tested" },
+    { "icon": "Shield", "value": "50yr", "label": "Structural Warranty" },
+    { "icon": "ShieldCheck", "value": "0", "label": "Crack Risk" },
+    { "icon": "Clock", "value": "3-5d", "label": "Quick Install" }
+  ],
+  "playground": {
+    "badge": "Year-Round Fun",
+    "headingLead": "Turn Your Pool Into a",
+    "headingHighlight": "Winter Playground",
+    "paragraph1": "San Juan's handcrafted fiberglass pools can handle extreme freezing conditions. When winter hits, your pool becomes a solid, safe surface — perfect for ice skating and cold-weather fun.",
+    "paragraph2": "Unlike concrete or vinyl pools that crack and deteriorate with freeze-thaw cycles, fiberglass pools are engineered with flexibility built into their DNA.",
+    "chips": [
+      { "icon": "Snowflake", "text": "Freeze-Proof" },
+      { "icon": "Waves", "text": "Ice Skating Ready" },
+      { "icon": "Shield", "text": "Warranty Protected" },
+      { "icon": "Zap", "text": "Quick Install" }
+    ],
+    "image": "/images/frozen-pools/frozen-2.png",
+    "imageAlt": "Frozen fiberglass pool used for ice skating"
+  },
+  "benefitsSection": {
+    "badge": "Key Benefits",
+    "headingLead": "Why Fiberglass Excels in",
+    "headingHighlight": "Freeze Zones",
+    "intro": "Built with flexibility, strength, and advanced materials that thrive where other pool types fail."
+  },
+  "benefits": [
+    { "icon": "Hammer", "title": "Durable & Flexible", "description": "Fiberglass naturally flexes with ground movement, significantly reducing crack risk during freeze-thaw cycles. Unlike concrete, it won't lift or fracture in deep freezes." },
+    { "icon": "Leaf", "title": "Low Maintenance", "description": "The smooth, non-porous gel coat finish resists algae buildup with fewer chemicals needed — even during the off-season when the pool sits dormant." },
+    { "icon": "Snowflake", "title": "Easy Winterization", "description": "Fiberglass pools stay full (just slightly lower water level) and winterize with minimal effort. The shell structure is protected by the water itself." },
+    { "icon": "Zap", "title": "Quick Installation", "description": "A short construction window makes fiberglass ideal for colder climates. Get your pool installed and ready before winter hits — in as little as 3 to 5 days." },
+    { "icon": "ThermometerSnowflake", "title": "Better Temperature Insulation", "description": "Fiberglass retains heat more efficiently than concrete, reducing summer heating costs. And in winter, ice doesn't easily adhere to the smooth surface — minimizing wear." },
+    { "icon": "ShieldCheck", "title": "Warranty Protected", "description": "The Freezable Pool process is fully compatible with San Juan Pools standards and does not void the manufacturer's structural warranty." }
+  ],
+  "benefitsHeroImage": "/images/frozen-pools/frozen-4.png",
+  "advantages": {
+    "badge": "Fiberglass vs. Concrete",
+    "headingLead": "Built to Survive",
+    "headingHighlight": "Ohio Winters",
+    "paragraph": "While concrete pools crack and vinyl liners tear under the stress of freeze-thaw cycles, San Juan fiberglass pools are engineered with reinforced composite structures that absorb movement without damage.",
+    "images": [
+      { "src": "/images/frozen-pools/frozen-3.png", "alt": "Frozen pool in winter — fiberglass durability" },
+      { "src": "/images/frozen-pools/frozen-1.png", "alt": "Ice-covered fiberglass pool" },
+      { "src": "/images/frozen-pools/frozen-4.png", "alt": "Fiberglass pool after winter freeze" }
+    ],
+    "items": [
+      "Fiberglass flexes with soil movement — no cracking",
+      "Ice doesn't adhere to the gel coat surface",
+      "Pool stays full in winter, protecting the shell",
+      "No re-plastering or resurfacing needed after freezes",
+      "Non-porous finish prevents algae during dormant months",
+      "Engineered reinforcement supports frozen pool conditions"
+    ]
+  },
+  "warranty": {
+    "badge": "Warranty",
+    "headingLead": "Freezable Pool Compatibility",
+    "headingHighlight": "& Warranty",
+    "paragraph1": "The Freezable Pool process offered by Maxima Pools is fully compatible with San Juan Pools standards and does not void the manufacturer's warranty.",
+    "paragraph2": "Every San Juan pool is engineered with a reinforced composite structure specifically designed to support the Freezable Pool process, giving you complete peace of mind for decades to come.",
+    "badge1": { "title": "San Juan Authorized", "sub": "Official dealer & installer" },
+    "badge2": { "title": "Warranty Safe", "sub": "Does not void coverage" },
+    "image": "/images/frozen-pools/frozen-2.png",
+    "imageAlt": "San Juan fiberglass pool — warranty protected"
+  },
+  "craftsmanship": {
+    "badge": "Craftsmanship",
+    "headingLead": "How San Juan Pools",
+    "headingHighlight": "Are Made",
+    "paragraph": "Discover the hand-layup process, proprietary resin blends, and reinforced composite engineering that make San Juan the most freeze-resistant fiberglass pool on the market.",
+    "ctaLabel": "Learn How They're Built",
+    "ctaHref": "/how-san-juan-pools-are-made"
+  },
+  "finalCta": {
+    "image": "/images/frozen-pools/frozen-3.png",
+    "headingLead": "Ready for a Pool That Performs",
+    "headingHighlight": "Year-Round?",
+    "paragraph": "Get a fiberglass pool that handles Ohio's harshest winters without breaking a sweat — or a shell.",
+    "primaryLabel": "Explore Freeze-Ready Pools",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}
