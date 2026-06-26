@@ -68,10 +68,9 @@ The `_next/` folder hashes assets, so old chunks linger harmlessly. If you want 
 
 ## Adding a blog article
 
-1. Visit `https://maximapools.com/admin/blog/` and unlock with the editor passphrase
-2. Compose, click **Download**
-3. Drop the resulting `.md` file into `src/content/blog/` locally
-4. Rebuild and reupload (steps above)
+Use the CMS at `https://maximapools.com/admin/cms/` → **Blog Posts → New**. It
+commits a Markdown file to `src/content/blog/` and the site rebuilds/deploys
+automatically. (The old `/admin/blog` localStorage draft tool was removed.)
 
 ## Troubleshooting
 

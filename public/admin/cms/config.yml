@@ -16,7 +16,8 @@ backend:
 site_url: https://maximapools.com
 display_url: https://maximapools.com
 # Maxima logo on the login / loading / header (replaces the Sveltia logo).
-logo_url: /images/logo/maxima-logo.webp
+# White-card variant so it stays legible on the panel's dark loading screen.
+logo_url: /images/logo/maxima-logo-panel.webp
 
 # The whole image tree is the media library so every image is browsable and
 # replaceable in the panel. Uploads/commits land here and deploy with the site.
