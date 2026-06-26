@@ -1,0 +1,47 @@
+{
+  "section": {
+    "badge": "Reviews",
+    "headingLead": "What Our Clients",
+    "headingHighlight": "Say About Us",
+    "intro": "Don't just take our word for it — hear from Columbus-area homeowners who trusted Maxima Pools.",
+    "excellentLabel": "Excellent",
+    "basedOnLabel": "Based on",
+    "ctaLabel": "See All Reviews",
+    "trustBar": [
+      "Google 5-Star Rated",
+      "San Juan Authorized Dealer",
+      "Licensed & Insured",
+      "Family Owned & Operated"
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Sarah M.",
+      "location": "Columbus, OH",
+      "text": "Maxima Pools transformed our backyard into an absolute paradise. The installation was seamless and the quality of the fiberglass pool is outstanding. Couldn't be happier with the results!",
+      "rating": 5,
+      "date": "2 months ago"
+    },
+    {
+      "name": "James & Linda T.",
+      "location": "Delaware, OH",
+      "text": "From start to finish, the Maxima team was professional, communicative, and delivered exactly what they promised. Our San Juan pool is the best investment we've made in our home.",
+      "rating": 5,
+      "date": "3 months ago"
+    },
+    {
+      "name": "Michael R.",
+      "location": "Franklin County",
+      "text": "We compared several pool installers and Maxima stood out for their expertise and transparency. The concrete patio work combined with the pool installation was flawless.",
+      "rating": 5,
+      "date": "1 month ago"
+    },
+    {
+      "name": "David K.",
+      "location": "Union County",
+      "text": "Excellent service from beginning to end. The team was knowledgeable about every San Juan model and helped us pick the perfect pool for our yard. Highly recommend!",
+      "rating": 5,
+      "date": "2 weeks ago"
+    }
+  ]
+}

@@ -5,20 +5,11 @@ import Image from "@/components/Image";
 import { Star, Play, Sparkles } from "lucide-react";
 import { useEffect, useState, useCallback } from "react";
 import { asset } from "@/lib/base-path";
+import home from "@/content/pages/home.json";
 
-const heroPoolImages = [
-  { src: "/images/pools/atlantic.jpg", alt: "Atlantic fiberglass pool" },
-  { src: "/images/pools/grand-manhattan.png", alt: "Grand Manhattan fiberglass pool" },
-  { src: "/images/pools/oasis.jpg", alt: "Oasis fiberglass pool" },
-  { src: "/images/pools/venetian.jpg", alt: "Venetian fiberglass pool" },
-  { src: "/images/pools/niagara.png", alt: "Niagara fiberglass pool" },
-];
-
-const heroTestimonials = [
-  { text: "Transformed our backyard into paradise!", author: "Sarah M.", location: "Columbus" },
-  { text: "Best investment we've made in our home.", author: "James & Linda T.", location: "Delaware" },
-  { text: "Expertise and transparency from start to finish.", author: "Michael R.", location: "Franklin County" },
-];
+const hero = home.hero;
+const heroPoolImages = hero.poolImages;
+const heroTestimonials = hero.testimonials;
 
 export function Hero() {
   const [activeImage, setActiveImage] = useState(0);
@@ -81,15 +72,15 @@ export function Hero() {
               </div>
               <div className="w-px h-4 bg-white/20" />
               <span className="text-white text-xs sm:text-sm lg:text-xs font-medium">
-                Authorized San Juan Pools Dealer
+                {hero.badge}
               </span>
             </div>
 
             {/* Headline */}
             <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl md:text-6xl lg:text-[1.5rem] xl:text-7xl 2xl:text-8xl font-bold text-white leading-[1.05] lg:leading-[1] mb-2 sm:mb-5 lg:mb-1 xl:mb-5 tracking-tight">
-              Dive into
+              {hero.headingLead}
               <br />
-              <span className="shimmer-text">Luxury</span>
+              <span className="shimmer-text">{hero.headingHighlight}</span>
             </h1>
 
             {/* Slogan */}
@@ -99,8 +90,7 @@ export function Hero() {
 
             {/* Subtitle */}
             <p className="hero-animate hero-animate-3 text-base sm:text-lg md:text-xl lg:text-xs xl:text-lg text-white leading-snug lg:leading-snug mb-4 sm:mb-8 lg:mb-2.5 xl:mb-7 max-w-lg lg:max-w-md">
-              Premium fiberglass pools and custom outdoor living spaces, crafted
-              and installed by Columbus&apos;s most trusted pool experts.
+              {hero.subtitle}
             </p>
 
             {/* CTAs */}
@@ -110,7 +100,7 @@ export function Hero() {
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 lg:px-5 xl:px-8 py-3 sm:py-3.5 lg:py-2 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 transition-all duration-300 text-sm sm:text-base lg:text-xs xl:text-base"
               >
                 <Sparkles size={18} className="text-white" />
-                Pool Simulator
+                {hero.simulatorLabel}
               </Link>
               <Link
                 href="/fiberglass-pool-gallery"
@@ -121,7 +111,7 @@ export function Hero() {
                   <Play size={16} className="text-white ml-0.5 hidden sm:block lg:hidden xl:block" />
                   <Play size={12} className="text-white ml-0.5 hidden lg:block xl:hidden" />
                 </div>
-                Explore Our Pools
+                {hero.galleryLabel}
               </Link>
             </div>
 

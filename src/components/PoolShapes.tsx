@@ -4,23 +4,10 @@ import Image from "@/components/Image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import home from "@/content/pages/home.json";
 
-const shapes = [
-  {
-    name: "Rectangular",
-    description:
-      "Clean lines and a timeless choice. Optimal for lap swimming — simple, elegant, and infinitely versatile. 49 models available.",
-    models: ["Great Lakes", "Grand Manhattan", "Niagara", "Monte Carlo", "Caesar's Palace", "Wylela Beach Grande"],
-    image: "/images/pools/great-lakes.jpg",
-  },
-  {
-    name: "Freeform",
-    description:
-      "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. Includes Roman and oval shapes.",
-    models: ["Atlantic", "Costa Azul", "Oasis", "Clearwater Beach", "Desert Falls", "Huntington Beach"],
-    image: "/images/pools/atlantic.jpg",
-  },
-];
+const poolShapes = home.poolShapes;
+const shapes = poolShapes.shapes;
 
 export function PoolShapes() {
   return (
@@ -32,18 +19,17 @@ export function PoolShapes() {
             <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Pool Designs
+                {poolShapes.badge}
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-5">
-              Find Your Perfect{" "}
+              {poolShapes.headingLead}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                Shape
+                {poolShapes.headingHighlight}
               </span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-              Every backyard is unique. Choose from three distinct pool shapes,
-              each designed to complement different spaces and styles.
+              {poolShapes.intro}
             </p>
           </div>
         </ScrollReveal>

@@ -3,45 +3,31 @@
 import Link from "next/link";
 import { Star, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import testimonials from "@/content/testimonials.json";
 
-const reviews = [
-  {
-    name: "Sarah M.",
-    location: "Columbus, OH",
-    text: "Maxima Pools transformed our backyard into an absolute paradise. The installation was seamless and the quality of the fiberglass pool is outstanding. Couldn't be happier with the results!",
-    rating: 5,
-    initials: "SM",
-    gradient: "from-cyan-400 to-blue-500",
-    date: "2 months ago",
-  },
-  {
-    name: "James & Linda T.",
-    location: "Delaware, OH",
-    text: "From start to finish, the Maxima team was professional, communicative, and delivered exactly what they promised. Our San Juan pool is the best investment we've made in our home.",
-    rating: 5,
-    initials: "JL",
-    gradient: "from-teal-400 to-cyan-500",
-    date: "3 months ago",
-  },
-  {
-    name: "Michael R.",
-    location: "Franklin County",
-    text: "We compared several pool installers and Maxima stood out for their expertise and transparency. The concrete patio work combined with the pool installation was flawless.",
-    rating: 5,
-    initials: "MR",
-    gradient: "from-blue-400 to-indigo-500",
-    date: "1 month ago",
-  },
-  {
-    name: "David K.",
-    location: "Union County",
-    text: "Excellent service from beginning to end. The team was knowledgeable about every San Juan model and helped us pick the perfect pool for our yard. Highly recommend!",
-    rating: 5,
-    initials: "DK",
-    gradient: "from-accent to-accent-dark",
-    date: "2 weeks ago",
-  },
+const section = testimonials.section;
+
+// Decorative avatar styling kept in code (not editable content). Falls back
+// by index if more reviews are added than styles defined.
+const avatarGradients = [
+  "from-cyan-400 to-blue-500",
+  "from-teal-400 to-cyan-500",
+  "from-blue-400 to-indigo-500",
+  "from-accent to-accent-dark",
 ];
+
+function initialsFromName(name: string): string {
+  const parts = name.replace(/[^A-Za-z ]/g, "").trim().split(/\s+/);
+  const first = parts[0]?.[0] ?? "";
+  const second = parts[1]?.[0] ?? "";
+  return (first + second).toUpperCase();
+}
+
+const reviews = testimonials.reviews.map((r, i) => ({
+  ...r,
+  initials: initialsFromName(r.name),
+  gradient: avatarGradients[i % avatarGradients.length],
+}));
 
 function StarRating({ count }: { count: number }) {
   return (
@@ -63,18 +49,17 @@ export function Testimonials() {
             <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Reviews
+                {section.badge}
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-              What Our Clients{" "}
+              {section.headingLead}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                Say About Us
+                {section.headingHighlight}
               </span>
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-              Don&apos;t just take our word for it — hear from Columbus-area
-              homeowners who trusted Maxima Pools.
+              {section.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -85,7 +70,7 @@ export function Testimonials() {
           <ScrollReveal className="lg:col-span-3">
             <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 text-center">
               <p className="text-sm font-bold text-gray-900 uppercase tracking-wider mb-2">
-                Excellent
+                {section.excellentLabel}
               </p>
               <div className="flex justify-center gap-0.5 mb-3">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -93,7 +78,7 @@ export function Testimonials() {
                 ))}
               </div>
               <p className="text-xs text-gray-400 mb-4">
-                Based on <span className="font-semibold text-gray-600">Google Reviews</span>
+                {section.basedOnLabel} <span className="font-semibold text-gray-600">Google Reviews</span>
               </p>
               <div className="flex items-center justify-center gap-2">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none">
@@ -161,7 +146,7 @@ export function Testimonials() {
               href="/reviews"
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
             >
-              See All Reviews
+              {section.ctaLabel}
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"
@@ -173,12 +158,7 @@ export function Testimonials() {
         {/* Bottom trust bar */}
         <ScrollReveal>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-6 lg:gap-10">
-            {[
-              "Google 5-Star Rated",
-              "San Juan Authorized Dealer",
-              "Licensed & Insured",
-              "Family Owned & Operated",
-            ].map((badge) => (
+            {section.trustBar.map((badge) => (
               <div key={badge} className="flex items-center gap-2 text-gray-400">
                 <div className="w-1.5 h-1.5 rounded-full bg-accent/50" />
                 <span className="text-xs font-medium">{badge}</span>

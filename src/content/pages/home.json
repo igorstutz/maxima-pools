@@ -1,0 +1,232 @@
+{
+  "hero": {
+    "badge": "Authorized San Juan Pools Dealer",
+    "headingLead": "Dive into",
+    "headingHighlight": "Luxury",
+    "subtitle": "Premium fiberglass pools and custom outdoor living spaces, crafted and installed by Columbus's most trusted pool experts.",
+    "simulatorLabel": "Pool Simulator",
+    "galleryLabel": "Explore Our Pools",
+    "poolImages": [
+      { "src": "/images/pools/atlantic.jpg", "alt": "Atlantic fiberglass pool" },
+      { "src": "/images/pools/grand-manhattan.png", "alt": "Grand Manhattan fiberglass pool" },
+      { "src": "/images/pools/oasis.jpg", "alt": "Oasis fiberglass pool" },
+      { "src": "/images/pools/venetian.jpg", "alt": "Venetian fiberglass pool" },
+      { "src": "/images/pools/niagara.png", "alt": "Niagara fiberglass pool" }
+    ],
+    "testimonials": [
+      { "text": "Transformed our backyard into paradise!", "author": "Sarah M.", "location": "Columbus" },
+      { "text": "Best investment we've made in our home.", "author": "James & Linda T.", "location": "Delaware" },
+      { "text": "Expertise and transparency from start to finish.", "author": "Michael R.", "location": "Franklin County" }
+    ]
+  },
+  "whyMaxima": {
+    "badge": "Why Choose Us",
+    "headingLead": "Columbus's Trusted",
+    "headingHighlight": "Pool Experts",
+    "intro": "Maxima Pools is a family-owned installer serving Central Ohio. Backed by San Juan Pools — the industry leader in fiberglass pool quality since 1958.",
+    "ctaLabel": "Pool Simulator",
+    "highlights": [
+      "100% Hand-Laid Fiberglass",
+      "Structural Warranty",
+      "100+ Pool Models Available",
+      "Licensed & Fully Insured"
+    ],
+    "card1": {
+      "image": "/images/pools/clear-water-beach.png",
+      "imageAlt": "Clear Water Beach pool installation",
+      "title": "Authorized San Juan Pools Dealer",
+      "description": "We exclusively offer San Juan fiberglass pools — the strongest, most durable pool shells manufactured in America since 1958."
+    },
+    "card2": {
+      "title": "Superior Quality Guaranteed",
+      "description": "Every pool backed by industry-leading warranties and built to last a lifetime.",
+      "statLabels": ["Pool Models", "Hand-Laid", "In Columbus"]
+    },
+    "card3": {
+      "title": "Full-Service Installation",
+      "description": "We handle everything from excavation to the finishing touches — pool, plumbing, electrical, concrete, and landscaping.",
+      "items": ["Pool Placement", "Plumbing & Electric", "Concrete Patios", "Landscaping"]
+    },
+    "card4": {
+      "title": "Family-Owned & Operated",
+      "description": "We treat every project like it's our own home. Personalized service, transparent pricing, and genuine care.",
+      "ratingNote": "5-star rated by families"
+    },
+    "card5": {
+      "logo": "/images/logo/sanjuan-logo.png",
+      "title": "Best of the Best",
+      "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America.",
+      "linkLabel": "Visit sanjuanpools.com"
+    }
+  },
+  "featuredPools": {
+    "badge": "Our Collection",
+    "headingLead": "Explore Pool",
+    "headingHighlight": "Designs",
+    "intro": "Find the shape that fits your backyard — built by San Juan Pools, installed by Maxima.",
+    "viewAllLabel": "View All 100+ Models",
+    "featured": {
+      "name": "Atlantic",
+      "description": "One of our most popular swimming pools, the Atlantic features a conservative free-form layout with a traditional shallow-to-deep end design. The spacious swim area, built-in bench seating, and generous tanning ledge make it ideal for both relaxation and entertaining.",
+      "shape": "Free-form",
+      "size": "16' x 35'",
+      "depth": "3'6\" - 6'5\"",
+      "image": "/images/pools/atlantic.jpg",
+      "popularBadge": "Most Popular",
+      "featuredLabel": "Featured Model",
+      "detailsLabel": "View Full Details"
+    },
+    "pools": [
+      { "name": "Grand Manhattan", "shape": "Rectangle", "size": "16' x 35'", "image": "/images/pools/grand-manhattan.png" },
+      { "name": "Costa Azul", "shape": "Free-form", "size": "15' x 35'", "image": "/images/pools/costa-azul.jpg" },
+      { "name": "Venetian", "shape": "Roman", "size": "14' x 30'", "image": "/images/pools/venetian.jpg" },
+      { "name": "Oasis", "shape": "Free-form", "size": "16' x 38'", "image": "/images/pools/oasis.jpg" },
+      { "name": "Great Lakes", "shape": "Rectangle", "size": "14' x 27'", "image": "/images/pools/great-lakes.jpg" }
+    ]
+  },
+  "process": {
+    "badge": "How It's Made",
+    "headingLead": "From Factory to",
+    "headingHighlight": "Backyard",
+    "intro": "Not all fiberglass pools are built the same. San Juan uses 100% hand-laid fiberglass with marine-grade Vinyl Ester resin — the strongest pool shells manufactured in America.",
+    "ctaLabel": "Start Your Project Today",
+    "ctaNote": "Free consultation & estimate — no obligation",
+    "steps": [
+      { "step": "01", "title": "Precision Mold", "description": "Every San Juan pool starts with a precisely waxed mold to ensure perfect shape accuracy. Each mold is engineered for exact dimensions and contours.", "image": "/images/process/mold.webp" },
+      { "step": "02", "title": "Hand-Laid Fiberglass", "description": "All fiberglass is 100% hand-laid — never sprayed. Expert laminators with 20+ years of experience lay minimum five layers of woven roving for superior structural consistency.", "image": "/images/process/glass.webp" },
+      { "step": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.", "image": "/images/process/panels.webp" },
+      { "step": "04", "title": "Structural Reinforcement", "description": "Structural ribs are positioned to reinforce wall strength. Using Vinyl Ester resin throughout — the same marine-grade standard used in boat building.", "image": "/images/process/ribs.webp" },
+      { "step": "05", "title": "Clean & Inspect", "description": "Every pool is thoroughly cleaned and inspected. All imperfections are repaired — only perfection is good enough for a San Juan pool.", "image": "/images/process/final-prep.webp" },
+      { "step": "06", "title": "Tile & Outfit", "description": "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.", "image": "/images/process/outfitting.webp" },
+      { "step": "07", "title": "Expert Installation", "description": "Our Maxima crew handles excavation, pool placement, plumbing, electrical, concrete patios, and all finishing touches. Your backyard paradise — complete.", "image": "/images/process/completed.webp" }
+    ]
+  },
+  "poolShapes": {
+    "badge": "Pool Designs",
+    "headingLead": "Find Your Perfect",
+    "headingHighlight": "Shape",
+    "intro": "Every backyard is unique. Choose from three distinct pool shapes, each designed to complement different spaces and styles.",
+    "shapes": [
+      {
+        "name": "Rectangular",
+        "description": "Clean lines and a timeless choice. Optimal for lap swimming — simple, elegant, and infinitely versatile. 49 models available.",
+        "models": ["Great Lakes", "Grand Manhattan", "Niagara", "Monte Carlo", "Caesar's Palace", "Wylela Beach Grande"],
+        "image": "/images/pools/great-lakes.jpg"
+      },
+      {
+        "name": "Freeform",
+        "description": "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. Includes Roman and oval shapes.",
+        "models": ["Atlantic", "Costa Azul", "Oasis", "Clearwater Beach", "Desert Falls", "Huntington Beach"],
+        "image": "/images/pools/atlantic.jpg"
+      }
+    ]
+  },
+  "outdoorLiving": {
+    "badge": "Beyond the Pool",
+    "headingLead": "Complete Outdoor",
+    "headingHighlight": "Living",
+    "intro": "Your pool is just the beginning. We design and build complete backyard retreats — from custom patios and outdoor kitchens to fire features and shade structures.",
+    "ctaLabel": "Explore Outdoor Living",
+    "heroImage": "/images/outdoor/grill.jpg",
+    "heroImageAlt": "Luxury outdoor entertaining area with grill",
+    "heroLabelTitle": "Complete Outdoor Entertainment",
+    "heroLabelSub": "Designed & built by Maxima",
+    "services": [
+      { "icon": "UtensilsCrossed", "title": "Outdoor Kitchens", "description": "Custom-built kitchens with grills, countertops, sinks, and pizza ovens for the ultimate entertaining space.", "image": "/images/outdoor/kitchen.jpg" },
+      { "icon": "Flame", "title": "Fire Features", "description": "Fire pits and seating walls that extend your outdoor season and create an inviting atmosphere year-round.", "image": "/images/outdoor/living-1.jpg" },
+      { "icon": "Lamp", "title": "Shelters & Shade", "description": "Pergolas, pavilions, and gazebos that provide comfortable shade and define your outdoor rooms.", "image": "/images/outdoor/shade.jpg" }
+    ],
+    "learnMoreLabel": "Learn more",
+    "stats": [
+      { "value": "Custom", "label": "Outdoor Kitchens" },
+      { "value": "Stamped", "label": "Concrete Patios" },
+      { "value": "Gas & Wood", "label": "Fire Features" },
+      { "value": "Pergolas", "label": "Shade Structures" }
+    ],
+    "exploreMoreLabel": "Explore More"
+  },
+  "poolSizes": {
+    "badge": "Dimensions",
+    "headingLead": "Pool Sizes for",
+    "headingHighlight": "Every Yard",
+    "intro": "From compact plunge pools to expansive family retreats, find the perfect size for your space.",
+    "featuredBadge": "Most Popular",
+    "availableSizesLabel": "Available Sizes",
+    "sizes": [
+      {
+        "category": "Small",
+        "area": "Up to 300 sq ft",
+        "description": "Compact pools ideal for smaller backyards or less maintenance. Perfect cozy retreats that still deliver the full pool experience.",
+        "dimensions": ["9'x17'", "9'x21'", "10'x16'", "10'x20'", "11'x20'", "12'x25'"],
+        "image": "/images/pools/monte-carlo.png",
+        "featured": false
+      },
+      {
+        "category": "Medium",
+        "area": "300–500 sq ft",
+        "description": "The perfect balance of space and practicality. Room for fun with the whole family — the most popular size range among our customers.",
+        "dimensions": ["10'x40'", "14'x27'", "14'x30'", "14'x32'", "15'x35'"],
+        "image": "/images/pools/oasis.jpg",
+        "featured": true
+      },
+      {
+        "category": "Large",
+        "area": "500+ sq ft",
+        "description": "Transform your backyard into an entertainment center. Spacious swim areas with room for tanning ledges, benches, and attached spas.",
+        "dimensions": ["14'x37'", "15'x40'", "16'x35'", "16'x38'", "16'x45'"],
+        "image": "/images/pools/clear-water-beach.png",
+        "featured": false
+      }
+    ],
+    "ctaText": "Not sure which size is right? Visualize it in your own backyard.",
+    "ctaLabel": "Simulate Pool in Your Backyard"
+  },
+  "financing": {
+    "badge": "Pool Financing",
+    "headingLead": "Your Dream Pool,",
+    "headingHighlight": "Within Reach",
+    "perks": [
+      { "icon": "Banknote", "text": "Loans up to $250K" },
+      { "icon": "Clock", "text": "Terms up to 30 Years" },
+      { "icon": "ShieldCheck", "text": "No Credit Impact to Apply" }
+    ],
+    "ctaPrimaryLabel": "Explore Financing Options",
+    "ctaSecondaryLabel": "Apply Now"
+  },
+  "socialFeed": {
+    "badge": "Stay Connected",
+    "headingLead": "Follow Us on",
+    "headingHighlight": "Facebook",
+    "intro": "See our latest pool installations, backyard transformations, and project updates. Follow Maxima Pools to keep up with everything we're building across Central Ohio.",
+    "ctaLabel": "Follow on Facebook",
+    "facebookUrl": "https://www.facebook.com/profile.php?id=61582788479318",
+    "fallbackTitle": "Maxima Pools on Facebook",
+    "fallbackText": "See our latest posts, photos, and project updates on our Facebook page.",
+    "fallbackLinkLabel": "Open Facebook"
+  },
+  "locations": {
+    "badge": "Service Areas",
+    "headingLead": "Locations We",
+    "headingHighlight": "Serve",
+    "intro": "Proudly serving Columbus and surrounding communities across Central Ohio with premium fiberglass pool installations.",
+    "citiesLabel": "Cities & Towns",
+    "countiesLabel": "Counties",
+    "ctaText": "Don't see your area? We may still serve you.",
+    "ctaLabel": "Contact us to find out"
+  },
+  "finalCta": {
+    "headingLead": "Ready to",
+    "headingHighlight": "Dive In?",
+    "intro": "Your dream pool is just one conversation away. Get in touch for a free consultation and estimate — no obligation.",
+    "primaryLabel": "Get Your Free Estimate",
+    "simulatorLabel": "Pool Simulator",
+    "phone": "(614) 384-5081",
+    "backgroundImage": "/images/pools/clear-water-beach.png",
+    "backgroundImageAlt": "Beautiful fiberglass pool at sunset",
+    "infoCards": [
+      { "icon": "Phone", "title": "Call Us", "detail": "(614) 384-5081", "sub": "Mon–Fri, 8am–5pm" },
+      { "icon": "MapPin", "title": "Visit Us", "detail": "4059 State Route 37 East", "sub": "Suite A, Delaware, OH 43015" },
+      { "icon": "Clock", "title": "Free Estimates", "detail": "Quick turnaround", "sub": "Usually within 48 hours" }
+    ]
+  }
+}

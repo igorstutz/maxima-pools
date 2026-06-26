@@ -2,7 +2,9 @@ import Link from "next/link";
 import { MapPin, ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { locations, slugify } from "@/lib/locations";
+import home from "@/content/pages/home.json";
 
+const content = home.locations;
 const cities = locations.filter((l) => l.type === "city");
 const counties = locations.filter((l) => l.type === "county");
 
@@ -15,16 +17,15 @@ export function LocationsWeServe() {
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 rounded-full px-5 py-2 mb-5">
               <MapPin size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Service Areas
+                {content.badge}
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Locations We{" "}
-              <span className="text-accent">Serve</span>
+              {content.headingLead}{" "}
+              <span className="text-accent">{content.headingHighlight}</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-2xl mx-auto leading-relaxed">
-              Proudly serving Columbus and surrounding communities across Central
-              Ohio with premium fiberglass pool installations.
+              {content.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -32,7 +33,7 @@ export function LocationsWeServe() {
         {/* Cities */}
         <ScrollReveal>
           <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
-            Cities & Towns
+            {content.citiesLabel}
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mb-10">
             {cities.map((loc) => (
@@ -56,7 +57,7 @@ export function LocationsWeServe() {
         {/* Counties */}
         <ScrollReveal>
           <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">
-            Counties
+            {content.countiesLabel}
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 mb-12">
             {counties.map((loc) => (
@@ -81,13 +82,13 @@ export function LocationsWeServe() {
         <ScrollReveal>
           <div className="text-center">
             <p className="text-gray-400 text-sm mb-4">
-              Don&apos;t see your area? We may still serve you.
+              {content.ctaText}
             </p>
             <Link
               href="/contact"
               className="group inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
             >
-              Contact us to find out
+              {content.ctaLabel}
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

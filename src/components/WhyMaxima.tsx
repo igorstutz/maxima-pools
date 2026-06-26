@@ -13,6 +13,9 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useEffect, useRef, useState } from "react";
+import home from "@/content/pages/home.json";
+
+const why = home.whyMaxima;
 
 function AnimatedCounter({
   end,
@@ -64,12 +67,7 @@ function AnimatedCounter({
   );
 }
 
-const highlights = [
-  "100% Hand-Laid Fiberglass",
-  "Structural Warranty",
-  "100+ Pool Models Available",
-  "Licensed & Fully Insured",
-];
+const highlights = why.highlights;
 
 export function WhyMaxima() {
   return (
@@ -86,29 +84,27 @@ export function WhyMaxima() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Why Choose Us
+                  {why.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight">
-                Columbus&apos;s Trusted{" "}
+                {why.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Pool Experts
+                  {why.headingHighlight}
                 </span>
               </h2>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={1}>
             <p className="text-lg text-gray-500 leading-relaxed">
-              Maxima Pools is a family-owned installer serving Central Ohio.
-              Backed by San Juan Pools — the industry leader in fiberglass pool
-              quality since 1958.
+              {why.intro}
             </p>
             <Link
               href="/pool-simulator"
               className="group inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
             >
               <Sparkles size={18} className="group-hover:rotate-12 transition-transform duration-300" />
-              Pool Simulator
+              {why.ctaLabel}
             </Link>
           </ScrollReveal>
         </div>
@@ -123,8 +119,8 @@ export function WhyMaxima() {
               {/* Image — clean, no overlay */}
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
-                  src="/images/pools/clear-water-beach.png"
-                  alt="Clear Water Beach pool installation"
+                  src={why.card1.image}
+                  alt={why.card1.imageAlt}
                   fill
                   className="object-cover group-hover:scale-105 transition-all duration-700"
                   sizes="(max-width: 1024px) 100vw, 58vw"
@@ -137,12 +133,11 @@ export function WhyMaxima() {
                     <Award size={20} className="text-accent" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-gray-900">
-                    Authorized San Juan Pools Dealer
+                    {why.card1.title}
                   </h3>
                 </div>
                 <p className="text-gray-500 leading-relaxed text-sm mb-4">
-                  We exclusively offer San Juan fiberglass pools — the strongest,
-                  most durable pool shells manufactured in America since 1958.
+                  {why.card1.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {highlights.map((item) => (
@@ -170,11 +165,10 @@ export function WhyMaxima() {
                   <Shield size={24} className="text-white" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
-                  Superior Quality Guaranteed
+                  {why.card2.title}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  Every pool backed by industry-leading warranties and built to
-                  last a lifetime.
+                  {why.card2.description}
                 </p>
               </div>
               <div className="grid grid-cols-3 gap-4 mt-8 pt-8 border-t border-gray-100">
@@ -183,7 +177,7 @@ export function WhyMaxima() {
                     <AnimatedCounter end={100} suffix="+" />
                   </div>
                   <div className="text-xs text-gray-400 font-medium">
-                    Pool Models
+                    {why.card2.statLabels[0]}
                   </div>
                 </div>
                 <div className="text-center">
@@ -191,7 +185,7 @@ export function WhyMaxima() {
                     <AnimatedCounter end={100} suffix="%" />
                   </div>
                   <div className="text-xs text-gray-400 font-medium">
-                    Hand-Laid
+                    {why.card2.statLabels[1]}
                   </div>
                 </div>
                 <div className="text-center">
@@ -199,7 +193,7 @@ export function WhyMaxima() {
                     #1
                   </div>
                   <div className="text-xs text-gray-400 font-medium">
-                    In Columbus
+                    {why.card2.statLabels[2]}
                   </div>
                 </div>
               </div>
@@ -218,19 +212,13 @@ export function WhyMaxima() {
                 <Wrench size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                Full-Service Installation
+                {why.card3.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                We handle everything from excavation to the finishing touches —
-                pool, plumbing, electrical, concrete, and landscaping.
+                {why.card3.description}
               </p>
               <div className="space-y-2.5">
-                {[
-                  "Pool Placement",
-                  "Plumbing & Electric",
-                  "Concrete Patios",
-                  "Landscaping",
-                ].map((item) => (
+                {why.card3.items.map((item) => (
                   <div key={item} className="flex items-center gap-2.5">
                     <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                       <CheckCircle2 size={12} className="text-accent" />
@@ -252,11 +240,10 @@ export function WhyMaxima() {
                 <HeartHandshake size={24} className="text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                Family-Owned & Operated
+                {why.card4.title}
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                We treat every project like it&apos;s our own home. Personalized
-                service, transparent pricing, and genuine care.
+                {why.card4.description}
               </p>
               <div className="flex items-center gap-3 p-3 rounded-xl bg-gray-50 border border-gray-100">
                 <div className="flex -space-x-2">
@@ -289,7 +276,7 @@ export function WhyMaxima() {
                     ))}
                   </div>
                   <p className="text-xs text-gray-500 mt-0.5">
-                    5-star rated by families
+                    {why.card4.ratingNote}
                   </p>
                 </div>
               </div>
@@ -308,21 +295,20 @@ export function WhyMaxima() {
               <div className="absolute inset-0 water-caustics opacity-20" />
               <div className="relative">
                 <Image
-                  src="/images/logo/sanjuan-logo.png"
+                  src={why.card5.logo}
                   alt="San Juan Pools - Best of the Best"
                   width={140}
                   height={140}
                   className="w-28 h-28 sm:w-32 sm:h-32 object-contain mx-auto mb-5 drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                 />
                 <h3 className="text-lg font-bold text-white mb-2">
-                  Best of the Best
+                  {why.card5.title}
                 </h3>
                 <p className="text-white text-sm leading-relaxed max-w-xs">
-                  Quality Fiberglass Pools since 1958. The strongest pool shells
-                  manufactured in America.
+                  {why.card5.description}
                 </p>
                 <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-white/80 group-hover:text-white transition-colors">
-                  Visit sanjuanpools.com
+                  {why.card5.linkLabel}
                   <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </div>

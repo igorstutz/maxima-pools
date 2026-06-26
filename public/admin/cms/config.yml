@@ -91,3 +91,324 @@ collections:
               - { label: "Heading — first part", name: headingLead, widget: string }
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Body paragraph", name: body, widget: text }
+
+      - name: home
+        label: "Home Page"
+        file: "src/content/pages/home.json"
+        format: json
+        preview_path: ""
+        fields:
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first line", name: headingLead, widget: string, hint: "Plain white text, shown on the first line." }
+              - { label: "Heading — highlighted line", name: headingHighlight, widget: string, hint: "Second line, shown with the shimmer effect." }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Gallery button label", name: galleryLabel, widget: string }
+              - label: "Rotating pool images"
+                name: poolImages
+                widget: list
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Image", name: src, widget: image }
+                  - { label: "Alt text (for SEO/accessibility)", name: alt, widget: string }
+              - label: "Rotating mini testimonials"
+                name: testimonials
+                widget: list
+                summary: "{{fields.author}}"
+                fields:
+                  - { label: "Quote", name: text, widget: string }
+                  - { label: "Author", name: author, widget: string }
+                  - { label: "Location", name: location, widget: string }
+          - label: "Why Maxima section"
+            name: whyMaxima
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - label: "Highlight chips"
+                name: highlights
+                widget: list
+                field: { label: "Highlight", name: highlight, widget: string }
+              - label: "Card 1 — main card with image"
+                name: card1
+                widget: object
+                fields:
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Image alt text", name: imageAlt, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+              - label: "Card 2 — quality / stats card"
+                name: card2
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Stat labels (3, under the numbers)"
+                    name: statLabels
+                    widget: list
+                    field: { label: "Label", name: label, widget: string }
+              - label: "Card 3 — full-service card"
+                name: card3
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Checklist items"
+                    name: items
+                    widget: list
+                    field: { label: "Item", name: item, widget: string }
+              - label: "Card 4 — family-owned card"
+                name: card4
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Rating note", name: ratingNote, widget: string }
+              - label: "Card 5 — San Juan partnership card"
+                name: card5
+                widget: object
+                fields:
+                  - { label: "Logo image", name: logo, widget: image }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Link label", name: linkLabel, widget: string }
+          - label: "Featured Pools section"
+            name: featuredPools
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "'View all' button label", name: viewAllLabel, widget: string }
+              - label: "Featured pool (large card)"
+                name: featured
+                widget: object
+                fields:
+                  - { label: "Pool name", name: name, widget: string, hint: "Must match a real pool name — it links to /pools/<name>." }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Shape", name: shape, widget: string }
+                  - { label: "Size", name: size, widget: string }
+                  - { label: "Depth", name: depth, widget: string }
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Corner badge", name: popularBadge, widget: string }
+                  - { label: "Small label above name", name: featuredLabel, widget: string }
+                  - { label: "Details link label", name: detailsLabel, widget: string }
+              - label: "Pool grid (smaller cards)"
+                name: pools
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Pool name", name: name, widget: string, hint: "Must match a real pool name — it links to /pools/<name>." }
+                  - { label: "Shape", name: shape, widget: string }
+                  - { label: "Size", name: size, widget: string }
+                  - { label: "Image", name: image, widget: image }
+          - label: "Process / How It's Made section"
+            name: process
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Note under the button", name: ctaNote, widget: string }
+              - label: "Steps"
+                name: steps
+                widget: list
+                summary: "{{fields.step}} — {{fields.title}}"
+                fields:
+                  - { label: "Step number", name: step, widget: string }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Image", name: image, widget: image }
+          - label: "Pool Shapes section"
+            name: poolShapes
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - label: "Shapes"
+                name: shapes
+                widget: list
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Shape name", name: name, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Example models (chips)"
+                    name: models
+                    widget: list
+                    field: { label: "Model", name: model, widget: string }
+                  - { label: "Image", name: image, widget: image }
+          - label: "Outdoor Living section"
+            name: outdoorLiving
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Hero image", name: heroImage, widget: image }
+              - { label: "Hero image alt text", name: heroImageAlt, widget: string }
+              - { label: "Floating label — title", name: heroLabelTitle, widget: string }
+              - { label: "Floating label — subtitle", name: heroLabelSub, widget: string }
+              - label: "Service cards"
+                name: services
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["UtensilsCrossed", "Flame", "Lamp"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Image", name: image, widget: image }
+              - { label: "'Learn more' link label", name: learnMoreLabel, widget: string }
+              - label: "Stats strip"
+                name: stats
+                widget: list
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Value", name: value, widget: string }
+                  - { label: "Label", name: label, widget: string }
+              - { label: "'Explore more' button label", name: exploreMoreLabel, widget: string }
+          - label: "Pool Sizes section"
+            name: poolSizes
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Featured badge text", name: featuredBadge, widget: string }
+              - { label: "'Available sizes' label", name: availableSizesLabel, widget: string }
+              - label: "Sizes"
+                name: sizes
+                widget: list
+                summary: "{{fields.category}}"
+                fields:
+                  - { label: "Category", name: category, widget: select, options: ["Small", "Medium", "Large"], hint: "Controls the card color. Keep one of Small/Medium/Large." }
+                  - { label: "Area", name: area, widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - label: "Dimensions (chips)"
+                    name: dimensions
+                    widget: list
+                    field: { label: "Dimension", name: dimension, widget: string }
+                  - { label: "Image", name: image, widget: image }
+                  - { label: "Mark as 'Most Popular'", name: featured, widget: boolean, default: false }
+              - { label: "Bottom CTA text", name: ctaText, widget: string }
+              - { label: "Bottom CTA button label", name: ctaLabel, widget: string }
+          - label: "Financing section"
+            name: financing
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - label: "Perks"
+                name: perks
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Banknote", "Clock", "ShieldCheck"] }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Primary button label", name: ctaPrimaryLabel, widget: string }
+              - { label: "Secondary button label", name: ctaSecondaryLabel, widget: string }
+          - label: "Facebook / Social section"
+            name: socialFeed
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Facebook page URL", name: facebookUrl, widget: string, hint: "Must be a Facebook Page URL for the live feed to show." }
+              - { label: "Fallback title", name: fallbackTitle, widget: string }
+              - { label: "Fallback text", name: fallbackText, widget: text }
+              - { label: "Fallback link label", name: fallbackLinkLabel, widget: string }
+          - label: "Locations section"
+            name: locations
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "'Cities & Towns' label", name: citiesLabel, widget: string }
+              - { label: "'Counties' label", name: countiesLabel, widget: string }
+              - { label: "Bottom CTA text", name: ctaText, widget: string }
+              - { label: "Bottom CTA link label", name: ctaLabel, widget: string }
+          - label: "Final Call-to-Action section"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first line", name: headingLead, widget: string }
+              - { label: "Heading — highlighted line", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Phone (shown)", name: phone, widget: string }
+              - { label: "Background image", name: backgroundImage, widget: image }
+              - { label: "Background image alt text", name: backgroundImageAlt, widget: string }
+              - label: "Info cards"
+                name: infoCards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Phone", "MapPin", "Clock"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Detail (main line)", name: detail, widget: string }
+                  - { label: "Sub (second line)", name: sub, widget: string }
+
+      - name: testimonials
+        label: "Testimonials (shared)"
+        file: "src/content/testimonials.json"
+        format: json
+        description: "Customer reviews shown on the Home page and the Pool Closing page."
+        fields:
+          - label: "Section heading"
+            name: section
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Rating word (e.g. Excellent)", name: excellentLabel, widget: string }
+              - { label: "'Based on' label", name: basedOnLabel, widget: string }
+              - { label: "'See all reviews' button label", name: ctaLabel, widget: string }
+              - label: "Bottom trust badges"
+                name: trustBar
+                widget: list
+                field: { label: "Badge", name: badge, widget: string }
+          - label: "Reviews"
+            name: reviews
+            widget: list
+            summary: "{{fields.name}} — {{fields.location}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Location", name: location, widget: string }
+              - { label: "Review text", name: text, widget: text }
+              - { label: "Rating (1–5)", name: rating, widget: number, default: 5, min: 1, max: 5 }
+              - { label: "Date label (e.g. 2 months ago)", name: date, widget: string }

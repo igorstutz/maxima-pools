@@ -4,59 +4,26 @@ import Link from "next/link";
 import Image from "@/components/Image";
 import { ArrowRight, ArrowUpRight, Ruler, Layers, Droplets } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import home from "@/content/pages/home.json";
 
-const featuredPool = {
-  name: "Atlantic",
-  description:
-    "One of our most popular swimming pools, the Atlantic features a conservative free-form layout with a traditional shallow-to-deep end design. The spacious swim area, built-in bench seating, and generous tanning ledge make it ideal for both relaxation and entertaining.",
-  shape: "Free-form",
-  size: "16' x 35'",
-  depth: "3'6\" - 6'5\"",
-  image: "/images/pools/atlantic.jpg",
-};
+const featured = home.featuredPools;
+const featuredPool = featured.featured;
 
-const pools = [
-  {
-    name: "Grand Manhattan",
-    shape: "Rectangle",
-    size: "16' x 35'",
-    image: "/images/pools/grand-manhattan.png",
-    span: "lg:col-span-4 lg:row-span-2",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    name: "Costa Azul",
-    shape: "Free-form",
-    size: "15' x 35'",
-    image: "/images/pools/costa-azul.jpg",
-    span: "lg:col-span-4",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    name: "Venetian",
-    shape: "Roman",
-    size: "14' x 30'",
-    image: "/images/pools/venetian.jpg",
-    span: "lg:col-span-4",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    name: "Oasis",
-    shape: "Free-form",
-    size: "16' x 38'",
-    image: "/images/pools/oasis.jpg",
-    span: "lg:col-span-4",
-    aspect: "aspect-[4/3]",
-  },
-  {
-    name: "Great Lakes",
-    shape: "Rectangle",
-    size: "14' x 27'",
-    image: "/images/pools/great-lakes.jpg",
-    span: "lg:col-span-4",
-    aspect: "aspect-[4/3]",
-  },
+// Bento layout for the grid pools — kept in code so the visual layout stays
+// stable regardless of CMS edits. Zipped with featured.pools by index.
+const poolLayout = [
+  { span: "lg:col-span-4 lg:row-span-2", aspect: "aspect-[3/4]" },
+  { span: "lg:col-span-4", aspect: "aspect-[4/3]" },
+  { span: "lg:col-span-4", aspect: "aspect-[4/3]" },
+  { span: "lg:col-span-4", aspect: "aspect-[4/3]" },
+  { span: "lg:col-span-4", aspect: "aspect-[4/3]" },
 ];
+
+const pools = featured.pools.map((pool, i) => ({
+  ...pool,
+  span: poolLayout[i % poolLayout.length].span,
+  aspect: poolLayout[i % poolLayout.length].aspect,
+}));
 
 export function FeaturedPools() {
   return (
@@ -73,25 +40,24 @@ export function FeaturedPools() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Our Collection
+                  {featured.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-4">
-                Explore Pool{" "}
+                {featured.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Designs
+                  {featured.headingHighlight}
                 </span>
               </h2>
               <p className="text-lg text-gray-500 max-w-xl">
-                Find the shape that fits your backyard — built by San Juan
-                Pools, installed by Maxima.
+                {featured.intro}
               </p>
             </div>
             <Link
               href="/pools"
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary-dark text-white rounded-full font-semibold hover:bg-primary transition-colors shrink-0 shadow-lg shadow-primary-dark/20 text-sm"
             >
-              View All 100+ Models
+              {featured.viewAllLabel}
               <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform"
@@ -118,7 +84,7 @@ export function FeaturedPools() {
                 />
                 {/* Shape badge */}
                 <div className="absolute top-5 left-5 bg-white/90 backdrop-blur-sm rounded-full px-4 py-1.5 text-xs font-bold text-primary-dark shadow-lg">
-                  Most Popular
+                  {featuredPool.popularBadge}
                 </div>
               </div>
 
@@ -126,7 +92,7 @@ export function FeaturedPools() {
               <div className="relative p-8 sm:p-10 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-[#0c4a6e] via-[#0369a1] to-[#075985]">
                 <div className="inline-flex items-center gap-1.5 text-accent text-xs font-semibold uppercase tracking-wider mb-4">
                   <Droplets size={14} />
-                  Featured Model
+                  {featuredPool.featuredLabel}
                 </div>
                 <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4 group-hover:text-accent transition-colors duration-300">
                   {featuredPool.name}
@@ -155,7 +121,7 @@ export function FeaturedPools() {
                 </div>
 
                 <span className="inline-flex items-center gap-2 text-accent font-semibold text-sm group-hover:gap-3 transition-all">
-                  View Full Details
+                  {featuredPool.detailsLabel}
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
               </div>

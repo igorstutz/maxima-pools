@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import home from "@/content/pages/home.json";
 
-// Maxima Pools Facebook page (provided by client). The Page Plugin only renders
+const social = home.socialFeed;
+
+// Maxima Pools Facebook page (editable in the CMS). The Page Plugin only renders
 // for Facebook Pages — if this URL is a personal profile it must be converted
 // to a Page for the embedded timeline to show.
-const FB_PAGE_URL =
-  "https://www.facebook.com/profile.php?id=61582788479318";
+const FB_PAGE_URL = social.facebookUrl;
 
 // The Facebook Page Plugin only accepts a fixed pixel width between 180 and 500.
 const FB_MIN_WIDTH = 180;
@@ -95,19 +97,17 @@ export function SocialFeed() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Stay Connected
+                  {social.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-5">
-                Follow Us on{" "}
+                {social.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Facebook
+                  {social.headingHighlight}
                 </span>
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed mb-8 max-w-lg">
-                See our latest pool installations, backyard transformations, and
-                project updates. Follow Maxima Pools to keep up with everything
-                we&apos;re building across Central Ohio.
+                {social.intro}
               </p>
               <a
                 href={FB_PAGE_URL}
@@ -117,7 +117,7 @@ export function SocialFeed() {
                 aria-label="Follow Maxima Pools on Facebook (opens in new tab)"
               >
                 <FacebookIcon />
-                Follow on Facebook
+                {social.ctaLabel}
                 <ArrowUpRight
                   size={16}
                   className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
@@ -156,11 +156,10 @@ export function SocialFeed() {
                             <FacebookIcon className="w-7 h-7" />
                           </span>
                           <span className="font-bold text-gray-900">
-                            Maxima Pools on Facebook
+                            {social.fallbackTitle}
                           </span>
                           <span className="text-sm text-gray-500 max-w-xs">
-                            See our latest posts, photos, and project updates on
-                            our Facebook page.
+                            {social.fallbackText}
                           </span>
                           <a
                             href={FB_PAGE_URL}
@@ -168,7 +167,7 @@ export function SocialFeed() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 mt-1 px-5 py-2.5 bg-[#1877F2] text-white text-sm font-semibold rounded-full hover:opacity-90 transition-opacity"
                           >
-                            Open Facebook
+                            {social.fallbackLinkLabel}
                             <ArrowUpRight size={15} />
                           </a>
                         </span>

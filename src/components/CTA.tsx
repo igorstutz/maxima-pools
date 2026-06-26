@@ -4,6 +4,12 @@ import Link from "next/link";
 import Image from "@/components/Image";
 import { ArrowRight, Phone, MapPin, Clock, Sparkles } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import home from "@/content/pages/home.json";
+
+const cta = home.finalCta;
+
+// Lucide icons referenced by name from the editable content file.
+const infoIcons = { Phone, MapPin, Clock } as const;
 
 export function CTA() {
   return (
@@ -13,8 +19,8 @@ export function CTA() {
           <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[520px] sm:min-h-[560px] flex items-center">
             {/* Background image */}
             <Image
-              src="/images/pools/clear-water-beach.png"
-              alt="Beautiful fiberglass pool at sunset"
+              src={cta.backgroundImage}
+              alt={cta.backgroundImageAlt}
               fill
               className="object-cover"
               sizes="100vw"
@@ -29,20 +35,19 @@ export function CTA() {
                 {/* Left — headline + CTAs */}
                 <div className="lg:col-span-7">
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5">
-                    Ready to
+                    {cta.headingLead}
                     <br />
-                    <span className="shimmer-text">Dive In?</span>
+                    <span className="shimmer-text">{cta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg sm:text-xl text-white leading-relaxed mb-10 max-w-lg">
-                    Your dream pool is just one conversation away. Get in touch
-                    for a free consultation and estimate — no obligation.
+                    {cta.intro}
                   </p>
                   <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap">
                     <Link
                       href="/contact"
                       className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"
                     >
-                      Get Your Free Estimate
+                      {cta.primaryLabel}
                       <ArrowRight
                         size={18}
                         className="group-hover:translate-x-1 transition-transform"
@@ -53,57 +58,41 @@ export function CTA() {
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {cta.simulatorLabel}
                     </Link>
                     <a
                       href="tel:+16143845081"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {cta.phone}
                     </a>
                   </div>
                 </div>
 
                 {/* Right — info cards */}
                 <div className="lg:col-span-5 space-y-3">
-                  {[
-                    {
-                      icon: Phone,
-                      title: "Call Us",
-                      detail: "(614) 384-5081",
-                      sub: "Mon–Fri, 8am–5pm",
-                    },
-                    {
-                      icon: MapPin,
-                      title: "Visit Us",
-                      detail: "4059 State Route 37 East",
-                      sub: "Suite A, Delaware, OH 43015",
-                    },
-                    {
-                      icon: Clock,
-                      title: "Free Estimates",
-                      detail: "Quick turnaround",
-                      sub: "Usually within 48 hours",
-                    },
-                  ].map((item) => (
-                    <div
-                      key={item.title}
-                      className="group flex items-center gap-4 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 hover:bg-white/[0.1] transition-all duration-300"
-                    >
-                      <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
-                        <item.icon size={20} className="text-white" />
+                  {cta.infoCards.map((item) => {
+                    const Icon = infoIcons[item.icon as keyof typeof infoIcons];
+                    return (
+                      <div
+                        key={item.title}
+                        className="group flex items-center gap-4 bg-white/[0.06] backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-5 hover:bg-white/[0.1] transition-all duration-300"
+                      >
+                        <div className="w-12 h-12 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0 group-hover:bg-accent/25 transition-colors">
+                          {Icon && <Icon size={20} className="text-white" />}
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-white font-semibold text-sm sm:text-base truncate">
+                            {item.detail}
+                          </p>
+                          <p className="text-white text-xs sm:text-sm truncate">
+                            {item.sub}
+                          </p>
+                        </div>
                       </div>
-                      <div className="min-w-0">
-                        <p className="text-white font-semibold text-sm sm:text-base truncate">
-                          {item.detail}
-                        </p>
-                        <p className="text-white text-xs sm:text-sm truncate">
-                          {item.sub}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -4,65 +4,25 @@ import Image from "@/components/Image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
+import home from "@/content/pages/home.json";
 
-const steps = [
-  {
-    step: "01",
-    title: "Precision Mold",
-    description:
-      "Every San Juan pool starts with a precisely waxed mold to ensure perfect shape accuracy. Each mold is engineered for exact dimensions and contours.",
-    image: "/images/process/mold.webp",
-    gradient: "from-accent-light to-accent",
-  },
-  {
-    step: "02",
-    title: "Hand-Laid Fiberglass",
-    description:
-      "All fiberglass is 100% hand-laid — never sprayed. Expert laminators with 20+ years of experience lay minimum five layers of woven roving for superior structural consistency.",
-    image: "/images/process/glass.webp",
-    gradient: "from-accent to-accent-dark",
-  },
-  {
-    step: "03",
-    title: "Build the Panels",
-    description:
-      "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.",
-    image: "/images/process/panels.webp",
-    gradient: "from-accent-dark to-primary-light",
-  },
-  {
-    step: "04",
-    title: "Structural Reinforcement",
-    description:
-      "Structural ribs are positioned to reinforce wall strength. Using Vinyl Ester resin throughout — the same marine-grade standard used in boat building.",
-    image: "/images/process/ribs.webp",
-    gradient: "from-primary-light to-primary",
-  },
-  {
-    step: "05",
-    title: "Clean & Inspect",
-    description:
-      "Every pool is thoroughly cleaned and inspected. All imperfections are repaired — only perfection is good enough for a San Juan pool.",
-    image: "/images/process/final-prep.webp",
-    gradient: "from-primary to-primary-dark",
-  },
-  {
-    step: "06",
-    title: "Tile & Outfit",
-    description:
-      "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.",
-    image: "/images/process/outfitting.webp",
-    gradient: "from-primary-dark to-primary",
-  },
-  {
-    step: "07",
-    title: "Expert Installation",
-    description:
-      "Our Maxima crew handles excavation, pool placement, plumbing, electrical, concrete patios, and all finishing touches. Your backyard paradise — complete.",
-    image: "/images/process/completed.webp",
-    gradient: "from-primary to-accent",
-  },
+const process = home.process;
+
+// Per-step gradient kept in code (visual styling, not editable content).
+const stepGradients = [
+  "from-accent-light to-accent",
+  "from-accent to-accent-dark",
+  "from-accent-dark to-primary-light",
+  "from-primary-light to-primary",
+  "from-primary to-primary-dark",
+  "from-primary-dark to-primary",
+  "from-primary to-accent",
 ];
+
+const steps = process.steps.map((s, i) => ({
+  ...s,
+  gradient: stepGradients[i % stepGradients.length],
+}));
 
 export function Process() {
   return (
@@ -77,19 +37,17 @@ export function Process() {
             <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                How It&apos;s Made
+                {process.badge}
               </span>
             </div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 tracking-tight mb-5">
-              From Factory to{" "}
+              {process.headingLead}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                Backyard
+                {process.headingHighlight}
               </span>
             </h2>
             <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-              Not all fiberglass pools are built the same. San Juan uses 100%
-              hand-laid fiberglass with marine-grade Vinyl Ester resin — the
-              strongest pool shells manufactured in America.
+              {process.intro}
             </p>
           </div>
         </ScrollReveal>
@@ -188,14 +146,14 @@ export function Process() {
               href="/contact"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 text-sm sm:text-base"
             >
-              Start Your Project Today
+              {process.ctaLabel}
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition-transform"
               />
             </Link>
             <p className="text-gray-400 text-sm mt-4">
-              Free consultation & estimate — no obligation
+              {process.ctaNote}
             </p>
           </div>
         </ScrollReveal>
