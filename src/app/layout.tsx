@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://maximapools.com"),
   title: {
     default: "Maxima Pools - Premium Fiberglass Pools & Spas in Columbus, OH",
-    template: "%s | Maxima Pools",
+    // Each page's own title already ends with "| Maxima Pools", so the
+    // template must NOT append the brand again (that caused a doubled
+    // "… | Maxima Pools | Maxima Pools" suffix site-wide).
+    template: "%s",
   },
   description:
     "High-quality fiberglass pools and custom patios installed by trusted experts in Columbus, Ohio. Authorized San Juan Pools dealer. Free estimates available.",
