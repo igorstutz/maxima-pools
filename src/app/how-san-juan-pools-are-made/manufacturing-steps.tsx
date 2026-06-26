@@ -2,58 +2,10 @@
 
 import { useState } from "react";
 import Image from "@/components/Image";
+import content from "@/content/pages/how-san-juan-pools-are-made.json";
 
-const steps = [
-  {
-    number: "01",
-    title: "Prepare the Mold",
-    description:
-      "The process begins with a clean, precisely waxed mold to ensure perfect shape accuracy. Every curve and contour is inspected before a single layer is applied.",
-    image: "/images/how-its-made/step-mold.webp",
-  },
-  {
-    number: "02",
-    title: "Cut & Lay Fiberglass",
-    description:
-      "All fiberglass is hand-cut and hand-laid — none of the reinforcement is sprayed. This ensures structural consistency and eliminates weak points found in chopper-gun methods.",
-    image: "/images/how-its-made/step-glass.webp",
-  },
-  {
-    number: "03",
-    title: "Build the Panels",
-    description:
-      "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.",
-    image: "/images/how-its-made/step-panels.webp",
-  },
-  {
-    number: "04",
-    title: "Stiffen the Walls",
-    description:
-      "Structural ribs are precisely positioned to reinforce wall strength without adding unnecessary weight. This is what allows fiberglass pools to flex with ground movement instead of cracking.",
-    image: "/images/how-its-made/step-ribs.webp",
-  },
-  {
-    number: "05",
-    title: "Clean & Inspect",
-    description:
-      "Every pool is thoroughly inspected and all imperfections are repaired. This takes time, but only perfection is good enough for a San Juan pool. Quality control is non-negotiable.",
-    image: "/images/how-its-made/step-inspect.webp",
-  },
-  {
-    number: "06",
-    title: "Tile & Outfit",
-    description:
-      "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.",
-    image: "/images/how-its-made/step-outfitting.webp",
-  },
-  {
-    number: "07",
-    title: "Final Pool Shell",
-    description:
-      "A beautiful San Juan pool shell is complete and ready to become part of your backyard dream. From mold to masterpiece — built to last a lifetime.",
-    image: "/images/how-its-made/step-final.webp",
-  },
-];
+// Steps are editable via the CMS (how-san-juan-pools-are-made.json → Manufacturing steps).
+const steps = content.steps;
 
 export function ManufacturingSteps() {
   const [activeStep, setActiveStep] = useState(0);

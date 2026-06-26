@@ -1,0 +1,111 @@
+{
+  "seo": {
+    "title": "Pool Accessories & Extras | Maxima Pools - Columbus, OH",
+    "description": "Premium pool accessories and extras: heating, LED lighting, water features, auto covers, fire bowls, and recreation. Professional in-house installation in Columbus, OH.",
+    "ogTitle": "Pool Accessories & Extras | Maxima Pools",
+    "ogDescription": "Elevate your pool with premium accessories — heating, lighting, water features, fire bowls, and more. All installed in-house by Maxima Pools."
+  },
+  "hero": {
+    "images": [
+      "/images/accessories/pool-flame.jpg",
+      "/images/accessories/color-lights.jpg",
+      "/images/accessories/pool-cover.jpg",
+      "/images/accessories/pool-pump.jpg"
+    ],
+    "badge": "Premium Enhancements",
+    "headingLead": "Pool Accessories",
+    "headingHighlight": "& Extras",
+    "subtitle": "Elevate your pool experience with premium accessories — heating, lighting, water features, fire bowls, and more. All professionally installed in-house.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "20+", "label": "Accessory Types", "icon": "Sparkles" },
+    { "value": "100%", "label": "In-House Install", "icon": "Wrench" },
+    { "value": "1", "label": "Team, Start to Finish", "icon": "Users" },
+    { "value": "5-Star", "label": "Customer Rated", "icon": "Award" }
+  ],
+  "catalogSection": {
+    "badge": "Full Catalog",
+    "headingLead": "Everything Your Pool",
+    "headingHighlight": "Needs",
+    "intro": "From essential equipment to luxury enhancements — we supply and install it all."
+  },
+  "accessoryGrid": [
+    { "icon": "Thermometer", "title": "Pool Heaters", "items": ["Gas heaters", "Heat pumps", "Solar heating", "Smart thermostats"] },
+    { "icon": "Lightbulb", "title": "Pool Lighting", "items": ["Underwater LEDs", "Deck lights", "Fiber optic", "Color-changing"] },
+    { "icon": "Waves", "title": "Water Features", "items": ["Waterfalls", "Deck jets", "Bubblers", "Spillover spa"] },
+    { "icon": "Shield", "title": "Pool Covers", "items": ["Automatic covers", "Safety covers", "Winter covers", "Solar covers"] },
+    { "icon": "Flame", "title": "Fire Features", "items": ["Fire bowls", "Fire & water", "Gas torches", "Fire pits"] },
+    { "icon": "Sparkles", "title": "Recreation", "items": ["Diving boards", "Slides", "Basketball", "Volleyball"] },
+    { "icon": "Wifi", "title": "Automation", "items": ["App control", "Scheduling", "Chemistry monitor", "Voice control"] },
+    { "icon": "Wrench", "title": "Entry & Safety", "items": ["Railings", "Tanning ledges", "Pool steps", "ADA access"] }
+  ],
+  "showcaseSection": {
+    "badge": "Explore",
+    "headingLead": "Explore Our",
+    "headingHighlight": "Accessories",
+    "intro": "Click a category to see what's available and how it can transform your pool."
+  },
+  "showcase": [
+    { "id": "heating", "label": "Heating", "icon": "Thermometer", "title": "Pool Heating Systems", "description": "Extend your swim season from early spring through late fall with professional heating solutions. Gas heaters deliver rapid temperature control, while energy-efficient heat pumps can both warm and cool your pool.", "image": "/images/accessories/pool-pump.jpg", "features": ["Gas heaters for rapid temperature rise", "Heat pumps for energy-efficient warming", "Dual-function heating & cooling systems", "Smart thermostat integration"] },
+    { "id": "lighting", "label": "Lighting", "icon": "Lightbulb", "title": "LED Lighting Solutions", "description": "Transform your pool into a mesmerizing nighttime oasis. Color-changing LED systems create stunning ambiance, while deck lighting ensures safety and adds a sophisticated glow to your outdoor space.", "image": "/images/accessories/color-lights.jpg", "features": ["Color-changing underwater LEDs", "Pool deck safety lighting", "Fiber optic dramatic effects", "App-controlled light shows"] },
+    { "id": "water-features", "label": "Water Features", "icon": "Waves", "title": "Water Features & Aesthetics", "description": "Elevate your backyard with the soothing sounds and stunning visuals of custom water features. From cascading waterfalls to elegant deck jets and tanning ledge bubblers — create your personal resort.", "image": "/images/accessories/pool-flame.jpg", "features": ["Natural rock waterfalls", "Deck jets & laminar streams", "Spillover spa connections", "Tanning ledge bubblers"] },
+    { "id": "covers", "label": "Covers & Safety", "icon": "Shield", "title": "Automatic Pool Covers", "description": "One-touch protection that keeps your pool safe, clean, and warm. Automatic covers prevent unsupervised access, reduce chemical evaporation by up to 70%, and retain heat overnight — all with the press of a button.", "image": "/images/accessories/pool-cover.jpg", "features": ["Motorized open/close in under 60s", "ASTM safety certified", "70% less evaporation", "Integrated into pool structure"] },
+    { "id": "fire", "label": "Fire Features", "icon": "Flame", "title": "Fire Bowls & Fire Features", "description": "Add a dramatic contrast of fire and water to your poolscape. Gas-powered fire bowls create dancing flames that reflect off the water surface, turning your backyard into an unforgettable entertainment destination.", "image": "/images/accessories/pool-flame.jpg", "features": ["Gas-powered fire bowls", "Fire & water bowl combos", "Natural gas or propane options", "Weatherproof construction"] },
+    { "id": "recreation", "label": "Recreation", "icon": "Sparkles", "title": "Recreation & Fun", "description": "Make your pool the ultimate destination for family fun. From diving boards and slides to basketball hoops and volleyball nets — we professionally install every recreation feature with proper safety clearances.", "image": "/images/accessories/pool-cover.jpg", "features": ["Diving boards (depth-certified)", "Pool slides for all ages", "Basketball hoops & volleyball nets", "Built-in storage solutions"] }
+  ],
+  "automationSection": {
+    "badge": "Smart Pool",
+    "headingLead": "The Power of Pool",
+    "headingHighlight": "Automation",
+    "paragraph": "Manage lights, heaters, water features, pumps, filtration, and chemical dosing — all from your phone. Monitor water temperature and chemistry in real-time from anywhere."
+  },
+  "automation": [
+    { "icon": "Smartphone", "title": "Remote Control", "description": "Manage your entire pool system from your phone — anywhere, anytime." },
+    { "icon": "Thermometer", "title": "Temperature Control", "description": "Set, schedule, and monitor water temperature with precision." },
+    { "icon": "Lightbulb", "title": "Lighting Scenes", "description": "Create and save custom light programs for any mood or occasion." },
+    { "icon": "Settings", "title": "Filtration Management", "description": "Automate pump cycles, chemical dosing, and water flow scheduling." },
+    { "icon": "Monitor", "title": "Real-Time Monitoring", "description": "Track water chemistry, equipment status, and energy usage live." },
+    { "icon": "Zap", "title": "Energy Savings", "description": "Smart scheduling reduces energy consumption by up to 30%." }
+  ],
+  "whyProSection": {
+    "badge": "In-House Team",
+    "headingLead": "Why Choose Professional",
+    "headingHighlight": "Installation?",
+    "paragraph": "Unlike other pool companies that outsource specialized work, Maxima Pools handles every installation in-house. One team, one vision, one flawless result.",
+    "image": "/images/accessories/color-lights.jpg",
+    "imageAlt": "Professional pool lighting installation by Maxima Pools"
+  },
+  "whyPro": [
+    { "icon": "Wrench", "title": "In-House Expertise", "description": "Unlike other companies that outsource, Maxima Pools handles every single installation in-house with trained technicians." },
+    { "icon": "HeartHandshake", "title": "Seamless Integration", "description": "Accessories are integrated during pool construction for a flawless finish — no retrofitting, no compromises." },
+    { "icon": "Shield", "title": "Warranty Protected", "description": "Professional installation ensures manufacturer warranties stay valid and your investment is fully protected." },
+    { "icon": "Clock", "title": "One Team, One Timeline", "description": "Everything is coordinated by a single team — pool, accessories, and finishes — so nothing falls through the cracks." }
+  ],
+  "integration": {
+    "badge": "One-Stop Shop",
+    "headingLead": "Get Everything in",
+    "headingHighlight": "One Place",
+    "paragraph": "When you choose Maxima Pools, every accessory is seamlessly integrated during construction — not bolted on as an afterthought. The result is a cleaner finish, better performance, and zero headaches.",
+    "items": ["Heating systems", "LED lighting", "Water features", "Auto covers", "Fire features", "Recreation gear"],
+    "image": "/images/accessories/pool-pump.jpg",
+    "imageAlt": "Pool equipment and accessories"
+  },
+  "cta": {
+    "image": "/images/accessories/pool-flame.jpg",
+    "headingLead": "Ready to Upgrade",
+    "headingHighlight": "Your Pool?",
+    "paragraph": "Tell us what you envision and we'll make it happen. One team, one timeline, one stunning result.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

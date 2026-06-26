@@ -2,9 +2,10 @@
 
 import { useRef, useState } from "react";
 import { Play } from "lucide-react";
+import content from "@/content/pages/pool-simulator.json";
 
-const VIDEO_SRC =
-  "https://maximapools.com/wp-content/uploads/2025/11/can-i-build.mp4";
+// Video URL + label are editable via the CMS (pool-simulator.json → Demo video).
+const VIDEO_SRC = content.videoSection.videoSrc;
 
 export function SimulatorVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -49,7 +50,7 @@ export function SimulatorVideo() {
               </div>
             </div>
             <span className="text-white font-semibold text-sm sm:text-base bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
-              Watch Demo
+              {content.videoSection.watchLabel}
             </span>
           </div>
         </button>

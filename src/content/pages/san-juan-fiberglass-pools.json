@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "San Juan VS Competitors | Maxima Pools - Columbus, OH",
+    "description": "See how San Juan's hand-laid fiberglass construction compares to chopped/sprayed competitors. 32-mil gel coat, Vinyl Ester resin throughout, and 5+ guaranteed layers.",
+    "ogTitle": "San Juan VS Competitors | Maxima Pools",
+    "ogDescription": "Hand-laid vs chopped fiberglass — see the 10-point comparison that proves San Juan builds the strongest pool on the market."
+  },
+  "hero": {
+    "images": [
+      "/images/pool-quality/blue-lagoon.jpg",
+      "/images/why-fiberglass/canyon-beach.webp",
+      "/images/pool-quality/wylela-beach.png",
+      "/images/pools/great-lakes.jpg"
+    ],
+    "badge": "The Industry Leader",
+    "headingLead": "San Juan VS",
+    "headingHighlight": "Competitors",
+    "subtitle": "One simple truth drives everything we do: building the highest quality fiberglass pools in the world. See how San Juan's hand-laid process compares — point by point.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "70yr", "label": "Industry Leader", "icon": "Clock" },
+    { "value": "32mil", "label": "Thickest Gel Coat", "icon": "Layers" },
+    { "value": "5+", "label": "Guaranteed Layers", "icon": "Shield" },
+    { "value": "100%", "label": "Hand-Laid", "icon": "HandMetal" }
+  ],
+  "advantagesSection": {
+    "badge": "What Sets San Juan Apart",
+    "headingLead": "The San Juan",
+    "headingHighlight": "Advantage",
+    "intro": "Nearly 70 years of hand-laid craftsmanship. The first fiberglass pool San Juan ever built is still in the ground today."
+  },
+  "advantages": [
+    { "icon": "Layers", "title": "100% Hand-Laid Sheets", "description": "Multiple layers of solid fiberglass sheets applied sequentially — replicating the same boat hull manufacturing process used in marine applications." },
+    { "icon": "FlaskConical", "title": "Vinyl Ester Throughout", "description": "Marine-grade Vinyl Ester resin applied throughout the entire pool shell — not just the last layer. Both sides are fully protected against water intrusion." },
+    { "icon": "Gem", "title": "32-mil Gel Coat", "description": "The thickest gel coat in the industry — two 16-mil layers for superior UV protection, stain resistance, and lasting color vibrancy." },
+    { "icon": "Hammer", "title": "No Coring or Fillers", "description": "Pure fiberglass composite throughout. No coring, no fillers, no chopped fiberglass, and no safety ledges needed — the shell is strong enough without them." }
+  ],
+  "comparisonSection": {
+    "badge": "Point by Point",
+    "headingLead": "The Full",
+    "headingHighlight": "Comparison",
+    "intro": "10 manufacturing features compared. See exactly where San Juan outperforms every competitor."
+  },
+  "comparisonTable": {
+    "rows": [
+      { "feature": "Fiberglass Method", "sanJuan": "100% hand-laid solid sheets with consistent thickness", "competitor": "Chopped fiberglass sprayed from gun — inconsistent thickness" },
+      { "feature": "Excess Resin", "sanJuan": "Removed from each layer for optimal strength-to-weight ratio", "competitor": "Cannot be removed — weakens the shell over time" },
+      { "feature": "Woven Roving", "sanJuan": "Applied throughout — significant vertical and horizontal strength", "competitor": "Used only in limited areas — structural gaps remain" },
+      { "feature": "Sprayed Chop", "sanJuan": "Not used — zero chopped fiberglass in any San Juan pool", "competitor": "2\" pieces sprayed on with variable thickness throughout" },
+      { "feature": "Interior Ledges", "sanJuan": "Not needed — shell is strong enough without them", "competitor": "Required for stiffening — collects dirt, potential hazard" },
+      { "feature": "Coring & Fillers", "sanJuan": "Not used — pure fiberglass composite throughout", "competitor": "Present in many models — increases brittleness risk" },
+      { "feature": "Vinyl Ester Resin", "sanJuan": "Applied throughout the entire pool shell — both sides", "competitor": "Last layer only — interior unprotected" },
+      { "feature": "Gel Coat", "sanJuan": "32-mil thickness — two 16-mil layers (thickest in the industry)", "competitor": "27–30 mil — single layer application" },
+      { "feature": "Minimum Layers", "sanJuan": "Guaranteed minimum 5 hand-laid fiberglass layers per shell", "competitor": "No guaranteed minimum — varies by model and manufacturer" },
+      { "feature": "Quality Control", "sanJuan": "Factory-manufactured with controlled QA at every step", "competitor": "Variable quality — depends on spray operator skill" }
+    ]
+  },
+  "methodsSection": {
+    "badge": "Manufacturing Methods",
+    "headingLead": "Hand-Laid vs.",
+    "headingHighlight": "Chopped"
+  },
+  "handlaid": {
+    "title": "San Juan — Hand-Laid",
+    "subtitle": "The right way",
+    "benefits": [
+      "Guaranteed minimum 5 hand-laid fiberglass layers per shell",
+      "Consistent thickness throughout the entire mold — front to back",
+      "Excess resin removed from each layer for optimal strength-to-weight ratio",
+      "No safety ledges needed — shell integrity stands on its own",
+      "Vinyl Ester resin throughout entire pool — both sides protected",
+      "32-mil gel coat in two layers — thickest and most durable in the industry"
+    ]
+  },
+  "chopped": {
+    "title": "Competitors — Chopped",
+    "subtitle": "Cutting corners",
+    "downsides": [
+      "No consistency in fiberglass thickness — depends on spray gun duration",
+      "Resin concentrates in random areas, creating uneven weak layers",
+      "Requires interior \"safety ledges\" that weaken the shell and collect dirt",
+      "Variable quality depends on spray operator skill, not controlled QA",
+      "Vinyl Ester resin used only on the last layer — interior unprotected",
+      "Thinner gel coat (27–30 mil) with single-layer application"
+    ]
+  },
+  "evidenceSection": {
+    "badge": "See the Proof",
+    "headingLead": "The Difference is",
+    "headingHighlight": "Visible",
+    "paragraph": "These spec sheets show the structural differences between San Juan's hand-laid construction and competitors' chopped methods. Click to zoom in and see the details.",
+    "primaryImage": { "src": "/images/pool-quality/handlaid-vs-chop.webp", "alt": "Hand-laid vs chopped fiberglass comparison" },
+    "secondaryImages": [
+      { "src": "/images/pool-quality/layers-spec.webp", "alt": "San Juan Pools layers specification sheet" },
+      { "src": "/images/san-juan-vs/compare-list.webp", "alt": "San Juan features comparison list" }
+    ]
+  },
+  "compareSection": {
+    "badge": "Explore More",
+    "headingLead": "Dive",
+    "headingHighlight": "Deeper"
+  },
+  "compareCards": [
+    { "icon": "Factory", "title": "How It's Made", "description": "See the full 7-step hand-laid manufacturing process.", "href": "/how-san-juan-pools-are-made" },
+    { "icon": "Gem", "title": "Fiberglass Pool Quality", "description": "Explore the materials and engineering behind each layer.", "href": "/fiberglass-pool-quality" },
+    { "icon": "Palette", "title": "Fiberglass Pool Colors", "description": "Browse all gelcoat and Iridium finish options.", "href": "/fiberglass-pool-colors" }
+  ],
+  "cta": {
+    "image": "/images/pool-quality/blue-lagoon.jpg",
+    "headingLead": "Choose the Pool That",
+    "headingHighlight": "Outlasts Them All",
+    "paragraph": "Talk to our team and get a personalized quote for a San Juan fiberglass pool — the strongest pool on the market.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

@@ -13,21 +13,23 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { GalleryGrid } from "./gallery-grid";
+import content from "@/content/pages/fiberglass-pool-gallery.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/fiberglass-pool-gallery/" },
-  title: "Fiberglass Pool Gallery | Maxima Pools - Columbus, OH",
-  description:
-    "Browse 60+ photos of San Juan fiberglass pool installations. Filter by color — White, Sully Blue, Blue Lagoon, and Granite. Real projects by Maxima Pools in Columbus, OH.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/fiberglass-pool-gallery/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Fiberglass Pool Gallery | Maxima Pools",
-    description:
-      "See our real fiberglass pool installations. Browse by color finish — White, Sully Blue, Blue Lagoon, Granite, and more.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
+
+// Lucide icons referenced by name from the editable content file.
+const heroStatIcons = { Camera, Waves } as const;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -49,12 +51,7 @@ export default function GalleryPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <HeroImageCycle
-          images={[
-            "/images/gallery/featured-02.jpg",
-            "/images/gallery/sully-01.jpg",
-            "/images/gallery/lagoon-03.jpg",
-            "/images/gallery/granite-01.jpg",
-          ]}
+          images={content.hero.images}
           alt="Fiberglass pool gallery by Maxima Pools"
           interval={5000}
         />
@@ -75,41 +72,40 @@ export default function GalleryPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <Camera size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Our Work
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Fiberglass Pool </span>
-              <span className="shimmer-text">Gallery</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Browse real installations by Maxima Pools. Filter by color finish
-              to find your inspiration — from classic White to vibrant Blue Lagoon.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-4 text-sm mb-6">
-              {[
-                { label: "60+ Photos", icon: Camera },
-                { label: "5 Color Finishes", icon: Waves },
-              ].map((item) => (
-                <div key={item.label} className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
-                    <item.icon size={14} className="text-accent" />
+              {content.hero.stats.map((item) => {
+                const Icon = heroStatIcons[item.icon as keyof typeof heroStatIcons];
+                return (
+                  <div key={item.label} className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
+                      {Icon && <Icon size={14} className="text-accent" />}
+                    </div>
+                    <span className="text-white font-medium">{item.label}</span>
                   </div>
-                  <span className="text-white font-medium">{item.label}</span>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Sparkles size={18} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
             </div>
           </div>
@@ -129,7 +125,7 @@ export default function GalleryPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/gallery/featured-02.jpg"
+                src={content.cta.image}
                 alt=""
                 fill
                 className="object-cover"
@@ -141,34 +137,33 @@ export default function GalleryPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Love What You{" "}
-                    <span className="shimmer-text">See?</span>
+                    {content.cta.headingLead}{" "}
+                    <span className="shimmer-text">{content.cta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Let&apos;s make your dream pool a reality. Get a free estimate
-                    and start planning your backyard transformation.
+                    {content.cta.paragraph}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.cta.primaryHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Get a Free Estimate
+                      {content.cta.primaryLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.cta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.cta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.cta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.cta.phoneDisplay}
                     </a>
                   </div>
                 </div>

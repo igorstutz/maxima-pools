@@ -2,76 +2,16 @@
 
 import { useState } from "react";
 import { CheckCircle2, XCircle, ChevronDown } from "lucide-react";
+import content from "@/content/pages/san-juan-fiberglass-pools.json";
 
 interface Row {
   feature: string;
   sanJuan: string;
   competitor: string;
-  sanJuanWin: boolean;
 }
 
-const rows: Row[] = [
-  {
-    feature: "Fiberglass Method",
-    sanJuan: "100% hand-laid solid sheets with consistent thickness",
-    competitor: "Chopped fiberglass sprayed from gun — inconsistent thickness",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Excess Resin",
-    sanJuan: "Removed from each layer for optimal strength-to-weight ratio",
-    competitor: "Cannot be removed — weakens the shell over time",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Woven Roving",
-    sanJuan: "Applied throughout — significant vertical and horizontal strength",
-    competitor: "Used only in limited areas — structural gaps remain",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Sprayed Chop",
-    sanJuan: "Not used — zero chopped fiberglass in any San Juan pool",
-    competitor: "2\" pieces sprayed on with variable thickness throughout",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Interior Ledges",
-    sanJuan: "Not needed — shell is strong enough without them",
-    competitor: "Required for stiffening — collects dirt, potential hazard",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Coring & Fillers",
-    sanJuan: "Not used — pure fiberglass composite throughout",
-    competitor: "Present in many models — increases brittleness risk",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Vinyl Ester Resin",
-    sanJuan: "Applied throughout the entire pool shell — both sides",
-    competitor: "Last layer only — interior unprotected",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Gel Coat",
-    sanJuan: "32-mil thickness — two 16-mil layers (thickest in the industry)",
-    competitor: "27–30 mil — single layer application",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Minimum Layers",
-    sanJuan: "Guaranteed minimum 5 hand-laid fiberglass layers per shell",
-    competitor: "No guaranteed minimum — varies by model and manufacturer",
-    sanJuanWin: true,
-  },
-  {
-    feature: "Quality Control",
-    sanJuan: "Factory-manufactured with controlled QA at every step",
-    competitor: "Variable quality — depends on spray operator skill",
-    sanJuanWin: true,
-  },
-];
+// Rows are editable via the CMS (san-juan-fiberglass-pools.json → Comparison table).
+const rows: Row[] = content.comparisonTable.rows;
 
 export function ComparisonTable() {
   const [expandedRow, setExpandedRow] = useState<number | null>(null);

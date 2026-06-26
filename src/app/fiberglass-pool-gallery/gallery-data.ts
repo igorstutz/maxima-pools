@@ -1,3 +1,5 @@
+import galleryContent from "@/content/pages/fiberglass-pool-gallery.json";
+
 export type GalleryCategory = "All" | "White" | "Sully Blue" | "Blue Lagoon" | "Granite" | "Featured";
 
 export interface GalleryImage {
@@ -7,73 +9,8 @@ export interface GalleryImage {
   height: number;
 }
 
-export const galleryImages: GalleryImage[] = [
-  // Featured
-  { src: "/images/gallery/featured-01.png", category: "Featured", width: 1250, height: 833 },
-  { src: "/images/gallery/featured-02.jpg", category: "Featured", width: 1280, height: 720 },
-  { src: "/images/gallery/featured-03.jpg", category: "Featured", width: 960, height: 540 },
-  { src: "/images/gallery/featured-04.jpg", category: "Featured", width: 268, height: 188 },
-  { src: "/images/gallery/featured-05.jpg", category: "Featured", width: 1280, height: 720 },
-  // White
-  { src: "/images/gallery/white-01.jpg", category: "White", width: 1600, height: 674 },
-  { src: "/images/gallery/white-02.jpg", category: "White", width: 1024, height: 768 },
-  { src: "/images/gallery/white-03.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-04.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-05.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-06.jpg", category: "White", width: 1024, height: 768 },
-  { src: "/images/gallery/white-07.jpg", category: "White", width: 1024, height: 768 },
-  { src: "/images/gallery/white-08.jpg", category: "White", width: 800, height: 600 },
-  { src: "/images/gallery/white-09.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-10.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-11.jpg", category: "White", width: 1600, height: 1200 },
-  { src: "/images/gallery/white-12.jpg", category: "White", width: 1024, height: 768 },
-  { src: "/images/gallery/white-13.jpg", category: "White", width: 883, height: 662 },
-  { src: "/images/gallery/white-14.jpg", category: "White", width: 719, height: 479 },
-  // Sully Blue
-  { src: "/images/gallery/sully-01.jpg", category: "Sully Blue", width: 1600, height: 1200 },
-  { src: "/images/gallery/sully-02.jpg", category: "Sully Blue", width: 1600, height: 1200 },
-  { src: "/images/gallery/sully-03.jpg", category: "Sully Blue", width: 1600, height: 1066 },
-  { src: "/images/gallery/sully-04.jpg", category: "Sully Blue", width: 960, height: 720 },
-  { src: "/images/gallery/sully-05.jpg", category: "Sully Blue", width: 960, height: 640 },
-  { src: "/images/gallery/sully-06.jpg", category: "Sully Blue", width: 960, height: 720 },
-  { src: "/images/gallery/sully-07.jpg", category: "Sully Blue", width: 1600, height: 1200 },
-  { src: "/images/gallery/sully-08.jpg", category: "Sully Blue", width: 1024, height: 768 },
-  { src: "/images/gallery/sully-09.jpg", category: "Sully Blue", width: 1600, height: 1110 },
-  { src: "/images/gallery/sully-10.jpg", category: "Sully Blue", width: 1600, height: 1200 },
-  { src: "/images/gallery/sully-11.jpg", category: "Sully Blue", width: 1600, height: 1200 },
-  { src: "/images/gallery/sully-12.jpg", category: "Sully Blue", width: 1024, height: 768 },
-  // Blue Lagoon
-  { src: "/images/gallery/lagoon-01.jpg", category: "Blue Lagoon", width: 1316, height: 640 },
-  { src: "/images/gallery/lagoon-02.jpg", category: "Blue Lagoon", width: 1600, height: 1200 },
-  { src: "/images/gallery/lagoon-03.jpg", category: "Blue Lagoon", width: 1600, height: 1200 },
-  { src: "/images/gallery/lagoon-04.jpg", category: "Blue Lagoon", width: 1024, height: 768 },
-  { src: "/images/gallery/lagoon-05.jpg", category: "Blue Lagoon", width: 1440, height: 1080 },
-  { src: "/images/gallery/lagoon-06.jpg", category: "Blue Lagoon", width: 960, height: 720 },
-  { src: "/images/gallery/lagoon-07.jpg", category: "Blue Lagoon", width: 960, height: 720 },
-  { src: "/images/gallery/lagoon-08.jpg", category: "Blue Lagoon", width: 1440, height: 1080 },
-  { src: "/images/gallery/lagoon-09.jpg", category: "Blue Lagoon", width: 1072, height: 1440 },
-  { src: "/images/gallery/lagoon-10.jpg", category: "Blue Lagoon", width: 1600, height: 1200 },
-  { src: "/images/gallery/lagoon-11.jpg", category: "Blue Lagoon", width: 960, height: 720 },
-  { src: "/images/gallery/lagoon-12.jpg", category: "Blue Lagoon", width: 960, height: 720 },
-  { src: "/images/gallery/lagoon-13.jpg", category: "Blue Lagoon", width: 1024, height: 765 },
-  { src: "/images/gallery/lagoon-14.jpg", category: "Blue Lagoon", width: 960, height: 720 },
-  { src: "/images/gallery/lagoon-15.jpg", category: "Blue Lagoon", width: 1600, height: 1200 },
-  { src: "/images/gallery/lagoon-16.jpg", category: "Blue Lagoon", width: 1008, height: 756 },
-  { src: "/images/gallery/lagoon-17.jpg", category: "Blue Lagoon", width: 1600, height: 1200 },
-  // Granite
-  { src: "/images/gallery/granite-01.jpg", category: "Granite", width: 744, height: 496 },
-  { src: "/images/gallery/granite-02.jpg", category: "Granite", width: 1024, height: 576 },
-  { src: "/images/gallery/granite-03.jpg", category: "Granite", width: 960, height: 720 },
-  { src: "/images/gallery/granite-04.jpg", category: "Granite", width: 800, height: 533 },
-  { src: "/images/gallery/granite-05.jpg", category: "Granite", width: 1024, height: 768 },
-  { src: "/images/gallery/granite-06.jpg", category: "Granite", width: 1600, height: 1200 },
-  { src: "/images/gallery/granite-07.jpg", category: "Granite", width: 1600, height: 1200 },
-  { src: "/images/gallery/granite-08.jpg", category: "Granite", width: 1200, height: 1600 },
-  { src: "/images/gallery/granite-09.jpg", category: "Granite", width: 1242, height: 928 },
-  { src: "/images/gallery/granite-10.jpg", category: "Granite", width: 1024, height: 768 },
-  { src: "/images/gallery/granite-11.jpg", category: "Granite", width: 1017, height: 763 },
-  { src: "/images/gallery/granite-12.jpg", category: "Granite", width: 1600, height: 1200 },
-];
+// Image list is editable via the CMS (src/content/pages/fiberglass-pool-gallery.json).
+export const galleryImages: GalleryImage[] = galleryContent.gallery as GalleryImage[];
 
 export const categories: GalleryCategory[] = [
   "All",

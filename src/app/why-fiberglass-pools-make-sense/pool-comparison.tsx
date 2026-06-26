@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle2, XCircle, MinusCircle } from "lucide-react";
+import content from "@/content/pages/why-fiberglass-pools-make-sense.json";
 
 type Rating = "excellent" | "good" | "poor";
 
@@ -15,107 +16,8 @@ interface ComparisonRow {
   vinylRating: Rating;
 }
 
-const rows: ComparisonRow[] = [
-  {
-    feature: "Product Durability",
-    fiberglass: "All-weather tolerant, stress-free, pet friendly, 17x stronger than concrete",
-    gunite: "Rigid structure, cracks with ground movement",
-    vinyl: "Punctures and tears easily, not pet friendly",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "poor",
-  },
-  {
-    feature: "Product Quality",
-    fiberglass: "Factory manufactured with controlled quality assurance",
-    gunite: "On-site constructed, quality dependent on workforce",
-    vinyl: "Pre-fabricated liner with site-assembled walls",
-    fiberglassRating: "excellent",
-    guniteRating: "good",
-    vinylRating: "good",
-  },
-  {
-    feature: "Repairs Needed",
-    fiberglass: "Requires none when properly maintained",
-    gunite: "Acid washes, re-marcite, plaster, paint",
-    vinyl: "Liner replacements, tear repairs, pulls",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "poor",
-  },
-  {
-    feature: "Surface Texture",
-    fiberglass: "Smooth, silky feel on skin",
-    gunite: "Very rough — equivalent to 80 grit sandpaper",
-    vinyl: "Slippery surface with rough seams",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "good",
-  },
-  {
-    feature: "Algae Resistance",
-    fiberglass: "Algae-resistant — cannot adhere to surface",
-    gunite: "Constant problem, grows through porous walls",
-    vinyl: "Troublesome, grows in liner seams",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "poor",
-  },
-  {
-    feature: "Weekly Maintenance",
-    fiberglass: "Less than 1 hour per week",
-    gunite: "Approximately 5 hours per week",
-    vinyl: "Approximately 5 hours per week",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "poor",
-  },
-  {
-    feature: "Chemical Use",
-    fiberglass: "Minimal chemicals required",
-    gunite: "Considerably more chemicals needed",
-    vinyl: "Slightly more chemicals needed",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "good",
-  },
-  {
-    feature: "Installation Time",
-    fiberglass: "Completed within days",
-    gunite: "8+ weeks minimum",
-    vinyl: "2–5 weeks",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "good",
-  },
-  {
-    feature: "Electrical Usage",
-    fiberglass: "Circulate 4–6 hours/day",
-    gunite: "Circulate 10 hours/day",
-    vinyl: "Circulate 6–8 hours/day",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "good",
-  },
-  {
-    feature: "Pool Access",
-    fiberglass: "Seamless stairs, swim-outs, benches, sundecks",
-    gunite: "Shallow end stairs only — additions cost extra",
-    vinyl: "Drop-in type stairs or ladders",
-    fiberglassRating: "excellent",
-    guniteRating: "good",
-    vinylRating: "poor",
-  },
-  {
-    feature: "Warranty",
-    fiberglass: "25-year structural warranty",
-    gunite: "Commonly 1 year by contractor",
-    vinyl: "Only if seam separates — pro-rated",
-    fiberglassRating: "excellent",
-    guniteRating: "poor",
-    vinylRating: "poor",
-  },
-];
+// Rows are editable via the CMS (why-fiberglass-pools-make-sense.json → Comparison table).
+const rows: ComparisonRow[] = content.comparison.rows as ComparisonRow[];
 
 const ratingIcon = {
   excellent: <CheckCircle2 size={16} className="text-accent shrink-0" />,

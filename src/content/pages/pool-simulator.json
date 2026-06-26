@@ -1,0 +1,46 @@
+{
+  "seo": {
+    "title": "Pool Simulator | Maxima Pools - Columbus, OH",
+    "description": "Visualize your fiberglass pool in your own backyard. Enter your address, view your property on the map, and position your pool with real-life scale before installation.",
+    "ogTitle": "Pool Simulator | Maxima Pools",
+    "ogDescription": "Design your dream fiberglass pool and see exactly how it fits in your backyard with our interactive Pool Simulator."
+  },
+  "hero": {
+    "badge": "Interactive Tool",
+    "headingLead": "Pool",
+    "headingHighlight": "Simulator",
+    "subtitle": "Visualize your fiberglass pool in your own backyard. Enter your address, view your property on the map, and position your pool with real-life scale and dimensions before installation.",
+    "ctaLabel": "Simulate Now",
+    "ctaHref": "#simulator"
+  },
+  "stepsSection": {
+    "badge": "How It Works",
+    "headingLead": "4 Simple",
+    "headingHighlight": "Steps",
+    "intro": "Design your dream pool in minutes — no downloads, no sign-up required."
+  },
+  "steps": [
+    { "number": "01", "icon": "Monitor", "title": "Open Fullscreen", "description": "Use a computer for the best experience. Click the fullscreen button in the top-right corner for an immersive view." },
+    { "number": "02", "icon": "MapPin", "title": "Enter Your Address", "description": "Type your home address to locate your property on the satellite map. Zoom in to get a clear view of your backyard." },
+    { "number": "03", "icon": "MousePointerClick", "title": "Place Your Pool", "description": "Browse San Juan pool models and select one. Drag it onto your backyard to see how it fits with real-life scale and dimensions." },
+    { "number": "04", "icon": "MessageSquare", "title": "Contact Us", "description": "Found the perfect model? Contact us for a free quote. We'll help you bring your dream pool to life." }
+  ],
+  "videoSection": {
+    "badge": "Watch the Demo",
+    "headingLead": "See the Simulator",
+    "headingHighlight": "in Action",
+    "paragraph": "Watch a quick walkthrough of how to drop a fiberglass pool into your own backyard before trying it yourself.",
+    "videoSrc": "https://maximapools.com/wp-content/uploads/2025/11/can-i-build.mp4",
+    "watchLabel": "Watch Demo"
+  },
+  "cta": {
+    "image": "/images/why-fiberglass/canyon-beach.webp",
+    "headingLead": "Found Your",
+    "headingHighlight": "Dream Pool?",
+    "paragraph": "Talk to our team today and get a personalized quote. We'll help you bring your simulation to life.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

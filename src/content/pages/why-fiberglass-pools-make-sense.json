@@ -1,0 +1,126 @@
+{
+  "seo": {
+    "title": "Why Fiberglass Pools Make Sense | Maxima Pools - Columbus, OH",
+    "description": "Discover why fiberglass pool construction outperforms gunite and vinyl. Hand-laid layers, 17x stronger than concrete, less maintenance, faster installation. San Juan Pools dealer in Columbus, OH.",
+    "ogTitle": "Why Fiberglass Pools Make Sense | Maxima Pools",
+    "ogDescription": "Compare fiberglass vs gunite vs vinyl. See why San Juan hand-laid fiberglass pools are stronger, lower maintenance, and built to last decades."
+  },
+  "hero": {
+    "images": [
+      "/images/why-fiberglass/sanjuan-header.png",
+      "/images/why-fiberglass/canyon-beach.webp",
+      "/images/why-fiberglass/glass-process.webp"
+    ],
+    "badge": "The Smart Choice",
+    "headingLead": "Why Fiberglass Pools",
+    "headingHighlight": "Make Sense",
+    "subtitle": "Strength through precision. Each San Juan pool includes a minimum of five hand-laid fiberglass layers, creating a structure built to last for decades.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "17x", "label": "Stronger Than Concrete", "icon": "Shield" },
+    { "value": "<1hr", "label": "Weekly Maintenance", "icon": "Clock" },
+    { "value": "Days", "label": "Not Weeks to Install", "icon": "Zap" },
+    { "value": "25yr", "label": "Structural Warranty", "icon": "Award" }
+  ],
+  "benefitsSection": {
+    "badge": "Key Benefits",
+    "headingLead": "Why Fiberglass",
+    "headingHighlight": "Outperforms",
+    "intro": "Compare for yourself and see why fiberglass pool construction consistently outperforms gunite and vinyl options."
+  },
+  "benefits": [
+    { "icon": "Shield", "title": "Unmatched Durability", "description": "All-weather tolerant, stress-free, and pet friendly. A fiberglass pool is 17x stronger than concrete and flexes with ground movement instead of cracking." },
+    { "icon": "Clock", "title": "Minimal Maintenance", "description": "Less than 1 hour per week vs. 5+ hours for gunite or vinyl. The smooth, non-porous surface resists algae and requires minimal chemicals." },
+    { "icon": "Zap", "title": "Rapid Installation", "description": "Installed in days, not weeks or months. Factory-manufactured with controlled quality assurance means your pool arrives ready to set." },
+    { "icon": "Droplets", "title": "Algae Resistant", "description": "The smooth gel coat surface prevents algae from adhering — unlike porous concrete where algae grows through the walls." },
+    { "icon": "Leaf", "title": "Energy Efficient", "description": "Circulate just 4–6 hours per day vs. 10 hours for gunite. Lower electrical usage means lower bills year after year." },
+    { "icon": "Wrench", "title": "No Repairs Needed", "description": "No acid washes, no replastering, no liner replacements. When properly maintained, a fiberglass pool requires zero structural repairs." }
+  ],
+  "guaranteeSection": {
+    "badge": "San Juan Guarantee",
+    "headingLead": "What You're",
+    "headingHighlight": "Guaranteed",
+    "paragraph": "With a San Juan pool, every shell is built to the same uncompromising standard — no shortcuts, no substitutions.",
+    "image": "/images/why-fiberglass/canyon-beach.webp",
+    "imageAlt": "San Juan fiberglass pool — guaranteed quality",
+    "guarantees": [
+      "All fiberglass is 100% hand-laid — never sprayed",
+      "32-mil gel coat — thickest in the industry (two 16-mil layers)",
+      "5 oz strand mat per layer",
+      "24 oz woven roving per layer",
+      "Minimum of 5 fiberglass layers per shell",
+      "No coring, fillers, chopped fiberglass, or safety ledges"
+    ]
+  },
+  "comparisonSection": {
+    "badge": "Side by Side",
+    "headingLead": "Fiberglass vs. Gunite vs.",
+    "headingHighlight": "Vinyl",
+    "intro": "See how San Juan fiberglass stacks up against the competition across every category that matters."
+  },
+  "comparison": {
+    "rows": [
+      { "feature": "Product Durability", "fiberglass": "All-weather tolerant, stress-free, pet friendly, 17x stronger than concrete", "gunite": "Rigid structure, cracks with ground movement", "vinyl": "Punctures and tears easily, not pet friendly", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "poor" },
+      { "feature": "Product Quality", "fiberglass": "Factory manufactured with controlled quality assurance", "gunite": "On-site constructed, quality dependent on workforce", "vinyl": "Pre-fabricated liner with site-assembled walls", "fiberglassRating": "excellent", "guniteRating": "good", "vinylRating": "good" },
+      { "feature": "Repairs Needed", "fiberglass": "Requires none when properly maintained", "gunite": "Acid washes, re-marcite, plaster, paint", "vinyl": "Liner replacements, tear repairs, pulls", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "poor" },
+      { "feature": "Surface Texture", "fiberglass": "Smooth, silky feel on skin", "gunite": "Very rough — equivalent to 80 grit sandpaper", "vinyl": "Slippery surface with rough seams", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "good" },
+      { "feature": "Algae Resistance", "fiberglass": "Algae-resistant — cannot adhere to surface", "gunite": "Constant problem, grows through porous walls", "vinyl": "Troublesome, grows in liner seams", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "poor" },
+      { "feature": "Weekly Maintenance", "fiberglass": "Less than 1 hour per week", "gunite": "Approximately 5 hours per week", "vinyl": "Approximately 5 hours per week", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "poor" },
+      { "feature": "Chemical Use", "fiberglass": "Minimal chemicals required", "gunite": "Considerably more chemicals needed", "vinyl": "Slightly more chemicals needed", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "good" },
+      { "feature": "Installation Time", "fiberglass": "Completed within days", "gunite": "8+ weeks minimum", "vinyl": "2–5 weeks", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "good" },
+      { "feature": "Electrical Usage", "fiberglass": "Circulate 4–6 hours/day", "gunite": "Circulate 10 hours/day", "vinyl": "Circulate 6–8 hours/day", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "good" },
+      { "feature": "Pool Access", "fiberglass": "Seamless stairs, swim-outs, benches, sundecks", "gunite": "Shallow end stairs only — additions cost extra", "vinyl": "Drop-in type stairs or ladders", "fiberglassRating": "excellent", "guniteRating": "good", "vinylRating": "poor" },
+      { "feature": "Warranty", "fiberglass": "25-year structural warranty", "gunite": "Commonly 1 year by contractor", "vinyl": "Only if seam separates — pro-rated", "fiberglassRating": "excellent", "guniteRating": "poor", "vinylRating": "poor" }
+    ]
+  },
+  "differenceSection": {
+    "badge": "The Difference",
+    "headingLead": "Our Pools Are",
+    "headingHighlight": "Much Stronger",
+    "paragraph": "Despite clear evidence that hand-laid fiberglass produces a stronger result, many competitors still use chopped fiberglass methods — reducing quality and consistency.",
+    "image": "/images/why-fiberglass/glass-process.webp",
+    "imageAlt": "Hand-laid fiberglass manufacturing process",
+    "choppedTitle": "Downsides of Chopped Fiberglass",
+    "chopDownsides": [
+      "No consistency in fiberglass thickness — depends on spray gun duration",
+      "Resin concentrates in random areas, creating uneven layers",
+      "Requires \"safety ledges\" that weaken the shell and collect dirt",
+      "Weaker structural integrity under freeze-thaw conditions"
+    ],
+    "handlaidTitle": "Benefits of Hand-Laid Fiberglass",
+    "handlaidBenefits": [
+      "Consistent thickness throughout the entire mold",
+      "Even resin and woven roving distribution front to back",
+      "Stronger design with no safety ledges needed",
+      "Guaranteed minimum 5 layers per shell"
+    ]
+  },
+  "compareSection": {
+    "badge": "Explore More",
+    "headingLead": "Compare &",
+    "headingHighlight": "Learn More"
+  },
+  "compareCards": [
+    { "icon": "Award", "title": "San Juan VS Competitors", "description": "Side-by-side comparison of construction methods and materials.", "href": "/san-juan-fiberglass-pools" },
+    { "icon": "Gem", "title": "Fiberglass Pool Quality", "description": "The materials and engineering behind premium pool shells.", "href": "/fiberglass-pool-quality" },
+    { "icon": "Palette", "title": "Fiberglass Pool Colors", "description": "Explore gelcoat and Iridium finish color options.", "href": "/fiberglass-pool-colors" }
+  ],
+  "cta": {
+    "image": "/images/why-fiberglass/canyon-beach.webp",
+    "headingLead": "Ready for a Pool That",
+    "headingHighlight": "Makes Sense?",
+    "paragraph": "Talk to our team today and discover why fiberglass is the smartest investment for your backyard.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

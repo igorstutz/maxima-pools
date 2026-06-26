@@ -1,0 +1,129 @@
+{
+  "seo": {
+    "title": "How San Juan Pools Are Made | Maxima Pools - Columbus, OH",
+    "description": "Discover the hand-laid fiberglass process, proprietary Vinyl Ester resin, and 7-step manufacturing that make San Juan the strongest, most durable pool on the market.",
+    "ogTitle": "How San Juan Pools Are Made | Maxima Pools",
+    "ogDescription": "5+ hand-laid fiberglass layers, marine-grade Vinyl Ester resin, and expert craftsmanship. See why San Juan pools outlast every competitor."
+  },
+  "hero": {
+    "images": [
+      "/images/how-its-made/step-panels.webp",
+      "/images/how-its-made/step-ribs.webp",
+      "/images/how-its-made/construction.webp",
+      "/images/how-its-made/step-mold.webp"
+    ],
+    "badge": "Craftsmanship & Engineering",
+    "headingLead": "How San Juan Pools",
+    "headingHighlight": "Are Made",
+    "subtitle": "Not all fiberglass pools are built the same. Each San Juan pool is carefully built with a minimum of five hand-laid fiberglass layers, ensuring superior strength, precision, and long-term durability.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "5+", "label": "Hand-Laid Layers", "icon": "Layers" },
+    { "value": "72oz", "label": "Fiberglass / sq yd", "icon": "Shield" },
+    { "value": "20+yr", "label": "Expert Laminators", "icon": "Users" },
+    { "value": "Since '58", "label": "Made in America", "icon": "Award" }
+  ],
+  "dealer": {
+    "logo": "/images/logo/sanjuan-logo.png",
+    "url": "https://sanjuanpools.com/",
+    "badge": "Authorized Dealer",
+    "headingLead": "Backed by",
+    "headingHighlight": "San Juan Pools",
+    "paragraph": "Maxima Pools is proud to be an authorized San Juan dealer. Every pool we install is built by the industry leader in fiberglass pool manufacturing since 1958.",
+    "ctaLabel": "Visit sanjuanpools.com"
+  },
+  "pillarsSection": {
+    "badge": "What Sets San Juan Apart",
+    "headingLead": "Three Pillars of",
+    "headingHighlight": "Superior Quality",
+    "intro": "The best resin, the strongest fiberglass, and the most experienced hands in the industry — working together on every pool."
+  },
+  "pillars": [
+    { "icon": "FlaskConical", "title": "Vinyl Ester Resin", "subtitle": "Marine-grade, throughout the entire laminate", "description": "The marine industry has proven that only epoxy-type resins are truly impervious to water. San Juan uses proprietary Vinyl Ester resin — sharing the same chemical backbone as epoxy — throughout the entire laminate, not just the outer layer. This ensures consistent, watertight protection on both sides of the shell for decades.", "badge": "Supplied by Hexion", "badgeImage": "/images/how-its-made/hexion-logo.jpg" },
+    { "icon": "Layers", "title": "Woven Fiberglass", "subtitle": "Hand-laid, never sprayed", "description": "The aerospace and marine industries would never rely on chopped fiberglass for structural strength — and neither does San Juan. Using woven roving (continuous strands woven together), each pool receives up to 72oz of fiberglass per square yard. Hand-laid, never sprayed — eliminating weak points that chopper-gun methods create.", "badge": "Supplied by PPG", "badgeImage": "/images/how-its-made/ppg-logo.jpg" },
+    { "icon": "Hammer", "title": "Expert Craftsmanship", "subtitle": "20+ years of hands-on experience", "description": "Once the best materials are selected, craftsmanship becomes the defining factor. Many of San Juan's expert laminators have been with the company for more than 20 years — guaranteeing consistency, precision, and the same uncompromising standard across every single pool produced.", "badge": "San Juan Pools", "badgeImage": "/images/logo/sanjuan-logo.png" }
+  ],
+  "strengthSection": {
+    "badge": "Structural Advantage",
+    "headingLead": "What Does This Mean",
+    "headingHighlight": "For Your Pool?",
+    "paragraph1": "Hand-laid fiberglass creates a continuous, uniform shell — like a single unbroken rope. Sprayed fiberglass is like glued-together pieces: one endures, the other breaks under stress.",
+    "paragraph2": "In the freeze-thaw cycles of Ohio winters, there is constant ground movement. It's this movement that causes most fiberglass pool failures — and why hand-laid construction matters.",
+    "imageMain": "/images/how-its-made/construction.webp",
+    "imageMainAlt": "San Juan pool fiberglass construction",
+    "image2": "/images/how-its-made/step-glass.webp",
+    "image2Alt": "Hand-laid fiberglass process",
+    "image3": "/images/how-its-made/step-ribs.webp",
+    "image3Alt": "Structural ribs reinforcement",
+    "points": [
+      "Hand-laid layers ensure uniform thickness — no thin spots",
+      "Continuous woven fiberglass vs. chopped pieces from a spray gun",
+      "Vinyl Ester resin throughout — not just the gel coat",
+      "Structural ribs reinforce walls without added weight",
+      "Flexes with ground movement instead of cracking",
+      "Survives freeze-thaw cycles that destroy concrete pools"
+    ]
+  },
+  "videoSection": {
+    "badge": "Watch the Process",
+    "headingLead": "See How It's",
+    "headingHighlight": "Built",
+    "paragraph": "This video shows exactly how a San Juan fiberglass pool is constructed — from the first layer to the finished shell.",
+    "youtube": "https://www.youtube.com/embed/rq7xEeLpDw0?rel=0&modestbranding=1"
+  },
+  "stepsSection": {
+    "badge": "Step by Step",
+    "headingLead": "The 7-Step",
+    "headingHighlight": "Manufacturing Process",
+    "intro": "Click each step to explore how your San Juan pool goes from mold to masterpiece."
+  },
+  "steps": [
+    { "number": "01", "title": "Prepare the Mold", "description": "The process begins with a clean, precisely waxed mold to ensure perfect shape accuracy. Every curve and contour is inspected before a single layer is applied.", "image": "/images/how-its-made/step-mold.webp" },
+    { "number": "02", "title": "Cut & Lay Fiberglass", "description": "All fiberglass is hand-cut and hand-laid — none of the reinforcement is sprayed. This ensures structural consistency and eliminates weak points found in chopper-gun methods.", "image": "/images/how-its-made/step-glass.webp" },
+    { "number": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.", "image": "/images/how-its-made/step-panels.webp" },
+    { "number": "04", "title": "Stiffen the Walls", "description": "Structural ribs are precisely positioned to reinforce wall strength without adding unnecessary weight. This is what allows fiberglass pools to flex with ground movement instead of cracking.", "image": "/images/how-its-made/step-ribs.webp" },
+    { "number": "05", "title": "Clean & Inspect", "description": "Every pool is thoroughly inspected and all imperfections are repaired. This takes time, but only perfection is good enough for a San Juan pool. Quality control is non-negotiable.", "image": "/images/how-its-made/step-inspect.webp" },
+    { "number": "06", "title": "Tile & Outfit", "description": "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.", "image": "/images/how-its-made/step-outfitting.webp" },
+    { "number": "07", "title": "Final Pool Shell", "description": "A beautiful San Juan pool shell is complete and ready to become part of your backyard dream. From mold to masterpiece — built to last a lifetime.", "image": "/images/how-its-made/step-final.webp" }
+  ],
+  "finishesSection": {
+    "badge": "Finishes",
+    "headingLead": "Two Premium",
+    "headingHighlight": "Surface Finishes",
+    "paragraph": "Every San Juan pool comes with a choice of two industry-leading surface technologies — both engineered for beauty and durability.",
+    "linkLabel": "Explore all colors",
+    "linkHref": "/fiberglass-pool-colors"
+  },
+  "finishes": [
+    { "title": "Classic White & Sully Blue", "description": "NPG/ISO (Neopentyl Glycol Isophthalic) based gelcoat — UV stabilized and corrosion resistant. Many pools with this finish are well over 25 years old and still look stunning. Crystal clear water will always have a sparkling blue look.", "tags": ["UV Stabilized", "Corrosion Resistant", "25+ Year Track Record"] },
+    { "title": "Iridium Colored Finishes", "description": "A solid surface material consisting of oven-cured colored chips in a clear UV and chemical resistant resin, applied over a color-matched gelcoat that acts as both a barrier coat and primer for the fiberglass.", "tags": ["Oven Cured", "UV Resistant", "Chemical Resistant"] }
+  ],
+  "compareSection": {
+    "badge": "Learn More",
+    "headingLead": "Compare &",
+    "headingHighlight": "Explore"
+  },
+  "compareCards": [
+    { "title": "San Juan VS Competitors", "description": "See how San Juan's hand-laid process compares to chopper-gun manufacturers.", "href": "/san-juan-fiberglass-pools" },
+    { "title": "Fiberglass Pool Quality", "description": "Understand the engineering and materials behind premium fiberglass pools.", "href": "/fiberglass-pool-quality" },
+    { "title": "Fiberglass Pool Colors", "description": "Explore the full range of gelcoat and Iridium finish options.", "href": "/fiberglass-pool-colors" }
+  ],
+  "cta": {
+    "image": "/images/how-its-made/step-final.webp",
+    "headingLead": "Ready for a Pool Built to",
+    "headingHighlight": "Last a Lifetime?",
+    "paragraph": "Talk to our team today and get a personalized quote for a San Juan fiberglass pool — the strongest pool on the market.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}
