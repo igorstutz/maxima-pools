@@ -1,7 +1,7 @@
 {
   "order": 96,
   "name": "Vancouver Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa.webp",
+  "image": "/images/wp/2024/08/vancouver-spa.webp",
   "width": "11'",
   "length": "18'2\"",
   "depth": "3'9\"",
@@ -12,14 +12,14 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-01-1024x784.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-02-1024x685.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-03-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-04-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-05-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-06-1024x691.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-07-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vancouver-spa-08-1024x691.webp"
+    "/images/wp/2024/08/vancouver-spa-01-1024x784.webp",
+    "/images/wp/2024/08/vancouver-spa-02-1024x685.webp",
+    "/images/wp/2024/08/vancouver-spa-03-1024x682.webp",
+    "/images/wp/2024/08/vancouver-spa-04-1024x768.webp",
+    "/images/wp/2024/08/vancouver-spa-05-1024x768.webp",
+    "/images/wp/2024/08/vancouver-spa-06-1024x691.webp",
+    "/images/wp/2024/08/vancouver-spa-07-1024x768.webp",
+    "/images/wp/2024/08/vancouver-spa-08-1024x691.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/e2871c5019154a3484d35e84eacef545/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/c58c1195-a76d-11ef-a5d8-72162e861f80",

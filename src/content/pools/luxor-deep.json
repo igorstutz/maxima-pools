@@ -1,7 +1,7 @@
 {
   "order": 38,
   "name": "Luxor Deep",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep.webp",
+  "image": "/images/wp/2024/08/luxor-deep.webp",
   "width": "15'11\"",
   "length": "44'7\"",
   "depth": "7'10\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-deep-09-1024x576.webp"
+    "/images/wp/2024/08/luxor-deep-01-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-02-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-04-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-05-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-06-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-07-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-08-1024x576.webp",
+    "/images/wp/2024/08/luxor-deep-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/e39617b5a611481c9e5adaccc0f48e4c/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/b3019d12-6be5-11f0-9f47-72162e861f80",

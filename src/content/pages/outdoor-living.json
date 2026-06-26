@@ -7,10 +7,10 @@
   },
   "hero": {
     "images": [
-      "/images/outdoor-living/kitchen.jpg",
-      "/images/outdoor-living/lighting.jpg",
-      "/images/outdoor-living/shelter.jpg",
-      "/images/outdoor-living/general.jpg"
+      "/images/outdoor-living/kitchen.webp",
+      "/images/outdoor-living/lighting.webp",
+      "/images/outdoor-living/shelter.webp",
+      "/images/outdoor-living/general.webp"
     ],
     "badge": "Outdoor Living",
     "headingLead": "Transform Your Backyard Into an",
@@ -43,7 +43,7 @@
       "One team, one timeline, one flawless result",
       "Serving Columbus, OH and surrounding areas"
     ],
-    "image": "/images/outdoor-living/kitchen.jpg"
+    "image": "/images/outdoor-living/kitchen.webp"
   },
   "servicesSection": {
     "badge": "Our Solutions",
@@ -56,43 +56,43 @@
       "icon": "UtensilsCrossed",
       "title": "Custom Outdoor Kitchens",
       "description": "Built-in grills, pizza ovens, bars, and durable countertops designed for performance and style. Year-round entertaining with prep areas and weatherproof cabinetry.",
-      "image": "/images/outdoor-living/outdoor-kitchens.png"
+      "image": "/images/outdoor-living/outdoor-kitchens.webp"
     },
     {
       "icon": "Flame",
       "title": "Fire Features",
       "description": "Fire pits, fire bowls, and custom fireplaces that create a warm, inviting atmosphere. Gas-powered options with dancing flames that reflect beautifully off the water.",
-      "image": "/images/outdoor-living/grill.jpg"
+      "image": "/images/outdoor-living/grill.webp"
     },
     {
       "icon": "Tent",
       "title": "Shade Structures",
       "description": "Pergolas, gazebos, pavilions, and custom shelters engineered to blend with your home architecture while providing shade and structure for outdoor gatherings.",
-      "image": "/images/outdoor-living/shade-structures.png"
+      "image": "/images/outdoor-living/shade-structures.webp"
     },
     {
       "icon": "Lightbulb",
       "title": "Outdoor Lighting",
       "description": "Professional landscape and architectural lighting that extends your enjoyment after sunset. Path lighting, accent lighting, and ambient LED solutions for safety and beauty.",
-      "image": "/images/outdoor-living/lighting-2.jpg"
+      "image": "/images/outdoor-living/lighting-2.webp"
     },
     {
       "icon": "Tv",
       "title": "Entertainment Add-Ons",
       "description": "Outdoor TVs, sound systems, and smart technology that bring indoor comfort outside. Weatherproof solutions built for year-round use.",
-      "image": "/images/outdoor-living/general.jpg"
+      "image": "/images/outdoor-living/general.webp"
     },
     {
       "icon": "Wrench",
       "title": "Functional Upgrades",
       "description": "Sinks, storage, trash centers, and weatherproof cabinetry. Every detail is considered so your outdoor space is as practical as it is beautiful.",
-      "image": "/images/outdoor-living/kitchen-2.jpg"
+      "image": "/images/outdoor-living/kitchen-2.webp"
     }
   ],
   "kitchensFeature": {
-    "imageMain": "/images/outdoor-living/outdoor-kitchens.png",
-    "imageGrill": "/images/outdoor-living/grill.jpg",
-    "imageDetail": "/images/outdoor-living/kitchen-2.jpg",
+    "imageMain": "/images/outdoor-living/outdoor-kitchens.webp",
+    "imageGrill": "/images/outdoor-living/grill.webp",
+    "imageDetail": "/images/outdoor-living/kitchen-2.webp",
     "badge": "Featured",
     "headingLead": "Culinary Experiences",
     "headingHighlight": "Under the Open Sky",
@@ -109,19 +109,19 @@
   "lightingShade": [
     {
       "icon": "Lightbulb",
-      "image": "/images/outdoor-living/lighting-2.jpg",
+      "image": "/images/outdoor-living/lighting-2.webp",
       "title": "Lighting That Elevates Every Moment",
       "description": "Professional landscape and architectural lighting extends your enjoyment after sunset — adding beauty, ambiance, and safety to every corner of your outdoor space."
     },
     {
       "icon": "Tent",
-      "image": "/images/outdoor-living/shade-structures.png",
+      "image": "/images/outdoor-living/shade-structures.webp",
       "title": "Comfort, Style, and Protection",
       "description": "Custom pergolas, gazebos, and pavilions engineered to blend with your home while providing shade and structure for outdoor gatherings all year long."
     }
   ],
   "finalCta": {
-    "image": "/images/outdoor-living/shelter.jpg",
+    "image": "/images/outdoor-living/shelter.webp",
     "headingLead": "Ready to Elevate Your",
     "headingHighlight": "Outdoor Living?",
     "text": "Tell us your vision and we'll bring it to life. One team, one timeline, one stunning outdoor space.",

@@ -1,7 +1,7 @@
 {
   "order": 84,
   "name": "Charlotte Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-1.webp",
+  "image": "/images/wp/2024/08/charlotte-spa-1.webp",
   "width": "8'",
   "length": "12'",
   "depth": "3'11\"",
@@ -12,15 +12,15 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-01-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-08-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/charlotte-spa-09-1024x768.webp"
+    "/images/wp/2024/08/charlotte-spa-01-1024x768.webp",
+    "/images/wp/2024/08/charlotte-spa-02-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-03-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-04-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-05-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-06-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-07-1024x576.webp",
+    "/images/wp/2024/08/charlotte-spa-08-1024x768.webp",
+    "/images/wp/2024/08/charlotte-spa-09-1024x768.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/a5cdfe0444b04f85a8b907f618f0d2cb/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/c91d9ca8-0cd7-11f0-ba12-72162e861f80",

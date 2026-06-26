@@ -1,7 +1,7 @@
 {
   "order": 40,
   "name": "Malibu",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/malibu.webp",
+  "image": "/images/wp/2024/08/malibu.webp",
   "width": "12'1\"",
   "length": "22'4\"",
   "depth": "3'9\"",
@@ -12,13 +12,13 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/malibu-07-1024x576.webp"
+    "/images/wp/2024/08/malibu-01-1024x576.webp",
+    "/images/wp/2024/08/malibu-02-1024x576.webp",
+    "/images/wp/2024/08/malibu-03-1024x576.webp",
+    "/images/wp/2024/08/malibu-04-1024x576.webp",
+    "/images/wp/2024/08/malibu-05-1024x576.webp",
+    "/images/wp/2024/08/malibu-06-1024x576.webp",
+    "/images/wp/2024/08/malibu-07-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/a69ab4ebb7094e0aab56cdfcb32d468b/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/d04eccf8-6beb-11f0-9f47-72162e861f80",

@@ -1,7 +1,7 @@
 {
   "order": 54,
   "name": "Olympus",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/olympus.webp",
+  "image": "/images/wp/2024/08/olympus.webp",
   "width": "16'2\"",
   "length": "39'11\"",
   "depth": "5'8\"",
@@ -12,14 +12,14 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-06-1024x1024.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/olympus-08-1024x576.webp"
+    "/images/wp/2024/08/olympus-01-1024x576.webp",
+    "/images/wp/2024/08/olympus-02-1024x576.webp",
+    "/images/wp/2024/08/olympus-03-1024x576.webp",
+    "/images/wp/2024/08/olympus-04-1024x576.webp",
+    "/images/wp/2024/08/olympus-05-1024x576.webp",
+    "/images/wp/2024/08/olympus-06-1024x1024.webp",
+    "/images/wp/2024/08/olympus-07-1024x576.webp",
+    "/images/wp/2024/08/olympus-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/76287fec7d64442eaef1ba2aaa63cfe7/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/65b7a153-b9c5-11f0-88bc-72162e861f80",

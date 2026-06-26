@@ -30,7 +30,7 @@
     { "value": "Since '58", "label": "Made in America", "icon": "Award" }
   ],
   "dealer": {
-    "logo": "/images/logo/sanjuan-logo.png",
+    "logo": "/images/logo/sanjuan-logo.webp",
     "url": "https://sanjuanpools.com/",
     "badge": "Authorized Dealer",
     "headingLead": "Backed by",
@@ -45,9 +45,9 @@
     "intro": "The best resin, the strongest fiberglass, and the most experienced hands in the industry — working together on every pool."
   },
   "pillars": [
-    { "icon": "FlaskConical", "title": "Vinyl Ester Resin", "subtitle": "Marine-grade, throughout the entire laminate", "description": "The marine industry has proven that only epoxy-type resins are truly impervious to water. San Juan uses proprietary Vinyl Ester resin — sharing the same chemical backbone as epoxy — throughout the entire laminate, not just the outer layer. This ensures consistent, watertight protection on both sides of the shell for decades.", "badge": "Supplied by Hexion", "badgeImage": "/images/how-its-made/hexion-logo.jpg" },
-    { "icon": "Layers", "title": "Woven Fiberglass", "subtitle": "Hand-laid, never sprayed", "description": "The aerospace and marine industries would never rely on chopped fiberglass for structural strength — and neither does San Juan. Using woven roving (continuous strands woven together), each pool receives up to 72oz of fiberglass per square yard. Hand-laid, never sprayed — eliminating weak points that chopper-gun methods create.", "badge": "Supplied by PPG", "badgeImage": "/images/how-its-made/ppg-logo.jpg" },
-    { "icon": "Hammer", "title": "Expert Craftsmanship", "subtitle": "20+ years of hands-on experience", "description": "Once the best materials are selected, craftsmanship becomes the defining factor. Many of San Juan's expert laminators have been with the company for more than 20 years — guaranteeing consistency, precision, and the same uncompromising standard across every single pool produced.", "badge": "San Juan Pools", "badgeImage": "/images/logo/sanjuan-logo.png" }
+    { "icon": "FlaskConical", "title": "Vinyl Ester Resin", "subtitle": "Marine-grade, throughout the entire laminate", "description": "The marine industry has proven that only epoxy-type resins are truly impervious to water. San Juan uses proprietary Vinyl Ester resin — sharing the same chemical backbone as epoxy — throughout the entire laminate, not just the outer layer. This ensures consistent, watertight protection on both sides of the shell for decades.", "badge": "Supplied by Hexion", "badgeImage": "/images/how-its-made/hexion-logo.webp" },
+    { "icon": "Layers", "title": "Woven Fiberglass", "subtitle": "Hand-laid, never sprayed", "description": "The aerospace and marine industries would never rely on chopped fiberglass for structural strength — and neither does San Juan. Using woven roving (continuous strands woven together), each pool receives up to 72oz of fiberglass per square yard. Hand-laid, never sprayed — eliminating weak points that chopper-gun methods create.", "badge": "Supplied by PPG", "badgeImage": "/images/how-its-made/ppg-logo.webp" },
+    { "icon": "Hammer", "title": "Expert Craftsmanship", "subtitle": "20+ years of hands-on experience", "description": "Once the best materials are selected, craftsmanship becomes the defining factor. Many of San Juan's expert laminators have been with the company for more than 20 years — guaranteeing consistency, precision, and the same uncompromising standard across every single pool produced.", "badge": "San Juan Pools", "badgeImage": "/images/logo/sanjuan-logo.webp" }
   ],
   "strengthSection": {
     "badge": "Structural Advantage",

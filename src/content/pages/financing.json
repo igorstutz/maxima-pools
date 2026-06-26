@@ -6,7 +6,7 @@
     "ogDescription": "Affordable pool financing with industry-leading rates through Lyon Financial. Loans up to $250K with terms up to 30 years."
   },
   "hero": {
-    "image": "/images/gallery/lagoon-03.jpg",
+    "image": "/images/gallery/lagoon-03.webp",
     "badge": "Pool Financing",
     "headingLead": "Finance Your",
     "headingHighlight": "Dream Pool",
@@ -25,7 +25,7 @@
     { "value": "30", "label": "Year Terms Available", "icon": "Clock" }
   ],
   "partner": {
-    "logo": "/images/partners/lyon-financial.png",
+    "logo": "/images/partners/lyon-financial.webp",
     "paragraphLead": "Lyon Financial has been America's most trusted pool financing company since 1979. With over ",
     "paragraphBold": "500,000 happy customers",
     "paragraphTail": " and specialized expertise in swimming pool loans, they make the financing process as refreshing as the pool itself.",
@@ -124,8 +124,8 @@
     }
   ],
   "finalCta": {
-    "image": "/images/gallery/sully-01.jpg",
-    "logo": "/images/partners/lyon-financial.png",
+    "image": "/images/gallery/sully-01.webp",
+    "logo": "/images/partners/lyon-financial.webp",
     "headingLead": "Ready to Make It",
     "headingHighlight": "Happen?",
     "text": "Apply online in minutes. No obligation, no credit impact until you decide to proceed. Your dream pool is closer than you think.",

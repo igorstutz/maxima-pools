@@ -1,7 +1,7 @@
 {
   "order": 89,
   "name": "Isle Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/isle-spa-1.webp",
+  "image": "/images/wp/2024/08/isle-spa-1.webp",
   "width": "8'",
   "length": "8'",
   "depth": "3'",
@@ -12,10 +12,10 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/isle-spa-01-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/isle-spa-02-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/isle-spa-03-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/isle-spa-04-1024x682.webp"
+    "/images/wp/2024/08/isle-spa-01-1024x768.webp",
+    "/images/wp/2024/08/isle-spa-02-1024x682.webp",
+    "/images/wp/2024/08/isle-spa-03-1024x682.webp",
+    "/images/wp/2024/08/isle-spa-04-1024x682.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/4749986efb2e4c6191340d4944464bed/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/ec1fc9ad-81f9-11f0-88bc-72162e861f80",

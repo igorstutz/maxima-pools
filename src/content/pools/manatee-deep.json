@@ -1,7 +1,7 @@
 {
   "order": 43,
   "name": "Manatee Deep",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/manatee-deep.webp",
+  "image": "/images/wp/2024/08/manatee-deep.webp",
   "width": "13'9\"",
   "length": "32'10\"",
   "depth": "8'",
@@ -12,10 +12,10 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/manatee-deep-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/manatee-deep-02-1024x765.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/manatee-deep-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/manatee-deep-04-1024x768.webp"
+    "/images/wp/2024/08/manatee-deep-01-1024x576.webp",
+    "/images/wp/2024/08/manatee-deep-02-1024x765.webp",
+    "/images/wp/2024/08/manatee-deep-03-1024x768.webp",
+    "/images/wp/2024/08/manatee-deep-04-1024x768.webp"
   ],
   "sketchfab": null,
   "pdf": "https://data.dexter.sanjuanpools.net/images/2fb1755a-195f-11f0-ba12-72162e861f80",

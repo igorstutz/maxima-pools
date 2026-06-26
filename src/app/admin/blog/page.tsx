@@ -43,7 +43,7 @@ const emptyDraft: Draft = {
   title: "",
   slug: "",
   excerpt: "",
-  coverImage: "/images/gallery/featured-01.png",
+  coverImage: "/images/gallery/featured-01.webp",
   author: "Maxima Pools Team",
   tags: "",
   publishedAt: new Date().toISOString().slice(0, 10),
@@ -361,7 +361,7 @@ export default function AdminBlogPage() {
                   label="Cover image URL"
                   value={draft.coverImage}
                   onChange={(v) => setDraft({ ...draft, coverImage: v })}
-                  placeholder="/images/gallery/your-image.jpg"
+                  placeholder="/images/gallery/your-image.webp"
                   hint="Reference any image in /public/images/."
                 />
                 <div className="grid sm:grid-cols-2 gap-4">

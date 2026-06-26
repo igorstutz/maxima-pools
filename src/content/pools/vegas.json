@@ -1,7 +1,7 @@
 {
   "order": 72,
   "name": "Vegas",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/vegas.webp",
+  "image": "/images/wp/2024/08/vegas.webp",
   "width": "15'11\"",
   "length": "27'11\"",
   "depth": "5'1\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/vegas-08-1024x576.webp"
+    "/images/wp/2024/08/vegas-01-1024x576.webp",
+    "/images/wp/2024/08/vegas-02-1024x576.webp",
+    "/images/wp/2024/08/vegas-03-1024x576.webp",
+    "/images/wp/2024/08/vegas-04-1024x576.webp",
+    "/images/wp/2024/08/vegas-05-1024x576.webp",
+    "/images/wp/2024/08/vegas-06-1024x576.webp",
+    "/images/wp/2024/08/vegas-07-1024x576.webp",
+    "/images/wp/2024/08/vegas-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/8293287c56e34cdcaed7c6eeeb3ebac0/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/fc354e0a-7249-11f0-88bc-72162e861f80",

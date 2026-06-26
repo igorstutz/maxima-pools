@@ -8,8 +8,8 @@
   "hero": {
     "badge": "Built to Last a Lifetime",
     "images": [
-      "/images/pool-quality/blue-lagoon.jpg",
-      "/images/pool-quality/wylela-beach.png",
+      "/images/pool-quality/blue-lagoon.webp",
+      "/images/pool-quality/wylela-beach.webp",
       "/images/pool-quality/handlaid-vs-chop.webp",
       "/images/pool-quality/layers-spec.webp"
     ],
@@ -41,7 +41,7 @@
       { "icon": "FlaskConical", "text": "Vinyl Ester Resin" },
       { "icon": "Award", "text": "Structural Warranty" }
     ],
-    "image": "/images/pool-quality/blue-lagoon.jpg",
+    "image": "/images/pool-quality/blue-lagoon.webp",
     "imageAlt": "San Juan fiberglass pool — highest quality construction"
   },
   "comparison": {
@@ -85,7 +85,7 @@
     "headingLead": "Benefits of",
     "headingHighlight": "Superior Quality",
     "paragraph": "Investing in superior quality pays off in countless ways — from long-term reliability to a flawless finish that never fades.",
-    "imageMain": "/images/pool-quality/wylela-beach.png",
+    "imageMain": "/images/pool-quality/wylela-beach.webp",
     "imageMainAlt": "Premium fiberglass pool installation",
     "imageSpec": "/images/pool-quality/layers-spec.webp",
     "imageSpecAlt": "Fiberglass pool layers specification",
@@ -108,7 +108,7 @@
     { "icon": "Palette", "title": "Fiberglass Pool Colors", "description": "Explore the full range of gelcoat and Iridium finish color options.", "href": "/fiberglass-pool-colors" }
   ],
   "finalCta": {
-    "image": "/images/pool-quality/wylela-beach.png",
+    "image": "/images/pool-quality/wylela-beach.webp",
     "headingLead": "Ready for the Highest",
     "headingHighlight": "Quality Pool?",
     "paragraph": "Talk to our team today and get a personalized quote for a San Juan fiberglass pool built to outlast everything else.",

@@ -1,7 +1,7 @@
 {
   "order": 45,
   "name": "Marathon",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-768x320.webp",
+  "image": "/images/wp/2024/08/marathon-pool-only-768x320.webp",
   "width": "8'6\"",
   "length": "34'",
   "depth": "4'9\"",
@@ -12,11 +12,11 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-01-1024x681.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-02-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-04-768x1024.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/marathon-pool-only-06-1024x682.webp"
+    "/images/wp/2024/08/marathon-pool-only-01-1024x681.webp",
+    "/images/wp/2024/08/marathon-pool-only-02-1024x768.webp",
+    "/images/wp/2024/08/marathon-pool-only-03-1024x768.webp",
+    "/images/wp/2024/08/marathon-pool-only-04-768x1024.webp",
+    "/images/wp/2024/08/marathon-pool-only-06-1024x682.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1fc25109e58248838cb461494ba47d96/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/7bdc8ebb-7047-11f0-88bc-72162e861f80",

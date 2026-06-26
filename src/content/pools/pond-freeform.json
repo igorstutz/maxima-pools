@@ -1,7 +1,7 @@
 {
   "order": 61,
   "name": "Pond Freeform",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform.webp",
+  "image": "/images/wp/2024/08/pond-freeform.webp",
   "width": "11'11\"",
   "length": "17'2\"",
   "depth": "1'6\"",
@@ -12,11 +12,11 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform-01-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform-02-1024x764.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform-04-1024x764.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pond-freeform-05-1024x764.webp"
+    "/images/wp/2024/08/pond-freeform-01-1024x768.webp",
+    "/images/wp/2024/08/pond-freeform-02-1024x764.webp",
+    "/images/wp/2024/08/pond-freeform-03-1024x768.webp",
+    "/images/wp/2024/08/pond-freeform-04-1024x764.webp",
+    "/images/wp/2024/08/pond-freeform-05-1024x764.webp"
   ],
   "sketchfab": null,
   "pdf": "https://data.dexter.sanjuanpools.net/images/808365c9-cf5b-11ef-a5d8-72162e861f80",

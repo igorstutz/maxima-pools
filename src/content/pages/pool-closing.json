@@ -8,10 +8,10 @@
   "hero": {
     "badge": "Winterization Services",
     "images": [
-      "/images/pools/atlantic.jpg",
-      "/images/pools/grand-manhattan.png",
-      "/images/pools/great-lakes.jpg",
-      "/images/pools/vegas.jpg"
+      "/images/pools/atlantic.webp",
+      "/images/pools/grand-manhattan.webp",
+      "/images/pools/great-lakes.webp",
+      "/images/pools/vegas.webp"
     ],
     "headingLead": "Pool Closing/Opening &",
     "headingHighlight": "Winterizing",
@@ -122,7 +122,7 @@
     { "question": "Do you service saltwater and heated pools?", "answer": "Yes. We winterize all pool types including saltwater systems, heated pools, pools with automatic covers, and those with cartridge or DE filters. Pricing may vary slightly based on additional equipment that needs to be serviced." }
   ],
   "finalCta": {
-    "image": "/images/pools/grand-manhattan.png",
+    "image": "/images/pools/grand-manhattan.webp",
     "headingLead": "Ready to Close",
     "headingHighlight": "Your Pool?",
     "paragraph": "Schedule your winterization service today and protect your investment all winter long.",

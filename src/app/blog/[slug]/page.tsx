@@ -246,7 +246,7 @@ export default async function BlogArticlePage({ params }: PageProps) {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[360px] flex items-center">
               <Image
-                src="/images/pools/grand-manhattan.png"
+                src="/images/pools/grand-manhattan.webp"
                 alt=""
                 fill
                 className="object-cover"

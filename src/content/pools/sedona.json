@@ -1,7 +1,7 @@
 {
   "order": 66,
   "name": "Sedona",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/sedona-1.webp",
+  "image": "/images/wp/2024/08/sedona-1.webp",
   "width": "8'",
   "length": "14'",
   "depth": "3'6\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sedona-09-1024x576.webp"
+    "/images/wp/2024/08/sedona-01-1024x576.webp",
+    "/images/wp/2024/08/sedona-02-1024x576.webp",
+    "/images/wp/2024/08/sedona-03-1024x576.webp",
+    "/images/wp/2024/08/sedona-04-1024x576.webp",
+    "/images/wp/2024/08/sedona-06-1024x576.webp",
+    "/images/wp/2024/08/sedona-07-1024x576.webp",
+    "/images/wp/2024/08/sedona-08-1024x576.webp",
+    "/images/wp/2024/08/sedona-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/90d89bab7bec48ad939c51f29dd2e6e7/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/ffb1dae4-7247-11f0-88bc-72162e861f80",

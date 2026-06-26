@@ -1,7 +1,7 @@
 {
   "order": 23,
   "name": "Fort Myers",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/fort-myers.webp",
+  "image": "/images/wp/2024/08/fort-myers.webp",
   "width": "8'2\"",
   "length": "16'2\"",
   "depth": "4'1\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/fort-myers-08-1024x576.webp"
+    "/images/wp/2024/08/fort-myers-01-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-02-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-03-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-04-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-05-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-06-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-07-1024x576.webp",
+    "/images/wp/2024/08/fort-myers-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/beeb44ae772b48898c9e481ede0ed856/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/f307fe1b-6b1e-11f0-9f47-72162e861f80",

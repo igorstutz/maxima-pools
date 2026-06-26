@@ -1,7 +1,7 @@
 {
   "order": 55,
   "name": "Orlando",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/orlando.webp",
+  "image": "/images/wp/2024/08/orlando.webp",
   "width": "12'",
   "length": "28'",
   "depth": "3'10\"",
@@ -12,8 +12,8 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/orlando-01-1024x764.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/orlando-02-1024x764.webp"
+    "/images/wp/2024/08/orlando-01-1024x764.webp",
+    "/images/wp/2024/08/orlando-02-1024x764.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1efe4b00797d48a598671fba7fb59257/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/9012e22e-3e59-11f1-9b13-72162e861f80",

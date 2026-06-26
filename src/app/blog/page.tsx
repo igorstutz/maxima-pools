@@ -36,7 +36,7 @@ export default function BlogPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
-          src="/images/gallery/featured-01.png"
+          src="/images/gallery/featured-01.webp"
           alt="Maxima Pools Blog"
           fill
           priority

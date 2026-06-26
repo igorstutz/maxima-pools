@@ -16,9 +16,10 @@ backend:
 site_url: https://maximapools.com
 display_url: https://maximapools.com
 
-# Uploaded images are committed into the repo and deployed with the site.
-media_folder: "public/images/uploads"
-public_folder: "/images/uploads"
+# The whole image tree is the media library so every image is browsable and
+# replaceable in the panel. Uploads/commits land here and deploy with the site.
+media_folder: "public/images"
+public_folder: "/images"
 
 collections:
   - name: pages

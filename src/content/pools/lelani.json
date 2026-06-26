@@ -1,7 +1,7 @@
 {
   "order": 37,
   "name": "Lelani",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/lelani.webp",
+  "image": "/images/wp/2024/08/lelani.webp",
   "width": "12'3\"",
   "length": "23'9\"",
   "depth": "5'11\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/lelani-08-1024x576.webp"
+    "/images/wp/2024/08/lelani-01-1024x576.webp",
+    "/images/wp/2024/08/lelani-02-1024x576.webp",
+    "/images/wp/2024/08/lelani-03-1024x576.webp",
+    "/images/wp/2024/08/lelani-04-1024x576.webp",
+    "/images/wp/2024/08/lelani-05-1024x576.webp",
+    "/images/wp/2024/08/lelani-06-1024x576.webp",
+    "/images/wp/2024/08/lelani-07-1024x576.webp",
+    "/images/wp/2024/08/lelani-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/4ca2ded008f240dcadffb32b80f12c76/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/b852bff6-3d8b-11f1-9b13-72162e861f80",

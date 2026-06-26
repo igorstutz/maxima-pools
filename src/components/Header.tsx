@@ -71,7 +71,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo/maxima-logo.png"
+              src="/images/logo/maxima-logo.webp"
               alt="Maxima Pools"
               width={160}
               height={50}

@@ -9,11 +9,11 @@
     "galleryLabel": "Explore Our Pools",
     "galleryHref": "/fiberglass-pool-gallery",
     "poolImages": [
-      { "src": "/images/pools/atlantic.jpg", "alt": "Atlantic fiberglass pool" },
-      { "src": "/images/pools/grand-manhattan.png", "alt": "Grand Manhattan fiberglass pool" },
-      { "src": "/images/pools/oasis.jpg", "alt": "Oasis fiberglass pool" },
-      { "src": "/images/pools/venetian.jpg", "alt": "Venetian fiberglass pool" },
-      { "src": "/images/pools/niagara.png", "alt": "Niagara fiberglass pool" }
+      { "src": "/images/pools/atlantic.webp", "alt": "Atlantic fiberglass pool" },
+      { "src": "/images/pools/grand-manhattan.webp", "alt": "Grand Manhattan fiberglass pool" },
+      { "src": "/images/pools/oasis.webp", "alt": "Oasis fiberglass pool" },
+      { "src": "/images/pools/venetian.webp", "alt": "Venetian fiberglass pool" },
+      { "src": "/images/pools/niagara.webp", "alt": "Niagara fiberglass pool" }
     ],
     "testimonials": [
       { "text": "Transformed our backyard into paradise!", "author": "Sarah M.", "location": "Columbus" },
@@ -35,7 +35,7 @@
       "Licensed & Fully Insured"
     ],
     "card1": {
-      "image": "/images/pools/clear-water-beach.png",
+      "image": "/images/pools/clear-water-beach.webp",
       "imageAlt": "Clear Water Beach pool installation",
       "title": "Authorized San Juan Pools Dealer",
       "description": "We exclusively offer San Juan fiberglass pools — the strongest, most durable pool shells manufactured in America since 1958."
@@ -59,7 +59,7 @@
     },
     "card5": {
       "href": "https://sanjuanpools.com/",
-      "logo": "/images/logo/sanjuan-logo.png",
+      "logo": "/images/logo/sanjuan-logo.webp",
       "title": "Best of the Best",
       "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America.",
       "linkLabel": "Visit sanjuanpools.com"
@@ -78,17 +78,17 @@
       "shape": "Free-form",
       "size": "16' x 35'",
       "depth": "3'6\" - 6'5\"",
-      "image": "/images/pools/atlantic.jpg",
+      "image": "/images/pools/atlantic.webp",
       "popularBadge": "Most Popular",
       "featuredLabel": "Featured Model",
       "detailsLabel": "View Full Details"
     },
     "pools": [
-      { "name": "Grand Manhattan", "shape": "Rectangle", "size": "16' x 35'", "image": "/images/pools/grand-manhattan.png" },
-      { "name": "Costa Azul", "shape": "Free-form", "size": "15' x 35'", "image": "/images/pools/costa-azul.jpg" },
-      { "name": "Venetian", "shape": "Roman", "size": "14' x 30'", "image": "/images/pools/venetian.jpg" },
-      { "name": "Oasis", "shape": "Free-form", "size": "16' x 38'", "image": "/images/pools/oasis.jpg" },
-      { "name": "Great Lakes", "shape": "Rectangle", "size": "14' x 27'", "image": "/images/pools/great-lakes.jpg" }
+      { "name": "Grand Manhattan", "shape": "Rectangle", "size": "16' x 35'", "image": "/images/pools/grand-manhattan.webp" },
+      { "name": "Costa Azul", "shape": "Free-form", "size": "15' x 35'", "image": "/images/pools/costa-azul.webp" },
+      { "name": "Venetian", "shape": "Roman", "size": "14' x 30'", "image": "/images/pools/venetian.webp" },
+      { "name": "Oasis", "shape": "Free-form", "size": "16' x 38'", "image": "/images/pools/oasis.webp" },
+      { "name": "Great Lakes", "shape": "Rectangle", "size": "14' x 27'", "image": "/images/pools/great-lakes.webp" }
     ]
   },
   "process": {
@@ -119,13 +119,13 @@
         "name": "Rectangular",
         "description": "Clean lines and a timeless choice. Optimal for lap swimming — simple, elegant, and infinitely versatile. 49 models available.",
         "models": ["Great Lakes", "Grand Manhattan", "Niagara", "Monte Carlo", "Caesar's Palace", "Wylela Beach Grande"],
-        "image": "/images/pools/great-lakes.jpg"
+        "image": "/images/pools/great-lakes.webp"
       },
       {
         "name": "Freeform",
         "description": "Dramatic curves for a natural, modern look. Perfect for informal backyards and creative landscapes. Includes Roman and oval shapes.",
         "models": ["Atlantic", "Costa Azul", "Oasis", "Clearwater Beach", "Desert Falls", "Huntington Beach"],
-        "image": "/images/pools/atlantic.jpg"
+        "image": "/images/pools/atlantic.webp"
       }
     ]
   },
@@ -136,14 +136,14 @@
     "intro": "Your pool is just the beginning. We design and build complete backyard retreats — from custom patios and outdoor kitchens to fire features and shade structures.",
     "ctaLabel": "Explore Outdoor Living",
     "ctaHref": "/outdoor-living",
-    "heroImage": "/images/outdoor/grill.jpg",
+    "heroImage": "/images/outdoor/grill.webp",
     "heroImageAlt": "Luxury outdoor entertaining area with grill",
     "heroLabelTitle": "Complete Outdoor Entertainment",
     "heroLabelSub": "Designed & built by Maxima",
     "services": [
-      { "icon": "UtensilsCrossed", "title": "Outdoor Kitchens", "description": "Custom-built kitchens with grills, countertops, sinks, and pizza ovens for the ultimate entertaining space.", "image": "/images/outdoor/kitchen.jpg" },
-      { "icon": "Flame", "title": "Fire Features", "description": "Fire pits and seating walls that extend your outdoor season and create an inviting atmosphere year-round.", "image": "/images/outdoor/living-1.jpg" },
-      { "icon": "Lamp", "title": "Shelters & Shade", "description": "Pergolas, pavilions, and gazebos that provide comfortable shade and define your outdoor rooms.", "image": "/images/outdoor/shade.jpg" }
+      { "icon": "UtensilsCrossed", "title": "Outdoor Kitchens", "description": "Custom-built kitchens with grills, countertops, sinks, and pizza ovens for the ultimate entertaining space.", "image": "/images/outdoor/kitchen.webp" },
+      { "icon": "Flame", "title": "Fire Features", "description": "Fire pits and seating walls that extend your outdoor season and create an inviting atmosphere year-round.", "image": "/images/outdoor/living-1.webp" },
+      { "icon": "Lamp", "title": "Shelters & Shade", "description": "Pergolas, pavilions, and gazebos that provide comfortable shade and define your outdoor rooms.", "image": "/images/outdoor/shade.webp" }
     ],
     "learnMoreLabel": "Learn more",
     "learnMoreHref": "/outdoor-living",
@@ -170,7 +170,7 @@
         "area": "Up to 300 sq ft",
         "description": "Compact pools ideal for smaller backyards or less maintenance. Perfect cozy retreats that still deliver the full pool experience.",
         "dimensions": ["9'x17'", "9'x21'", "10'x16'", "10'x20'", "11'x20'", "12'x25'"],
-        "image": "/images/pools/monte-carlo.png",
+        "image": "/images/pools/monte-carlo.webp",
         "featured": false
       },
       {
@@ -178,7 +178,7 @@
         "area": "300–500 sq ft",
         "description": "The perfect balance of space and practicality. Room for fun with the whole family — the most popular size range among our customers.",
         "dimensions": ["10'x40'", "14'x27'", "14'x30'", "14'x32'", "15'x35'"],
-        "image": "/images/pools/oasis.jpg",
+        "image": "/images/pools/oasis.webp",
         "featured": true
       },
       {
@@ -186,7 +186,7 @@
         "area": "500+ sq ft",
         "description": "Transform your backyard into an entertainment center. Spacious swim areas with room for tanning ledges, benches, and attached spas.",
         "dimensions": ["14'x37'", "15'x40'", "16'x35'", "16'x38'", "16'x45'"],
-        "image": "/images/pools/clear-water-beach.png",
+        "image": "/images/pools/clear-water-beach.webp",
         "featured": false
       }
     ],
@@ -240,7 +240,7 @@
     "simulatorHref": "/pool-simulator",
     "phone": "(614) 384-5081",
     "phoneHref": "tel:+16143845081",
-    "backgroundImage": "/images/pools/clear-water-beach.png",
+    "backgroundImage": "/images/pools/clear-water-beach.webp",
     "backgroundImageAlt": "Beautiful fiberglass pool at sunset",
     "infoCards": [
       { "icon": "Phone", "title": "Call Us", "detail": "(614) 384-5081", "sub": "Mon–Fri, 8am–5pm" },

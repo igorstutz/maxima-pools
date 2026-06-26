@@ -41,7 +41,7 @@ export function Hero() {
         muted
         playsInline
         preload="auto"
-        poster={asset("/images/pools/atlantic.jpg")}
+        poster={asset("/images/pools/atlantic.webp")}
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src={asset("/videos/pool-background-video.mp4")} type="video/mp4" />
@@ -209,7 +209,7 @@ export function Hero() {
               {/* Floating San Juan badge */}
               <div className="absolute -top-2 right-0 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl p-3 animate-float shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
                 <Image
-                  src="/images/logo/sanjuan-logo.png"
+                  src="/images/logo/sanjuan-logo.webp"
                   alt="San Juan Pools - Best of the Best"
                   width={100}
                   height={100}

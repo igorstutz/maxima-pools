@@ -1,7 +1,7 @@
 {
   "order": 18,
   "name": "Dallas",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/dallas.webp",
+  "image": "/images/wp/2024/08/dallas.webp",
   "width": "16'1\"",
   "length": "42'4\"",
   "depth": "7'11\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dallas-08-1024x576.webp"
+    "/images/wp/2024/08/dallas-01-1024x576.webp",
+    "/images/wp/2024/08/dallas-02-1024x576.webp",
+    "/images/wp/2024/08/dallas-03-1024x576.webp",
+    "/images/wp/2024/08/dallas-04-1024x576.webp",
+    "/images/wp/2024/08/dallas-05-1024x576.webp",
+    "/images/wp/2024/08/dallas-06-1024x576.webp",
+    "/images/wp/2024/08/dallas-07-1024x576.webp",
+    "/images/wp/2024/08/dallas-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1607b16b01794461baceb2141b5b6a92/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/e9b98433-68d1-11f0-9f47-72162e861f80",

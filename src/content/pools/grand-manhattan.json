@@ -1,7 +1,7 @@
 {
   "order": 25,
   "name": "Grand Manhattan",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan.webp",
+  "image": "/images/wp/2024/08/grand-manhattan.webp",
   "width": "16'",
   "length": "35'",
   "depth": "5'6\"",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-10-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/grand-manhattan-11-1024x576.webp"
+    "/images/wp/2024/08/grand-manhattan-01-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-02-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-03-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-04-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-06-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-07-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-08-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-10-1024x576.webp",
+    "/images/wp/2024/08/grand-manhattan-11-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/f0fee2b95d9b49a9a8c231f438590d53/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/519d1e73-4327-11f1-9b13-72162e861f80",

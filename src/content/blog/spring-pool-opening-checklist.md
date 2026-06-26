@@ -1,7 +1,7 @@
 ---
 title: "Spring Pool Opening: An 8-Step Checklist for Fiberglass Owners"
 excerpt: "A pro-grade spring pool opening checklist for Central Ohio homeowners. The exact 8-step sequence we run on every fiberglass pool — and the five mistakes that cost a season of swim time."
-coverImage: "/images/gallery/lagoon-05.jpg"
+coverImage: "/images/gallery/lagoon-05.webp"
 author: "Maxima Pools Team"
 publishedAt: "2026-04-22"
 tags: ["Maintenance", "Spring Opening", "How-To"]
@@ -111,7 +111,7 @@ After the shock, the filter pulls out the killed particulates over the next day.
 
 By the next morning, water should be crystal clear and chlorine in the 1–3 ppm range. **Now you swim.**
 
-![Freshly opened fiberglass pool with crystal-clear Sully Blue water](/images/gallery/sully-01.jpg)
+![Freshly opened fiberglass pool with crystal-clear Sully Blue water](/images/gallery/sully-01.webp)
 
 *A clean opening sets the tone for the whole season. Crystal-clear Sully Blue water, balanced chemistry, and the filter doing the rest of the work for the next 20 weeks.*
 

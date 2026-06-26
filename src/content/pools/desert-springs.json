@@ -1,7 +1,7 @@
 {
   "order": 21,
   "name": "Desert Springs",
-  "image": "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-1-768x531.webp",
+  "image": "/images/wp/2025/03/desert-springs-1-768x531.webp",
   "width": "14'",
   "length": "30'1\"",
   "depth": "6'",
@@ -12,13 +12,13 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-springs-07-1024x576.webp"
+    "/images/wp/2025/03/desert-springs-01-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-02-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-03-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-04-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-05-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-06-1024x576.webp",
+    "/images/wp/2025/03/desert-springs-07-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/4b215d01fd814463be8099c4f803bd65/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/a64afe8f-1891-11f0-ba12-72162e861f80",

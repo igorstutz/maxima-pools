@@ -1,7 +1,7 @@
 {
   "order": 41,
   "name": "Majestic",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/majestic.webp",
+  "image": "/images/wp/2024/08/majestic.webp",
   "width": "16'2\"",
   "length": "34'1\"",
   "depth": "5'4\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/majestic-09-1024x576.webp"
+    "/images/wp/2024/08/majestic-01-1024x576.webp",
+    "/images/wp/2024/08/majestic-02-1024x576.webp",
+    "/images/wp/2024/08/majestic-03-1024x576.webp",
+    "/images/wp/2024/08/majestic-04-1024x576.webp",
+    "/images/wp/2024/08/majestic-06-1024x576.webp",
+    "/images/wp/2024/08/majestic-07-1024x576.webp",
+    "/images/wp/2024/08/majestic-08-1024x576.webp",
+    "/images/wp/2024/08/majestic-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/009fc6116da04aaa8cdaea17f70609ff/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/d07471cf-6bea-11f0-9f47-72162e861f80",

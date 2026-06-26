@@ -1,7 +1,7 @@
 {
   "order": 70,
   "name": "Sundial",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/sundial.webp",
+  "image": "/images/wp/2024/08/sundial.webp",
   "width": "11'9\"",
   "length": "23'9\"",
   "depth": "5'7\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sundial-08-1024x576.webp"
+    "/images/wp/2024/08/sundial-01-1024x576.webp",
+    "/images/wp/2024/08/sundial-02-1024x576.webp",
+    "/images/wp/2024/08/sundial-03-1024x576.webp",
+    "/images/wp/2024/08/sundial-04-1024x576.webp",
+    "/images/wp/2024/08/sundial-05-1024x576.webp",
+    "/images/wp/2024/08/sundial-06-1024x576.webp",
+    "/images/wp/2024/08/sundial-07-1024x576.webp",
+    "/images/wp/2024/08/sundial-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/887cfcde49e04d9680835fbdd373d2d6/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/e1ea4292-1add-11f0-ba12-72162e861f80",

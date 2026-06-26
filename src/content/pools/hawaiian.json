@@ -1,7 +1,7 @@
 {
   "order": 30,
   "name": "Hawaiian",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/hawaiian.webp",
+  "image": "/images/wp/2024/08/hawaiian.webp",
   "width": "12'10\"",
   "length": "29'",
   "depth": "6'",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/hawaiian-08-1024x576.webp"
+    "/images/wp/2024/08/hawaiian-01-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-02-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-03-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-04-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-05-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-06-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-07-1024x576.webp",
+    "/images/wp/2024/08/hawaiian-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/aa7c880ad7254b448b7f3281d79ab933/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/42b0eed8-6b27-11f0-9f47-72162e861f80",

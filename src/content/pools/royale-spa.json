@@ -1,7 +1,7 @@
 {
   "order": 94,
   "name": "Royale Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-1.webp",
+  "image": "/images/wp/2024/08/royale-spa-1.webp",
   "width": "7'",
   "length": "10'3\"",
   "depth": "3'2\"",
@@ -12,14 +12,14 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/royale-spa-08-1024x576.webp"
+    "/images/wp/2024/08/royale-spa-01-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-02-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-03-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-04-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-05-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-06-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-07-1024x576.webp",
+    "/images/wp/2024/08/royale-spa-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/24b9d3e553f54374aad611efed561c60/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/e4e70b6b-b40d-11ef-a5d8-72162e861f80",

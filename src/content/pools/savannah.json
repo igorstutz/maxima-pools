@@ -1,7 +1,7 @@
 {
   "order": 63,
   "name": "Savannah",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/savannah.webp",
+  "image": "/images/wp/2024/08/savannah.webp",
   "width": "14'",
   "length": "32'6\"",
   "depth": "5'6\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/savannah-08-1024x576.webp"
+    "/images/wp/2024/08/savannah-01-1024x576.webp",
+    "/images/wp/2024/08/savannah-02-1024x576.webp",
+    "/images/wp/2024/08/savannah-03-1024x576.webp",
+    "/images/wp/2024/08/savannah-04-1024x576.webp",
+    "/images/wp/2024/08/savannah-05-1024x576.webp",
+    "/images/wp/2024/08/savannah-06-1024x576.webp",
+    "/images/wp/2024/08/savannah-07-1024x576.webp",
+    "/images/wp/2024/08/savannah-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1de255b9670a443c943b6699ed1e4368/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/c72ed1f8-705a-11f0-88bc-72162e861f80",

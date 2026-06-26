@@ -1,7 +1,7 @@
 {
   "order": 9,
   "name": "Catalina",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/catalina.webp",
+  "image": "/images/wp/2024/08/catalina.webp",
   "width": "12'",
   "length": "25'10\"",
   "depth": "5'7\"",
@@ -12,10 +12,10 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/catalina-01-1024x680.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/catalina-02-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/catalina-03-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/catalina-04-1024x682.webp"
+    "/images/wp/2024/08/catalina-01-1024x680.webp",
+    "/images/wp/2024/08/catalina-02-1024x682.webp",
+    "/images/wp/2024/08/catalina-03-1024x682.webp",
+    "/images/wp/2024/08/catalina-04-1024x682.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/9af23d168dfd4735b5be34c18b6768f3/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/c1846427-68c8-11f0-9f47-72162e861f80",

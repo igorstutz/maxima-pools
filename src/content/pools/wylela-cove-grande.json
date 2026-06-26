@@ -1,7 +1,7 @@
 {
   "order": 81,
   "name": "Wylela Cove Grande",
-  "image": "https://maximapools.com/wp-content/uploads/2025/02/wylela-cove-grande.webp",
+  "image": "/images/wp/2025/02/wylela-cove-grande.webp",
   "width": "16'",
   "length": "30'",
   "depth": "6'1\"",
@@ -12,8 +12,8 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/02/wylela-cove-grande-01-1024x768.png",
-    "https://maximapools.com/wp-content/uploads/2025/02/wylela-cove-grande-02-1024x768.png"
+    "/images/wp/2025/02/wylela-cove-grande-01-1024x768.webp",
+    "/images/wp/2025/02/wylela-cove-grande-02-1024x768.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/5e86ad45bf7048b58499839be8eb0810/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/92036d42-72e1-11f0-88bc-72162e861f80",

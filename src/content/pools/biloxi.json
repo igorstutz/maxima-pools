@@ -1,7 +1,7 @@
 {
   "order": 4,
   "name": "Biloxi",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/biloxi.webp",
+  "image": "/images/wp/2024/08/biloxi.webp",
   "width": "12'",
   "length": "27'",
   "depth": "4'3\"",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": true,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/biloxi-09-1024x576.webp"
+    "/images/wp/2024/08/biloxi-01-1024x576.webp",
+    "/images/wp/2024/08/biloxi-02-1024x576.webp",
+    "/images/wp/2024/08/biloxi-03-1024x576.webp",
+    "/images/wp/2024/08/biloxi-04-1024x576.webp",
+    "/images/wp/2024/08/biloxi-05-1024x576.webp",
+    "/images/wp/2024/08/biloxi-06-1024x576.webp",
+    "/images/wp/2024/08/biloxi-07-1024x576.webp",
+    "/images/wp/2024/08/biloxi-08-1024x576.webp",
+    "/images/wp/2024/08/biloxi-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/be1171acf8c14e33ac765250d954e252/embed",
   "pdf": "https://maximapools.com/wp-content/uploads/2025/07/Biloxi.pdf",

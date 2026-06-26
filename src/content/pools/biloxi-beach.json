@@ -1,7 +1,7 @@
 {
   "order": 5,
   "name": "Biloxi Beach",
-  "image": "https://maximapools.com/wp-content/uploads/2025/03/biloxi-beach.webp",
+  "image": "/images/wp/2025/03/biloxi-beach.webp",
   "width": "12'",
   "length": "27'",
   "depth": "4'3\"",
@@ -12,7 +12,7 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/03/biloxi-beach-01.webp"
+    "/images/wp/2025/03/biloxi-beach-01.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/c174d43b6a5544d993d7b25589063e9d/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/6af9bb24-6801-11f0-9f47-72162e861f80",

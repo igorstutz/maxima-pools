@@ -1,7 +1,7 @@
 {
   "order": 16,
   "name": "Cyberlane",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/cyberlane.webp",
+  "image": "/images/wp/2024/08/cyberlane.webp",
   "width": "8'",
   "length": "23'",
   "depth": "4'9\"",
@@ -12,15 +12,15 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-09-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/cyberlane-10-1024x576.webp"
+    "/images/wp/2024/08/cyberlane-01-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-02-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-03-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-04-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-05-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-06-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-08-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-09-1024x576.webp",
+    "/images/wp/2024/08/cyberlane-10-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/89c132007f054346b8efa071ae9625e7/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/2d8e499c-1cb3-11f1-9b13-72162e861f80",

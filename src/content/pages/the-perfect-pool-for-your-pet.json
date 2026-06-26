@@ -8,9 +8,9 @@
   "hero": {
     "badge": "Pet Friendly",
     "images": [
-      "/images/pet-pool/dog-pool.jpg",
+      "/images/pet-pool/dog-pool.webp",
       "/images/why-fiberglass/canyon-beach.webp",
-      "/images/pool-quality/wylela-beach.png"
+      "/images/pool-quality/wylela-beach.webp"
     ],
     "headingLead": "The Perfect Pool for",
     "headingHighlight": "Your Pet",
@@ -44,7 +44,7 @@
       "No vinyl liner to rip, tear, or replace",
       "Less than 1 hour of maintenance per week"
     ],
-    "image": "/images/pet-pool/dog-pool.jpg",
+    "image": "/images/pet-pool/dog-pool.webp",
     "imageAlt": "Happy dog enjoying a San Juan fiberglass pool"
   },
   "benefitsSection": {
@@ -110,7 +110,7 @@
     "paragraph": "Many San Juan pool models include integrated tanning ledges and sun shelves — shallow areas just 6–12 inches deep where pets can safely wade, cool off, and enjoy the water at their own pace. It's the ultimate pet-friendly feature.",
     "ctaLabel": "Explore tanning ledges",
     "ctaHref": "/pools",
-    "image": "/images/pet-pool/dog-pool.jpg",
+    "image": "/images/pet-pool/dog-pool.webp",
     "imageAlt": "Dog on tanning ledge in fiberglass pool"
   },
   "diveDeeper": {
@@ -124,7 +124,7 @@
     ]
   },
   "finalCta": {
-    "image": "/images/pet-pool/dog-pool.jpg",
+    "image": "/images/pet-pool/dog-pool.webp",
     "headingLead": "Ready for a Pet-Friendly",
     "headingHighlight": "Pool?",
     "paragraph": "Give your family — four-legged members included — a pool designed for everyone to enjoy safely.",

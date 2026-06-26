@@ -1,7 +1,7 @@
 {
   "order": 64,
   "name": "Sea Isle",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-1.webp",
+  "image": "/images/wp/2024/08/sea-isle-1.webp",
   "width": "12'",
   "length": "16'6\"",
   "depth": "5'",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sea-isle-09-1024x576.webp"
+    "/images/wp/2024/08/sea-isle-01-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-02-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-03-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-04-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-05-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-06-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-07-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-08-1024x576.webp",
+    "/images/wp/2024/08/sea-isle-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/d01fa1ea2dd646029126e52cfa24d3b4/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/5c9ea763-7247-11f0-88bc-72162e861f80",

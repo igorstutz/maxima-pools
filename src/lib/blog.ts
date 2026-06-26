@@ -42,7 +42,7 @@ function parsePost(filename: string): BlogPost {
     slug: typeof data.slug === "string" && data.slug ? data.slug : fileToSlug(filename),
     title: data.title ?? "Untitled",
     excerpt: data.excerpt ?? "",
-    coverImage: data.coverImage ?? "/images/gallery/featured-01.png",
+    coverImage: data.coverImage ?? "/images/gallery/featured-01.webp",
     author: data.author ?? "Maxima Pools Team",
     publishedAt: normalizeDate(data.publishedAt),
     tags: Array.isArray(data.tags) ? data.tags : [],

@@ -1,7 +1,7 @@
 {
   "order": 51,
   "name": "Oasis",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/oasis.webp",
+  "image": "/images/wp/2024/08/oasis.webp",
   "width": "16'",
   "length": "39'8\"",
   "depth": "7'11\"",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-02-1024x545.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-07-1024x679.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oasis-09-1024x796.webp"
+    "/images/wp/2024/08/oasis-01-1024x576.webp",
+    "/images/wp/2024/08/oasis-02-1024x545.webp",
+    "/images/wp/2024/08/oasis-03-1024x768.webp",
+    "/images/wp/2024/08/oasis-04-1024x576.webp",
+    "/images/wp/2024/08/oasis-05-1024x576.webp",
+    "/images/wp/2024/08/oasis-06-1024x576.webp",
+    "/images/wp/2024/08/oasis-07-1024x679.webp",
+    "/images/wp/2024/08/oasis-08-1024x576.webp",
+    "/images/wp/2024/08/oasis-09-1024x796.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/7913ce9d0067480a8d858d45b5fee172/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/4c039303-196f-11f0-ba12-72162e861f80",

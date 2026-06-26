@@ -1,7 +1,7 @@
 {
   "order": 39,
   "name": "Luxor Shallow",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow.webp",
+  "image": "/images/wp/2024/08/luxor-shallow.webp",
   "width": "15'11\"",
   "length": "44'7\"",
   "depth": "3'8\"–6'",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/luxor-shallow-08-1024x576.webp"
+    "/images/wp/2024/08/luxor-shallow-01-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-02-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-03-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-04-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-05-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-06-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-07-1024x576.webp",
+    "/images/wp/2024/08/luxor-shallow-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/954e60b331004304998f3de01e2d41e4/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/5eb44bf5-6be6-11f0-9f47-72162e861f80",

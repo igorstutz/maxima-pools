@@ -1,7 +1,7 @@
 {
   "order": 60,
   "name": "Pompano Beach",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach.webp",
+  "image": "/images/wp/2024/08/pompano-beach.webp",
   "width": "13'10\"",
   "length": "29'8\"",
   "depth": "5'5\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pompano-beach-08-1024x576.webp"
+    "/images/wp/2024/08/pompano-beach-01-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-02-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-03-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-04-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-05-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-06-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-07-1024x576.webp",
+    "/images/wp/2024/08/pompano-beach-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/35f1bc746cb34f65922e5f0118d4b727/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/20512b78-7057-11f0-88bc-72162e861f80",

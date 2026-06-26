@@ -1,7 +1,7 @@
 {
   "order": 62,
   "name": "Rio",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/rio.webp",
+  "image": "/images/wp/2024/08/rio.webp",
   "width": "15'10\"",
   "length": "28'4\"",
   "depth": "5'7\"",
@@ -12,13 +12,13 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/rio-07-1024x576.webp"
+    "/images/wp/2024/08/rio-01-1024x576.webp",
+    "/images/wp/2024/08/rio-02-1024x576.webp",
+    "/images/wp/2024/08/rio-03-1024x576.webp",
+    "/images/wp/2024/08/rio-04-1024x576.webp",
+    "/images/wp/2024/08/rio-05-1024x576.webp",
+    "/images/wp/2024/08/rio-06-1024x576.webp",
+    "/images/wp/2024/08/rio-07-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/40d0544a9d0242c792bdfea48ad432e7/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/9e05da24-1ad8-11f0-ba12-72162e861f80",

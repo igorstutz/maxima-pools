@@ -1,7 +1,7 @@
 {
   "order": 3,
   "name": "Barcelona",
-  "image": "https://maximapools.com/wp-content/uploads/2025/03/barcelona-768x627.webp",
+  "image": "/images/wp/2025/03/barcelona-768x627.webp",
   "width": "16'",
   "length": "28'4\"",
   "depth": "6'",
@@ -12,12 +12,12 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-01-1012x1024.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-02-1020x1024.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-02-768x771.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-03-768x576.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/barcelona-04-1024x768.webp"
+    "/images/wp/2025/03/barcelona-01-1012x1024.webp",
+    "/images/wp/2025/03/barcelona-02-1020x1024.webp",
+    "/images/wp/2025/03/barcelona-02-768x771.webp",
+    "/images/wp/2025/03/barcelona-03-1024x768.webp",
+    "/images/wp/2025/03/barcelona-03-768x576.webp",
+    "/images/wp/2025/03/barcelona-04-1024x768.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/f8faeb15b4d84bdfb3b75c963a253fdd/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/45447697-17b2-11f0-ba12-72162e861f80",

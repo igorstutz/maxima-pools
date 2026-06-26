@@ -1,7 +1,7 @@
 {
   "order": 59,
   "name": "Pleasure Island",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island.webp",
+  "image": "/images/wp/2024/08/pleasure-island.webp",
   "width": "16'2\"",
   "length": "39'1\"",
   "depth": "6'",
@@ -12,14 +12,14 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/pleasure-island-08-1024x576.webp"
+    "/images/wp/2024/08/pleasure-island-01-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-02-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-03-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-04-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-05-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-06-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-07-1024x576.webp",
+    "/images/wp/2024/08/pleasure-island-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1df2e8569d3345c99814ce0eec6ae8bb/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/158a6de7-1976-11f0-ba12-72162e861f80",

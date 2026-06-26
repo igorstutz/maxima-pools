@@ -48,7 +48,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-4">
             <div className="mb-5">
               <Image
-                src="/images/logo/maxima-logo.png"
+                src="/images/logo/maxima-logo.webp"
                 alt="Maxima Pools"
                 width={160}
                 height={50}

@@ -1,7 +1,7 @@
 {
   "order": 22,
   "name": "Dolphin",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/dolphin.webp",
+  "image": "/images/wp/2024/08/dolphin.webp",
   "width": "14'1\"",
   "length": "33'1\"",
   "depth": "5'1\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/dolphin-08-1024x576.webp"
+    "/images/wp/2024/08/dolphin-01-1024x576.webp",
+    "/images/wp/2024/08/dolphin-02-1024x576.webp",
+    "/images/wp/2024/08/dolphin-03-1024x576.webp",
+    "/images/wp/2024/08/dolphin-04-1024x576.webp",
+    "/images/wp/2024/08/dolphin-05-1024x576.webp",
+    "/images/wp/2024/08/dolphin-06-1024x576.webp",
+    "/images/wp/2024/08/dolphin-07-1024x576.webp",
+    "/images/wp/2024/08/dolphin-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/5da2a93efda64071b86fa2573868be7b/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/facf7ca7-68d1-11f0-9f47-72162e861f80",

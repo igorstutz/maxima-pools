@@ -329,7 +329,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                   <div className="absolute inset-0 water-caustics opacity-15" />
                   <div className="relative">
                     <Image
-                      src="/images/logo/sanjuan-logo.png"
+                      src="/images/logo/sanjuan-logo.webp"
                       alt="San Juan Pools"
                       width={100}
                       height={100}

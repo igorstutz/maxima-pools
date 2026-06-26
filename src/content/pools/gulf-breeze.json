@@ -1,7 +1,7 @@
 {
   "order": 29,
   "name": "Gulf Breeze",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze.webp",
+  "image": "/images/wp/2024/08/gulf-breeze.webp",
   "width": "12'",
   "length": "20'",
   "depth": "3'10\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/gulf-breeze-08-1024x576.webp"
+    "/images/wp/2024/08/gulf-breeze-01-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-02-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-03-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-04-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-05-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-06-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-07-1024x576.webp",
+    "/images/wp/2024/08/gulf-breeze-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/5f61c8153b744368a88b7d09f5938a24/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/a6383034-b784-11f0-88bc-72162e861f80",

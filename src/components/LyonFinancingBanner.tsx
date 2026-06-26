@@ -20,7 +20,7 @@ export function LyonFinancingBanner({ className = "" }: { className?: string }) 
         muted
         playsInline
         preload="metadata"
-        poster="/images/partners/lyon-banner-poster.jpg"
+        poster="/images/partners/lyon-banner-poster.webp"
         className="w-full h-auto block"
         width={970}
         height={250}
@@ -28,7 +28,7 @@ export function LyonFinancingBanner({ className = "" }: { className?: string }) 
         <source src="/images/partners/lyon-banner.mp4" type="video/mp4" />
         {/* Fallback for browsers without video support */}
         <img
-          src="/images/partners/lyon-banner-poster.jpg"
+          src="/images/partners/lyon-banner-poster.webp"
           alt="Lyon Financial — pool loans up to $250K, terms up to 30 years. Apply today."
           width={970}
           height={250}

@@ -7,10 +7,10 @@
   },
   "hero": {
     "images": [
-      "/images/pool-quality/blue-lagoon.jpg",
+      "/images/pool-quality/blue-lagoon.webp",
       "/images/why-fiberglass/canyon-beach.webp",
-      "/images/pool-quality/wylela-beach.png",
-      "/images/pools/great-lakes.jpg"
+      "/images/pool-quality/wylela-beach.webp",
+      "/images/pools/great-lakes.webp"
     ],
     "badge": "The Industry Leader",
     "headingLead": "San Juan VS",
@@ -112,7 +112,7 @@
     { "icon": "Palette", "title": "Fiberglass Pool Colors", "description": "Browse all gelcoat and Iridium finish options.", "href": "/fiberglass-pool-colors" }
   ],
   "cta": {
-    "image": "/images/pool-quality/blue-lagoon.jpg",
+    "image": "/images/pool-quality/blue-lagoon.webp",
     "headingLead": "Choose the Pool That",
     "headingHighlight": "Outlasts Them All",
     "paragraph": "Talk to our team and get a personalized quote for a San Juan fiberglass pool — the strongest pool on the market.",

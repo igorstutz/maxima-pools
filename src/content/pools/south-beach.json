@@ -1,7 +1,7 @@
 {
   "order": 67,
   "name": "South Beach",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/south-beach.webp",
+  "image": "/images/wp/2024/08/south-beach.webp",
   "width": "16'",
   "length": "45'",
   "depth": "6'4\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/south-beach-08-1024x576.webp"
+    "/images/wp/2024/08/south-beach-01-1024x576.webp",
+    "/images/wp/2024/08/south-beach-02-1024x576.webp",
+    "/images/wp/2024/08/south-beach-03-1024x576.webp",
+    "/images/wp/2024/08/south-beach-04-1024x576.webp",
+    "/images/wp/2024/08/south-beach-05-1024x576.webp",
+    "/images/wp/2024/08/south-beach-06-1024x576.webp",
+    "/images/wp/2024/08/south-beach-07-1024x576.webp",
+    "/images/wp/2024/08/south-beach-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/6f7e994b799b480a9833185ee7bbf8cf/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/efbe011a-1adc-11f0-ba12-72162e861f80",

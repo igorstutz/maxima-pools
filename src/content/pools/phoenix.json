@@ -1,7 +1,7 @@
 {
   "order": 58,
   "name": "Phoenix",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/phoenix.png",
+  "image": "/images/wp/2024/08/phoenix.webp",
   "width": "15'11\"",
   "length": "39'7\"",
   "depth": "5'1\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/phoenix-08-1024x576.webp"
+    "/images/wp/2024/08/phoenix-01-1024x576.webp",
+    "/images/wp/2024/08/phoenix-02-1024x576.webp",
+    "/images/wp/2024/08/phoenix-03-1024x576.webp",
+    "/images/wp/2024/08/phoenix-04-1024x576.webp",
+    "/images/wp/2024/08/phoenix-05-1024x576.webp",
+    "/images/wp/2024/08/phoenix-06-1024x576.webp",
+    "/images/wp/2024/08/phoenix-07-1024x576.webp",
+    "/images/wp/2024/08/phoenix-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/d98844638eaf4d06a46a5e3792ef258c/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/1fb14fcf-7056-11f0-88bc-72162e861f80",

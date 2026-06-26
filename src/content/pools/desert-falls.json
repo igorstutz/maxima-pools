@@ -1,7 +1,7 @@
 {
   "order": 20,
   "name": "Desert Falls",
-  "image": "https://maximapools.com/wp-content/uploads/2025/03/desert-falls-768x479.webp",
+  "image": "/images/wp/2025/03/desert-falls-768x479.webp",
   "width": "14'",
   "length": "30'1\"",
   "depth": "6'",
@@ -12,10 +12,10 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-falls-01-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-falls-02-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-falls-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2025/03/desert-falls-04-1024x768.webp"
+    "/images/wp/2025/03/desert-falls-01-1024x768.webp",
+    "/images/wp/2025/03/desert-falls-02-1024x768.webp",
+    "/images/wp/2025/03/desert-falls-03-1024x768.webp",
+    "/images/wp/2025/03/desert-falls-04-1024x768.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/32d4976a14ac4b13b7db6540bb1a2d92/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/694bdf3f-1890-11f0-ba12-72162e861f80",

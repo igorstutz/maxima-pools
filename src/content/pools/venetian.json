@@ -1,7 +1,7 @@
 {
   "order": 73,
   "name": "Venetian",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/venetian.webp",
+  "image": "/images/wp/2024/08/venetian.webp",
   "width": "15'3\"",
   "length": "27'10\"",
   "depth": "5'4\"",
@@ -12,13 +12,13 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/Venetian-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/venetian-07-1024x576.webp"
+    "/images/wp/2024/08/venetian-01-1024x576.webp",
+    "/images/wp/2024/08/Venetian-02-1024x576.webp",
+    "/images/wp/2024/08/venetian-03-1024x576.webp",
+    "/images/wp/2024/08/venetian-04-1024x576.webp",
+    "/images/wp/2024/08/venetian-05-1024x576.webp",
+    "/images/wp/2024/08/venetian-06-1024x576.webp",
+    "/images/wp/2024/08/venetian-07-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/2793047c17294a71897ab36697fa6b48/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/c4be39ad-1ade-11f0-ba12-72162e861f80",

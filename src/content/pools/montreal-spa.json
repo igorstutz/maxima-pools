@@ -1,7 +1,7 @@
 {
   "order": 49,
   "name": "Montreal Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-1.webp",
+  "image": "/images/wp/2024/08/montreal-spa-1.webp",
   "width": "10'10\"",
   "length": "15'6\"",
   "depth": "3'9\"",
@@ -12,14 +12,14 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-01-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-02-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-03-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-04-1024x764.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-05-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-06-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-07-1024x768.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/montreal-spa-08-1024x768.webp"
+    "/images/wp/2024/08/montreal-spa-01-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-02-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-03-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-04-1024x764.webp",
+    "/images/wp/2024/08/montreal-spa-05-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-06-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-07-1024x768.webp",
+    "/images/wp/2024/08/montreal-spa-08-1024x768.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/ac669db8ebec4e7391bf50ce890e00eb/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/b0fa8f3d-cf58-11ef-a5d8-72162e861f80",

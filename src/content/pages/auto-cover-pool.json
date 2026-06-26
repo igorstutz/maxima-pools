@@ -8,10 +8,10 @@
   "hero": {
     "badge": "Safety & Convenience",
     "images": [
-      "/images/auto-cover/undertrack-3.jpg",
-      "/images/auto-cover/hero.jpg",
-      "/images/auto-cover/undertrack-1.jpg",
-      "/images/auto-cover/undertrack-2.jpg"
+      "/images/auto-cover/undertrack-3.webp",
+      "/images/auto-cover/hero.webp",
+      "/images/auto-cover/undertrack-1.webp",
+      "/images/auto-cover/undertrack-2.webp"
     ],
     "headingLead": "Automatic Pool",
     "headingHighlight": "Cover",
@@ -41,7 +41,7 @@
       { "icon": "Leaf", "text": "Reduces Chemical Use" },
       { "icon": "Thermometer", "text": "Extends Swim Season" }
     ],
-    "image": "/images/auto-cover/undertrack-1.jpg",
+    "image": "/images/auto-cover/undertrack-1.webp",
     "imageAlt": "Pool with automatic cover system"
   },
   "howItWorksSection": {
@@ -67,7 +67,7 @@
     { "icon": "Eye", "title": "Elegant Design", "description": "Integrates discreetly into the pool structure, preserving the clean aesthetics of your backyard." },
     { "icon": "Wrench", "title": "Built to Last", "description": "Heavy-duty materials and engineering designed for years of reliable, maintenance-free performance." }
   ],
-  "benefitsHeroImage": "/images/auto-cover/hero.jpg",
+  "benefitsHeroImage": "/images/auto-cover/hero.webp",
   "underTrack": {
     "badge": "Concealed Design",
     "headingLead": "Under-Track",
@@ -75,9 +75,9 @@
     "headingTail": " System",
     "paragraph": "For a seamless, timeless design, the Under-Track application houses the auto cover inside a concealed track attached directly to the pool wall. This keeps the mechanism completely out of sight while maintaining high structural integrity.",
     "images": [
-      { "src": "/images/auto-cover/undertrack-3.jpg", "alt": "Under-track auto cover pool" },
-      { "src": "/images/auto-cover/undertrack-2.jpg", "alt": "Under-track cover detail" },
-      { "src": "/images/auto-cover/undertrack-1.jpg", "alt": "Pool with cover open" }
+      { "src": "/images/auto-cover/undertrack-3.webp", "alt": "Under-track auto cover pool" },
+      { "src": "/images/auto-cover/undertrack-2.webp", "alt": "Under-track cover detail" },
+      { "src": "/images/auto-cover/undertrack-1.webp", "alt": "Pool with cover open" }
     ],
     "specifications": [
       { "title": "Easy-Out Pulley Assembly", "description": "Quick-access pulleys can be serviced in minutes, reducing downtime and ensuring long-term reliability." },
@@ -87,7 +87,7 @@
     ]
   },
   "finalCta": {
-    "image": "/images/auto-cover/undertrack-1.jpg",
+    "image": "/images/auto-cover/undertrack-1.webp",
     "headingLead": "Ready to Add an",
     "headingHighlight": "Auto Cover?",
     "paragraph": "Talk to our team today and get a personalized quote. We'll help you choose the right system for your pool.",

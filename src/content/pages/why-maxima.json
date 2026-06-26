@@ -6,7 +6,7 @@
     "ogDescription": "Buy your inground swimming pool from the people who actually do the work. In-house team, San Juan Pools partnership, and full-service installation in Columbus, OH."
   },
   "hero": {
-    "image": "/images/pools/clear-water-beach.png",
+    "image": "/images/pools/clear-water-beach.webp",
     "badge": "The Maxima Difference",
     "headingLead": "The Maxima Pools",
     "headingHighlight": "Advantage",
@@ -43,7 +43,7 @@
   ],
   "team": {
     "badge": "Our Team",
-    "image": "/images/why-maxima/team-headquarters.jpg",
+    "image": "/images/why-maxima/team-headquarters.webp",
     "floatingTitle": "The Maxima Team",
     "floatingSubtitle": "In-house professionals, start to finish",
     "headingLead": "In-House Expertise,",
@@ -69,7 +69,7 @@
     "paragraph2": "Unlike competitors who use sprayed fiberglass, every San Juan pool features multiple layers of hand-laid woven roving with marine-grade Vinyl Ester resin. This is the same standard used in boat building, ensuring your pool can handle decades of use without compromising structural integrity.",
     "ctaLabel": "Explore Our Pools",
     "ctaHref": "/pools",
-    "logo": "/images/logo/sanjuan-logo.png",
+    "logo": "/images/logo/sanjuan-logo.webp",
     "logoHref": "https://sanjuanpools.com/",
     "stats": [
       { "value": "100%", "label": "Hand-Laid Fiberglass" },
@@ -105,7 +105,7 @@
       "icon": "Pipette",
       "title": "Pool Plumbing",
       "description": "Meticulous pool plumbing designed for optimal water flow, efficient filtration, and long-term reliability.",
-      "image": "/images/accessories/pool-pump.jpg",
+      "image": "/images/accessories/pool-pump.webp",
       "href": "/our-process",
       "external": false
     },
@@ -121,7 +121,7 @@
       "icon": "Fence",
       "title": "Concrete & Paver Patios",
       "description": "Custom-designed concrete and paver patios that complement your pool and define your outdoor living space with lasting beauty.",
-      "image": "/images/outdoor/living-1.jpg",
+      "image": "/images/outdoor/living-1.webp",
       "href": "https://www.maximaconcrete.com",
       "external": true
     },
@@ -129,7 +129,7 @@
       "icon": "Flame",
       "title": "Outdoor Living",
       "description": "Complete your backyard retreat with fire pits, outdoor kitchens, pergolas, and shade structures designed and built by our team.",
-      "image": "/images/outdoor/kitchen.jpg",
+      "image": "/images/outdoor/kitchen.webp",
       "href": "https://www.maximaconcrete.com",
       "external": true
     }
@@ -146,19 +146,19 @@
       "icon": "Thermometer",
       "title": "Heating Systems",
       "description": "Extend your swim season year-round with efficient pool heating solutions. Enjoy your pool from early spring through late fall in Central Ohio.",
-      "image": "/images/pools/atlantic.jpg"
+      "image": "/images/pools/atlantic.webp"
     },
     {
       "icon": "ShieldHalf",
       "title": "Automatic Covers",
       "description": "Effortless pool maintenance and safety with automatic covers. Keep debris out, retain heat, and add peace of mind with the push of a button.",
-      "image": "/images/pools/grand-manhattan.png"
+      "image": "/images/pools/grand-manhattan.webp"
     },
     {
       "icon": "Sparkles",
       "title": "Fun Features",
       "description": "Make your pool uniquely yours with slides, attached hot tubs, tanning ledges, bubblers, and more. Every detail tailored to your family.",
-      "image": "/images/pools/oasis.jpg"
+      "image": "/images/pools/oasis.webp"
     }
   ],
   "investment": {
@@ -177,35 +177,35 @@
     ],
     "slides": [
       {
-        "src": "/images/why-maxima/huntington-granite.jpg",
+        "src": "/images/why-maxima/huntington-granite.webp",
         "alt": "Huntington Beach pool in Granite color finish",
         "label": "Huntington Beach - Granite",
         "subtitle": "Premium fiberglass finish",
         "href": "/pools/huntington-beach"
       },
       {
-        "src": "/images/pools/grand-manhattan.png",
+        "src": "/images/pools/grand-manhattan.webp",
         "alt": "Grand Manhattan rectangular pool",
         "label": "Grand Manhattan - White",
         "subtitle": "Premium fiberglass finish",
         "href": "/pools/grand-manhattan"
       },
       {
-        "src": "/images/pools/atlantic.jpg",
+        "src": "/images/pools/atlantic.webp",
         "alt": "Atlantic pool",
         "label": "Atlantic - Sully Blue",
         "subtitle": "Premium fiberglass finish",
         "href": "/pools/atlantic"
       },
       {
-        "src": "/images/pools/oasis.jpg",
+        "src": "/images/pools/oasis.webp",
         "alt": "Oasis pool",
         "label": "Oasis - Blue Lagoon",
         "subtitle": "Premium fiberglass finish",
         "href": "/pools/oasis"
       },
       {
-        "src": "/images/pools/niagara.png",
+        "src": "/images/pools/niagara.webp",
         "alt": "Niagara pool",
         "label": "Niagara - Granite",
         "subtitle": "Premium fiberglass finish",
@@ -225,7 +225,7 @@
     "cardBadge": "Now scheduling for 2026"
   },
   "finalCta": {
-    "image": "/images/pools/grand-manhattan.png",
+    "image": "/images/pools/grand-manhattan.webp",
     "headingLead": "Ready to",
     "headingHighlight": "Get Started?",
     "text": "Your dream backyard is one conversation away. Reach out for a free estimate and let us show you the Maxima difference.",

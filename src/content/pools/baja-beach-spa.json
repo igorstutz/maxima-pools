@@ -1,7 +1,7 @@
 {
   "order": 83,
   "name": "Baja Beach Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2025/03/baja-beach-spa.webp",
+  "image": "/images/wp/2025/03/baja-beach-spa.webp",
   "width": "9'",
   "length": "15'2\"",
   "depth": "3'9\"",
@@ -12,7 +12,7 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2025/03/baja-beach-spa-300x266.webp"
+    "/images/wp/2025/03/baja-beach-spa-300x266.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/fa9af6ad71f8404791396dc0f064dcdb/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/df8e7599-81f4-11f0-88bc-72162e861f80",

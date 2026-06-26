@@ -1,7 +1,7 @@
 {
   "order": 48,
   "name": "Monte Carlo",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo.webp",
+  "image": "/images/wp/2024/08/monte-carlo.webp",
   "width": "15'11\"",
   "length": "31'10\"",
   "depth": "5'8\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/monte-carlo-08-1024x576.webp"
+    "/images/wp/2024/08/monte-carlo-01-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-02-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-03-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-04-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-05-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-06-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-07-1024x576.webp",
+    "/images/wp/2024/08/monte-carlo-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/d11a189f2712403094f17be471f6f40c/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/21f3e245-704c-11f0-88bc-72162e861f80",

@@ -1,7 +1,7 @@
 {
   "order": 52,
   "name": "Oceanside",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/oceanside.webp",
+  "image": "/images/wp/2024/08/oceanside.webp",
   "width": "16'2\"",
   "length": "40'6\"",
   "depth": "6'4\"",
@@ -12,14 +12,14 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-08-1024x576.webp"
+    "/images/wp/2024/08/oceanside-01-1024x576.webp",
+    "/images/wp/2024/08/oceanside-02-1024x576.webp",
+    "/images/wp/2024/08/oceanside-03-1024x576.webp",
+    "/images/wp/2024/08/oceanside-04-1024x576.webp",
+    "/images/wp/2024/08/oceanside-05-1024x576.webp",
+    "/images/wp/2024/08/oceanside-06-1024x576.webp",
+    "/images/wp/2024/08/oceanside-07-1024x576.webp",
+    "/images/wp/2024/08/oceanside-08-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/ccb5cdabffbe4d45bb437d1f291344e0/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/e6c0b97d-b9c3-11f0-88bc-72162e861f80",

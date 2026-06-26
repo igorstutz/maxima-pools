@@ -1,7 +1,7 @@
 ---
 title: "Fiberglass Pools in Central Ohio: A Homeowner's Guide"
 excerpt: "Comparing fiberglass, concrete, and vinyl liner pools for Central Ohio's freeze-thaw climate. Real cost numbers, lifespan data, and the construction details that matter."
-coverImage: "/images/gallery/lagoon-02.jpg"
+coverImage: "/images/gallery/lagoon-02.webp"
 author: "Maxima Pools Team"
 publishedAt: "2026-04-15"
 tags: ["Fiberglass", "Buying Guide", "Central Ohio"]
@@ -61,7 +61,7 @@ Fiberglass shells **flex by 1–2% under load** — barely perceptible visually,
 
 This isn't a minor edge case. Anyone who's owned a concrete pool through 15 Central Ohio winters has a repair history. We've quoted dozens of those repairs on pools we didn't build. [See how we approach Freezable Pools](/frozen-pools) — fiberglass shells engineered specifically for this climate.
 
-![Rectangular fiberglass pool with travertine coping installed by Maxima Pools](/images/gallery/lagoon-03.jpg)
+![Rectangular fiberglass pool with travertine coping installed by Maxima Pools](/images/gallery/lagoon-03.webp)
 
 *A 14'×30' San Juan fiberglass pool installed in Central Ohio. The gel-coat surface is smooth and non-porous — algae doesn't anchor to it the way it does to concrete plaster.*
 

@@ -1,7 +1,7 @@
 {
   "order": 34,
   "name": "iPool 2",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/ipool-2.webp",
+  "image": "/images/wp/2024/08/ipool-2.webp",
   "width": "14'1\"",
   "length": "27'10\"",
   "depth": "5'",
@@ -12,12 +12,12 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-01-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/ipool-2-06-1024x576.webp"
+    "/images/wp/2024/08/ipool-2-01-1024x576.webp",
+    "/images/wp/2024/08/ipool-2-02-1024x576.webp",
+    "/images/wp/2024/08/ipool-2-03-1024x576.webp",
+    "/images/wp/2024/08/ipool-2-04-1024x576.webp",
+    "/images/wp/2024/08/ipool-2-05-1024x576.webp",
+    "/images/wp/2024/08/ipool-2-06-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/3b474f0dc3f14faaacce100c372ddf1a/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/eb9f5ac7-b788-11f0-88bc-72162e861f80",

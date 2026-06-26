@@ -1,7 +1,7 @@
 {
   "order": 14,
   "name": "Crystal Cove",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove.webp",
+  "image": "/images/wp/2024/08/crystal-cove.webp",
   "width": "11'11\"",
   "length": "18'11\"",
   "depth": "5'",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-01-1024x682.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-02-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-03-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-04-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-05-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-06-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-07-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-08-1024x576.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/crystal-cove-09-1024x576.webp"
+    "/images/wp/2024/08/crystal-cove-01-1024x682.webp",
+    "/images/wp/2024/08/crystal-cove-02-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-03-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-04-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-05-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-06-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-07-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-08-1024x576.webp",
+    "/images/wp/2024/08/crystal-cove-09-1024x576.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/40c3c946ca4c4f49b8095762e12f71d2/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/48412692-164d-11f0-ba12-72162e861f80",

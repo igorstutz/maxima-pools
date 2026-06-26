@@ -142,7 +142,7 @@ export function PoolsCatalog({ pools }: { pools: Pool[] }) {
       <section className="relative overflow-hidden pt-28 pb-12 sm:pt-40 sm:pb-20">
         {/* Background image */}
         <Image
-          src="/images/pools/clear-water-beach.png"
+          src="/images/pools/clear-water-beach.webp"
           alt=""
           fill
           className="object-cover"

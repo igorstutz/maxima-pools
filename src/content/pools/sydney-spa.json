@@ -1,7 +1,7 @@
 {
   "order": 71,
   "name": "Sydney Spa",
-  "image": "https://maximapools.com/wp-content/uploads/2024/08/sydney-spa.webp",
+  "image": "/images/wp/2024/08/sydney-spa.webp",
   "width": "13'5\"",
   "length": "20'1\"",
   "depth": "3'4\"",
@@ -12,8 +12,8 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "https://maximapools.com/wp-content/uploads/2024/08/sydney-spa-02-938x1024.webp",
-    "https://maximapools.com/wp-content/uploads/2024/08/sydney-spa-1-1024x691.webp"
+    "/images/wp/2024/08/sydney-spa-02-938x1024.webp",
+    "/images/wp/2024/08/sydney-spa-1-1024x691.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/654013987ae64ca7980785a87c598b97/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/a30d50d0-1b2a-11f0-ba12-72162e861f80",
