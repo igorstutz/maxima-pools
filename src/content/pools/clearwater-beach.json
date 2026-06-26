@@ -1,0 +1,27 @@
+{
+  "order": 10,
+  "name": "Clearwater Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach.webp",
+  "width": "16'",
+  "length": "36'9\"",
+  "depth": "6'3\"",
+  "area": "455 sq ft",
+  "volume": "12,673 gal",
+  "shape": "Freeform",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/clearwater-beach-08.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/c0d39d118a004ecf9f4212d32836824c/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/ebd831fb-1b1c-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/Ibzhz687edw"
+}

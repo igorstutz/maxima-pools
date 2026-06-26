@@ -1,0 +1,21 @@
+{
+  "order": 88,
+  "name": "Haven Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/haven-spa-1.webp",
+  "width": "6'10\"",
+  "length": "6'10\"",
+  "depth": "3'",
+  "area": "30 sq ft",
+  "volume": "350 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/haven-spa-01-1024x696.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/haven-spa-02-1024x655.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/8c2e7013695f4df592d591ed3630a18e/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/bf099223-b785-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/PnZbGLi8gVc"
+}

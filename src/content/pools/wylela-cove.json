@@ -1,0 +1,21 @@
+{
+  "order": 80,
+  "name": "Wylela Cove",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/wylela-cove.webp",
+  "width": "12'3\"",
+  "length": "30'",
+  "depth": "6'",
+  "area": "360 sq ft",
+  "volume": "7,571 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool with Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/wylela-cove-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/wylela-cove-02-1024x768.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/35f1bc746cb34f65922e5f0118d4b727/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/270c7f04-72e1-11f0-88bc-72162e861f80",
+  "youtube": null
+}

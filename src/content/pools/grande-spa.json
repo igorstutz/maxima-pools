@@ -1,0 +1,21 @@
+{
+  "order": 87,
+  "name": "Grande Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/grande-spa-1.webp",
+  "width": "8'",
+  "length": "8'",
+  "depth": "3'2\"",
+  "area": "44 sq ft",
+  "volume": "550 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/grande-spa-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/grande-spa-02-1024x682.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/f0ce3b0506e94c14a6dff460570b9ef2/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/30858865-a3a8-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/YL__u2_eK18"
+}

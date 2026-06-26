@@ -1,0 +1,26 @@
+{
+  "order": 69,
+  "name": "Stockholm",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/stockholm.webp",
+  "width": "14'",
+  "length": "27'1\"",
+  "depth": "5'9\"",
+  "area": "345 sq ft",
+  "volume": "10,000 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/stockholm-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/84073a29e078422bb4948737ff607928/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/d8e35cb1-b9cd-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/xA4wj2xiTfI"
+}

@@ -1,0 +1,27 @@
+{
+  "order": 92,
+  "name": "Margarita Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-1.webp",
+  "width": "9'",
+  "length": "9'",
+  "depth": "2'10\"",
+  "area": "64 sq ft",
+  "volume": "1,025 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-09-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/margarita-spa-10-1024x768.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/bbba687649ee4cc4a2763ca58249624c/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/6d131371-b838-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/rxecDEhZ15A"
+}

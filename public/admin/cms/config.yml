@@ -2763,3 +2763,38 @@ collections:
               - { label: "Type", name: type, widget: select, options: ["city", "county"] }
               - { label: "Google Maps query", name: query, widget: string, hint: "e.g. Dublin,OH or Franklin+County,OH" }
               - { label: "Services paragraph", name: copy, widget: text }
+
+  - name: pools
+    label: "Pools & Spas"
+    label_singular: "Pool / Spa"
+    description: "Your catalog of pool & spa models. Add a new model, edit specs and media, hide a model from the catalog, or delete one."
+    folder: "src/content/pools"
+    create: true
+    extension: json
+    format: json
+    identifier_field: name
+    slug: "{{fields.name | slugify}}"
+    summary: "{{fields.name}} — {{fields.type}}"
+    sortable_fields: [order, name, type, size]
+    fields:
+      - { label: "Name", name: name, widget: string, hint: "Model name, e.g. Atlantic. For a NEW model this also sets the page URL." }
+      - { label: "Thumbnail image", name: image, widget: image, hint: "Main image shown on the catalog card and detail hero. You can upload one or paste an image URL." }
+      - { label: "Hide from catalog", name: hidden, widget: boolean, default: false, required: false, hint: "Turn ON to remove this model from the catalog, search, sitemap and its own page." }
+      - { label: "Width", name: width, widget: string, hint: "e.g. 15'7\"" }
+      - { label: "Length", name: length, widget: string, hint: "e.g. 33'1\"" }
+      - { label: "Depth", name: depth, widget: string, hint: "e.g. 5'9\"" }
+      - { label: "Area", name: area, widget: string, hint: "e.g. 375 sq ft" }
+      - { label: "Volume", name: volume, widget: string, hint: "e.g. 10,400 gal" }
+      - { label: "Shape", name: shape, widget: select, options: ["Rectangular", "Freeform"] }
+      - { label: "Size", name: size, widget: select, options: ["Small", "Medium", "Large"] }
+      - { label: "Type", name: type, widget: select, options: ["Pool", "Spa", "Tanning Ledge", "Pool with Spa"] }
+      - label: "Gallery images"
+        name: gallery
+        widget: list
+        required: false
+        summary: "{{fields.image}}"
+        field: { label: "Image", name: image, widget: image }
+      - { label: "3D model — Sketchfab embed URL", name: sketchfab, widget: string, required: false, hint: "Optional. Leave blank if none." }
+      - { label: "Spec sheet — PDF URL", name: pdf, widget: string, required: false, hint: "Optional. Leave blank if none." }
+      - { label: "Video — YouTube embed URL", name: youtube, widget: string, required: false, hint: "Optional. Use the embed URL form: https://www.youtube.com/embed/XXXX" }
+      - { label: "Sort order", name: order, widget: number, required: false, value_type: int, hint: "Lower numbers appear first in the catalog. Optional for new models." }

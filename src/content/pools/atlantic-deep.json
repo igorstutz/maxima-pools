@@ -1,0 +1,29 @@
+{
+  "order": 1,
+  "name": "Atlantic Deep",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep.webp",
+  "width": "15'7\"",
+  "length": "33'1\"",
+  "depth": "8'",
+  "area": "375 sq ft",
+  "volume": "11,300 gal",
+  "shape": "Freeform",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-09-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/atlantic-deep-300x226.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/e070dec8f5b246b8b92ff792e61657dd/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/87a615fc-17ad-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/XcMLfirPCU8"
+}

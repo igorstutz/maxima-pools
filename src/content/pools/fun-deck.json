@@ -1,0 +1,27 @@
+{
+  "order": 24,
+  "name": "Fun Deck",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-1.webp",
+  "width": "16'",
+  "length": "14'",
+  "depth": "1'6\"",
+  "area": "224 sq ft",
+  "volume": "1,600 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool with Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-07-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/fun-deck-08-1024x768.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/b7e9bc5678344a28ab56177e1f4ea8f2/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/e45bf737-b73e-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/1GrWFR5c1ho"
+}

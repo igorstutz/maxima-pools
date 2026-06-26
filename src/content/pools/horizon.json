@@ -1,0 +1,28 @@
+{
+  "order": 31,
+  "name": "Horizon",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/horizon-1.webp",
+  "width": "16'",
+  "length": "24'",
+  "depth": "4'9\"",
+  "area": "200 sq ft",
+  "volume": "5,200 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/horizon-09-768x1024.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/5657f397b9da4e85961bb8da1272696a/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/94d25123-6b2a-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/f2bCt83eO3o"
+}

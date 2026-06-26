@@ -1,0 +1,26 @@
+{
+  "order": 57,
+  "name": "Palm Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/palm-beach.webp",
+  "width": "10'5\"",
+  "length": "21'10\"",
+  "depth": "4'11\"",
+  "area": "157 sq ft",
+  "volume": "4,800 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/palm-beach-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/61bda401e84249a599512124f3891c7c/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/1434eeb1-7055-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/UlsaGbGPzsk"
+}

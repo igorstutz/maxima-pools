@@ -1,0 +1,28 @@
+{
+  "order": 35,
+  "name": "Lake Michigan",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan.webp",
+  "width": "16'",
+  "length": "26'",
+  "depth": "5'11\"",
+  "area": "375 sq ft",
+  "volume": "10,122 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-09-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/lake-michigan-10.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/7b4b4766888d4e4cb726183669c27a21/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/755a0cf7-6be1-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/tT4z7dwSuiQ"
+}

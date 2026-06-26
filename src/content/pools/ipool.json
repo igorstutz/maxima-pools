@@ -1,0 +1,27 @@
+{
+  "order": 33,
+  "name": "iPool",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/ipool.webp",
+  "width": "16'",
+  "length": "36'2\"",
+  "depth": "4'8\"",
+  "area": "354 sq ft",
+  "volume": "8,800 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ipool-09-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/6d411faf6f24474d860d6a5e05d37a7f/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/31909c0b-b789-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/BMPtX8Xj-tk"
+}

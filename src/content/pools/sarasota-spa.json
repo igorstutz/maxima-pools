@@ -1,0 +1,27 @@
+{
+  "order": 95,
+  "name": "Sarasota Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-1.webp",
+  "width": "8'10\"",
+  "length": "8'10\"",
+  "depth": "3'7\"",
+  "area": "54 sq ft",
+  "volume": "755 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/sarasota-spa-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/020412fba45d4265941b2a102d85443f/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/a4185f6c-b406-11ef-a5d8-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/0MVphjPl23Q"
+}

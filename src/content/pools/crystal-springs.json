@@ -1,0 +1,25 @@
+{
+  "order": 15,
+  "name": "Crystal Springs",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs.webp",
+  "width": "11'11\"",
+  "length": "17'2\"",
+  "depth": "5'",
+  "area": "119 sq ft",
+  "volume": "3,900 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-02-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-04-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-05-1024x682.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-06-1024x773.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-springs-07-1024x819.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/beeb44ae772b48898c9e481ede0ed856/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/a31711db-17ed-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/XQ6TN1gm9Cs"
+}

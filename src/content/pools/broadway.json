@@ -1,0 +1,27 @@
+{
+  "order": 6,
+  "name": "Broadway",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/broadway.webp",
+  "width": "11'8\"",
+  "length": "21'8\"",
+  "depth": "4'",
+  "area": "240 sq ft",
+  "volume": "4,500 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/broadway-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/e7729c95c33b457f93cff7d256c6e544/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/d6aa636c-6803-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/cUqjUGHyj00"
+}

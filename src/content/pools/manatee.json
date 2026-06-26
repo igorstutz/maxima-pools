@@ -1,0 +1,27 @@
+{
+  "order": 42,
+  "name": "Manatee",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/manatee.webp",
+  "width": "13'9\"",
+  "length": "32'10\"",
+  "depth": "5'10\"",
+  "area": "354 sq ft",
+  "volume": "10,300 gal",
+  "shape": "Freeform",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-01-685x1024.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-02-1024x682.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-03-1024x767.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-04-1024x767.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-05-1024x822.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-06-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-07-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/manatee-08-1024x768.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/fff98767301841778b0936a699725d91/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/8ef5db13-195d-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/SocTYRAm_U0"
+}

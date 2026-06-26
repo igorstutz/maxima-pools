@@ -1,0 +1,20 @@
+{
+  "order": 53,
+  "name": "Oceanside Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/oceanside-beach.webp",
+  "width": "16'2\"",
+  "length": "45'",
+  "depth": "6'4\"",
+  "area": "724 sq ft",
+  "volume": "21,852 gal",
+  "shape": "Rectangular",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/oceanside-beach-01-1024x682.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/7962b995b6bf4176ac6f0a7533d8519f/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/beae4cdd-4327-11f1-9b13-72162e861f80",
+  "youtube": null
+}

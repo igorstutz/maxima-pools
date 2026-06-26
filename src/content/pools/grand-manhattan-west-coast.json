@@ -1,0 +1,28 @@
+{
+  "order": 26,
+  "name": "Grand Manhattan West Coast",
+  "image": "/images/pools/grand-manhattan-west-coast/cover.webp",
+  "width": "15'10\"",
+  "length": "33'10\"",
+  "depth": "5'1\"",
+  "area": "476 sq ft",
+  "volume": "12,528 gal",
+  "shape": "Rectangular",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": true,
+  "gallery": [
+    "/images/pools/grand-manhattan-west-coast/featured.webp",
+    "/images/pools/grand-manhattan-west-coast/01.webp",
+    "/images/pools/grand-manhattan-west-coast/02.webp",
+    "/images/pools/grand-manhattan-west-coast/03.webp",
+    "/images/pools/grand-manhattan-west-coast/04.webp",
+    "/images/pools/grand-manhattan-west-coast/05.webp",
+    "/images/pools/grand-manhattan-west-coast/06.webp",
+    "/images/pools/grand-manhattan-west-coast/07.webp",
+    "/images/pools/grand-manhattan-west-coast/08.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/f0fee2b95d9b49a9a8c231f438590d53/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/ba514b3e-6b22-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/q7p1Se4RsVU"
+}

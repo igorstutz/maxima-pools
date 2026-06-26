@@ -1,0 +1,27 @@
+{
+  "order": 28,
+  "name": "Great Lakes",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/great-lakes.webp",
+  "width": "16'2\"",
+  "length": "37'",
+  "depth": "6'4\"",
+  "area": "540 sq ft",
+  "volume": "14,500 gal",
+  "shape": "Rectangular",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lakes-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/2c7ca350f9054fe3ab1a60614234e1c6/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/7ac3e402-6b23-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/2JKbwa9Vehw"
+}

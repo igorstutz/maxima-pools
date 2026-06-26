@@ -1,0 +1,27 @@
+{
+  "order": 75,
+  "name": "Waikiki II",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II.webp",
+  "width": "11'9\"",
+  "length": "27'11\"",
+  "depth": "5'6\"",
+  "area": "277 sq ft",
+  "volume": "8,500 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-II-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/e1bff6a41a7d4f5a80f0e193418756ed/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/ec2fad84-724a-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/KOOOm7nW-oI"
+}

@@ -1,0 +1,25 @@
+{
+  "order": 86,
+  "name": "Diamond Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-1.webp",
+  "width": "8'",
+  "length": "8'",
+  "depth": "2'11\"",
+  "area": "42 sq ft",
+  "volume": "450 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-02-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-03-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-04-1024x1024.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-06-1024x564.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/diamond-spa-07-1024x564.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/4a34560684dd42d69bd252f28eb7c63f/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/8ac640fb-81f6-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/nreWBlm1MAo"
+}

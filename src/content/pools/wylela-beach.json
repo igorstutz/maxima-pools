@@ -1,0 +1,26 @@
+{
+  "order": 77,
+  "name": "Wylela Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach.webp",
+  "width": "12'",
+  "length": "30'",
+  "depth": "6'1\"",
+  "area": "319 sq ft",
+  "volume": "7,588 gal",
+  "shape": "Rectangular",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-01-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-02-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-03-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-04-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-05-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-06-1024x576.png",
+    "https://maximapools.com/wp-content/uploads/2025/02/wylela-beach-07-1024x576.png"
+  ],
+  "sketchfab": "https://sketchfab.com/models/2bfd8914b40d4a12a4ce438573f1b533/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/6b7fd940-72dd-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/KvQMq14vqZ0"
+}

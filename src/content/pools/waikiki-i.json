@@ -1,0 +1,27 @@
+{
+  "order": 74,
+  "name": "Waikiki I",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i.webp",
+  "width": "12'2\"",
+  "length": "26'9\"",
+  "depth": "5'6\"",
+  "area": "266 sq ft",
+  "volume": "8,000 gal",
+  "shape": "Freeform",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/waikiki-i-08-1024x576.webp"
+  ],
+  "sketchfab": null,
+  "pdf": "https://data.dexter.sanjuanpools.net/images/695e0d3c-724a-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/aUwdCDOrPnA"
+}

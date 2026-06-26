@@ -1,0 +1,27 @@
+{
+  "order": 27,
+  "name": "Great Lake Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach.webp",
+  "width": "16'2\"",
+  "length": "41'8\"",
+  "depth": "6'4\"",
+  "area": "585 sq ft",
+  "volume": "14,874 gal",
+  "shape": "Rectangular",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/great-lake-beach-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/c358c37fbe5f441ba79d3c1cd49fd343/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/88865b75-6b24-11f0-9f47-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/2JKbwa9Vehw"
+}

@@ -1,0 +1,28 @@
+{
+  "order": 32,
+  "name": "Huntington Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach.webp",
+  "width": "16'",
+  "length": "28'7\"",
+  "depth": "5'7\"",
+  "area": "315 sq ft",
+  "volume": "7,320 gal",
+  "shape": "Freeform",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-02-768x1024.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-03-768x1024.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-04-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-05-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-06-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-07-1024x835.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-08-1024x573.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/huntington-beach-09-1024x768.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/4dbcb9a113b74767a1f2c1a19fa9cdb8/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/39c25f9a-1953-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/o2_aIhmJBfc"
+}

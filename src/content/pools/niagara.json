@@ -1,0 +1,27 @@
+{
+  "order": 50,
+  "name": "Niagara",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/niagara.webp",
+  "width": "15'11\"",
+  "length": "33'10\"",
+  "depth": "7'10\"",
+  "area": "497 sq ft",
+  "volume": "17,500 gal",
+  "shape": "Rectangular",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/niagara-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/c7bbe1d3112b4e01a6af6a3f85a035d1/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/9d870d22-704c-11f0-88bc-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/-pjPACmU7bI"
+}

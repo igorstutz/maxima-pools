@@ -1,0 +1,22 @@
+{
+  "order": 93,
+  "name": "Peninsula Spa",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/peninsula-spa-1.webp",
+  "width": "8'4\"",
+  "length": "10'10\"",
+  "depth": "3'2\"",
+  "area": "82 sq ft",
+  "volume": "393 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/peninsula-spa-01-1024x649.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/peninsula-spa-02-1024x644.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/peninsula-spa-03-1024x696.webp"
+  ],
+  "sketchfab": null,
+  "pdf": "https://data.dexter.sanjuanpools.net/images/df99798b-81fb-11f0-88bc-72162e861f80",
+  "youtube": null
+}

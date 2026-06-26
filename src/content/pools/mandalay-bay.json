@@ -1,0 +1,28 @@
+{
+  "order": 44,
+  "name": "Mandalay Bay",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay.webp",
+  "width": "11'8\"",
+  "length": "25'1\"",
+  "depth": "5'7\"",
+  "area": "198 sq ft",
+  "volume": "6,600 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool with Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-02-1024x1020.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mandalay-bay-09-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/a942cece615646b4b720e2b3e303c04c/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/b9aa1978-1961-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/nyj2TRXYZR0"
+}

@@ -1,0 +1,27 @@
+{
+  "order": 13,
+  "name": "Crystal Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach.webp",
+  "width": "11'8\"",
+  "length": "25'1\"",
+  "depth": "5'7\"",
+  "area": "147 sq ft",
+  "volume": "4,000 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool with Spa",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/crystal-beach-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/da0c05df34fc47e485ba0126e9affc07/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/b3041451-17eb-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/1PdT_3FsrE8"
+}

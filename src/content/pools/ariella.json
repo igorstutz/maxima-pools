@@ -1,0 +1,29 @@
+{
+  "order": 2,
+  "name": "Ariella",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/ariella.webp",
+  "width": "12'7\"",
+  "length": "21'1\"",
+  "depth": "4'10\"",
+  "area": "186 sq ft",
+  "volume": "4,794 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-01-1024x682.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-02-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-08-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-09-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/ariella-300x251.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/6b9a4bfce57e4b9ca085d40d4a1b0b18/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/f9cea8ce-156a-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/5TyjtB7acBw"
+}

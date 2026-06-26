@@ -1,0 +1,27 @@
+{
+  "order": 19,
+  "name": "Daytona Beach",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach.webp",
+  "width": "16'",
+  "length": "45'",
+  "depth": "8'",
+  "area": "560 sq ft",
+  "volume": "22,000 gal",
+  "shape": "Freeform",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-07-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/daytona-beach-08-1024x576.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/494d81535c7c460382db845e420d6c98/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/9c8f0e16-188f-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/9sz8lYg-X38"
+}

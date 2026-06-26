@@ -1,0 +1,26 @@
+{
+  "order": 65,
+  "name": "Seaside",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/seaside.webp",
+  "width": "11'11\"",
+  "length": "27'10\"",
+  "depth": "6'",
+  "area": "242 sq ft",
+  "volume": "8,000 gal",
+  "shape": "Freeform",
+  "size": "Medium",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-01-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-02-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-03-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-04-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-05-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-06-1024x576.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/seaside-07-1024x576.webp"
+  ],
+  "sketchfab": null,
+  "pdf": "https://data.dexter.sanjuanpools.net/images/8b8326be-1adb-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/yFDv5yx52Ac"
+}

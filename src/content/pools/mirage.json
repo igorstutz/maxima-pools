@@ -1,0 +1,27 @@
+{
+  "order": 47,
+  "name": "Mirage",
+  "image": "https://maximapools.com/wp-content/uploads/2024/08/mirage.webp",
+  "width": "15'8\"",
+  "length": "39'8\"",
+  "depth": "5'4\"",
+  "area": "466 sq ft",
+  "volume": "14,050 gal",
+  "shape": "Freeform",
+  "size": "Large",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-01-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-02-1024x682.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-03-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-04-1024x682.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-05-1024x680.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-06-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-07-1024x768.webp",
+    "https://maximapools.com/wp-content/uploads/2024/08/mirage-09-1024x807.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/209349b52d6b44fca5a784de0ade2d48/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/cf67f80d-1962-11f0-ba12-72162e861f80",
+  "youtube": "https://www.youtube.com/embed/aGjbzGNUNxo"
+}
