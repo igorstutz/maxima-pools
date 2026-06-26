@@ -155,7 +155,7 @@ export default function FreeEstimatePage() {
               </a>
 
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="mt-3 sm:mt-4 sm:ml-3 w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Sparkles size={18} className="text-accent" />

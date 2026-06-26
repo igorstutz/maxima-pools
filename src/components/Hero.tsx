@@ -96,14 +96,14 @@ export function Hero() {
             {/* CTAs */}
             <div className="hero-animate hero-animate-4 flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 lg:gap-2.5 xl:gap-4 *:whitespace-nowrap">
               <Link
-                href="/pool-simulator"
+                href={hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-6 sm:px-8 lg:px-5 xl:px-8 py-3 sm:py-3.5 lg:py-2 xl:py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 transition-all duration-300 text-sm sm:text-base lg:text-xs xl:text-base"
               >
                 <Sparkles size={18} className="text-white" />
                 {hero.simulatorLabel}
               </Link>
               <Link
-                href="/fiberglass-pool-gallery"
+                href={hero.galleryHref}
                 className="group inline-flex items-center justify-center gap-3 px-6 sm:px-8 lg:px-4 xl:px-8 py-3 sm:py-3.5 lg:py-1.5 xl:py-3.5 glass rounded-full text-white font-semibold hover:bg-white/15 transition-all duration-300 text-sm sm:text-base lg:text-xs xl:text-base"
               >
                 <div className="w-9 h-9 sm:w-10 sm:h-10 lg:w-7 lg:h-7 xl:w-10 xl:h-10 rounded-full bg-white/20 flex items-center justify-center group-hover:bg-white/30 transition-colors shrink-0">

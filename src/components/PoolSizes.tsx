@@ -150,7 +150,7 @@ export function PoolSizes() {
               {poolSizes.ctaText}
             </p>
             <Link
-              href="/pool-simulator"
+              href={poolSizes.ctaHref}
               className="group inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
             >
               <Sparkles size={16} className="group-hover:rotate-12 transition-transform duration-300" />

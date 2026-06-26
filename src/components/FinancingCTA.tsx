@@ -8,10 +8,7 @@ import {
   CreditCard,
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
-import {
-  LyonFinancingBanner,
-  LYON_APPLY_URL,
-} from "./LyonFinancingBanner";
+import { LyonFinancingBanner } from "./LyonFinancingBanner";
 import home from "@/content/pages/home.json";
 
 const financing = home.financing;
@@ -76,7 +73,7 @@ export function FinancingCTA() {
 
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/financing"
+                  href={financing.ctaPrimaryHref}
                   className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                 >
                   {financing.ctaPrimaryLabel}
@@ -86,7 +83,7 @@ export function FinancingCTA() {
                   />
                 </Link>
                 <a
-                  href={LYON_APPLY_URL}
+                  href={financing.ctaSecondaryHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gray-50 border border-gray-200 rounded-full text-gray-700 font-semibold hover:border-accent/40 hover:text-primary transition-all"

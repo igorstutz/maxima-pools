@@ -44,7 +44,7 @@ export function CTA() {
                   </p>
                   <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={cta.primaryHref}
                       className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"
                     >
                       {cta.primaryLabel}
@@ -54,14 +54,14 @@ export function CTA() {
                       />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={cta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
                       {cta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={cta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
                     >
                       <Phone size={18} />

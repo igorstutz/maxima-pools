@@ -143,7 +143,7 @@ export function Process() {
         <ScrollReveal>
           <div className="mt-16 sm:mt-20 text-center">
             <Link
-              href="/contact"
+              href={process.ctaHref}
               className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 text-sm sm:text-base"
             >
               {process.ctaLabel}

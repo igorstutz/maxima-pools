@@ -21,7 +21,8 @@
       "display": "(614) 384-5081",
       "href": "tel:+16143845081",
       "note": "Call now for immediate assistance"
-    }
+    },
+    "simulatorHref": "/pool-simulator"
   },
   "formCard": {
     "title": "Request Your Estimate",

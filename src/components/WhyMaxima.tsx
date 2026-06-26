@@ -100,7 +100,7 @@ export function WhyMaxima() {
               {why.intro}
             </p>
             <Link
-              href="/pool-simulator"
+              href={why.ctaHref}
               className="group inline-flex items-center gap-2 mt-6 px-6 py-3 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
             >
               <Sparkles size={18} className="group-hover:rotate-12 transition-transform duration-300" />
@@ -205,7 +205,7 @@ export function WhyMaxima() {
           {/* Card 3 — Full-Service (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={1}>
             <Link
-              href="/our-process"
+              href={why.card3.href}
               className="group block rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
             >
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
@@ -233,7 +233,7 @@ export function WhyMaxima() {
           {/* Card 4 — Family Owned (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={2}>
             <Link
-              href="/why-maxima"
+              href={why.card4.href}
               className="group block rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
             >
               <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 flex items-center justify-center mb-6 shadow-lg shadow-sky-500/20 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
@@ -286,7 +286,7 @@ export function WhyMaxima() {
           {/* Card 5 — San Juan Partnership badge (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={3}>
             <a
-              href="https://sanjuanpools.com/"
+              href={why.card5.href}
               target="_blank"
               rel="noopener noreferrer"
               className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"

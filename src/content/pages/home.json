@@ -5,7 +5,9 @@
     "headingHighlight": "Luxury",
     "subtitle": "Premium fiberglass pools and custom outdoor living spaces, crafted and installed by Columbus's most trusted pool experts.",
     "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
     "galleryLabel": "Explore Our Pools",
+    "galleryHref": "/fiberglass-pool-gallery",
     "poolImages": [
       { "src": "/images/pools/atlantic.jpg", "alt": "Atlantic fiberglass pool" },
       { "src": "/images/pools/grand-manhattan.png", "alt": "Grand Manhattan fiberglass pool" },
@@ -25,6 +27,7 @@
     "headingHighlight": "Pool Experts",
     "intro": "Maxima Pools is a family-owned installer serving Central Ohio. Backed by San Juan Pools — the industry leader in fiberglass pool quality since 1958.",
     "ctaLabel": "Pool Simulator",
+    "ctaHref": "/pool-simulator",
     "highlights": [
       "100% Hand-Laid Fiberglass",
       "Structural Warranty",
@@ -43,16 +46,19 @@
       "statLabels": ["Pool Models", "Hand-Laid", "In Columbus"]
     },
     "card3": {
+      "href": "/our-process",
       "title": "Full-Service Installation",
       "description": "We handle everything from excavation to the finishing touches — pool, plumbing, electrical, concrete, and landscaping.",
       "items": ["Pool Placement", "Plumbing & Electric", "Concrete Patios", "Landscaping"]
     },
     "card4": {
+      "href": "/why-maxima",
       "title": "Family-Owned & Operated",
       "description": "We treat every project like it's our own home. Personalized service, transparent pricing, and genuine care.",
       "ratingNote": "5-star rated by families"
     },
     "card5": {
+      "href": "https://sanjuanpools.com/",
       "logo": "/images/logo/sanjuan-logo.png",
       "title": "Best of the Best",
       "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America.",
@@ -65,6 +71,7 @@
     "headingHighlight": "Designs",
     "intro": "Find the shape that fits your backyard — built by San Juan Pools, installed by Maxima.",
     "viewAllLabel": "View All 100+ Models",
+    "viewAllHref": "/pools",
     "featured": {
       "name": "Atlantic",
       "description": "One of our most popular swimming pools, the Atlantic features a conservative free-form layout with a traditional shallow-to-deep end design. The spacious swim area, built-in bench seating, and generous tanning ledge make it ideal for both relaxation and entertaining.",
@@ -90,6 +97,7 @@
     "headingHighlight": "Backyard",
     "intro": "Not all fiberglass pools are built the same. San Juan uses 100% hand-laid fiberglass with marine-grade Vinyl Ester resin — the strongest pool shells manufactured in America.",
     "ctaLabel": "Start Your Project Today",
+    "ctaHref": "/contact",
     "ctaNote": "Free consultation & estimate — no obligation",
     "steps": [
       { "step": "01", "title": "Precision Mold", "description": "Every San Juan pool starts with a precisely waxed mold to ensure perfect shape accuracy. Each mold is engineered for exact dimensions and contours.", "image": "/images/process/mold.webp" },
@@ -127,6 +135,7 @@
     "headingHighlight": "Living",
     "intro": "Your pool is just the beginning. We design and build complete backyard retreats — from custom patios and outdoor kitchens to fire features and shade structures.",
     "ctaLabel": "Explore Outdoor Living",
+    "ctaHref": "/outdoor-living",
     "heroImage": "/images/outdoor/grill.jpg",
     "heroImageAlt": "Luxury outdoor entertaining area with grill",
     "heroLabelTitle": "Complete Outdoor Entertainment",
@@ -137,13 +146,16 @@
       { "icon": "Lamp", "title": "Shelters & Shade", "description": "Pergolas, pavilions, and gazebos that provide comfortable shade and define your outdoor rooms.", "image": "/images/outdoor/shade.jpg" }
     ],
     "learnMoreLabel": "Learn more",
+    "learnMoreHref": "/outdoor-living",
+    "statsHref": "https://www.maximaconcrete.com",
     "stats": [
       { "value": "Custom", "label": "Outdoor Kitchens" },
       { "value": "Stamped", "label": "Concrete Patios" },
       { "value": "Gas & Wood", "label": "Fire Features" },
       { "value": "Pergolas", "label": "Shade Structures" }
     ],
-    "exploreMoreLabel": "Explore More"
+    "exploreMoreLabel": "Explore More",
+    "exploreMoreHref": "https://www.maximaconcrete.com/"
   },
   "poolSizes": {
     "badge": "Dimensions",
@@ -179,7 +191,8 @@
       }
     ],
     "ctaText": "Not sure which size is right? Visualize it in your own backyard.",
-    "ctaLabel": "Simulate Pool in Your Backyard"
+    "ctaLabel": "Simulate Pool in Your Backyard",
+    "ctaHref": "/pool-simulator"
   },
   "financing": {
     "badge": "Pool Financing",
@@ -191,7 +204,9 @@
       { "icon": "ShieldCheck", "text": "No Credit Impact to Apply" }
     ],
     "ctaPrimaryLabel": "Explore Financing Options",
-    "ctaSecondaryLabel": "Apply Now"
+    "ctaPrimaryHref": "/financing",
+    "ctaSecondaryLabel": "Apply Now",
+    "ctaSecondaryHref": "https://www.lyonfinancial.net/apply/?lid=11-19241"
   },
   "socialFeed": {
     "badge": "Stay Connected",
@@ -212,15 +227,19 @@
     "citiesLabel": "Cities & Towns",
     "countiesLabel": "Counties",
     "ctaText": "Don't see your area? We may still serve you.",
-    "ctaLabel": "Contact us to find out"
+    "ctaLabel": "Contact us to find out",
+    "ctaHref": "/contact"
   },
   "finalCta": {
     "headingLead": "Ready to",
     "headingHighlight": "Dive In?",
     "intro": "Your dream pool is just one conversation away. Get in touch for a free consultation and estimate — no obligation.",
     "primaryLabel": "Get Your Free Estimate",
+    "primaryHref": "/contact",
     "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
     "phone": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081",
     "backgroundImage": "/images/pools/clear-water-beach.png",
     "backgroundImageAlt": "Beautiful fiberglass pool at sunset",
     "infoCards": [

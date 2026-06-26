@@ -143,7 +143,7 @@ export function Testimonials() {
         <ScrollReveal>
           <div className="mt-12 flex justify-center">
             <Link
-              href="/reviews"
+              href={section.ctaHref}
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
             >
               {section.ctaLabel}

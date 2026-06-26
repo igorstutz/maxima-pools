@@ -42,7 +42,7 @@ export function OutdoorLiving() {
                 {outdoor.intro}
               </p>
               <Link
-                href="/outdoor-living"
+                href={outdoor.ctaHref}
                 className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 text-sm"
               >
                 {outdoor.ctaLabel}
@@ -112,7 +112,7 @@ export function OutdoorLiving() {
                       {service.description}
                     </p>
                     <Link
-                      href="/outdoor-living"
+                      href={outdoor.learnMoreHref}
                       className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold mt-4"
                     >
                       {outdoor.learnMoreLabel}
@@ -131,7 +131,7 @@ export function OutdoorLiving() {
             {outdoor.stats.map((item) => (
               <a
                 key={item.label}
-                href="https://www.maximaconcrete.com"
+                href={outdoor.statsHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/[0.08] hover:border-white/20 transition-colors"
@@ -151,7 +151,7 @@ export function OutdoorLiving() {
         <ScrollReveal>
           <div className="mt-10 sm:mt-12 flex justify-center">
             <a
-              href="https://www.maximaconcrete.com/"
+              href={outdoor.exploreMoreHref}
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 px-8 py-4 bg-white text-primary font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 whitespace-nowrap"

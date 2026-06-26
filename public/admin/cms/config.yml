@@ -60,6 +60,7 @@ collections:
                   - { label: "Number (shown)", name: display, widget: string }
                   - { label: "Dial link", name: href, widget: string, hint: "Format must be: tel:+16143845081" }
                   - { label: "Small note under the number", name: note, widget: string }
+              - { label: "Pool Simulator button link", name: simulatorHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
           - label: "Form card heading"
             name: formCard
             widget: object
@@ -108,7 +109,9 @@ collections:
               - { label: "Heading — highlighted line", name: headingHighlight, widget: string, hint: "Second line, shown with the shimmer effect." }
               - { label: "Subtitle paragraph", name: subtitle, widget: text }
               - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
               - { label: "Gallery button label", name: galleryLabel, widget: string }
+              - { label: "Gallery button link", name: galleryHref, widget: string, hint: "Internal page starts with / (e.g. /fiberglass-pool-gallery). External starts with https://" }
               - label: "Rotating pool images"
                 name: poolImages
                 widget: list
@@ -134,6 +137,7 @@ collections:
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
               - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
               - label: "Highlight chips"
                 name: highlights
                 widget: list
@@ -160,6 +164,7 @@ collections:
                 name: card3
                 widget: object
                 fields:
+                  - { label: "Card link", name: href, widget: string, hint: "Where the card links to. Internal starts with / (e.g. /our-process). External starts with https://" }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
                   - label: "Checklist items"
@@ -170,6 +175,7 @@ collections:
                 name: card4
                 widget: object
                 fields:
+                  - { label: "Card link", name: href, widget: string, hint: "Where the card links to. Internal starts with / (e.g. /why-maxima). External starts with https://" }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
                   - { label: "Rating note", name: ratingNote, widget: string }
@@ -177,6 +183,7 @@ collections:
                 name: card5
                 widget: object
                 fields:
+                  - { label: "Card link", name: href, widget: string, hint: "Internal starts with / . External starts with https:// (e.g. https://sanjuanpools.com/)" }
                   - { label: "Logo image", name: logo, widget: image }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
@@ -191,6 +198,7 @@ collections:
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
               - { label: "'View all' button label", name: viewAllLabel, widget: string }
+              - { label: "'View all' button link", name: viewAllHref, widget: string, hint: "Internal page starts with / (e.g. /pools). External starts with https://" }
               - label: "Featured pool (large card)"
                 name: featured
                 widget: object
@@ -223,6 +231,7 @@ collections:
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
               - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /contact). External starts with https://" }
               - { label: "Note under the button", name: ctaNote, widget: string }
               - label: "Steps"
                 name: steps
@@ -264,6 +273,7 @@ collections:
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
               - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /outdoor-living). External starts with https://" }
               - { label: "Hero image", name: heroImage, widget: image }
               - { label: "Hero image alt text", name: heroImageAlt, widget: string }
               - { label: "Floating label — title", name: heroLabelTitle, widget: string }
@@ -278,6 +288,8 @@ collections:
                   - { label: "Description", name: description, widget: text }
                   - { label: "Image", name: image, widget: image }
               - { label: "'Learn more' link label", name: learnMoreLabel, widget: string }
+              - { label: "'Learn more' link (all service cards)", name: learnMoreHref, widget: string, hint: "Internal page starts with / (e.g. /outdoor-living). External starts with https://" }
+              - { label: "Stats strip link (all 4 cards)", name: statsHref, widget: string, hint: "Where the 4 stat cards link to. External starts with https:// (e.g. https://www.maximaconcrete.com)" }
               - label: "Stats strip"
                 name: stats
                 widget: list
@@ -286,6 +298,7 @@ collections:
                   - { label: "Value", name: value, widget: string }
                   - { label: "Label", name: label, widget: string }
               - { label: "'Explore more' button label", name: exploreMoreLabel, widget: string }
+              - { label: "'Explore more' button link", name: exploreMoreHref, widget: string, hint: "Internal starts with / . External starts with https:// (e.g. https://www.maximaconcrete.com/)" }
           - label: "Pool Sizes section"
             name: poolSizes
             widget: object
@@ -313,6 +326,7 @@ collections:
                   - { label: "Mark as 'Most Popular'", name: featured, widget: boolean, default: false }
               - { label: "Bottom CTA text", name: ctaText, widget: string }
               - { label: "Bottom CTA button label", name: ctaLabel, widget: string }
+              - { label: "Bottom CTA button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
           - label: "Financing section"
             name: financing
             widget: object
@@ -329,7 +343,9 @@ collections:
                   - { label: "Icon", name: icon, widget: select, options: ["Banknote", "Clock", "ShieldCheck"] }
                   - { label: "Text", name: text, widget: string }
               - { label: "Primary button label", name: ctaPrimaryLabel, widget: string }
+              - { label: "Primary button link", name: ctaPrimaryHref, widget: string, hint: "Internal page starts with / (e.g. /financing). External starts with https://" }
               - { label: "Secondary button label", name: ctaSecondaryLabel, widget: string }
+              - { label: "Secondary button link", name: ctaSecondaryHref, widget: string, hint: "The Lyon Financial apply link (keep the ?lid= tracking code)." }
           - label: "Facebook / Social section"
             name: socialFeed
             widget: object
@@ -357,6 +373,7 @@ collections:
               - { label: "'Counties' label", name: countiesLabel, widget: string }
               - { label: "Bottom CTA text", name: ctaText, widget: string }
               - { label: "Bottom CTA link label", name: ctaLabel, widget: string }
+              - { label: "Bottom CTA link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /contact). External starts with https://" }
           - label: "Final Call-to-Action section"
             name: finalCta
             widget: object
@@ -366,8 +383,11 @@ collections:
               - { label: "Heading — highlighted line", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
               - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal page starts with / (e.g. /contact). External starts with https://" }
               - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
               - { label: "Phone (shown)", name: phone, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
               - { label: "Background image", name: backgroundImage, widget: image }
               - { label: "Background image alt text", name: backgroundImageAlt, widget: string }
               - label: "Info cards"
@@ -398,6 +418,7 @@ collections:
               - { label: "Rating word (e.g. Excellent)", name: excellentLabel, widget: string }
               - { label: "'Based on' label", name: basedOnLabel, widget: string }
               - { label: "'See all reviews' button label", name: ctaLabel, widget: string }
+              - { label: "'See all reviews' button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /reviews). External starts with https://" }
               - label: "Bottom trust badges"
                 name: trustBar
                 widget: list

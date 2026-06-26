@@ -85,7 +85,7 @@ export function LocationsWeServe() {
               {content.ctaText}
             </p>
             <Link
-              href="/contact"
+              href={content.ctaHref}
               className="group inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
             >
               {content.ctaLabel}

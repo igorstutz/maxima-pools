@@ -54,7 +54,7 @@ export function FeaturedPools() {
               </p>
             </div>
             <Link
-              href="/pools"
+              href={featured.viewAllHref}
               className="group inline-flex items-center gap-2 px-7 py-3.5 bg-primary-dark text-white rounded-full font-semibold hover:bg-primary transition-colors shrink-0 shadow-lg shadow-primary-dark/20 text-sm"
             >
               {featured.viewAllLabel}
