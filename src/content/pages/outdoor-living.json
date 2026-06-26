@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Outdoor Living | Maxima Pools - Columbus, OH",
+    "description": "Transform your backyard into an outdoor oasis. Custom kitchens, fire features, shade structures, lighting, and entertainment — designed and built in-house by Maxima Pools.",
+    "ogTitle": "Outdoor Living | Maxima Pools",
+    "ogDescription": "Beautifully designed outdoor living spaces crafted to enhance comfort, entertainment, and relaxation. Serving Columbus, OH."
+  },
+  "hero": {
+    "images": [
+      "/images/outdoor-living/kitchen.jpg",
+      "/images/outdoor-living/lighting.jpg",
+      "/images/outdoor-living/shelter.jpg",
+      "/images/outdoor-living/general.jpg"
+    ],
+    "badge": "Outdoor Living",
+    "headingLead": "Transform Your Backyard Into an",
+    "headingHighlight": "Outdoor Oasis",
+    "subtitle": "Beautifully designed outdoor living spaces crafted to enhance comfort, entertainment, and relaxation — seamlessly integrated with your pool and home.",
+    "startLabel": "Start Your Project",
+    "startHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "100%", "label": "Custom Designed", "icon": "Sparkles" },
+    { "value": "In-House", "label": "Design & Build", "icon": "Wrench" },
+    { "value": "All-Season", "label": "Engineered to Last", "icon": "Sun" },
+    { "value": "5-Star", "label": "Customer Rated", "icon": "Award" }
+  ],
+  "vision": {
+    "badge": "Our Approach",
+    "headingLead": "Your Vision,",
+    "headingHighlight": "Perfectly Designed",
+    "paragraph1": "At Maxima Pools, we create outdoor spaces that blend seamlessly with your pool design, lifestyle, and home architecture. Our in-house designers and installers work as one team to deliver a cohesive, flawless result.",
+    "paragraph2": "From the first sketch to the final stone, every detail is custom-tailored to your vision — built with the same precision and quality that defines our pool installations.",
+    "points": [
+      "In-house designers and installers — no outsourcing",
+      "Seamless integration with your pool design",
+      "Durable concrete and hardscape construction",
+      "Custom-tailored to your lifestyle and architecture",
+      "One team, one timeline, one flawless result",
+      "Serving Columbus, OH and surrounding areas"
+    ],
+    "image": "/images/outdoor-living/kitchen.jpg"
+  },
+  "servicesSection": {
+    "badge": "Our Solutions",
+    "headingLead": "Outdoor Living",
+    "headingHighlight": "Solutions",
+    "intro": "Everything you need to create the ultimate outdoor experience — designed, built, and integrated by one team."
+  },
+  "services": [
+    {
+      "icon": "UtensilsCrossed",
+      "title": "Custom Outdoor Kitchens",
+      "description": "Built-in grills, pizza ovens, bars, and durable countertops designed for performance and style. Year-round entertaining with prep areas and weatherproof cabinetry.",
+      "image": "/images/outdoor-living/outdoor-kitchens.png"
+    },
+    {
+      "icon": "Flame",
+      "title": "Fire Features",
+      "description": "Fire pits, fire bowls, and custom fireplaces that create a warm, inviting atmosphere. Gas-powered options with dancing flames that reflect beautifully off the water.",
+      "image": "/images/outdoor-living/grill.jpg"
+    },
+    {
+      "icon": "Tent",
+      "title": "Shade Structures",
+      "description": "Pergolas, gazebos, pavilions, and custom shelters engineered to blend with your home architecture while providing shade and structure for outdoor gatherings.",
+      "image": "/images/outdoor-living/shade-structures.png"
+    },
+    {
+      "icon": "Lightbulb",
+      "title": "Outdoor Lighting",
+      "description": "Professional landscape and architectural lighting that extends your enjoyment after sunset. Path lighting, accent lighting, and ambient LED solutions for safety and beauty.",
+      "image": "/images/outdoor-living/lighting-2.jpg"
+    },
+    {
+      "icon": "Tv",
+      "title": "Entertainment Add-Ons",
+      "description": "Outdoor TVs, sound systems, and smart technology that bring indoor comfort outside. Weatherproof solutions built for year-round use.",
+      "image": "/images/outdoor-living/general.jpg"
+    },
+    {
+      "icon": "Wrench",
+      "title": "Functional Upgrades",
+      "description": "Sinks, storage, trash centers, and weatherproof cabinetry. Every detail is considered so your outdoor space is as practical as it is beautiful.",
+      "image": "/images/outdoor-living/kitchen-2.jpg"
+    }
+  ],
+  "kitchensFeature": {
+    "imageMain": "/images/outdoor-living/outdoor-kitchens.png",
+    "imageGrill": "/images/outdoor-living/grill.jpg",
+    "imageDetail": "/images/outdoor-living/kitchen-2.jpg",
+    "badge": "Featured",
+    "headingLead": "Culinary Experiences",
+    "headingHighlight": "Under the Open Sky",
+    "paragraph": "Our custom outdoor kitchens are designed for performance and style. From built-in grills and pizza ovens to full bars with durable concrete countertops — everything is engineered for year-round entertaining.",
+    "points": [
+      "Built-in grills & pizza ovens",
+      "Durable concrete countertops",
+      "Weatherproof cabinetry & storage",
+      "Integrated sinks & prep areas",
+      "Custom bar & seating options",
+      "Seamless pool-to-kitchen flow"
+    ]
+  },
+  "lightingShade": [
+    {
+      "icon": "Lightbulb",
+      "image": "/images/outdoor-living/lighting-2.jpg",
+      "title": "Lighting That Elevates Every Moment",
+      "description": "Professional landscape and architectural lighting extends your enjoyment after sunset — adding beauty, ambiance, and safety to every corner of your outdoor space."
+    },
+    {
+      "icon": "Tent",
+      "image": "/images/outdoor-living/shade-structures.png",
+      "title": "Comfort, Style, and Protection",
+      "description": "Custom pergolas, gazebos, and pavilions engineered to blend with your home while providing shade and structure for outdoor gatherings all year long."
+    }
+  ],
+  "finalCta": {
+    "image": "/images/outdoor-living/shelter.jpg",
+    "headingLead": "Ready to Elevate Your",
+    "headingHighlight": "Outdoor Living?",
+    "text": "Tell us your vision and we'll bring it to life. One team, one timeline, one stunning outdoor space.",
+    "consultationLabel": "Schedule Your Consultation",
+    "consultationHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

@@ -11,18 +11,17 @@ import {
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { locations, slugify } from "@/lib/locations";
+import content from "@/content/pages/areas-we-serve.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/areas-we-serve/" },
-  title: "Areas We Serve | Maxima Pools - Columbus, OH",
-  description:
-    "Maxima Pools serves 49 cities and counties across Central Ohio. Find fiberglass pool installation services near you — Columbus, Dublin, Powell, Westerville, and more.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/areas-we-serve/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Areas We Serve | Maxima Pools",
-    description:
-      "Premium fiberglass pool installation across Central Ohio. Browse all 49 service areas.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
@@ -49,7 +48,7 @@ export default function AreasWeServePage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
-          src="/images/gallery/featured-02.jpg"
+          src={content.hero.image}
           alt="Maxima Pools service areas"
           fill
           priority
@@ -71,27 +70,26 @@ export default function AreasWeServePage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <MapPin size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Service Areas
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Areas We </span>
-              <span className="shimmer-text">Serve</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-8">
-              Maxima Pools proudly serves {locations.length} cities and counties
-              across Central Ohio with premium San Juan fiberglass pool installations.
+              {content.hero.subtitleBeforeCount}{locations.length}{content.hero.subtitleAfterCount}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Sparkles size={18} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
             </div>
           </div>
@@ -106,7 +104,7 @@ export default function AreasWeServePage() {
           <ScrollReveal>
             <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-lg mb-16">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Maxima+Pools,Delaware,OH&zoom=9"
+                src={content.mapEmbedUrl}
                 width="100%"
                 className="h-[300px] sm:h-[450px]"
                 style={{ border: 0 }}
@@ -121,7 +119,7 @@ export default function AreasWeServePage() {
           {/* Cities */}
           <ScrollReveal>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Cities & Towns
+              {content.citiesHeading}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-14">
               {cities.map((loc) => {
@@ -162,7 +160,7 @@ export default function AreasWeServePage() {
           {/* Counties */}
           <ScrollReveal>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-              Counties
+              {content.countiesHeading}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
               {counties.map((loc) => {
@@ -210,33 +208,32 @@ export default function AreasWeServePage() {
           <ScrollReveal>
             <div className="text-center">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Don&apos;t See Your Area?
+                {content.finalCta.heading}
               </h2>
               <p className="text-gray-500 text-lg max-w-xl mx-auto mb-8">
-                We may still serve your neighborhood. Contact us to find out — we&apos;re
-                always expanding our reach across Central Ohio.
+                {content.finalCta.text}
               </p>
               <div className="flex flex-wrap justify-center gap-3">
                 <Link
-                  href="/contact"
+                  href={content.finalCta.estimateHref}
                   className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                 >
-                  Get a Free Estimate
+                  {content.finalCta.estimateLabel}
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
-                  href="/pool-simulator"
+                  href={content.finalCta.simulatorHref}
                   className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-100 rounded-full text-gray-700 font-semibold hover:bg-gray-200 transition-all"
                 >
                   <Sparkles size={18} className="text-accent" />
-                  Pool Simulator
+                  {content.finalCta.simulatorLabel}
                 </Link>
                 <a
-                  href="tel:+16143845081"
+                  href={content.finalCta.phoneHref}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gray-100 rounded-full text-gray-700 font-semibold hover:bg-gray-200 transition-all"
                 >
                   <Phone size={18} />
-                  (614) 384-5081
+                  {content.finalCta.phoneDisplay}
                 </a>
               </div>
             </div>

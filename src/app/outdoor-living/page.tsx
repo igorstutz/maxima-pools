@@ -14,88 +14,38 @@ import {
   CheckCircle2,
   Sparkles,
   Sun,
-  Users,
   Award,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
+import content from "@/content/pages/outdoor-living.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/outdoor-living/" },
-  title: "Outdoor Living | Maxima Pools - Columbus, OH",
-  description:
-    "Transform your backyard into an outdoor oasis. Custom kitchens, fire features, shade structures, lighting, and entertainment — designed and built in-house by Maxima Pools.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/outdoor-living/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Outdoor Living | Maxima Pools",
-    description:
-      "Beautifully designed outdoor living spaces crafted to enhance comfort, entertainment, and relaxation. Serving Columbus, OH.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
 
-const stats = [
-  { value: "100%", label: "Custom Designed", icon: Sparkles },
-  { value: "In-House", label: "Design & Build", icon: Wrench },
-  { value: "All-Season", label: "Engineered to Last", icon: Sun },
-  { value: "5-Star", label: "Customer Rated", icon: Award },
-];
-
-const services = [
-  {
-    icon: UtensilsCrossed,
-    title: "Custom Outdoor Kitchens",
-    description:
-      "Built-in grills, pizza ovens, bars, and durable countertops designed for performance and style. Year-round entertaining with prep areas and weatherproof cabinetry.",
-    image: "/images/outdoor-living/outdoor-kitchens.png",
-  },
-  {
-    icon: Flame,
-    title: "Fire Features",
-    description:
-      "Fire pits, fire bowls, and custom fireplaces that create a warm, inviting atmosphere. Gas-powered options with dancing flames that reflect beautifully off the water.",
-    image: "/images/outdoor-living/grill.jpg",
-  },
-  {
-    icon: Tent,
-    title: "Shade Structures",
-    description:
-      "Pergolas, gazebos, pavilions, and custom shelters engineered to blend with your home architecture while providing shade and structure for outdoor gatherings.",
-    image: "/images/outdoor-living/shade-structures.png",
-  },
-  {
-    icon: Lightbulb,
-    title: "Outdoor Lighting",
-    description:
-      "Professional landscape and architectural lighting that extends your enjoyment after sunset. Path lighting, accent lighting, and ambient LED solutions for safety and beauty.",
-    image: "/images/outdoor-living/lighting-2.jpg",
-  },
-  {
-    icon: Tv,
-    title: "Entertainment Add-Ons",
-    description:
-      "Outdoor TVs, sound systems, and smart technology that bring indoor comfort outside. Weatherproof solutions built for year-round use.",
-    image: "/images/outdoor-living/general.jpg",
-  },
-  {
-    icon: Wrench,
-    title: "Functional Upgrades",
-    description:
-      "Sinks, storage, trash centers, and weatherproof cabinetry. Every detail is considered so your outdoor space is as practical as it is beautiful.",
-    image: "/images/outdoor-living/kitchen-2.jpg",
-  },
-];
-
-const whyMaxima = [
-  "In-house designers and installers — no outsourcing",
-  "Seamless integration with your pool design",
-  "Durable concrete and hardscape construction",
-  "Custom-tailored to your lifestyle and architecture",
-  "One team, one timeline, one flawless result",
-  "Serving Columbus, OH and surrounding areas",
-];
+// Lucide icons referenced by name from the editable content file.
+const iconMap = {
+  Sparkles,
+  Wrench,
+  Sun,
+  Award,
+  UtensilsCrossed,
+  Flame,
+  Tent,
+  Lightbulb,
+  Tv,
+} as const;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -122,12 +72,7 @@ export default function OutdoorLivingPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20 min-h-[520px] flex items-end">
         <HeroImageCycle
-          images={[
-            "/images/outdoor-living/kitchen.jpg",
-            "/images/outdoor-living/lighting.jpg",
-            "/images/outdoor-living/shelter.jpg",
-            "/images/outdoor-living/general.jpg",
-          ]}
+          images={content.hero.images}
           alt="Custom outdoor living spaces by Maxima Pools"
           interval={6000}
         />
@@ -148,42 +93,40 @@ export default function OutdoorLivingPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <Sun size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Outdoor Living
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Transform Your Backyard Into an </span>
-              <span className="shimmer-text">Outdoor Oasis</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Beautifully designed outdoor living spaces crafted to enhance
-              comfort, entertainment, and relaxation — seamlessly integrated
-              with your pool and home.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/contact"
+                href={content.hero.startHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
               >
-                Start Your Project
+                {content.hero.startLabel}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={content.hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
               >
                 <Phone size={16} />
-                (614) 384-5081
+                {content.hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -197,22 +140,25 @@ export default function OutdoorLivingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {stats.map((s) => (
-                <div
-                  key={s.label}
-                  className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                    <s.icon size={20} className="text-accent" />
+              {content.stats.map((s) => {
+                const Icon = iconMap[s.icon as keyof typeof iconMap];
+                return (
+                  <div
+                    key={s.label}
+                    className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
+                  >
+                    <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
+                      {Icon && <Icon size={20} className="text-accent" />}
+                    </div>
+                    <div>
+                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
+                      <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
+                        {s.label}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                    <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
-                      {s.label}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </ScrollReveal>
         </div>
@@ -229,29 +175,24 @@ export default function OutdoorLivingPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Our Approach
+                    {content.vision.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  Your Vision,{" "}
+                  {content.vision.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Perfectly Designed
+                    {content.vision.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  At Maxima Pools, we create outdoor spaces that blend seamlessly
-                  with your pool design, lifestyle, and home architecture. Our
-                  in-house designers and installers work as one team to deliver
-                  a cohesive, flawless result.
+                  {content.vision.paragraph1}
                 </p>
                 <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  From the first sketch to the final stone, every detail is
-                  custom-tailored to your vision — built with the same precision
-                  and quality that defines our pool installations.
+                  {content.vision.paragraph2}
                 </p>
 
                 <ul className="space-y-2.5">
-                  {whyMaxima.map((item) => (
+                  {content.vision.points.map((item) => (
                     <li key={item} className="flex items-start gap-2.5">
                       <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
                       <span className="text-sm text-gray-700 font-medium">{item}</span>
@@ -266,7 +207,7 @@ export default function OutdoorLivingPage() {
                 <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                   <Image
-                    src="/images/outdoor-living/kitchen.jpg"
+                    src={content.vision.image}
                     alt="Custom outdoor living space by Maxima Pools"
                     width={800}
                     height={600}
@@ -290,25 +231,25 @@ export default function OutdoorLivingPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Our Solutions
+                  {content.servicesSection.badge}
                 </span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                Outdoor Living{" "}
+                {content.servicesSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Solutions
+                  {content.servicesSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-gray-600 text-lg leading-relaxed">
-                Everything you need to create the ultimate outdoor experience —
-                designed, built, and integrated by one team.
+                {content.servicesSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="space-y-5">
-            {services.map((service, i) => {
+            {content.services.map((service, i) => {
               const isEven = i % 2 === 0;
+              const Icon = iconMap[service.icon as keyof typeof iconMap];
               return (
                 <ScrollReveal key={service.title}>
                   <div className="group grid lg:grid-cols-2 gap-5 bg-white rounded-2xl sm:rounded-3xl border border-gray-100 overflow-hidden hover:shadow-xl hover:border-accent/20 transition-all duration-500">
@@ -327,7 +268,7 @@ export default function OutdoorLivingPage() {
                     {/* Content */}
                     <div className={`p-7 sm:p-9 flex flex-col justify-center ${isEven ? "" : "lg:order-1"}`}>
                       <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                        <service.icon size={24} className="text-accent" />
+                        {Icon && <Icon size={24} className="text-accent" />}
                       </div>
                       <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
                         {service.title}
@@ -357,7 +298,7 @@ export default function OutdoorLivingPage() {
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <div className="rounded-2xl overflow-hidden col-span-2 border border-white/10">
                   <Image
-                    src="/images/outdoor-living/outdoor-kitchens.png"
+                    src={content.kitchensFeature.imageMain}
                     alt="Custom outdoor kitchen with grill and countertops"
                     width={800}
                     height={500}
@@ -367,7 +308,7 @@ export default function OutdoorLivingPage() {
                 </div>
                 <div className="rounded-xl overflow-hidden border border-white/10">
                   <Image
-                    src="/images/outdoor-living/grill.jpg"
+                    src={content.kitchensFeature.imageGrill}
                     alt="Outdoor grill setup"
                     width={400}
                     height={300}
@@ -377,7 +318,7 @@ export default function OutdoorLivingPage() {
                 </div>
                 <div className="rounded-xl overflow-hidden border border-white/10">
                   <Image
-                    src="/images/outdoor-living/kitchen-2.jpg"
+                    src={content.kitchensFeature.imageDetail}
                     alt="Outdoor kitchen detail"
                     width={400}
                     height={300}
@@ -393,29 +334,19 @@ export default function OutdoorLivingPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                   <UtensilsCrossed size={14} className="text-accent" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Featured
+                    {content.kitchensFeature.badge}
                   </span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-5">
-                  Culinary Experiences{" "}
-                  <span className="shimmer-text">Under the Open Sky</span>
+                  {content.kitchensFeature.headingLead}{" "}
+                  <span className="shimmer-text">{content.kitchensFeature.headingHighlight}</span>
                 </h2>
                 <p className="text-white text-lg leading-relaxed mb-8">
-                  Our custom outdoor kitchens are designed for performance and
-                  style. From built-in grills and pizza ovens to full bars with
-                  durable concrete countertops — everything is engineered for
-                  year-round entertaining.
+                  {content.kitchensFeature.paragraph}
                 </p>
 
                 <ul className="space-y-3">
-                  {[
-                    "Built-in grills & pizza ovens",
-                    "Durable concrete countertops",
-                    "Weatherproof cabinetry & storage",
-                    "Integrated sinks & prep areas",
-                    "Custom bar & seating options",
-                    "Seamless pool-to-kitchen flow",
-                  ].map((item) => (
+                  {content.kitchensFeature.points.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-white">
                       <CheckCircle2 size={16} className="text-accent shrink-0 mt-0.5" />
                       <span className="text-sm leading-relaxed">{item}</span>
@@ -434,65 +365,37 @@ export default function OutdoorLivingPage() {
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-5">
-            {/* Lighting */}
-            <ScrollReveal delay={1}>
-              <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden h-full min-h-[400px]">
-                <Image
-                  src="/images/outdoor-living/lighting-2.jpg"
-                  alt="Professional outdoor lighting"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/90 via-[#0c4a6e]/40 to-transparent" />
-                <div className="relative h-full flex flex-col justify-end p-7 sm:p-9">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-11 h-11 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/25 flex items-center justify-center">
-                      <Lightbulb size={22} className="text-accent" />
+            {content.lightingShade.map((card, i) => {
+              const Icon = iconMap[card.icon as keyof typeof iconMap];
+              return (
+                <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2)}>
+                  <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden h-full min-h-[400px]">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/90 via-[#0c4a6e]/40 to-transparent" />
+                    <div className="relative h-full flex flex-col justify-end p-7 sm:p-9">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-11 h-11 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/25 flex items-center justify-center">
+                          {Icon && <Icon size={22} className="text-accent" />}
+                        </div>
+                        <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
+                        {card.title}
+                      </h3>
+                      <p className="text-white leading-relaxed max-w-lg">
+                        {card.description}
+                      </p>
                     </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                    Lighting That Elevates Every Moment
-                  </h3>
-                  <p className="text-white leading-relaxed max-w-lg">
-                    Professional landscape and architectural lighting extends
-                    your enjoyment after sunset — adding beauty, ambiance, and
-                    safety to every corner of your outdoor space.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-
-            {/* Shade Structures */}
-            <ScrollReveal delay={2}>
-              <div className="group relative rounded-2xl sm:rounded-3xl overflow-hidden h-full min-h-[400px]">
-                <Image
-                  src="/images/outdoor-living/shade-structures.png"
-                  alt="Custom shade structures and pergolas"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c4a6e]/90 via-[#0c4a6e]/40 to-transparent" />
-                <div className="relative h-full flex flex-col justify-end p-7 sm:p-9">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="w-11 h-11 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/25 flex items-center justify-center">
-                      <Tent size={22} className="text-accent" />
-                    </div>
-                    <div className="h-px flex-1 bg-gradient-to-r from-accent/30 to-transparent" />
-                  </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
-                    Comfort, Style, and Protection
-                  </h3>
-                  <p className="text-white leading-relaxed max-w-lg">
-                    Custom pergolas, gazebos, and pavilions engineered to blend
-                    with your home while providing shade and structure for
-                    outdoor gatherings all year long.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -505,7 +408,7 @@ export default function OutdoorLivingPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[380px] flex items-center">
               <Image
-                src="/images/outdoor-living/shelter.jpg"
+                src={content.finalCta.image}
                 alt=""
                 fill
                 className="object-cover"
@@ -517,34 +420,33 @@ export default function OutdoorLivingPage() {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Ready to Elevate Your{" "}
-                    <span className="shimmer-text">Outdoor Living?</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Tell us your vision and we&apos;ll bring it to life. One team,
-                    one timeline, one stunning outdoor space.
+                    {content.finalCta.text}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.consultationHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Schedule Your Consultation
+                      {content.finalCta.consultationLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

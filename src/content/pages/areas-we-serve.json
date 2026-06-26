@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "Areas We Serve | Maxima Pools - Columbus, OH",
+    "description": "Maxima Pools serves 49 cities and counties across Central Ohio. Find fiberglass pool installation services near you — Columbus, Dublin, Powell, Westerville, and more.",
+    "ogTitle": "Areas We Serve | Maxima Pools",
+    "ogDescription": "Premium fiberglass pool installation across Central Ohio. Browse all 49 service areas."
+  },
+  "hero": {
+    "image": "/images/gallery/featured-02.jpg",
+    "badge": "Service Areas",
+    "headingLead": "Areas We",
+    "headingHighlight": "Serve",
+    "subtitleBeforeCount": "Maxima Pools proudly serves ",
+    "subtitleAfterCount": " cities and counties across Central Ohio with premium San Juan fiberglass pool installations.",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator"
+  },
+  "mapEmbedUrl": "https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Maxima+Pools,Delaware,OH&zoom=9",
+  "citiesHeading": "Cities & Towns",
+  "countiesHeading": "Counties",
+  "finalCta": {
+    "heading": "Don't See Your Area?",
+    "text": "We may still serve your neighborhood. Contact us to find out — we're always expanding our reach across Central Ohio.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

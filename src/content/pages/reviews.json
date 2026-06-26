@@ -1,0 +1,116 @@
+{
+  "seo": {
+    "title": "Customer Reviews | Maxima Pools - Columbus, OH",
+    "description": "Read what Columbus-area homeowners say about Maxima Pools. 5-star Google reviews from real fiberglass pool installation customers.",
+    "ogTitle": "Customer Reviews | Maxima Pools",
+    "ogDescription": "See why homeowners across Central Ohio trust Maxima Pools for their fiberglass pool installations."
+  },
+  "hero": {
+    "image": "/images/gallery/sully-01.jpg",
+    "badge": "Customer Reviews",
+    "headingLead": "What Our Clients",
+    "headingHighlight": "Say",
+    "subtitle": "Real reviews from real homeowners across Central Ohio. See why families trust Maxima Pools with their backyard transformations.",
+    "googleProfileLabel": "See us on Google",
+    "googleProfileHref": "https://www.google.com/maps/place/Maxima+Pools/@40.3377074,-82.9660251,17z/",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator"
+  },
+  "summary": {
+    "rating": "5.0",
+    "reviewsLabel": "Reviews",
+    "onGoogle": "on Google",
+    "writeReviewLabel": "Write a Review",
+    "writeReviewHref": "https://search.google.com/local/writereview?placeid=ChIJ-SgA4rr5OIgR52vyZL5hHmY"
+  },
+  "bottomCta": {
+    "text": "Had a great experience with Maxima Pools?",
+    "label": "Leave Us a Review on Google"
+  },
+  "reviews": [
+    {
+      "name": "Sarah M.",
+      "location": "Columbus, OH",
+      "text": "Maxima Pools transformed our backyard into an absolute paradise. The installation was seamless and the quality of the fiberglass pool is outstanding. The crew was professional from day one, always on time, and kept our yard as clean as possible during construction. Couldn't be happier with the results!",
+      "rating": 5,
+      "date": "2 months ago"
+    },
+    {
+      "name": "James & Linda T.",
+      "location": "Delaware, OH",
+      "text": "From start to finish, the Maxima team was professional, communicative, and delivered exactly what they promised. Our San Juan pool is the best investment we've made in our home. They helped us choose the right model for our yard size and the whole process took less time than we expected.",
+      "rating": 5,
+      "date": "3 months ago"
+    },
+    {
+      "name": "Michael R.",
+      "location": "Franklin County",
+      "text": "We compared several pool installers and Maxima stood out for their expertise and transparency. The concrete patio work combined with the pool installation was flawless. They walked us through every step and there were zero surprises on the final bill.",
+      "rating": 5,
+      "date": "1 month ago"
+    },
+    {
+      "name": "David K.",
+      "location": "Union County",
+      "text": "Excellent service from beginning to end. The team was knowledgeable about every San Juan model and helped us pick the perfect pool for our yard. The installation crew was respectful of our property and the finished product exceeded our expectations. Highly recommend!",
+      "rating": 5,
+      "date": "2 weeks ago"
+    },
+    {
+      "name": "Amanda P.",
+      "location": "Westerville, OH",
+      "text": "We were nervous about such a big project but Maxima made it easy. They handled everything — the pool, the patio, even coordinated with our electrician. Our kids haven't left the backyard since it was finished. Best summer ever!",
+      "rating": 5,
+      "date": "3 weeks ago"
+    },
+    {
+      "name": "Robert & Karen W.",
+      "location": "Powell, OH",
+      "text": "The quality of the San Juan fiberglass shell is incredible — smooth, beautiful color, and the gelcoat finish is perfect. Maxima's team installed it with precision. We also added an auto cover and they handled that seamlessly too.",
+      "rating": 5,
+      "date": "1 month ago"
+    },
+    {
+      "name": "Jennifer L.",
+      "location": "Dublin, OH",
+      "text": "I did months of research before choosing Maxima and I'm so glad I did. Their pricing was transparent, the timeline was accurate, and the finished pool looks even better than the renderings. The outdoor kitchen they built alongside is the cherry on top.",
+      "rating": 5,
+      "date": "2 months ago"
+    },
+    {
+      "name": "Chris B.",
+      "location": "Hilliard, OH",
+      "text": "Maxima Pools delivered a first-class experience. From the initial consultation to the final walkthrough, they treated our project like it was the most important one on their schedule. The pool is gorgeous and the patio work is top-notch.",
+      "rating": 5,
+      "date": "5 weeks ago"
+    },
+    {
+      "name": "Thomas G.",
+      "location": "Gahanna, OH",
+      "text": "We went with the Clearwater Beach model and it looks absolutely stunning in our backyard. The Maxima crew was incredibly efficient — excavation to swimming in under two weeks. Can't say enough good things about this company.",
+      "rating": 5,
+      "date": "3 months ago"
+    },
+    {
+      "name": "Lisa & Mark D.",
+      "location": "New Albany, OH",
+      "text": "After getting quotes from four different companies, Maxima was the clear choice. Not the cheapest, but by far the most professional and knowledgeable. Our Venetian pool with the Sully Blue finish gets compliments from every neighbor who sees it.",
+      "rating": 5,
+      "date": "6 weeks ago"
+    },
+    {
+      "name": "Steve H.",
+      "location": "Sunbury, OH",
+      "text": "Great experience from start to finish. The team was always available to answer questions and the quality of workmanship is evident in every detail. Our backyard is now the go-to spot for family gatherings.",
+      "rating": 5,
+      "date": "2 months ago"
+    },
+    {
+      "name": "Nicole F.",
+      "location": "Lewis Center, OH",
+      "text": "Maxima Pools made our dream backyard a reality. The pool is beautiful, the hardscaping around it is perfect, and the whole project was completed on schedule. Their attention to detail sets them apart from other contractors we've worked with.",
+      "rating": 5,
+      "date": "4 weeks ago"
+    }
+  ]
+}

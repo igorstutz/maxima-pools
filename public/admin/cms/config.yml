@@ -433,3 +433,562 @@ collections:
               - { label: "Review text", name: text, widget: text }
               - { label: "Rating (1–5)", name: rating, widget: number, default: 5, min: 1, max: 5 }
               - { label: "Date label (e.g. 2 months ago)", name: date, widget: string }
+
+      - name: why-maxima
+        label: "Why Maxima Page"
+        file: "src/content/pages/why-maxima.json"
+        format: json
+        preview_path: "why-maxima/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal page starts with / (e.g. /contact). External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Three Pillars section"
+            name: pillarsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+          - label: "Pillars (3 cards)"
+            name: pillars
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Eye", "ShieldCheck", "Zap"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "In-House Team section"
+            name: team
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Floating label — title", name: floatingTitle, widget: string }
+              - { label: "Floating label — subtitle", name: floatingSubtitle, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Checklist points"
+                name: points
+                widget: list
+                field: { label: "Point", name: point, widget: string }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "External starts with https:// (e.g. https://www.maximaconcrete.com/)" }
+          - label: "San Juan Partnership section"
+            name: sanJuan
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal page starts with / (e.g. /pools). External starts with https://" }
+              - { label: "Logo image", name: logo, widget: image }
+              - { label: "Logo link", name: logoHref, widget: string, hint: "External starts with https:// (e.g. https://sanjuanpools.com/)" }
+              - label: "Stats (4)"
+                name: stats
+                widget: list
+                summary: "{{fields.value}} — {{fields.label}}"
+                fields:
+                  - { label: "Value", name: value, widget: string }
+                  - { label: "Label", name: label, widget: string }
+          - label: "Services section"
+            name: servicesSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+          - label: "Service cards"
+            name: services
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Shovel", "HardHat", "Pipette", "Plug", "Fence", "Flame"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Link", name: href, widget: string, hint: "Internal page starts with / . External starts with https://" }
+              - { label: "Opens in a new tab (external)?", name: external, widget: boolean, default: false }
+          - label: "Enhancements section"
+            name: enhancementsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+          - { label: "Enhancement cards link (all 3)", name: enhancementsHref, widget: string, hint: "Internal page starts with / (e.g. /pool-accessories-and-extras)." }
+          - label: "Enhancement cards"
+            name: enhancements
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Thermometer", "ShieldHalf", "Sparkles"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Image", name: image, widget: image }
+          - label: "Investment section"
+            name: investment
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Feature links"
+                name: items
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string, hint: "Internal page starts with / . External starts with https://" }
+              - label: "Carousel slides"
+                name: slides
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Image", name: src, widget: image }
+                  - { label: "Image alt text", name: alt, widget: string }
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Subtitle", name: subtitle, widget: string }
+                  - { label: "Link", name: href, widget: string, hint: "Internal page starts with / (e.g. /pools/atlantic)." }
+          - label: "Service Area section"
+            name: serviceArea
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "'View all areas' link label", name: allAreasLabel, widget: string }
+              - { label: "'View all areas' link", name: allAreasHref, widget: string, hint: "Internal page starts with / (e.g. /areas-we-serve)." }
+              - { label: "Card title", name: cardTitle, widget: string }
+              - { label: "Card paragraph", name: cardParagraph, widget: text }
+              - { label: "Card badge", name: cardBadge, widget: string }
+          - label: "Final Call-to-Action section"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: text, widget: text }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: financing
+        label: "Financing Page"
+        file: "src/content/pages/financing.json"
+        format: json
+        preview_path: "financing/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Apply button label", name: applyLabel, widget: string }
+              - { label: "Apply button link", name: applyHref, widget: string, hint: "The Lyon Financial apply link (keep the ?lid= tracking code)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats (4)"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Calendar", "Users", "Banknote", "Clock"] }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Partner showcase"
+            name: partner
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Logo image", name: logo, widget: image }
+              - { label: "Paragraph — before bold", name: paragraphLead, widget: text }
+              - { label: "Paragraph — bold part", name: paragraphBold, widget: string }
+              - { label: "Paragraph — after bold", name: paragraphTail, widget: text }
+              - { label: "Badge text", name: badge, widget: string }
+          - label: "Benefits section heading"
+            name: benefitsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+          - label: "Benefits"
+            name: benefits
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["DollarSign", "ShieldCheck", "HeartHandshake", "Clock"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
+          - label: "How It Works heading"
+            name: stepsSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Apply button label", name: applyLabel, widget: string }
+              - { label: "Apply button link", name: applyHref, widget: string, hint: "The Lyon Financial apply link (keep the ?lid= tracking code)." }
+          - label: "Steps"
+            name: steps
+            widget: list
+            summary: "{{fields.num}} — {{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["FileText", "Search", "CheckCircle2", "Hammer", "PartyPopper"] }
+              - { label: "Number", name: num, widget: string }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: text, widget: text }
+          - label: "FAQ heading"
+            name: faqSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "FAQs"
+            name: faqs
+            widget: list
+            summary: "{{fields.q}}"
+            fields:
+              - { label: "Question", name: q, widget: string }
+              - { label: "Answer", name: a, widget: text }
+          - label: "Final Call-to-Action section"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Logo image", name: logo, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: text, widget: text }
+              - { label: "Apply button label", name: applyLabel, widget: string }
+              - { label: "Apply button link", name: applyHref, widget: string, hint: "The Lyon Financial apply link (keep the ?lid= tracking code)." }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+
+      - name: our-process
+        label: "Our Process Page"
+        file: "src/content/pages/our-process.json"
+        format: json
+        preview_path: "our-process/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Step by Step section"
+            name: stepByStep
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - { label: "Placeholder title", name: placeholderTitle, widget: string }
+              - { label: "Placeholder text", name: placeholderText, widget: text }
+              - { label: "Placeholder button label", name: placeholderCtaLabel, widget: string }
+              - { label: "Placeholder button link", name: placeholderCtaHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+
+      - name: outdoor-living
+        label: "Outdoor Living Page"
+        file: "src/content/pages/outdoor-living.json"
+        format: json
+        preview_path: "outdoor-living/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Rotating background images"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Start button label", name: startLabel, widget: string }
+              - { label: "Start button link", name: startHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Sparkles", "Wrench", "Sun", "Award"] }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Your Vision section"
+            name: vision
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Checklist points"
+                name: points
+                widget: list
+                field: { label: "Point", name: point, widget: string }
+              - { label: "Image", name: image, widget: image }
+          - label: "Services heading"
+            name: servicesSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+          - label: "Service cards"
+            name: services
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["UtensilsCrossed", "Flame", "Tent", "Lightbulb", "Tv", "Wrench"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Image", name: image, widget: image }
+          - label: "Outdoor Kitchens feature"
+            name: kitchensFeature
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Main image", name: imageMain, widget: image }
+              - { label: "Grill image", name: imageGrill, widget: image }
+              - { label: "Detail image", name: imageDetail, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Checklist points"
+                name: points
+                widget: list
+                field: { label: "Point", name: point, widget: string }
+          - label: "Lighting & Shade cards"
+            name: lightingShade
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Lightbulb", "Tent"] }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Final Call-to-Action section"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: text, widget: text }
+              - { label: "Consultation button label", name: consultationLabel, widget: string }
+              - { label: "Consultation button link", name: consultationHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: areas-we-serve
+        label: "Areas We Serve Page"
+        file: "src/content/pages/areas-we-serve.json"
+        format: json
+        preview_path: "areas-we-serve/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle — text before the area count", name: subtitleBeforeCount, widget: string, hint: "The number of service areas is inserted automatically between these two fields." }
+              - { label: "Subtitle — text after the area count", name: subtitleAfterCount, widget: string }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - { label: "Map embed URL", name: mapEmbedUrl, widget: string, hint: "Google Maps embed URL." }
+          - { label: "'Cities & Towns' heading", name: citiesHeading, widget: string }
+          - { label: "'Counties' heading", name: countiesHeading, widget: string }
+          - label: "Final Call-to-Action section"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Paragraph", name: text, widget: text }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: reviews
+        label: "Reviews Page"
+        file: "src/content/pages/reviews.json"
+        format: json
+        preview_path: "reviews/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Google profile button label", name: googleProfileLabel, widget: string }
+              - { label: "Google profile link", name: googleProfileHref, widget: string, hint: "External starts with https:// (your Google Maps profile)." }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Summary bar"
+            name: summary
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Rating (e.g. 5.0)", name: rating, widget: string }
+              - { label: "'Reviews' label", name: reviewsLabel, widget: string }
+              - { label: "'on Google' label", name: onGoogle, widget: string }
+              - { label: "'Write a review' button label", name: writeReviewLabel, widget: string }
+              - { label: "'Write a review' link", name: writeReviewHref, widget: string, hint: "Google write-a-review link (also used by review cards)." }
+          - label: "Bottom Call-to-Action"
+            name: bottomCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Text", name: text, widget: string }
+              - { label: "Button label", name: label, widget: string }
+          - label: "Reviews"
+            name: reviews
+            widget: list
+            summary: "{{fields.name}} — {{fields.location}}"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Location", name: location, widget: string }
+              - { label: "Review text", name: text, widget: text }
+              - { label: "Rating (1–5)", name: rating, widget: number, default: 5, min: 1, max: 5 }
+              - { label: "Date label (e.g. 2 months ago)", name: date, widget: string }

@@ -25,132 +25,45 @@ import {
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { InvestmentCarousel } from "@/components/InvestmentCarousel";
+import content from "@/content/pages/why-maxima.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/why-maxima/" },
-  title: "Why Maxima Pools | Columbus, OH Pool Contractor",
-  description:
-    "Discover why Maxima Pools is Columbus, Ohio's trusted pool contractor. In-house expertise, San Juan Pools partnership, transparency, and full-service installation.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/why-maxima/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Why Maxima Pools | The Maxima Advantage",
-    description:
-      "Buy your inground swimming pool from the people who actually do the work. In-house team, San Juan Pools partnership, and full-service installation in Columbus, OH.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
     locale: "en_US",
     siteName: "Maxima Pools",
   },
 };
 
-const pillars = [
-  {
-    icon: Eye,
-    title: "Transparency",
-    description:
-      "Buying a pool is a big decision and we want you to make it being fully informed. We will educate you about the products and processes so you can make the best choice for your family and your home.",
-    gradient: "from-cyan-500 to-blue-500",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Accountability",
-    description:
-      "We stay accountable because we perform the vast majority of the work in-house, shepherding your project from start to a successful conclusion. No finger-pointing between subcontractors.",
-    gradient: "from-blue-500 to-indigo-500",
-  },
-  {
-    icon: Zap,
-    title: "Efficiency",
-    description:
-      "We use in-house resources for the vast majority of your project, completing it efficiently with swift communication. One team, one timeline, one point of contact.",
-    gradient: "from-indigo-500 to-violet-500",
-  },
-];
+// Lucide icons referenced by name from the editable content file.
+const iconMap = {
+  Eye,
+  ShieldCheck,
+  Zap,
+  Shovel,
+  HardHat,
+  Pipette,
+  Plug,
+  Fence,
+  Flame,
+  Thermometer,
+  ShieldHalf,
+  Sparkles,
+} as const;
 
-const services: {
-  icon: typeof Shovel;
-  title: string;
-  description: string;
-  image: string;
-  href?: string;
-  external?: boolean;
-}[] = [
-  {
-    icon: Shovel,
-    title: "Expert Excavation",
-    description:
-      "Proper foundation starts with expert excavation. Our experienced crew ensures precise grading and site preparation for a flawless installation.",
-    image: "/images/process/final-prep.webp",
-    href: "/our-process",
-  },
-  {
-    icon: HardHat,
-    title: "Pool Setting & Installation",
-    description:
-      "Seamless pool setting with meticulous attention to leveling, alignment, and structural integrity for a perfect fit every time.",
-    image: "/images/process/completed.webp",
-    href: "/our-process",
-  },
-  {
-    icon: Pipette,
-    title: "Pool Plumbing",
-    description:
-      "Meticulous pool plumbing designed for optimal water flow, efficient filtration, and long-term reliability.",
-    image: "/images/accessories/pool-pump.jpg",
-    href: "/our-process",
-  },
-  {
-    icon: Plug,
-    title: "Electrical & Backfilling",
-    description:
-      "Complete electrical work for pumps, lighting, and automation systems, followed by precision backfilling for a solid, lasting installation.",
-    image: "/images/process/outfitting.webp",
-    href: "/our-process",
-  },
-  {
-    icon: Fence,
-    title: "Concrete & Paver Patios",
-    description:
-      "Custom-designed concrete and paver patios that complement your pool and define your outdoor living space with lasting beauty.",
-    image: "/images/outdoor/living-1.jpg",
-    href: "https://www.maximaconcrete.com",
-    external: true,
-  },
-  {
-    icon: Flame,
-    title: "Outdoor Living",
-    description:
-      "Complete your backyard retreat with fire pits, outdoor kitchens, pergolas, and shade structures designed and built by our team.",
-    image: "/images/outdoor/kitchen.jpg",
-    href: "https://www.maximaconcrete.com",
-    external: true,
-  },
+// Decorative per-pillar gradients (kept in code).
+const pillarGradients = [
+  "from-cyan-500 to-blue-500",
+  "from-blue-500 to-indigo-500",
+  "from-indigo-500 to-violet-500",
 ];
-
-const enhancements = [
-  {
-    icon: Thermometer,
-    title: "Heating Systems",
-    description:
-      "Extend your swim season year-round with efficient pool heating solutions. Enjoy your pool from early spring through late fall in Central Ohio.",
-    image: "/images/pools/atlantic.jpg",
-  },
-  {
-    icon: ShieldHalf,
-    title: "Automatic Covers",
-    description:
-      "Effortless pool maintenance and safety with automatic covers. Keep debris out, retain heat, and add peace of mind with the push of a button.",
-    image: "/images/pools/grand-manhattan.png",
-  },
-  {
-    icon: Sparkles,
-    title: "Fun Features",
-    description:
-      "Make your pool uniquely yours with slides, attached hot tubs, tanning ledges, bubblers, and more. Every detail tailored to your family.",
-    image: "/images/pools/oasis.jpg",
-  },
-];
-
 
 export default function WhyMaximaPage() {
   return (
@@ -176,7 +89,7 @@ export default function WhyMaximaPage() {
       {/* ================================================================ */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center overflow-hidden">
         <Image
-          src="/images/pools/clear-water-beach.png"
+          src={content.hero.image}
           alt="Stunning fiberglass pool installation by Maxima Pools"
           fill
           priority
@@ -191,41 +104,40 @@ export default function WhyMaximaPage() {
             <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6 hero-animate hero-animate-1">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                The Maxima Difference
+                {content.hero.badge}
               </span>
             </div>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight mb-6 hero-animate hero-animate-2">
-              The Maxima Pools{" "}
-              <span className="shimmer-text">Advantage</span>
+              {content.hero.headingLead}{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
             <p className="text-xl sm:text-2xl text-white leading-relaxed max-w-2xl mb-10 hero-animate hero-animate-3">
-              Buy your inground swimming pool from the people who actually do
-              the work.
+              {content.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap hero-animate hero-animate-4">
               <Link
-                href="/contact"
+                href={content.hero.estimateHref}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"
               >
-                Get Your Free Estimate
+                {content.hero.estimateLabel}
                 <ArrowRight
                   size={18}
                   className="group-hover:translate-x-1 transition-transform"
                 />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
               >
                 <Sparkles size={18} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={content.hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
               >
                 <Phone size={18} />
-                (614) 384-5081
+                {content.hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -247,43 +159,45 @@ export default function WhyMaximaPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Our Core Values
+                  {content.pillarsSection.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 tracking-tight">
-                Built on{" "}
+                {content.pillarsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Three Pillars
+                  {content.pillarsSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-                Everything we do at Maxima Pools is guided by three principles
-                that put you, the homeowner, first.
+                {content.pillarsSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {pillars.map((pillar, index) => (
-              <ScrollReveal
-                key={pillar.title}
-                delay={((index + 1) as 1 | 2 | 3)}
-              >
-                <div className="group rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full">
-                  <div
-                    className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${pillar.gradient} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
-                  >
-                    <pillar.icon size={26} className="text-white" />
+            {content.pillars.map((pillar, index) => {
+              const Icon = iconMap[pillar.icon as keyof typeof iconMap];
+              return (
+                <ScrollReveal
+                  key={pillar.title}
+                  delay={((index + 1) as 1 | 2 | 3)}
+                >
+                  <div className="group rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-9 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full">
+                    <div
+                      className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${pillarGradients[index % pillarGradients.length]} flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                    >
+                      {Icon && <Icon size={26} className="text-white" />}
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-gray-500 leading-relaxed">
+                      {pillar.description}
+                    </p>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-gray-500 leading-relaxed">
-                    {pillar.description}
-                  </p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -307,7 +221,7 @@ export default function WhyMaximaPage() {
                 <div className="absolute -inset-3 bg-primary/8 rounded-[2rem] blur-2xl" />
                 <div className="relative rounded-3xl overflow-hidden border border-gray-200 shadow-2xl">
                   <Image
-                    src="/images/why-maxima/team-headquarters.jpg"
+                    src={content.team.image}
                     alt="Maxima Concrete and Maxima Pools team in front of the Delaware, Ohio headquarters"
                     width={1600}
                     height={900}
@@ -318,10 +232,10 @@ export default function WhyMaximaPage() {
                   {/* Floating label */}
                   <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-xl border border-white/50 rounded-xl px-4 py-2.5 shadow-lg">
                     <p className="text-gray-900 font-semibold text-sm">
-                      The Maxima Team
+                      {content.team.floatingTitle}
                     </p>
                     <p className="text-gray-500 text-xs">
-                      In-house professionals, start to finish
+                      {content.team.floatingSubtitle}
                     </p>
                   </div>
                 </div>
@@ -334,37 +248,23 @@ export default function WhyMaximaPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Our Team
+                    {content.team.badge}
                   </span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-5">
-                  In-House Expertise,{" "}
+                  {content.team.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Start to Finish
+                    {content.team.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-lg text-gray-500 leading-relaxed mb-6">
-                  At Maxima Pools, we don&apos;t hand your project off to a
-                  chain of subcontractors. Our dedicated team of excavation,
-                  construction, and design professionals manages your project
-                  entirely in-house.
+                  {content.team.paragraph1}
                 </p>
                 <p className="text-gray-500 leading-relaxed mb-8">
-                  This means faster communication, consistent quality, and a
-                  single point of accountability from the first shovel in the
-                  ground to the final finishing touch. When you choose Maxima,
-                  you get the peace of mind that comes from working directly
-                  with the people building your pool.
+                  {content.team.paragraph2}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {[
-                    "Excavation Crew",
-                    "Construction Team",
-                    "Plumbing & Electrical",
-                    "Concrete & Patios",
-                    "Design Consultation",
-                    "Project Management",
-                  ].map((item) => (
+                  {content.team.points.map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
                       <div className="w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center shrink-0">
                         <CheckCircle2 size={12} className="text-accent" />
@@ -376,12 +276,12 @@ export default function WhyMaximaPage() {
                   ))}
                 </div>
                 <a
-                  href="https://www.maximaconcrete.com/"
+                  href={content.team.ctaHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 text-sm whitespace-nowrap"
                 >
-                  Visit Maxima Concrete
+                  {content.team.ctaLabel}
                   <ArrowUpRight
                     size={16}
                     className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
@@ -412,32 +312,24 @@ export default function WhyMaximaPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                   <Star size={14} className="text-accent" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Our Partnership
+                    {content.sanJuan.badge}
                   </span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5">
-                  Backed by{" "}
-                  <span className="shimmer-text">San Juan Pools</span>
+                  {content.sanJuan.headingLead}{" "}
+                  <span className="shimmer-text">{content.sanJuan.headingHighlight}</span>
                 </h2>
                 <p className="text-lg text-white leading-relaxed mb-6">
-                  Maxima Pools is proud to partner with San Juan Pools, the
-                  industry leader in fiberglass pool manufacturing since 1958.
-                  San Juan is known for their hand-laid, woven fiberglass
-                  construction — a process that produces the strongest,
-                  most durable pool shells on the market.
+                  {content.sanJuan.paragraph1}
                 </p>
                 <p className="text-white leading-relaxed mb-8">
-                  Unlike competitors who use sprayed fiberglass, every San Juan
-                  pool features multiple layers of hand-laid woven roving with
-                  marine-grade Vinyl Ester resin. This is the same standard
-                  used in boat building, ensuring your pool can handle
-                  decades of use without compromising structural integrity.
+                  {content.sanJuan.paragraph2}
                 </p>
                 <Link
-                  href="/pools"
+                  href={content.sanJuan.ctaHref}
                   className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 text-sm"
                 >
-                  Explore Our Pools
+                  {content.sanJuan.ctaLabel}
                   <ArrowRight
                     size={16}
                     className="group-hover:translate-x-1 transition-transform"
@@ -450,7 +342,7 @@ export default function WhyMaximaPage() {
             <ScrollReveal direction="right">
               <div className="flex flex-col items-center">
                 <a
-                  href="https://sanjuanpools.com/"
+                  href={content.sanJuan.logoHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Visit San Juan Pools website (opens in new tab)"
@@ -458,7 +350,7 @@ export default function WhyMaximaPage() {
                 >
                   <div className="absolute -inset-6 bg-accent/10 rounded-full blur-2xl group-hover:bg-accent/20 transition-colors" />
                   <Image
-                    src="/images/logo/sanjuan-logo.png"
+                    src={content.sanJuan.logo}
                     alt="San Juan Pools - Authorized Dealer"
                     width={220}
                     height={220}
@@ -466,12 +358,7 @@ export default function WhyMaximaPage() {
                   />
                 </a>
                 <div className="grid grid-cols-2 gap-4 w-full max-w-md">
-                  {[
-                    { value: "100%", label: "Hand-Laid Fiberglass" },
-                    { value: "5+", label: "Layers of Woven Roving" },
-                    { value: "1958", label: "Established Since" },
-                    { value: "100+", label: "Pool Models Available" },
-                  ].map((stat) => (
+                  {content.sanJuan.stats.map((stat) => (
                     <div
                       key={stat.label}
                       className="bg-white/[0.05] backdrop-blur-sm border border-white/10 rounded-2xl p-5 text-center hover:bg-white/[0.08] transition-colors"
@@ -505,24 +392,24 @@ export default function WhyMaximaPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  What We Do
+                  {content.servicesSection.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 tracking-tight">
-                Full-Service{" "}
+                {content.servicesSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Pool Installation
+                  {content.servicesSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-                From the first dig to the final detail, Maxima handles every
-                phase of your pool project with in-house expertise.
+                {content.servicesSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
-            {services.map((service, index) => {
+            {content.services.map((service, index) => {
+              const Icon = iconMap[service.icon as keyof typeof iconMap];
               const cardInner = (
                 <div className="group relative rounded-3xl overflow-hidden h-full min-h-[360px] sm:min-h-[400px]">
                   <Image
@@ -536,7 +423,7 @@ export default function WhyMaximaPage() {
 
                   <div className="relative h-full flex flex-col justify-end p-7 sm:p-8">
                     <div className="w-12 h-12 rounded-2xl bg-accent/20 backdrop-blur-sm border border-accent/20 flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
-                      <service.icon size={22} className="text-accent" />
+                      {Icon && <Icon size={22} className="text-accent" />}
                     </div>
                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">
                       {service.title}
@@ -597,59 +484,61 @@ export default function WhyMaximaPage() {
               <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                 <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  Beyond the Pool
+                  {content.enhancementsSection.badge}
                 </span>
               </div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-5 tracking-tight">
-                Enhance Your{" "}
+                {content.enhancementsSection.headingLead}{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  Experience
+                  {content.enhancementsSection.headingHighlight}
                 </span>
               </h2>
               <p className="text-lg text-gray-500 leading-relaxed max-w-2xl">
-                Take your pool to the next level with premium features and
-                accessories designed for comfort, convenience, and fun.
+                {content.enhancementsSection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid lg:grid-cols-3 gap-4 sm:gap-5">
-            {enhancements.map((item, index) => (
-              <ScrollReveal key={item.title} delay={((index + 1) as 1 | 2 | 3)}>
-                <Link
-                  href="/pool-accessories-and-extras"
-                  className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
-                >
-                  {/* Image */}
-                  <div className="relative aspect-[16/10] overflow-hidden">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-700"
-                      sizes="(max-width: 1024px) 100vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
-                  </div>
-                  {/* Content */}
-                  <div className="p-7 sm:p-8 -mt-8 relative">
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center mb-4 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform duration-500">
-                      <item.icon size={22} className="text-white" />
+            {content.enhancements.map((item, index) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
+              return (
+                <ScrollReveal key={item.title} delay={((index + 1) as 1 | 2 | 3)}>
+                  <Link
+                    href={content.enhancementsHref}
+                    className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-xl hover:border-gray-200 transition-all duration-500 h-full"
+                  >
+                    {/* Image */}
+                    <div className="relative aspect-[16/10] overflow-hidden">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 1024px) 100vw, 33vw"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-500 leading-relaxed mb-4">
-                      {item.description}
-                    </p>
-                    <span className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold">
-                      Learn more
-                      <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                    </span>
-                  </div>
-                </Link>
-              </ScrollReveal>
-            ))}
+                    {/* Content */}
+                    <div className="p-7 sm:p-8 -mt-8 relative">
+                      <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-primary to-primary-light flex items-center justify-center mb-4 shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform duration-500">
+                        {Icon && <Icon size={22} className="text-white" />}
+                      </div>
+                      <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-500 leading-relaxed mb-4">
+                        {item.description}
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-accent text-sm font-semibold">
+                        Learn more
+                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </Link>
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -672,35 +561,21 @@ export default function WhyMaximaPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/15 rounded-full px-5 py-2 mb-6">
                   <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Your Investment
+                    {content.investment.badge}
                   </span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5">
-                  More Than Just a Pool —{" "}
-                  <span className="shimmer-text">It&apos;s an Investment</span>
+                  {content.investment.headingLead}{" "}
+                  <span className="shimmer-text">{content.investment.headingHighlight}</span>
                 </h2>
                 <p className="text-lg text-white leading-relaxed mb-6">
-                  A Maxima pool doesn&apos;t just transform your backyard — it
-                  adds lasting value to your home. Fiberglass pools are
-                  recognized by real estate professionals as one of the best
-                  home improvements for return on investment.
+                  {content.investment.paragraph1}
                 </p>
                 <p className="text-white leading-relaxed mb-8">
-                  Customize your setup with hot tub combos, color-changing LED
-                  lighting, tanning ledges, and water features. Every element
-                  is designed to match your lifestyle while increasing
-                  your property&apos;s value and your family&apos;s enjoyment
-                  for years to come.
+                  {content.investment.paragraph2}
                 </p>
                 <div className="grid grid-cols-2 gap-3">
-                  {[
-                    { label: "Hot Tub Combos", href: "/pools?type=Pool+with+Spa" },
-                    { label: "LED Color Lighting", href: "/pool-accessories-and-extras" },
-                    { label: "Tanning Ledges", href: "/pools?type=Tanning+Ledge" },
-                    { label: "Water Features", href: "/pool-accessories-and-extras" },
-                    { label: "Automatic Covers", href: "/auto-cover-pool" },
-                    { label: "Custom Patios", href: "/outdoor-living" },
-                  ].map((item) => (
+                  {content.investment.items.map((item) => (
                     <Link
                       key={item.label}
                       href={item.href}
@@ -720,45 +595,7 @@ export default function WhyMaximaPage() {
 
             {/* Image carousel */}
             <ScrollReveal direction="right">
-              <InvestmentCarousel
-                slides={[
-                  {
-                    src: "/images/why-maxima/huntington-granite.jpg",
-                    alt: "Huntington Beach pool in Granite color finish",
-                    label: "Huntington Beach - Granite",
-                    subtitle: "Premium fiberglass finish",
-                    href: "/pools/huntington-beach",
-                  },
-                  {
-                    src: "/images/pools/grand-manhattan.png",
-                    alt: "Grand Manhattan rectangular pool",
-                    label: "Grand Manhattan - White",
-                    subtitle: "Premium fiberglass finish",
-                    href: "/pools/grand-manhattan",
-                  },
-                  {
-                    src: "/images/pools/atlantic.jpg",
-                    alt: "Atlantic pool",
-                    label: "Atlantic - Sully Blue",
-                    subtitle: "Premium fiberglass finish",
-                    href: "/pools/atlantic",
-                  },
-                  {
-                    src: "/images/pools/oasis.jpg",
-                    alt: "Oasis pool",
-                    label: "Oasis - Blue Lagoon",
-                    subtitle: "Premium fiberglass finish",
-                    href: "/pools/oasis",
-                  },
-                  {
-                    src: "/images/pools/niagara.png",
-                    alt: "Niagara pool",
-                    label: "Niagara - Granite",
-                    subtitle: "Premium fiberglass finish",
-                    href: "/pools/niagara",
-                  },
-                ]}
-              />
+              <InvestmentCarousel slides={content.investment.slides} />
             </ScrollReveal>
           </div>
         </div>
@@ -780,20 +617,17 @@ export default function WhyMaximaPage() {
                 <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
                   <MapPin size={14} className="text-accent" />
                   <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    Service Area
+                    {content.serviceArea.badge}
                   </span>
                 </div>
                 <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 tracking-tight mb-5">
-                  Serving{" "}
+                  {content.serviceArea.headingLead}{" "}
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    Central Ohio
+                    {content.serviceArea.headingHighlight}
                   </span>
                 </h2>
                 <p className="text-lg text-gray-500 leading-relaxed mb-8">
-                  Maxima Pools proudly serves Columbus, Ohio and surrounding
-                  communities. Our team is local, and we understand the
-                  unique soil conditions, climate considerations, and
-                  permitting requirements of Central Ohio.
+                  {content.serviceArea.paragraph}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-6">
                   {locations.map((loc) => (
@@ -810,10 +644,10 @@ export default function WhyMaximaPage() {
                   ))}
                 </div>
                 <Link
-                  href="/areas-we-serve"
+                  href={content.serviceArea.allAreasHref}
                   className="text-accent font-semibold text-sm hover:underline"
                 >
-                  View all service areas &rarr;
+                  {content.serviceArea.allAreasLabel} &rarr;
                 </Link>
               </div>
             </ScrollReveal>
@@ -827,16 +661,15 @@ export default function WhyMaximaPage() {
                     <MapPin size={36} className="text-accent" />
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
-                    Columbus, Ohio
+                    {content.serviceArea.cardTitle}
                   </h3>
                   <p className="text-white leading-relaxed max-w-sm mb-6">
-                    Based in Delaware, Ohio, we serve the greater Columbus
-                    metropolitan area and surrounding counties.
+                    {content.serviceArea.cardParagraph}
                   </p>
                   <div className="inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5">
                     <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                     <span className="text-white text-sm font-medium">
-                      Now scheduling for 2026
+                      {content.serviceArea.cardBadge}
                     </span>
                   </div>
                 </div>
@@ -856,7 +689,7 @@ export default function WhyMaximaPage() {
           <ScrollReveal>
             <div className="relative rounded-[2rem] sm:rounded-[2.5rem] overflow-hidden min-h-[480px] sm:min-h-[520px] flex items-center">
               <Image
-                src="/images/pools/grand-manhattan.png"
+                src={content.finalCta.image}
                 alt="Grand Manhattan fiberglass pool"
                 fill
                 className="object-cover"
@@ -868,38 +701,36 @@ export default function WhyMaximaPage() {
               <div className="relative w-full px-8 sm:px-12 lg:px-16 py-14 sm:py-16">
                 <div className="max-w-2xl">
                   <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-5">
-                    Ready to{" "}
-                    <span className="shimmer-text">Get Started?</span>
+                    {content.finalCta.headingLead}{" "}
+                    <span className="shimmer-text">{content.finalCta.headingHighlight}</span>
                   </h2>
                   <p className="text-lg sm:text-xl text-white leading-relaxed mb-10 max-w-lg">
-                    Your dream backyard is one conversation away. Reach out
-                    for a free estimate and let us show you the Maxima
-                    difference.
+                    {content.finalCta.text}
                   </p>
                   <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={content.finalCta.estimateHref}
                       className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_30px_rgba(6,182,212,0.4)] hover:shadow-[0_0_50px_rgba(6,182,212,0.6)] hover:scale-105 text-sm sm:text-base"
                     >
-                      Get Your Free Estimate
+                      {content.finalCta.estimateLabel}
                       <ArrowRight
                         size={18}
                         className="group-hover:translate-x-1 transition-transform"
                       />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={content.finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {content.finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={content.finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm sm:text-base"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {content.finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>

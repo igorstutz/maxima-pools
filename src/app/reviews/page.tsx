@@ -10,113 +10,22 @@ import {
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import content from "@/content/pages/reviews.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/reviews/" },
-  title: "Customer Reviews | Maxima Pools - Columbus, OH",
-  description:
-    "Read what Columbus-area homeowners say about Maxima Pools. 5-star Google reviews from real fiberglass pool installation customers.",
+  title: content.seo.title,
+  description: content.seo.description,
   openGraph: {
     url: "/reviews/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Customer Reviews | Maxima Pools",
-    description:
-      "See why homeowners across Central Ohio trust Maxima Pools for their fiberglass pool installations.",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
     type: "website",
   },
 };
 
-const GOOGLE_PROFILE =
-  "https://www.google.com/maps/place/Maxima+Pools/@40.3377074,-82.9660251,17z/";
-const GOOGLE_WRITE_REVIEW =
-  "https://search.google.com/local/writereview?placeid=ChIJ-SgA4rr5OIgR52vyZL5hHmY";
-
-const reviews = [
-  {
-    name: "Sarah M.",
-    location: "Columbus, OH",
-    text: "Maxima Pools transformed our backyard into an absolute paradise. The installation was seamless and the quality of the fiberglass pool is outstanding. The crew was professional from day one, always on time, and kept our yard as clean as possible during construction. Couldn't be happier with the results!",
-    rating: 5,
-    date: "2 months ago",
-  },
-  {
-    name: "James & Linda T.",
-    location: "Delaware, OH",
-    text: "From start to finish, the Maxima team was professional, communicative, and delivered exactly what they promised. Our San Juan pool is the best investment we've made in our home. They helped us choose the right model for our yard size and the whole process took less time than we expected.",
-    rating: 5,
-    date: "3 months ago",
-  },
-  {
-    name: "Michael R.",
-    location: "Franklin County",
-    text: "We compared several pool installers and Maxima stood out for their expertise and transparency. The concrete patio work combined with the pool installation was flawless. They walked us through every step and there were zero surprises on the final bill.",
-    rating: 5,
-    date: "1 month ago",
-  },
-  {
-    name: "David K.",
-    location: "Union County",
-    text: "Excellent service from beginning to end. The team was knowledgeable about every San Juan model and helped us pick the perfect pool for our yard. The installation crew was respectful of our property and the finished product exceeded our expectations. Highly recommend!",
-    rating: 5,
-    date: "2 weeks ago",
-  },
-  {
-    name: "Amanda P.",
-    location: "Westerville, OH",
-    text: "We were nervous about such a big project but Maxima made it easy. They handled everything — the pool, the patio, even coordinated with our electrician. Our kids haven't left the backyard since it was finished. Best summer ever!",
-    rating: 5,
-    date: "3 weeks ago",
-  },
-  {
-    name: "Robert & Karen W.",
-    location: "Powell, OH",
-    text: "The quality of the San Juan fiberglass shell is incredible — smooth, beautiful color, and the gelcoat finish is perfect. Maxima's team installed it with precision. We also added an auto cover and they handled that seamlessly too.",
-    rating: 5,
-    date: "1 month ago",
-  },
-  {
-    name: "Jennifer L.",
-    location: "Dublin, OH",
-    text: "I did months of research before choosing Maxima and I'm so glad I did. Their pricing was transparent, the timeline was accurate, and the finished pool looks even better than the renderings. The outdoor kitchen they built alongside is the cherry on top.",
-    rating: 5,
-    date: "2 months ago",
-  },
-  {
-    name: "Chris B.",
-    location: "Hilliard, OH",
-    text: "Maxima Pools delivered a first-class experience. From the initial consultation to the final walkthrough, they treated our project like it was the most important one on their schedule. The pool is gorgeous and the patio work is top-notch.",
-    rating: 5,
-    date: "5 weeks ago",
-  },
-  {
-    name: "Thomas G.",
-    location: "Gahanna, OH",
-    text: "We went with the Clearwater Beach model and it looks absolutely stunning in our backyard. The Maxima crew was incredibly efficient — excavation to swimming in under two weeks. Can't say enough good things about this company.",
-    rating: 5,
-    date: "3 months ago",
-  },
-  {
-    name: "Lisa & Mark D.",
-    location: "New Albany, OH",
-    text: "After getting quotes from four different companies, Maxima was the clear choice. Not the cheapest, but by far the most professional and knowledgeable. Our Venetian pool with the Sully Blue finish gets compliments from every neighbor who sees it.",
-    rating: 5,
-    date: "6 weeks ago",
-  },
-  {
-    name: "Steve H.",
-    location: "Sunbury, OH",
-    text: "Great experience from start to finish. The team was always available to answer questions and the quality of workmanship is evident in every detail. Our backyard is now the go-to spot for family gatherings.",
-    rating: 5,
-    date: "2 months ago",
-  },
-  {
-    name: "Nicole F.",
-    location: "Lewis Center, OH",
-    text: "Maxima Pools made our dream backyard a reality. The pool is beautiful, the hardscaping around it is perfect, and the whole project was completed on schedule. Their attention to detail sets them apart from other contractors we've worked with.",
-    rating: 5,
-    date: "4 weeks ago",
-  },
-];
+const reviews = content.reviews;
 
 function GoogleIcon({ className }: { className?: string }) {
   return (
@@ -190,7 +99,7 @@ export default function ReviewsPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
-          src="/images/gallery/sully-01.jpg"
+          src={content.hero.image}
           alt="Happy pool owners"
           fill
           priority
@@ -212,37 +121,36 @@ export default function ReviewsPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <MessageSquareQuote size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Customer Reviews
+                {content.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">What Our Clients </span>
-              <span className="shimmer-text">Say</span>
+              <span className="text-white">{content.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Real reviews from real homeowners across Central Ohio. See why
-              families trust Maxima Pools with their backyard transformations.
+              {content.hero.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <a
-                href={GOOGLE_PROFILE}
+                href={content.hero.googleProfileHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-6 py-3 hover:bg-white/15 transition-all"
               >
                 <GoogleIcon className="w-5 h-5" />
-                <span className="text-white font-semibold text-sm">See us on Google</span>
+                <span className="text-white font-semibold text-sm">{content.hero.googleProfileLabel}</span>
                 <ExternalLink size={14} className="text-white group-hover:text-white transition-colors" />
               </a>
               <Link
-                href="/pool-simulator"
+                href={content.hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full px-6 py-3 text-white font-semibold text-sm hover:bg-white/15 transition-all"
               >
                 <Sparkles size={16} className="text-accent" />
-                Pool Simulator
+                {content.hero.simulatorLabel}
               </Link>
             </div>
           </div>
@@ -259,7 +167,7 @@ export default function ReviewsPage() {
               <div className="flex items-center gap-4">
                 <GoogleIcon className="w-10 h-10" />
                 <div>
-                  <p className="text-3xl font-bold text-gray-900">5.0</p>
+                  <p className="text-3xl font-bold text-gray-900">{content.summary.rating}</p>
                   <div className="flex gap-0.5">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Star key={i} size={16} className="text-amber-400 fill-amber-400" />
@@ -269,17 +177,17 @@ export default function ReviewsPage() {
               </div>
               <div className="w-px h-12 bg-gray-200 hidden sm:block" />
               <div className="text-center sm:text-left">
-                <p className="text-lg font-bold text-gray-900">{reviews.length} Reviews</p>
-                <p className="text-sm text-gray-500">on Google</p>
+                <p className="text-lg font-bold text-gray-900">{reviews.length} {content.summary.reviewsLabel}</p>
+                <p className="text-sm text-gray-500">{content.summary.onGoogle}</p>
               </div>
               <div className="w-px h-12 bg-gray-200 hidden sm:block" />
               <a
-                href={GOOGLE_WRITE_REVIEW}
+                href={content.summary.writeReviewHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white font-semibold rounded-full hover:bg-accent-dark transition-colors shadow-md shadow-accent/20"
               >
-                Write a Review
+                {content.summary.writeReviewLabel}
                 <ExternalLink size={14} />
               </a>
             </div>
@@ -296,7 +204,7 @@ export default function ReviewsPage() {
             {reviews.map((review, i) => (
               <ScrollReveal key={review.name} delay={((i % 3 + 1) as 1 | 2 | 3)}>
                 <a
-                  href={GOOGLE_WRITE_REVIEW}
+                  href={content.summary.writeReviewHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-white rounded-2xl border border-gray-100 shadow-sm p-6 h-full hover:shadow-lg hover:border-gray-200 hover:-translate-y-1 transition-all duration-300"
@@ -344,16 +252,16 @@ export default function ReviewsPage() {
           <ScrollReveal>
             <div className="text-center mt-14">
               <p className="text-gray-500 mb-4">
-                Had a great experience with Maxima Pools?
+                {content.bottomCta.text}
               </p>
               <a
-                href={GOOGLE_WRITE_REVIEW}
+                href={content.summary.writeReviewHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
               >
                 <GoogleIcon className="w-5 h-5" />
-                Leave Us a Review on Google
+                {content.bottomCta.label}
                 <ExternalLink size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </a>
             </div>

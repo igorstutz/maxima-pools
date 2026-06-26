@@ -1,0 +1,137 @@
+{
+  "seo": {
+    "title": "Pool Financing | Maxima Pools - Columbus, OH",
+    "description": "Affordable fiberglass pool financing through Lyon Financial. Loans up to $250K, terms up to 30 years, fast approvals. Make your dream pool a reality with Maxima Pools.",
+    "ogTitle": "Pool Financing | Maxima Pools",
+    "ogDescription": "Affordable pool financing with industry-leading rates through Lyon Financial. Loans up to $250K with terms up to 30 years."
+  },
+  "hero": {
+    "image": "/images/gallery/lagoon-03.jpg",
+    "badge": "Pool Financing",
+    "headingLead": "Finance Your",
+    "headingHighlight": "Dream Pool",
+    "subtitle": "Your backyard paradise doesn't have to wait. Through our partnership with Lyon Financial — America's #1 pool financing company for over 40 years — you can get low rates, flexible terms up to 30 years, and loans up to $250K.",
+    "applyLabel": "Apply Now — It's Free",
+    "applyHref": "https://www.lyonfinancial.net/apply/?lid=11-19241",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "value": "40+", "label": "Years in Business", "icon": "Calendar" },
+    { "value": "500K+", "label": "Happy Customers", "icon": "Users" },
+    { "value": "$250K", "label": "Max Loan Amount", "icon": "Banknote" },
+    { "value": "30", "label": "Year Terms Available", "icon": "Clock" }
+  ],
+  "partner": {
+    "logo": "/images/partners/lyon-financial.png",
+    "paragraphLead": "Lyon Financial has been America's most trusted pool financing company since 1979. With over ",
+    "paragraphBold": "500,000 happy customers",
+    "paragraphTail": " and specialized expertise in swimming pool loans, they make the financing process as refreshing as the pool itself.",
+    "badge": "Exclusive Maxima Pools Partner"
+  },
+  "benefitsSection": {
+    "headingLead": "Why Finance with",
+    "headingHighlight": "Lyon Financial",
+    "intro": "Industry-leading terms designed to make your pool project accessible and completely stress-free."
+  },
+  "benefits": [
+    {
+      "icon": "DollarSign",
+      "title": "Lowest Rates & Longest Terms",
+      "text": "Industry-leading affordability with competitive rates and repayment terms stretching up to 30 years — keeping your monthly payments comfortable."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Flexible Loan Programs",
+      "text": "Multiple options designed for different needs and project sizes. Whether it's a compact spa or a full backyard transformation, there's a program for you."
+    },
+    {
+      "icon": "HeartHandshake",
+      "title": "Dedicated Account Manager",
+      "text": "A real person guides you from application to completion. No automated phone trees — just expert support when you need it."
+    },
+    {
+      "icon": "Clock",
+      "title": "Fast, Hassle-Free Approval",
+      "text": "Quick online application with no credit impact until you decide to proceed. Most applicants receive a decision within hours."
+    }
+  ],
+  "stepsSection": {
+    "headingLead": "How It",
+    "headingHighlight": "Works",
+    "intro": "Five simple steps from application to your first swim.",
+    "applyLabel": "Start Your Application",
+    "applyHref": "https://www.lyonfinancial.net/apply/?lid=11-19241"
+  },
+  "steps": [
+    {
+      "icon": "FileText",
+      "num": "01",
+      "title": "Apply Online",
+      "text": "Complete a quick application through Lyon Financial. It takes just a few minutes, and there's no credit impact unless you choose to move forward."
+    },
+    {
+      "icon": "Search",
+      "num": "02",
+      "title": "Get Your Options",
+      "text": "A dedicated account manager reviews your qualifications and prepares personalized loan options tailored to your project and budget."
+    },
+    {
+      "icon": "CheckCircle2",
+      "num": "03",
+      "title": "Choose Your Plan",
+      "text": "Select from flexible programs with industry-leading rates. Pick the terms that work best for your family — from short-term to 30-year repayment."
+    },
+    {
+      "icon": "Hammer",
+      "num": "04",
+      "title": "Build with Confidence",
+      "text": "Lyon Financial coordinates directly with Maxima Pools throughout your entire build. Funds are disbursed as milestones are completed."
+    },
+    {
+      "icon": "PartyPopper",
+      "num": "05",
+      "title": "Enjoy Your Pool",
+      "text": "Dive in! Your backyard paradise is complete, and your financing is locked in at comfortable terms. No surprises — just relaxation."
+    }
+  ],
+  "faqSection": {
+    "headingLead": "Frequently Asked",
+    "headingHighlight": "Questions"
+  },
+  "faqs": [
+    {
+      "q": "Will applying affect my credit score?",
+      "a": "No. The initial application is a soft inquiry that does not impact your credit. A hard inquiry only occurs if you decide to proceed with a loan."
+    },
+    {
+      "q": "How much can I borrow?",
+      "a": "Lyon Financial offers loans up to $250,000, covering pool installation, outdoor living, landscaping, and related improvements."
+    },
+    {
+      "q": "What can I finance?",
+      "a": "Your pool, patio, hardscaping, fencing, lighting, outdoor kitchen — essentially your entire backyard project can be rolled into one loan."
+    },
+    {
+      "q": "How long does approval take?",
+      "a": "Most applicants receive a decision within hours of submitting their application. The entire process from application to funded project is streamlined for speed."
+    },
+    {
+      "q": "Do I need to be a homeowner?",
+      "a": "Yes. Lyon Financial requires applicants to be homeowners with equity in their property. The pool must be installed at your primary or secondary residence."
+    }
+  ],
+  "finalCta": {
+    "image": "/images/gallery/sully-01.jpg",
+    "logo": "/images/partners/lyon-financial.png",
+    "headingLead": "Ready to Make It",
+    "headingHighlight": "Happen?",
+    "text": "Apply online in minutes. No obligation, no credit impact until you decide to proceed. Your dream pool is closer than you think.",
+    "applyLabel": "Apply Now",
+    "applyHref": "https://www.lyonfinancial.net/apply/?lid=11-19241",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact"
+  }
+}

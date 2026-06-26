@@ -1,0 +1,30 @@
+{
+  "seo": {
+    "title": "Our Process | Maxima Pools - Columbus, OH",
+    "description": "Learn how Maxima Pools installs your fiberglass pool from start to finish. Transparent, efficient, in-house process — serving Columbus, OH and Central Ohio.",
+    "ogTitle": "Our Process | Maxima Pools",
+    "ogDescription": "From first consultation to your first swim — see how Maxima Pools delivers a seamless pool installation experience."
+  },
+  "hero": {
+    "image": "/images/gallery/featured-02.jpg",
+    "badge": "How It Works",
+    "headingLead": "Our",
+    "headingHighlight": "Process",
+    "subtitle": "From your first call to your first swim — here's how we turn your backyard into a paradise, step by step.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stepByStep": {
+    "headingLead": "Step by",
+    "headingHighlight": "Step",
+    "intro": "Every Maxima Pools project follows a proven, transparent process. Here's what to expect when you work with us.",
+    "placeholderTitle": "Detailed Process Coming Soon",
+    "placeholderText": "We're preparing a detailed walkthrough of our installation process. In the meantime, reach out and we'll walk you through every step personally.",
+    "placeholderCtaLabel": "Talk to Our Team",
+    "placeholderCtaHref": "/contact"
+  }
+}
