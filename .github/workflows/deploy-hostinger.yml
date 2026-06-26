@@ -26,7 +26,21 @@ jobs:
       - name: Build static export (root-domain build, no basePath)
         run: npx next build
 
-      - name: Deploy to Hostinger via rsync over SSH
+      # Hostinger's SSH endpoint intermittently times out (rsync exits 255),
+      # which is a transient connectivity hiccup, NOT a code/build problem.
+      # We retry the rsync up to 3 times with a pause between attempts, and
+      # only fail the job if every attempt fails.
+      #
+      # The deploy params are identical across attempts. rsync flags:
+      #   -r recursive, -l symlinks, -t times, -z compress
+      #   --delete removes files on the server that no longer exist locally
+      # Excluded paths are NOT uploaded AND NOT deleted on the server, so the
+      # customized api/submit.php (with the real SMTP password) and the legacy
+      # wp-content/ folder (where the pool photos still live) stay intact.
+
+      - name: Deploy to Hostinger (attempt 1)
+        id: deploy1
+        continue-on-error: true
         uses: easingthemes/ssh-deploy@v5.1.0
         with:
           SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
@@ -35,12 +49,49 @@ jobs:
           REMOTE_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
           SOURCE: "out/"
           TARGET: "domains/maximapools.com/public_html/"
-          # rsync flags:
-          #   -r recursive, -l symlinks, -t times, -z compress
-          #   --delete removes files on the server that no longer exist locally
           ARGS: "-rltzv --delete"
-          # Excluded paths are NOT uploaded AND NOT deleted on the server, so
-          # the customized api/submit.php (with the real SMTP password) and the
-          # legacy wp-content/ folder (where the pool photos still live) stay
-          # intact across deploys.
           EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+
+      - name: Wait before retry 1
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy to Hostinger (attempt 2)
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          REMOTE_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          REMOTE_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SOURCE: "out/"
+          TARGET: "domains/maximapools.com/public_html/"
+          ARGS: "-rltzv --delete"
+          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+
+      - name: Wait before retry 2
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        run: sleep 60
+
+      - name: Deploy to Hostinger (attempt 3)
+        id: deploy3
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        continue-on-error: true
+        uses: easingthemes/ssh-deploy@v5.1.0
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.HOSTINGER_SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.HOSTINGER_SSH_HOST }}
+          REMOTE_USER: ${{ secrets.HOSTINGER_SSH_USER }}
+          REMOTE_PORT: ${{ secrets.HOSTINGER_SSH_PORT }}
+          SOURCE: "out/"
+          TARGET: "domains/maximapools.com/public_html/"
+          ARGS: "-rltzv --delete"
+          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+
+      - name: Fail if all deploy attempts failed
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure' && steps.deploy3.outcome == 'failure'
+        run: |
+          echo "All 3 deploy attempts failed (likely a persistent Hostinger SSH outage)."
+          exit 1
