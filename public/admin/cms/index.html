@@ -5,6 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
     <title>Maxima Pools — Content Manager</title>
+
+    <!-- Maxima favicon for the panel tab -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon-32.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Sveltia overrides document.title and may swap the favicon at runtime.
+         Keep the panel branded as Maxima Pools: rewrite the "Sveltia CMS"
+         product name in the tab title and on the loading screen, and re-assert
+         our favicon. Purely cosmetic; does not touch any CMS behavior. -->
+    <script>
+      (function () {
+        var DEFAULT_TITLE = "Maxima Pools — Content Manager";
+
+        function fixTitle() {
+          var t = document.title || "";
+          if (/Sveltia CMS/i.test(t)) {
+            document.title = t.replace(/Sveltia CMS/gi, "Maxima Pools CMS");
+          } else if (!t.trim()) {
+            document.title = DEFAULT_TITLE;
+          }
+        }
+
+        function fixIcons() {
+          document.querySelectorAll('link[rel~="icon"]').forEach(function (l) {
+            var href = l.getAttribute("href") || "";
+            if (/sveltia/i.test(href) || href.indexOf("data:") === 0) {
+              l.setAttribute("href", "/favicon.ico");
+            }
+          });
+        }
+
+        // Replace standalone "Sveltia CMS" text (e.g. the loading screen)
+        // with the Maxima brand, without disturbing anything else.
+        function fixText(root) {
+          try {
+            var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+            var n;
+            while ((n = walker.nextNode())) {
+              if (n.nodeValue && n.nodeValue.indexOf("Sveltia CMS") !== -1) {
+                n.nodeValue = n.nodeValue.replace(/Sveltia CMS/g, "Maxima Pools");
+              }
+            }
+          } catch (e) {}
+        }
+
+        function apply() {
+          fixTitle();
+          fixIcons();
+          fixText(document.body || document.documentElement);
+        }
+
+        apply();
+        document.addEventListener("DOMContentLoaded", apply);
+
+        var titleEl = document.querySelector("title");
+        if (titleEl) new MutationObserver(fixTitle).observe(titleEl, { childList: true });
+
+        new MutationObserver(function (muts) {
+          fixIcons();
+          for (var i = 0; i < muts.length; i++) {
+            for (var j = 0; j < muts[i].addedNodes.length; j++) {
+              var node = muts[i].addedNodes[j];
+              if (node.nodeType === 1) fixText(node);
+              else if (node.nodeType === 3 && node.nodeValue && node.nodeValue.indexOf("Sveltia CMS") !== -1) {
+                node.nodeValue = node.nodeValue.replace(/Sveltia CMS/g, "Maxima Pools");
+              }
+            }
+          }
+        }).observe(document.documentElement, { childList: true, subtree: true });
+      })();
+    </script>
   </head>
   <body>
     <!-- Sveltia CMS — modern, Decap-compatible Git-based CMS.
