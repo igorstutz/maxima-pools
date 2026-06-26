@@ -1,0 +1,72 @@
+{
+  "seo": {
+    "titleTemplate": "Fiberglass Pool Installation in {area} | Maxima Pools",
+    "descriptionTemplate": "Premium fiberglass pool installation and outdoor living services in {area}. Authorized San Juan Pools dealer serving {name}. Get a free estimate today.",
+    "ogTitleTemplate": "Fiberglass Pools in {area} | Maxima Pools",
+    "ogDescriptionTemplate": "Maxima Pools serves {area} with premium San Juan fiberglass pool installations. Family-owned, in-house team, and full-service builds.",
+    "ogImageAltTemplate": "Fiberglass pool installation in {area} — Maxima Pools"
+  },
+  "hero": {
+    "badge": "Service Area",
+    "headingLead": "Fiberglass Pools in",
+    "subtitleTemplate": "Maxima Pools proudly serves {area} with premium San Juan fiberglass pool installations. Family-owned, fully in-house — from excavation to your first swim.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "servicesSection": {
+    "headingLead": "Our Services in",
+    "services": [
+      "New Fiberglass Pool Installation",
+      "Pool Closing/Opening & Winterization",
+      "Auto Cover Installation",
+      "Outdoor Living & Hardscaping",
+      "Pool Accessories & Extras"
+    ],
+    "requestEstimateLabelTemplate": "Request a free estimate for {name}",
+    "requestEstimateHref": "/contact"
+  },
+  "whySection": {
+    "headingLeadTemplate": "Why {name} Homeowners Choose",
+    "headingHighlight": "Maxima Pools",
+    "intro": "We're not just another pool company. Here's what sets us apart.",
+    "benefits": [
+      {
+        "icon": "Shield",
+        "title": "Authorized San Juan Dealer",
+        "text": "Access to 100+ premium fiberglass pool models backed by industry-leading warranties."
+      },
+      {
+        "icon": "Waves",
+        "title": "In-House Installation",
+        "text": "Our own crew handles your project from excavation to final walkthrough — no subcontractors."
+      },
+      {
+        "icon": "Clock",
+        "title": "Fast & Efficient",
+        "text": "Most fiberglass pools are installed in days, not months. Enjoy your pool sooner."
+      },
+      {
+        "icon": "Star",
+        "title": "5-Star Rated",
+        "text": "Trusted by homeowners across Central Ohio for transparency, quality, and craftsmanship."
+      }
+    ]
+  },
+  "otherAreas": {
+    "heading": "Other Areas We Serve"
+  },
+  "finalCta": {
+    "headingLead": "Ready to Dive In,",
+    "body": "Get a free, no-obligation estimate for your fiberglass pool project. Our team will walk you through every step.",
+    "estimateLabel": "Get a Free Estimate",
+    "estimateHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

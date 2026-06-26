@@ -2667,3 +2667,99 @@ collections:
               - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
               - { label: "Phone (shown)", name: phoneDisplay, widget: string }
               - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: locations-template
+        label: "Location Page Template (all cities)"
+        file: "src/content/pages/locations-template.json"
+        format: json
+        fields:
+          - label: "SEO (templates — {area} and {name} are filled in per city)"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: titleTemplate, widget: string, hint: "Use {area} and {name}. e.g. Fiberglass Pool Installation in {area} | Maxima Pools" }
+              - { label: "Meta Description", name: descriptionTemplate, widget: text, hint: "Use {area} and {name}." }
+              - { label: "Social Share Title", name: ogTitleTemplate, widget: string, hint: "Use {area}." }
+              - { label: "Social Share Description", name: ogDescriptionTemplate, widget: text, hint: "Use {area}." }
+              - { label: "Social Image Alt", name: ogImageAltTemplate, widget: string, hint: "Use {area}." }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — fixed first part", name: headingLead, widget: string, hint: "The city name is added right after this, highlighted." }
+              - { label: "Subtitle paragraph", name: subtitleTemplate, widget: text, hint: "Use {area} where the city/county should appear." }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Services section"
+            name: servicesSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — fixed first part", name: headingLead, widget: string, hint: "The city name is added right after this." }
+              - label: "Services list"
+                name: services
+                widget: list
+                field: { label: "Service", name: service, widget: string }
+              - { label: "Request-estimate link label", name: requestEstimateLabelTemplate, widget: string, hint: "Use {name} for the city/county name." }
+              - { label: "Request-estimate link", name: requestEstimateHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "'Why Maxima' section"
+            name: whySection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — first part", name: headingLeadTemplate, widget: string, hint: "Use {name} for the city/county name." }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro paragraph", name: intro, widget: text }
+              - label: "Benefit cards"
+                name: benefits
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Shield", "Waves", "Clock", "Star"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Text", name: text, widget: text }
+          - label: "'Other areas' section"
+            name: otherAreas
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+          - label: "Bottom Call-to-Action"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading — fixed first part", name: headingLead, widget: string, hint: "The city name (with '?') is added right after this, highlighted." }
+              - { label: "Paragraph", name: body, widget: text }
+              - { label: "Estimate button label", name: estimateLabel, widget: string }
+              - { label: "Estimate button link", name: estimateHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+  - name: locations
+    label: "Service Areas"
+    description: "The cities and counties you serve. Each becomes its own page; the shared layout text lives in 'Location Page Template' under Pages."
+    files:
+      - name: locations-list
+        label: "Cities & Counties"
+        file: "src/content/locations.json"
+        format: json
+        fields:
+          - label: "Service areas"
+            name: locations
+            widget: list
+            summary: "{{fields.name}} ({{fields.type}})"
+            fields:
+              - { label: "Name", name: name, widget: string, hint: "City or county name, e.g. Dublin or Franklin County" }
+              - { label: "Type", name: type, widget: select, options: ["city", "county"] }
+              - { label: "Google Maps query", name: query, widget: string, hint: "e.g. Dublin,OH or Franklin+County,OH" }
+              - { label: "Services paragraph", name: copy, widget: text }

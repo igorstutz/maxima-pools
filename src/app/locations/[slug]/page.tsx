@@ -17,9 +17,18 @@ import { notFound } from "next/navigation";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { locations, slugify } from "@/lib/locations";
+import content from "@/content/pages/locations-template.json";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
+}
+
+// Lucide icons referenced by name from the editable content file.
+const benefitIcons = { Shield, Waves, Clock, Star } as const;
+
+// Fill {area}/{name} placeholders in the editable template strings.
+function fill(template: string, vars: Record<string, string>): string {
+  return template.replace(/\{(\w+)\}/g, (_, key) => vars[key] ?? "");
 }
 
 export async function generateStaticParams() {
@@ -32,13 +41,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!location) return {};
 
   const area = location.type === "county" ? location.name : `${location.name}, Ohio`;
+  const vars = { area, name: location.name };
   return {
-    title: `Fiberglass Pool Installation in ${area} | Maxima Pools`,
-    description: `Premium fiberglass pool installation and outdoor living services in ${area}. Authorized San Juan Pools dealer serving ${location.name}. Get a free estimate today.`,
+    title: fill(content.seo.titleTemplate, vars),
+    description: fill(content.seo.descriptionTemplate, vars),
     alternates: { canonical: `/locations/${slug}/` },
     openGraph: {
-      title: `Fiberglass Pools in ${area} | Maxima Pools`,
-      description: `Maxima Pools serves ${area} with premium San Juan fiberglass pool installations. Family-owned, in-house team, and full-service builds.`,
+      title: fill(content.seo.ogTitleTemplate, vars),
+      description: fill(content.seo.ogDescriptionTemplate, vars),
       type: "website",
       url: `/locations/${slug}/`,
       images: [
@@ -46,43 +56,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
           url: "/og-image.jpg",
           width: 1200,
           height: 630,
-          alt: `Fiberglass pool installation in ${area} — Maxima Pools`,
+          alt: fill(content.seo.ogImageAltTemplate, vars),
         },
       ],
     },
   };
 }
-
-const services = [
-  "New Fiberglass Pool Installation",
-  "Pool Closing/Opening & Winterization",
-  "Auto Cover Installation",
-  "Outdoor Living & Hardscaping",
-  "Pool Accessories & Extras",
-];
-
-const benefits = [
-  {
-    icon: Shield,
-    title: "Authorized San Juan Dealer",
-    text: "Access to 100+ premium fiberglass pool models backed by industry-leading warranties.",
-  },
-  {
-    icon: Waves,
-    title: "In-House Installation",
-    text: "Our own crew handles your project from excavation to final walkthrough — no subcontractors.",
-  },
-  {
-    icon: Clock,
-    title: "Fast & Efficient",
-    text: "Most fiberglass pools are installed in days, not months. Enjoy your pool sooner.",
-  },
-  {
-    icon: Star,
-    title: "5-Star Rated",
-    text: "Trusted by homeowners across Central Ohio for transparency, quality, and craftsmanship.",
-  },
-];
 
 export default async function LocationPage({ params }: PageProps) {
   const { slug } = await params;
@@ -93,6 +72,8 @@ export default async function LocationPage({ params }: PageProps) {
   const areaShort = location.name;
   const mapSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${location.query}&zoom=11`;
   const heroImage = `/images/locations/${slug}.webp`;
+
+  const { hero, servicesSection, whySection, otherAreas, finalCta } = content;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -150,42 +131,40 @@ export default async function LocationPage({ params }: PageProps) {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <MapPin size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                Service Area
+                {hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Fiberglass Pools in </span>
+              <span className="text-white">{hero.headingLead}</span>{" "}
               <span className="shimmer-text">{areaShort}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Maxima Pools proudly serves {area} with premium San Juan fiberglass
-              pool installations. Family-owned, fully in-house — from excavation
-              to your first swim.
+              {fill(hero.subtitleTemplate, { area, name: areaShort })}
             </p>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/contact"
+                href={hero.estimateHref}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
               >
-                Get a Free Estimate
+                {hero.estimateLabel}
                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/pool-simulator"
+                href={hero.simulatorHref}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Sparkles size={18} className="text-accent" />
-                Pool Simulator
+                {hero.simulatorLabel}
               </Link>
               <a
-                href="tel:+16143845081"
+                href={hero.phoneHref}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Phone size={18} />
-                (614) 384-5081
+                {hero.phoneDisplay}
               </a>
             </div>
           </div>
@@ -217,14 +196,14 @@ export default async function LocationPage({ params }: PageProps) {
             {/* Services */}
             <ScrollReveal>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-                Our Services in{" "}
+                {servicesSection.headingLead}{" "}
                 <span className="text-accent">{areaShort}</span>
               </h2>
               <p className="text-gray-500 leading-relaxed mb-8">
                 {location.copy}
               </p>
               <ul className="space-y-3 mb-8">
-                {services.map((s) => (
+                {servicesSection.services.map((s) => (
                   <li key={s} className="flex items-center gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0" />
                     <span className="text-gray-700 font-medium">{s}</span>
@@ -232,10 +211,10 @@ export default async function LocationPage({ params }: PageProps) {
                 ))}
               </ul>
               <Link
-                href="/contact"
+                href={servicesSection.requestEstimateHref}
                 className="group inline-flex items-center gap-2 text-accent font-semibold hover:gap-3 transition-all"
               >
-                Request a free estimate for {areaShort}
+                {fill(servicesSection.requestEstimateLabelTemplate, { name: areaShort })}
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </Link>
             </ScrollReveal>
@@ -251,27 +230,30 @@ export default async function LocationPage({ params }: PageProps) {
           <ScrollReveal>
             <div className="text-center mb-14">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                Why {areaShort} Homeowners Choose{" "}
-                <span className="text-accent">Maxima Pools</span>
+                {fill(whySection.headingLeadTemplate, { name: areaShort })}{" "}
+                <span className="text-accent">{whySection.headingHighlight}</span>
               </h2>
               <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                We&apos;re not just another pool company. Here&apos;s what sets us apart.
+                {whySection.intro}
               </p>
             </div>
           </ScrollReveal>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((b, i) => (
-              <ScrollReveal key={b.title} delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}>
-                <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/20 transition-all h-full">
-                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                    <b.icon size={22} className="text-accent" />
+            {whySection.benefits.map((b, i) => {
+              const Icon = benefitIcons[b.icon as keyof typeof benefitIcons];
+              return (
+                <ScrollReveal key={b.title} delay={Math.min(i + 1, 4) as 1 | 2 | 3 | 4}>
+                  <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/20 transition-all h-full">
+                    <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                      {Icon && <Icon size={22} className="text-accent" />}
+                    </div>
+                    <h3 className="font-bold text-gray-900 mb-2">{b.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed">{b.text}</p>
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">{b.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">{b.text}</p>
-                </div>
-              </ScrollReveal>
-            ))}
+                </ScrollReveal>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -283,7 +265,7 @@ export default async function LocationPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 text-center">
-              Other Areas We Serve
+              {otherAreas.heading}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
               {locations
@@ -328,34 +310,33 @@ export default async function LocationPage({ params }: PageProps) {
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
-                    Ready to Dive In,{" "}
+                    {finalCta.headingLead}{" "}
                     <span className="shimmer-text">{areaShort}?</span>
                   </h2>
                   <p className="text-lg text-white leading-relaxed mb-10 max-w-lg">
-                    Get a free, no-obligation estimate for your fiberglass pool
-                    project. Our team will walk you through every step.
+                    {finalCta.body}
                   </p>
                   <div className="flex flex-wrap gap-3 *:whitespace-nowrap">
                     <Link
-                      href="/contact"
+                      href={finalCta.estimateHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
                     >
-                      Get a Free Estimate
+                      {finalCta.estimateLabel}
                       <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                     <Link
-                      href="/pool-simulator"
+                      href={finalCta.simulatorHref}
                       className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Sparkles size={18} className="text-accent" />
-                      Pool Simulator
+                      {finalCta.simulatorLabel}
                     </Link>
                     <a
-                      href="tel:+16143845081"
+                      href={finalCta.phoneHref}
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
                     >
                       <Phone size={18} />
-                      (614) 384-5081
+                      {finalCta.phoneDisplay}
                     </a>
                   </div>
                 </div>
