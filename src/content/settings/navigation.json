@@ -1,0 +1,104 @@
+{
+  "header": {
+    "logo": "/images/logo/maxima-logo.webp",
+    "menu": [
+      { "label": "Home", "href": "/" },
+      {
+        "label": "Why Maxima",
+        "dropdownMinWidth": "220px",
+        "submenu": [
+          { "label": "About Us", "href": "/why-maxima" },
+          { "label": "Our Process", "href": "/our-process" },
+          { "label": "Financing", "href": "/financing" },
+          { "label": "Reviews", "href": "/reviews" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Areas We Serve", "href": "/areas-we-serve" },
+          { "label": "Contact Us", "href": "/contact" }
+        ]
+      },
+      {
+        "label": "Pools & Spas",
+        "dropdownMinWidth": "240px",
+        "submenu": [
+          { "label": "Pools", "href": "/pools" },
+          { "label": "Spas", "href": "/pools?type=Spa" },
+          { "label": "Tanning Ledges", "href": "/pools?type=Tanning+Ledge" },
+          { "label": "Freezable Pools", "href": "/frozen-pools" },
+          { "label": "Auto Cover Pool", "href": "/auto-cover-pool" },
+          { "label": "Pool Closing/Opening", "href": "/pool-closing" },
+          { "label": "Pool Accessories & Extras", "href": "/pool-accessories-and-extras" }
+        ]
+      },
+      {
+        "label": "Pool Info",
+        "dropdownMinWidth": "260px",
+        "submenu": [
+          { "label": "How It's Made", "href": "/how-san-juan-pools-are-made" },
+          { "label": "Fiberglass Pool Quality", "href": "/fiberglass-pool-quality" },
+          { "label": "Why Fiberglass Pools", "href": "/why-fiberglass-pools-make-sense" },
+          { "label": "San Juan VS Competitors", "href": "/san-juan-fiberglass-pools" },
+          { "label": "Fiberglass Pool Colors", "href": "/fiberglass-pool-colors" },
+          { "label": "The Perfect Pool for Your Pet", "href": "/the-perfect-pool-for-your-pet" }
+        ]
+      },
+      { "label": "Outdoor Living", "href": "/outdoor-living" },
+      { "label": "Gallery", "href": "/fiberglass-pool-gallery" },
+      { "label": "Blog", "href": "/blog" }
+    ],
+    "phone": { "display": "(614) 384-5081", "href": "tel:+16143845081" },
+    "cta": { "label": "Free Estimate", "href": "/contact" }
+  },
+  "footer": {
+    "logo": "/images/logo/maxima-logo.webp",
+    "tagline": "Family-owned pool builder and hardscaper serving Columbus, Ohio. Authorized San Juan Pools dealer.",
+    "contact": {
+      "phone": { "display": "(614) 384-5081", "href": "tel:+16143845081", "note": "Mon–Fri, 8am–5pm" },
+      "email": "info@maximapools.com",
+      "address": {
+        "line1": "4059 State Route 37 East",
+        "line2": "Suite A, Delaware, OH 43015",
+        "mapHref": "https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5"
+      }
+    },
+    "simulatorCta": { "label": "Pool Simulator", "href": "/pool-simulator" },
+    "social": {
+      "instagram": "https://www.instagram.com/maxima.pools/",
+      "facebook": "https://www.facebook.com/profile.php?id=61582788479318"
+    },
+    "columns": [
+      {
+        "heading": "Pools & Services",
+        "links": [
+          { "label": "Pool Collection", "href": "/pools" },
+          { "label": "Pool Colors", "href": "/fiberglass-pool-colors" },
+          { "label": "Auto Cover Pool", "href": "/auto-cover-pool" },
+          { "label": "Freezable Pools", "href": "/frozen-pools" },
+          { "label": "Pool Closing/Opening", "href": "/pool-closing" },
+          { "label": "Pool Accessories", "href": "/pool-accessories-and-extras" },
+          { "label": "Pool Simulator", "href": "/pool-simulator" }
+        ]
+      },
+      {
+        "heading": "Learn",
+        "links": [
+          { "label": "Why Maxima", "href": "/why-maxima" },
+          { "label": "How It's Made", "href": "/how-san-juan-pools-are-made" },
+          { "label": "Pool Quality", "href": "/fiberglass-pool-quality" },
+          { "label": "Why Fiberglass", "href": "/why-fiberglass-pools-make-sense" },
+          { "label": "San Juan VS Competitors", "href": "/san-juan-fiberglass-pools" },
+          { "label": "Pool for Your Pet", "href": "/the-perfect-pool-for-your-pet" }
+        ],
+        "extraLinks": [
+          { "label": "Financing", "href": "/financing" },
+          { "label": "Outdoor Living", "href": "/outdoor-living" },
+          { "label": "Gallery", "href": "/fiberglass-pool-gallery" },
+          { "label": "Blog", "href": "/blog" },
+          { "label": "Free Estimate", "href": "/contact" }
+        ]
+      }
+    ],
+    "serviceAreasHeading": "Service Areas",
+    "copyrightName": "Maxima Concrete LLC",
+    "bottomBarRight": ["Authorized San Juan Pools Dealer", "Columbus, OH"]
+  }
+}

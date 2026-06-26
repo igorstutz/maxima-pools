@@ -1,35 +1,11 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import Image from "@/components/Image";
 import { Phone, Mail, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
 import { locations, slugify } from "@/lib/locations";
+import nav from "@/content/settings/navigation.json";
 
-const poolsLinks = [
-  { label: "Pool Collection", href: "/pools" },
-  { label: "Pool Colors", href: "/fiberglass-pool-colors" },
-  { label: "Auto Cover Pool", href: "/auto-cover-pool" },
-  { label: "Freezable Pools", href: "/frozen-pools" },
-  { label: "Pool Closing/Opening", href: "/pool-closing" },
-  { label: "Pool Accessories", href: "/pool-accessories-and-extras" },
-  { label: "Pool Simulator", href: "/pool-simulator" },
-];
-
-const learnLinks = [
-  { label: "Why Maxima", href: "/why-maxima" },
-  { label: "How It's Made", href: "/how-san-juan-pools-are-made" },
-  { label: "Pool Quality", href: "/fiberglass-pool-quality" },
-  { label: "Why Fiberglass", href: "/why-fiberglass-pools-make-sense" },
-  { label: "San Juan VS Competitors", href: "/san-juan-fiberglass-pools" },
-  { label: "Pool for Your Pet", href: "/the-perfect-pool-for-your-pet" },
-];
-
-const moreLinks = [
-  { label: "Financing", href: "/financing" },
-  { label: "Outdoor Living", href: "/outdoor-living" },
-  { label: "Gallery", href: "/fiberglass-pool-gallery" },
-  { label: "Blog", href: "/blog" },
-  { label: "Free Estimate", href: "/contact" },
-];
-
+const footer = nav.footer;
 
 export function Footer() {
   return (
@@ -48,7 +24,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-3 lg:col-span-4">
             <div className="mb-5">
               <Image
-                src="/images/logo/maxima-logo.webp"
+                src={footer.logo}
                 alt="Maxima Pools"
                 width={160}
                 height={50}
@@ -56,35 +32,34 @@ export function Footer() {
               />
             </div>
             <p className="text-white text-sm leading-relaxed mb-6 max-w-sm">
-              Family-owned pool builder and hardscaper serving Columbus, Ohio.
-              Authorized San Juan Pools dealer.
+              {footer.tagline}
             </p>
 
             {/* Contact cards */}
             <div className="space-y-2.5 mb-5">
               <a
-                href="tel:+16143845081"
+                href={footer.contact.phone.href}
                 className="group flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-accent/10 border border-white/[0.05] hover:border-accent/20 transition-all"
               >
                 <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                   <Phone size={15} className="text-accent" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-sm">(614) 384-5081</p>
-                  <p className="text-white text-xs">Mon–Fri, 8am–5pm</p>
+                  <p className="text-white font-semibold text-sm">{footer.contact.phone.display}</p>
+                  <p className="text-white text-xs">{footer.contact.phone.note}</p>
                 </div>
               </a>
               <a
-                href="mailto:info@maximapools.com"
+                href={`mailto:${footer.contact.email}`}
                 className="group flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-accent/10 border border-white/[0.05] hover:border-accent/20 transition-all"
               >
                 <div className="w-9 h-9 rounded-lg bg-accent/10 flex items-center justify-center shrink-0">
                   <Mail size={15} className="text-accent" />
                 </div>
-                <p className="text-white font-medium text-sm">info@maximapools.com</p>
+                <p className="text-white font-medium text-sm">{footer.contact.email}</p>
               </a>
               <a
-                href="https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5"
+                href={footer.contact.address.mapHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-3 p-3 rounded-xl bg-white/[0.03] hover:bg-accent/10 border border-white/[0.05] hover:border-accent/20 transition-all"
@@ -93,25 +68,25 @@ export function Footer() {
                   <MapPin size={15} className="text-accent" />
                 </div>
                 <div>
-                  <p className="text-white font-medium text-sm">4059 State Route 37 East</p>
-                  <p className="text-white text-xs">Suite A, Delaware, OH 43015</p>
+                  <p className="text-white font-medium text-sm">{footer.contact.address.line1}</p>
+                  <p className="text-white text-xs">{footer.contact.address.line2}</p>
                 </div>
               </a>
             </div>
 
             {/* Pool Simulator CTA */}
             <Link
-              href="/pool-simulator"
+              href={footer.simulatorCta.href}
               className="group inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 mb-5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-lg shadow-accent/20 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 whitespace-nowrap"
             >
               <Sparkles size={16} />
-              Pool Simulator
+              {footer.simulatorCta.label}
             </Link>
 
             {/* Social */}
             <div className="flex gap-2.5">
               <a
-                href="https://www.instagram.com/maxima.pools/"
+                href={footer.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/[0.04] hover:bg-accent/20 border border-white/[0.06] hover:border-accent/25 flex items-center justify-center transition-all group"
@@ -122,7 +97,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/profile.php?id=61582788479318"
+                href={footer.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-lg bg-white/[0.04] hover:bg-accent/20 border border-white/[0.06] hover:border-accent/25 flex items-center justify-center transition-all group"
@@ -135,64 +110,50 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Pools & Services */}
-          <div className="lg:col-span-2 lg:col-start-6">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
-              Pools & Services
-            </h3>
-            <ul className="space-y-2.5">
-              {poolsLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group flex items-center gap-1.5 text-white hover:text-accent transition-colors text-sm"
-                  >
-                    {link.label}
-                    <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Link columns */}
+          {footer.columns.map((col, i) => (
+            <div key={col.heading} className={i === 0 ? "lg:col-span-2 lg:col-start-6" : "lg:col-span-2"}>
+              <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
+                {col.heading}
+              </h3>
+              <ul className="space-y-2.5">
+                {col.links.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-1.5 text-white hover:text-accent transition-colors text-sm"
+                    >
+                      {link.label}
+                      <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                    </Link>
+                  </li>
+                ))}
 
-          {/* Learn */}
-          <div className="lg:col-span-2">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
-              Learn
-            </h3>
-            <ul className="space-y-2.5">
-              {learnLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group flex items-center gap-1.5 text-white hover:text-accent transition-colors text-sm"
-                  >
-                    {link.label}
-                    <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-
-              {/* More links divider */}
-              <li className="pt-2 border-t border-white/[0.04]" />
-              {moreLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="group flex items-center gap-1.5 text-white hover:text-accent transition-colors text-sm"
-                  >
-                    {link.label}
-                    <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+                {"extraLinks" in col && col.extraLinks && col.extraLinks.length ? (
+                  <Fragment>
+                    {/* More links divider */}
+                    <li className="pt-2 border-t border-white/[0.04]" />
+                    {col.extraLinks.map((link) => (
+                      <li key={link.href}>
+                        <Link
+                          href={link.href}
+                          className="group flex items-center gap-1.5 text-white hover:text-accent transition-colors text-sm"
+                        >
+                          {link.label}
+                          <ArrowUpRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                    ))}
+                  </Fragment>
+                ) : null}
+              </ul>
+            </div>
+          ))}
 
           {/* Service Areas */}
           <div className="col-span-2 lg:col-span-3">
             <h3 className="text-xs font-bold uppercase tracking-widest text-white mb-5">
-              Service Areas
+              {footer.serviceAreasHeading}
             </h3>
             <div className="flex flex-wrap gap-1.5">
               {locations.map((loc) => (
@@ -211,12 +172,15 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/[0.05] pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-white text-xs">
-            &copy; {new Date().getFullYear()} Maxima Concrete LLC. All rights reserved.
+            &copy; {new Date().getFullYear()} {footer.copyrightName}. All rights reserved.
           </p>
           <div className="flex items-center gap-4 text-white text-xs">
-            <span>Authorized San Juan Pools Dealer</span>
-            <span className="hidden sm:inline">|</span>
-            <span className="hidden sm:inline">Columbus, OH</span>
+            {footer.bottomBarRight.map((text, i) => (
+              <Fragment key={text}>
+                {i > 0 && <span className="hidden sm:inline">|</span>}
+                <span className={i === 0 ? "" : "hidden sm:inline"}>{text}</span>
+              </Fragment>
+            ))}
           </div>
         </div>
       </div>

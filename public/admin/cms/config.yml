@@ -2840,3 +2840,109 @@ collections:
         fields:
           - { label: "Google Tag Manager Container ID", name: gtmId, widget: string, pattern: ['^GTM-[A-Z0-9]+$', "Must look like GTM-XXXXXXX"], hint: "Loads GTM on every page. All conversion tags (call clicks, form leads) are configured inside Tag Manager itself." }
           - { label: "Extra scripts (advanced)", name: extraBodyCode, widget: text, required: false, hint: "Optional raw HTML/JS added to the end of every page (e.g. a tracking pixel). Leave blank unless you know what you're pasting — a broken script here can affect the whole site. Prefer adding tags inside Google Tag Manager." }
+      - name: navigation
+        label: "Navigation (Menu & Footer)"
+        file: "src/content/settings/navigation.json"
+        format: json
+        description: "Edit the top menu and the footer of every page."
+        fields:
+          - label: "Header / Top Menu"
+            name: header
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Logo", name: logo, widget: image }
+              - label: "Menu items"
+                name: menu
+                widget: list
+                summary: "{{fields.label}}"
+                hint: "Add a submenu to make an item a dropdown; leave submenu empty for a simple link."
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string, required: false, hint: "For simple links. Internal starts with / . External starts with https:// . Leave blank for a dropdown." }
+                  - { label: "Dropdown width", name: dropdownMinWidth, widget: string, required: false, hint: "Optional, e.g. 240px. Dropdowns only." }
+                  - label: "Submenu (dropdown links)"
+                    name: submenu
+                    widget: list
+                    required: false
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: "Label", name: label, widget: string }
+                      - { label: "Link", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - label: "Phone"
+                name: phone
+                widget: object
+                fields:
+                  - { label: "Number (shown)", name: display, widget: string }
+                  - { label: "Dial link", name: href, widget: string, hint: "Format: tel:+16143845081" }
+              - label: "Button (CTA)"
+                name: cta
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Footer"
+            name: footer
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Logo", name: logo, widget: image }
+              - { label: "Tagline", name: tagline, widget: text }
+              - label: "Contact"
+                name: contact
+                widget: object
+                fields:
+                  - label: "Phone"
+                    name: phone
+                    widget: object
+                    fields:
+                      - { label: "Number (shown)", name: display, widget: string }
+                      - { label: "Dial link", name: href, widget: string, hint: "Format: tel:+16143845081" }
+                      - { label: "Hours / note", name: note, widget: string }
+                  - { label: "Email", name: email, widget: string }
+                  - label: "Address"
+                    name: address
+                    widget: object
+                    fields:
+                      - { label: "Line 1", name: line1, widget: string }
+                      - { label: "Line 2", name: line2, widget: string }
+                      - { label: "Map link", name: mapHref, widget: string, hint: "Google Maps URL" }
+              - label: "Simulator button"
+                name: simulatorCta
+                widget: object
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
+              - label: "Social links"
+                name: social
+                widget: object
+                fields:
+                  - { label: "Instagram URL", name: instagram, widget: string }
+                  - { label: "Facebook URL", name: facebook, widget: string }
+              - label: "Link columns"
+                name: columns
+                widget: list
+                summary: "{{fields.heading}}"
+                fields:
+                  - { label: "Heading", name: heading, widget: string }
+                  - label: "Links"
+                    name: links
+                    widget: list
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: "Label", name: label, widget: string }
+                      - { label: "Link", name: href, widget: string }
+                  - label: "Extra links (after a divider)"
+                    name: extraLinks
+                    widget: list
+                    required: false
+                    summary: "{{fields.label}}"
+                    fields:
+                      - { label: "Label", name: label, widget: string }
+                      - { label: "Link", name: href, widget: string }
+              - { label: "Service areas heading", name: serviceAreasHeading, widget: string, hint: "The city list itself is generated automatically." }
+              - { label: "Copyright name", name: copyrightName, widget: string, hint: "The year is added automatically." }
+              - label: "Bottom bar (right side)"
+                name: bottomBarRight
+                widget: list
+                field: { label: "Text", name: text, widget: string }
