@@ -2798,3 +2798,29 @@ collections:
       - { label: "Spec sheet — PDF URL", name: pdf, widget: string, required: false, hint: "Optional. Leave blank if none." }
       - { label: "Video — YouTube embed URL", name: youtube, widget: string, required: false, hint: "Optional. Use the embed URL form: https://www.youtube.com/embed/XXXX" }
       - { label: "Sort order", name: order, widget: number, required: false, value_type: int, hint: "Lower numbers appear first in the catalog. Optional for new models." }
+
+  - name: blog
+    label: "Blog Posts"
+    label_singular: "Blog Post"
+    description: "Write and edit blog articles. Each post is a Markdown file; publishing creates or updates it."
+    folder: "src/content/blog"
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}}  ·  {{publishedAt}}"
+    preview_path: "blog/{{slug}}/"
+    sortable_fields: ["publishedAt", "title"]
+    fields:
+      - { label: "Title", name: title, widget: string }
+      - { label: "Publish date", name: publishedAt, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD", hint: "Newest posts show first." }
+      - { label: "Author", name: author, widget: string, default: "Maxima Pools Team" }
+      - { label: "Excerpt", name: excerpt, widget: text, hint: "Short summary shown on the blog list and in search results (~155 characters)." }
+      - { label: "Cover image", name: coverImage, widget: image, hint: "Shown at the top of the post and on the blog list. Upload one or paste a URL." }
+      - label: "Tags"
+        name: tags
+        widget: list
+        required: false
+        field: { label: "Tag", name: tag, widget: string }
+      - { label: "Body", name: body, widget: markdown, hint: "The article content. Use the toolbar for headings, bold, links, lists, and images." }

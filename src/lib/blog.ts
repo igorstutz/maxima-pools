@@ -25,6 +25,14 @@ function estimateReadingTime(content: string): number {
   return Math.max(1, Math.round(words / 200));
 }
 
+// The CMS date picker may write the date as an unquoted YAML value, which
+// gray-matter parses into a Date. Always coerce to a "YYYY-MM-DD" string.
+function normalizeDate(value: unknown): string {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  if (typeof value === "string" && value) return value;
+  return new Date().toISOString().slice(0, 10);
+}
+
 function parsePost(filename: string): BlogPost {
   const fullPath = path.join(BLOG_DIR, filename);
   const raw = fs.readFileSync(fullPath, "utf8");
@@ -36,7 +44,7 @@ function parsePost(filename: string): BlogPost {
     excerpt: data.excerpt ?? "",
     coverImage: data.coverImage ?? "/images/gallery/featured-01.png",
     author: data.author ?? "Maxima Pools Team",
-    publishedAt: data.publishedAt ?? new Date().toISOString().slice(0, 10),
+    publishedAt: normalizeDate(data.publishedAt),
     tags: Array.isArray(data.tags) ? data.tags : [],
     content,
     readingTime: estimateReadingTime(content),
