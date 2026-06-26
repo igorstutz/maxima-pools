@@ -2825,3 +2825,15 @@ collections:
         required: false
         field: { label: "Tag", name: tag, widget: string }
       - { label: "Body", name: body, widget: markdown, hint: "The article content. Use the toolbar for headings, bold, links, lists, and images." }
+
+  - name: settings
+    label: "Site Settings"
+    files:
+      - name: tracking
+        label: "Tracking & Scripts"
+        file: "src/content/settings/tracking.json"
+        format: json
+        description: "Manage Google Tag Manager and any extra tracking scripts."
+        fields:
+          - { label: "Google Tag Manager Container ID", name: gtmId, widget: string, pattern: ['^GTM-[A-Z0-9]+$', "Must look like GTM-XXXXXXX"], hint: "Loads GTM on every page. All conversion tags (call clicks, form leads) are configured inside Tag Manager itself." }
+          - { label: "Extra scripts (advanced)", name: extraBodyCode, widget: text, required: false, hint: "Optional raw HTML/JS added to the end of every page (e.g. a tracking pixel). Leave blank unless you know what you're pasting — a broken script here can affect the whole site. Prefer adding tags inside Google Tag Manager." }

@@ -5,8 +5,10 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { AnalyticsListener } from "@/components/AnalyticsListener";
+import tracking from "@/content/settings/tracking.json";
 
-const GTM_ID = "GTM-54JXZHLW";
+// GTM container id is managed from the CMS (Site Settings → Tracking & Scripts).
+const GTM_ID = tracking.gtmId;
 
 const inter = Inter({
   subsets: ["latin"],
@@ -154,6 +156,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <Header />
         <main>{children}</main>
         <Footer />
+        {/* Optional extra tracking/scripts managed from the CMS. Rendered into
+            the static HTML, so any <script> here executes on page load. */}
+        {tracking.extraBodyCode ? (
+          <div
+            suppressHydrationWarning
+            dangerouslySetInnerHTML={{ __html: tracking.extraBodyCode }}
+          />
+        ) : null}
       </body>
     </html>
   );
