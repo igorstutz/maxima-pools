@@ -2749,6 +2749,78 @@ collections:
               - { label: "Phone (shown)", name: phoneDisplay, widget: string }
               - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
 
+      - name: pools-index
+        label: "Pools Catalog (intro)"
+        file: "src/content/pages/pools-index.json"
+        format: json
+        preview_path: "pools/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - label: "Stat chips"
+                name: stats
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Waves", "Ruler", "Droplets"] }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+
+      - name: blog-index
+        label: "Blog Index (intro)"
+        file: "src/content/pages/blog-index.json"
+        format: json
+        preview_path: "blog/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+          - label: "Empty state (when no posts yet)"
+            name: emptyState
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Body", name: body, widget: text }
+          - label: "'Latest articles' heading"
+            name: moreSection
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+
   - name: locations
     label: "Service Areas"
     description: "The cities and counties you serve. Each becomes its own page; the shared layout text lives in 'Location Page Template' under Pages."

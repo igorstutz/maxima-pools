@@ -1,0 +1,23 @@
+{
+  "seo": {
+    "title": "Blog — Pool Tips, Insights & Stories | Maxima Pools",
+    "description": "Honest advice on fiberglass pools, maintenance, design ideas, and what we've learned installing pools across Central Ohio.",
+    "ogTitle": "Maxima Pools Blog — Pool Tips & Insights",
+    "ogDescription": "Pool ownership tips, design ideas, and the experience of building and maintaining fiberglass pools in Central Ohio."
+  },
+  "hero": {
+    "image": "/images/gallery/featured-01.webp",
+    "badge": "The Maxima Journal",
+    "headingLead": "Pool Stories &",
+    "headingHighlight": "Real Advice",
+    "subtitle": "Honest, useful articles on fiberglass pools, maintenance, design choices, and everything we've learned installing pools across Central Ohio."
+  },
+  "emptyState": {
+    "title": "First articles coming soon",
+    "body": "We're putting together our first pieces. Check back shortly — or get in touch for pool advice in the meantime."
+  },
+  "moreSection": {
+    "badge": "More from the Journal",
+    "heading": "Latest articles"
+  }
+}

@@ -8,6 +8,10 @@ import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-reac
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { slugify, type Pool } from "@/lib/pool-utils";
+import poolsIndex from "@/content/pages/pools-index.json";
+
+const heroContent = poolsIndex.hero;
+const statIcons = { Waves, Ruler, Droplets } as const;
 
 /* ------------------------------------------------------------------ */
 /*  Filter options                                                     */
@@ -142,7 +146,7 @@ export function PoolsCatalog({ pools }: { pools: Pool[] }) {
       <section className="relative overflow-hidden pt-28 pb-12 sm:pt-40 sm:pb-20">
         {/* Background image */}
         <Image
-          src="/images/pools/clear-water-beach.webp"
+          src={heroContent.image}
           alt=""
           fill
           className="object-cover"
@@ -158,48 +162,40 @@ export function PoolsCatalog({ pools }: { pools: Pool[] }) {
             <div className="hero-animate hero-animate-1 inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full px-5 py-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                San Juan Fiberglass Pools
+                {heroContent.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-2 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Pool </span>
-              <span className="shimmer-text">Collection</span>
+              <span className="text-white">{heroContent.headingLead}</span>{" "}
+              <span className="shimmer-text">{heroContent.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-3 text-lg sm:text-xl text-white leading-relaxed mb-8 max-w-2xl">
-              Explore 80+ San Juan fiberglass pools and spas. Filter by type,
-              shape, or size to find the perfect fit for your backyard.
+              {heroContent.subtitle}
             </p>
 
             <div className="hero-animate hero-animate-4 flex flex-wrap gap-6 text-sm mb-6">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
-                  <Waves size={14} className="text-accent" />
-                </div>
-                <span className="text-white font-medium">100+ Models</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
-                  <Ruler size={14} className="text-accent" />
-                </div>
-                <span className="text-white font-medium">8&apos; to 45&apos; Length</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
-                  <Droplets size={14} className="text-accent" />
-                </div>
-                <span className="text-white font-medium">100% Hand-Laid</span>
-              </div>
+              {heroContent.stats.map((stat) => {
+                const Icon = statIcons[stat.icon as keyof typeof statIcons];
+                return (
+                  <div key={stat.text} className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/20 flex items-center justify-center">
+                      {Icon && <Icon size={14} className="text-accent" />}
+                    </div>
+                    <span className="text-white font-medium">{stat.text}</span>
+                  </div>
+                );
+              })}
             </div>
 
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
-                href="/pool-simulator"
+                href={heroContent.ctaHref}
                 className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all"
               >
                 <Sparkles size={18} className="text-accent" />
-                Pool Simulator
+                {heroContent.ctaLabel}
               </Link>
             </div>
           </div>

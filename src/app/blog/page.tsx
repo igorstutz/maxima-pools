@@ -11,18 +11,17 @@ import {
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { getAllPosts, formatPublishedDate } from "@/lib/blog";
+import blogIndex from "@/content/pages/blog-index.json";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog/" },
-  title: "Blog — Pool Tips, Insights & Stories | Maxima Pools",
-  description:
-    "Honest advice on fiberglass pools, maintenance, design ideas, and what we've learned installing pools across Central Ohio.",
+  title: blogIndex.seo.title,
+  description: blogIndex.seo.description,
   openGraph: {
     url: "/blog/",
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Maxima Pools - Premium Fiberglass Pools in Columbus, OH" }],
-    title: "Maxima Pools Blog — Pool Tips & Insights",
-    description:
-      "Pool ownership tips, design ideas, and the experience of building and maintaining fiberglass pools in Central Ohio.",
+    title: blogIndex.seo.ogTitle,
+    description: blogIndex.seo.ogDescription,
     type: "website",
   },
 };
@@ -36,7 +35,7 @@ export default function BlogPage() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pt-28 pb-16 sm:pt-36 sm:pb-20">
         <Image
-          src="/images/gallery/featured-01.webp"
+          src={blogIndex.hero.image}
           alt="Maxima Pools Blog"
           fill
           priority
@@ -60,19 +59,17 @@ export default function BlogPage() {
             <div className="hero-animate hero-animate-2 inline-flex items-center gap-2 bg-accent/20 border border-accent/30 rounded-full px-5 py-2 mb-6">
               <PenLine size={14} className="text-accent" />
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                The Maxima Journal
+                {blogIndex.hero.badge}
               </span>
             </div>
 
             <h1 className="hero-animate hero-animate-3 text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-5">
-              <span className="text-white">Pool Stories &amp; </span>
-              <span className="shimmer-text">Real Advice</span>
+              <span className="text-white">{blogIndex.hero.headingLead}</span>{" "}
+              <span className="shimmer-text">{blogIndex.hero.headingHighlight}</span>
             </h1>
 
             <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl">
-              Honest, useful articles on fiberglass pools, maintenance, design
-              choices, and everything we&apos;ve learned installing pools across
-              Central Ohio.
+              {blogIndex.hero.subtitle}
             </p>
           </div>
         </div>
@@ -88,11 +85,10 @@ export default function BlogPage() {
               <PenLine size={32} className="text-accent" />
             </div>
             <h2 className="text-2xl font-bold text-gray-900 mb-3">
-              First articles coming soon
+              {blogIndex.emptyState.title}
             </h2>
             <p className="text-gray-500 leading-relaxed">
-              We&apos;re putting together our first pieces. Check back shortly —
-              or get in touch for pool advice in the meantime.
+              {blogIndex.emptyState.body}
             </p>
           </div>
         </section>
@@ -182,11 +178,11 @@ export default function BlogPage() {
                   <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-5">
                     <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                     <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                      More from the Journal
+                      {blogIndex.moreSection.badge}
                     </span>
                   </div>
                   <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
-                    Latest articles
+                    {blogIndex.moreSection.heading}
                   </h2>
                 </div>
               </ScrollReveal>

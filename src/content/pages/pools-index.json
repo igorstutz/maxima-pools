@@ -1,0 +1,22 @@
+{
+  "seo": {
+    "title": "Fiberglass Pool & Spa Collection | Maxima Pools - Columbus, OH",
+    "description": "Browse 100+ San Juan fiberglass pools and spas. Filter by type, shape, and size to find the perfect fit for your Central Ohio backyard.",
+    "ogTitle": "Pool & Spa Collection | Maxima Pools",
+    "ogDescription": "Explore 100+ San Juan fiberglass pools and spas — filter by type, shape, and size."
+  },
+  "hero": {
+    "image": "/images/pools/clear-water-beach.webp",
+    "badge": "San Juan Fiberglass Pools",
+    "headingLead": "Pool",
+    "headingHighlight": "Collection",
+    "subtitle": "Explore 80+ San Juan fiberglass pools and spas. Filter by type, shape, or size to find the perfect fit for your backyard.",
+    "stats": [
+      { "icon": "Waves", "text": "100+ Models" },
+      { "icon": "Ruler", "text": "8' to 45' Length" },
+      { "icon": "Droplets", "text": "100% Hand-Laid" }
+    ],
+    "ctaLabel": "Pool Simulator",
+    "ctaHref": "/pool-simulator"
+  }
+}
