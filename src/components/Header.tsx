@@ -184,6 +184,10 @@ export function Header() {
                       </div>
                     </div>
                   </div>
+                ) : item.href === "/pool-simulator" ? (
+                  // Skip the plain top-level "Pool Simulator" link on mobile — the
+                  // highlighted button below already covers it (avoids duplicate).
+                  null
                 ) : (
                   <Link
                     key={item.label}
