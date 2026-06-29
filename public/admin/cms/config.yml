@@ -188,11 +188,10 @@ collections:
                 name: card5
                 widget: object
                 fields:
-                  - { label: "Card link", name: href, widget: string, hint: "Internal starts with / . External starts with https:// (e.g. https://sanjuanpools.com/)" }
+                  - { label: "Card link (whole card is clickable)", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
                   - { label: "Logo image", name: logo, widget: image }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
-                  - { label: "Link label", name: linkLabel, widget: string }
           - label: "Featured Pools section"
             name: featuredPools
             widget: object
@@ -775,10 +774,14 @@ collections:
               - { label: "Heading — first part", name: headingLead, widget: string }
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Intro paragraph", name: intro, widget: text }
-              - { label: "Placeholder title", name: placeholderTitle, widget: string }
-              - { label: "Placeholder text", name: placeholderText, widget: text }
-              - { label: "Placeholder button label", name: placeholderCtaLabel, widget: string }
-              - { label: "Placeholder button link", name: placeholderCtaHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - label: "Steps (interactive)"
+                name: steps
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Phone", "MapPin", "ClipboardList", "PenLine", "Banknote", "Ruler", "Wrench"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
 
       - name: outdoor-living
         label: "Outdoor Living Page"
@@ -2821,6 +2824,114 @@ collections:
             fields:
               - { label: "Small badge", name: badge, widget: string }
               - { label: "Heading", name: heading, widget: string }
+
+      - name: warranty
+        label: "Warranty Page"
+        file: "src/content/pages/warranty.json"
+        format: json
+        preview_path: "warranty/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+          - label: "1. Coverage & Timelines"
+            name: coverage
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Coverage items"
+                name: items
+                widget: list
+                summary: "{{fields.term}} — {{fields.label}}"
+                fields:
+                  - { label: "Term (e.g. 25-Year)", name: term, widget: string }
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Description", name: description, widget: text }
+          - label: "2. Critical Exclusions"
+            name: exclusions
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+              - label: "Exclusion items"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+          - label: "3. Manufacturer Duties & Limitations"
+            name: duties
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Items"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+          - label: "4. Buyer's Action Items"
+            name: buyerActions
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Steps"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+          - label: "5. Authorized Manufacturing Plants"
+            name: plants
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Plants"
+                name: items
+                widget: list
+                summary: "{{fields.state}}"
+                fields:
+                  - { label: "State / Location", name: state, widget: string }
+                  - { label: "Address", name: address, widget: string }
+              - { label: "Legal note", name: note, widget: text }
+          - label: "Bottom CTA"
+            name: cta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Body", name: body, widget: text }
+              - { label: "Button label", name: buttonLabel, widget: string }
+              - { label: "Button link", name: buttonHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
 
   - name: locations
     label: "Service Areas"

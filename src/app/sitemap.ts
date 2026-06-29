@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/why-fiberglass-pools-make-sense`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/san-juan-fiberglass-pools`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/the-perfect-pool-for-your-pet`, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${BASE}/warranty`, changeFrequency: "yearly", priority: 0.6 },
   ];
 
   const poolPages: MetadataRoute.Sitemap = pools.map((pool) => ({

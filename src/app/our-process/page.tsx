@@ -8,8 +8,8 @@ import {
   ClipboardList,
   Sparkles,
 } from "lucide-react";
-import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
+import { StepByStep } from "./step-by-step";
 import content from "@/content/pages/our-process.json";
 
 export const metadata: Metadata = {
@@ -108,41 +108,8 @@ export default function OurProcessPage() {
 
       <SectionDivider />
 
-      {/* ── Process Steps — placeholder ── */}
-      <section className="py-20 sm:py-28 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="text-center mb-14">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                {content.stepByStep.headingLead}{" "}
-                <span className="text-accent">{content.stepByStep.headingHighlight}</span>
-              </h2>
-              <p className="text-gray-500 text-lg max-w-2xl mx-auto">
-                {content.stepByStep.intro}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <ScrollReveal>
-            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-10 sm:p-14 text-center">
-              <ClipboardList size={48} className="text-accent/30 mx-auto mb-5" />
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {content.stepByStep.placeholderTitle}
-              </h3>
-              <p className="text-gray-500 max-w-md mx-auto mb-8">
-                {content.stepByStep.placeholderText}
-              </p>
-              <Link
-                href={content.stepByStep.placeholderCtaHref}
-                className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300"
-              >
-                {content.stepByStep.placeholderCtaLabel}
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
+      {/* ── Step by Step (interactive) ── */}
+      <StepByStep />
     </>
   );
 }

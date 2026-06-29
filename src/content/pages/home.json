@@ -59,11 +59,10 @@
       "ratingNote": "5-star rated by families"
     },
     "card5": {
-      "href": "https://sanjuanpools.com/",
+      "href": "/san-juan-fiberglass-pools",
       "logo": "/images/logo/sanjuan-logo.webp",
       "title": "Best of the Best",
-      "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America.",
-      "linkLabel": "Visit sanjuanpools.com"
+      "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America."
     }
   },
   "featuredPools": {
@@ -86,9 +85,9 @@
     },
     "pools": [
       { "name": "Grand Manhattan", "shape": "Rectangle", "size": "16' x 35'", "image": "/images/pools/grand-manhattan.webp" },
-      { "name": "Costa Azul", "shape": "Free-form", "size": "15' x 35'", "image": "/images/pools/costa-azul.webp" },
-      { "name": "Venetian", "shape": "Roman", "size": "14' x 30'", "image": "/images/pools/venetian.webp" },
-      { "name": "Oasis", "shape": "Free-form", "size": "16' x 38'", "image": "/images/pools/oasis.webp" },
+      { "name": "Dallas", "shape": "Rectangle", "size": "16' x 42'", "image": "/images/wp/2024/08/dallas.webp" },
+      { "name": "Dolphin", "shape": "Rectangle", "size": "14' x 33'", "image": "/images/wp/2024/08/dolphin.webp" },
+      { "name": "Gulf Breeze", "shape": "Rectangle", "size": "12' x 20'", "image": "/images/wp/2024/08/gulf-breeze.webp" },
       { "name": "Great Lakes", "shape": "Rectangle", "size": "14' x 27'", "image": "/images/pools/great-lakes.webp" }
     ]
   },

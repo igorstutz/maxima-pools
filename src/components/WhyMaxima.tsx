@@ -9,7 +9,6 @@ import {
   HeartHandshake,
   CheckCircle2,
   Sparkles,
-  ArrowUpRight,
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useEffect, useRef, useState } from "react";
@@ -288,12 +287,9 @@ export function WhyMaxima() {
 
           {/* Card 5 — San Juan Partnership badge (spans 4) */}
           <ScrollReveal className="lg:col-span-4" delay={3}>
-            <a
+            <Link
               href={why.card5.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="group block rounded-3xl overflow-hidden bg-gradient-to-br from-primary to-accent-dark p-7 sm:p-9 flex flex-col items-center justify-center text-center h-full relative hover:shadow-xl hover:shadow-primary/30 transition-all duration-500"
-              aria-label="Visit San Juan Pools website (opens in new tab)"
             >
               <div className="absolute inset-0 water-caustics opacity-20" />
               <div className="relative">
@@ -310,12 +306,8 @@ export function WhyMaxima() {
                 <p className="text-white text-sm leading-relaxed max-w-xs">
                   {why.card5.description}
                 </p>
-                <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-semibold text-white/80 group-hover:text-white transition-colors">
-                  {why.card5.linkLabel}
-                  <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </span>
               </div>
-            </a>
+            </Link>
           </ScrollReveal>
         </div>
       </div>

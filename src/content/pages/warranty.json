@@ -1,0 +1,107 @@
+{
+  "seo": {
+    "title": "Warranty | San Juan Fiberglass Pools — Maxima Pools",
+    "description": "The San Juan fiberglass pool shell warranty: 25-year structural and 10-year surface coverage, exclusions, manufacturer duties, and how to keep your coverage active.",
+    "ogTitle": "San Juan Fiberglass Pool Warranty | Maxima Pools",
+    "ogDescription": "25-year structural and 10-year surface warranty on San Juan fiberglass pool shells — coverage, exclusions, and buyer action items."
+  },
+  "hero": {
+    "badge": "Warranty",
+    "headingLead": "Your Pool,",
+    "headingHighlight": "Protected",
+    "subtitle": "The official San Juan fiberglass pool shell warranty — what's covered, what voids it, and the steps to keep your coverage active."
+  },
+  "coverage": {
+    "badge": "Coverage & Timelines",
+    "heading": "What's Covered",
+    "items": [
+      {
+        "term": "25-Year",
+        "label": "Structural Warranty",
+        "description": "Covers pool shell leaks caused solely by structural failure due to faulty workmanship or manufacturing materials."
+      },
+      {
+        "term": "10-Year",
+        "label": "Surface Warranty",
+        "description": "Covers the Gelcoat/Iridium finish against staining, discoloration, or excessive fading due to material defects. (Does not cover natural sun/chemical fading, which can be restored via professional polishing.)"
+      }
+    ]
+  },
+  "exclusions": {
+    "badge": "Critical Exclusions",
+    "heading": "What Voids the Warranty",
+    "intro": "This warranty becomes null and void if any of the following occur:",
+    "items": [
+      {
+        "title": "Unauthorized Draining",
+        "description": "WARNING: Water levels must never drop below the skimmer outlet. Ground pressure can crack or buckle an empty shell. Draining must only be done by a licensed professional."
+      },
+      {
+        "title": "Neglect & Improper Chemistry",
+        "description": "Failure to maintain water balance within standard parameters or follow the official Pool Maintenance Manual."
+      },
+      {
+        "title": "Unauthorized Repairs / Alterations",
+        "description": "Any structural changes or repairs made by anyone other than the specific San Juan manufacturer."
+      },
+      {
+        "title": "External Forces",
+        "description": "Damage from ground shifting, floods, earthquakes, accidents, misuse, or improper dealer installation/handling."
+      },
+      {
+        "title": "Surroundings & Third-Party Equipment",
+        "description": "Decks (concrete, wood, masonry), coping, pumps, filters, or accessories from other suppliers."
+      }
+    ]
+  },
+  "duties": {
+    "badge": "Manufacturer Duties & Limitations",
+    "heading": "What the Manufacturer Covers",
+    "items": [
+      {
+        "title": "Remedy",
+        "description": "San Juan will, at its sole discretion, either repair or replace a defective shell."
+      },
+      {
+        "title": "Liability Limits",
+        "description": "Coverage extends to the pool shell only. San Juan is not responsible for water or chemical replacement, damage to landscaping, fencing, decks, or any incidental, special, or consequential damages."
+      }
+    ]
+  },
+  "buyerActions": {
+    "badge": "Buyer's Action Items",
+    "heading": "How to Keep Your Coverage Active",
+    "items": [
+      {
+        "title": "Registration",
+        "description": "The Warranty Registration Card must be completed, signed, and returned within 10 days of purchase to activate coverage."
+      },
+      {
+        "title": "Maintenance",
+        "description": "The buyer must request, read, and strictly follow the care instructions found at www.sanjuanpools.com."
+      },
+      {
+        "title": "Claims",
+        "description": "Defects must be reported via registered mail to the manufacturing plant within 15 days for structural issues (subject to a $75.00 trip fee per visit) or within 5 days for surface issues."
+      }
+    ]
+  },
+  "plants": {
+    "badge": "Authorized Manufacturing Plants",
+    "heading": "Where Claims Are Handled",
+    "items": [
+      { "state": "Arizona", "address": "850 North Davidson Blvd, Eloy, AZ 85231" },
+      { "state": "Florida", "address": "2302 Lasso Lane, Lakeland, FL 33801" },
+      { "state": "Indiana", "address": "8883 West US 24, Wolcott, IN 47995" }
+    ],
+    "note": "This document constitutes the exclusive warranty. No dealer or agent representations can alter these terms. This warranty gives you specific legal rights, which vary by state."
+  },
+  "cta": {
+    "heading": "Questions about your warranty?",
+    "body": "Our team is happy to walk you through coverage and registration for your San Juan fiberglass pool.",
+    "buttonLabel": "Contact Us",
+    "buttonHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

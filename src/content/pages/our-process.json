@@ -22,9 +22,42 @@
     "headingLead": "Step by",
     "headingHighlight": "Step",
     "intro": "Every Maxima Pools project follows a proven, transparent process. Here's what to expect when you work with us.",
-    "placeholderTitle": "Detailed Process Coming Soon",
-    "placeholderText": "We're preparing a detailed walkthrough of our installation process. In the meantime, reach out and we'll walk you through every step personally.",
-    "placeholderCtaLabel": "Talk to Our Team",
-    "placeholderCtaHref": "/contact"
+    "steps": [
+      {
+        "icon": "Phone",
+        "title": "Phone Consultation",
+        "description": "We talk over the phone to discuss your vision, budget, and pool model options to see if we are a good fit."
+      },
+      {
+        "icon": "MapPin",
+        "title": "Site Visit",
+        "description": "We visit your home to check the ground, take measurements, and look at access points for the equipment."
+      },
+      {
+        "icon": "ClipboardList",
+        "title": "Proposal",
+        "description": "We give you a clear, itemized price quote and a project timeline based on your yard and choices."
+      },
+      {
+        "icon": "PenLine",
+        "title": "Contract",
+        "description": "We review and sign the paperwork together so everyone is on the same page before we begin."
+      },
+      {
+        "icon": "Banknote",
+        "title": "Deposit & Order Shell",
+        "description": "You make the initial deposit, and we officially order your San Juan fiberglass pool shell from the factory."
+      },
+      {
+        "icon": "Ruler",
+        "title": "Permitting & Drawings",
+        "description": "We handle the paperwork, draw up the plans, and submit everything to your city to get the required building permits."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Delivery Day & Pool Build Begins",
+        "description": "Your pool shell arrives, our crew starts digging, and we begin building your pool."
+      }
+    ]
   }
 }
