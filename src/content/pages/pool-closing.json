@@ -81,6 +81,7 @@
     "startingLabel": "Starting at",
     "price": "$450",
     "priceCaption": "Pool Winterization",
+    "services": ["Pool Opening", "Winterization"],
     "includedChecklist": [
       "Blow out all plumbing lines",
       "Reduce water level",

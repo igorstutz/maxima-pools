@@ -42,8 +42,8 @@
     { "icon": "Shield", "title": "Pool Covers", "items": ["Automatic covers", "Safety covers", "Winter covers", "Solar covers"] },
     { "icon": "Flame", "title": "Fire Features", "items": ["Fire bowls", "Fire & water", "Gas torches", "Fire pits"] },
     { "icon": "Sparkles", "title": "Recreation", "items": ["Diving boards", "Slides", "Basketball", "Volleyball"] },
-    { "icon": "Wifi", "title": "Automation", "items": ["App control", "Scheduling", "Chemistry monitor", "Voice control"] },
-    { "icon": "Wrench", "title": "Entry & Safety", "items": ["Railings", "Tanning ledges", "Pool steps", "ADA access"] }
+    { "icon": "Wifi", "title": "Automation", "items": ["App control", "Scheduling", "Chemistry monitor"] },
+    { "icon": "Wrench", "title": "Entry & Safety", "items": ["Railings", "Tanning ledges", "Pool steps"] }
   ],
   "showcaseSection": {
     "badge": "Explore",

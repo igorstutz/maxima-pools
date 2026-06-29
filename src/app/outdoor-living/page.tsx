@@ -199,6 +199,16 @@ export default function OutdoorLivingPage() {
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href={content.vision.concreteHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
+                >
+                  {content.vision.concreteLabel}
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </ScrollReveal>
 
@@ -353,6 +363,16 @@ export default function OutdoorLivingPage() {
                     </li>
                   ))}
                 </ul>
+
+                <a
+                  href={content.kitchensFeature.concreteHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-white text-primary-dark font-semibold rounded-full hover:bg-white/90 hover:scale-105 transition-all duration-300 text-sm shadow-lg"
+                >
+                  {content.kitchensFeature.concreteLabel}
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
             </ScrollReveal>
           </div>

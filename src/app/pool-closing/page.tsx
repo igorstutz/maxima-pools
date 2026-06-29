@@ -392,9 +392,21 @@ export default function PoolClosingPage() {
                     <p className="text-5xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent mb-2">
                       {content.pricing.price}
                     </p>
-                    <p className="text-lg font-semibold text-gray-900 mb-8">
+                    <p className="text-lg font-semibold text-gray-900 mb-5">
                       {content.pricing.priceCaption}
                     </p>
+
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {content.pricing.services.map((service) => (
+                        <span
+                          key={service}
+                          className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary-dark bg-accent/10 border border-accent/15 rounded-full px-4 py-1.5"
+                        >
+                          <CheckCircle2 size={14} className="text-accent" />
+                          {service}
+                        </span>
+                      ))}
+                    </div>
 
                     <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mb-8" />
 

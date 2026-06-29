@@ -48,7 +48,7 @@ export async function generateMetadata({
   if (!pool) return {};
 
   const title = `${pool.name} Fiberglass ${pool.type} | Maxima Pools`;
-  const description = `Explore the ${pool.name} — a ${pool.shape.toLowerCase()} fiberglass ${pool.type.toLowerCase()} measuring ${pool.width} x ${pool.length} with ${pool.depth} depth. Get a free estimate from Maxima Pools in Columbus, OH.`;
+  const description = `Explore the ${pool.name} — a ${pool.shape ? pool.shape.toLowerCase() + " " : ""}fiberglass ${pool.type.toLowerCase()} measuring ${pool.width} x ${pool.length} with ${pool.depth} depth. Get a free estimate from Maxima Pools in Columbus, OH.`;
 
   return {
     title,
@@ -89,7 +89,7 @@ function getSimilarPools(pool: Pool): Pool[] {
     const key = slugify(p.name);
     if (key === slug) continue;
     let score = 0;
-    if (p.shape === pool.shape) score += 2;
+    if (pool.shape && p.shape === pool.shape) score += 2;
     if (p.size === pool.size) score += 1;
     if (p.type === pool.type) score += 1;
     if (score > 0) scored.set(key, { pool: p, score });
@@ -143,7 +143,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
     "@context": "https://schema.org",
     "@type": "Product",
     name: `${pool.name} Fiberglass ${pool.type}`,
-    description: `${pool.name} — a ${pool.shape.toLowerCase()} fiberglass ${pool.type.toLowerCase()} measuring ${pool.width} x ${pool.length} with ${pool.depth} depth. By San Juan Pools, installed by Maxima Pools.`,
+    description: `${pool.name} — a ${pool.shape ? pool.shape.toLowerCase() + " " : ""}fiberglass ${pool.type.toLowerCase()} measuring ${pool.width} x ${pool.length} with ${pool.depth} depth. By San Juan Pools, installed by Maxima Pools.`,
     brand: { "@type": "Brand", name: "San Juan Pools" },
     manufacturer: { "@type": "Organization", name: "San Juan Pools" },
     image: pool.image,
@@ -183,9 +183,11 @@ export default async function PoolDetailPage({ params }: PageProps) {
             <span className="inline-flex items-center gap-1.5 bg-accent/20 border border-accent/30 rounded-full px-3 py-1 text-xs font-bold text-accent uppercase tracking-wider">
               {pool.type}
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
-              {pool.shape}
-            </span>
+            {pool.shape && (
+              <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
+                {pool.shape}
+              </span>
+            )}
             <span className="inline-flex items-center gap-1.5 bg-white/[0.08] border border-white/[0.12] rounded-full px-3 py-1 text-xs font-semibold text-white uppercase tracking-wider">
               {pool.size}
             </span>
@@ -307,7 +309,7 @@ export default async function PoolDetailPage({ params }: PageProps) {
                   About the <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">{pool.name}</span>
                 </h2>
                 <p className="text-gray-600 leading-relaxed text-lg mb-4">
-                  The {pool.name} is a {pool.shape.toLowerCase()} fiberglass{" "}
+                  The {pool.name} is a {pool.shape ? `${pool.shape.toLowerCase()} ` : ""}fiberglass{" "}
                   {pool.type.toLowerCase()} featuring a {pool.width} x {pool.length} footprint
                   with a depth of {pool.depth}. With {pool.area} of{" "}
                   {pool.type === "Pool" ? "swimming" : "soaking"} area and {pool.volume} capacity,
@@ -429,9 +431,11 @@ export default async function PoolDetailPage({ params }: PageProps) {
                           className="object-contain group-hover:scale-105 transition-transform duration-700"
                           sizes="(max-width: 768px) 50vw, 25vw"
                         />
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-bold text-primary-dark shadow-sm">
-                          {p.shape}
-                        </div>
+                        {p.shape && (
+                          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-bold text-primary-dark shadow-sm">
+                            {p.shape}
+                          </div>
+                        )}
                       </div>
                       <div className="p-4 sm:p-5">
                         <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1 group-hover:text-primary transition-colors">

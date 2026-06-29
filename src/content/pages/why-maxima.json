@@ -48,8 +48,8 @@
     "floatingSubtitle": "In-house professionals, start to finish",
     "headingLead": "In-House Expertise,",
     "headingHighlight": "Start to Finish",
-    "paragraph1": "At Maxima Pools, we don't hand your project off to a chain of subcontractors. Our dedicated team of excavation, construction, and design professionals manages your project entirely in-house.",
-    "paragraph2": "This means faster communication, consistent quality, and a single point of accountability from the first shovel in the ground to the final finishing touch. When you choose Maxima, you get the peace of mind that comes from working directly with the people building your pool.",
+    "paragraph1": "Maxima Pools and Maxima Concrete are sister companies, each focusing on their own specific projects to transform your property. Backed by the strength and longevity of Maxima Concrete, we bring the solid structural expertise of our concrete division to support the premium quality of Maxima Pools.",
+    "paragraph2": "While each company handles its own specialized work, choosing Maxima Pools means your project benefits from the unmatched durability, precision, and reliability of a family of brands you already trust.",
     "points": [
       "Excavation Crew",
       "Construction Team",
@@ -59,7 +59,9 @@
       "Project Management"
     ],
     "ctaLabel": "Visit Maxima Concrete",
-    "ctaHref": "https://www.maximaconcrete.com/"
+    "ctaHref": "https://www.maximaconcrete.com/",
+    "ctaSecondaryLabel": "Our Process",
+    "ctaSecondaryHref": "/our-process"
   },
   "sanJuan": {
     "badge": "Our Partnership",
@@ -89,7 +91,7 @@
       "icon": "Shovel",
       "title": "Expert Excavation",
       "description": "Proper foundation starts with expert excavation. Our experienced crew ensures precise grading and site preparation for a flawless installation.",
-      "image": "/images/process/final-prep.webp",
+      "image": "/images/why-maxima/service-excavation.webp",
       "href": "/our-process",
       "external": false
     },
@@ -97,7 +99,7 @@
       "icon": "HardHat",
       "title": "Pool Setting & Installation",
       "description": "Seamless pool setting with meticulous attention to leveling, alignment, and structural integrity for a perfect fit every time.",
-      "image": "/images/process/completed.webp",
+      "image": "/images/why-maxima/service-installation.webp",
       "href": "/our-process",
       "external": false
     },
@@ -113,7 +115,7 @@
       "icon": "Plug",
       "title": "Electrical & Backfilling",
       "description": "Complete electrical work for pumps, lighting, and automation systems, followed by precision backfilling for a solid, lasting installation.",
-      "image": "/images/process/outfitting.webp",
+      "image": "/images/why-maxima/service-electrical.webp",
       "href": "/our-process",
       "external": false
     },
@@ -146,19 +148,19 @@
       "icon": "Thermometer",
       "title": "Heating Systems",
       "description": "Extend your swim season year-round with efficient pool heating solutions. Enjoy your pool from early spring through late fall in Central Ohio.",
-      "image": "/images/pools/atlantic.webp"
+      "image": "/images/why-maxima/enhance-heating.webp"
     },
     {
       "icon": "ShieldHalf",
       "title": "Automatic Covers",
       "description": "Effortless pool maintenance and safety with automatic covers. Keep debris out, retain heat, and add peace of mind with the push of a button.",
-      "image": "/images/pools/grand-manhattan.webp"
+      "image": "/images/why-maxima/enhance-automatic-cover.webp"
     },
     {
       "icon": "Sparkles",
       "title": "Fun Features",
       "description": "Make your pool uniquely yours with slides, attached hot tubs, tanning ledges, bubblers, and more. Every detail tailored to your family.",
-      "image": "/images/pools/oasis.webp"
+      "image": "/images/why-maxima/enhance-fun-features.webp"
     }
   ],
   "investment": {

@@ -275,18 +275,30 @@ export default function WhyMaximaPage() {
                     </div>
                   ))}
                 </div>
-                <a
-                  href={content.team.ctaHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 mt-8 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 text-sm whitespace-nowrap"
-                >
-                  {content.team.ctaLabel}
-                  <ArrowUpRight
-                    size={16}
-                    className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                  />
-                </a>
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-3 mt-8 *:whitespace-nowrap">
+                  <a
+                    href={content.team.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full transition-all duration-300 shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 text-sm"
+                  >
+                    {content.team.ctaLabel}
+                    <ArrowUpRight
+                      size={16}
+                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
+                    />
+                  </a>
+                  <Link
+                    href={content.team.ctaSecondaryHref}
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white border border-gray-200 text-gray-700 font-semibold rounded-full transition-all duration-300 hover:border-accent/40 hover:text-primary hover:shadow-lg hover:scale-105 text-sm"
+                  >
+                    {content.team.ctaSecondaryLabel}
+                    <ArrowRight
+                      size={16}
+                      className="group-hover:translate-x-1 transition-transform"
+                    />
+                  </Link>
+                </div>
               </div>
             </ScrollReveal>
           </div>

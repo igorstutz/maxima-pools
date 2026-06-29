@@ -1,7 +1,7 @@
 {
   "order": 46,
   "name": "Margarita Beach",
-  "image": "/images/wp/2024/08/margarita-beach-05-1024x643.webp",
+  "image": "/images/wp/2024/08/margarita-beach-1.webp",
   "width": "10'",
   "length": "13'1\"",
   "depth": "3'11\"",
@@ -10,6 +10,7 @@
   "shape": "Rectangular",
   "size": "Small",
   "type": "Pool with Spa",
+  "types": ["Pool with Spa", "Spa", "Tanning Ledge"],
   "hidden": false,
   "gallery": [
     "/images/wp/2024/08/margarita-beach-01-1024x643.webp",

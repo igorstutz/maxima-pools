@@ -58,6 +58,7 @@ export const pools: Pool[] = allPools.map((p) => ({
   shape: p.shape,
   size: p.size,
   type: p.type,
+  ...(p.types ? { types: p.types } : {}),
   ...(p.hidden ? { hidden: true } : {}),
 }));
 

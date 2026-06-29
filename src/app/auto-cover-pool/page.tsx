@@ -15,6 +15,7 @@ import {
   Sparkles,
   Timer,
   Droplets,
+  Palette,
   type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -450,6 +451,66 @@ export default function AutoCoverPage() {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
+      {/* ── Color Selection ── */}
+      <section className="py-16 sm:py-24 bg-gray-50 texture-noise">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="max-w-3xl mb-12">
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                <Palette size={14} className="text-accent" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                  {content.colors.badge}
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                {content.colors.headingLead}{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  {content.colors.headingHighlight}
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {content.colors.paragraph}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-5">
+            {content.colors.swatches.map((swatch, i) => (
+              <ScrollReveal key={swatch.name} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <div className="group bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-500">
+                  <div
+                    className="aspect-[4/3] w-full"
+                    style={{ backgroundColor: swatch.hex }}
+                  />
+                  <div className="p-4">
+                    <p className="text-sm font-semibold text-gray-900">
+                      {swatch.name}
+                    </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+
+          <ScrollReveal>
+            <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <p className="text-sm text-gray-500">{content.colors.note}</p>
+              <a
+                href={content.colors.sourceHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-1.5 text-accent font-semibold text-sm hover:text-accent-dark transition-colors whitespace-nowrap"
+              >
+                {content.colors.sourceLabel}
+                <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

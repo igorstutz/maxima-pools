@@ -7,9 +7,9 @@
   "depth": "1'6\"",
   "area": "224 sq ft",
   "volume": "1,600 gal",
-  "shape": "Rectangular",
   "size": "Small",
-  "type": "Pool with Spa",
+  "type": "Tanning Ledge",
+  "types": ["Spa", "Tanning Ledge"],
   "hidden": false,
   "gallery": [
     "/images/wp/2024/08/fun-deck-01-1024x576.webp",

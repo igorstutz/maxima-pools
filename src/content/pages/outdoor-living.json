@@ -43,7 +43,9 @@
       "One team, one timeline, one flawless result",
       "Serving Columbus, OH and surrounding areas"
     ],
-    "image": "/images/outdoor-living/kitchen.webp"
+    "image": "/images/outdoor-living/kitchen.webp",
+    "concreteLabel": "Explore Maxima Concrete",
+    "concreteHref": "https://www.maximaconcrete.com/"
   },
   "servicesSection": {
     "badge": "Our Solutions",
@@ -104,7 +106,9 @@
       "Integrated sinks & prep areas",
       "Custom bar & seating options",
       "Seamless pool-to-kitchen flow"
-    ]
+    ],
+    "concreteLabel": "Explore Maxima Concrete",
+    "concreteHref": "https://www.maximaconcrete.com/"
   },
   "lightingShade": [
     {

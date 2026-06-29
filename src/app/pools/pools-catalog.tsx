@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Ruler, Droplets, Maximize2, Waves, Search, Sparkles } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
-import { slugify, type Pool } from "@/lib/pool-utils";
+import { slugify, poolTypes, type Pool } from "@/lib/pool-utils";
 import poolsIndex from "@/content/pages/pools-index.json";
 
 const heroContent = poolsIndex.hero;
@@ -17,7 +17,7 @@ const statIcons = { Waves, Ruler, Droplets } as const;
 /*  Filter options                                                     */
 /* ------------------------------------------------------------------ */
 
-const typeFilters = ["All", "Pool", "Spa", "Pool with Spa", "Tanning Ledge"] as const;
+const typeFilters = ["All", "Pool", "Pool with Spa", "Spa", "Tanning Ledge"] as const;
 const shapeFilters = ["All", "Rectangular", "Freeform"] as const;
 const sizeCategoryFilters = ["All Sizes", "Small", "Medium", "Large"] as const;
 const sizeFilters = [
@@ -129,7 +129,13 @@ export function PoolsCatalog({ pools }: { pools: Pool[] }) {
     const q = nameSearch.toLowerCase().trim();
     return pools.filter((pool) => {
       if (q && !pool.name.toLowerCase().includes(q)) return false;
-      const matchesType = typeFilter === "All" || pool.type === typeFilter;
+      const cats = poolTypes(pool);
+      const matchesType =
+        typeFilter === "All" ||
+        // The "Pool" filter is inclusive: it also surfaces "Pool with Spa" models.
+        (typeFilter === "Pool"
+          ? cats.includes("Pool") || cats.includes("Pool with Spa")
+          : cats.includes(typeFilter));
       const matchesShape = shapeFilter === "All" || pool.shape === shapeFilter;
       const matchesSizeCategory = sizeCategoryFilter === "All Sizes" || pool.size === sizeCategoryFilter;
       const matchesSize = matchesSizeFilter(pool, sizeFilter);
@@ -407,10 +413,12 @@ export function PoolsCatalog({ pools }: { pools: Pool[] }) {
                         {/* Overlay gradient */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                        {/* Shape badge — top left */}
-                        <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-bold text-primary-dark shadow-sm">
-                          {pool.shape}
-                        </div>
+                        {/* Shape badge — top left (only for models with a defined shape) */}
+                        {pool.shape && (
+                          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 text-xs font-bold text-primary-dark shadow-sm">
+                            {pool.shape}
+                          </div>
+                        )}
 
                         {/* Size badge — top right */}
                         <div

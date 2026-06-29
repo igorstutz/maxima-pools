@@ -371,13 +371,15 @@ export default function FinancingPage() {
 
               <div className="relative px-8 sm:px-12 lg:px-16 py-16 sm:py-20">
                 <div className="max-w-2xl">
-                  <Image
-                    src={content.finalCta.logo}
-                    alt="Lyon Financial"
-                    width={200}
-                    height={60}
-                    className="h-10 sm:h-12 w-auto object-contain mb-8 brightness-0 invert opacity-60"
-                  />
+                  <div className="inline-flex bg-white rounded-2xl px-5 py-3 mb-8 shadow-lg">
+                    <Image
+                      src={content.finalCta.logo}
+                      alt="Lyon Financial — Maxima Pools financing partner"
+                      width={200}
+                      height={60}
+                      className="h-10 sm:h-12 w-auto object-contain"
+                    />
+                  </div>
                   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-5">
                     {content.finalCta.headingLead}{" "}
                     <span className="shimmer-text">{content.finalCta.headingHighlight}</span>

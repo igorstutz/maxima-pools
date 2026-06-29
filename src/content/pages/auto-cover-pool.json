@@ -82,8 +82,26 @@
     "specifications": [
       { "title": "Easy-Out Pulley Assembly", "description": "Quick-access pulleys can be serviced in minutes, reducing downtime and ensuring long-term reliability." },
       { "title": "Universal Compatibility", "description": "Adapts to rectangular, freeform, and custom pool layouts with seamless integration into any construction style." },
-      { "title": "SmartMotion Diagnostics", "description": "Real-time monitoring of cover movement, tension, and motor performance with instant alerts." },
       { "title": "Electric Drive Mechanism", "description": "High-efficiency motor delivers smooth, quiet, consistent operation for years of dependable use." }
+    ]
+  },
+  "colors": {
+    "badge": "Color Selection",
+    "headingLead": "Available",
+    "headingHighlight": "Cover Colors",
+    "paragraph": "A pool cover should be three things: safe, durable, and unobtrusive. To beautifully integrate the cover into your pool area, you can choose from a palette of eight fabric colors.",
+    "note": "Colors shown are representative. Actual fabric samples are available on request.",
+    "sourceLabel": "View the full color selection",
+    "sourceHref": "https://automaticpoolcovers.com/color-selection",
+    "swatches": [
+      { "name": "Light Blue", "hex": "#7FA8C9" },
+      { "name": "Royal Blue", "hex": "#2C5BA6" },
+      { "name": "Navy Blue", "hex": "#1C2A4A" },
+      { "name": "Forest Green", "hex": "#2E4734" },
+      { "name": "Light Gray", "hex": "#B7BBBF" },
+      { "name": "Charcoal Gray", "hex": "#3B3F45" },
+      { "name": "Brown", "hex": "#5B4633" },
+      { "name": "Beige", "hex": "#CBB893" }
     ]
   },
   "finalCta": {
