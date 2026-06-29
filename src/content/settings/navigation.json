@@ -43,7 +43,7 @@
       },
       { "label": "Outdoor Living", "href": "/outdoor-living" },
       { "label": "Gallery", "href": "/fiberglass-pool-gallery" },
-      { "label": "Blog", "href": "/blog" }
+      { "label": "Pool Simulator", "href": "/pool-simulator" }
     ],
     "phone": { "display": "(614) 384-5081", "href": "tel:+16143845081" },
     "cta": { "label": "Free Estimate", "href": "/contact" }
