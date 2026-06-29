@@ -66,9 +66,33 @@ export default function WarrantyPage() {
               <span className="shimmer-text">{content.hero.headingHighlight}</span>
             </h1>
 
-            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl">
+            <p className="hero-animate hero-animate-4 text-lg sm:text-xl text-white leading-relaxed max-w-2xl mb-8">
               {content.hero.subtitle}
             </p>
+
+            <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
+              <Link
+                href={content.hero.primaryHref}
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] hover:scale-105 transition-all duration-300 text-sm"
+              >
+                {content.hero.primaryLabel}
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href={content.hero.simulatorHref}
+                className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-full text-white font-semibold hover:bg-white/15 transition-all text-sm"
+              >
+                <Sparkles size={16} className="text-accent" />
+                {content.hero.simulatorLabel}
+              </Link>
+              <a
+                href={content.hero.phoneHref}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full text-white font-semibold hover:bg-white/[0.12] transition-all text-sm"
+              >
+                <Phone size={16} />
+                {content.hero.phoneDisplay}
+              </a>
+            </div>
           </div>
         </div>
       </section>

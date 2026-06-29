@@ -9,7 +9,13 @@
     "badge": "Warranty",
     "headingLead": "Your Pool,",
     "headingHighlight": "Protected",
-    "subtitle": "The official San Juan fiberglass pool shell warranty — what's covered, what voids it, and the steps to keep your coverage active."
+    "subtitle": "The official San Juan fiberglass pool shell warranty — what's covered, what voids it, and the steps to keep your coverage active.",
+    "primaryLabel": "Get Your Free Estimate",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
   },
   "coverage": {
     "badge": "Coverage & Timelines",
