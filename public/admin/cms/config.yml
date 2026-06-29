@@ -154,6 +154,7 @@ collections:
                   - { label: "Image alt text", name: imageAlt, widget: string }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
+                  - { label: "Card link (whole card is clickable)", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
               - label: "Card 2 — quality / stats card"
                 name: card2
                 widget: object

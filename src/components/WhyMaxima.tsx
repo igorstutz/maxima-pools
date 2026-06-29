@@ -115,7 +115,10 @@ export function WhyMaxima() {
 
           {/* Card 1 — Hero card with pool image (spans 7) */}
           <ScrollReveal className="md:col-span-2 lg:col-span-7">
-            <div className="group rounded-3xl overflow-hidden border border-gray-100 bg-white h-full flex flex-col">
+            <Link
+              href={why.card1.href}
+              className="group block rounded-3xl overflow-hidden border border-gray-100 bg-white h-full flex flex-col hover:shadow-xl hover:border-gray-200 transition-all duration-500"
+            >
               {/* Image — clean, no overlay */}
               <div className="relative aspect-[16/9] overflow-hidden">
                 <Image
@@ -154,7 +157,7 @@ export function WhyMaxima() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           </ScrollReveal>
 
           {/* Card 2 — Stats card (spans 5) */}
