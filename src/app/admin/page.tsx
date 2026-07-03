@@ -103,6 +103,7 @@ export default function AdminDashboardPage() {
   const [preset, setPreset] = useState<Preset>("30");
   const [customFrom, setCustomFrom] = useState("");
   const [customTo, setCustomTo] = useState("");
+  const [tab, setTab] = useState<"submissions" | "calls">("submissions");
 
   async function load(isRefresh = false) {
     if (isRefresh) setRefreshing(true);
@@ -308,9 +309,16 @@ export default function AdminDashboardPage() {
           </div>
         </div>
 
-        {/* Summary cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
-          <div className="rounded-2xl bg-white border border-gray-100 p-6 flex items-center gap-4 shadow-sm">
+        {/* Summary cards (click to switch tab) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <button
+            onClick={() => setTab("submissions")}
+            className={`rounded-2xl bg-white border p-6 flex items-center gap-4 shadow-sm text-left transition ${
+              tab === "submissions"
+                ? "border-accent ring-1 ring-accent/30"
+                : "border-gray-100 hover:border-accent/40"
+            }`}
+          >
             <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
               <Inbox size={22} className="text-accent" />
             </div>
@@ -320,8 +328,15 @@ export default function AdminDashboardPage() {
               </p>
               <p className="text-sm text-gray-500">Form submissions</p>
             </div>
-          </div>
-          <div className="rounded-2xl bg-white border border-gray-100 p-6 flex items-center gap-4 shadow-sm">
+          </button>
+          <button
+            onClick={() => setTab("calls")}
+            className={`rounded-2xl bg-white border p-6 flex items-center gap-4 shadow-sm text-left transition ${
+              tab === "calls"
+                ? "border-primary ring-1 ring-primary/30"
+                : "border-gray-100 hover:border-primary/40"
+            }`}
+          >
             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
               <PhoneCall size={22} className="text-primary" />
             </div>
@@ -329,14 +344,38 @@ export default function AdminDashboardPage() {
               <p className="text-3xl font-bold text-gray-900">{calls.length}</p>
               <p className="text-sm text-gray-500">Call-button clicks</p>
             </div>
-          </div>
+          </button>
+        </div>
+
+        {/* Tabs */}
+        <div className="inline-flex rounded-full bg-white border border-gray-200 p-1 mb-8">
+          <button
+            onClick={() => setTab("submissions")}
+            className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition ${
+              tab === "submissions"
+                ? "bg-primary text-white"
+                : "text-gray-600 hover:text-primary"
+            }`}
+          >
+            <Inbox size={15} />
+            Form Submissions
+          </button>
+          <button
+            onClick={() => setTab("calls")}
+            className={`inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition ${
+              tab === "calls"
+                ? "bg-primary text-white"
+                : "text-gray-600 hover:text-primary"
+            }`}
+          >
+            <PhoneCall size={15} />
+            Call Clicks
+          </button>
         </div>
 
         {/* Submissions */}
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <Inbox size={18} className="text-accent" />
-          Form Submissions
-        </h2>
+        {tab === "submissions" && (
+          <>
         {submissionsByDay.length === 0 ? (
           <div className="rounded-2xl bg-white border border-gray-100 p-10 text-center text-gray-400 mb-12">
             No submissions in this period.
@@ -437,12 +476,12 @@ export default function AdminDashboardPage() {
             ))}
           </div>
         )}
+          </>
+        )}
 
         {/* Calls */}
-        <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <PhoneCall size={18} className="text-primary" />
-          Call Clicks
-        </h2>
+        {tab === "calls" && (
+          <>
         <div className="grid lg:grid-cols-2 gap-4">
           {/* By day */}
           <div className="rounded-2xl bg-white border border-gray-100 p-6 shadow-sm">
@@ -502,6 +541,8 @@ export default function AdminDashboardPage() {
           <p className="text-xs text-gray-400 mt-4">
             Showing the most recent 20,000 call clicks.
           </p>
+        )}
+          </>
         )}
       </div>
     </section>
