@@ -33,6 +33,7 @@ export function Hero() {
         muted
         playsInline
         preload="auto"
+        aria-hidden="true"
         poster={asset("/images/pools/atlantic.webp")}
         className="absolute inset-0 w-full h-full object-cover"
       >
@@ -159,6 +160,7 @@ export function Hero() {
                     muted
                     playsInline
                     preload="metadata"
+                    aria-label="San Juan fiberglass pool installed by Maxima Pools"
                     poster={asset("/videos/hero-card-poster.webp")}
                     className="absolute inset-0 w-full h-full object-cover"
                   >

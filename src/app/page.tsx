@@ -20,31 +20,84 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            name: "Maxima Pools",
-            description:
-              "Premium fiberglass pool installation and outdoor living services in Columbus, OH. Authorized San Juan Pools dealer.",
-            telephone: "+1-614-384-5081",
-            email: "info@maximapools.com",
-            url: "https://maximapools.com",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "4059 State Route 37 East, Suite A",
-              addressLocality: "Delaware",
-              addressRegion: "OH",
-              postalCode: "43015",
-              addressCountry: "US",
-            },
-            areaServed: [
-              "Columbus, OH",
-              "Delaware, OH",
-              "Franklin County",
-              "Delaware County",
-              "Union County",
-              "Licking County",
-              "Fairfield County",
+            "@graph": [
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://maximapools.com/#localbusiness",
+                name: "Maxima Pools",
+                description:
+                  "Premium fiberglass pool installation and outdoor living services in Columbus, OH. Authorized San Juan Pools dealer.",
+                telephone: "+1-614-384-5081",
+                email: "info@maximapools.com",
+                url: "https://maximapools.com",
+                image: "https://maximapools.com/og-image.jpg",
+                logo: "https://maximapools.com/icon-512.png",
+                parentOrganization: {
+                  "@id": "https://maximapools.com/#organization",
+                },
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "4059 State Route 37 East, Suite A",
+                  addressLocality: "Delaware",
+                  addressRegion: "OH",
+                  postalCode: "43015",
+                  addressCountry: "US",
+                },
+                areaServed: [
+                  "Columbus, OH",
+                  "Delaware, OH",
+                  "Franklin County",
+                  "Delaware County",
+                  "Union County",
+                  "Licking County",
+                  "Fairfield County",
+                ],
+                openingHoursSpecification: {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "08:00",
+                  closes: "17:00",
+                },
+                sameAs: [
+                  "https://www.facebook.com/profile.php?id=61582788479318",
+                  "https://www.instagram.com/maxima.pools/",
+                ],
+                priceRange: "$$$$",
+              },
+              {
+                "@type": "VideoObject",
+                "@id": "https://maximapools.com/#hero-card-video",
+                name: "San Juan Fiberglass Pool Showcase — Maxima Pools",
+                description:
+                  "Showcase of a premium San Juan fiberglass pool installed by Maxima Pools in Central Ohio.",
+                thumbnailUrl:
+                  "https://maximapools.com/videos/hero-card-poster.webp",
+                contentUrl: "https://maximapools.com/videos/hero-card.mp4",
+                uploadDate: "2026-07-06",
+                duration: "PT34S",
+                publisher: { "@id": "https://maximapools.com/#organization" },
+              },
+              {
+                "@type": "VideoObject",
+                "@id": "https://maximapools.com/#hero-background-video",
+                name: "Fiberglass Pool Water — Maxima Pools",
+                description:
+                  "Ambient video of crystal-clear water in a fiberglass pool installed by Maxima Pools in Columbus, Ohio.",
+                thumbnailUrl:
+                  "https://maximapools.com/images/pools/atlantic.webp",
+                contentUrl:
+                  "https://maximapools.com/videos/pool-background-video.mp4",
+                uploadDate: "2026-04-13",
+                duration: "PT20S",
+                publisher: { "@id": "https://maximapools.com/#organization" },
+              },
             ],
-            priceRange: "$$$$",
           }),
         }}
       />

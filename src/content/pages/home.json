@@ -8,13 +8,6 @@
     "simulatorHref": "/pool-simulator",
     "galleryLabel": "Explore Our Pools",
     "galleryHref": "/fiberglass-pool-gallery",
-    "poolImages": [
-      { "src": "/images/pools/atlantic.webp", "alt": "Atlantic fiberglass pool" },
-      { "src": "/images/pools/grand-manhattan.webp", "alt": "Grand Manhattan fiberglass pool" },
-      { "src": "/images/pools/oasis.webp", "alt": "Oasis fiberglass pool" },
-      { "src": "/images/pools/venetian.webp", "alt": "Venetian fiberglass pool" },
-      { "src": "/images/pools/niagara.webp", "alt": "Niagara fiberglass pool" }
-    ],
     "testimonials": [
       { "text": "Transformed our backyard into paradise!", "author": "Sarah M.", "location": "Columbus" },
       { "text": "Best investment we've made in our home.", "author": "James & Linda T.", "location": "Delaware" },

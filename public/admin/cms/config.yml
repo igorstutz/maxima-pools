@@ -116,13 +116,6 @@ collections:
               - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal page starts with / (e.g. /pool-simulator). External starts with https://" }
               - { label: "Gallery button label", name: galleryLabel, widget: string }
               - { label: "Gallery button link", name: galleryHref, widget: string, hint: "Internal page starts with / (e.g. /fiberglass-pool-gallery). External starts with https://" }
-              - label: "Rotating pool images"
-                name: poolImages
-                widget: list
-                summary: "{{fields.alt}}"
-                fields:
-                  - { label: "Image", name: src, widget: image }
-                  - { label: "Alt text (for SEO/accessibility)", name: alt, widget: string }
               - label: "Rotating mini testimonials"
                 name: testimonials
                 widget: list
