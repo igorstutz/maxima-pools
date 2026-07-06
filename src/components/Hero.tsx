@@ -8,29 +8,21 @@ import { asset } from "@/lib/base-path";
 import home from "@/content/pages/home.json";
 
 const hero = home.hero;
-const heroPoolImages = hero.poolImages;
 const heroTestimonials = hero.testimonials;
 
 export function Hero() {
-  const [activeImage, setActiveImage] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
-
-  const nextImage = useCallback(() => {
-    setActiveImage((prev) => (prev + 1) % heroPoolImages.length);
-  }, []);
 
   const nextTestimonial = useCallback(() => {
     setActiveTestimonial((prev) => (prev + 1) % heroTestimonials.length);
   }, []);
 
   useEffect(() => {
-    const imgInterval = setInterval(nextImage, 4000);
     const testInterval = setInterval(nextTestimonial, 5000);
     return () => {
-      clearInterval(imgInterval);
       clearInterval(testInterval);
     };
-  }, [nextImage, nextTestimonial]);
+  }, [nextTestimonial]);
 
   return (
     <section className="relative min-h-[88vh] sm:min-h-[90vh] lg:h-svh lg:max-h-screen lg:flex lg:items-center overflow-hidden">
@@ -161,19 +153,17 @@ export function Hero() {
               {/* Main pool showcase card */}
               <div className="relative glass rounded-[2rem] overflow-hidden p-2 animate-float">
                 <div className="rounded-[1.5rem] overflow-hidden bg-pool-deep/40 aspect-[4/5] xl:aspect-[3/4] relative">
-                  {heroPoolImages.map((img, i) => (
-                    <Image
-                      key={img.src}
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      className={`object-cover transition-opacity duration-1000 ${
-                        i === activeImage ? "opacity-100" : "opacity-0"
-                      }`}
-                      sizes="(max-width: 1280px) 280px, 380px"
-                      priority={i === 0}
-                    />
-                  ))}
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    poster={asset("/videos/hero-card-poster.webp")}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  >
+                    <source src={asset("/videos/hero-card.mp4")} type="video/mp4" />
+                  </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-pool-deep/40 via-transparent to-transparent" />
                 </div>
               </div>
