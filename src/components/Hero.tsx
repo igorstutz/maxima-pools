@@ -10,6 +10,9 @@ import home from "@/content/pages/home.json";
 const hero = home.hero;
 const heroTestimonials = hero.testimonials;
 
+// Temporarily hidden so the hero card video plays unobstructed.
+const SHOW_HERO_TESTIMONIALS = false;
+
 export function Hero() {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
@@ -18,6 +21,7 @@ export function Hero() {
   }, []);
 
   useEffect(() => {
+    if (!SHOW_HERO_TESTIMONIALS) return;
     const testInterval = setInterval(nextTestimonial, 5000);
     return () => {
       clearInterval(testInterval);
@@ -171,6 +175,7 @@ export function Hero() {
               </div>
 
               {/* Floating testimonial card */}
+              {SHOW_HERO_TESTIMONIALS && (
               <div className="absolute -bottom-2 left-0 glass-white rounded-2xl p-4 xl:p-5 shadow-2xl animate-float-delayed max-w-[210px] xl:max-w-[230px]">
                 <div className="flex gap-0.5 mb-2">
                   {[1, 2, 3, 4, 5].map((i) => (
@@ -197,6 +202,7 @@ export function Hero() {
                   ))}
                 </div>
               </div>
+              )}
 
               {/* Floating San Juan badge */}
               <div className="absolute -top-2 right-0 bg-white/10 backdrop-blur-2xl border border-white/20 rounded-2xl p-3 animate-float shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
