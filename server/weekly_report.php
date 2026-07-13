@@ -287,6 +287,11 @@ if (!$willSend) {
 // --- Send via authenticated SMTP (cURL) -------------------------------
 function send_smtp(string $to, string $subject, string $htmlBody, ?string &$err): bool {
     // RFC 5322 message. Encode the Subject (UTF-8) so the em dash survives.
+    // Body goes as base64: the HTML is one huge line, and SMTP servers fold
+    // lines over 998 chars at arbitrary points — one fold once landed inside
+    // a "<span" tag and the chip rendered as literal text in Gmail. Base64
+    // keeps every line at 76 chars (and none can start with "."), so nothing
+    // downstream ever rewraps the markup.
     $payload =
         'Date: ' . gmdate('r') . "\r\n" .
         'From: ' . FROM_NAME . ' <' . FROM_MAIL . ">\r\n" .
@@ -294,8 +299,9 @@ function send_smtp(string $to, string $subject, string $htmlBody, ?string &$err)
         'Subject: =?UTF-8?B?' . base64_encode($subject) . "?=\r\n" .
         "MIME-Version: 1.0\r\n" .
         "Content-Type: text/html; charset=utf-8\r\n" .
+        "Content-Transfer-Encoding: base64\r\n" .
         "X-Mailer: Maxima Pools Weekly Report\r\n\r\n" .
-        $htmlBody . "\r\n";
+        chunk_split(base64_encode($htmlBody), 76, "\r\n");
 
     $ch = curl_init();
     curl_setopt_array($ch, [
