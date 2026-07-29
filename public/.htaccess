@@ -25,6 +25,14 @@ RewriteRule ^(.*)$ https://maximapools.com/$1 [L,R=301]
 RewriteRule ^pools-sitemap\.xml$ /sitemap.xml [L,R=301]
 RewriteRule ^page-sitemap\.xml$ /sitemap.xml [L,R=301]
 
+# ── Renamed pool models ────────────────────────────────────────────────
+# The model name drives the page URL, so a spelling fix moves the page.
+# 301 the old URL to the new one so indexed links keep working (without
+# this the catch-all at the bottom would dump the visitor on the home
+# page instead of the model they asked for).
+# "Great Lake Beach" → "Great Lakes Beach" (2026-07-29)
+RewriteRule ^pools/great-lake-beach/?$ /pools/great-lakes-beach/ [L,R=301]
+
 # ── Pretty URLs for the Next.js static export ──────────────────────────
 # Each route is exported as <route>/index.html. Apache's DirectorySlash
 # already redirects /about → /about/, but we ALSO want /about.html style
