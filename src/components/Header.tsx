@@ -2,21 +2,40 @@
 
 import Link from "next/link";
 import Image from "@/components/Image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import nav from "@/content/settings/navigation.json";
 
 const header = nav.header;
 
+// useLayoutEffect no cliente (aplica o estado antes do paint), useEffect no
+// servidor para não emitir warning durante o SSR.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
+
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [openMenus, setOpenMenus] = useState<Record<number, boolean>>({});
   const [scrolled, setScrolled] = useState(false);
+  // Só habilita a transição depois do estado inicial, para o header não
+  // "animar" de transparente para branco ao recarregar no meio da página.
+  const [animate, setAnimate] = useState(false);
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
+    // Sincroniza logo no mount: num reload o browser restaura o scroll e
+    // nenhum evento de scroll é garantido.
+    handleScroll();
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    // A restauração de scroll pode acontecer depois da hidratação.
+    const raf = requestAnimationFrame(() => {
+      handleScroll();
+      setAnimate(true);
+    });
+    return () => {
+      cancelAnimationFrame(raf);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   // Lock body scroll when mobile menu is open
@@ -31,7 +50,9 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 ${
+        animate ? "transition-all duration-500" : ""
+      } ${
         scrolled
           ? "bg-white/95 backdrop-blur-xl shadow-lg shadow-black/5"
           : "bg-transparent"
@@ -47,9 +68,9 @@ export function Header() {
               alt="Maxima Pools"
               width={160}
               height={50}
-              className={`h-10 sm:h-12 w-auto transition-all duration-500 ${
-                scrolled ? "" : "brightness-0 invert"
-              }`}
+              className={`h-10 sm:h-12 w-auto ${
+                animate ? "transition-all duration-500" : ""
+              } ${scrolled ? "" : "brightness-0 invert"}`}
               priority
             />
           </Link>
