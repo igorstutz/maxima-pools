@@ -107,6 +107,21 @@ chmod 600 oai-capi-config.php
 
 Attempts are logged one JSON line each to `.private/oai-capi.log` (no PII).
 
+### Smoke-testing the server side
+
+`validate_only` asks OpenAI to check the payload without recording a
+conversion — safe to run against production:
+
+```bash
+cd domains/maximapools.com/public_html/api
+php -r 'require "oai-capi.php"; oai_capi_lead([
+  "event_id" => "smoke-" . bin2hex(random_bytes(5)),
+  "email" => "Smoke.Test@Example.com", "city" => "Delaware", "zip" => "43015",
+  "validate_only" => true,
+]);'
+tail -1 ../.private/oai-capi.log   # expect status 200, {"accepted_events":1}
+```
+
 > **Note:** `api/submit.php` is excluded from the CI rsync, so changes to it
 > must be copied to the server manually (`scp`), unlike `api/oai-capi.php`.
 

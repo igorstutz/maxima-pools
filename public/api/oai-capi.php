@@ -66,7 +66,9 @@ function oai_capi_hash(string $value): ?string {
  * POST one event to the Conversions API. Fire-and-forget: never throws, and
  * a failure is logged rather than surfaced to the visitor.
  *
- * $meta accepts: id, oppref, source_url, action_source, custom_event_name
+ * $meta accepts: id, oppref, source_url, action_source, custom_event_name,
+ *                validate_only (smoke-test the payload without recording a
+ *                conversion — see the test recipe in DEPLOY.md)
  * $user accepts: email_sha256, obref, country, city, zip_code, ip_address,
  *                user_agent
  */
@@ -98,8 +100,14 @@ function oai_capi_send(string $type, array $data, array $meta = [], array $user 
         $event['user'] = $user;
     }
 
+    $validateOnly = !empty($meta['validate_only']);
+
     $body = json_encode(
-        ['validate_only' => false, 'integration_source' => 'maximapools-php', 'events' => [$event]],
+        [
+            'validate_only'      => $validateOnly,
+            'integration_source' => 'maximapools-php',
+            'events'             => [$event],
+        ],
         JSON_UNESCAPED_SLASHES
     );
 
@@ -121,7 +129,14 @@ function oai_capi_send(string $type, array $data, array $meta = [], array $user 
     curl_close($ch);
 
     if ($status >= 200 && $status < 300) {
-        oai_capi_log(['event' => $type, 'id' => $eventId, 'status' => $status, 'ok' => true]);
+        oai_capi_log([
+            'event'    => $type,
+            'id'       => $eventId,
+            'status'   => $status,
+            'ok'       => true,
+            'validate' => $validateOnly ?: null,
+            'response' => $validateOnly ? substr((string)$response, 0, 200) : null,
+        ]);
         return;
     }
 
@@ -130,6 +145,7 @@ function oai_capi_send(string $type, array $data, array $meta = [], array $user 
         'id'       => $eventId,
         'status'   => $status,
         'ok'       => false,
+        'validate' => $validateOnly ?: null,
         'error'    => $error !== '' ? $error : null,
         'response' => substr((string)$response, 0, 500),
     ]);
@@ -137,16 +153,17 @@ function oai_capi_send(string $type, array $data, array $meta = [], array $user 
 
 /**
  * The site's main conversion: a contact-form lead.
- * Keys: event_id, oppref, source_url, email, city, zip
+ * Keys: event_id, oppref, source_url, email, city, zip, validate_only
  */
 function oai_capi_lead(array $lead): void {
     oai_capi_send(
         'lead_created',
         ['type' => 'customer_action'],
         [
-            'id'         => (string)($lead['event_id'] ?? ''),
-            'oppref'     => (string)($lead['oppref'] ?? ''),
-            'source_url' => (string)($lead['source_url'] ?? 'https://maximapools.com/contact/'),
+            'id'            => (string)($lead['event_id'] ?? ''),
+            'oppref'        => (string)($lead['oppref'] ?? ''),
+            'source_url'    => (string)($lead['source_url'] ?? 'https://maximapools.com/contact/'),
+            'validate_only' => !empty($lead['validate_only']),
         ],
         [
             'email_sha256' => !empty($lead['email']) ? oai_capi_hash((string)$lead['email']) : null,
