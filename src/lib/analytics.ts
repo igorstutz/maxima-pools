@@ -4,7 +4,12 @@
 /*                                                                     */
 /*  GTM container is loaded in src/app/layout.tsx and creates          */
 /*  window.dataLayer on its own. We just push to it.                   */
+/*                                                                     */
+/*  The same conversions also go to the ChatGPT Ads pixel, which is    */
+/*  called directly (not through GTM) — see src/lib/oaiq.ts.           */
 /* ------------------------------------------------------------------ */
+
+import { identify, measure, newEventId, sha256Hex } from "./oaiq";
 
 declare global {
   interface Window {
@@ -24,6 +29,9 @@ type LeadParams = {
   phone?: string;
   full_name?: string;
   street?: string;
+  /** ChatGPT Ads dedup key — the same id submit.php sends to the
+   *  Conversions API for this submission. */
+  event_id?: string;
 };
 
 function push(payload: Record<string, unknown>) {
@@ -39,6 +47,21 @@ function normalizePhone(phone: string): string {
   if (digits.length === 10) return `+1${digits}`;
   if (digits.length === 11 && digits.startsWith("1")) return `+${digits}`;
   return `+${digits}`;
+}
+
+/**
+ * ChatGPT Ads lead conversion. Hashing the email is async, so this runs
+ * detached from the dataLayer push — the user stays on the thank-you screen.
+ */
+async function oaiLead(params: LeadParams) {
+  const emailHash = params.email ? await sha256Hex(params.email) : null;
+  identify({
+    email_sha256: emailHash ?? undefined,
+    country: "US",
+    city: params.city,
+    zip_code: params.zip,
+  });
+  measure("lead_created", { type: "customer_action" }, { event_id: params.event_id });
 }
 
 export const analytics = {
@@ -67,11 +90,18 @@ export const analytics = {
     if (email || phone) payload.user_country = "US";
 
     push(payload);
+    void oaiLead(params);
   },
 
   /** Clique em qualquer link tel:… no site. */
   phoneClick(location: string) {
     push({ event: "phone_click", click_location: location });
+    // Não é um evento padrão do ChatGPT Ads — vai como custom, e o
+    // custom_event_name precisa casar em qualquer envio server-side.
+    measure("custom", { type: "custom" }, {
+      event_id: newEventId(),
+      custom_event_name: "phone_click",
+    });
   },
 
   /** Página /pool-simulator carregada. */

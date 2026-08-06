@@ -72,6 +72,44 @@ Use the CMS at `https://maximapools.com/admin/cms/` → **Blog Posts → New**. 
 commits a Markdown file to `src/content/blog/` and the site rebuilds/deploys
 automatically. (The old `/admin/blog` localStorage draft tool was removed.)
 
+## ChatGPT Ads (OpenAI Ads) conversion tracking
+
+The measurement pixel is loaded by the site itself (not by GTM) so the event
+queue exists before any conversion fires. Pixel ID: CMS → **Site Settings →
+Tracking & Scripts → ChatGPT Ads Pixel ID**. Never add the same pixel inside
+Tag Manager as well — that would `init` it twice.
+
+What the site sends (`src/lib/oaiq.ts`):
+
+| Action | Event | Where |
+| --- | --- | --- |
+| Contact form submitted OK | `lead_created` (`customer_action`) | `src/lib/analytics.ts` → `analytics.lead()` |
+| Click on any `tel:` link | custom `phone_click` | `src/lib/analytics.ts` → `analytics.phoneClick()` |
+
+Each lead carries an `event_id` (UUID) that `api/submit.php` reuses for the
+server-side Conversions API call, so OpenAI counts one conversion instead of
+two. To debug in the browser, add `?oaiqdebug=1` to any URL — the SDK then
+logs every event to the console.
+
+### Installing the Conversions API key (one-time, server-side)
+
+`api/oai-capi.php` is a silent no-op until the key exists on the server. Create
+it by hand (it must never live in the public repo):
+
+```bash
+ssh -p 65002 u247207656@157.173.208.145
+cd domains/maximapools.com/public_html/.private
+cat > oai-capi-config.php <<'PHP'
+<?php return ['apiKey' => 'PASTE-THE-CONVERSIONS-API-KEY'];
+PHP
+chmod 600 oai-capi-config.php
+```
+
+Attempts are logged one JSON line each to `.private/oai-capi.log` (no PII).
+
+> **Note:** `api/submit.php` is excluded from the CI rsync, so changes to it
+> must be copied to the server manually (`scp`), unlike `api/oai-capi.php`.
+
 ## Troubleshooting
 
 - **Form returns "Something went wrong"** — check `submit.php`'s `$RECIPIENT`/`$FROM_EMAIL` exist as Hostinger mailboxes. Hostinger blocks `mail()` from a `From:` address it doesn't own.

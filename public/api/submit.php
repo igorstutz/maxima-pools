@@ -14,7 +14,13 @@ declare(strict_types=1);
  *
  *  Every submission is also appended to /.private/submissions.log so the
  *  lead is preserved even if the email layer breaks.
+ *
+ *  A successful lead is also reported to ChatGPT Ads server-side (see
+ *  oai-capi.php) — a no-op until the API key is installed on the server.
  * ---------------------------------------------------------------------- */
+
+// Loaded with @ so a missing/broken file can never take the form down.
+@require_once __DIR__ . '/oai-capi.php';
 
 // === Configuration ====================================================
 $RECIPIENT  = 'info@maximapools.com';
@@ -88,6 +94,17 @@ $poolSize = field('poolSize');
 $source   = field('source');
 $message  = substr(trim((string)($_POST['message'] ?? '')), 0, 5000);
 
+// ChatGPT Ads tracking ids sent by the form (opaque tokens — keep only
+// characters an id can legitimately contain).
+function tracking_token(string $k): string {
+    return substr(preg_replace('/[^A-Za-z0-9._-]/', '', field($k)), 0, 128);
+}
+$oaiEventId = tracking_token('oaiEventId');
+$oaiOppref  = tracking_token('oaiOppref');
+if ($oaiOppref === '') {
+    $oaiOppref = substr(preg_replace('/[^A-Za-z0-9._-]/', '', (string)($_COOKIE['__oppref'] ?? '')), 0, 128);
+}
+
 $errors = [];
 if (strlen($name) < 2)                                  $errors['name']     = 'Please enter your full name';
 if (!filter_var($email, FILTER_VALIDATE_EMAIL))         $errors['email']    = 'Please enter a valid email address';
@@ -155,6 +172,26 @@ log_submission([
 
 if ($ok) {
     echo json_encode(['ok' => true]);
+
+    // Report the conversion to ChatGPT Ads *after* handing back the response,
+    // so the outbound POST never adds latency to the form. Same event id as
+    // the browser pixel → OpenAI dedupes the two into one conversion.
+    if (function_exists('fastcgi_finish_request')) {
+        @fastcgi_finish_request();
+    }
+    if (function_exists('oai_capi_lead')) {
+        $referer = (string)($_SERVER['HTTP_REFERER'] ?? '');
+        oai_capi_lead([
+            'event_id'   => $oaiEventId,
+            'oppref'     => $oaiOppref,
+            'source_url' => preg_match('#^https://(www\.)?maximapools\.com/#i', $referer)
+                ? $referer
+                : 'https://maximapools.com/contact/',
+            'email'      => $email,
+            'city'       => $city,
+            'zip'        => $zip,
+        ]);
+    }
     exit;
 }
 

@@ -10,6 +10,11 @@ import tracking from "@/content/settings/tracking.json";
 // GTM container id is managed from the CMS (Site Settings → Tracking & Scripts).
 const GTM_ID = tracking.gtmId;
 
+// ChatGPT Ads (OpenAI Ads) measurement pixel — same CMS screen. Initialised
+// here rather than inside GTM so the queue exists before src/lib/oaiq.ts
+// sends conversions. Keep it out of GTM to avoid a duplicate `init`.
+const OAI_PIXEL_ID = tracking.openaiPixelId;
+
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
@@ -103,6 +108,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','${GTM_ID}');`}
         </Script>
+        {OAI_PIXEL_ID ? (
+          <>
+            <Script id="oaiq-init" strategy="afterInteractive">
+              {`window.oaiq=window.oaiq||function(){(window.oaiq.q=window.oaiq.q||[]).push(arguments)};
+oaiq("init",{pixelId:"${OAI_PIXEL_ID}",debug:location.search.indexOf("oaiqdebug")>-1});`}
+            </Script>
+            <Script
+              id="oaiq-sdk"
+              src="https://bzrcdn.openai.com/sdk/oaiq.min.js"
+              strategy="afterInteractive"
+            />
+          </>
+        ) : null}
       </head>
       <body className="bg-white text-gray-900 antialiased">
         <script

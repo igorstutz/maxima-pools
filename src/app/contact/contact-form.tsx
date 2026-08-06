@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, type FormEvent } from "react";
 import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { asset } from "@/lib/base-path";
 import { analytics } from "@/lib/analytics";
+import { newEventId, readOppref } from "@/lib/oaiq";
 
 // PHP endpoint that lives at public_html/api/submit.php on Hostinger.
 // asset() prefixes the deploy basePath when present (GH Pages preview).
@@ -120,6 +121,14 @@ export function ContactForm() {
     setErrors({});
     setStatus("submitting");
 
+    // ChatGPT Ads — one id shared by the browser pixel and submit.php's
+    // Conversions API call so the same lead is counted once. The click
+    // reference rides along too, since the server can't derive it.
+    const oaiEventId = newEventId();
+    form.append("oaiEventId", oaiEventId);
+    const oppref = readOppref();
+    if (oppref) form.append("oaiOppref", oppref);
+
     try {
       const res = await fetch(SUBMIT_ENDPOINT, {
         method: "POST",
@@ -140,6 +149,7 @@ export function ContactForm() {
           phone: (form.get("phone") as string) || undefined,
           full_name: (form.get("name") as string) || undefined,
           street: (form.get("address") as string) || undefined,
+          event_id: oaiEventId,
         });
         setStatus("success");
         formEl.reset();
