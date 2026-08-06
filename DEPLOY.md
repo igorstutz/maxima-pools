@@ -209,13 +209,31 @@ The OAuth access token is cached next to it in `.private/gads-token.json`
 (auto-created, refreshed ~hourly) so a burst of leads doesn't mint one per
 submission.
 
-### 5. Smoke-test before trusting it
+### 5. Check the setup
 
-`validate_only` asks Google to check the payload without recording a
-conversion — safe against production:
+`api/gads-check.php` tests each piece separately and names the one that's
+wrong — the API's own errors are cryptic and arrive all at once. It records
+nothing (the last step is a `validateOnly` dry run):
 
 ```bash
 cd domains/maximapools.com/public_html/api
+php gads-check.php
+```
+
+```
+1. Config file      → present, all keys, customerId is 10 digits
+2. OAuth            → refresh token still exchanges for an access token
+3. Account          → developer token accepted, account name, time zone match
+4. Conversion action→ exists, type UPLOAD_CLICKS, ENABLED, Primary or not
+5. Dry run          → Google accepts the real payload
+```
+
+Exit code is 0 only when everything passes. It's CLI-only — over HTTP it
+404s.
+
+For a one-off payload check without the rest:
+
+```bash
 php -r 'require "gads-capi.php"; gads_upload_lead([
   "name" => "Smoke Test", "email" => "smoke.test@example.com",
   "phone" => "6143845081", "city" => "Delaware", "state" => "OH",
