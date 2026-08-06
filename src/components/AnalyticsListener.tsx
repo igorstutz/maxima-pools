@@ -3,9 +3,17 @@
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 import { analytics } from "@/lib/analytics";
+import { captureClickIds } from "@/lib/click-ids";
 
 export function AnalyticsListener() {
   const pathname = usePathname();
+
+  useEffect(() => {
+    // Runs before anything else touches analytics: the ad click id has to be
+    // stored even when the GTM container is blocked, or the server-side
+    // conversion upload loses its attribution.
+    captureClickIds();
+  }, [pathname]);
 
   useEffect(() => {
     if (!pathname) return;

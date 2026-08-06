@@ -5,6 +5,7 @@ import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { asset } from "@/lib/base-path";
 import { analytics } from "@/lib/analytics";
 import { newEventId, readOppref } from "@/lib/oaiq";
+import { readClickIds } from "@/lib/click-ids";
 
 // PHP endpoint that lives at public_html/api/submit.php on Hostinger.
 // asset() prefixes the deploy basePath when present (GH Pages preview).
@@ -128,6 +129,13 @@ export function ContactForm() {
     form.append("oaiEventId", oaiEventId);
     const oppref = readOppref();
     if (oppref) form.append("oaiOppref", oppref);
+
+    // Google Ads click id, for the server-side Enhanced Conversions upload.
+    // Absent for organic visitors — the upload then matches on hashed
+    // email/phone alone, which is what "enhanced conversions for leads" is.
+    for (const [kind, value] of Object.entries(readClickIds())) {
+      form.append(kind, value);
+    }
 
     try {
       const res = await fetch(SUBMIT_ENDPOINT, {

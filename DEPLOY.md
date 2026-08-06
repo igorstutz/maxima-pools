@@ -125,6 +125,127 @@ tail -1 ../.private/oai-capi.log   # expect status 200, {"accepted_events":1}
 > **Note:** `api/submit.php` is excluded from the CI rsync, so changes to it
 > must be copied to the server manually (`scp`), unlike `api/oai-capi.php`.
 
+## Google Ads — Enhanced Conversions for Leads (server-side)
+
+The GTM tag only reports a lead when the container actually loads, so every
+visitor running an ad blocker — and every Safari user whose cookie expired
+before they came back — is invisible to Google Ads. `api/gads-capi.php`
+uploads the same lead straight from the server, matching on a hashed
+email/phone instead of a cookie, so nothing in the browser can block it.
+
+The click id rides along when there is one: `src/lib/click-ids.ts` stores
+`gclid`/`wbraid`/`gbraid` from the landing URL in the first-party `_mx_gcl`
+cookie (90 days). It reads the URL directly rather than gtag's `_gcl_aw`,
+because a blocked container never writes that cookie — which is exactly the
+case this feature exists for.
+
+Everything is a silent no-op until `/.private/gads-config.php` exists, so
+the contact form is unaffected while you work through the setup below.
+
+**This does not replace the browser side.** The GTM container already has
+Enhanced Conversions wired up client-side — the `DLV - user_*` data-layer
+variables, the `UPD - Lead Form` user-provided-data variable and the
+`GAds Conversion ID` constant, fed by `analytics.lead()` in
+`src/lib/analytics.ts`. That keeps working untouched; this covers only the
+visitors it never sees.
+
+### 1. Get a developer token — start here, it gates everything
+
+Google Ads → **Tools → API Center**. A fresh token is **test-account only**;
+uploads against the real account fail until Google approves *Basic access*,
+which is a short application form and can take a few days. Nothing else
+works before this, so apply first.
+
+### 2. Create the conversion action
+
+Google Ads → **Goals → Conversions → New conversion action → Import →
+CRM/files/other data sources → Track conversions from clicks**, and enable
+**Enhanced conversions for leads** on it. Accept the customer-data terms.
+
+Note the numeric conversion action id from the URL (`ctId=...`).
+
+> ⚠️ **This must be a second action, separate from the website tag** — the
+> API only accepts uploads into an import-type action. Keep exactly **one of
+> the two marked as Primary**, or the same lead counts twice. Suggested
+> path: leave the website tag Primary, run the upload as Secondary for a
+> couple of weeks, compare the counts, then swap once you trust the upload.
+
+### 3. OAuth credentials
+
+1. Google Cloud Console → new project → enable the **Google Ads API**.
+2. **APIs & Services → Credentials → OAuth client ID → Web application**,
+   with `https://developers.google.com/oauthplayground` as a redirect URI.
+3. [OAuth Playground](https://developers.google.com/oauthplayground) → gear
+   icon → *Use your own OAuth credentials* → paste the client id/secret →
+   authorise the scope `https://www.googleapis.com/auth/adwords` with the
+   Google account that can see the Ads account → **Exchange authorization
+   code for tokens** → copy the **refresh token**.
+
+### 4. Install the config on the server
+
+```bash
+ssh -p 65002 u247207656@157.173.208.145
+cd domains/maximapools.com/public_html/.private
+cat > gads-config.php <<'PHP'
+<?php return [
+    'clientId'           => '....apps.googleusercontent.com',
+    'clientSecret'       => '...',
+    'refreshToken'       => '...',
+    'developerToken'     => '...',
+    'customerId'         => '1234567890',   // the Ads account, no dashes
+    'conversionActionId' => '987654321',
+    // ↑ customerId is the 10-digit account id in the top corner of Google
+    //   Ads — NOT the AW-XXXXXXX in the GTM "GAds Conversion ID" variable.
+    // Optional:
+    // 'loginCustomerId' => '1112223333',   // only when accessed via an MCC
+    // 'conversionValue' => 250,            // what a lead is worth, USD
+    // 'timeZone'        => 'America/New_York',  // must match the Ads account
+];
+PHP
+chmod 600 gads-config.php
+```
+
+The OAuth access token is cached next to it in `.private/gads-token.json`
+(auto-created, refreshed ~hourly) so a burst of leads doesn't mint one per
+submission.
+
+### 5. Smoke-test before trusting it
+
+`validate_only` asks Google to check the payload without recording a
+conversion — safe against production:
+
+```bash
+cd domains/maximapools.com/public_html/api
+php -r 'require "gads-capi.php"; gads_upload_lead([
+  "name" => "Smoke Test", "email" => "smoke.test@example.com",
+  "phone" => "6143845081", "city" => "Delaware", "state" => "OH",
+  "zip" => "43015", "order_id" => "smoke-" . bin2hex(random_bytes(4)),
+  "validate_only" => true,
+]);'
+tail -1 ../.private/gads-capi.log   # expect "ok":true
+```
+
+Attempts are logged one JSON line each to `.private/gads-capi.log` (no PII —
+only the order id, status and how many identifiers matched).
+
+**Read the `ok` field, not the status code.** Google returns rejected
+conversions inside an HTTP 200 as `partialFailureError`; the log unpacks
+that into `"ok":false` plus the message, so a `200` alone means nothing.
+
+Real uploads show up in Google Ads within ~3 hours (up to 24h), under the
+conversion action's *Diagnostics* tab.
+
+### Notes
+
+- Leads without a click id still upload — that's the point of matching on
+  hashed data. They land as enhanced conversions for leads.
+- A lead with neither email nor phone nor a full name is skipped and logged
+  as `no usable identifiers`; the form itself requires all three, so this
+  only fires on malformed input.
+- `order_id` reuses the same id sent to ChatGPT Ads, so one lead can be
+  traced across both platforms' logs and a re-upload deduplicates instead of
+  doubling.
+
 ## Troubleshooting
 
 - **Form returns "Something went wrong"** — check `submit.php`'s `$RECIPIENT`/`$FROM_EMAIL` exist as Hostinger mailboxes. Hostinger blocks `mail()` from a `From:` address it doesn't own.

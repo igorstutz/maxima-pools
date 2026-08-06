@@ -15,12 +15,14 @@ declare(strict_types=1);
  *  Every submission is also appended to /.private/submissions.log so the
  *  lead is preserved even if the email layer breaks.
  *
- *  A successful lead is also reported to ChatGPT Ads server-side (see
- *  oai-capi.php) — a no-op until the API key is installed on the server.
+ *  A successful lead is also reported server-side to ChatGPT Ads (see
+ *  oai-capi.php) and to Google Ads (see gads-capi.php) — both are no-ops
+ *  until their credentials are installed on the server.
  * ---------------------------------------------------------------------- */
 
 // Loaded with @ so a missing/broken file can never take the form down.
 @require_once __DIR__ . '/oai-capi.php';
+@require_once __DIR__ . '/gads-capi.php';
 
 // === Configuration ====================================================
 $RECIPIENT  = 'info@maximapools.com';
@@ -73,8 +75,18 @@ function log_submission(array $entry): void {
     if (!is_dir($dir)) {
         @mkdir($dir, 0700, true);
     }
-    $line = json_encode($entry, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) . "\n";
-    @file_put_contents($dir . '/submissions.log', $line, FILE_APPEND | LOCK_EX);
+    // INVALID_UTF8_SUBSTITUTE matters: without it a single stray byte (a
+    // name pasted from Word, a bot posting Latin-1) makes json_encode return
+    // false, and this would append an empty line — losing the very lead the
+    // log exists to preserve.
+    $line = json_encode(
+        $entry,
+        JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE
+    );
+    if ($line === false) {
+        $line = json_encode(['ts' => gmdate('Y-m-d\TH:i:s\Z'), 'error' => 'unencodable submission']);
+    }
+    @file_put_contents($dir . '/submissions.log', $line . "\n", FILE_APPEND | LOCK_EX);
 }
 
 // Honeypot — silently accept and drop.
@@ -94,15 +106,39 @@ $poolSize = field('poolSize');
 $source   = field('source');
 $message  = substr(trim((string)($_POST['message'] ?? '')), 0, 5000);
 
-// ChatGPT Ads tracking ids sent by the form (opaque tokens — keep only
-// characters an id can legitimately contain).
-function tracking_token(string $k): string {
-    return substr(preg_replace('/[^A-Za-z0-9._-]/', '', field($k)), 0, 128);
+// Ad-platform tracking ids sent by the form (opaque tokens — keep only
+// characters an id can legitimately contain). Google's click ids run longer
+// than OpenAI's, hence the caller-supplied cap: truncating one produces an
+// id that silently matches nothing.
+function tracking_token(string $k, int $maxLen = 128): string {
+    return substr(preg_replace('/[^A-Za-z0-9._-]/', '', field($k)), 0, $maxLen);
 }
 $oaiEventId = tracking_token('oaiEventId');
 $oaiOppref  = tracking_token('oaiOppref');
 if ($oaiOppref === '') {
     $oaiOppref = substr(preg_replace('/[^A-Za-z0-9._-]/', '', (string)($_COOKIE['__oppref'] ?? '')), 0, 128);
+}
+
+// Google Ads click id. The form sends it (src/lib/click-ids.ts); the
+// `_mx_gcl` cookie is read here too so a lead still carries attribution if
+// the form's JS copy ever fails to attach it.
+$gclids = [];
+foreach (['gclid', 'wbraid', 'gbraid'] as $kind) {
+    $value = tracking_token($kind, 512);
+    if ($value !== '') {
+        $gclids[$kind] = $value;
+    }
+}
+if (!$gclids) {
+    $cookie = (string)($_COOKIE['_mx_gcl'] ?? '');
+    $sep    = strpos($cookie, '~');
+    if ($sep > 0) {
+        $kind  = substr($cookie, 0, $sep);
+        $value = substr(preg_replace('/[^A-Za-z0-9._-]/', '', substr($cookie, $sep + 1)), 0, 512);
+        if ($value !== '' && in_array($kind, ['gclid', 'wbraid', 'gbraid'], true)) {
+            $gclids[$kind] = $value;
+        }
+    }
 }
 
 $errors = [];
@@ -166,6 +202,7 @@ log_submission([
     'poolSize'     => $poolSize,
     'source'       => $source,
     'message'      => $message,
+    'click_id'     => $gclids ? array_key_first($gclids) . ':' . reset($gclids) : null,
     'email_status' => $ok ? 'sent' : 'failed',
     'email_error'  => $ok ? null : 'mail() returned false',
 ]);
@@ -190,6 +227,21 @@ if ($ok) {
             'email'      => $email,
             'city'       => $city,
             'zip'        => $zip,
+        ]);
+    }
+
+    // Google Ads Enhanced Conversions for Leads. Reuses the same id as the
+    // order id so a lead can be traced across both ad platforms' logs — and
+    // so a re-upload of the same lead is deduplicated rather than doubled.
+    if (function_exists('gads_upload_lead')) {
+        gads_upload_lead($gclids + [
+            'name'     => $name,
+            'email'    => $email,
+            'phone'    => $phone,
+            'city'     => $city,
+            'state'    => $state,
+            'zip'      => $zip,
+            'order_id' => $oaiEventId !== '' ? $oaiEventId : 'srv_' . bin2hex(random_bytes(8)),
         ]);
     }
     exit;
