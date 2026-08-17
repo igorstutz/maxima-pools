@@ -1,0 +1,376 @@
+{
+  "seo": {
+    "title": "Pool Cleaning & Maintenance | Maxima Pools - Columbus, OH",
+    "description": "Professional fiberglass pool cleaning and maintenance in Columbus, OH. Gelcoat-safe methods, balanced water every visit, and a written report you can read. Get a free quote.",
+    "ogTitle": "Pool Cleaning & Maintenance | Maxima Pools",
+    "ogDescription": "Crystal-clear water without the guesswork. Gelcoat-safe cleaning, balanced chemistry, and honest reporting from the crew that builds the pools."
+  },
+  "hero": {
+    "badge": "Cleaning & Maintenance",
+    "images": [
+      "/images/gallery/featured-01.webp",
+      "/images/gallery/granite-03.webp",
+      "/images/gallery/lagoon-05.webp",
+      "/images/gallery/white-03.webp"
+    ],
+    "headingLead": "Pool",
+    "headingHighlight": "Cleaning",
+    "subtitle": "Crystal-clear water without the guesswork. We clean, brush, vacuum and balance your fiberglass pool using gelcoat-safe methods — and leave a written report after every visit.",
+    "primaryLabel": "Get a Free Quote",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "stats": [
+    { "icon": "Droplets", "value": "1–3 ppm", "label": "Ideal Free Chlorine" },
+    { "icon": "Gauge", "value": "pH 7.4–7.6", "label": "Target Range" },
+    { "icon": "Timer", "value": "8–12 hrs", "label": "Daily Pump Run" },
+    { "icon": "Leaf", "value": "50%", "label": "Fewer Chemicals" }
+  ],
+  "overview": {
+    "badge": "Overview",
+    "headingLead": "Fiberglass Is Easier to Clean —",
+    "headingHighlight": "If You Clean It Right",
+    "paragraph1": "The gelcoat surface on a San Juan fiberglass pool is smooth and non-porous, so algae has almost nothing to grab onto. That means less brushing, fewer chemicals and no resurfacing — but it also means the surface deserves gentler treatment than the concrete pool next door.",
+    "paragraph2": "Steel brushes, abrasive pads and acid washes belong to a different kind of pool. Our crews clean with soft nylon tools, keep sanitizer steady instead of shocking hard, and treat the shell like the 30-year investment it is.",
+    "chips": [
+      { "icon": "Sparkles", "text": "Non-Porous Gelcoat" },
+      { "icon": "Brush", "text": "Soft-Brush Only" },
+      { "icon": "Leaf", "text": "Fewer Chemicals" },
+      { "icon": "ShieldCheck", "text": "No Resurfacing, Ever" }
+    ],
+    "image": "/images/gallery/sully-03.webp",
+    "imageAlt": "Clean fiberglass pool with paver deck"
+  },
+  "rhythmSection": {
+    "badge": "Care Routine",
+    "headingLead": "The Maintenance",
+    "headingHighlight": "Rhythm",
+    "intro": "Pool care is less about effort and more about cadence. Tap a timeframe to see exactly what needs to happen — whether you do it yourself or hand it to us."
+  },
+  "rhythm": [
+    {
+      "id": "weekly",
+      "label": "Weekly",
+      "icon": "CalendarDays",
+      "cadence": "Every 5–7 days",
+      "title": "The Weekly Reset",
+      "description": "Ninety percent of clear water comes from this short list. Skip two weeks in July and you'll spend a weekend fixing it.",
+      "tasks": [
+        { "icon": "Waves", "title": "Skim the surface", "description": "Net out leaves and bugs before they sink and start feeding algae." },
+        { "icon": "Filter", "title": "Empty both baskets", "description": "Skimmer and pump baskets choke water flow long before the filter does." },
+        { "icon": "Brush", "title": "Brush walls and steps", "description": "A soft nylon brush lifts the invisible film on the gelcoat, including the tanning ledge." },
+        { "icon": "Droplets", "title": "Vacuum the floor", "description": "Fine silt settles in the deep end and dulls the water even when chemistry is perfect." },
+        { "icon": "TestTube", "title": "Test chlorine and pH", "description": "Two strips, thirty seconds. Adjust while it's a small correction instead of a rescue." },
+        { "icon": "Gauge", "title": "Check the water level", "description": "Mid-skimmer is the target — too low and the pump starves and can run dry." }
+      ]
+    },
+    {
+      "id": "monthly",
+      "label": "Monthly",
+      "icon": "CalendarCheck",
+      "cadence": "Once a month",
+      "title": "The Deeper Check",
+      "description": "Monthly work is where you catch slow drifts — the ones that only show up as cloudy water three weeks later.",
+      "tasks": [
+        { "icon": "FlaskConical", "title": "Full chemistry panel", "description": "Total alkalinity, cyanuric acid and calcium hardness, not just chlorine and pH." },
+        { "icon": "Filter", "title": "Clean the filter", "description": "Rinse cartridges or backwash sand/DE once pressure climbs 8–10 psi above clean." },
+        { "icon": "Wrench", "title": "Inspect the equipment pad", "description": "Look for weeping unions, a tired pump lid o-ring, and unusual pump noise." },
+        { "icon": "SprayCan", "title": "Detail the waterline", "description": "Sunscreen and body oils collect in a band at the surface — wipe it before it sets." },
+        { "icon": "Zap", "title": "Check the salt cell", "description": "On salt systems, inspect the cell for scale and verify salinity sits at 3,000–3,500 ppm." },
+        { "icon": "Eye", "title": "Scan for early stains", "description": "Catch metal or organic staining while it still rinses off with a brush." }
+      ]
+    },
+    {
+      "id": "seasonal",
+      "label": "Seasonal",
+      "icon": "Sun",
+      "cadence": "Spring and fall",
+      "title": "Opening and Closing",
+      "description": "Ohio gives you two hinge points a year. Get these right and the season in between is quiet.",
+      "tasks": [
+        { "icon": "Sun", "title": "Spring opening", "description": "Pull the cover, refill to level, restart circulation and rebalance from scratch." },
+        { "icon": "Sparkles", "title": "Deep clean the shell", "description": "Full brush, vacuum and waterline detail before the water gets warm enough for algae." },
+        { "icon": "Filter", "title": "Strip the filter", "description": "A full teardown clean — or new cartridges — beats a season of weak filtration." },
+        { "icon": "Shield", "title": "Service the cover", "description": "Test the auto cover mechanism, clean the fabric, and check tracks and ropes." },
+        { "icon": "Snowflake", "title": "Fall winterization", "description": "Blow out the lines, drain the equipment and seal the pool for the freeze." },
+        { "icon": "Thermometer", "title": "Heater check", "description": "Verify the heater before the first cold night, not after it." }
+      ]
+    },
+    {
+      "id": "annual",
+      "label": "Annual",
+      "icon": "BadgeCheck",
+      "cadence": "Once a year",
+      "title": "The Yearly Once-Over",
+      "description": "One thorough look each year is what turns a $200 part into a repair you never had.",
+      "tasks": [
+        { "icon": "ClipboardCheck", "title": "Professional inspection", "description": "Shell, coping, skimmer, plumbing and bonding reviewed end to end." },
+        { "icon": "Filter", "title": "Replace filter media", "description": "Cartridges wear out after roughly 2–3 seasons; sand runs 5–7 years." },
+        { "icon": "Wrench", "title": "Pump and heater service", "description": "Seals, bearings, gaskets and pressure switches checked and replaced as needed." },
+        { "icon": "Sparkles", "title": "Gelcoat assessment", "description": "We look for fading, chalking or crazing and tell you what caused it." },
+        { "icon": "Zap", "title": "Electrical and automation", "description": "Bonding, GFCI protection, timers and app control verified and updated." },
+        { "icon": "Droplets", "title": "Water refresh plan", "description": "If stabilizer or hardness has climbed too far, we plan a partial exchange safely." }
+      ]
+    }
+  ],
+  "chemistrySection": {
+    "badge": "Water Chemistry",
+    "headingLead": "The Numbers That",
+    "headingHighlight": "Keep Water Clear",
+    "intro": "Almost every water problem is one of these six readings drifting out of range. Print this, tape it inside the equipment shed, and test twice a week in peak season.",
+    "note": "Ranges are general guidance for San Juan fiberglass pools. Salt, heated and automated systems may need tighter targets — we set yours on the first visit."
+  },
+  "chemistry": [
+    { "icon": "Gauge", "name": "pH", "target": "7.4 – 7.6", "why": "Below 7.2 the water turns aggressive on gelcoat and metal parts. Above 7.8 chlorine goes lazy and scale forms." },
+    { "icon": "Droplets", "name": "Free Chlorine", "target": "1 – 3 ppm", "why": "Steady sanitizer beats heavy shocking. Letting it hit zero for a day is how algae gets its opening." },
+    { "icon": "Waves", "name": "Total Alkalinity", "target": "80 – 120 ppm", "why": "This is pH's shock absorber. Too low and pH bounces daily; too high and it stubbornly climbs." },
+    { "icon": "Sun", "name": "Cyanuric Acid", "target": "30 – 50 ppm", "why": "Sunscreen for your chlorine. Above 50 ppm it starts locking the sanitizer instead of protecting it." },
+    { "icon": "Ruler", "name": "Calcium Hardness", "target": "150 – 250 ppm", "why": "Fiberglass tolerates softer water than concrete, but very low calcium still leads to foaming and staining." },
+    { "icon": "Zap", "name": "Salt (salt systems)", "target": "3,000 – 3,500 ppm", "why": "Below range the cell produces less chlorine and works harder; above range it corrodes hardware." }
+  ],
+  "troubleshootSection": {
+    "badge": "Troubleshooting",
+    "headingLead": "Something Off With",
+    "headingHighlight": "Your Water?",
+    "intro": "Pick the symptom you're looking at. We'll tell you the usual cause, what to do first, and when it's time to call instead of guessing.",
+    "causeLabel": "Usual Cause",
+    "stepsLabel": "What to Do First",
+    "callUsLabel": "When to Call Us",
+    "ctaLabel": "Book a Service Visit",
+    "ctaHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "troubleshoot": [
+    {
+      "id": "cloudy",
+      "label": "Cloudy water",
+      "icon": "Eye",
+      "cause": "Filtration running too short, pH and alkalinity drifting high, or very fine debris the filter can't grab.",
+      "steps": [
+        "Run the pump 10–12 hours a day until it clears",
+        "Clean the cartridges or backwash the filter",
+        "Bring pH back to 7.4–7.6 and alkalinity to 80–120 ppm",
+        "Brush the walls and floor, then vacuum what settles",
+        "Add a clarifier only after the filter is clean"
+      ],
+      "callUs": "Still hazy after 48 hours of good filtration? The filter media or pump flow is the real problem — that's a service call."
+    },
+    {
+      "id": "green",
+      "label": "Green or algae",
+      "icon": "Leaf",
+      "cause": "Chlorine hit zero, or cyanuric acid climbed high enough to lock the sanitizer you're adding.",
+      "steps": [
+        "Brush every surface first — algae has to be broken loose to be killed",
+        "Test cyanuric acid before shocking; high CYA needs more shock, not less",
+        "Shock the pool and run circulation 24 hours straight",
+        "Clean the filter once, then again after the water turns cloudy grey",
+        "Hold free chlorine at 3 ppm for several days before relaxing"
+      ],
+      "callUs": "A full green-to-clean recovery usually takes 3–5 days and several filter cleanings. We run it as a multi-visit program so you don't burn a week on it."
+    },
+    {
+      "id": "waterline",
+      "label": "Waterline ring",
+      "icon": "SprayCan",
+      "cause": "Sunscreen, body oils and airborne dust collecting in a band right at the water surface.",
+      "steps": [
+        "Wipe the band with a soft cloth or sponge and a gelcoat-safe cleaner",
+        "Never use scouring pads, abrasive powders or magic-eraser style blocks",
+        "Drop a skimmer sock into the basket to catch oils continuously",
+        "Rinse the removed film out of the pool rather than pushing it under"
+      ],
+      "callUs": "If the band has hardened into a rough calcium line, it needs a proper gelcoat-safe treatment — don't attack it with acid."
+    },
+    {
+      "id": "smell",
+      "label": "Strong chlorine smell",
+      "icon": "Wind",
+      "cause": "Counterintuitive but common — that smell is chloramines, meaning spent chlorine, not too much of it.",
+      "steps": [
+        "Test total chlorine and free chlorine; the gap between them is the problem",
+        "Shock the pool to break the chloramines apart",
+        "Run the pump overnight with the water feature on for aeration",
+        "Retest before anyone swims"
+      ],
+      "callUs": "If the smell and eye irritation come back within days, sanitizer demand is outrunning your system — worth a look at the pad."
+    },
+    {
+      "id": "chlorine",
+      "label": "Chlorine won't hold",
+      "icon": "TestTube",
+      "cause": "Usually stabilizer out of range — either none at all, so sunlight burns it off, or far too much, which locks it up.",
+      "steps": [
+        "Test cyanuric acid before adding anything else",
+        "At 0–20 ppm, add stabilizer so the sun stops eating your chlorine",
+        "Above 60 ppm, plan a partial water exchange to dilute it",
+        "Check for a heavy debris or organic load quietly consuming sanitizer"
+      ],
+      "callUs": "Never drain a fiberglass pool to fix chemistry. A partial exchange has to be done carefully — call us and we'll handle the volume math."
+    },
+    {
+      "id": "stains",
+      "label": "Stains or fading",
+      "icon": "Palette",
+      "cause": "Metals from fill water or a worn heater core, organic tannins from leaves, or chlorine held too high for too long.",
+      "steps": [
+        "Hold a crushed vitamin C tablet on the stain — if it lightens, it's metal",
+        "For metal, add a sequestrant and stop the metal source",
+        "For organic, shock and brush the area, then vacuum",
+        "Keep free chlorine under 5 ppm going forward to protect the gelcoat color"
+      ],
+      "callUs": "Never acid-wash or pressure-wash a fiberglass shell. Let us identify the stain first — the wrong fix is permanent."
+    }
+  ],
+  "rulesSection": {
+    "badge": "Gelcoat Rules",
+    "headingLead": "Fiberglass Do's",
+    "headingHighlight": "and Don'ts",
+    "intro": "A fiberglass shell will outlive most of the equipment attached to it — as long as nobody cleans it like a concrete pool."
+  },
+  "dos": {
+    "heading": "Do This",
+    "items": [
+      "Use a soft nylon brush or a pool-rated non-abrasive pad",
+      "Keep free chlorine steady at 1–3 ppm instead of shocking hard",
+      "Pre-dissolve granular chemicals in a bucket before they go in",
+      "Run the pump long enough to turn the water over once a day",
+      "Empty the skimmer and pump baskets before they restrict flow",
+      "Keep the water level at mid-skimmer, especially in a dry August"
+    ]
+  },
+  "donts": {
+    "heading": "Never Do This",
+    "items": [
+      "No steel brushes, scouring pads or abrasive cleaning powders",
+      "No loose trichlor tabs sitting on the floor or parked in the skimmer",
+      "Don't drain the pool — a fiberglass shell can flex or float",
+      "Don't leave chlorine above 5 ppm for days; the color pays for it",
+      "No acid washing and no pressure washing the shell",
+      "Don't let leaves sit for weeks — tannins stain and they stain fast"
+    ]
+  },
+  "serviceSection": {
+    "badge": "Our Service",
+    "headingLead": "What Happens on",
+    "headingHighlight": "Every Visit",
+    "paragraph": "Our maintenance crews follow the same checklist on every pool, every time — so nothing depends on who showed up that day. You get a written report with readings and anything worth watching.",
+    "images": [
+      { "src": "/images/gallery/lagoon-12.webp", "alt": "Fiberglass pool with clear blue water" },
+      { "src": "/images/why-maxima/enhance-heating.webp", "alt": "Maxima technician servicing pool equipment" },
+      { "src": "/images/accessories/pool-pump.webp", "alt": "Pool pump and filtration equipment" }
+    ],
+    "checklist": [
+      { "title": "Skim, net and vacuum", "description": "Surface, floor and steps — including whatever the last storm left behind." },
+      { "title": "Brush walls and waterline", "description": "Soft-brush the full shell, tanning ledge and the oil band at the surface." },
+      { "title": "Empty every basket", "description": "Skimmer and pump baskets cleared, lids and o-rings checked while we're in there." },
+      { "title": "Test and balance", "description": "Chlorine, pH, alkalinity and stabilizer measured and corrected on the spot." },
+      { "title": "Filter and pressure check", "description": "Pressure read against baseline; cartridges rinsed or backwashed when needed." },
+      { "title": "Written report", "description": "Readings, what we added, and anything that deserves attention before it becomes a repair." }
+    ]
+  },
+  "plansSection": {
+    "badge": "Service Options",
+    "headingLead": "Pick the Level of",
+    "headingHighlight": "Help You Want",
+    "intro": "Some owners want the whole thing handled. Some just want backup when it goes sideways. Both are fine."
+  },
+  "plans": [
+    {
+      "name": "One-Time Deep Clean",
+      "cadence": "Single visit",
+      "icon": "Sparkles",
+      "featured": false,
+      "description": "For a pool that's been neglected, just changed hands, or needs a reset before a weekend of guests.",
+      "features": [
+        "Full brush, net and vacuum",
+        "Waterline detail",
+        "Filter cleaned or media swapped",
+        "Water balanced before we leave",
+        "Equipment walkthrough",
+        "Written condition report"
+      ],
+      "ctaLabel": "Request a Quote",
+      "ctaHref": "/contact"
+    },
+    {
+      "name": "Recurring Maintenance",
+      "cadence": "Weekly or bi-weekly",
+      "icon": "CalendarDays",
+      "featured": true,
+      "description": "The hands-off option. We keep the cadence, you keep the pool. Most owners start here and never look back.",
+      "features": [
+        "Everything on the every-visit checklist",
+        "Chemistry balanced at each visit",
+        "Filter monitored across the season",
+        "Same crew, same standard",
+        "Report after every visit",
+        "Priority scheduling for repairs"
+      ],
+      "ctaLabel": "Get Pricing",
+      "ctaHref": "/contact"
+    },
+    {
+      "name": "Green-to-Clean Recovery",
+      "cadence": "Multi-visit program",
+      "icon": "Leaf",
+      "featured": false,
+      "description": "For algae blooms, storm damage and pools that sat closed too long. Structured recovery, not one hopeful bucket of shock.",
+      "features": [
+        "Staged shock program",
+        "Heavy debris removal",
+        "Repeated filter deep cleans",
+        "Chemistry checked between visits",
+        "Clarity target before we sign off",
+        "Handoff to a maintenance plan"
+      ],
+      "ctaLabel": "Talk to Us",
+      "ctaHref": "/contact"
+    }
+  ],
+  "plansNote": "Pricing depends on pool size, condition, equipment and travel. We quote after a quick look — no subscription traps, cancel any time.",
+  "whyChooseSection": {
+    "badge": "Why Maxima",
+    "headingLead": "Cleaned by the Crew That",
+    "headingHighlight": "Builds Them"
+  },
+  "whyChoose": [
+    { "icon": "Award", "title": "Fiberglass Specialists", "description": "We're an authorized San Juan dealer. We know what gelcoat tolerates because we install it for a living." },
+    { "icon": "ShieldCheck", "title": "Gelcoat-Safe Methods", "description": "Soft tools, measured chemistry, no shortcuts that trade next decade's finish for this week's shine." },
+    { "icon": "ClipboardCheck", "title": "Same Checklist, Every Visit", "description": "Nothing depends on which tech showed up. You get the full list and the readings in writing." },
+    { "icon": "Users", "title": "Local Columbus Team", "description": "Delaware-based, serving Columbus and the surrounding communities. Real people who answer the phone." }
+  ],
+  "faqSection": {
+    "badge": "FAQ",
+    "headingLead": "Cleaning",
+    "headingHighlight": "Questions",
+    "intro": "The questions we get most often about keeping a fiberglass pool clear. If yours isn't here, just call — we'd rather answer it than have you guess.",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "faqs": [
+    { "question": "How often does a fiberglass pool need to be cleaned?", "answer": "In season, plan on a weekly rhythm: skim, brush, vacuum, empty the baskets and test the water. A fiberglass shell needs less scrubbing than concrete because algae can't take hold in a non-porous gelcoat surface, but debris, oils and chemistry drift happen at the same rate in any pool. Most owners who hire us choose weekly or bi-weekly visits through the swim season." },
+    { "question": "Do fiberglass pools really need fewer chemicals?", "answer": "Yes, and the reason is physical rather than marketing. The gelcoat surface is smooth and non-porous, so there's no microscopic texture for algae to root into and no plaster leaching into the water and pushing pH up. Owners typically use noticeably less chlorine and acid than a comparable concrete pool. What doesn't change is the need to test — smaller corrections, just as often." },
+    { "question": "What kind of brush should I use on a fiberglass pool?", "answer": "A soft nylon-bristle brush, or a pool-rated non-abrasive pad for spot work. Never use a stainless or steel-bristle brush, a scouring pad, or an abrasive cleaning powder. Those are made for plaster and they leave permanent dull scratches in gelcoat. Same rule for the waterline: soft cloth and a gelcoat-safe cleaner only." },
+    { "question": "My pool turned green. How long does it take to fix?", "answer": "A typical green-to-clean recovery takes three to five days from the first treatment to swimmable water, and it usually needs several filter cleanings along the way. The sequence matters: brush first so the algae is broken loose, test stabilizer before dosing, shock, then keep circulation running around the clock. We run recovery as a structured multi-visit program rather than a single visit, because the filter work is what actually finishes the job." },
+    { "question": "Can I clean the pool myself and just call you when something's wrong?", "answer": "Absolutely, and plenty of our customers do exactly that. A one-time deep clean is a good reset if things got away from you, and we're happy to be the backup for algae blooms, equipment questions or a mid-season chemistry mess. We'll also show you how to read your own numbers so the calls get rarer." },
+    { "question": "Do you clean pools you didn't build?", "answer": "Yes. We service fiberglass, and we're happy to look at other pool types to tell you honestly whether we're the right crew for it. If your pool came from another builder, that's not a problem — we'll baseline the equipment and water on the first visit and go from there." },
+    { "question": "Can cleaning be bundled with opening and closing?", "answer": "Yes, and that's the combination most owners land on. Winterization assumes the pool is clean when we arrive, so bundling a cleaning visit with your closing avoids an extra fee and gives the pool a better winter. See our pool closing and opening page for what winterization covers, and mention the bundle when you book." }
+  ],
+  "finalCta": {
+    "image": "/images/gallery/lagoon-05.webp",
+    "headingLead": "Want to Stop Thinking About",
+    "headingHighlight": "Your Water?",
+    "paragraph": "Tell us about your pool and we'll put together a cleaning plan that fits it — one visit or all season long.",
+    "primaryLabel": "Get a Free Quote",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}
