@@ -46,7 +46,7 @@
   },
   "pillars": [
     { "icon": "FlaskConical", "title": "Vinyl Ester Resin", "subtitle": "Marine-grade, throughout the entire laminate", "description": "The marine industry has proven that only epoxy-type resins are truly impervious to water. San Juan uses proprietary Vinyl Ester resin — sharing the same chemical backbone as epoxy — throughout the entire laminate, not just the outer layer. This ensures consistent, watertight protection on both sides of the shell for decades.", "badge": "Supplied by Hexion", "badgeImage": "/images/how-its-made/hexion-logo.webp" },
-    { "icon": "Layers", "title": "Woven Fiberglass", "subtitle": "Hand-laid, never sprayed", "description": "The aerospace and marine industries would never rely on chopped fiberglass for structural strength — and neither does San Juan. Using woven roving (continuous strands woven together), each pool receives up to 72oz of fiberglass per square yard. Hand-laid, never sprayed — eliminating weak points that chopper-gun methods create.", "badge": "Supplied by PPG", "badgeImage": "/images/how-its-made/ppg-logo.webp" },
+    { "icon": "Layers", "title": "Hand-Laid Fiberglass", "subtitle": "Hand-laid sheets, never sprayed", "description": "The aerospace and marine industries would never rely on chopped fiberglass for structural strength — and neither does San Juan. Using hand-laid fiberglass sheets, each pool receives up to 72oz of fiberglass per square yard. Hand-laid, never sprayed — eliminating weak points that chopper-gun methods create.", "badge": "Supplied by PPG", "badgeImage": "/images/how-its-made/ppg-logo.webp" },
     { "icon": "Hammer", "title": "Expert Craftsmanship", "subtitle": "20+ years of hands-on experience", "description": "Once the best materials are selected, craftsmanship becomes the defining factor. Many of San Juan's expert laminators have been with the company for more than 20 years — guaranteeing consistency, precision, and the same uncompromising standard across every single pool produced.", "badge": "San Juan Pools", "badgeImage": "/images/logo/sanjuan-logo.webp" }
   ],
   "strengthSection": {
@@ -63,7 +63,7 @@
     "image3Alt": "Structural ribs reinforcement",
     "points": [
       "Hand-laid layers ensure uniform thickness — no thin spots",
-      "Continuous woven fiberglass vs. chopped pieces from a spray gun",
+      "Continuous hand-laid fiberglass sheets vs. chopped pieces from a spray gun",
       "Vinyl Ester resin throughout — not just the gel coat",
       "Structural ribs reinforce walls without added weight",
       "Flexes with ground movement instead of cracking",
@@ -86,7 +86,7 @@
   "steps": [
     { "number": "01", "title": "Prepare the Mold", "description": "The process begins with a clean, precisely waxed mold to ensure perfect shape accuracy. Every curve and contour is inspected before a single layer is applied.", "image": "/images/how-its-made/step-mold.webp" },
     { "number": "02", "title": "Cut & Lay Fiberglass", "description": "All fiberglass is hand-cut and hand-laid — none of the reinforcement is sprayed. This ensures structural consistency and eliminates weak points found in chopper-gun methods.", "image": "/images/how-its-made/step-glass.webp" },
-    { "number": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.", "image": "/images/how-its-made/step-panels.webp" },
+    { "number": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of hand-laid fiberglass per square yard creates unmatched structural integrity.", "image": "/images/how-its-made/step-panels.webp" },
     { "number": "04", "title": "Stiffen the Walls", "description": "Structural ribs are precisely positioned to reinforce wall strength without adding unnecessary weight. This is what allows fiberglass pools to flex with ground movement instead of cracking.", "image": "/images/how-its-made/step-ribs.webp" },
     { "number": "05", "title": "Clean & Inspect", "description": "Every pool is thoroughly inspected and all imperfections are repaired. This takes time, but only perfection is good enough for a San Juan pool. Quality control is non-negotiable.", "image": "/images/how-its-made/step-inspect.webp" },
     { "number": "06", "title": "Tile & Outfit", "description": "Pools are tiled and outfitted with all necessary fittings, returns, and drains. Each component is installed by hand to ensure a watertight, flawless finish.", "image": "/images/how-its-made/step-outfitting.webp" },

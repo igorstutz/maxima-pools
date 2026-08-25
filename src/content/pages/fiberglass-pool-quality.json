@@ -78,7 +78,7 @@
   "materialCards": [
     { "icon": "Layers", "title": "Premium Fiberglass Layers", "description": "At the heart of every pool is a carefully engineered shell made with hand-laid fiberglass layers. Unlike sprayed or chopped fiberglass, this process guarantees even thickness, consistent strength, and superior flexibility — the same standards used in marine and aerospace applications." },
     { "icon": "Sparkles", "title": "Advanced Gelcoat Protection", "description": "An advanced gelcoat surface finish that provides a smooth, non-porous barrier resisting staining, algae growth, and chemical damage. This coating delivers aesthetic brilliance while preserving quality against everyday wear, UV rays, and environmental stress." },
-    { "icon": "Shield", "title": "Reinforced Structural Design", "description": "Multiple reinforcement layers using woven roving and Vinyl Ester resin — the same materials found in boat hulls. This combination prevents cracking, blistering, and delamination, even under extreme weather conditions." }
+    { "icon": "Shield", "title": "Reinforced Structural Design", "description": "Multiple reinforcement layers using hand-laid fiberglass sheets and Vinyl Ester resin — the same materials found in boat hulls. This combination prevents cracking, blistering, and delamination, even under extreme weather conditions." }
   ],
   "benefitsSection": {
     "badge": "Benefits",

@@ -9,9 +9,11 @@ import {
   HeartHandshake,
   CheckCircle2,
   Sparkles,
+  Play,
 } from "lucide-react";
 import { ScrollReveal } from "./ScrollReveal";
 import { useEffect, useRef, useState } from "react";
+import { asset } from "@/lib/base-path";
 import home from "@/content/pages/home.json";
 
 const why = home.whyMaxima;
@@ -63,6 +65,72 @@ function AnimatedCounter({
       {count}
       {suffix}
     </span>
+  );
+}
+
+// Click-to-play so the file is only fetched when the visitor asks for it
+// (preload="none" keeps mobile data usage at just the poster image).
+function StoryVideo() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setPlaying(true);
+    videoRef.current?.play();
+  };
+
+  return (
+    <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-gray-100 bg-black shadow-lg">
+      <video
+        ref={videoRef}
+        className="block w-full aspect-video object-cover"
+        controls={playing}
+        playsInline
+        preload="none"
+        poster={asset(why.video.poster)}
+        aria-label={why.video.title}
+        onEnded={() => setPlaying(false)}
+      >
+        <source src={asset(why.video.src)} type="video/mp4" />
+      </video>
+
+      {!playing && (
+        <>
+          <button
+            type="button"
+            onClick={handlePlay}
+            aria-label={`${why.video.watchLabel} — ${why.video.title}`}
+            className="group absolute inset-0 z-10 flex flex-col items-center justify-center bg-gradient-to-t from-primary/85 via-primary/25 to-primary/5 hover:from-primary/75 transition-all duration-500 cursor-pointer"
+          >
+            <div className="relative">
+              <span className="absolute inset-0 rounded-full bg-white/30 animate-ping" />
+              <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white shadow-[0_0_40px_rgba(6,182,212,0.4)] group-hover:scale-110 transition-transform duration-500">
+                <Play
+                  size={26}
+                  className="text-primary translate-x-0.5"
+                  fill="currentColor"
+                />
+              </div>
+            </div>
+            <span className="mt-4 text-white font-semibold text-xs sm:text-sm bg-black/40 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+              {why.video.watchLabel}
+            </span>
+          </button>
+
+          {/* Caption over the poster — hidden on mobile, where it is repeated as
+              plain text under the player. pointer-events-none so the whole
+              poster stays clickable. */}
+          <div className="hidden sm:block absolute bottom-0 left-0 right-0 z-20 p-6 sm:p-8 pointer-events-none">
+            <h3 className="text-white text-xl sm:text-2xl font-bold drop-shadow-lg">
+              {why.video.title}
+            </h3>
+            <p className="text-white/90 text-sm mt-1 max-w-xl drop-shadow-lg">
+              {why.video.description}
+            </p>
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 
@@ -310,6 +378,22 @@ export function WhyMaxima() {
             </Link>
           </ScrollReveal>
         </div>
+
+        {/* Story video — reads as another row of the bento grid */}
+        <ScrollReveal>
+          <div className="mt-4 sm:mt-5">
+            <StoryVideo />
+            {/* On mobile the poster caption is hidden, so repeat it below the player */}
+            <div className="sm:hidden mt-4 text-center">
+              <h3 className="text-lg font-bold text-gray-900">
+                {why.video.title}
+              </h3>
+              <p className="text-sm text-gray-500 leading-relaxed mt-1">
+                {why.video.description}
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

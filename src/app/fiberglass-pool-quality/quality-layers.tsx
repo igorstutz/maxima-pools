@@ -24,12 +24,12 @@ const layers = [
   },
   {
     id: "fiberglass",
-    label: "Woven Fiberglass Layers",
+    label: "Hand-Laid Fiberglass Layers",
     icon: Layers,
     color: "from-accent-dark to-primary-light",
     description:
-      "Multiple layers of hand-laid woven roving — continuous strands woven together, up to 72oz per square yard. Never sprayed, never chopped. This is the structural backbone of every San Juan pool, the same technique used in aerospace and marine hulls.",
-    specs: ["Hand-Laid", "72oz/sq yd", "Woven Roving", "5+ Layers"],
+      "Five layers of hand-laid fiberglass sheets — continuous sheets laid by hand, up to 72oz per square yard. Never sprayed, never chopped. This is the structural backbone of every San Juan pool, the same technique used in aerospace and marine hulls.",
+    specs: ["Hand-Laid", "72oz/sq yd", "Fiberglass Sheets", "5 Layers"],
   },
   {
     id: "ribs",

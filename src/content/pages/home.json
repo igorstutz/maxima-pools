@@ -56,6 +56,13 @@
       "logo": "/images/logo/sanjuan-logo.webp",
       "title": "Best of the Best",
       "description": "Quality Fiberglass Pools since 1958. The strongest pool shells manufactured in America."
+    },
+    "video": {
+      "title": "See Maxima Pools in Action",
+      "description": "A look at a real Central Ohio installation — from the fiberglass shell to the finished backyard.",
+      "src": "/videos/maxima-story.mp4",
+      "poster": "/videos/maxima-story-poster.webp",
+      "watchLabel": "Watch the Video"
     }
   },
   "featuredPools": {
@@ -94,8 +101,8 @@
     "ctaNote": "Free consultation & estimate — no obligation",
     "steps": [
       { "step": "01", "title": "Precision Mold", "description": "Every San Juan pool starts with a precisely waxed mold to ensure perfect shape accuracy. Each mold is engineered for exact dimensions and contours.", "image": "/images/process/mold.webp" },
-      { "step": "02", "title": "Hand-Laid Fiberglass", "description": "All fiberglass is 100% hand-laid — never sprayed. Expert laminators with 20+ years of experience lay minimum five layers of woven roving for superior structural consistency.", "image": "/images/process/glass.webp" },
-      { "step": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of woven fiberglass per square yard creates unmatched structural integrity.", "image": "/images/process/panels.webp" },
+      { "step": "02", "title": "Hand-Laid Fiberglass", "description": "All fiberglass is 100% hand-laid — never sprayed. Expert laminators with 20+ years of experience lay a minimum of five layers of fiberglass sheets for superior structural consistency.", "image": "/images/process/glass.webp" },
+      { "step": "03", "title": "Build the Panels", "description": "Each section is carefully hand-laid to maintain even thickness across the entire shell. Up to 72oz of hand-laid fiberglass per square yard creates unmatched structural integrity.", "image": "/images/process/panels.webp" },
       { "step": "04", "title": "Structural Reinforcement", "description": "Structural ribs are positioned to reinforce wall strength. Using Vinyl Ester resin throughout — the same marine-grade standard used in boat building.", "image": "/images/process/ribs.webp" },
       { "step": "05", "title": "Clean & Inspect", "description": "Every pool is thoroughly cleaned and inspected. All imperfections are repaired — only perfection is good enough for a San Juan pool.", "image": "/images/process/final-prep.webp" },
       { "step": "06", "title": "Shipping", "description": "Your San Juan fiberglass pool is securely loaded onto a specialized truck and delivered directly from the factory straight to your home, ready for installation.", "image": "/images/process/shipping.webp" },

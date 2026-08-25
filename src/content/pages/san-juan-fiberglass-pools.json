@@ -51,7 +51,7 @@
     "rows": [
       { "feature": "Fiberglass Method", "sanJuan": "100% hand-laid solid sheets with consistent thickness", "competitor": "Chopped fiberglass sprayed from gun — inconsistent thickness" },
       { "feature": "Excess Resin", "sanJuan": "Removed from each layer for optimal strength-to-weight ratio", "competitor": "Cannot be removed — weakens the shell over time" },
-      { "feature": "Woven Roving", "sanJuan": "Applied throughout — significant vertical and horizontal strength", "competitor": "Used only in limited areas — structural gaps remain" },
+      { "feature": "Fiberglass Coverage", "sanJuan": "Hand-laid sheets applied throughout — significant vertical and horizontal strength", "competitor": "Used only in limited areas — structural gaps remain" },
       { "feature": "Sprayed Chop", "sanJuan": "Not used — zero chopped fiberglass in any San Juan pool", "competitor": "2\" pieces sprayed on with variable thickness throughout" },
       { "feature": "Interior Ledges", "sanJuan": "Not needed — shell is strong enough without them", "competitor": "Required for stiffening — collects dirt, potential hazard" },
       { "feature": "Coring & Fillers", "sanJuan": "Not used — pure fiberglass composite throughout", "competitor": "Present in many models — increases brittleness risk" },

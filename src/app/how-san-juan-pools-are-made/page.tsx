@@ -46,7 +46,7 @@ const jsonLd = {
   "@type": "Article",
   headline: "How San Juan Pools Are Made",
   description:
-    "The complete manufacturing process behind San Juan fiberglass pools — from Vinyl Ester resin and hand-laid woven fiberglass to expert craftsmanship and quality control.",
+    "The complete manufacturing process behind San Juan fiberglass pools — from Vinyl Ester resin and hand-laid fiberglass sheets to expert craftsmanship and quality control.",
   author: {
     "@type": "Organization",
     name: "Maxima Pools",

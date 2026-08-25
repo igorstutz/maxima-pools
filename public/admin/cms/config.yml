@@ -185,6 +185,15 @@ collections:
                   - { label: "Logo image", name: logo, widget: image }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Description", name: description, widget: text }
+              - label: "Video (below the cards)"
+                name: video
+                widget: object
+                fields:
+                  - { label: "Title", name: title, widget: string, hint: "Shown over the video poster on desktop, below the player on mobile." }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "Video file", name: src, widget: string, hint: "Path to the .mp4 inside the site, e.g. /videos/maxima-story.mp4" }
+                  - { label: "Poster image", name: poster, widget: string, hint: "Still image shown before playback, e.g. /videos/maxima-story-poster.webp" }
+                  - { label: "Play button label", name: watchLabel, widget: string }
           - label: "Featured Pools section"
             name: featuredPools
             widget: object

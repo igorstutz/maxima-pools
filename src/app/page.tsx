@@ -97,6 +97,19 @@ export default function Home() {
                 duration: "PT20S",
                 publisher: { "@id": "https://maximapools.com/#organization" },
               },
+              {
+                "@type": "VideoObject",
+                "@id": "https://maximapools.com/#maxima-story-video",
+                name: "See Maxima Pools in Action",
+                description:
+                  "A look at a real Central Ohio fiberglass pool installation by Maxima Pools — from the San Juan shell to the finished backyard.",
+                thumbnailUrl:
+                  "https://maximapools.com/videos/maxima-story-poster.webp",
+                contentUrl: "https://maximapools.com/videos/maxima-story.mp4",
+                uploadDate: "2026-08-25",
+                duration: "PT2M5S",
+                publisher: { "@id": "https://maximapools.com/#organization" },
+              },
             ],
           }),
         }}

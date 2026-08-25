@@ -67,15 +67,15 @@
     "badge": "Our Partnership",
     "headingLead": "Backed by",
     "headingHighlight": "San Juan Pools",
-    "paragraph1": "Maxima Pools is proud to partner with San Juan Pools, the industry leader in fiberglass pool manufacturing since 1958. San Juan is known for their hand-laid, woven fiberglass construction — a process that produces the strongest, most durable pool shells on the market.",
-    "paragraph2": "Unlike competitors who use sprayed fiberglass, every San Juan pool features multiple layers of hand-laid woven roving with marine-grade Vinyl Ester resin. This is the same standard used in boat building, ensuring your pool can handle decades of use without compromising structural integrity.",
+    "paragraph1": "Maxima Pools is proud to partner with San Juan Pools, the industry leader in fiberglass pool manufacturing since 1958. San Juan is known for their hand-laid fiberglass sheet construction — a process that produces the strongest, most durable pool shells on the market.",
+    "paragraph2": "Unlike competitors who use sprayed fiberglass, every San Juan pool features 5 layers of hand-laid fiberglass sheets with marine-grade Vinyl Ester resin. This is the same standard used in boat building, ensuring your pool can handle decades of use without compromising structural integrity.",
     "ctaLabel": "Explore Our Pools",
     "ctaHref": "/pools",
     "logo": "/images/logo/sanjuan-logo.webp",
     "logoHref": "https://sanjuanpools.com/",
     "stats": [
       { "value": "100%", "label": "Hand-Laid Fiberglass" },
-      { "value": "5+", "label": "Layers of Woven Roving" },
+      { "value": "5", "label": "Layers of Fiberglass Sheets" },
       { "value": "1958", "label": "Established Since" },
       { "value": "100+", "label": "Pool Models Available" }
     ]

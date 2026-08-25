@@ -43,7 +43,7 @@ The killer is the liner itself. **It tears, fades, and ages out in 7–10 years.
 
 ### Fiberglass
 
-A pre-molded one-piece shell with multiple layers of hand-laid woven fiberglass and a gel-coat surface, dropped into a prepared excavation. Standard sizes from compact spas up to 16'×45'. Install window: **3–5 days from delivery to swimming**.
+A pre-molded one-piece shell with multiple layers of hand-laid fiberglass sheets and a gel-coat surface, dropped into a prepared excavation. Standard sizes from compact spas up to 16'×45'. Install window: **3–5 days from delivery to swimming**.
 
 The shell is engineered to flex — small movements absorb without cracking, similar to how a boat hull handles wave stress. The non-porous gel-coat fights algae naturally and never needs resurfacing. The trade-off is shape: you pick from manufacturer molds, you don't draw from scratch.
 
@@ -125,13 +125,13 @@ That speed isn't a marketing claim — it's the natural result of factory pre-fa
 
 If you decide fiberglass is right, the brand and construction method matter enormously. Two shells that look identical from the dealer floor can have a 20-year lifespan difference.
 
-![San Juan craftsmen hand-laying woven fiberglass roving](/images/process/glass.webp)
+![San Juan craftsmen hand-laying fiberglass sheets](/images/process/glass.webp)
 
-*Hand-laid woven roving at the San Juan factory. Continuous strands instead of spray-on chopped fiber — the same technique used on aerospace and marine hulls.*
+*Hand-laid fiberglass sheets at the San Juan factory. Continuous sheets instead of spray-on chopped fiber — the same technique used on aerospace and marine hulls.*
 
 What to look for:
 
-1. **Hand-laid woven roving** — continuous strands of fiberglass woven together, applied by hand, not sprayed by a chopper gun. Hand-laying creates uniform thickness and eliminates the thin spots that fail first.
+1. **Hand-laid fiberglass sheets** — continuous sheets of fiberglass applied by hand, not sprayed by a chopper gun. Hand-laying creates uniform thickness and eliminates the thin spots that fail first.
 2. **Vinyl Ester resin** through the entire shell, not just the outer gel-coat layer. Vinyl Ester shares the same chemical backbone as marine epoxy and is genuinely waterproof. Polyester resin (cheaper, used by lower-end manufacturers) absorbs water over time and is the biggest cause of osmotic blistering on aging fiberglass shells.
 3. **Multiple structural layers** — at least five hand-laid layers per shell, with structural ribs reinforcing the walls without adding deadweight.
 4. **A real warranty** — not just "structural" with eight pages of exclusions. Read what's actually covered, for how long, and what voids it.
