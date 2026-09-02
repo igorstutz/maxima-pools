@@ -1,9 +1,9 @@
 {
   "seo": {
     "title": "Pool Cleaning & Maintenance | Maxima Pools - Columbus, OH",
-    "description": "Professional fiberglass pool cleaning and maintenance in Columbus, OH. Gelcoat-safe methods, balanced water every visit, and a written report you can read. Get a free quote.",
+    "description": "Professional fiberglass pool cleaning and maintenance in Columbus, OH. Full 7-panel water testing, filter and salt cell service, gelcoat-safe vacuuming. One-time trips from $250.",
     "ogTitle": "Pool Cleaning & Maintenance | Maxima Pools",
-    "ogDescription": "Crystal-clear water without the guesswork. Gelcoat-safe cleaning, balanced chemistry, and honest reporting from the crew that builds the pools."
+    "ogDescription": "Crystal-clear water without the guesswork. Gelcoat-safe cleaning, full water testing and filter service from the crew that builds the pools."
   },
   "hero": {
     "badge": "Cleaning & Maintenance",
@@ -15,34 +15,14 @@
     ],
     "headingLead": "Pool",
     "headingHighlight": "Cleaning",
-    "subtitle": "Crystal-clear water without the guesswork. We clean, brush, vacuum and balance your fiberglass pool using gelcoat-safe methods — and leave a written report after every visit.",
+    "subtitle": "Crystal-clear water without the guesswork. We test, clean, vacuum and balance your fiberglass pool using gelcoat-safe methods — one trip or all season long.",
+    "priceBadge": "One-time cleaning from $250",
     "primaryLabel": "Get a Free Quote",
     "primaryHref": "/contact",
     "simulatorLabel": "Pool Simulator",
     "simulatorHref": "/pool-simulator",
     "phoneDisplay": "(614) 384-5081",
     "phoneHref": "tel:+16143845081"
-  },
-  "stats": [
-    { "icon": "Droplets", "value": "1–3 ppm", "label": "Ideal Free Chlorine" },
-    { "icon": "Gauge", "value": "pH 7.4–7.6", "label": "Target Range" },
-    { "icon": "Timer", "value": "8–12 hrs", "label": "Daily Pump Run" },
-    { "icon": "Leaf", "value": "50%", "label": "Fewer Chemicals" }
-  ],
-  "overview": {
-    "badge": "Overview",
-    "headingLead": "Fiberglass Is Easier to Clean —",
-    "headingHighlight": "If You Clean It Right",
-    "paragraph1": "The gelcoat surface on a San Juan fiberglass pool is smooth and non-porous, so algae has almost nothing to grab onto. That means less brushing, fewer chemicals and no resurfacing — but it also means the surface deserves gentler treatment than the concrete pool next door.",
-    "paragraph2": "Steel brushes, abrasive pads and acid washes belong to a different kind of pool. Our crews clean with soft nylon tools, keep sanitizer steady instead of shocking hard, and treat the shell like the 30-year investment it is.",
-    "chips": [
-      { "icon": "Sparkles", "text": "Non-Porous Gelcoat" },
-      { "icon": "Brush", "text": "Soft-Brush Only" },
-      { "icon": "Leaf", "text": "Fewer Chemicals" },
-      { "icon": "ShieldCheck", "text": "No Resurfacing, Ever" }
-    ],
-    "image": "/images/gallery/sully-03.webp",
-    "imageAlt": "Clean fiberglass pool with paver deck"
   },
   "rhythmSection": {
     "badge": "Care Routine",
@@ -255,22 +235,26 @@
     ]
   },
   "serviceSection": {
-    "badge": "Our Service",
-    "headingLead": "What Happens on",
-    "headingHighlight": "Every Visit",
-    "paragraph": "Our maintenance crews follow the same checklist on every pool, every time — so nothing depends on who showed up that day. You get a written report with readings and anything worth watching.",
+    "badge": "What's Included",
+    "headingLead": "What a Pool Cleaning",
+    "headingHighlight": "Actually Covers",
+    "paragraph": "This is the list our crews work through on a cleaning trip. Not every line applies to every pool — a cartridge system never gets backwashed, a chlorine pool has no salt cell — so we run what your equipment calls for and tell you what we found.",
     "images": [
       { "src": "/images/gallery/lagoon-12.webp", "alt": "Fiberglass pool with clear blue water" },
       { "src": "/images/why-maxima/enhance-heating.webp", "alt": "Maxima technician servicing pool equipment" },
       { "src": "/images/accessories/pool-pump.webp", "alt": "Pool pump and filtration equipment" }
     ],
     "checklist": [
-      { "title": "Skim, net and vacuum", "description": "Surface, floor and steps — including whatever the last storm left behind." },
-      { "title": "Brush walls and waterline", "description": "Soft-brush the full shell, tanning ledge and the oil band at the surface." },
-      { "title": "Empty every basket", "description": "Skimmer and pump baskets cleared, lids and o-rings checked while we're in there." },
-      { "title": "Test and balance", "description": "Chlorine, pH, alkalinity and stabilizer measured and corrected on the spot." },
-      { "title": "Filter and pressure check", "description": "Pressure read against baseline; cartridges rinsed or backwashed when needed." },
-      { "title": "Written report", "description": "Readings, what we added, and anything that deserves attention before it becomes a repair." }
+      { "title": "7-panel water test", "description": "A full panel, not a glance at a strip — chlorine, pH, alkalinity, stabilizer, hardness and the rest." },
+      { "title": "Test the salt level", "description": "On salt systems we read salinity, so the cell isn't working harder than it should or corroding hardware." },
+      { "title": "Check the chlorine feeder", "description": "The feeder is opened, inspected and set to the right rate for the season and the bather load." },
+      { "title": "Evaluate the salt cell", "description": "We inspect the cell for scale and clean it when it needs it, before output starts dropping." },
+      { "title": "Add chemicals, circulate and test", "description": "Doses go in, the water turns over, and we test again before we call it balanced." },
+      { "title": "Clean the baskets", "description": "Skimmer and pump baskets emptied, so flow isn't choked before the filter even sees the water." },
+      { "title": "Clean the cartridge filter", "description": "On cartridge systems the elements come out and get rinsed down properly." },
+      { "title": "Backwash sand filters", "description": "Sand systems get backwashed and the media checked for channeling, clumping and age." },
+      { "title": "Vacuum with E-vacs", "description": "A hose-powered vacuum with a debris bag — it lifts heavy leaves and silt without loading the filter." },
+      { "title": "Vacuum on pool suction", "description": "Vacuuming through the pool's own suction line for the fine settled silt a bag vac leaves behind." }
     ]
   },
   "plansSection": {
@@ -281,34 +265,42 @@
   },
   "plans": [
     {
-      "name": "One-Time Deep Clean",
-      "cadence": "Single visit",
+      "name": "One-Time Cleaning",
+      "cadence": "Single trip",
       "icon": "Sparkles",
       "featured": false,
+      "price": "$250 – $400",
+      "priceNote": "per trip — small pool to large",
+      "priceMin": 250,
+      "priceMax": 400,
       "description": "For a pool that's been neglected, just changed hands, or needs a reset before a weekend of guests.",
       "features": [
         "Full brush, net and vacuum",
         "Waterline detail",
-        "Filter cleaned or media swapped",
-        "Water balanced before we leave",
-        "Equipment walkthrough",
-        "Written condition report"
+        "Baskets, feeder and salt cell checked",
+        "Filter cleaned or backwashed",
+        "7-panel test, chemicals added and retested",
+        "Equipment walkthrough before we leave"
       ],
-      "ctaLabel": "Request a Quote",
+      "ctaLabel": "Book a Cleaning",
       "ctaHref": "/contact"
     },
     {
-      "name": "Recurring Maintenance",
-      "cadence": "Weekly or bi-weekly",
+      "name": "Regular Service",
+      "cadence": "2–3 trips per month",
       "icon": "CalendarDays",
       "featured": true,
+      "price": "$250 – $300",
+      "priceNote": "per trip — depending on pool and scope",
+      "priceMin": 250,
+      "priceMax": 300,
       "description": "The hands-off option. We keep the cadence, you keep the pool. Most owners start here and never look back.",
       "features": [
         "Everything on the every-visit checklist",
-        "Chemistry balanced at each visit",
-        "Filter monitored across the season",
+        "7-panel test and chemicals every trip",
+        "Filter and salt cell watched all season",
         "Same crew, same standard",
-        "Report after every visit",
+        "Scope adjusted as the season changes",
         "Priority scheduling for repairs"
       ],
       "ctaLabel": "Get Pricing",
@@ -319,6 +311,10 @@
       "cadence": "Multi-visit program",
       "icon": "Leaf",
       "featured": false,
+      "price": "Quoted per pool",
+      "priceNote": "scoped after we see the water",
+      "priceMin": null,
+      "priceMax": null,
       "description": "For algae blooms, storm damage and pools that sat closed too long. Structured recovery, not one hopeful bucket of shock.",
       "features": [
         "Staged shock program",
@@ -326,13 +322,13 @@
         "Repeated filter deep cleans",
         "Chemistry checked between visits",
         "Clarity target before we sign off",
-        "Handoff to a maintenance plan"
+        "Handoff to a regular service plan"
       ],
       "ctaLabel": "Talk to Us",
       "ctaHref": "/contact"
     }
   ],
-  "plansNote": "Pricing depends on pool size, condition, equipment and travel. We quote after a quick look — no subscription traps, cancel any time.",
+  "plansNote": "Prices are per trip and cover most pools in the Columbus area. The final number depends on pool size, condition, equipment and how far out you are — we confirm it with you before any work starts. No contracts, cancel any time.",
   "whyChooseSection": {
     "badge": "Why Maxima",
     "headingLead": "Cleaned by the Crew That",
@@ -341,7 +337,7 @@
   "whyChoose": [
     { "icon": "Award", "title": "Fiberglass Specialists", "description": "We're an authorized San Juan dealer. We know what gelcoat tolerates because we install it for a living." },
     { "icon": "ShieldCheck", "title": "Gelcoat-Safe Methods", "description": "Soft tools, measured chemistry, no shortcuts that trade next decade's finish for this week's shine." },
-    { "icon": "ClipboardCheck", "title": "Same Checklist, Every Visit", "description": "Nothing depends on which tech showed up. You get the full list and the readings in writing." },
+    { "icon": "ClipboardCheck", "title": "Same Checklist, Every Trip", "description": "Nothing depends on which tech showed up. The same list gets worked through on every pool, every time." },
     { "icon": "Users", "title": "Local Columbus Team", "description": "Delaware-based, serving Columbus and the surrounding communities. Real people who answer the phone." }
   ],
   "faqSection": {
@@ -353,7 +349,8 @@
     "phoneHref": "tel:+16143845081"
   },
   "faqs": [
-    { "question": "How often does a fiberglass pool need to be cleaned?", "answer": "In season, plan on a weekly rhythm: skim, brush, vacuum, empty the baskets and test the water. A fiberglass shell needs less scrubbing than concrete because algae can't take hold in a non-porous gelcoat surface, but debris, oils and chemistry drift happen at the same rate in any pool. Most owners who hire us choose weekly or bi-weekly visits through the swim season." },
+    { "question": "How much does a pool cleaning cost?", "answer": "A one-time trip runs $250 to $400 depending on pool size, small to large. Regular service is two to three trips a month at $250 to $300 per trip, depending on the pool and the scope of the work. Condition matters as much as size — a pool that sat closed all season takes more than one that just needs its rhythm back. We confirm the number with you before any work starts." },
+    { "question": "How often does a fiberglass pool need to be cleaned?", "answer": "In season, plan on a weekly rhythm: skim, brush, vacuum, empty the baskets and test the water. A fiberglass shell needs less scrubbing than concrete because algae can't take hold in a non-porous gelcoat surface, but debris, oils and chemistry drift happen at the same rate in any pool. Most owners who hire us book two to three trips a month through the swim season." },
     { "question": "Do fiberglass pools really need fewer chemicals?", "answer": "Yes, and the reason is physical rather than marketing. The gelcoat surface is smooth and non-porous, so there's no microscopic texture for algae to root into and no plaster leaching into the water and pushing pH up. Owners typically use noticeably less chlorine and acid than a comparable concrete pool. What doesn't change is the need to test — smaller corrections, just as often." },
     { "question": "What kind of brush should I use on a fiberglass pool?", "answer": "A soft nylon-bristle brush, or a pool-rated non-abrasive pad for spot work. Never use a stainless or steel-bristle brush, a scouring pad, or an abrasive cleaning powder. Those are made for plaster and they leave permanent dull scratches in gelcoat. Same rule for the waterline: soft cloth and a gelcoat-safe cleaner only." },
     { "question": "My pool turned green. How long does it take to fix?", "answer": "A typical green-to-clean recovery takes three to five days from the first treatment to swimmable water, and it usually needs several filter cleanings along the way. The sequence matters: brush first so the algae is broken loose, test stabilizer before dosing, shock, then keep circulation running around the clock. We run recovery as a structured multi-visit program rather than a single visit, because the filter work is what actually finishes the job." },

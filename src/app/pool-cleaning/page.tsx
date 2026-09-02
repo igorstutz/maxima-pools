@@ -9,6 +9,7 @@ import {
   ChevronRight,
   CircleCheck,
   CircleX,
+  DollarSign,
   ClipboardCheck,
   Droplets,
   Gauge,
@@ -18,7 +19,6 @@ import {
   ShieldCheck,
   Sparkles,
   Sun,
-  Timer,
   Users,
   Waves,
   Zap,
@@ -34,8 +34,8 @@ import { PoolCleaningFAQ } from "./faq";
 import content from "@/content/pages/pool-cleaning.json";
 
 const icons: Record<string, LucideIcon> = {
-  Award, Brush, CalendarDays, ClipboardCheck, Droplets, Gauge, Leaf, Ruler,
-  ShieldCheck, Sparkles, Sun, Timer, Users, Waves, Zap,
+  Award, CalendarDays, ClipboardCheck, Droplets, Gauge, Leaf, Ruler,
+  ShieldCheck, Sparkles, Sun, Users, Waves, Zap,
 };
 
 export const metadata: Metadata = {
@@ -69,12 +69,23 @@ const jsonLd = {
         },
       },
       description:
-        "Professional fiberglass pool cleaning and maintenance in Columbus, OH — gelcoat-safe brushing and vacuuming, balanced water chemistry, filter service, and a written report after every visit.",
+        "Professional fiberglass pool cleaning and maintenance in Columbus, OH — 7-panel water testing, chemical balancing, filter and salt cell service, and gelcoat-safe brushing and vacuuming.",
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Pool cleaning options",
         itemListElement: content.plans.map((plan) => ({
           "@type": "Offer",
+          ...(plan.priceMin !== null && plan.priceMax !== null
+            ? {
+                priceSpecification: {
+                  "@type": "PriceSpecification",
+                  priceCurrency: "USD",
+                  minPrice: plan.priceMin,
+                  maxPrice: plan.priceMax,
+                  unitText: "per trip",
+                },
+              }
+            : {}),
           itemOffered: {
             "@type": "Service",
             name: plan.name,
@@ -142,6 +153,11 @@ export default function PoolCleaningPage() {
               {content.hero.subtitle}
             </p>
 
+            <div className="hero-animate hero-animate-5 inline-flex items-center gap-2 bg-white/[0.08] backdrop-blur-sm border border-white/[0.12] rounded-full px-5 py-2.5 mb-8">
+              <DollarSign size={16} className="text-accent" />
+              <span className="text-white font-semibold text-sm">{content.hero.priceBadge}</span>
+            </div>
+
             <div className="hero-animate hero-animate-5 flex flex-wrap gap-3 *:whitespace-nowrap">
               <Link
                 href={content.hero.primaryHref}
@@ -171,94 +187,239 @@ export default function PoolCleaningPage() {
 
       <SectionDivider />
 
-      {/* ── Stats Strip ── */}
-      <section className="bg-[#0c4a6e] py-12 sm:py-16">
+      {/* ── What a pool cleaning covers ── */}
+      <section className="py-16 sm:py-24 bg-gray-50 texture-noise">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-              {content.stats.map((s) => {
-                const Icon = icons[s.icon];
-                return (
+            <div className="max-w-3xl mb-12">
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                <ClipboardCheck size={14} className="text-accent" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                  {content.serviceSection.badge}
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                {content.serviceSection.headingLead}{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  {content.serviceSection.headingHighlight}
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {content.serviceSection.paragraph}
+              </p>
+            </div>
+          </ScrollReveal>
+
+          <div className="grid lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+            <ScrollReveal direction="left">
+              <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 sm:gap-4">
+                <div className="rounded-2xl overflow-hidden col-span-2 lg:col-span-1 border border-gray-100 shadow-sm">
+                  <Image
+                    src={content.serviceSection.images[0].src}
+                    alt={content.serviceSection.images[0].alt}
+                    width={800}
+                    height={500}
+                    className="w-full aspect-[16/10] lg:aspect-[16/9] object-cover"
+                    sizes="(max-width: 1024px) 100vw, 30vw"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                  <Image
+                    src={content.serviceSection.images[1].src}
+                    alt={content.serviceSection.images[1].alt}
+                    width={400}
+                    height={300}
+                    className="w-full aspect-[4/3] lg:aspect-[16/9] object-cover"
+                    sizes="(max-width: 1024px) 50vw, 30vw"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
+                  <Image
+                    src={content.serviceSection.images[2].src}
+                    alt={content.serviceSection.images[2].alt}
+                    width={400}
+                    height={300}
+                    className="w-full aspect-[4/3] lg:aspect-[16/9] object-cover"
+                    sizes="(max-width: 1024px) 50vw, 30vw"
+                  />
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" className="lg:col-span-2">
+              <div className="grid sm:grid-cols-2 gap-3">
+                {content.serviceSection.checklist.map((item, i) => (
                   <div
-                    key={s.label}
-                    className="bg-white/[0.04] border border-white/[0.08] rounded-2xl p-5 sm:p-6 flex items-center gap-4 hover:bg-white/[0.07] transition-colors"
+                    key={item.title}
+                    className="group flex gap-4 bg-white border border-gray-100 rounded-xl p-4 hover:border-accent/20 hover:shadow-md transition-all duration-500"
                   >
-                    <div className="w-11 h-11 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center shrink-0">
-                      {Icon && <Icon size={20} className="text-accent" />}
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center shrink-0">
+                      <span className="text-accent font-bold text-sm">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
                     </div>
                     <div>
-                      <p className="text-xl sm:text-2xl font-bold text-white">{s.value}</p>
-                      <p className="text-[11px] sm:text-xs text-white font-medium uppercase tracking-wider">
-                        {s.label}
+                      <h4 className="text-gray-900 font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
+                        {item.title}
+                      </h4>
+                      <p className="text-gray-500 text-sm leading-relaxed">
+                        {item.description}
                       </p>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-          </ScrollReveal>
+                ))}
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
 
       <SectionDivider />
 
-      {/* ── Overview — split layout ── */}
+      {/* ── Service options ── */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal direction="left">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    {content.overview.badge}
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                  {content.overview.headingLead}{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    {content.overview.headingHighlight}
-                  </span>
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                  {content.overview.paragraph1}
-                </p>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  {content.overview.paragraph2}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {content.overview.chips.map((item) => {
-                    const Icon = icons[item.icon];
-                    return (
-                      <span
-                        key={item.text}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 bg-gray-50 border border-gray-100 rounded-full px-4 py-2"
-                      >
-                        {Icon && <Icon size={14} className="text-accent" />}
-                        {item.text}
-                      </span>
-                    );
-                  })}
-                </div>
+          <ScrollReveal>
+            <div className="max-w-3xl mb-12">
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                  {content.plansSection.badge}
+                </span>
               </div>
-            </ScrollReveal>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                {content.plansSection.headingLead}{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                  {content.plansSection.headingHighlight}
+                </span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                {content.plansSection.intro}
+              </p>
+            </div>
+          </ScrollReveal>
 
-            <ScrollReveal direction="right">
-              <div className="relative">
-                <div className="absolute -inset-3 bg-accent/10 rounded-[2rem] blur-2xl" />
-                <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={content.overview.image}
-                    alt={content.overview.imageAlt}
-                    width={800}
-                    height={600}
-                    className="w-full aspect-[4/3] object-cover"
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
+          <div className="grid md:grid-cols-3 gap-5">
+            {content.plans.map((plan, i) => {
+              const Icon = icons[plan.icon];
+              return (
+                <ScrollReveal key={plan.name} delay={((i + 1) as 1 | 2 | 3)}>
+                  <div
+                    className={`relative flex flex-col h-full rounded-2xl sm:rounded-3xl p-7 sm:p-8 transition-all duration-500 ${
+                      plan.featured
+                        ? "bg-gradient-to-br from-[#0c4a6e] to-[#075985] border border-accent/30 shadow-2xl shadow-primary/20"
+                        : "bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg hover:border-accent/20"
+                    }`}
+                  >
+                    {plan.featured && (
+                      <div className="absolute inset-0 water-caustics opacity-10 rounded-2xl sm:rounded-3xl pointer-events-none" />
+                    )}
+                    <div className="relative flex flex-col h-full">
+                      <div
+                        className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 border ${
+                          plan.featured
+                            ? "bg-accent/20 border-accent/25"
+                            : "bg-gradient-to-br from-accent/15 to-primary/10 border-accent/15"
+                        }`}
+                      >
+                        {Icon && (
+                          <Icon
+                            size={23}
+                            className={plan.featured ? "text-accent-light" : "text-accent"}
+                          />
+                        )}
+                      </div>
+
+                      <span
+                        className={`text-[11px] font-semibold uppercase tracking-wider mb-2 ${
+                          plan.featured ? "text-accent-light" : "text-accent"
+                        }`}
+                      >
+                        {plan.cadence}
+                      </span>
+                      <h3
+                        className={`text-xl sm:text-2xl font-bold mb-4 ${
+                          plan.featured ? "text-white" : "text-gray-900"
+                        }`}
+                      >
+                        {plan.name}
+                      </h3>
+
+                      <div
+                        className={`mb-5 pb-5 border-b ${
+                          plan.featured ? "border-white/15" : "border-gray-100"
+                        }`}
+                      >
+                        <p
+                          className={`text-3xl sm:text-4xl font-bold ${
+                            plan.featured
+                              ? "text-white"
+                              : "text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent"
+                          }`}
+                        >
+                          {plan.price}
+                        </p>
+                        <p
+                          className={`text-xs mt-2 ${
+                            plan.featured ? "text-white/65" : "text-gray-400"
+                          }`}
+                        >
+                          {plan.priceNote}
+                        </p>
+                      </div>
+
+                      <p
+                        className={`leading-relaxed mb-6 ${
+                          plan.featured ? "text-white/80" : "text-gray-500"
+                        }`}
+                      >
+                        {plan.description}
+                      </p>
+
+                      <ul className="space-y-2.5 mb-8">
+                        {plan.features.map((feature) => (
+                          <li key={feature} className="flex items-start gap-2.5">
+                            <CircleCheck
+                              size={16}
+                              className={`shrink-0 mt-0.5 ${
+                                plan.featured ? "text-accent-light" : "text-accent"
+                              }`}
+                            />
+                            <span
+                              className={`text-sm leading-relaxed ${
+                                plan.featured ? "text-white/85" : "text-gray-600"
+                              }`}
+                            >
+                              {feature}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <Link
+                        href={plan.ctaHref}
+                        className={`group mt-auto w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold rounded-full transition-all duration-300 text-sm ${
+                          plan.featured
+                            ? "bg-gradient-to-r from-accent to-accent-light text-white shadow-lg shadow-accent/25 hover:scale-105"
+                            : "bg-white border border-gray-200 text-primary hover:border-accent/40 hover:shadow-md"
+                        }`}
+                      >
+                        {plan.ctaLabel}
+                        <ArrowRight
+                          size={16}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
           </div>
+
+          <ScrollReveal>
+            <p className="mt-8 text-sm text-gray-500 max-w-3xl">{content.plansNote}</p>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -466,218 +627,6 @@ export default function PoolCleaningPage() {
               </div>
             </ScrollReveal>
           </div>
-        </div>
-      </section>
-
-      <SectionDivider />
-
-      {/* ── What happens on every visit ── */}
-      <section className="py-16 sm:py-24 bg-gray-50 texture-noise">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <ScrollReveal direction="left">
-              <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                <div className="rounded-2xl overflow-hidden col-span-2 border border-gray-100 shadow-sm">
-                  <Image
-                    src={content.serviceSection.images[0].src}
-                    alt={content.serviceSection.images[0].alt}
-                    width={800}
-                    height={500}
-                    className="w-full aspect-[16/10] object-cover"
-                    sizes="(max-width: 1024px) 100vw, 45vw"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-                  <Image
-                    src={content.serviceSection.images[1].src}
-                    alt={content.serviceSection.images[1].alt}
-                    width={400}
-                    height={300}
-                    className="w-full aspect-[4/3] object-cover"
-                    sizes="(max-width: 1024px) 50vw, 22vw"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden border border-gray-100 shadow-sm">
-                  <Image
-                    src={content.serviceSection.images[2].src}
-                    alt={content.serviceSection.images[2].alt}
-                    width={400}
-                    height={300}
-                    className="w-full aspect-[4/3] object-cover"
-                    sizes="(max-width: 1024px) 50vw, 22vw"
-                  />
-                </div>
-              </div>
-            </ScrollReveal>
-
-            <ScrollReveal direction="right">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
-                  <ClipboardCheck size={14} className="text-accent" />
-                  <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                    {content.serviceSection.badge}
-                  </span>
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-5">
-                  {content.serviceSection.headingLead}{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                    {content.serviceSection.headingHighlight}
-                  </span>
-                </h2>
-                <p className="text-gray-600 text-lg leading-relaxed mb-8">
-                  {content.serviceSection.paragraph}
-                </p>
-
-                <div className="space-y-3">
-                  {content.serviceSection.checklist.map((item, i) => (
-                    <div
-                      key={item.title}
-                      className="group flex gap-4 bg-white border border-gray-100 rounded-xl p-4 hover:border-accent/20 hover:shadow-md transition-all duration-500"
-                    >
-                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center shrink-0">
-                        <span className="text-accent font-bold text-sm">
-                          {String(i + 1).padStart(2, "0")}
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="text-gray-900 font-semibold text-sm mb-1 group-hover:text-primary transition-colors">
-                          {item.title}
-                        </h4>
-                        <p className="text-gray-500 text-sm leading-relaxed">
-                          {item.description}
-                        </p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      <SectionDivider />
-
-      {/* ── Service options ── */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="max-w-3xl mb-12">
-              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
-                <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <span className="text-accent font-semibold text-sm uppercase tracking-wider">
-                  {content.plansSection.badge}
-                </span>
-              </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
-                {content.plansSection.headingLead}{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                  {content.plansSection.headingHighlight}
-                </span>
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed">
-                {content.plansSection.intro}
-              </p>
-            </div>
-          </ScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {content.plans.map((plan, i) => {
-              const Icon = icons[plan.icon];
-              return (
-                <ScrollReveal key={plan.name} delay={((i + 1) as 1 | 2 | 3)}>
-                  <div
-                    className={`relative flex flex-col h-full rounded-2xl sm:rounded-3xl p-7 sm:p-8 transition-all duration-500 ${
-                      plan.featured
-                        ? "bg-gradient-to-br from-[#0c4a6e] to-[#075985] border border-accent/30 shadow-2xl shadow-primary/20"
-                        : "bg-gradient-to-br from-gray-50 to-white border border-gray-100 hover:shadow-lg hover:border-accent/20"
-                    }`}
-                  >
-                    {plan.featured && (
-                      <div className="absolute inset-0 water-caustics opacity-10 rounded-2xl sm:rounded-3xl pointer-events-none" />
-                    )}
-                    <div className="relative flex flex-col h-full">
-                      <div
-                        className={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 border ${
-                          plan.featured
-                            ? "bg-accent/20 border-accent/25"
-                            : "bg-gradient-to-br from-accent/15 to-primary/10 border-accent/15"
-                        }`}
-                      >
-                        {Icon && (
-                          <Icon
-                            size={23}
-                            className={plan.featured ? "text-accent-light" : "text-accent"}
-                          />
-                        )}
-                      </div>
-
-                      <span
-                        className={`text-[11px] font-semibold uppercase tracking-wider mb-2 ${
-                          plan.featured ? "text-accent-light" : "text-accent"
-                        }`}
-                      >
-                        {plan.cadence}
-                      </span>
-                      <h3
-                        className={`text-xl sm:text-2xl font-bold mb-3 ${
-                          plan.featured ? "text-white" : "text-gray-900"
-                        }`}
-                      >
-                        {plan.name}
-                      </h3>
-                      <p
-                        className={`leading-relaxed mb-6 ${
-                          plan.featured ? "text-white/80" : "text-gray-500"
-                        }`}
-                      >
-                        {plan.description}
-                      </p>
-
-                      <ul className="space-y-2.5 mb-8">
-                        {plan.features.map((feature) => (
-                          <li key={feature} className="flex items-start gap-2.5">
-                            <CircleCheck
-                              size={16}
-                              className={`shrink-0 mt-0.5 ${
-                                plan.featured ? "text-accent-light" : "text-accent"
-                              }`}
-                            />
-                            <span
-                              className={`text-sm leading-relaxed ${
-                                plan.featured ? "text-white/85" : "text-gray-600"
-                              }`}
-                            >
-                              {feature}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <Link
-                        href={plan.ctaHref}
-                        className={`group mt-auto w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold rounded-full transition-all duration-300 text-sm ${
-                          plan.featured
-                            ? "bg-gradient-to-r from-accent to-accent-light text-white shadow-lg shadow-accent/25 hover:scale-105"
-                            : "bg-white border border-gray-200 text-primary hover:border-accent/40 hover:shadow-md"
-                        }`}
-                      >
-                        {plan.ctaLabel}
-                        <ArrowRight
-                          size={16}
-                          className="group-hover:translate-x-1 transition-transform"
-                        />
-                      </Link>
-                    </div>
-                  </div>
-                </ScrollReveal>
-              );
-            })}
-          </div>
-
-          <ScrollReveal>
-            <p className="mt-8 text-sm text-gray-500 max-w-3xl">{content.plansNote}</p>
-          </ScrollReveal>
         </div>
       </section>
 
