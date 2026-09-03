@@ -26,6 +26,7 @@
           { "label": "Freezable Pools", "href": "/frozen-pools" },
           { "label": "Auto Cover Pool", "href": "/auto-cover-pool" },
           { "label": "Pool Cleaning", "href": "/pool-cleaning" },
+          { "label": "Pool Repair", "href": "/pool-repair" },
           { "label": "Pool Closing/Opening", "href": "/pool-closing" },
           { "label": "Pool Accessories & Extras", "href": "/pool-accessories-and-extras" }
         ]
@@ -76,6 +77,7 @@
           { "label": "Auto Cover Pool", "href": "/auto-cover-pool" },
           { "label": "Freezable Pools", "href": "/frozen-pools" },
           { "label": "Pool Cleaning", "href": "/pool-cleaning" },
+          { "label": "Pool Repair", "href": "/pool-repair" },
           { "label": "Pool Closing/Opening", "href": "/pool-closing" },
           { "label": "Pool Accessories", "href": "/pool-accessories-and-extras" },
           { "label": "Pool Simulator", "href": "/pool-simulator" }

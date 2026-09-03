@@ -1,0 +1,199 @@
+{
+  "seo": {
+    "title": "Pool Repair | Maxima Pools - Columbus, OH",
+    "description": "Pool equipment and structure repair in Columbus, OH. Pumps, heaters, salt cells, chlorinators, lights and automation, plus coping and pool patios. $250 diagnostic trip charge.",
+    "ogTitle": "Pool Repair | Maxima Pools",
+    "ogDescription": "Something on the pad stopped working? We diagnose what actually failed, then quote the fix. $250 diagnostic trip charge in the Columbus area."
+  },
+  "hero": {
+    "badge": "Repair Service",
+    "images": [
+      "/images/why-maxima/enhance-heating.webp",
+      "/images/gallery/sully-01.webp",
+      "/images/gallery/granite-01.webp",
+      "/images/gallery/lagoon-03.webp"
+    ],
+    "headingLead": "Pool",
+    "headingHighlight": "Repair",
+    "subtitle": "Pumps, heaters, salt cells, chlorinators, lights and automation — plus the coping and patio around the pool. We find out what actually failed, then quote the fix.",
+    "priceBadge": "$250 diagnostic trip charge",
+    "primaryLabel": "Book a Diagnostic",
+    "primaryHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "scopeSection": {
+    "badge": "What We Repair",
+    "headingLead": "Two Kinds of",
+    "headingHighlight": "Repair Call",
+    "paragraph": "Most calls are equipment — something on the pad stopped doing its job. The rest are the hard surfaces around the pool, where a settled paver or a lifted coping stone turns into a stubbed toe. We take both."
+  },
+  "structure": {
+    "title": "Around the Pool",
+    "tag": "Estimate required",
+    "image": "/images/gallery/sully-03.webp",
+    "imageAlt": "Fiberglass pool with paver coping and patio",
+    "items": [
+      {
+        "name": "Coping",
+        "description": "The cap where the deck meets the shell. Stones lift, settle and work loose as the ground moves through Ohio winters."
+      },
+      {
+        "name": "Pool patios",
+        "description": "Pavers and concrete around the pool — settling, uneven joints and the spots that have stopped sitting flat."
+      }
+    ],
+    "note": "Both are quoted after we come see them. No two decks fail the same way, so there's no flat number to give you over the phone."
+  },
+  "equipment": {
+    "title": "Equipment We Repair",
+    "tag": "Diagnostic trip",
+    "items": [
+      { "icon": "Fan", "name": "Pumps", "description": "Motors, seals, lids and baskets — the loud ones and the ones that won't prime." },
+      { "icon": "Flame", "name": "Heaters", "description": "Gas and heat pump units that won't fire, short-cycle or never reach temperature." },
+      { "icon": "Zap", "name": "Salt cells", "description": "Scaled plates, falling output and the power supplies that drive them." },
+      { "icon": "Droplets", "name": "Chlorinators", "description": "Tab feeders and liquid systems that over-feed, under-feed or leak." },
+      { "icon": "Lightbulb", "name": "Lights", "description": "Fixtures, gaskets and the niche behind them, on color and white LED." },
+      { "icon": "Smartphone", "name": "Automation", "description": "Panels, valve actuators and app control that dropped offline." }
+    ]
+  },
+  "pricingSection": {
+    "badge": "How Pricing Works",
+    "headingLead": "What the",
+    "headingHighlight": "$250 Covers",
+    "paragraph": "There's a flat $250 trip charge for diagnostics. That buys the visit and the diagnosis — finding out what actually failed, instead of guessing at parts. What happens after that depends on the repair.",
+    "steps": [
+      { "icon": "MapPin", "title": "The trip charge", "description": "$250 flat. It covers coming out to your pool and putting hands on the problem." },
+      { "icon": "Wrench", "title": "The diagnosis", "description": "We find what failed and tell you what fixing it actually involves." },
+      { "icon": "ClipboardCheck", "title": "Labor, quoted", "description": "Depending on the repair required, additional labor is quoted and charged." },
+      { "icon": "DollarSign", "title": "Parts and tax", "description": "Billed in addition to the labor, on top of the trip charge." }
+    ],
+    "quote": "There is a $250 trip charge for diagnostics. Parts and tax are additional. Depending on the repair required, additional labor will be quoted and charged.",
+    "note": "Coping and pool patio work is estimate-required — we come look at the deck first and quote that separately."
+  },
+  "symptomSection": {
+    "badge": "Common Symptoms",
+    "headingLead": "What Is It",
+    "headingHighlight": "Actually Doing?",
+    "intro": "Pick what you're seeing. We'll tell you the usual cause, the couple of things worth checking yourself, and the point where it stops being a homeowner job.",
+    "causeLabel": "Usual Cause",
+    "stepsLabel": "Worth Checking First",
+    "callUsLabel": "When to Stop and Call",
+    "ctaLabel": "Book a Diagnostic",
+    "ctaHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "symptoms": [
+    {
+      "id": "pump",
+      "label": "Pump is loud or won't prime",
+      "icon": "Fan",
+      "cause": "Usually air getting in on the suction side, a basket packed with debris, or a seal and bearing set that has reached the end of its life.",
+      "steps": [
+        "Check the water level — below mid-skimmer and the pump pulls air",
+        "Empty the skimmer and pump baskets",
+        "Look at the pump lid o-ring; dry or cracked, it lets air straight in",
+        "Watch for water weeping at the unions or pooling under the motor"
+      ],
+      "callUs": "A grinding or screaming motor is bearings, and a puddle under the pump is the shaft seal. Neither is an adjustment. Shut it off and call before the motor takes the rest of the pump with it."
+    },
+    {
+      "id": "heater",
+      "label": "Heater won't fire",
+      "icon": "Flame",
+      "cause": "Gas supply, water flow or ignition. Heaters also refuse to start when the filter is dirty enough to starve them of flow.",
+      "steps": [
+        "Confirm the heater has power and the gas valve is open",
+        "Clean or backwash the filter — low flow locks a heater out on purpose",
+        "Set the thermostat above the current water temperature and try again"
+      ],
+      "callUs": "Everything past that is ours. Ignition components, pressure switches and gas trains are not a homeowner repair, and a heater that keeps locking out is telling you something. The trip charge covers the diagnosis."
+    },
+    {
+      "id": "saltcell",
+      "label": "Salt cell stopped producing",
+      "icon": "Zap",
+      "cause": "Scale built up on the plates, salinity drifted out of range, or a cell that has simply run out of hours.",
+      "steps": [
+        "Test the salt level — most systems want 3,000–3,500 ppm",
+        "Look into the cell for white crusty scale between the plates",
+        "Check the system display for a low-salt or inspect-cell warning"
+      ],
+      "callUs": "Clean cell, salt in range and output still low means the cell or the power supply is failing. We test both and tell you which one you're actually buying."
+    },
+    {
+      "id": "lights",
+      "label": "Pool light is out",
+      "icon": "Lightbulb",
+      "cause": "A tripped GFCI, an LED at the end of its life, or water that has found its way into the fixture.",
+      "steps": [
+        "Reset the GFCI breaker once and see whether it holds",
+        "Check whether other pool circuits went dead at the same time"
+      ],
+      "callUs": "If the GFCI trips again, stop there. A breaker that won't hold on a pool light usually means water in the fixture or a fault in the wiring — that is not something to keep resetting."
+    },
+    {
+      "id": "automation",
+      "label": "Automation dropped offline",
+      "icon": "Smartphone",
+      "cause": "A lost network connection, a power cycle the panel never recovered from, or a valve actuator that stopped reporting back.",
+      "steps": [
+        "Check that the panel has power and its breaker is on",
+        "Confirm the home wifi is actually reaching the equipment pad",
+        "Power cycle the panel once and give it a few minutes"
+      ],
+      "callUs": "Still won't connect, or a valve isn't moving when the app says it is? That's the actuator or the board, and both need a look on the pad."
+    },
+    {
+      "id": "coping",
+      "label": "Coping or patio has lifted",
+      "icon": "Layers",
+      "cause": "Ground movement through freeze and thaw, water working its way under the pavers, or base material that settled unevenly.",
+      "steps": [
+        "Note where water sits after rain — that's usually where it started",
+        "Watch whether it moves further season to season"
+      ],
+      "callUs": "Lifted coping and settled pavers are estimate work: we come look, measure and quote the reset. Left through another Ohio winter, a small settle rarely stays small."
+    }
+  ],
+  "whyChooseSection": {
+    "badge": "Why Maxima",
+    "headingLead": "Repaired by the Crew That",
+    "headingHighlight": "Builds Them"
+  },
+  "whyChoose": [
+    { "icon": "Award", "title": "Fiberglass Specialists", "description": "We're an authorized San Juan dealer. We install this equipment for a living, which is why we're quick at telling what failed on it." },
+    { "icon": "Wrench", "title": "Diagnosis Before Parts", "description": "The trip charge buys a diagnosis, not a guess. You find out what actually broke before anyone orders a part for it." },
+    { "icon": "Layers", "title": "Pad and Deck Both", "description": "Most repair outfits do equipment or hardscape. We work on the equipment pad and on the coping and patio around the pool." },
+    { "icon": "Users", "title": "Local Columbus Team", "description": "Delaware-based, serving Columbus and the surrounding communities. Real people who answer the phone." }
+  ],
+  "faqSection": {
+    "badge": "FAQ",
+    "headingLead": "Repair",
+    "headingHighlight": "Questions",
+    "intro": "What owners ask before booking a repair visit. If yours isn't here, just call — we'd rather answer it than have you guess at a part.",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "faqs": [
+    { "question": "How much does a pool repair cost?", "answer": "There is a flat $250 trip charge for diagnostics. That covers coming out and finding what actually failed. From there, parts and tax are additional, and depending on the repair required, additional labor is quoted and charged. The reason it works this way is that two pumps making the same noise can be a $40 o-ring or a new motor, and nobody can tell you which over the phone." },
+    { "question": "What does the $250 trip charge include?", "answer": "The visit and the diagnosis. We come to your pool, put hands on the equipment, and tell you what failed and what fixing it involves. It is not a deposit on parts and it is not an hourly rate — it is the flat cost of getting a real answer instead of a guess." },
+    { "question": "Do you repair pools you didn't build?", "answer": "Yes. Plenty of our service calls are on pools another builder put in. We'll baseline the equipment on the first visit and go from there. If we find something we're not the right crew for, we'll tell you that too." },
+    { "question": "Do you work on coping and pool decks?", "answer": "Yes, and those work differently from equipment calls. Coping and pool patios are estimate-required: we come look at the deck, measure what's moved, and quote the reset. There's no flat number for hardscape because no two decks fail the same way." },
+    { "question": "Do you repair the fiberglass shell itself?", "answer": "Our repair list covers the equipment and the hard surfaces around the pool. Shell and gelcoat questions usually run through the San Juan warranty rather than a service call — take a look at our warranty page, or call and we'll point you to the right path for what you're seeing." },
+    { "question": "Can a repair be handled during a cleaning visit?", "answer": "Often, yes. If you're on a regular cleaning schedule with us, repairs get priority scheduling, and small fixes we spot on a maintenance trip can frequently be handled without a separate diagnostic visit. Larger repairs still get quoted before we do them." }
+  ],
+  "finalCta": {
+    "image": "/images/gallery/granite-01.webp",
+    "headingLead": "Something on the Pad",
+    "headingHighlight": "Stopped Working?",
+    "paragraph": "Tell us what it's doing and we'll book the diagnostic trip. You'll get a real answer on what failed and what it takes to fix.",
+    "primaryLabel": "Book a Diagnostic",
+    "primaryHref": "/contact",
+    "cleaningLabel": "Pool Cleaning",
+    "cleaningHref": "/pool-cleaning",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

@@ -23,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/outdoor-living`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/auto-cover-pool`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/pool-cleaning`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${BASE}/pool-repair`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/pool-closing`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/frozen-pools`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/pool-accessories-and-extras`, changeFrequency: "monthly", priority: 0.7 },
