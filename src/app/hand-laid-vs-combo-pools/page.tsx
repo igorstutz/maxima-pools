@@ -31,6 +31,7 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { ImageLightbox } from "@/components/ImageLightbox";
+import { LaminateStack, LaminateSwatch } from "./laminate-stack";
 import content from "@/content/pages/hand-laid-vs-combo-pools.json";
 
 const icons: Record<string, LucideIcon> = {
@@ -222,6 +223,72 @@ export default function HandLaidVsComboPoolsPage() {
               </div>
             </ScrollReveal>
           </div>
+
+          {/* Cross-sections — the argument drawn, before it is tabulated below */}
+          <div className="mt-16 sm:mt-20">
+            <ScrollReveal>
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-5 mb-8">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
+                    {content.methods.stacksHeading}
+                  </h3>
+                  <p className="text-gray-500 text-sm sm:text-base leading-relaxed">
+                    {content.methods.stacksIntro}
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-x-5 gap-y-2 shrink-0">
+                  {content.laminateLegend.map((item) => (
+                    <span
+                      key={item.key}
+                      className="inline-flex items-center gap-2 text-xs font-medium text-gray-500"
+                    >
+                      <LaminateSwatch kind={item.key} />
+                      {item.label}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {content.methodCards.map((card, i) => {
+                const isHandLaid = card.method === "handlaid";
+                return (
+                  <ScrollReveal key={card.method} delay={((i + 1) as 1 | 2 | 3)}>
+                    <div
+                      className={`rounded-2xl sm:rounded-3xl p-6 sm:p-7 h-full border transition-all duration-500 ${
+                        isHandLaid
+                          ? "bg-gradient-to-br from-accent/[0.07] to-white border-accent/30 shadow-sm"
+                          : "bg-white border-gray-100 hover:border-gray-200"
+                      }`}
+                    >
+                      <LaminateStack method={card.method} />
+                      <div className="flex items-center gap-2 mt-6 mb-2">
+                        {isHandLaid && (
+                          <Check size={16} className="text-accent-dark shrink-0" strokeWidth={3} />
+                        )}
+                        <h4
+                          className={`text-base font-bold ${
+                            isHandLaid ? "text-primary" : "text-gray-900"
+                          }`}
+                        >
+                          {card.name}
+                        </h4>
+                      </div>
+                      <p className="text-sm text-gray-500 leading-relaxed mb-3">{card.line}</p>
+                      <p
+                        className={`text-xs font-semibold ${
+                          isHandLaid ? "text-accent-dark" : "text-gray-400"
+                        }`}
+                      >
+                        {card.note}
+                      </p>
+                    </div>
+                  </ScrollReveal>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -251,81 +318,85 @@ export default function HandLaidVsComboPoolsPage() {
             </div>
           </ScrollReveal>
 
-          {/* Desktop table — the hand-laid column sits on a raised light panel
-              so the winning answer reads in dark text instead of accent-on-blue. */}
+          {/* Desktop table — one framed table whose fourth column is filled light,
+              so the winning answer reads in dark text without floating off as a card. */}
           <ScrollReveal>
-            <div className="relative hidden lg:block">
-              {/* Background layer: same column tracks, so the panel lands exactly
+            <div className="relative hidden lg:block rounded-[1.75rem] border border-white/10 bg-white/[0.03] overflow-hidden">
+              {/* Fill layer: same column tracks, so the light column lands exactly
                   under the fourth column without taking a slot in the flow. */}
               <div
                 aria-hidden
-                className="absolute inset-0 grid grid-cols-[1.15fr_0.95fr_0.95fr_1.2fr] gap-x-4 pointer-events-none"
+                className="absolute inset-0 grid grid-cols-[1.2fr_1fr_1fr_1.25fr] pointer-events-none"
               >
                 <div />
                 <div />
                 <div />
-                <div className="rounded-3xl bg-white shadow-[0_25px_70px_-15px_rgba(2,32,54,0.55)]" />
+                <div className="bg-white" />
               </div>
 
-              <div className="relative grid grid-cols-[1.15fr_0.95fr_0.95fr_1.2fr] gap-x-4">
-              {/* Header */}
-              <div className="flex items-end pb-5 px-1">
-                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider">
-                  {content.comparison.headerFeature}
-                </span>
-              </div>
-              <div className="flex items-end justify-center pb-5 px-3">
-                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider text-center">
-                  {content.comparison.headerChopped}
-                </span>
-              </div>
-              <div className="flex items-end justify-center pb-5 px-3">
-                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider text-center">
-                  {content.comparison.headerCombo}
-                </span>
-              </div>
-              <div className="relative flex flex-col items-center justify-end pt-7 pb-5 px-6">
-                <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold uppercase tracking-wider rounded-full px-3 py-1 mb-2">
-                  <ShieldCheck size={12} />
-                  {content.comparison.highlightBadge}
-                </span>
-                <span className="text-primary text-base font-bold text-center leading-tight">
-                  {content.comparison.headerHandLaid}
-                </span>
-              </div>
+              <div className="relative grid grid-cols-[1.2fr_1fr_1fr_1.25fr]">
+                {/* Header */}
+                <div className="flex items-end px-7 py-5 border-b border-white/10">
+                  <span className="text-white/50 text-[11px] font-semibold uppercase tracking-[0.12em]">
+                    {content.comparison.headerFeature}
+                  </span>
+                </div>
+                <div className="flex items-end justify-center px-5 py-5 border-b border-white/10">
+                  <span className="text-white/50 text-[11px] font-semibold uppercase tracking-[0.12em] text-center">
+                    {content.comparison.headerChopped}
+                  </span>
+                </div>
+                <div className="flex items-end justify-center px-5 py-5 border-b border-white/10">
+                  <span className="text-white/50 text-[11px] font-semibold uppercase tracking-[0.12em] text-center">
+                    {content.comparison.headerCombo}
+                  </span>
+                </div>
+                <div className="relative flex flex-col items-center justify-end px-6 pt-7 pb-5 border-b border-gray-200">
+                  <span aria-hidden className="absolute top-0 inset-x-0 h-1 bg-accent" />
+                  <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold uppercase tracking-wider rounded-full px-3 py-1 mb-2">
+                    <ShieldCheck size={12} />
+                    {content.comparison.highlightBadge}
+                  </span>
+                  <span className="text-primary text-[15px] font-bold text-center leading-tight">
+                    {content.comparison.headerHandLaid}
+                  </span>
+                </div>
 
-              {/* Rows */}
-              {content.comparison.rows.map((row, i) => (
-                <Fragment key={row.feature}>
-                  <div
-                    className={`flex items-center py-6 px-1 ${i > 0 ? "border-t border-white/10" : ""}`}
-                  >
-                    <span className="text-white text-[15px] font-semibold">{row.feature}</span>
-                  </div>
-                  <div
-                    className={`flex items-center justify-center py-6 px-3 ${i > 0 ? "border-t border-white/10" : ""}`}
-                  >
-                    <span className="text-white/70 text-sm text-center leading-relaxed">
-                      {row.chopped}
-                    </span>
-                  </div>
-                  <div
-                    className={`flex items-center justify-center py-6 px-3 ${i > 0 ? "border-t border-white/10" : ""}`}
-                  >
-                    <span className="text-white/70 text-sm text-center leading-relaxed">
-                      {row.combo}
-                    </span>
-                  </div>
-                  <div
-                    className={`relative flex items-center justify-center gap-2.5 py-6 px-6 ${i > 0 ? "border-t border-gray-100" : ""}`}
-                  >
-                    <Check size={16} className="text-accent-dark shrink-0" strokeWidth={3} />
-                    <span className="text-gray-900 text-[15px] font-semibold text-center leading-relaxed">
-                      {row.handlaid}
-                    </span>
-                  </div>
-                </Fragment>
-              ))}
+                {/* Rows */}
+                {content.comparison.rows.map((row, i) => {
+                  const last = i === content.comparison.rows.length - 1;
+                  return (
+                    <Fragment key={row.feature}>
+                      <div
+                        className={`flex items-center px-7 py-6 ${last ? "" : "border-b border-white/10"}`}
+                      >
+                        <span className="text-white text-[15px] font-semibold">{row.feature}</span>
+                      </div>
+                      <div
+                        className={`flex items-center justify-center px-5 py-6 ${last ? "" : "border-b border-white/10"}`}
+                      >
+                        <span className="text-white/65 text-sm text-center leading-relaxed">
+                          {row.chopped}
+                        </span>
+                      </div>
+                      <div
+                        className={`flex items-center justify-center px-5 py-6 ${last ? "" : "border-b border-white/10"}`}
+                      >
+                        <span className="text-white/65 text-sm text-center leading-relaxed">
+                          {row.combo}
+                        </span>
+                      </div>
+                      <div
+                        className={`relative flex items-center justify-center gap-2.5 px-6 py-6 ${last ? "" : "border-b border-gray-200"}`}
+                      >
+                        <Check size={16} className="text-accent-dark shrink-0" strokeWidth={3} />
+                        <span className="text-gray-900 text-[15px] font-semibold text-center leading-relaxed">
+                          {row.handlaid}
+                        </span>
+                      </div>
+                    </Fragment>
+                  );
+                })}
               </div>
             </div>
           </ScrollReveal>
@@ -522,19 +593,26 @@ export default function HandLaidVsComboPoolsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-3 gap-y-12 md:gap-x-8">
             {content.marketingCards.map((card, i) => {
               const Icon = icons[card.icon];
               return (
                 <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
-                  <div className="group rounded-2xl sm:rounded-3xl bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                      {Icon && <Icon size={24} className="text-accent" />}
+                  <div
+                    className={`group relative h-full ${
+                      i > 0 ? "md:border-l md:border-gray-200 md:pl-8" : ""
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 mb-5">
+                      <span className="text-4xl sm:text-5xl font-bold text-gray-200 leading-none tabular-nums group-hover:text-accent/30 transition-colors duration-500">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <span className="w-10 h-10 rounded-xl bg-accent/10 border border-accent/15 flex items-center justify-center shrink-0">
+                        {Icon && <Icon size={19} className="text-accent-dark" />}
+                      </span>
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{card.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-3">{card.title}</h3>
+                    <p className="text-[15px] text-gray-500 leading-relaxed">{card.description}</p>
                   </div>
                 </ScrollReveal>
               );
@@ -568,26 +646,33 @@ export default function HandLaidVsComboPoolsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          {/* A read-down list rather than a third row of boxes — the page already
+              has cards above and below this. */}
+          <div className="rounded-[1.75rem] border border-gray-100 bg-white overflow-hidden divide-y divide-gray-100">
             {content.durabilityCards.map((card, i) => {
               const Icon = icons[card.icon];
               return (
                 <ScrollReveal key={card.title} delay={((i + 1) as 1 | 2 | 3)}>
-                  <Link href={card.linkHref} className="block h-full">
-                    <div className="group rounded-2xl sm:rounded-3xl bg-white border border-gray-100 p-7 sm:p-8 hover:shadow-lg hover:border-accent/20 transition-all duration-500 h-full flex flex-col">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-500">
-                        {Icon && <Icon size={24} className="text-accent" />}
+                  <Link href={card.linkHref} className="group block">
+                    <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8 p-7 sm:px-9 sm:py-8 hover:bg-gray-50/70 transition-colors duration-300">
+                      <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-accent/15 to-primary/10 border border-accent/15 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-500">
+                        {Icon && <Icon size={26} className="text-accent-dark" />}
                       </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-primary transition-colors">
-                        {card.title}
-                      </h3>
-                      <p className="text-sm text-gray-500 leading-relaxed mb-6 flex-1">
-                        {card.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-accent font-semibold text-sm">
+                      <div className="sm:flex-1">
+                        <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
+                          {card.title}
+                        </h3>
+                        <p className="text-[15px] text-gray-500 leading-relaxed max-w-3xl">
+                          {card.description}
+                        </p>
+                      </div>
+                      <span className="inline-flex items-center gap-2 text-accent-dark font-semibold text-sm shrink-0 sm:justify-end">
                         {card.linkLabel}
-                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                      </div>
+                        <ArrowRight
+                          size={15}
+                          className="group-hover:translate-x-1 transition-transform"
+                        />
+                      </span>
                     </div>
                   </Link>
                 </ScrollReveal>

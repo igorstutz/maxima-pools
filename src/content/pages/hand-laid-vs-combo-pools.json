@@ -24,10 +24,26 @@
     "tertiaryHref": "/contact"
   },
   "stats": [
-    { "icon": "HandMetal", "value": "100%", "label": "Hand-Laid Sheets" },
-    { "icon": "Layers", "value": "24 oz", "label": "Woven Roving" },
-    { "icon": "Gem", "value": "32-mil", "label": "Gel Coat" },
-    { "icon": "Ban", "value": "None", "label": "Sprayed Chop" }
+    {
+      "icon": "HandMetal",
+      "value": "100%",
+      "label": "Hand-Laid Sheets"
+    },
+    {
+      "icon": "Layers",
+      "value": "24 oz",
+      "label": "Woven Roving"
+    },
+    {
+      "icon": "Gem",
+      "value": "32-mil",
+      "label": "Gel Coat"
+    },
+    {
+      "icon": "Ban",
+      "value": "None",
+      "label": "Sprayed Chop"
+    }
   ],
   "methods": {
     "badge": "The Three Methods",
@@ -36,14 +52,66 @@
     "paragraph1": "Every fiberglass pool starts the same way — a polished mold, sprayed with gel coat. What goes in behind that finish is where manufacturers separate. One sprays chopped glass from a gun. One lays a couple of woven sheets and then goes back to the gun for the rest. San Juan lays the entire laminate by hand, sheet by sheet.",
     "paragraph2": "You cannot see the difference on delivery day, and it will not show up in the first swim season. It shows up in the decades that follow, in the conditions Central Ohio hands a buried shell every single year.",
     "chips": [
-      { "icon": "HandMetal", "text": "Hand-laid sheets" },
-      { "icon": "Layers", "text": "Woven roving + mat" },
-      { "icon": "FlaskConical", "text": "Vinyl ester resin" },
-      { "icon": "Ruler", "text": "Consistent thickness" }
+      {
+        "icon": "HandMetal",
+        "text": "Hand-laid sheets"
+      },
+      {
+        "icon": "Layers",
+        "text": "Woven roving + mat"
+      },
+      {
+        "icon": "FlaskConical",
+        "text": "Vinyl ester resin"
+      },
+      {
+        "icon": "Ruler",
+        "text": "Consistent thickness"
+      }
     ],
     "image": "/images/pool-quality/layers-spec.webp",
-    "imageAlt": "San Juan laminate schedule — 32-mil gel coat, three strand mat layers and two woven roving layers"
+    "imageAlt": "San Juan laminate schedule — 32-mil gel coat, three strand mat layers and two woven roving layers",
+    "stacksHeading": "The same wall, in cross-section",
+    "stacksIntro": "Top to bottom, exactly how each wall gets built up behind the finish."
   },
+  "methodCards": [
+    {
+      "method": "chopped",
+      "name": "Pure chopped",
+      "line": "Gel coat, then short strands blown from a gun until the wall is thick enough.",
+      "note": "Thickness ends where the operator's pass ends."
+    },
+    {
+      "method": "combo",
+      "name": "Hybrid combo",
+      "line": "Gel coat, a chopped skin, one or two woven sheets — then straight back to the gun.",
+      "note": "A rigid core between resin-heavy layers."
+    },
+    {
+      "method": "handlaid",
+      "name": "100% hand-laid",
+      "line": "Gel coat, three layers of strand mat and two of 24 oz woven roving, every sheet laid by hand.",
+      "note": "The same schedule on every shell we install."
+    }
+  ],
+  "laminateLegend": [
+    {
+      "key": "gel",
+      "label": "Gel coat"
+    },
+    {
+      "key": "mat",
+      "label": "Strand mat"
+    },
+    {
+      "key": "woven",
+      "label": "Woven roving"
+    },
+    {
+      "key": "chop",
+      "label": "Sprayed chop"
+    }
+  ],
   "comparison": {
     "badge": "Side by Side",
     "headingLead": "Chopped, Combo, or",

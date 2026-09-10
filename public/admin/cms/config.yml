@@ -2607,6 +2607,24 @@ collections:
                   - { label: "Text", name: text, widget: string }
               - { label: "Image", name: image, widget: image }
               - { label: "Image alt text", name: imageAlt, widget: string }
+              - { label: "Cross-sections — heading", name: stacksHeading, widget: string }
+              - { label: "Cross-sections — intro", name: stacksIntro, widget: text }
+          - label: "Cross-section cards"
+            name: methodCards
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Method", name: method, widget: select, options: ["chopped", "combo", "handlaid"], hint: "Picks which wall diagram is drawn. handlaid is the highlighted card." }
+              - { label: "Name", name: name, widget: string }
+              - { label: "Description", name: line, widget: text }
+              - { label: "Closing note", name: note, widget: string }
+          - label: "Cross-section colour key"
+            name: laminateLegend
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: "Layer", name: key, widget: select, options: ["gel", "mat", "woven", "chop"] }
+              - { label: "Label", name: label, widget: string }
           - label: "Three-way comparison section"
             name: comparison
             widget: object
