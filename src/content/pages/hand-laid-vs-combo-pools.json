@@ -1,0 +1,204 @@
+{
+  "seo": {
+    "title": "Hand-Laid vs. Combo Fiberglass Pools | Maxima Pools - Columbus, OH",
+    "description": "Chopped, hybrid combo, or 100% hand-laid? How the three fiberglass shell construction methods behave under ground pressure, a high water table, and thirty Ohio freeze-thaw winters.",
+    "ogTitle": "Hand-Laid vs. Combo Fiberglass Pools | Maxima Pools",
+    "ogDescription": "Not every fiberglass shell is built the same way. See how chopped, hybrid combo, and 100% hand-laid construction compare where it actually counts."
+  },
+  "hero": {
+    "badge": "Shell Construction Compared",
+    "images": [
+      "/images/pool-quality/wylela-beach.webp",
+      "/images/how-its-made/step-glass.webp",
+      "/images/how-its-made/step-panels.webp",
+      "/images/pool-quality/blue-lagoon.webp"
+    ],
+    "headingLead": "Hand-Laid vs.",
+    "headingHighlight": "Combo Pools",
+    "subtitle": "Once a shell is in the ground and full of water, every fiberglass pool looks the same. The construction method only shows itself years later — when the soil moves, the water table rises, or the pool has to be emptied.",
+    "primaryLabel": "See How It's Made",
+    "primaryHref": "/how-san-juan-pools-are-made",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "tertiaryLabel": "Get a Free Estimate",
+    "tertiaryHref": "/contact"
+  },
+  "stats": [
+    { "icon": "HandMetal", "value": "100%", "label": "Hand-Laid Sheets" },
+    { "icon": "Layers", "value": "24 oz", "label": "Woven Roving" },
+    { "icon": "Gem", "value": "32-mil", "label": "Gel Coat" },
+    { "icon": "Ban", "value": "None", "label": "Sprayed Chop" }
+  ],
+  "methods": {
+    "badge": "The Three Methods",
+    "headingLead": "Three Ways to Build",
+    "headingHighlight": "the Same Shell",
+    "paragraph1": "Every fiberglass pool starts the same way — a polished mold, sprayed with gel coat. What goes in behind that finish is where manufacturers separate. One sprays chopped glass from a gun. One lays a couple of woven sheets and then goes back to the gun for the rest. San Juan lays the entire laminate by hand, sheet by sheet.",
+    "paragraph2": "You cannot see the difference on delivery day, and it will not show up in the first swim season. It shows up in the decades that follow, in the conditions Central Ohio hands a buried shell every single year.",
+    "chips": [
+      { "icon": "HandMetal", "text": "Hand-laid sheets" },
+      { "icon": "Layers", "text": "Woven roving + mat" },
+      { "icon": "FlaskConical", "text": "Vinyl ester resin" },
+      { "icon": "Ruler", "text": "Consistent thickness" }
+    ],
+    "image": "/images/pool-quality/layers-spec.webp",
+    "imageAlt": "San Juan laminate schedule — 32-mil gel coat, three strand mat layers and two woven roving layers"
+  },
+  "comparison": {
+    "badge": "Side by Side",
+    "headingLead": "Chopped, Combo, or",
+    "headingHighlight": "100% Hand-Laid",
+    "paragraph": "The same four questions, asked of all three construction methods. The first two are the ones a homeowner never thinks to ask until the day they matter.",
+    "image": "/images/pool-quality/handlaid-vs-chop.webp",
+    "imageAlt": "Fiberglass pool construction comparative chart — San Juan hand-laid versus chopped and composite shells",
+    "headerFeature": "What You're Comparing",
+    "headerChopped": "Pure Chopped",
+    "headerCombo": "Hybrid Combo",
+    "headerHandLaid": "100% Hand-Laid",
+    "rows": [
+      {
+        "feature": "Tensile strength",
+        "chopped": "Very low — short strands held together by resin",
+        "combo": "Moderate, and only in the zones that received a woven layer",
+        "handlaid": "High and uniform across the entire hull"
+      },
+      {
+        "feature": "Behavior when emptied",
+        "chopped": "Stress concentrates in one spot; high risk of cracking",
+        "combo": "Variable — riskier where the water table is high",
+        "handlaid": "Load spreads along continuous fibers; flexes and returns"
+      },
+      {
+        "feature": "Thickness consistency",
+        "chopped": "Poor — as even as the operator's last pass",
+        "combo": "Average — woven layers even out part of the wall",
+        "handlaid": "Consistent across every inch of the shell"
+      },
+      {
+        "feature": "Why it's built that way",
+        "chopped": "Cheap, fast, automated",
+        "combo": "Speed, with enough woven fabric for the spec sheet",
+        "handlaid": "Structural integrity first"
+      }
+    ]
+  },
+  "emptyPool": {
+    "badge": "The Physics",
+    "headingLead": "What Happens When a Pool",
+    "headingHighlight": "Sits Empty",
+    "paragraph1": "A fiberglass shell lives in balance. Water inside pushes out, soil and groundwater outside push in, and the two cancel. Take the water away and only one of those forces is left — and it does not wait for a convenient moment. Saturated clay and a high water table can press hard enough to move a wall or lift a floor.",
+    "paragraph2": "This is where the laminate earns its price. In a sprayed shell, millions of short strands mean nothing continuous carries that load, so stress gathers wherever the wall happens to be thinnest. In a hand-laid hull, woven sheets run the length of the shell and spread the load instead of trapping it in one place — the same reason a boat hull is built this way.",
+    "image": "/images/why-fiberglass/canyon-beach.webp",
+    "imageAlt": "A one-piece San Juan shell lifted by crane, holding its shape with no water or backfill supporting it",
+    "cards": [
+      {
+        "icon": "TriangleAlert",
+        "title": "Pure chopped",
+        "description": "Short strands in resin, with no continuous fiber to share the load. Under external pressure the brittle laminate is the most prone of the three to cracking."
+      },
+      {
+        "icon": "CircleAlert",
+        "title": "Hybrid combo",
+        "description": "A rigid woven core sandwiched between resin-heavy chopped layers. Under heavy load the weaker layers can shear away from the core — what the industry calls interlaminar failure."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "100% hand-laid",
+        "description": "Continuous sheets carry the load along the full length of the wall, flexing under pressure and returning to shape instead of concentrating it in one spot."
+      }
+    ],
+    "warningTitle": "This is margin, not permission",
+    "warningText": "No fiberglass shell — ours included — is engineered to sit empty in the ground. Hand-laid construction buys you margin when something goes wrong; it is not a reason to drain your own pool. Water should never drop below the skimmer, draining belongs to a licensed professional, and unauthorized draining voids the structural warranty.",
+    "warningLinkLabel": "Read the warranty terms",
+    "warningLinkHref": "/warranty"
+  },
+  "marketingSection": {
+    "badge": "Read the Spec Sheet",
+    "headingLead": "What “Premium” Means on a",
+    "headingHighlight": "Combo Pool Brochure",
+    "intro": "Hybrid shells are engineered to be produced quickly while still earning a premium label. Two claims are worth understanding before you compare quotes."
+  },
+  "marketingCards": [
+    {
+      "icon": "Layers",
+      "title": "The skin-layer trick",
+      "description": "Gel coat, a chopped skin coat, then one or two layers of woven roving across the floor and walls — and then it is back to the chop gun to build up the rest of the thickness. Some continuous fiber beats none, but it leaves a rigid core sandwiched between weak, resin-heavy layers."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "“Proprietary” Kevlar and carbon",
+      "description": "Nobody is wrapping a swimming pool in bulletproof fabric. These are narrow strips of composite tape placed at specific stress points — corners, or the shallow-to-deep transition — and they photograph better than they perform."
+    },
+    {
+      "icon": "Gauge",
+      "title": "The modulus problem",
+      "description": "Kevlar and carbon stretch far less than fiberglass. When the wall flexes, the load transfers onto those isolated straps rather than being shared — and a thin, isolated strap can snap or delaminate from the shell around it."
+    }
+  ],
+  "durabilitySection": {
+    "badge": "Over Decades",
+    "headingLead": "The Slow Failures You",
+    "headingHighlight": "Never See Coming",
+    "intro": "Set aside the one bad day. Construction method also decides how a shell ages through thirty Ohio winters."
+  },
+  "durabilityCards": [
+    {
+      "icon": "Snowflake",
+      "title": "Freeze-thaw and shifting soil",
+      "description": "Continuous woven layers expand and contract as one piece. Chopped laminate carries micro-voids between the random shards where water can seep in — and decades of freeze cycles turn those into localized delamination.",
+      "linkLabel": "How we handle Ohio freezes",
+      "linkHref": "/frozen-pools"
+    },
+    {
+      "icon": "Droplets",
+      "title": "Osmotic blistering",
+      "description": "A chop gun needs a resin-heavy mix to hold the flying strands in place, and resin absorbs water over time. Hand-laid sheets are rolled out and squeezed to drive the excess resin out, leaving a denser wall that water struggles to penetrate.",
+      "linkLabel": "See the materials we use",
+      "linkHref": "/fiberglass-pool-quality"
+    },
+    {
+      "icon": "Ruler",
+      "title": "Thickness where it counts",
+      "description": "A sprayed wall is only as thick as the operator's last pass, and thin spots are invisible under gel coat. A hand-laid wall follows the same schedule on every shell — mat and woven roving in a fixed order, inspected layer by layer.",
+      "linkLabel": "Walk the 7-step process",
+      "linkHref": "/how-san-juan-pools-are-made"
+    }
+  ],
+  "compareSection": {
+    "badge": "Learn More",
+    "headingLead": "Compare &",
+    "headingHighlight": "Explore"
+  },
+  "compareCards": [
+    {
+      "icon": "Factory",
+      "title": "How It's Made",
+      "description": "The 7-step hand-laid manufacturing process behind every San Juan shell.",
+      "href": "/how-san-juan-pools-are-made"
+    },
+    {
+      "icon": "Award",
+      "title": "San Juan VS Competitors",
+      "description": "The full feature-by-feature comparison of construction methods and materials.",
+      "href": "/san-juan-fiberglass-pools"
+    },
+    {
+      "icon": "Gem",
+      "title": "Fiberglass Pool Quality",
+      "description": "The materials, the gel coat, and the anatomy of a premium pool shell.",
+      "href": "/fiberglass-pool-quality"
+    }
+  ],
+  "finalCta": {
+    "image": "/images/pool-quality/wylela-beach.webp",
+    "headingLead": "Ask Any Builder How",
+    "headingHighlight": "Their Shell Is Laid",
+    "paragraph": "It is a fair question and an easy one to check. We will walk you through San Juan's laminate schedule — and any competitor's quote you are holding — before you sign anything.",
+    "primaryLabel": "Schedule Your Consultation",
+    "primaryHref": "/contact",
+    "simulatorLabel": "Pool Simulator",
+    "simulatorHref": "/pool-simulator",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

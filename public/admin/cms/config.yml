@@ -2546,6 +2546,184 @@ collections:
               - { label: "Phone (shown)", name: phoneDisplay, widget: string }
               - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
 
+      - name: hand-laid-vs-combo-pools
+        label: "Hand-Laid vs. Combo Pools Page"
+        file: "src/content/pages/hand-laid-vs-combo-pools.json"
+        format: json
+        preview_path: "hand-laid-vs-combo-pools/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - label: "Background images (rotating)"
+                name: images
+                widget: list
+                field: { label: "Image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Third button label", name: tertiaryLabel, widget: string }
+              - { label: "Third button link", name: tertiaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Stats strip"
+            name: stats
+            widget: list
+            summary: "{{fields.value}} — {{fields.label}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Value", name: value, widget: string }
+              - { label: "Label", name: label, widget: string }
+          - label: "Three methods section"
+            name: methods
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - label: "Feature chips"
+                name: chips
+                widget: list
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+                  - { label: "Text", name: text, widget: string }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+          - label: "Three-way comparison section"
+            name: comparison
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+              - { label: "Column header — Feature", name: headerFeature, widget: string }
+              - { label: "Column header — Pure chopped", name: headerChopped, widget: string }
+              - { label: "Column header — Hybrid combo", name: headerCombo, widget: string }
+              - { label: "Column header — Hand-laid", name: headerHandLaid, widget: string }
+              - label: "Comparison rows"
+                name: rows
+                widget: list
+                summary: "{{fields.feature}}"
+                fields:
+                  - { label: "Feature", name: feature, widget: string }
+                  - { label: "Pure chopped", name: chopped, widget: text }
+                  - { label: "Hybrid combo", name: combo, widget: text }
+                  - { label: "100% hand-laid", name: handlaid, widget: text }
+          - label: "Empty pool / physics section"
+            name: emptyPool
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - { label: "Image", name: image, widget: image }
+              - { label: "Image alt text", name: imageAlt, widget: string }
+              - label: "Behavior cards"
+                name: cards
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name. The card using ShieldCheck is the one highlighted in accent color." }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Description", name: description, widget: text }
+              - { label: "Safety note — title", name: warningTitle, widget: string }
+              - { label: "Safety note — text", name: warningText, widget: text, hint: "Keep aligned with the warranty page: draining is a professional job and unauthorized draining voids the structural warranty." }
+              - { label: "Safety note — link label", name: warningLinkLabel, widget: string }
+              - { label: "Safety note — link", name: warningLinkHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Marketing claims section"
+            name: marketingSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Marketing claim cards"
+            name: marketingCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "Long-term durability section"
+            name: durabilitySection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+          - label: "Durability cards"
+            name: durabilityCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Link label", name: linkLabel, widget: string }
+              - { label: "Link", name: linkHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Compare & explore section"
+            name: compareSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+          - label: "Compare cards"
+            name: compareCards
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: string, hint: "Lucide icon name" }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Link", name: href, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "Final CTA"
+            name: finalCta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Background image", name: image, widget: image }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - { label: "Primary button label", name: primaryLabel, widget: string }
+              - { label: "Primary button link", name: primaryHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Simulator button label", name: simulatorLabel, widget: string }
+              - { label: "Simulator button link", name: simulatorHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
       - name: how-san-juan-pools-are-made
         label: "How San Juan Pools Are Made Page"
         file: "src/content/pages/how-san-juan-pools-are-made.json"
