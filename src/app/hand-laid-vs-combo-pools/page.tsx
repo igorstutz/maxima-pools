@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Image from "@/components/Image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -16,6 +17,7 @@ import {
   FlaskConical,
   Factory,
   Hammer,
+  Check,
   Ban,
   Ruler,
   Gauge,
@@ -249,37 +251,82 @@ export default function HandLaidVsComboPoolsPage() {
             </div>
           </ScrollReveal>
 
-          {/* Desktop table */}
+          {/* Desktop table — the hand-laid column sits on a raised light panel
+              so the winning answer reads in dark text instead of accent-on-blue. */}
           <ScrollReveal>
-            <div className="hidden lg:block space-y-3">
-              <div className="grid grid-cols-[1.1fr_1fr_1fr_1.1fr] gap-3 px-5 pb-1">
-                <span className="text-white text-xs font-semibold uppercase tracking-wider">
+            <div className="relative hidden lg:block">
+              {/* Background layer: same column tracks, so the panel lands exactly
+                  under the fourth column without taking a slot in the flow. */}
+              <div
+                aria-hidden
+                className="absolute inset-0 grid grid-cols-[1.15fr_0.95fr_0.95fr_1.2fr] gap-x-4 pointer-events-none"
+              >
+                <div />
+                <div />
+                <div />
+                <div className="rounded-3xl bg-white shadow-[0_25px_70px_-15px_rgba(2,32,54,0.55)]" />
+              </div>
+
+              <div className="relative grid grid-cols-[1.15fr_0.95fr_0.95fr_1.2fr] gap-x-4">
+              {/* Header */}
+              <div className="flex items-end pb-5 px-1">
+                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider">
                   {content.comparison.headerFeature}
                 </span>
-                <span className="text-white/70 text-xs font-semibold uppercase tracking-wider text-center">
+              </div>
+              <div className="flex items-end justify-center pb-5 px-3">
+                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider text-center">
                   {content.comparison.headerChopped}
                 </span>
-                <span className="text-white/70 text-xs font-semibold uppercase tracking-wider text-center">
+              </div>
+              <div className="flex items-end justify-center pb-5 px-3">
+                <span className="text-white/60 text-xs font-semibold uppercase tracking-wider text-center">
                   {content.comparison.headerCombo}
                 </span>
-                <span className="text-accent text-xs font-semibold uppercase tracking-wider text-center">
+              </div>
+              <div className="relative flex flex-col items-center justify-end pt-7 pb-5 px-6">
+                <span className="inline-flex items-center gap-1.5 bg-primary text-white text-[10px] font-bold uppercase tracking-wider rounded-full px-3 py-1 mb-2">
+                  <ShieldCheck size={12} />
+                  {content.comparison.highlightBadge}
+                </span>
+                <span className="text-primary text-base font-bold text-center leading-tight">
                   {content.comparison.headerHandLaid}
                 </span>
               </div>
 
-              {content.comparison.rows.map((row) => (
-                <div
-                  key={row.feature}
-                  className="grid grid-cols-[1.1fr_1fr_1fr_1.1fr] gap-3 items-center bg-white/[0.04] border border-white/[0.06] rounded-xl p-5 hover:bg-white/[0.07] transition-colors"
-                >
-                  <span className="text-white text-sm font-semibold">{row.feature}</span>
-                  <span className="text-white/70 text-sm text-center">{row.chopped}</span>
-                  <span className="text-white/70 text-sm text-center">{row.combo}</span>
-                  <span className="text-accent text-sm font-semibold text-center">
-                    {row.handlaid}
-                  </span>
-                </div>
+              {/* Rows */}
+              {content.comparison.rows.map((row, i) => (
+                <Fragment key={row.feature}>
+                  <div
+                    className={`flex items-center py-6 px-1 ${i > 0 ? "border-t border-white/10" : ""}`}
+                  >
+                    <span className="text-white text-[15px] font-semibold">{row.feature}</span>
+                  </div>
+                  <div
+                    className={`flex items-center justify-center py-6 px-3 ${i > 0 ? "border-t border-white/10" : ""}`}
+                  >
+                    <span className="text-white/70 text-sm text-center leading-relaxed">
+                      {row.chopped}
+                    </span>
+                  </div>
+                  <div
+                    className={`flex items-center justify-center py-6 px-3 ${i > 0 ? "border-t border-white/10" : ""}`}
+                  >
+                    <span className="text-white/70 text-sm text-center leading-relaxed">
+                      {row.combo}
+                    </span>
+                  </div>
+                  <div
+                    className={`relative flex items-center justify-center gap-2.5 py-6 px-6 ${i > 0 ? "border-t border-gray-100" : ""}`}
+                  >
+                    <Check size={16} className="text-accent-dark shrink-0" strokeWidth={3} />
+                    <span className="text-gray-900 text-[15px] font-semibold text-center leading-relaxed">
+                      {row.handlaid}
+                    </span>
+                  </div>
+                </Fragment>
               ))}
+              </div>
             </div>
           </ScrollReveal>
 
@@ -302,11 +349,21 @@ export default function HandLaidVsComboPoolsPage() {
                       </p>
                       <p className="text-white/70 text-sm">{row.combo}</p>
                     </div>
-                    <div className="pt-3 border-t border-white/10">
-                      <p className="text-accent/80 text-[11px] font-semibold uppercase tracking-wider mb-1">
+                    {/* Winning answer on a light card — dark text, not accent on blue */}
+                    <div className="rounded-xl bg-white p-4 shadow-lg">
+                      <p className="text-primary text-[11px] font-bold uppercase tracking-wider mb-1.5">
                         {content.comparison.headerHandLaid}
                       </p>
-                      <p className="text-accent text-sm font-semibold">{row.handlaid}</p>
+                      <div className="flex items-start gap-2">
+                        <Check
+                          size={15}
+                          className="text-accent-dark shrink-0 mt-0.5"
+                          strokeWidth={3}
+                        />
+                        <p className="text-gray-900 text-sm font-semibold leading-relaxed">
+                          {row.handlaid}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -2622,6 +2622,7 @@ collections:
               - { label: "Column header — Pure chopped", name: headerChopped, widget: string }
               - { label: "Column header — Hybrid combo", name: headerCombo, widget: string }
               - { label: "Column header — Hand-laid", name: headerHandLaid, widget: string }
+              - { label: "Highlight badge (above the hand-laid column)", name: highlightBadge, widget: string }
               - label: "Comparison rows"
                 name: rows
                 widget: list
