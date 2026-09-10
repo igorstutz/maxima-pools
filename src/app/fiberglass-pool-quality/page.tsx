@@ -17,6 +17,7 @@ import {
   FlaskConical,
   Factory,
   Hammer,
+  Check,
   type LucideIcon,
 } from "lucide-react";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -41,6 +42,11 @@ export const metadata: Metadata = {
     title: content.seo.ogTitle,
     description: content.seo.ogDescription,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
   },
 };
 
@@ -263,7 +269,7 @@ export default function FiberglassPoolQualityPage() {
                   <span className="text-white text-xs font-semibold uppercase tracking-wider">
                     {content.comparison.headerFeature}
                   </span>
-                  <span className="text-accent text-xs font-semibold uppercase tracking-wider text-center">
+                  <span className="text-white text-xs font-bold uppercase tracking-wider text-center">
                     {content.comparison.headerSanJuan}
                   </span>
                   <span className="text-white text-xs font-semibold uppercase tracking-wider text-center">
@@ -274,15 +280,16 @@ export default function FiberglassPoolQualityPage() {
                 {content.comparison.rows.map((row) => (
                   <div
                     key={row.feature}
-                    className="grid grid-cols-3 gap-3 bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 hover:bg-white/[0.07] transition-colors"
+                    className="grid grid-cols-3 gap-3 items-center bg-white/[0.04] border border-white/[0.06] rounded-xl p-4 hover:bg-white/[0.07] transition-colors"
                   >
                     <span className="text-white text-sm font-medium">
                       {row.feature}
                     </span>
-                    <span className="text-accent text-sm font-semibold text-center">
+                    <span className="flex items-center justify-center gap-1.5 bg-white rounded-lg px-3 py-2 text-gray-900 text-sm font-semibold text-center leading-snug">
+                      <Check size={13} className="text-accent-dark shrink-0" strokeWidth={3} />
                       {row.sanjuan}
                     </span>
-                    <span className="text-white text-sm text-center">
+                    <span className="text-white/70 text-sm text-center">
                       {row.competitor}
                     </span>
                   </div>

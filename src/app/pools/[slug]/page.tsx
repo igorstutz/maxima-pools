@@ -63,6 +63,11 @@ export async function generateMetadata({
       url: `/pools/${slug}/`,
       images: [{ url: pool.image, width: 1200, height: 630, alt: pool.name }],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: title,
+      description: description,
+    },
   };
 }
 

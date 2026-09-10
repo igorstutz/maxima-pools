@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     title: content.seo.ogTitle,
     description: content.seo.ogDescription,
   },
+  twitter: {
+    card: "summary_large_image",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
+  },
   alternates: {
     canonical: "https://maximapools.com/fiberglass-pool-colors",
   },

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
     description:
       "Browse 85+ San Juan fiberglass pools and spas. Filter by type, shape, or size.",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Pool Collection | Maxima Pools",
+    description: "Browse 85+ San Juan fiberglass pools and spas. Filter by type, shape, or size.",
+  },
   alternates: {
     canonical: "https://maximapools.com/pools",
   },

@@ -24,6 +24,11 @@ export const metadata: Metadata = {
     description: blogIndex.seo.ogDescription,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: blogIndex.seo.ogTitle,
+    description: blogIndex.seo.ogDescription,
+  },
 };
 
 export default function BlogPage() {

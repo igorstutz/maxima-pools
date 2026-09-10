@@ -15,6 +15,11 @@ export const metadata: Metadata = {
     description: poolsIndex.seo.ogDescription,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: poolsIndex.seo.ogTitle,
+    description: poolsIndex.seo.ogDescription,
+  },
 };
 
 // Server component: loads the pool list at build time (fs) and hands it to the

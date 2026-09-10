@@ -41,6 +41,11 @@ export const metadata: Metadata = {
     description: content.seo.ogDescription,
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
+  },
 };
 
 const jsonLd = {

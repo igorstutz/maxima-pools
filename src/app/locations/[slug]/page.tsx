@@ -60,6 +60,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
         },
       ],
     },
+    twitter: {
+      card: "summary_large_image",
+      title: fill(content.seo.ogTitleTemplate, vars),
+      description: fill(content.seo.ogDescriptionTemplate, vars),
+    },
   };
 }
 
