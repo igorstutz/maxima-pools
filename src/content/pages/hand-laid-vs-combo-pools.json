@@ -3,7 +3,9 @@
     "title": "Hand-Laid vs. Combo Fiberglass Pools | Maxima Pools - Columbus, OH",
     "description": "Chopped, hybrid combo, or 100% hand-laid? How the three fiberglass shell construction methods behave under ground pressure, a high water table, and thirty Ohio freeze-thaw winters.",
     "ogTitle": "Hand-Laid vs. Combo Fiberglass Pools | Maxima Pools",
-    "ogDescription": "Not every fiberglass shell is built the same way. See how chopped, hybrid combo, and 100% hand-laid construction compare where it actually counts."
+    "ogDescription": "Not every fiberglass shell is built the same way. See how chopped, hybrid combo, and 100% hand-laid construction compare where it actually counts.",
+    "datePublished": "2026-09-10",
+    "dateModified": "2026-09-10"
   },
   "hero": {
     "badge": "Shell Construction Compared",
@@ -233,6 +235,36 @@
       "linkHref": "/how-san-juan-pools-are-made"
     }
   ],
+  "faqSection": {
+    "badge": "FAQ",
+    "headingLead": "Shell Construction",
+    "headingHighlight": "Questions",
+    "intro": "What homeowners ask once they start comparing quotes from more than one builder. If yours isn't here, call — we would rather answer it than have you guess.",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "faqs": [
+    {
+      "question": "What is a combo or hybrid fiberglass pool?",
+      "answer": "A shell that starts like a premium one and finishes like a cheap one. The factory sprays gel coat, applies a chopped skin coat, lays one or two layers of woven roving across the floor and walls — and then goes back to the chop gun to build up the rest of the thickness. It earns the woven roving line on the spec sheet while most of the wall is still sprayed chop."
+    },
+    {
+      "question": "Is hand-laid fiberglass really stronger than chopped?",
+      "answer": "Yes, and the reason is the fiber rather than the resin. Chopped glass is short strands held together by resin, so nothing continuous carries a load and stress gathers wherever the wall happens to be thinnest. Hand-laid sheets run the length of the shell, so the same load spreads along the fibers instead of concentrating in one spot — the reason boat hulls are built the same way."
+    },
+    {
+      "question": "Can you drain a fiberglass pool?",
+      "answer": "Not on your own. The water inside balances the soil and groundwater pushing in from outside; empty the shell and only the outside force is left, which can move a wall or lift a floor. The water should never drop below the skimmer, draining is a job for a licensed professional, and unauthorized draining voids the structural warranty. Hand-laid construction gives a shell more margin if something goes wrong — it is not permission to empty the pool."
+    },
+    {
+      "question": "Does Kevlar or carbon fiber reinforcement make a pool stronger?",
+      "answer": "Not the way the brochure implies. Nobody wraps a swimming pool in bulletproof fabric — these are narrow strips of composite tape placed at a few stress points, such as corners or the shallow-to-deep transition. Kevlar and carbon also stretch far less than fiberglass, so when the wall flexes the load transfers onto those isolated straps rather than being shared, and a thin strap can snap or delaminate from the shell around it."
+    },
+    {
+      "question": "How can I tell how a pool shell was actually built?",
+      "answer": "Ask the builder for the laminate schedule — the layers in order, with the weight of each. A manufacturer that hand-lays the whole shell will hand it over without hesitating. If what comes back is a brand name, a warranty length or the word “composite” instead of a list of layers, that is your answer."
+    }
+  ],
   "compareSection": {
     "badge": "Learn More",
     "headingLead": "Compare &",
@@ -256,6 +288,12 @@
       "title": "Fiberglass Pool Quality",
       "description": "The materials, the gel coat, and the anatomy of a premium pool shell.",
       "href": "/fiberglass-pool-quality"
+    },
+    {
+      "icon": "Shield",
+      "title": "Why Fiberglass Makes Sense",
+      "description": "Cost, upkeep and lifespan against concrete and vinyl liner pools.",
+      "href": "/why-fiberglass-pools-make-sense"
     }
   ],
   "finalCta": {

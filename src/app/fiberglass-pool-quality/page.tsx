@@ -485,7 +485,7 @@ export default function FiberglassPoolQualityPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {content.compareCards.map((card, i) => {
               const Icon = icons[card.icon];
               return (

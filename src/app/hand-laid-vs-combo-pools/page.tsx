@@ -32,6 +32,7 @@ import { SectionDivider } from "@/components/SectionDivider";
 import { HeroImageCycle } from "@/components/HeroImageCycle";
 import { ImageLightbox } from "@/components/ImageLightbox";
 import { LaminateStack, LaminateSwatch } from "./laminate-stack";
+import { HandLaidFAQ } from "./faq";
 import content from "@/content/pages/hand-laid-vs-combo-pools.json";
 
 const icons: Record<string, LucideIcon> = {
@@ -50,16 +51,47 @@ export const metadata: Metadata = {
     description: content.seo.ogDescription,
     type: "website",
   },
+  /* Without this the page inherits the site-wide Twitter card from the layout. */
+  twitter: {
+    card: "summary_large_image",
+    title: content.seo.ogTitle,
+    description: content.seo.ogDescription,
+  },
 };
+
+const PAGE_URL = "https://maximapools.com/hand-laid-vs-combo-pools/";
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  headline: "Hand-Laid vs. Combo Fiberglass Pools",
-  description:
-    "How chopped, hybrid combo, and 100% hand-laid fiberglass shells behave under ground pressure, a high water table, and repeated freeze-thaw cycles.",
-  author: { "@type": "Organization", name: "Maxima Pools" },
-  publisher: { "@type": "Organization", name: "Maxima Pools" },
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": `${PAGE_URL}#article`,
+      headline: "Hand-Laid vs. Combo Fiberglass Pools",
+      description: content.seo.description,
+      inLanguage: "en-US",
+      datePublished: content.seo.datePublished,
+      dateModified: content.seo.dateModified,
+      image: `https://maximapools.com${content.emptyPool.image}`,
+      mainEntityOfPage: { "@type": "WebPage", "@id": PAGE_URL },
+      author: { "@type": "Organization", name: "Maxima Pools", url: "https://maximapools.com" },
+      publisher: { "@id": "https://maximapools.com/#organization" },
+      about: [
+        { "@type": "Thing", name: "Fiberglass swimming pool construction" },
+        { "@type": "Thing", name: "Hand-laid fiberglass laminate" },
+        { "@type": "Thing", name: "Chopped strand fiberglass" },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${PAGE_URL}#faq`,
+      mainEntity: content.faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
+      })),
+    },
+  ],
 };
 
 export default function HandLaidVsComboPoolsPage() {
@@ -684,6 +716,46 @@ export default function HandLaidVsComboPoolsPage() {
 
       <SectionDivider />
 
+      {/* ── FAQ — the questions people type, answered on the page itself ── */}
+      <section className="py-16 sm:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16">
+            <ScrollReveal direction="left">
+              <div className="lg:sticky lg:top-28">
+                <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-5 py-2 mb-6">
+                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <span className="text-accent font-semibold text-sm uppercase tracking-wider">
+                    {content.faqSection.badge}
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-5">
+                  {content.faqSection.headingLead}{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                    {content.faqSection.headingHighlight}
+                  </span>
+                </h2>
+                <p className="text-gray-600 text-lg leading-relaxed mb-7">
+                  {content.faqSection.intro}
+                </p>
+                <a
+                  href={content.faqSection.phoneHref}
+                  className="group inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-full shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:scale-105 transition-all duration-300 text-sm"
+                >
+                  <Phone size={16} />
+                  {content.faqSection.phoneDisplay}
+                </a>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right">
+              <HandLaidFAQ faqs={content.faqs} />
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      <SectionDivider />
+
       {/* ── Compare & Explore ── */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -704,7 +776,7 @@ export default function HandLaidVsComboPoolsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {content.compareCards.map((card, i) => {
               const Icon = icons[card.icon];
               return (

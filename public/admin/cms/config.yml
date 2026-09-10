@@ -2561,6 +2561,8 @@ collections:
               - { label: "Meta Description", name: description, widget: text }
               - { label: "Social Share Title", name: ogTitle, widget: string }
               - { label: "Social Share Description", name: ogDescription, widget: text }
+              - { label: "Published date", name: datePublished, widget: string, hint: "YYYY-MM-DD — feeds the Article schema" }
+              - { label: "Last updated date", name: dateModified, widget: string, hint: "YYYY-MM-DD — bump this when the page changes" }
           - label: "Hero"
             name: hero
             widget: object
@@ -2710,6 +2712,25 @@ collections:
               - { label: "Description", name: description, widget: text }
               - { label: "Link label", name: linkLabel, widget: string }
               - { label: "Link", name: linkHref, widget: string, hint: "Internal starts with / . External starts with https://" }
+          - label: "FAQ section"
+            name: faqSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro", name: intro, widget: text }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "FAQ questions"
+            name: faqs
+            widget: list
+            summary: "{{fields.question}}"
+            hint: "These also feed the FAQ rich result in Google and answer engines."
+            fields:
+              - { label: "Question", name: question, widget: string }
+              - { label: "Answer", name: answer, widget: text }
           - label: "Compare & explore section"
             name: compareSection
             widget: object

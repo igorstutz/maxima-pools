@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 };
 
 // Lucide icons referenced by name from the editable content file.
-const iconMap = { Shield, Clock, Zap, Award, Droplets, Leaf, Wrench, Gem, Palette } as const;
+const iconMap = { Shield, Clock, Zap, Award, Droplets, Leaf, Wrench, Gem, Palette, Layers } as const;
 type IconName = keyof typeof iconMap;
 
 const jsonLd = {
@@ -390,7 +390,7 @@ export default function WhyFiberglassPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-5">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {content.compareCards.map((card, i) => {
               const Icon = iconMap[card.icon as IconName];
               return (

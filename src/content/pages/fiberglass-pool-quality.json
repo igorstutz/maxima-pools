@@ -24,10 +24,26 @@
     "tertiaryHref": "/contact"
   },
   "stats": [
-    { "icon": "HandMetal", "value": "100%", "label": "Hand-Laid" },
-    { "icon": "Layers", "value": "5+", "label": "Fiberglass Layers" },
-    { "icon": "Clock", "value": "25+yr", "label": "Proven Finishes" },
-    { "icon": "Shield", "value": "Structural", "label": "Warranty" }
+    {
+      "icon": "HandMetal",
+      "value": "100%",
+      "label": "Hand-Laid"
+    },
+    {
+      "icon": "Layers",
+      "value": "5+",
+      "label": "Fiberglass Layers"
+    },
+    {
+      "icon": "Clock",
+      "value": "25+yr",
+      "label": "Proven Finishes"
+    },
+    {
+      "icon": "Shield",
+      "value": "Structural",
+      "label": "Warranty"
+    }
   ],
   "highestQuality": {
     "badge": "World-Class Quality",
@@ -36,10 +52,22 @@
     "paragraph1": "All fiberglass is hand-laid using only solid sheets. We do not use chop fiberglass — a common practice that involves gluing shards of fiberglass to create layers. These are not solid layers and create weaker walls at a reduced price.",
     "paragraph2": "At San Juan Pools, we do not compromise price for quality. We invest in people who construct every pool from scratch — talented tradesmen with decades of experience who know our products best.",
     "chips": [
-      { "icon": "HandMetal", "text": "100% Hand Made" },
-      { "icon": "Layers", "text": "Solid Sheets Only" },
-      { "icon": "FlaskConical", "text": "Vinyl Ester Resin" },
-      { "icon": "Award", "text": "Structural Warranty" }
+      {
+        "icon": "HandMetal",
+        "text": "100% Hand Made"
+      },
+      {
+        "icon": "Layers",
+        "text": "Solid Sheets Only"
+      },
+      {
+        "icon": "FlaskConical",
+        "text": "Vinyl Ester Resin"
+      },
+      {
+        "icon": "Award",
+        "text": "Structural Warranty"
+      }
     ],
     "image": "/images/pool-quality/blue-lagoon.webp",
     "imageAlt": "San Juan fiberglass pool — highest quality construction"
@@ -55,12 +83,36 @@
     "headerSanJuan": "San Juan",
     "headerCompetitors": "Competitors",
     "rows": [
-      { "feature": "Construction Method", "sanjuan": "Hand-laid solid sheets", "competitor": "Chopped fiberglass sprayed from gun" },
-      { "feature": "Layer Consistency", "sanjuan": "Uniform, even thickness", "competitor": "Inconsistent, variable thickness" },
-      { "feature": "Structural Integrity", "sanjuan": "Continuous fibers — no weak points", "competitor": "Glued-together shards — many weak points" },
-      { "feature": "Resin Type", "sanjuan": "Vinyl Ester throughout entire shell", "competitor": "Polyester (cheaper, less durable)" },
-      { "feature": "Freeze-Thaw Performance", "sanjuan": "Flexes with ground movement", "competitor": "Prone to cracking and delamination" },
-      { "feature": "Industry Standard", "sanjuan": "Aerospace & marine grade", "competitor": "Below marine specifications" }
+      {
+        "feature": "Construction Method",
+        "sanjuan": "Hand-laid solid sheets",
+        "competitor": "Chopped fiberglass sprayed from gun"
+      },
+      {
+        "feature": "Layer Consistency",
+        "sanjuan": "Uniform, even thickness",
+        "competitor": "Inconsistent, variable thickness"
+      },
+      {
+        "feature": "Structural Integrity",
+        "sanjuan": "Continuous fibers — no weak points",
+        "competitor": "Glued-together shards — many weak points"
+      },
+      {
+        "feature": "Resin Type",
+        "sanjuan": "Vinyl Ester throughout entire shell",
+        "competitor": "Polyester (cheaper, less durable)"
+      },
+      {
+        "feature": "Freeze-Thaw Performance",
+        "sanjuan": "Flexes with ground movement",
+        "competitor": "Prone to cracking and delamination"
+      },
+      {
+        "feature": "Industry Standard",
+        "sanjuan": "Aerospace & marine grade",
+        "competitor": "Below marine specifications"
+      }
     ]
   },
   "layersSection": {
@@ -76,9 +128,21 @@
     "intro": "Each component plays a vital role in maintaining exceptional quality and long-term performance."
   },
   "materialCards": [
-    { "icon": "Layers", "title": "Premium Fiberglass Layers", "description": "At the heart of every pool is a carefully engineered shell made with hand-laid fiberglass layers. Unlike sprayed or chopped fiberglass, this process guarantees even thickness, consistent strength, and superior flexibility — the same standards used in marine and aerospace applications." },
-    { "icon": "Sparkles", "title": "Advanced Gelcoat Protection", "description": "An advanced gelcoat surface finish that provides a smooth, non-porous barrier resisting staining, algae growth, and chemical damage. This coating delivers aesthetic brilliance while preserving quality against everyday wear, UV rays, and environmental stress." },
-    { "icon": "Shield", "title": "Reinforced Structural Design", "description": "Multiple reinforcement layers using hand-laid fiberglass sheets and Vinyl Ester resin — the same materials found in boat hulls. This combination prevents cracking, blistering, and delamination, even under extreme weather conditions." }
+    {
+      "icon": "Layers",
+      "title": "Premium Fiberglass Layers",
+      "description": "At the heart of every pool is a carefully engineered shell made with hand-laid fiberglass layers. Unlike sprayed or chopped fiberglass, this process guarantees even thickness, consistent strength, and superior flexibility — the same standards used in marine and aerospace applications."
+    },
+    {
+      "icon": "Sparkles",
+      "title": "Advanced Gelcoat Protection",
+      "description": "An advanced gelcoat surface finish that provides a smooth, non-porous barrier resisting staining, algae growth, and chemical damage. This coating delivers aesthetic brilliance while preserving quality against everyday wear, UV rays, and environmental stress."
+    },
+    {
+      "icon": "Shield",
+      "title": "Reinforced Structural Design",
+      "description": "Multiple reinforcement layers using hand-laid fiberglass sheets and Vinyl Ester resin — the same materials found in boat hulls. This combination prevents cracking, blistering, and delamination, even under extreme weather conditions."
+    }
   ],
   "benefitsSection": {
     "badge": "Benefits",
@@ -93,9 +157,21 @@
     "imageHandlaidAlt": "Hand-laid fiberglass quality"
   },
   "benefits": [
-    { "icon": "Clock", "title": "Durability & Longevity", "description": "A high-quality fiberglass shell won't crack, chip, or degrade over time. It maintains its structure and surface integrity for decades, giving you confidence your investment will stand strong." },
-    { "icon": "Shield", "title": "Resistant to Fading & Cracking", "description": "Proprietary gelcoat finish and reinforced materials protect against common issues affecting lower-quality models. Less repair, less worry, more time enjoying your pool." },
-    { "icon": "Droplets", "title": "Low Maintenance", "description": "A smooth, non-porous surface means fewer chemicals, less cleaning, and no resurfacing. High quality translates into less effort and lower lifetime costs — water stays cleaner, longer." }
+    {
+      "icon": "Clock",
+      "title": "Durability & Longevity",
+      "description": "A high-quality fiberglass shell won't crack, chip, or degrade over time. It maintains its structure and surface integrity for decades, giving you confidence your investment will stand strong."
+    },
+    {
+      "icon": "Shield",
+      "title": "Resistant to Fading & Cracking",
+      "description": "Proprietary gelcoat finish and reinforced materials protect against common issues affecting lower-quality models. Less repair, less worry, more time enjoying your pool."
+    },
+    {
+      "icon": "Droplets",
+      "title": "Low Maintenance",
+      "description": "A smooth, non-porous surface means fewer chemicals, less cleaning, and no resurfacing. High quality translates into less effort and lower lifetime costs — water stays cleaner, longer."
+    }
   ],
   "compareSection": {
     "badge": "Learn More",
@@ -103,9 +179,30 @@
     "headingHighlight": "Explore"
   },
   "compareCards": [
-    { "icon": "Factory", "title": "How It's Made", "description": "See the 7-step hand-laid manufacturing process behind every San Juan pool.", "href": "/how-san-juan-pools-are-made" },
-    { "icon": "Award", "title": "San Juan VS Competitors", "description": "Side-by-side comparison of construction methods, materials, and warranties.", "href": "/san-juan-fiberglass-pools" },
-    { "icon": "Palette", "title": "Fiberglass Pool Colors", "description": "Explore the full range of gelcoat and Iridium finish color options.", "href": "/fiberglass-pool-colors" }
+    {
+      "icon": "Factory",
+      "title": "How It's Made",
+      "description": "See the 7-step hand-laid manufacturing process behind every San Juan pool.",
+      "href": "/how-san-juan-pools-are-made"
+    },
+    {
+      "icon": "Award",
+      "title": "San Juan VS Competitors",
+      "description": "Side-by-side comparison of construction methods, materials, and warranties.",
+      "href": "/san-juan-fiberglass-pools"
+    },
+    {
+      "icon": "Palette",
+      "title": "Fiberglass Pool Colors",
+      "description": "Explore the full range of gelcoat and Iridium finish color options.",
+      "href": "/fiberglass-pool-colors"
+    },
+    {
+      "icon": "Layers",
+      "title": "Hand-Laid vs. Combo Pools",
+      "description": "Chopped, hybrid combo or 100% hand-laid — how each wall behaves under pressure.",
+      "href": "/hand-laid-vs-combo-pools"
+    }
   ],
   "finalCta": {
     "image": "/images/pool-quality/wylela-beach.webp",
