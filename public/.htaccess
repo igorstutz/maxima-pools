@@ -134,6 +134,16 @@ ErrorDocument 404 /404.html
   SetEnvIf Request_URI "\.(js|mjs|css|png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|eot|mp4|webm|pdf|xml|txt|json|map)$" MX_STATIC_ASSET
   Header merge Vary "Accept" env=!MX_STATIC_ASSET
 
+  # ...and a belt for that brace. Verified 2026-09-15: the origin does send
+  # `Vary: Accept` (curl --resolve straight to the LiteSpeed box shows it),
+  # but Hostinger's CDN rewrites the header to `Vary: Accept-Encoding` on
+  # the way out, so we cannot rely on it reaching a downstream cache.
+  # `private` keeps every shared cache from storing the negotiated
+  # responses at all, which makes the rewritten Vary harmless. No real cost:
+  # HTML is already `access plus 0 seconds` below and the CDN reports these
+  # as DYNAMIC (uncached) today.
+  Header set Cache-Control "private, max-age=0, must-revalidate" env=!MX_STATIC_ASSET
+
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "geolocation=(), camera=(), microphone=()"
