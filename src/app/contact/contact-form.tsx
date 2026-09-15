@@ -6,6 +6,7 @@ import { asset } from "@/lib/base-path";
 import { analytics } from "@/lib/analytics";
 import { newEventId, readOppref } from "@/lib/oaiq";
 import { readClickIds } from "@/lib/click-ids";
+import { payloadAtribuicao } from "@/lib/attribution";
 
 // PHP endpoint that lives at public_html/api/submit.php on Hostinger.
 // asset() prefixes the deploy basePath when present (GH Pages preview).
@@ -136,6 +137,12 @@ export function ContactForm() {
     for (const [kind, value] of Object.entries(readClickIds())) {
       form.append(kind, value);
     }
+
+    // A jornada inteira até aqui — primeira origem, última, e cada visita pelo
+    // caminho. Viaja com o lead em vez de por requisição própria: é o instante
+    // em que ela deixa de ser anônima e passa a valer alguma coisa.
+    const jornada = payloadAtribuicao();
+    if (jornada) form.append("attribution", jornada);
 
     try {
       const res = await fetch(SUBMIT_ENDPOINT, {

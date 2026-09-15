@@ -122,6 +122,8 @@ if ($oaiOppref === '') {
 // Google Ads click id. The form sends it (src/lib/click-ids.ts); the
 // `_mx_gcl` cookie is read here too so a lead still carries attribution if
 // the form's JS copy ever fails to attach it.
+require_once __DIR__ . '/attribution-parse.php';
+
 $gclids = [];
 foreach (['gclid', 'wbraid', 'gbraid'] as $kind) {
     $value = tracking_token($kind, 512);
@@ -203,6 +205,8 @@ log_submission([
     'source'       => $source,
     'message'      => $message,
     'click_id'     => $gclids ? array_key_first($gclids) . ':' . reset($gclids) : null,
+    // De onde este lead veio, e por onde passou antes de escrever.
+    'attribution'  => attr_parse((string)($_POST['attribution'] ?? '')),
     'email_status' => $ok ? 'sent' : 'failed',
     'email_error'  => $ok ? null : 'mail() returned false',
 ]);
