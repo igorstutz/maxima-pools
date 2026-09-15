@@ -72,4 +72,4 @@ Each city and county has a dedicated page at `https://maximapools.com/locations/
 
 ## Machine-readable content
 
-Every page on this site is also available as Markdown. Request the same URL with `Accept: text/markdown`, or append `index.md` to the path — e.g. `https://maximapools.com/pools/index.md`. Responses carry `Vary: Accept`, so a cached HTML copy is never served in place of the Markdown one.
+Every page on this site is also available as Markdown. Request the same URL with `Accept: text/markdown`, or append `index.md` to the path — e.g. `https://maximapools.com/pools/index.md`. The origin sends `Vary: Accept` and marks both variants `Cache-Control: private`, so no shared cache can hand you the HTML copy instead.
