@@ -23,8 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # `npm run build`, not `npx next build`: the npm script also runs
+      # scripts/generate-markdown.mjs, which writes the index.md twin that
+      # .htaccess serves on `Accept: text/markdown`.
       - name: Build static export (root-domain build, no basePath)
-        run: npx next build
+        run: npm run build
 
       # Hostinger's SSH endpoint intermittently times out (rsync exits 255),
       # which is a transient connectivity hiccup, NOT a code/build problem.

@@ -7,7 +7,8 @@
         "label": "Why Maxima",
         "dropdownMinWidth": "220px",
         "submenu": [
-          { "label": "About Us", "href": "/why-maxima" },
+          { "label": "About Us", "href": "/about" },
+          { "label": "The Maxima Advantage", "href": "/why-maxima" },
           { "label": "Our Process", "href": "/our-process" },
           { "label": "Financing", "href": "/financing" },
           { "label": "Reviews", "href": "/reviews" },
@@ -87,6 +88,7 @@
       {
         "heading": "Learn",
         "links": [
+          { "label": "About Us", "href": "/about" },
           { "label": "Why Maxima", "href": "/why-maxima" },
           { "label": "How It's Made", "href": "/how-san-juan-pools-are-made" },
           { "label": "Pool Quality", "href": "/fiberglass-pool-quality" },
@@ -106,6 +108,10 @@
     ],
     "serviceAreasHeading": "Service Areas",
     "copyrightName": "Maxima Concrete LLC",
+    "legalLinks": [
+      { "label": "Privacy Policy", "href": "/privacy" },
+      { "label": "About Us", "href": "/about" }
+    ],
     "bottomBarRight": ["Authorized San Juan Pools Dealer", "Columbus, OH"]
   }
 }

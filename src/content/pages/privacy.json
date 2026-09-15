@@ -1,0 +1,171 @@
+{
+  "seo": {
+    "title": "Privacy Policy | Maxima Pools",
+    "description": "How Maxima Pools collects, uses, and protects the information you share through maximapools.com — what the contact form stores, which cookies and analytics run, and how to request deletion.",
+    "ogTitle": "Privacy Policy | Maxima Pools",
+    "ogDescription": "What Maxima Pools collects through maximapools.com, who we share it with, how long we keep it, and how to request access or deletion."
+  },
+  "hero": {
+    "badge": "Legal",
+    "headingLead": "Privacy",
+    "headingHighlight": "Policy",
+    "subtitle": "Plain-language explanation of what maximapools.com collects, why we collect it, who else sees it, and how to have it deleted.",
+    "effectiveLabel": "Effective date",
+    "effectiveDate": "September 15, 2026",
+    "updatedLabel": "Last updated",
+    "updatedDate": "September 15, 2026"
+  },
+  "intro": {
+    "paragraphs": [
+      "This policy covers maximapools.com and the services Maxima Pools provides through it. Maxima Pools is a trade name of Maxima Concrete LLC, located at 4059 State Route 37 East, Suite A, Delaware, OH 43015.",
+      "We are a pool builder, not an advertising business. We collect contact details so we can quote and build pools, and we measure our advertising so we know which campaigns are worth paying for. We do not sell personal information, and we never have."
+    ]
+  },
+  "sections": [
+    {
+      "id": "information-you-give-us",
+      "icon": "FileText",
+      "heading": "1. Information you give us directly",
+      "paragraphs": [
+        "When you request a free estimate through our contact form, we ask for the following. Everything on the form is used to prepare and schedule your estimate:"
+      ],
+      "bullets": [
+        { "term": "Full name", "description": "So we know who we are talking to." },
+        { "term": "Phone number and email address", "description": "So we can reach you about your estimate." },
+        { "term": "Property address, city, state, and ZIP code", "description": "So we can confirm you are inside our service area and assess site access, soil, and permitting." },
+        { "term": "Pool size of interest", "description": "So the estimate reflects the pool you actually want." },
+        { "term": "How you heard about us", "description": "So we know which of our marketing efforts are working." },
+        { "term": "Your message", "description": "Anything else you choose to tell us about the project." }
+      ],
+      "closing": "You can also reach us by phone or email without submitting anything. Those conversations are covered by this policy too."
+    },
+    {
+      "id": "information-collected-automatically",
+      "icon": "Activity",
+      "heading": "2. Information collected automatically",
+      "paragraphs": [
+        "Like most websites, maximapools.com records some technical information as you browse:"
+      ],
+      "bullets": [
+        { "term": "Standard web server logs", "description": "Our host records the pages requested, timestamps, referring page, browser type, and IP address." },
+        { "term": "Phone-link clicks", "description": "When you tap a phone number on the site, we log the click with a timestamp, the page you were on, and your IP address, so we can tell how many calls the website generates." },
+        { "term": "Advertising click identifiers", "description": "If you arrive from a Google or ChatGPT ad, the ad platform appends an identifier to the URL. We store it in a first-party cookie named _mx_gcl for up to 90 days so a later estimate request can be matched back to the ad that produced it." },
+        { "term": "Analytics events", "description": "Page views, scroll depth, form submissions, and similar interactions, collected through Google Analytics via Google Tag Manager." }
+      ],
+      "closing": ""
+    },
+    {
+      "id": "how-we-use-it",
+      "icon": "Target",
+      "heading": "3. How we use your information",
+      "paragraphs": ["We use what we collect to:"],
+      "bullets": [
+        { "term": "Respond to you", "description": "Prepare your estimate, schedule the consultation, and answer questions about your project." },
+        { "term": "Deliver the work", "description": "Plan, permit, and install your pool, and support it afterwards under warranty." },
+        { "term": "Improve the site", "description": "Understand which pages and pool models people actually look at." },
+        { "term": "Measure advertising", "description": "Report conversions back to the ad platforms so we stop paying for campaigns that do not work." },
+        { "term": "Meet legal obligations", "description": "Keep the records required for contracts, permits, taxes, and warranty claims." }
+      ],
+      "closing": "We do not use your information to make automated decisions about you, and we do not build advertising profiles for anyone else."
+    },
+    {
+      "id": "who-we-share-with",
+      "icon": "Share2",
+      "heading": "4. Who we share it with",
+      "paragraphs": [
+        "We do not sell, rent, or trade personal information. We share it only with the providers that make the site and our business run, and only as far as each one needs:"
+      ],
+      "bullets": [
+        { "term": "Hostinger", "description": "Hosts the website and delivers the email that carries your estimate request to us." },
+        { "term": "Google (Analytics, Ads, Tag Manager)", "description": "Receives site-usage measurement. When you submit the form after arriving from a Google ad, we send Google a conversion record so the campaign can be credited." },
+        { "term": "OpenAI (ChatGPT Ads measurement)", "description": "Receives conversion events from ChatGPT ad campaigns. Your email address is irreversibly hashed with SHA-256 before it leaves our server; your city and ZIP code are sent as entered." },
+        { "term": "Embedded content providers", "description": "Pages with a Google Map, a YouTube video, or a Sketchfab 3D pool model load that content from Google, YouTube, or Sketchfab, which see your IP address and may set their own cookies under their own privacy policies." },
+        { "term": "Lyon Financial", "description": "If you follow our financing links and apply, you deal with Lyon Financial directly and under their privacy policy. We do not pass your form data to them." },
+        { "term": "Trade partners", "description": "Occasionally a specialty subcontractor or the pool manufacturer needs your address or site details to complete your project. They receive only what the job requires." }
+      ],
+      "closing": "We may also disclose information when the law requires it, or to establish or defend a legal claim."
+    },
+    {
+      "id": "cookies",
+      "icon": "Cookie",
+      "heading": "5. Cookies and how to refuse them",
+      "paragraphs": [
+        "The site uses a small number of cookies. The only one we set ourselves is _mx_gcl, which holds an advertising click identifier for up to 90 days. Google Analytics, Google Ads, and any embedded video or map may set their own.",
+        "You can block or delete cookies in your browser settings, and you can opt out of Google Analytics entirely with Google's browser add-on. The site works normally without them — you may just see less relevant advertising elsewhere."
+      ],
+      "bullets": [],
+      "closing": "We do not currently respond to browser \"Do Not Track\" signals, because there is still no agreed standard for what a website should do when it receives one."
+    },
+    {
+      "id": "retention",
+      "icon": "Archive",
+      "heading": "6. How long we keep it",
+      "paragraphs": [
+        "Estimate requests are kept in our email and in a server-side log that is not reachable from the web. We keep them while we are in contact with you and, if you become a customer, for as long as the pool is under warranty plus any period the law requires for contracts and permits."
+      ],
+      "bullets": [
+        { "term": "Estimate requests that do not become projects", "description": "Retained for up to three years, then deleted." },
+        { "term": "Customer project records", "description": "Retained for the life of the warranty plus seven years." },
+        { "term": "Phone-click and server logs", "description": "Retained for up to 12 months." },
+        { "term": "Analytics data", "description": "Retained on Google's schedule, currently 14 months." }
+      ],
+      "closing": "You can ask us to delete your information sooner — see section 7."
+    },
+    {
+      "id": "your-rights",
+      "icon": "UserCheck",
+      "heading": "7. Your choices and rights",
+      "paragraphs": [
+        "Whatever state you live in, you can ask us to:"
+      ],
+      "bullets": [
+        { "term": "Tell you what we hold", "description": "We will send you a copy of the personal information we have about you." },
+        { "term": "Correct it", "description": "If something is wrong, tell us and we will fix it." },
+        { "term": "Delete it", "description": "We will delete what we are not legally required to keep, and tell you what we had to retain and why." },
+        { "term": "Stop contacting you", "description": "Ask and we will remove you from our follow-up list. Transactional messages about an active project continue until the project closes." }
+      ],
+      "closing": "Email info@maximapools.com or call (614) 384-5081. We respond within 30 days and we do not charge for these requests. We will ask you to confirm your identity first, so that nobody else can request your records."
+    },
+    {
+      "id": "security",
+      "icon": "Lock",
+      "heading": "8. How we protect it",
+      "paragraphs": [
+        "The site is served entirely over HTTPS, so what you type into the form is encrypted in transit. Server-side records of your submission are stored outside the public web root and are not reachable from a browser. Access to our email and project files is limited to the Maxima staff who need it.",
+        "No method of transmission or storage is completely secure, and we will not pretend otherwise. If a breach ever affects your personal information, we will notify you as required by Ohio law."
+      ],
+      "bullets": [],
+      "closing": ""
+    },
+    {
+      "id": "children",
+      "icon": "Baby",
+      "heading": "9. Children",
+      "paragraphs": [
+        "Our services are sold to property owners, and the site is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has sent us information, contact us and we will delete it."
+      ],
+      "bullets": [],
+      "closing": ""
+    },
+    {
+      "id": "changes",
+      "icon": "RefreshCw",
+      "heading": "10. Changes to this policy",
+      "paragraphs": [
+        "When we change how we handle information, we update this page and move the \"last updated\" date at the top. Material changes will be summarised here rather than buried in the text. The version on this page is always the one in force."
+      ],
+      "bullets": [],
+      "closing": ""
+    }
+  ],
+  "contact": {
+    "badge": "Questions",
+    "heading": "Ask Us About Your Data",
+    "intro": "Privacy requests and questions about this policy go to the same place as everything else — a person at our Delaware office.",
+    "methods": [
+      { "icon": "Mail", "label": "Email", "value": "info@maximapools.com", "href": "mailto:info@maximapools.com" },
+      { "icon": "Phone", "label": "Phone", "value": "(614) 384-5081", "href": "tel:+16143845081" },
+      { "icon": "MapPin", "label": "Mail", "value": "Maxima Concrete LLC, 4059 State Route 37 East, Suite A, Delaware, OH 43015", "href": "https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5" }
+    ]
+  }
+}

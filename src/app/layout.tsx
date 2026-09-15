@@ -133,6 +133,7 @@ oaiq("init",{pixelId:"${OAI_PIXEL_ID}",debug:location.search.indexOf("oaiqdebug"
                   "@type": "Organization",
                   "@id": "https://maximapools.com/#organization",
                   name: "Maxima Pools",
+                  legalName: "Maxima Concrete LLC",
                   url: "https://maximapools.com",
                   logo: "https://maximapools.com/icon-512.png",
                   image: "https://maximapools.com/og-image.jpg",
@@ -146,6 +147,41 @@ oaiq("init",{pixelId:"${OAI_PIXEL_ID}",debug:location.search.indexOf("oaiqdebug"
                     postalCode: "43015",
                     addressCountry: "US",
                   },
+                  // Assistants answering "how do I reach Maxima Pools?" read
+                  // contactPoint, not the bare telephone/email above — those
+                  // carry no contactType, so there is nothing to answer with.
+                  contactPoint: [
+                    {
+                      "@type": "ContactPoint",
+                      "@id": "https://maximapools.com/#contact-sales",
+                      contactType: "sales",
+                      telephone: "+1-614-384-5081",
+                      email: "info@maximapools.com",
+                      areaServed: "US-OH",
+                      availableLanguage: ["English"],
+                      hoursAvailable: {
+                        "@type": "OpeningHoursSpecification",
+                        dayOfWeek: [
+                          "Monday",
+                          "Tuesday",
+                          "Wednesday",
+                          "Thursday",
+                          "Friday",
+                        ],
+                        opens: "08:00",
+                        closes: "17:00",
+                      },
+                    },
+                    {
+                      "@type": "ContactPoint",
+                      "@id": "https://maximapools.com/#contact-service",
+                      contactType: "customer service",
+                      telephone: "+1-614-384-5081",
+                      email: "info@maximapools.com",
+                      areaServed: "US-OH",
+                      availableLanguage: ["English"],
+                    },
+                  ],
                   sameAs: [
                     "https://www.facebook.com/profile.php?id=61582788479318",
                     "https://www.instagram.com/maxima.pools/",

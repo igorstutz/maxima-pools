@@ -440,6 +440,165 @@ collections:
               - { label: "Rating (1–5)", name: rating, widget: number, default: 5, min: 1, max: 5 }
               - { label: "Date label (e.g. 2 months ago)", name: date, widget: string }
 
+      - name: about
+        label: "About Us Page"
+        file: "src/content/pages/about.json"
+        format: json
+        preview_path: "about/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Main button label", name: primaryLabel, widget: string }
+              - { label: "Main button link", name: primaryHref, widget: string, hint: "Internal page starts with / (e.g. /contact)." }
+              - { label: "Second button label", name: secondaryLabel, widget: string }
+              - { label: "Second button link", name: secondaryHref, widget: string }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+          - label: "Company at a glance (the facts table)"
+            name: facts
+            widget: object
+            collapsed: true
+            hint: "These rows are what AI assistants and customers read to confirm the business is real. Keep them accurate — they must match the Google Business Profile and any directory listing."
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+              - label: "Fact rows"
+                name: items
+                widget: list
+                summary: "{{fields.label}} — {{fields.value}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Building2", "FileText", "Users", "MapPin", "Phone", "Mail", "Clock", "Award", "Layers", "Globe2"] }
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Value", name: value, widget: string }
+          - label: "Our story"
+            name: story
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Photo", name: image, widget: image }
+              - { label: "Floating card — title", name: floatingTitle, widget: string }
+              - { label: "Floating card — subtitle", name: floatingSubtitle, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - label: "Paragraphs"
+                name: paragraphs
+                widget: list
+                field: { label: "Paragraph", name: paragraph, widget: text }
+          - label: "Values — section heading"
+            name: valuesSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+          - label: "Values — cards"
+            name: values
+            widget: list
+            collapsed: true
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Icon", name: icon, widget: select, options: ["Eye", "ShieldCheck", "Zap", "Award", "Users", "Clock"] }
+              - { label: "Title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+          - label: "What we handle in-house"
+            name: capabilities
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+              - label: "Checklist items"
+                name: items
+                widget: list
+                field: { label: "Item", name: item, widget: string }
+              - { label: "Footnote", name: note, widget: text }
+              - { label: "Link label", name: ctaLabel, widget: string }
+              - { label: "Link target", name: ctaHref, widget: string }
+          - label: "San Juan partnership"
+            name: partnership
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph 1", name: paragraph1, widget: text }
+              - { label: "Paragraph 2", name: paragraph2, widget: text }
+              - { label: "San Juan logo", name: logo, widget: image }
+              - { label: "Logo link", name: logoHref, widget: string }
+              - label: "Related links"
+                name: links
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Link", name: href, widget: string }
+          - label: "Service area"
+            name: serviceArea
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Cities shown as chips"
+                name: cities
+                widget: list
+                field: { label: "City", name: city, widget: string }
+              - { label: "All-areas link label", name: allAreasLabel, widget: string }
+              - { label: "All-areas link target", name: allAreasHref, widget: string }
+          - label: "How to reach us"
+            name: contactSection
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+              - label: "Contact methods"
+                name: methods
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Phone", "Mail", "MapPin"] }
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Value (shown)", name: value, widget: string }
+                  - { label: "Link", name: href, widget: string, hint: "tel:+1..., mailto:..., or a maps URL" }
+                  - { label: "Note underneath", name: note, widget: string }
+          - label: "Closing call to action"
+            name: cta
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Body", name: body, widget: text }
+              - { label: "Button label", name: buttonLabel, widget: string }
+              - { label: "Button link", name: buttonHref, widget: string }
+              - { label: "Phone (shown)", name: phoneDisplay, widget: string }
+              - { label: "Phone link", name: phoneHref, widget: string }
+
       - name: why-maxima
         label: "Why Maxima Page"
         file: "src/content/pages/why-maxima.json"
@@ -3418,6 +3577,85 @@ collections:
               - { label: "Button link", name: buttonHref, widget: string, hint: "Internal starts with / . External starts with https://" }
               - { label: "Phone (shown)", name: phoneDisplay, widget: string }
               - { label: "Phone link", name: phoneHref, widget: string, hint: "Format: tel:+16143845081" }
+
+      - name: privacy
+        label: "Privacy Policy Page"
+        file: "src/content/pages/privacy.json"
+        format: json
+        preview_path: "privacy/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Browser / Search Title", name: title, widget: string }
+              - { label: "Meta Description", name: description, widget: text }
+              - { label: "Social Share Title", name: ogTitle, widget: string }
+              - { label: "Social Share Description", name: ogDescription, widget: text }
+          - label: "Hero (top of the page)"
+            name: hero
+            widget: object
+            collapsed: true
+            hint: "Whenever the policy text changes, update the Last updated date — it is the date visitors and regulators go by."
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle paragraph", name: subtitle, widget: text }
+              - { label: "Effective-date label", name: effectiveLabel, widget: string }
+              - { label: "Effective date", name: effectiveDate, widget: string, hint: "e.g. September 15, 2026" }
+              - { label: "Last-updated label", name: updatedLabel, widget: string }
+              - { label: "Last updated date", name: updatedDate, widget: string }
+          - label: "Opening paragraphs"
+            name: intro
+            widget: object
+            collapsed: true
+            fields:
+              - label: "Paragraphs"
+                name: paragraphs
+                widget: list
+                field: { label: "Paragraph", name: paragraph, widget: text }
+          - label: "Policy sections"
+            name: sections
+            widget: list
+            collapsed: true
+            summary: "{{fields.heading}}"
+            hint: "Each section becomes an entry in the On this page list. Rewording is fine; changing what the company actually does with data is a legal decision — check before publishing."
+            fields:
+              - { label: "Anchor id", name: id, widget: string, hint: "Lowercase, hyphen-separated. Used in the #link — changing it breaks existing links to this section." }
+              - { label: "Icon", name: icon, widget: select, options: ["FileText", "Activity", "Target", "Share2", "Cookie", "Archive", "UserCheck", "Lock", "Baby", "RefreshCw"] }
+              - { label: "Heading", name: heading, widget: string }
+              - label: "Paragraphs"
+                name: paragraphs
+                widget: list
+                field: { label: "Paragraph", name: paragraph, widget: text }
+              - label: "Detail rows (optional)"
+                name: bullets
+                widget: list
+                required: false
+                summary: "{{fields.term}}"
+                fields:
+                  - { label: "Term", name: term, widget: string }
+                  - { label: "Description", name: description, widget: text }
+              - { label: "Closing line (optional)", name: closing, widget: text, required: false }
+          - label: "Contact block"
+            name: contact
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading", name: heading, widget: string }
+              - { label: "Intro line", name: intro, widget: text }
+              - label: "Contact methods"
+                name: methods
+                widget: list
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Mail", "Phone", "MapPin"] }
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Value (shown)", name: value, widget: string }
+                  - { label: "Link", name: href, widget: string }
 
   - name: locations
     label: "Service Areas"

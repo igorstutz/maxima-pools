@@ -171,9 +171,26 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/[0.05] pt-7 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white text-xs">
-            &copy; {new Date().getFullYear()} {footer.copyrightName}. All rights reserved.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p className="text-white text-xs">
+              &copy; {new Date().getFullYear()} {footer.copyrightName}. All rights reserved.
+            </p>
+            {/* Privacy/about live here rather than in a link column: agents and
+                humans both look for them in the legal strip at the bottom. */}
+            {footer.legalLinks?.length ? (
+              <nav className="flex items-center gap-4">
+                {footer.legalLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-white text-xs hover:text-accent transition-colors underline-offset-4 hover:underline"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            ) : null}
+          </div>
           <div className="flex items-center gap-4 text-white text-xs">
             {footer.bottomBarRight.map((text, i) => (
               <Fragment key={text}>

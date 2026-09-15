@@ -1,0 +1,163 @@
+{
+  "seo": {
+    "title": "About Maxima Pools | Family-Owned Pool Builder in Delaware, OH",
+    "description": "Who Maxima Pools is: a family-owned, authorized San Juan Pools dealer based in Delaware, Ohio, installing fiberglass pools across 33 Central Ohio cities with in-house crews.",
+    "ogTitle": "About Maxima Pools | Family-Owned, Central Ohio",
+    "ogDescription": "Family-owned fiberglass pool builder based in Delaware, Ohio. Authorized San Juan Pools dealer, in-house crews, 50 service areas across Central Ohio."
+  },
+  "hero": {
+    "badge": "About Us",
+    "headingLead": "Who Is",
+    "headingHighlight": "Maxima Pools",
+    "subtitle": "A family-owned fiberglass pool builder based in Delaware, Ohio — the people who design your pool are the people who dig, set, plumb, and finish it.",
+    "primaryLabel": "Get Your Free Estimate",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Our Process",
+    "secondaryHref": "/our-process",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  },
+  "facts": {
+    "badge": "Company Details",
+    "heading": "Maxima Pools at a Glance",
+    "intro": "The short, factual version — for anyone verifying who we are before they invite us into their backyard.",
+    "items": [
+      { "icon": "Building2", "label": "Business name", "value": "Maxima Pools" },
+      { "icon": "FileText", "label": "Legal entity", "value": "Maxima Concrete LLC" },
+      { "icon": "Users", "label": "Ownership", "value": "Family-owned and operated" },
+      { "icon": "MapPin", "label": "Headquarters", "value": "4059 State Route 37 East, Suite A, Delaware, OH 43015" },
+      { "icon": "Phone", "label": "Phone", "value": "(614) 384-5081" },
+      { "icon": "Mail", "label": "Email", "value": "info@maximapools.com" },
+      { "icon": "Clock", "label": "Office hours", "value": "Monday–Friday, 8:00 AM – 5:00 PM ET" },
+      { "icon": "Award", "label": "Manufacturer", "value": "Authorized San Juan Pools dealer" },
+      { "icon": "Layers", "label": "Catalog", "value": "100+ fiberglass pool models" },
+      { "icon": "Globe2", "label": "Service area", "value": "Central Ohio — 33 cities across 17 counties" }
+    ]
+  },
+  "story": {
+    "badge": "Our Story",
+    "image": "/images/why-maxima/team-headquarters.webp",
+    "floatingTitle": "The Maxima Team",
+    "floatingSubtitle": "Delaware, Ohio",
+    "headingLead": "Built by a Family,",
+    "headingHighlight": "Run by the Crew",
+    "paragraphs": [
+      "Maxima Pools is a family-owned business operating out of Delaware, Ohio, just north of Columbus. We install premium fiberglass swimming pools and build the outdoor living spaces around them for homeowners throughout Central Ohio.",
+      "We are the sister company of Maxima Concrete, and that relationship is the reason we work the way we do. Concrete taught us that the parts nobody sees — the grading, the base, the backfill, the drainage — are the parts that decide whether a project still looks right in fifteen years. We brought that standard to pools.",
+      "In practice, that means we do the vast majority of the work with our own people. Excavation, pool setting, plumbing, electrical, backfill, and the concrete around it are all handled by Maxima crews rather than a rotating cast of subcontractors. One team, one timeline, one phone number when you have a question."
+    ]
+  },
+  "valuesSection": {
+    "badge": "How We Work",
+    "headingLead": "Three Things We",
+    "headingHighlight": "Don't Compromise On",
+    "intro": "These are the commitments our customers hold us to — and the ones we hold ourselves to on every project."
+  },
+  "values": [
+    {
+      "icon": "Eye",
+      "title": "Transparency",
+      "description": "A pool is a major purchase, and you should make it fully informed. We explain the products, the trade-offs, and the process — including the parts that are inconvenient for us — so the decision is genuinely yours."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Accountability",
+      "description": "Because we perform the vast majority of the work in-house, there is nobody to point at when something needs fixing. Your project has one owner from the first dig to the final walkthrough."
+    },
+    {
+      "icon": "Zap",
+      "title": "Efficiency",
+      "description": "In-house crews mean we control our own schedule. No waiting three weeks for a subcontractor to free up, and no silence between phases — you hear from us as the project moves."
+    }
+  ],
+  "capabilities": {
+    "badge": "What We Handle",
+    "heading": "Done In-House, Start to Finish",
+    "intro": "A fiberglass pool installation touches six different trades. These are the ones our own crews perform:",
+    "items": [
+      "Design consultation and site planning",
+      "Excavation and grading",
+      "Pool setting and installation",
+      "Pool plumbing and filtration",
+      "Electrical, lighting, and automation",
+      "Backfilling and compaction",
+      "Concrete decks and paver patios",
+      "Project management and final walkthrough"
+    ],
+    "note": "Outdoor living work — patios, fire pits, outdoor kitchens, pergolas, and retaining walls — is built alongside the pool by our sister company, Maxima Concrete.",
+    "ctaLabel": "See Our Process",
+    "ctaHref": "/our-process"
+  },
+  "partnership": {
+    "badge": "Credentials",
+    "headingLead": "An Authorized",
+    "headingHighlight": "San Juan Pools Dealer",
+    "paragraph1": "Maxima Pools is an authorized dealer for San Juan Pools, which has manufactured fiberglass pools since 1958. We chose San Juan for one specific reason: their shells are 100% hand-laid fiberglass sheet, not chopped or sprayed fiberglass.",
+    "paragraph2": "Every San Juan shell is built from five layers of hand-laid fiberglass sheet bonded with marine-grade vinyl ester resin — the same construction standard used in boat hulls. In Central Ohio, where the ground freezes and thaws repeatedly every winter, that difference is what keeps a pool wall from flexing.",
+    "logo": "/images/logo/sanjuan-logo.webp",
+    "logoHref": "https://sanjuanpools.com/",
+    "links": [
+      { "label": "How San Juan pools are made", "href": "/how-san-juan-pools-are-made" },
+      { "label": "Hand-laid vs. combo shells", "href": "/hand-laid-vs-combo-pools" },
+      { "label": "Our warranty", "href": "/warranty" }
+    ]
+  },
+  "serviceArea": {
+    "badge": "Where We Work",
+    "headingLead": "Serving",
+    "headingHighlight": "Central Ohio",
+    "paragraph": "We work from a single base of operations in Delaware, Ohio, and serve 33 cities across 17 Central Ohio counties. Staying local is deliberate: our crews already know the soil conditions, the water table, and the permitting office in the communities we build in.",
+    "cities": [
+      "Columbus",
+      "Dublin",
+      "Powell",
+      "Delaware",
+      "Westerville",
+      "Worthington",
+      "Upper Arlington",
+      "Hilliard",
+      "Grove City",
+      "Gahanna",
+      "New Albany",
+      "Lewis Center"
+    ],
+    "allAreasLabel": "View all 50 service areas",
+    "allAreasHref": "/areas-we-serve"
+  },
+  "contactSection": {
+    "badge": "Reach Us",
+    "heading": "How to Get in Touch",
+    "intro": "Every inquiry reaches the same team — there is no call center in between.",
+    "methods": [
+      {
+        "icon": "Phone",
+        "label": "Call us",
+        "value": "(614) 384-5081",
+        "href": "tel:+16143845081",
+        "note": "Monday–Friday, 8:00 AM – 5:00 PM ET"
+      },
+      {
+        "icon": "Mail",
+        "label": "Email us",
+        "value": "info@maximapools.com",
+        "href": "mailto:info@maximapools.com",
+        "note": "We reply within one business day"
+      },
+      {
+        "icon": "MapPin",
+        "label": "Visit us",
+        "value": "4059 State Route 37 East, Suite A, Delaware, OH 43015",
+        "href": "https://maps.app.goo.gl/JsSoDhkB3zr9fhzu5",
+        "note": "By appointment — call ahead"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Come See the Difference in Person",
+    "body": "Every estimate starts with a free, no-obligation conversation about your backyard — no pressure, no deposit, no sales script.",
+    "buttonLabel": "Get Your Free Estimate",
+    "buttonHref": "/contact",
+    "phoneDisplay": "(614) 384-5081",
+    "phoneHref": "tel:+16143845081"
+  }
+}

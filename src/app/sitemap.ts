@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: url(), changeFrequency: "weekly", priority: 1.0 },
     { url: url("blog/"), changeFrequency: "weekly", priority: 0.8 },
+    { url: url("about/"), changeFrequency: "monthly", priority: 0.9 },
     { url: url("why-maxima/"), changeFrequency: "monthly", priority: 0.9 },
     { url: url("our-process/"), changeFrequency: "monthly", priority: 0.8 },
     { url: url("pools/"), changeFrequency: "weekly", priority: 0.9 },
@@ -39,6 +40,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: url("hand-laid-vs-combo-pools/"), changeFrequency: "monthly", priority: 0.7 },
     { url: url("the-perfect-pool-for-your-pet/"), changeFrequency: "monthly", priority: 0.6 },
     { url: url("warranty/"), changeFrequency: "yearly", priority: 0.6 },
+    { url: url("privacy/"), changeFrequency: "yearly", priority: 0.3 },
   ];
 
   const poolPages: MetadataRoute.Sitemap = pools.map((pool) => ({

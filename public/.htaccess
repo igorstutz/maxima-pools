@@ -33,6 +33,25 @@ RewriteRule ^page-sitemap\.xml$ /sitemap.xml [L,R=301]
 # "Great Lake Beach" → "Great Lakes Beach" (2026-07-29)
 RewriteRule ^pools/great-lake-beach/?$ /pools/great-lakes-beach/ [L,R=301]
 
+# ── Markdown for AI agents (Accept negotiation) ────────────────────────
+# `npm run build` writes a Markdown twin of every exported route next to
+# its index.html. An agent that asks for `Accept: text/markdown` gets the
+# clean prose instead of the React-rendered HTML; browsers never send that
+# media type, so normal visits are untouched.
+#
+# This has to run BEFORE the -d rule below, because /pools/ is a real
+# directory and would otherwise be handed straight to DirectoryIndex.
+#
+# The matching `Vary: Accept` is set further down — without it the CDN in
+# front of this site would serve whichever variant it cached first.
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/index.md -f
+RewriteRule ^$ index.md [L]
+
+RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+RewriteCond %{DOCUMENT_ROOT}/$1/index.md -f
+RewriteRule ^(.+?)/?$ $1/index.md [L]
+
 # ── Pretty URLs for the Next.js static export ──────────────────────────
 # Each route is exported as <route>/index.html. Apache's DirectorySlash
 # already redirects /about → /about/, but we ALSO want /about.html style
@@ -49,28 +68,43 @@ RewriteRule ^ - [L]
 RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
 RewriteRule ^(.+?)/?$ $1/index.html [L]
 
-# ── Unknown pages → home ───────────────────────────────────────────────
-# Anything that reaches here is a path that does not exist on the site
-# (no real file/dir, no exported route). Per Igor's request (2026-05-15)
-# send the visitor to the home page with a permanent 301 instead of
-# showing an error page.
-RewriteRule ^ / [R=301,L]
+# ── Unknown pages → real 404 ───────────────────────────────────────────
+# Until 2026-09-15 a catch-all `RewriteRule ^ / [R=301,L]` sent every
+# unknown path to the home page (Igor's request, 2026-05-15). It was
+# costing more than it saved:
+#   • Google read "/whatever → 200 home page" as a soft 404 and stopped
+#     trusting the site's URL structure.
+#   • Every audit probe — /about, /privacy, /terms — "existed" and
+#     returned the home page, so tools reported the pages as missing
+#     content rather than as absent.
+# Anything that reaches this point is genuinely not on the site, so we
+# let Apache answer 404 and serve the branded page below. Real legacy
+# URLs worth keeping get an explicit 301 near the top of this file.
+#
+# To restore the old behaviour, uncomment the next line.
+# RewriteRule ^ / [R=301,L]
 
 # ── Custom 404 ─────────────────────────────────────────────────────────
-# Last-resort safety net only. With the 301 above a visitor should never
-# reach this during normal navigation, but it stays for odd edge cases
-# (e.g. an existing directory with no index.html).
+# Exported from src/app/not-found.tsx — carries the header, footer, and
+# shortcuts to the pages people are usually looking for.
 ErrorDocument 404 /404.html
 
 # ── Caching + compression (longer-lived assets, short-lived HTML) ──────
 <IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml text/markdown
+</IfModule>
+
+# Serve the Markdown twins as text/markdown rather than as a download.
+<IfModule mod_mime.c>
+  AddType text/markdown .md
+  AddCharset UTF-8 .md
 </IfModule>
 
 <IfModule mod_expires.c>
   ExpiresActive On
   ExpiresDefault                              "access plus 1 hour"
   ExpiresByType text/html                     "access plus 0 seconds"
+  ExpiresByType text/markdown                 "access plus 0 seconds"
   ExpiresByType text/css                      "access plus 1 year"
   ExpiresByType application/javascript        "access plus 1 year"
   ExpiresByType image/jpeg                    "access plus 6 months"
@@ -88,6 +122,18 @@ ErrorDocument 404 /404.html
 
 # ── Security headers ───────────────────────────────────────────────────
 <IfModule mod_headers.c>
+  # The same URL answers with HTML or Markdown depending on Accept, so the
+  # CDN has to key its cache on that header too — otherwise whichever
+  # variant lands in cache first is served to everyone.
+  #
+  # Matched by what the request is NOT, rather than with <FilesMatch
+  # "\.(html|md)$">: a request for "/" or "/about/" carries no extension at
+  # all and is only resolved to index.html by DirectoryIndex, so a filename
+  # match would miss exactly the pages that need the header. Assets keep a
+  # single cache entry, which is the point of scoping this at all.
+  SetEnvIf Request_URI "\.(js|mjs|css|png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|eot|mp4|webm|pdf|xml|txt|json|map)$" MX_STATIC_ASSET
+  Header merge Vary "Accept" env=!MX_STATIC_ASSET
+
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
   Header set Permissions-Policy "geolocation=(), camera=(), microphone=()"

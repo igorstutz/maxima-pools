@@ -17,11 +17,13 @@ Key facts:
 
 ## Company
 
+- [About Maxima Pools](https://maximapools.com/about): Company facts for verification — legal entity, ownership, headquarters, hours, service area, dealer status, and which trades are performed in-house.
 - [Why Maxima Pools](https://maximapools.com/why-maxima): Family ownership, mission, and what differentiates Maxima from other Central Ohio pool builders.
 - [Our Process](https://maximapools.com/our-process): Step-by-step look at how a Maxima fiberglass pool installation flows from design consultation to first swim.
 - [Reviews](https://maximapools.com/reviews): Verified homeowner reviews and Google ratings.
 - [Contact / Free Estimate](https://maximapools.com/contact): Free, no-obligation in-home consultation form and direct phone/email.
 - [Financing](https://maximapools.com/financing): Pool financing through Lyon Financial (America's #1 pool lender since 1979) — loans up to $250K, terms up to 30 years, no credit impact to apply.
+- [Privacy Policy](https://maximapools.com/privacy): What the site collects, which analytics and advertising pixels run, retention periods, and how to request access or deletion.
 
 ## Fiberglass pool products
 
@@ -67,3 +69,7 @@ Each city and county has a dedicated page at `https://maximapools.com/locations/
 
 - [XML sitemap](https://maximapools.com/sitemap.xml): Full machine-readable list of every indexed page on maximapools.com.
 - [robots.txt](https://maximapools.com/robots.txt): Crawler directives.
+
+## Machine-readable content
+
+Every page on this site is also available as Markdown. Request the same URL with `Accept: text/markdown`, or append `index.md` to the path — e.g. `https://maximapools.com/pools/index.md`. Responses carry `Vary: Accept`, so a cached HTML copy is never served in place of the Markdown one.
