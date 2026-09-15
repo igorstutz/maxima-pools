@@ -126,13 +126,15 @@ ErrorDocument 404 /404.html
   # CDN has to key its cache on that header too — otherwise whichever
   # variant lands in cache first is served to everyone.
   #
-  # Matched by what the request is NOT, rather than with <FilesMatch
-  # "\.(html|md)$">: a request for "/" or "/about/" carries no extension at
-  # all and is only resolved to index.html by DirectoryIndex, so a filename
-  # match would miss exactly the pages that need the header. Assets keep a
-  # single cache entry, which is the point of scoping this at all.
-  SetEnvIf Request_URI "\.(js|mjs|css|png|jpe?g|gif|webp|avif|svg|ico|woff2?|ttf|eot|mp4|webm|pdf|xml|txt|json|map)$" MX_STATIC_ASSET
-  Header merge Vary "Accept" env=!MX_STATIC_ASSET
+  # Matched by what a negotiated request IS, not by excluding every asset
+  # extension: an exclusion list silently breaks whatever it forgets, and
+  # the first attempt did exactly that — hashed .js chunks dropped from a
+  # year of caching to must-revalidate. A page is either extensionless
+  # ("/", "/about/", resolved to index.html by DirectoryIndex, which is why
+  # <FilesMatch "\.html$"> would miss it) or an explicit .md/.html.
+  # Anything else keeps the caching it already had.
+  SetEnvIf Request_URI "(^[^.]*$|\.(html|md)$)" MX_NEGOTIATED
+  Header merge Vary "Accept" env=MX_NEGOTIATED
 
   # ...and a belt for that brace. Verified 2026-09-15: the origin does send
   # `Vary: Accept` (curl --resolve straight to the LiteSpeed box shows it),
@@ -142,7 +144,7 @@ ErrorDocument 404 /404.html
   # responses at all, which makes the rewritten Vary harmless. No real cost:
   # HTML is already `access plus 0 seconds` below and the CDN reports these
   # as DYNAMIC (uncached) today.
-  Header set Cache-Control "private, max-age=0, must-revalidate" env=!MX_STATIC_ASSET
+  Header set Cache-Control "private, max-age=0, must-revalidate" env=MX_NEGOTIATED
 
   Header set X-Content-Type-Options "nosniff"
   Header set Referrer-Policy "strict-origin-when-cross-origin"
