@@ -156,8 +156,8 @@ function lead_autoreply_text(array $lead): string {
     $first = trim((string)($lead['first'] ?? ''));
     $out  = 'Hi' . ($first !== '' ? ' ' . $first : '') . ",\n\n";
     $out .= "Thanks for requesting a free estimate from Maxima Pools. Your request is\n";
-    $out .= "already with a member of our team, and someone will contact you within\n";
-    $out .= "24 hours.\n\n";
+    $out .= "already with a member of our team.\n\n";
+    $out .= "     SOMEONE WILL CONTACT YOU WITHIN 24 HOURS\n\n";
     $out .= "OUR CALL OR TEXT WILL COME FROM ONE OF THESE NUMBERS:\n\n";
     foreach (lead_autoreply_numbers() as $n) {
         $out .= '    ' . $n['display'] . "\n";
@@ -228,8 +228,8 @@ function lead_autoreply_html(array $lead): string {
         . '<body style="margin:0;padding:0;background:#eef4f8;">'
         // Preheader — the grey line the inbox shows next to the subject.
         . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">'
-        . 'Your request is with our team. Our call or text will come from (614) 384-5081, '
-        . '(614) 671-1956 or (614) 769-1117.</div>'
+        . 'Someone will contact you within 24 hours. Our call or text will come from '
+        . '(614) 384-5081, (614) 671-1956 or (614) 769-1117.</div>'
         . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
         . 'style="background:#eef4f8;padding:24px 12px;"><tr><td align="center">'
         . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" '
@@ -251,9 +251,20 @@ function lead_autoreply_html(array $lead): string {
         . '<p style="margin:0 0 14px;color:#334155;font-size:16px;line-height:1.6;">' . $greeting . '</p>'
         . '<p style="margin:0;color:#334155;font-size:16px;line-height:1.6;">'
         . 'Thanks for reaching out to Maxima Pools. Your request is '
-        . '<strong>already with a member of our team</strong>, and someone will contact you '
-        . 'within 24 hours.</p>'
+        . '<strong>already with a member of our team</strong>.</p>'
         . '</td></tr>'
+
+        // The promise, on its own. It used to trail off the end of the
+        // paragraph above, which is where a skimming reader loses it. Left
+        // aligned behind a rule rather than a filled centred bar: the bar
+        // reads as a button, and this one doesn't go anywhere.
+        . '<tr><td style="padding:18px 32px 0;">'
+        . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+        . 'style="background:#f0f9ff;border-left:5px solid #0c4a6e;border-radius:8px;">'
+        . '<tr><td style="padding:16px 20px;">'
+        . '<p style="margin:0;color:#0c4a6e;font-size:18px;font-weight:700;line-height:1.4;">'
+        . 'Someone will contact you within 24 hours</p>'
+        . '</td></tr></table></td></tr>'
 
         // The numbers — the whole reason this email exists.
         . '<tr><td style="padding:24px 32px;">'
@@ -360,9 +371,13 @@ function lead_autoreply_send(
     return true;
 }
 
-/** The subject line, in one place so the CLI test sends the real one. */
+/**
+ * The subject line, in one place so the CLI test sends the real one. The
+ * leading dot is there to catch the eye in a crowded inbox; it survives the
+ * trip because the header goes out base64-encoded as UTF-8.
+ */
 function lead_autoreply_subject(): string {
-    return 'We got your estimate request — here are the numbers we call from';
+    return '🔵 We got your estimate request — here are the numbers we call from';
 }
 
 /**
