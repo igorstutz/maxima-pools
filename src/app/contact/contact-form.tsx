@@ -1,12 +1,14 @@
 "use client";
 
-import { useState, useRef, useEffect, type FormEvent } from "react";
-import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { useState, useRef, useEffect, useCallback, type FormEvent } from "react";
+import { createPortal } from "react-dom";
+import { Send, CheckCircle2, Loader2, AlertCircle, Phone, X } from "lucide-react";
 import { asset } from "@/lib/base-path";
 import { analytics } from "@/lib/analytics";
 import { newEventId, readOppref } from "@/lib/oaiq";
 import { readClickIds } from "@/lib/click-ids";
 import { payloadAtribuicao } from "@/lib/attribution";
+import content from "@/content/pages/contact.json";
 
 // PHP endpoint that lives at public_html/api/submit.php on Hostinger.
 // asset() prefixes the deploy basePath when present (GH Pages preview).
@@ -38,6 +40,10 @@ const poolSizeOptions = [
 
 type Status = "idle" | "submitting" | "success" | "error";
 
+// Copy for the after-submit confirmation, editable in the CMS
+// (Contact page → "After-submit confirmation").
+const notice = content.successNotice;
+
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -45,6 +51,9 @@ export function ContactForm() {
   const [city, setCity] = useState("");
   const [state, setState] = useState("");
   const [zipLoading, setZipLoading] = useState(false);
+  // The confirmation takes over the whole screen once; closing it leaves the
+  // same message in the page, so nobody loses the numbers by tapping outside.
+  const [overlayOpen, setOverlayOpen] = useState(false);
   const successRef = useRef<HTMLDivElement>(null);
 
   async function handleZipChange(value: string) {
@@ -70,11 +79,17 @@ export function ContactForm() {
     }
   }
 
+  // Only once the overlay is out of the way — scrolling the page underneath a
+  // locked, full-screen dialog moves nothing the visitor can see.
   useEffect(() => {
-    if (status === "success") {
+    if (status === "success" && !overlayOpen) {
       successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-  }, [status]);
+  }, [status, overlayOpen]);
+
+  // Stable identity: the overlay re-runs its key/scroll-lock effect whenever
+  // this changes, and a fresh arrow on every render would do that for nothing.
+  const closeOverlay = useCallback(() => setOverlayOpen(false), []);
 
   function validate(form: FormData): Record<string, string> {
     const errs: Record<string, string> = {};
@@ -117,6 +132,7 @@ export function ContactForm() {
     // Honeypot — silently drop bots that filled the hidden field
     if ((form.get("_gotcha") as string)?.trim()) {
       setStatus("success");
+      setOverlayOpen(true);
       return;
     }
 
@@ -167,6 +183,7 @@ export function ContactForm() {
           event_id: oaiEventId,
         });
         setStatus("success");
+        setOverlayOpen(true);
         formEl.reset();
         return;
       }
@@ -192,25 +209,27 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div ref={successRef} className="text-center py-16 px-8">
-        <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
-          <CheckCircle2 size={40} className="text-green-600" />
+      <>
+        {overlayOpen && <SuccessOverlay onClose={closeOverlay} />}
+
+        <div ref={successRef} className="text-center py-14 px-6">
+          <div className="w-20 h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+            <CheckCircle2 size={40} className="text-green-600" />
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-3">{notice.title}</h3>
+          <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto mb-7">
+            {notice.body}
+          </p>
+
+          <CallerNumbers className="max-w-md mx-auto" />
+
+          {/* Empty until the confirmation email is live on the server — the
+              page shouldn't promise a message that isn't going out yet. */}
+          {notice.emailNote && (
+            <p className="text-gray-400 text-sm mt-5">{notice.emailNote}</p>
+          )}
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-3">
-          Thank You!
-        </h3>
-        <p className="text-gray-600 text-lg leading-relaxed max-w-md mx-auto mb-2">
-          Your request has been received. Our team will contact you
-          within 24 hours.
-        </p>
-        <p className="text-gray-400 text-sm">
-          You can also call us at{" "}
-          <a href="tel:+16143845081" className="text-accent font-semibold hover:underline">
-            (614) 384-5081
-          </a>{" "}
-          for immediate assistance.
-        </p>
-      </div>
+      </>
     );
   }
 
@@ -397,6 +416,130 @@ export function ContactForm() {
         We respect your privacy and will never share your information.
       </p>
     </form>
+  );
+}
+
+/* ── After-submit confirmation ── */
+
+/**
+ * The numbers the office calls and texts from. Rendered twice — inside the
+ * pop-up and in the page behind it — so dismissing the dialog never takes
+ * them away from someone who wanted to write them down.
+ */
+function CallerNumbers({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`rounded-2xl border-2 border-accent/30 bg-accent/[0.06] px-5 py-5 ${className}`}
+    >
+      {/* The icon rides inside the text flow rather than in a flex row: in a
+          narrow card this line wraps, and a flex icon would centre itself
+          against both lines instead of sitting next to the first word. */}
+      <p className="text-center text-[11px] sm:text-xs font-bold uppercase tracking-wider text-accent-dark">
+        <Phone size={13} className="inline-block align-[-2px] mr-1.5" />
+        {notice.callerIntro}
+      </p>
+      <ul className="mt-3 space-y-1">
+        {notice.callerNumbers.map((n) => (
+          <li key={n.href}>
+            <a
+              href={n.href}
+              className="inline-block text-xl sm:text-2xl font-bold tracking-wide text-primary hover:text-accent transition-colors"
+            >
+              {n.display}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+        {notice.callerHint}
+      </p>
+    </div>
+  );
+}
+
+/**
+ * Full-screen confirmation shown the moment a request goes through. It's a
+ * portal into <body> on purpose: the form sits inside blurred, animated
+ * wrappers, and any of those turns a `fixed` child into a box centred on the
+ * card instead of on the screen.
+ */
+function SuccessOverlay({ onClose }: { onClose: () => void }) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+
+    // Freeze the page underneath, so a stray scroll doesn't drift the dialog
+    // off a phone screen before it has been read.
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeRef.current?.focus();
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [onClose]);
+
+  if (typeof document === "undefined") return null;
+
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+      <div
+        className="absolute inset-0 bg-slate-900/70 backdrop-blur-sm"
+        onClick={onClose}
+        aria-hidden="true"
+      />
+
+      <div
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="estimate-confirmation-title"
+        className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-3xl bg-white px-6 py-8 sm:p-10 text-center shadow-2xl animate-fadeInUp"
+      >
+        <button
+          ref={closeRef}
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute top-3.5 right-3.5 w-9 h-9 rounded-full flex items-center justify-center text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors cursor-pointer"
+        >
+          <X size={18} />
+        </button>
+
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-5">
+          <CheckCircle2 size={36} className="text-green-600" />
+        </div>
+
+        <h3
+          id="estimate-confirmation-title"
+          className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3"
+        >
+          {notice.title}
+        </h3>
+        <p className="text-gray-600 text-base sm:text-lg leading-relaxed mb-6">
+          {notice.body}
+        </p>
+
+        <CallerNumbers />
+
+        {notice.emailNote && (
+          <p className="mt-4 text-xs text-gray-400">{notice.emailNote}</p>
+        )}
+
+        <button
+          type="button"
+          onClick={onClose}
+          className="mt-6 w-full inline-flex items-center justify-center px-8 py-3.5 bg-gradient-to-r from-accent to-accent-light text-white font-semibold rounded-xl shadow-[0_0_25px_rgba(6,182,212,0.3)] hover:shadow-[0_0_40px_rgba(6,182,212,0.5)] transition-all duration-300 text-sm cursor-pointer"
+        >
+          {notice.closeLabel}
+        </button>
+      </div>
+    </div>,
+    document.body,
   );
 }
 

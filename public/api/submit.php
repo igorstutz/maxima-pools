@@ -23,6 +23,7 @@ declare(strict_types=1);
 // Loaded with @ so a missing/broken file can never take the form down.
 @require_once __DIR__ . '/oai-capi.php';
 @require_once __DIR__ . '/gads-capi.php';
+@require_once __DIR__ . '/lead-autoreply.php';
 
 // === Configuration ====================================================
 $RECIPIENT  = 'info@maximapools.com';
@@ -220,6 +221,23 @@ if ($ok) {
     if (function_exists('fastcgi_finish_request')) {
         @fastcgi_finish_request();
     }
+    // Confirm to the customer that a person now has their request, and name
+    // every number the callback can come from — an unknown 614 number on the
+    // screen goes unanswered, a number they were told to expect gets picked
+    // up. Runs after the response for the same reason as the calls below.
+    if (function_exists('lead_autoreply')) {
+        lead_autoreply([
+            'name'     => $name,
+            'email'    => $email,
+            'phone'    => $phone,
+            'address'  => $address,
+            'city'     => $city,
+            'state'    => $state,
+            'zip'      => $zip,
+            'poolSize' => $poolSize,
+        ]);
+    }
+
     if (function_exists('oai_capi_lead')) {
         $referer = (string)($_SERVER['HTTP_REFERER'] ?? '');
         oai_capi_lead([

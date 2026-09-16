@@ -72,6 +72,59 @@ Use the CMS at `https://maximapools.com/admin/cms/` → **Blog Posts → New**. 
 commits a Markdown file to `src/content/blog/` and the site rebuilds/deploys
 automatically. (The old `/admin/blog` localStorage draft tool was removed.)
 
+## Confirmation email to the lead
+
+Seconds after the form goes through, `api/lead-autoreply.php` emails the
+person who submitted it: their request is already with a team member, and
+here are the three numbers the callback can come from. It exists because
+people don't answer a 614 number they don't recognise — the same reason the
+site now shows those numbers full-screen right after the submit.
+
+The numbers live in two places and have to agree:
+
+| Where | What it feeds |
+| --- | --- |
+| `src/content/pages/contact.json` → `successNotice.callerNumbers` | the on-screen confirmation (editable in the CMS) |
+| `api/lead-autoreply.php` → `lead_autoreply_numbers()` | the email |
+
+**It sends over authenticated SMTP, not `mail()`.** `submit.php` can use
+`mail()` because it only writes to `info@maximapools.com` — same domain, same
+M365 tenant. This message goes to whatever mailbox the customer typed, and an
+unauthenticated hsendmail hop is what Gmail and friends drop silently. Same
+lesson `weekly_report.php` learned.
+
+### Install the SMTP credentials (one-time, server-side)
+
+Everything is a silent no-op until this file exists, so the form is never at
+risk while you set it up. Use the same password the weekly report already
+uses — it's the `no-reply@maximapools.com` mailbox password:
+
+```bash
+ssh -p 65002 u247207656@157.173.208.145
+cd domains/maximapools.com/public_html/.private
+cat > smtp-config.php <<'PHP'
+<?php return ['user' => 'no-reply@maximapools.com', 'pass' => 'THE-MAILBOX-PASSWORD'];
+PHP
+chmod 600 smtp-config.php
+```
+
+### Test send
+
+```bash
+cd domains/maximapools.com/public_html/api
+php lead-autoreply.php test someone@example.com "First Last"
+tail -1 ../.private/lead-autoreply.log   # expect "ok":true
+```
+
+The CLI test skips the dedupe window on purpose, so you can send to the same
+address twice while adjusting the layout. A real submission won't: the same
+email address gets one confirmation per 6 hours.
+
+> **Note:** `api/lead-autoreply.php` deploys with the CI rsync like any other
+> file. `api/submit.php` does **not** — it's excluded — so the two lines that
+> call this module (`@require_once` at the top, `lead_autoreply([...])` after
+> `fastcgi_finish_request()`) have to be copied onto the live file by hand.
+
 ## ChatGPT Ads (OpenAI Ads) conversion tracking
 
 The measurement pixel is loaded by the site itself (not by GTM) so the event

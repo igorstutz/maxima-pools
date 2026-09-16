@@ -71,6 +71,25 @@ collections:
             fields:
               - { label: "Title", name: title, widget: string }
               - { label: "Subtitle", name: subtitle, widget: string }
+          - label: "After-submit confirmation (pop-up)"
+            name: successNotice
+            widget: object
+            collapsed: true
+            hint: "Shown full-screen right after someone submits the form. The same numbers go out in the confirmation email — if you change them here, tell the developer so the email matches."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Message", name: body, widget: text }
+              - { label: "Line above the numbers", name: callerIntro, widget: string }
+              - label: "Numbers we may call or text from"
+                name: callerNumbers
+                widget: list
+                summary: "{{fields.display}}"
+                fields:
+                  - { label: "Number (shown)", name: display, widget: string }
+                  - { label: "Dial link", name: href, widget: string, hint: "Format must be: tel:+16143845081" }
+              - { label: "Note under the numbers", name: callerHint, widget: string }
+              - { label: "Note about the confirmation email", name: emailNote, widget: string }
+              - { label: "Close button label", name: closeLabel, widget: string }
           - label: "'Other ways to contact' heading"
             name: contactMethodsSection
             widget: object
