@@ -12,8 +12,26 @@
 set -u
 cd ~/domains/maximapools.com/public_html || exit 1
 
-TEST_TO="${1:-advertising@melaniesconsulting.com}"
+# Every address given gets one test. With none, it goes to the default and
+# keeps the greeting we've been reviewing it with.
+if [ "$#" -gt 0 ]; then
+    RECIPIENTS=("$@")
+    DERIVE_NAME=1
+else
+    RECIPIENTS=("advertising@melaniesconsulting.com")
+    DERIVE_NAME=0
+fi
 STAMP=$(date +%Y%m%d-%H%M%S)
+
+# "paul@maximaconcrete.com" -> "Paul", so a test lands the way a customer's
+# would rather than addressed to whoever asked for the test.
+name_for() {
+    local local_part="${1%@*}"
+    local first="${local_part%%[._+-]*}"
+    local head
+    head=$(printf '%s' "${first:0:1}" | tr '[:lower:]' '[:upper:]')
+    printf '%s%s' "$head" "${first:1}"
+}
 
 echo "== 1. SMTP credentials =="
 if [ -f .private/smtp-config.php ]; then
@@ -95,8 +113,15 @@ else
     exit 1
 fi
 
-echo "== 4. Test send to $TEST_TO =="
-cd api && php lead-autoreply.php test "$TEST_TO" "Igor Stutz"
+echo "== 4. Test send =="
+cd api || exit 1
+for TO in "${RECIPIENTS[@]}"; do
+    if [ "$DERIVE_NAME" = "1" ]; then
+        php lead-autoreply.php test "$TO" "$(name_for "$TO")"
+    else
+        php lead-autoreply.php test "$TO" "Igor Stutz"
+    fi
+done
 echo
 echo "== log =="
-tail -2 ../.private/lead-autoreply.log
+tail -n "${#RECIPIENTS[@]}" ../.private/lead-autoreply.log
