@@ -1,0 +1,4 @@
+# Shell scripts run on the Hostinger box. A checkout on Windows would give
+# them CRLF, and bash reads the stray \r as part of the command — so they are
+# pinned to LF no matter which machine the checkout happens on.
+*.sh text eol=lf
