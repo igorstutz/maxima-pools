@@ -93,6 +93,21 @@ M365 tenant. This message goes to whatever mailbox the customer typed, and an
 unauthenticated hsendmail hop is what Gmail and friends drop silently. Same
 lesson `weekly_report.php` learned.
 
+### One command that does all of it
+
+`server/install-lead-autoreply.sh` runs the two server-side steps and then
+sends a test, and every step checks whether it is already done, so re-running
+it is harmless:
+
+```bash
+ssh -i ~/.ssh/maxima_deploy_key -p 65002 u247207656@157.173.208.145 \
+  'bash -s' -- you@example.com < server/install-lead-autoreply.sh
+```
+
+It reads the password out of the live `weekly_report.php` rather than asking
+for it, backs up `submit.php` before touching it, and restores that backup if
+the patched file doesn't pass `php -l`.
+
 ### Install the SMTP credentials (one-time, server-side)
 
 Everything is a silent no-op until this file exists, so the form is never at
