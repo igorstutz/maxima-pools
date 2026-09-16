@@ -66,6 +66,8 @@ export function canalDoLead(a?: Atribuicao | null): string {
  * existe candidatura de emprego pelo mesmo log.
  */
 export type Submission = {
+  /** Identificador do registro, calculado pelo servidor a partir da linha do log. */
+  id?: string;
   ts: string;
   name?: string;
   email?: string;
