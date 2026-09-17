@@ -1,0 +1,85 @@
+{
+  "seo": {
+    "title": "Thank You | Maxima Pools",
+    "description": "Your estimate request is in. Here is what happens next, when we will call, and the numbers we call from.",
+    "ogTitle": "Thank You | Maxima Pools",
+    "ogDescription": "Your estimate request is in. Here is what happens next and the numbers we call from."
+  },
+  "hero": {
+    "badge": "Request Received",
+    "headingLead": "Thank You!",
+    "headingHighlight": "Your Pool Journey Starts Here.",
+    "subtitle": "We have received your details and are excited to help build your backyard paradise."
+  },
+  "numbers": {
+    "title": "Save our consultation numbers",
+    "intro": "So you know it's us calling or texting — an unknown number is easy to miss.",
+    "list": [
+      { "display": "(614) 384-5081", "href": "tel:+16143845081" },
+      { "display": "(614) 671-1956", "href": "tel:+16146711956" },
+      { "display": "(614) 769-1117", "href": "tel:+16147691117" }
+    ],
+    "proactiveNote": "Want to get ahead of it? Call us at (614) 384-5081 during business hours.",
+    "proactiveHref": "tel:+16143845081",
+    "proactiveCta": "Call (614) 384-5081"
+  },
+  "next": {
+    "title": "What happens next?",
+    "body": "To give you the most accurate pricing and clear up any questions, our process always begins with a quick phone call. Calling you directly is the absolute fastest and most efficient way to get your project on our scheduling calendar."
+  },
+  "when": {
+    "title": "When will we call?",
+    "items": [
+      {
+        "icon": "Clock",
+        "title": "During business hours",
+        "body": "Our normal operating hours are Monday–Friday, 8:00 AM – 5:00 PM. A member of our team will review your submission and call you at the earliest opportunity within those hours. We occasionally try after 5:00 PM, but we are unlikely to answer calls that late."
+      },
+      {
+        "icon": "Moon",
+        "title": "Nights & weekends",
+        "body": "If you are sending this over the weekend or outside our regular hours, rest assured we will call or text you first thing on the next business day."
+      }
+    ]
+  },
+  "tools": {
+    "title": "While you wait, take a dive into these tools",
+    "subtitle": "Everything here helps us have a shorter, sharper call when we reach you.",
+    "items": [
+      {
+        "icon": "LayoutGrid",
+        "title": "Pool models",
+        "body": "Over 100 shapes and sizes to explore, with dimensions, depths and photos of each one.",
+        "href": "/pools/",
+        "cta": "Browse the models"
+      },
+      {
+        "icon": "Ruler",
+        "title": "Virtual pool simulator",
+        "body": "Don't just imagine your pool — see it. Experiment with shapes, features and sizes to picture exactly how your oasis fits your yard.",
+        "href": "/pool-simulator/",
+        "cta": "Open the simulator"
+      },
+      {
+        "icon": "Lightbulb",
+        "title": "Explore the pool info section",
+        "body": "Dive into construction materials, cutting-edge accessories and design trends to find the low-maintenance fit for your lifestyle.",
+        "href": "/san-juan-fiberglass-pools/",
+        "cta": "Explore pool info"
+      },
+      {
+        "icon": "DollarSign",
+        "title": "Easy financing plans",
+        "body": "A pool is a major investment, but it shouldn't be stressful. Review our financing options and find a monthly payment that fits your budget.",
+        "href": "/financing/",
+        "cta": "See financing options"
+      }
+    ]
+  },
+  "closing": {
+    "title": "Thank you. Talk to you soon!",
+    "body": "Keep an eye on your inbox — we just sent you a copy of these numbers and next steps.",
+    "ctaLabel": "Back to homepage",
+    "ctaHref": "/"
+  }
+}

@@ -71,25 +71,6 @@ collections:
             fields:
               - { label: "Title", name: title, widget: string }
               - { label: "Subtitle", name: subtitle, widget: string }
-          - label: "After-submit confirmation (pop-up)"
-            name: successNotice
-            widget: object
-            collapsed: true
-            hint: "Shown full-screen right after someone submits the form. The same numbers go out in the confirmation email — if you change them here, tell the developer so the email matches."
-            fields:
-              - { label: "Title", name: title, widget: string }
-              - { label: "Message", name: body, widget: text }
-              - { label: "Line above the numbers", name: callerIntro, widget: string }
-              - label: "Numbers we may call or text from"
-                name: callerNumbers
-                widget: list
-                summary: "{{fields.display}}"
-                fields:
-                  - { label: "Number (shown)", name: display, widget: string }
-                  - { label: "Dial link", name: href, widget: string, hint: "Format must be: tel:+16143845081" }
-              - { label: "Note under the numbers", name: callerHint, widget: string }
-              - { label: "Note about the confirmation email", name: emailNote, widget: string }
-              - { label: "Close button label", name: closeLabel, widget: string }
           - label: "'Other ways to contact' heading"
             name: contactMethodsSection
             widget: object
@@ -116,6 +97,90 @@ collections:
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Body paragraph", name: body, widget: text }
 
+      - name: thank-you
+        label: "Thank You Page (after the form)"
+        file: "src/content/pages/thank-you.json"
+        format: json
+        preview_path: "thank-you/"
+        fields:
+          - label: "SEO"
+            name: seo
+            widget: object
+            collapsed: true
+            hint: "This page is hidden from Google on purpose — these only matter when the link is shared."
+            fields:
+              - { label: "Browser tab title", name: title, widget: string }
+              - { label: "Description", name: description, widget: text }
+              - { label: "Share title", name: ogTitle, widget: string }
+              - { label: "Share description", name: ogDescription, widget: text }
+          - label: "Top of the page"
+            name: hero
+            widget: object
+            fields:
+              - { label: "Small badge", name: badge, widget: string }
+              - { label: "Heading — first part", name: headingLead, widget: string }
+              - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: text }
+          - label: "Our numbers"
+            name: numbers
+            widget: object
+            hint: "The same numbers go out in the confirmation email — if you change them here, tell the developer so the email matches."
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Line under the title", name: intro, widget: string }
+              - label: "Numbers we call or text from"
+                name: list
+                widget: list
+                summary: "{{fields.display}}"
+                fields:
+                  - { label: "Number (shown)", name: display, widget: string }
+                  - { label: "Dial link", name: href, widget: string, hint: "Format must be: tel:+16143845081" }
+              - { label: "Note about calling us first", name: proactiveNote, widget: text }
+              - { label: "Call button — dial link", name: proactiveHref, widget: string, hint: "Format must be: tel:+16143845081" }
+              - { label: "Call button — label", name: proactiveCta, widget: string }
+          - label: "What happens next"
+            name: next
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: body, widget: text }
+          - label: "When will we call"
+            name: when
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - label: "Cards"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["Clock", "Moon"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Text", name: body, widget: text }
+          - label: "While you wait"
+            name: tools
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Subtitle", name: subtitle, widget: string }
+              - label: "Cards"
+                name: items
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon", name: icon, widget: select, options: ["LayoutGrid", "Ruler", "Lightbulb", "DollarSign"] }
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Text", name: body, widget: text }
+                  - { label: "Link", name: href, widget: string, hint: "Internal page starts with / and ends with / (e.g. /pools/)" }
+                  - { label: "Link label", name: cta, widget: string }
+          - label: "Closing"
+            name: closing
+            widget: object
+            fields:
+              - { label: "Title", name: title, widget: string }
+              - { label: "Text", name: body, widget: text }
+              - { label: "Button label", name: ctaLabel, widget: string }
+              - { label: "Button link", name: ctaHref, widget: string }
       - name: home
         label: "Home Page"
         file: "src/content/pages/home.json"

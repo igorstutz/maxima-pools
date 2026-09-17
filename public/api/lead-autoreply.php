@@ -60,6 +60,54 @@ function lead_autoreply_numbers(): array {
     ];
 }
 
+/**
+ * What to do while waiting for the call. Same four as the thank-you page
+ * (src/content/pages/thank-you.json → tools.items); a customer who read the
+ * page and a customer who only opens the email should end up in the same
+ * places.
+ */
+function lead_autoreply_links(): array {
+    return [
+        [
+            'title' => 'Pool models',
+            'url'   => 'https://maximapools.com/pools/',
+            'body'  => 'Over 100 shapes and sizes to explore, with dimensions and photos of each one.',
+        ],
+        [
+            'title' => 'Virtual pool simulator',
+            'url'   => 'https://maximapools.com/pool-simulator/',
+            'body'  => "Don't just imagine your pool — see it. Try shapes, features and sizes to picture how it fits your yard.",
+        ],
+        [
+            'title' => 'Pool info section',
+            'url'   => 'https://maximapools.com/san-juan-fiberglass-pools/',
+            'body'  => 'Construction materials, accessories and design trends, to find the low-maintenance fit for your lifestyle.',
+        ],
+        [
+            'title' => 'Easy financing plans',
+            'url'   => 'https://maximapools.com/financing/',
+            'body'  => "A pool is a major investment, but it shouldn't be stressful. Find a monthly payment that fits your budget.",
+        ],
+    ];
+}
+
+/** When we call — the same two cases the thank-you page sets out. */
+function lead_autoreply_hours(): array {
+    return [
+        [
+            'title' => 'During business hours',
+            'body'  => 'Monday–Friday, 8:00 AM – 5:00 PM. A member of our team will review your '
+                     . 'submission and call you at the earliest opportunity within those hours. We '
+                     . 'occasionally try after 5:00 PM, but we are unlikely to answer calls that late.',
+        ],
+        [
+            'title' => 'Nights & weekends',
+            'body'  => 'If you sent this over the weekend or outside our regular hours, rest assured '
+                     . 'we will call or text you first thing on the next business day.',
+        ],
+    ];
+}
+
 /** SMTP credentials, or null when they aren't installed yet. */
 function lead_autoreply_config(): ?array {
     $path = LEAD_AUTOREPLY_PRIVATE_DIR . '/smtp-config.php';
@@ -154,16 +202,36 @@ function lead_autoreply_details(array $lead): array {
  */
 function lead_autoreply_text(array $lead): string {
     $first = trim((string)($lead['first'] ?? ''));
-    $out  = 'Hi' . ($first !== '' ? ' ' . $first : '') . ",\n\n";
-    $out .= "Thanks for requesting a free estimate from Maxima Pools. Your request is\n";
-    $out .= "already with a member of our team.\n\n";
-    $out .= "     SOMEONE WILL CONTACT YOU WITHIN 24 HOURS\n\n";
+
+    $out  = "THANK YOU! YOUR POOL JOURNEY STARTS HERE.\n\n";
+    $out .= 'Hi' . ($first !== '' ? ' ' . $first : '') . ",\n\n";
+    $out .= "We have received your details and are excited to help build your backyard\n";
+    $out .= "paradise.\n\n";
+
+    $out .= "WHAT HAPPENS NEXT?\n\n";
+    $out .= "To give you the most accurate pricing and clear up any questions, our process\n";
+    $out .= "always begins with a quick phone call. Calling you directly is the fastest and\n";
+    $out .= "most efficient way to get your project on our scheduling calendar.\n\n";
+
+    $out .= "WHEN WILL WE CALL?\n\n";
+    foreach (lead_autoreply_hours() as $h) {
+        $out .= '  ' . $h['title'] . "\n";
+        $out .= '  ' . wordwrap($h['body'], 72, "\n  ") . "\n\n";
+    }
+
     $out .= "OUR CALL OR TEXT WILL COME FROM ONE OF THESE NUMBERS:\n\n";
     foreach (lead_autoreply_numbers() as $n) {
         $out .= '    ' . $n['display'] . "\n";
     }
-    $out .= "\nSave them to your contacts so you know it's us. Answering the first call\n";
-    $out .= "is the fastest way to get your estimate moving.\n\n";
+    $out .= "\nSave them to your contacts so you know it's us. Want to get ahead of it?\n";
+    $out .= 'Call us at ' . LEAD_AUTOREPLY_MAIN_TEL . " during business hours.\n\n";
+
+    $out .= "WHILE YOU WAIT, TAKE A DIVE INTO THESE TOOLS:\n\n";
+    foreach (lead_autoreply_links() as $l) {
+        $out .= '  ' . $l['title'] . "\n";
+        $out .= '  ' . wordwrap($l['body'], 72, "\n  ") . "\n";
+        $out .= '  ' . $l['url'] . "\n\n";
+    }
 
     $details = lead_autoreply_details($lead);
     if ($details) {
@@ -174,6 +242,7 @@ function lead_autoreply_text(array $lead): string {
         $out .= "\n";
     }
 
+    $out .= "Thank you. Talk to you soon!\n\n";
     $out .= 'Questions before we call? Reply to this email or call us at '
         . LEAD_AUTOREPLY_MAIN_TEL . ".\n\n";
     $out .= "Maxima Pools\n";
@@ -222,14 +291,41 @@ function lead_autoreply_html(array $lead): string {
         . '</td></tr>'
     );
 
+    // When we call. Two cases behind one rule each, so the weekend answer is
+    // as findable as the weekday one.
+    $horas = '';
+    foreach (lead_autoreply_hours() as $h) {
+        $horas .= '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+            . 'style="background:#f8fafc;border-left:4px solid #0c4a6e;border-radius:8px;margin-bottom:10px;">'
+            . '<tr><td style="padding:14px 18px;">'
+            . '<p style="margin:0 0 4px;color:#0c4a6e;font-size:15px;font-weight:700;">'
+            . $e($h['title']) . '</p>'
+            . '<p style="margin:0;color:#475569;font-size:14px;line-height:1.55;">'
+            . $e($h['body']) . '</p>'
+            . '</td></tr></table>';
+    }
+
+    // While you wait. The title is the link: a bare URL in an email body is
+    // both ugly and a spam signal.
+    $ferramentas = '';
+    foreach (lead_autoreply_links() as $l) {
+        $ferramentas .= '<tr><td style="padding:0 0 14px;">'
+            . '<a href="' . $e($l['url']) . '" '
+            . 'style="color:#0e7490;font-size:16px;font-weight:700;text-decoration:none;">'
+            . $e($l['title']) . ' &rarr;</a>'
+            . '<p style="margin:3px 0 0;color:#475569;font-size:14px;line-height:1.55;">'
+            . $e($l['body']) . '</p>'
+            . '</td></tr>';
+    }
+
     return '<!doctype html><html lang="en"><head><meta charset="utf-8">'
         . '<meta name="viewport" content="width=device-width,initial-scale=1">'
-        . '<title>We got your estimate request</title></head>'
+        . '<title>Thank you! Your pool journey starts here</title></head>'
         . '<body style="margin:0;padding:0;background:#eef4f8;">'
         // Preheader — the grey line the inbox shows next to the subject.
         . '<div style="display:none;max-height:0;overflow:hidden;opacity:0;">'
-        . 'Someone will contact you within 24 hours. Our call or text will come from '
-        . '(614) 384-5081, (614) 671-1956 or (614) 769-1117.</div>'
+        . 'Our process starts with a quick call. It will come from (614) 384-5081, '
+        . '(614) 671-1956 or (614) 769-1117 — save them so you know it&rsquo;s us.</div>'
         . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
         . 'style="background:#eef4f8;padding:24px 12px;"><tr><td align="center">'
         . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" '
@@ -247,24 +343,29 @@ function lead_autoreply_html(array $lead): string {
         // Opening
         . '<tr><td style="padding:32px 32px 8px;">'
         . '<h1 style="margin:0 0 16px;color:#0f172a;font-size:24px;line-height:1.3;">'
-        . 'We got your estimate request</h1>'
+        . 'Thank you! Your pool journey starts here.</h1>'
         . '<p style="margin:0 0 14px;color:#334155;font-size:16px;line-height:1.6;">' . $greeting . '</p>'
         . '<p style="margin:0;color:#334155;font-size:16px;line-height:1.6;">'
-        . 'Thanks for reaching out to Maxima Pools. Your request is '
-        . '<strong>already with a member of our team</strong>.</p>'
+        . 'We have received your details and are excited to help build your backyard '
+        . 'paradise.</p>'
         . '</td></tr>'
 
-        // The promise, on its own. It used to trail off the end of the
-        // paragraph above, which is where a skimming reader loses it. Left
-        // aligned behind a rule rather than a filled centred bar: the bar
-        // reads as a button, and this one doesn't go anywhere.
-        . '<tr><td style="padding:18px 32px 0;">'
-        . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
-        . 'style="background:#f0f9ff;border-left:5px solid #0c4a6e;border-radius:8px;">'
-        . '<tr><td style="padding:16px 20px;">'
-        . '<p style="margin:0;color:#0c4a6e;font-size:18px;font-weight:700;line-height:1.4;">'
-        . 'Someone will contact you within 24 hours</p>'
-        . '</td></tr></table></td></tr>'
+        // What happens next
+        . '<tr><td style="padding:24px 32px 0;">'
+        . '<p style="margin:0 0 10px;color:#0f172a;font-size:13px;font-weight:700;'
+        . 'text-transform:uppercase;letter-spacing:0.8px;">What happens next?</p>'
+        . '<p style="margin:0;color:#475569;font-size:15px;line-height:1.6;">'
+        . 'To give you the most accurate pricing and clear up any questions, our process '
+        . 'always begins with a quick phone call. Calling you directly is the fastest and '
+        . 'most efficient way to get your project on our scheduling calendar.</p>'
+        . '</td></tr>'
+
+        // When we call
+        . '<tr><td style="padding:22px 32px 0;">'
+        . '<p style="margin:0 0 10px;color:#0f172a;font-size:13px;font-weight:700;'
+        . 'text-transform:uppercase;letter-spacing:0.8px;">When will we call?</p>'
+        . $horas
+        . '</td></tr>'
 
         // The numbers — the whole reason this email exists.
         . '<tr><td style="padding:24px 32px;">'
@@ -277,14 +378,28 @@ function lead_autoreply_html(array $lead): string {
         . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">'
         . $numbers . '</table></td></tr>'
         . '<tr><td style="padding:12px 24px 22px;text-align:center;">'
+        . '<p style="margin:0 0 6px;color:#155e75;font-size:14px;line-height:1.5;">'
+        . 'Save these numbers to your contacts so you know it&rsquo;s us calling.</p>'
         . '<p style="margin:0;color:#155e75;font-size:14px;line-height:1.5;">'
-        . 'Save these numbers to your contacts so you know it&rsquo;s us calling.</p></td></tr>'
+        . 'Want to get ahead of it? Call us at '
+        . '<a href="tel:+16143845081" style="color:#0e7490;font-weight:700;text-decoration:none;">'
+        . LEAD_AUTOREPLY_MAIN_TEL . '</a> during business hours.</p></td></tr>'
         . '</table></td></tr>'
+
+        // While you wait
+        . '<tr><td style="padding:0 32px 8px;">'
+        . '<p style="margin:0 0 14px;color:#0f172a;font-size:13px;font-weight:700;'
+        . 'text-transform:uppercase;letter-spacing:0.8px;">While you wait, take a dive into these tools</p>'
+        . '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">'
+        . $ferramentas . '</table>'
+        . '</td></tr>'
 
         . $detailsBlock
 
         // Closing
         . '<tr><td style="padding:16px 32px 32px;">'
+        . '<p style="margin:0 0 10px;color:#0f172a;font-size:16px;font-weight:700;">'
+        . 'Thank you. Talk to you soon!</p>'
         . '<p style="margin:0;color:#334155;font-size:15px;line-height:1.6;">'
         . 'Questions before we call? Just reply to this email, or call us at '
         . '<a href="tel:+16143845081" style="color:#0e7490;font-weight:700;text-decoration:none;">'
