@@ -317,8 +317,8 @@ export default async function PoolDetailPage({ params }: PageProps) {
                   The {pool.name} is a {pool.shape ? `${pool.shape.toLowerCase()} ` : ""}fiberglass{" "}
                   {pool.type.toLowerCase()} featuring a {pool.width} x {pool.length} footprint
                   with a depth of {pool.depth}. With {pool.area} of{" "}
-                  {pool.type === "Pool" ? "swimming" : "soaking"} area and {pool.volume} capacity,
-                  it&apos;s {getSizeDescription(pool)}.
+                  {pool.type === "Pool" ? "swimming" : "soaking"} area and {pool.volume}{" "}
+                  capacity, it&apos;s {getSizeDescription(pool)}.
                 </p>
                 <p className="text-gray-600 leading-relaxed text-lg">
                   Manufactured by San Juan Pools using 100% hand-laid fiberglass construction,
