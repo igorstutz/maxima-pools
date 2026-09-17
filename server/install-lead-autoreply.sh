@@ -57,7 +57,7 @@ echo "== 2. Wire it into the live submit.php =="
 if grep -q "lead-autoreply.php" api/submit.php; then
     echo "   already wired, leaving it alone"
 else
-    cp api/submit.php "api/submit.php.bak-$STAMP" || exit 1
+    mkdir -p .private && cp api/submit.php ".private/submit.php.bak-$STAMP" || exit 1
     php -r '
       $path = "api/submit.php";
       $src  = file_get_contents($path);
@@ -100,7 +100,7 @@ else
         echo "   syntax OK"
     else
         echo "   SYNTAX ERROR — restoring the backup"
-        cp "api/submit.php.bak-$STAMP" api/submit.php
+        cp ".private/submit.php.bak-$STAMP" api/submit.php
         exit 1
     fi
 fi

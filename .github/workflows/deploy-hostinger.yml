@@ -38,8 +38,16 @@ jobs:
       #   -r recursive, -l symlinks, -t times, -z compress
       #   --delete removes files on the server that no longer exist locally
       # Excluded paths are NOT uploaded AND NOT deleted on the server, so the
-      # customized api/submit.php (with the real SMTP password) and the legacy
-      # wp-content/ folder (where the pool photos still live) stay intact.
+      # legacy wp-content/ folder (where the pool photos still live) and
+      # /.private/ (logs, credentials, the submissions history) stay intact.
+      #
+      # api/submit.php used to be excluded too, back when the live copy held a
+      # password the repo did not. It no longer holds anything the repo lacks,
+      # and the exclusion had a cost: the file that handles every lead drifted
+      # for weeks without anyone noticing, and 114 leads were stored with no
+      # attribution because the live copy predated the line that records it.
+      # The repo is the source of truth now — an edit made straight on the
+      # server will be overwritten by the next deploy, which is the point.
 
       - name: Deploy to Hostinger (attempt 1)
         id: deploy1
@@ -53,7 +61,7 @@ jobs:
           SOURCE: "out/"
           TARGET: "domains/maximapools.com/public_html/"
           ARGS: "-rltzv --delete"
-          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+          EXCLUDE: "/wp-content/, /.private/, .git*, node_modules/"
 
       - name: Wait before retry 1
         if: steps.deploy1.outcome == 'failure'
@@ -72,7 +80,7 @@ jobs:
           SOURCE: "out/"
           TARGET: "domains/maximapools.com/public_html/"
           ARGS: "-rltzv --delete"
-          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+          EXCLUDE: "/wp-content/, /.private/, .git*, node_modules/"
 
       - name: Wait before retry 2
         if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
@@ -91,7 +99,7 @@ jobs:
           SOURCE: "out/"
           TARGET: "domains/maximapools.com/public_html/"
           ARGS: "-rltzv --delete"
-          EXCLUDE: "/api/submit.php, /wp-content/, /.private/, .git*, node_modules/"
+          EXCLUDE: "/wp-content/, /.private/, .git*, node_modules/"
 
       - name: Fail if all deploy attempts failed
         if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure' && steps.deploy3.outcome == 'failure'

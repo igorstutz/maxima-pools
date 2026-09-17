@@ -72,6 +72,37 @@ Use the CMS at `https://maximapools.com/admin/cms/` → **Blog Posts → New**. 
 commits a Markdown file to `src/content/blog/` and the site rebuilds/deploys
 automatically. (The old `/admin/blog` localStorage draft tool was removed.)
 
+## Keeping submit.php in sync
+
+`api/submit.php` handles every lead, and until 2026-09-17 it was excluded from
+the CI rsync — a rule from back when the live copy held a password the repo
+did not. It hasn't for a long time, and the exclusion quietly cost us: the
+live file sat on a version older than Sep 15, so the line that records where a
+lead came from never ran, and **114 leads were stored with no attribution**.
+The browser was sending it; the handler dropped it.
+
+It now deploys like every other file. The repo is the source of truth, and an
+edit made straight on the server is overwritten by the next push — which is
+the point. Two consequences worth knowing:
+
+- Anything the live file needs must live in the repo. The real recipient
+  (`info@maximapools.com`) already does.
+- `/.private/` is still excluded, so logs, `smtp-config.php` and the
+  submissions history survive every deploy. The install scripts keep their
+  backups there (`.private/submit.php.bak-*`) for the same reason — a backup
+  left in `api/` would be deleted by the next rsync, since `--delete` removes
+  whatever isn't in the repo.
+
+To check the two copies against each other at any time:
+
+```bash
+bash scripts/diff-submit.sh
+```
+
+It runs the diff on the server and returns only the result, so the live file
+never lands on a laptop. `bash scripts/fix-attribution.sh` does the same for
+the one line that records a lead's origin, and repairs it if missing.
+
 ## Confirmation email to the lead
 
 Seconds after the form goes through, `api/lead-autoreply.php` emails the
@@ -84,7 +115,7 @@ The numbers live in two places and have to agree:
 
 | Where | What it feeds |
 | --- | --- |
-| `src/content/pages/contact.json` → `successNotice.callerNumbers` | the on-screen confirmation (editable in the CMS) |
+| `src/content/pages/thank-you.json` → `numbers.list` | the thank-you page (editable in the CMS) |
 | `api/lead-autoreply.php` → `lead_autoreply_numbers()` | the email |
 
 **It sends over authenticated SMTP, not `mail()`.** `submit.php` can use
@@ -135,10 +166,10 @@ The CLI test skips the dedupe window on purpose, so you can send to the same
 address twice while adjusting the layout. A real submission won't: the same
 email address gets one confirmation per 6 hours.
 
-> **Note:** `api/lead-autoreply.php` deploys with the CI rsync like any other
-> file. `api/submit.php` does **not** — it's excluded — so the two lines that
-> call this module (`@require_once` at the top, `lead_autoreply([...])` after
-> `fastcgi_finish_request()`) have to be copied onto the live file by hand.
+> **Note:** both files deploy with the CI rsync, `api/submit.php` included
+> (see *Keeping submit.php in sync* above). The install script's patching step
+> is therefore a no-op on a server that is up to date — it stays because it
+> reports what is there and can repair a copy that somehow isn't.
 
 ## ChatGPT Ads (OpenAI Ads) conversion tracking
 
@@ -190,8 +221,8 @@ php -r 'require "oai-capi.php"; oai_capi_lead([
 tail -1 ../.private/oai-capi.log   # expect status 200, {"accepted_events":1}
 ```
 
-> **Note:** `api/submit.php` is excluded from the CI rsync, so changes to it
-> must be copied to the server manually (`scp`), unlike `api/oai-capi.php`.
+> **Note:** `api/submit.php` deploys with everything else — see *Keeping
+> submit.php in sync* below for why it didn't always.
 
 ## Google Ads — Enhanced Conversions for Leads (server-side)
 

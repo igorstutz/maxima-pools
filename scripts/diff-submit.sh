@@ -3,9 +3,10 @@
 #
 #     bash scripts/diff-submit.sh
 #
-# submit.php is excluded from the CI rsync, so the file that actually handles
-# every lead drifts away from the repo silently — that is how 114 leads got
-# stored with no origin. This says exactly how far apart they are.
+# submit.php deploys with everything else now. Until 2026-09-17 it did not,
+# and the file that handles every lead drifted from the repo without anyone
+# noticing — which is how 114 leads ended up stored with no origin. This says
+# whether the two copies still agree.
 #
 # The comparison runs ON the server and only the diff comes back, so the live
 # file (which holds the real recipient) is never copied to this machine.

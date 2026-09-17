@@ -33,9 +33,9 @@ if [ "$JA_TINHA" = "0" ]; then
         exit 1
     fi
 
-    cp api/submit.php "api/submit.php.bak-$STAMP" || exit 1
+    mkdir -p .private && cp api/submit.php ".private/submit.php.bak-$STAMP" || exit 1
     echo
-    echo "== patching (backup: api/submit.php.bak-$STAMP) =="
+    echo "== patching (backup: .private/submit.php.bak-$STAMP) =="
 
     php -r '
       $path = "api/submit.php";
@@ -75,7 +75,7 @@ if [ "$JA_TINHA" = "0" ]; then
         echo "   syntax OK"
     else
         echo "   SYNTAX ERROR — restoring the backup"
-        cp "api/submit.php.bak-$STAMP" api/submit.php
+        cp ".private/submit.php.bak-$STAMP" api/submit.php
         exit 1
     fi
 
