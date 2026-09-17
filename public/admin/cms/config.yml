@@ -121,6 +121,10 @@ collections:
               - { label: "Heading — first part", name: headingLead, widget: string }
               - { label: "Heading — highlighted part", name: headingHighlight, widget: string }
               - { label: "Subtitle", name: subtitle, widget: text }
+              - label: "Checklist under the subtitle"
+                name: trustPoints
+                widget: list
+                field: { label: "Point", name: point, widget: string }
           - label: "Our numbers"
             name: numbers
             widget: object
@@ -142,8 +146,17 @@ collections:
             name: next
             widget: object
             fields:
+              - { label: "Small badge", name: badge, widget: string }
               - { label: "Title", name: title, widget: string }
               - { label: "Text", name: body, widget: text }
+              - label: "Numbered steps"
+                name: steps
+                widget: list
+                summary: "{{fields.title}}"
+                hint: "They are numbered in the order they appear here."
+                fields:
+                  - { label: "Title", name: title, widget: string }
+                  - { label: "Text", name: body, widget: text }
           - label: "When will we call"
             name: when
             widget: object
@@ -156,11 +169,13 @@ collections:
                 fields:
                   - { label: "Icon", name: icon, widget: select, options: ["Clock", "Moon"] }
                   - { label: "Title", name: title, widget: string }
+                  - { label: "Hours (highlighted)", name: hours, widget: string, hint: "The short answer, e.g. Mon–Fri · 8:00 AM – 5:00 PM" }
                   - { label: "Text", name: body, widget: text }
           - label: "While you wait"
             name: tools
             widget: object
             fields:
+              - { label: "Small badge", name: badge, widget: string }
               - { label: "Title", name: title, widget: string }
               - { label: "Subtitle", name: subtitle, widget: string }
               - label: "Cards"
@@ -169,6 +184,7 @@ collections:
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Icon", name: icon, widget: select, options: ["LayoutGrid", "Ruler", "Lightbulb", "DollarSign"] }
+                  - { label: "Photo", name: image, widget: image, hint: "Wide photo — it is cropped to 16:9 at the top of the card." }
                   - { label: "Title", name: title, widget: string }
                   - { label: "Text", name: body, widget: text }
                   - { label: "Link", name: href, widget: string, hint: "Internal page starts with / and ends with / (e.g. /pools/)" }

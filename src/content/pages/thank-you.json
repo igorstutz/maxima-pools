@@ -9,7 +9,12 @@
     "badge": "Request Received",
     "headingLead": "Thank You!",
     "headingHighlight": "Your Pool Journey Starts Here.",
-    "subtitle": "We have received your details and are excited to help build your backyard paradise."
+    "subtitle": "We have received your details and are excited to help build your backyard paradise.",
+    "trustPoints": [
+      "Your request is already with our team",
+      "Free, no-obligation estimate",
+      "Family-owned, licensed & insured"
+    ]
   },
   "numbers": {
     "title": "Save our consultation numbers",
@@ -24,8 +29,23 @@
     "proactiveCta": "Call (614) 384-5081"
   },
   "next": {
-    "title": "What happens next?",
-    "body": "To give you the most accurate pricing and clear up any questions, our process always begins with a quick phone call. Calling you directly is the absolute fastest and most efficient way to get your project on our scheduling calendar."
+    "badge": "What happens next?",
+    "title": "It starts with a quick phone call",
+    "body": "To give you the most accurate pricing and clear up any questions, our process always begins with a quick phone call. Calling you directly is the absolute fastest and most efficient way to get your project on our scheduling calendar.",
+    "steps": [
+      {
+        "title": "We review your request",
+        "body": "A member of our team reads through the details you just sent us."
+      },
+      {
+        "title": "We call you",
+        "body": "A short conversation covers your yard, your questions and the pricing that fits it."
+      },
+      {
+        "title": "You get on the calendar",
+        "body": "With the details settled, we book your project on our scheduling calendar."
+      }
+    ]
   },
   "when": {
     "title": "When will we call?",
@@ -33,21 +53,25 @@
       {
         "icon": "Clock",
         "title": "During business hours",
-        "body": "Our normal operating hours are Monday–Friday, 8:00 AM – 5:00 PM. A member of our team will review your submission and call you at the earliest opportunity within those hours. We occasionally try after 5:00 PM, but we are unlikely to answer calls that late."
+        "hours": "Mon–Fri · 8:00 AM – 5:00 PM",
+        "body": "A member of our team will review your submission and call you at the earliest opportunity within those hours. We occasionally try after 5:00 PM, but we are unlikely to answer calls that late."
       },
       {
         "icon": "Moon",
         "title": "Nights & weekends",
-        "body": "If you are sending this over the weekend or outside our regular hours, rest assured we will call or text you first thing on the next business day."
+        "hours": "First thing the next business day",
+        "body": "If you are sending this outside our regular hours, rest assured we will call or text you as soon as the next business day begins."
       }
     ]
   },
   "tools": {
-    "title": "While you wait, take a dive into these tools",
+    "badge": "While you wait",
+    "title": "Take a dive into these tools",
     "subtitle": "Everything here helps us have a shorter, sharper call when we reach you.",
     "items": [
       {
         "icon": "LayoutGrid",
+        "image": "/images/gallery/featured-01.webp",
         "title": "Pool models",
         "body": "Over 100 shapes and sizes to explore, with dimensions, depths and photos of each one.",
         "href": "/pools/",
@@ -55,6 +79,7 @@
       },
       {
         "icon": "Ruler",
+        "image": "/images/simulator/pool-placement.webp",
         "title": "Virtual pool simulator",
         "body": "Don't just imagine your pool — see it. Experiment with shapes, features and sizes to picture exactly how your oasis fits your yard.",
         "href": "/pool-simulator/",
@@ -62,6 +87,7 @@
       },
       {
         "icon": "Lightbulb",
+        "image": "/images/why-fiberglass/canyon-beach.webp",
         "title": "Explore the pool info section",
         "body": "Dive into construction materials, cutting-edge accessories and design trends to find the low-maintenance fit for your lifestyle.",
         "href": "/san-juan-fiberglass-pools/",
@@ -69,6 +95,7 @@
       },
       {
         "icon": "DollarSign",
+        "image": "/images/gallery/featured-04.webp",
         "title": "Easy financing plans",
         "body": "A pool is a major investment, but it shouldn't be stressful. Review our financing options and find a monthly payment that fits your budget.",
         "href": "/financing/",
