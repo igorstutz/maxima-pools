@@ -1,0 +1,20 @@
+{
+  "order": 8.1,
+  "name": "Canyon Beach",
+  "image": "/images/pools/canyon-beach/cover.webp",
+  "width": "9'6\"",
+  "length": "22'",
+  "depth": "3'11\"",
+  "area": "176 sq ft",
+  "volume": "3,580 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "/images/pools/canyon-beach/01.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/c51b390f11d341e19297e13a69bb6ef2/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/0e25b67e-b73f-11f0-88bc-72162e861f80",
+  "youtube": null
+}

@@ -1,0 +1,21 @@
+{
+  "order": 8.2,
+  "name": "Canyon Beach Grande",
+  "image": "/images/pools/canyon-beach-grande/cover.webp",
+  "width": "9'6\"",
+  "length": "30'",
+  "depth": "5'",
+  "area": "237 sq ft",
+  "volume": "6,586 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "/images/pools/canyon-beach-grande/01.webp",
+    "/images/pools/canyon-beach-grande/02.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/a329f5f0c07e4f9a9f38bcc66cc9c4e3/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/c5274871-68c6-11f0-9f47-72162e861f80",
+  "youtube": null
+}

@@ -151,7 +151,8 @@ export default async function PoolDetailPage({ params }: PageProps) {
     description: `${pool.name} — a ${pool.shape ? pool.shape.toLowerCase() + " " : ""}fiberglass ${pool.type.toLowerCase()} measuring ${pool.width} x ${pool.length} with ${pool.depth} depth. By San Juan Pools, installed by Maxima Pools.`,
     brand: { "@type": "Brand", name: "San Juan Pools" },
     manufacturer: { "@type": "Organization", name: "San Juan Pools" },
-    image: pool.image,
+    image: `https://maximapools.com${pool.image}`,
+    url: `https://maximapools.com/pools/${slug}/`,
   };
 
   return (

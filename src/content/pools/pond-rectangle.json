@@ -1,0 +1,20 @@
+{
+  "order": 61.5,
+  "name": "Pond Rectangle",
+  "image": "/images/pools/pond-rectangle/cover.webp",
+  "width": "8'",
+  "length": "15'",
+  "depth": "1'6\"",
+  "area": "98 sq ft",
+  "volume": "1,100 gal",
+  "shape": "Rectangular",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "/images/pools/pond-rectangle/01.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/94050840190549288534c8f9115f92cd/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/7b63de17-81fd-11f0-88bc-72162e861f80",
+  "youtube": null
+}

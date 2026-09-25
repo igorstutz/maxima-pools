@@ -1,0 +1,21 @@
+{
+  "order": 57.5,
+  "name": "Paradise",
+  "image": "/images/pools/paradise/cover.webp",
+  "width": "10'11\"",
+  "length": "15'9\"",
+  "depth": "4'7\"",
+  "area": "111 sq ft",
+  "volume": "2,850 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool",
+  "hidden": false,
+  "gallery": [
+    "/images/pools/paradise/01.webp",
+    "/images/pools/paradise/02.webp"
+  ],
+  "sketchfab": "https://sketchfab.com/models/2383985d6269463bb6f0cd666ba4a48d/embed",
+  "pdf": "https://data.dexter.sanjuanpools.net/images/dad2034e-8c3a-11f0-88bc-72162e861f80",
+  "youtube": null
+}

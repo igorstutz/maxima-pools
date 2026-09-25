@@ -1,0 +1,20 @@
+{
+  "order": 9.5,
+  "name": "Central Park",
+  "image": "/images/pools/central-park/cover.webp",
+  "width": "12'1\"",
+  "length": "25'8\"",
+  "depth": "4'11\"",
+  "area": "215 sq ft",
+  "volume": "5,000 gal",
+  "shape": "Freeform",
+  "size": "Small",
+  "type": "Pool with Spa",
+  "hidden": false,
+  "gallery": [
+    "/images/pools/central-park/01.webp"
+  ],
+  "sketchfab": null,
+  "pdf": null,
+  "youtube": null
+}
