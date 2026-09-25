@@ -1,7 +1,7 @@
 {
   "order": 8.3,
   "name": "Canyon Lake",
-  "image": "/images/pools/canyon-lake/cover.webp",
+  "image": "/images/pools/canyon-lake/cover-v2.webp",
   "width": "10'2\"",
   "length": "18'11\"",
   "depth": "4'",
@@ -12,15 +12,15 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/canyon-lake/01.webp",
-    "/images/pools/canyon-lake/02.webp",
-    "/images/pools/canyon-lake/03.webp",
-    "/images/pools/canyon-lake/04.webp",
-    "/images/pools/canyon-lake/05.webp",
-    "/images/pools/canyon-lake/06.webp",
-    "/images/pools/canyon-lake/07.webp",
-    "/images/pools/canyon-lake/08.webp",
-    "/images/pools/canyon-lake/09.webp"
+    "/images/pools/canyon-lake/01-v2.webp",
+    "/images/pools/canyon-lake/02-v2.webp",
+    "/images/pools/canyon-lake/03-v2.webp",
+    "/images/pools/canyon-lake/04-v2.webp",
+    "/images/pools/canyon-lake/05-v2.webp",
+    "/images/pools/canyon-lake/06-v2.webp",
+    "/images/pools/canyon-lake/07-v2.webp",
+    "/images/pools/canyon-lake/08-v2.webp",
+    "/images/pools/canyon-lake/09-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/c5286200393b42b592797376f0b36d53/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/8c92e7cd-68c6-11f0-9f47-72162e861f80",

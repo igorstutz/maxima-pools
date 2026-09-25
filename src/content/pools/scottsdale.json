@@ -1,7 +1,7 @@
 {
   "order": 63.5,
   "name": "Scottsdale",
-  "image": "/images/pools/scottsdale/cover.webp",
+  "image": "/images/pools/scottsdale/cover-v2.webp",
   "width": "11'8\"",
   "length": "19'6\"",
   "depth": "4'",
@@ -12,11 +12,11 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/scottsdale/01.webp",
-    "/images/pools/scottsdale/02.webp",
-    "/images/pools/scottsdale/03.webp",
-    "/images/pools/scottsdale/04.webp",
-    "/images/pools/scottsdale/05.webp"
+    "/images/pools/scottsdale/01-v2.webp",
+    "/images/pools/scottsdale/02-v2.webp",
+    "/images/pools/scottsdale/03-v2.webp",
+    "/images/pools/scottsdale/04-v2.webp",
+    "/images/pools/scottsdale/05-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/1a1323b95e8a451a9b2ed2055fdebb91/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/93fa00a3-7246-11f0-88bc-72162e861f80",

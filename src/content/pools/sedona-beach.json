@@ -1,7 +1,7 @@
 {
   "order": 66.5,
   "name": "Sedona Beach",
-  "image": "/images/pools/sedona-beach/cover.webp",
+  "image": "/images/pools/sedona-beach/cover-v2.webp",
   "width": "7'10\"",
   "length": "20'",
   "depth": "5'",
@@ -12,8 +12,8 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/sedona-beach/01.webp",
-    "/images/pools/sedona-beach/02.webp"
+    "/images/pools/sedona-beach/01-v2.webp",
+    "/images/pools/sedona-beach/02-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/3b3872e29c0e492ea5a02bd0dd9a4ca7/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/5dd8c110-7248-11f0-88bc-72162e861f80",

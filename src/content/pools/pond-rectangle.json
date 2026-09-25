@@ -1,7 +1,7 @@
 {
   "order": 61.5,
   "name": "Pond Rectangle",
-  "image": "/images/pools/pond-rectangle/cover.webp",
+  "image": "/images/pools/pond-rectangle/cover-v2.webp",
   "width": "8'",
   "length": "15'",
   "depth": "1'6\"",
@@ -12,8 +12,8 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/pond-rectangle/01.webp",
-    "/images/pools/pond-rectangle/02.webp"
+    "/images/pools/pond-rectangle/01-v2.webp",
+    "/images/pools/pond-rectangle/02-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/94050840190549288534c8f9115f92cd/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/7b63de17-81fd-11f0-88bc-72162e861f80",

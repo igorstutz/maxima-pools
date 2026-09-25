@@ -1,7 +1,7 @@
 {
   "order": 62.5,
   "name": "Sandcastle",
-  "image": "/images/pools/sandcastle/cover.webp",
+  "image": "/images/pools/sandcastle/cover-v2.webp",
   "width": "14'1\"",
   "length": "27'7\"",
   "depth": "5'4\"",
@@ -12,10 +12,10 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/sandcastle/01.webp",
-    "/images/pools/sandcastle/02.webp",
-    "/images/pools/sandcastle/03.webp",
-    "/images/pools/sandcastle/04.webp"
+    "/images/pools/sandcastle/01-v2.webp",
+    "/images/pools/sandcastle/02-v2.webp",
+    "/images/pools/sandcastle/03-v2.webp",
+    "/images/pools/sandcastle/04-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/a4cfc16324ca4c70bd5f22121317803e/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/1068bedb-1ad9-11f0-ba12-72162e861f80",

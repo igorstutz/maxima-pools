@@ -1,7 +1,7 @@
 {
   "order": 57.5,
   "name": "Paradise",
-  "image": "/images/pools/paradise/cover.webp",
+  "image": "/images/pools/paradise/cover-v2.webp",
   "width": "10'11\"",
   "length": "15'9\"",
   "depth": "4'7\"",
@@ -12,9 +12,9 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/paradise/01.webp",
-    "/images/pools/paradise/02.webp",
-    "/images/pools/paradise/03.webp"
+    "/images/pools/paradise/01-v2.webp",
+    "/images/pools/paradise/02-v2.webp",
+    "/images/pools/paradise/03-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/2383985d6269463bb6f0cd666ba4a48d/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/dad2034e-8c3a-11f0-88bc-72162e861f80",

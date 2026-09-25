@@ -1,7 +1,7 @@
 {
   "order": 8.1,
   "name": "Canyon Beach",
-  "image": "/images/pools/canyon-beach/cover.webp",
+  "image": "/images/pools/canyon-beach/cover-v2.webp",
   "width": "9'6\"",
   "length": "22'",
   "depth": "3'11\"",
@@ -12,8 +12,8 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/canyon-beach/01.webp",
-    "/images/pools/canyon-beach/02.webp"
+    "/images/pools/canyon-beach/01-v2.webp",
+    "/images/pools/canyon-beach/02-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/c51b390f11d341e19297e13a69bb6ef2/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/0e25b67e-b73f-11f0-88bc-72162e861f80",

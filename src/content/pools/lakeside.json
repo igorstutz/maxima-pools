@@ -1,7 +1,7 @@
 {
   "order": 36.5,
   "name": "Lakeside",
-  "image": "/images/pools/lakeside/cover.webp",
+  "image": "/images/pools/lakeside/cover-v2.webp",
   "width": "9'3\"",
   "length": "17'3\"",
   "depth": "4'4\"",
@@ -12,12 +12,12 @@
   "type": "Pool",
   "hidden": false,
   "gallery": [
-    "/images/pools/lakeside/01.webp",
-    "/images/pools/lakeside/02.webp",
-    "/images/pools/lakeside/03.webp",
-    "/images/pools/lakeside/04.webp",
-    "/images/pools/lakeside/05.webp",
-    "/images/pools/lakeside/06.webp"
+    "/images/pools/lakeside/01-v2.webp",
+    "/images/pools/lakeside/02-v2.webp",
+    "/images/pools/lakeside/03-v2.webp",
+    "/images/pools/lakeside/04-v2.webp",
+    "/images/pools/lakeside/05-v2.webp",
+    "/images/pools/lakeside/06-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/3aa059dac6c4421c91619fed8a413d3a/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/d8920486-6be4-11f0-9f47-72162e861f80",

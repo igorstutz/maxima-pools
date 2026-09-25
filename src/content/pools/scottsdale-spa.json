@@ -1,7 +1,7 @@
 {
   "order": 95.5,
   "name": "Scottsdale Spa",
-  "image": "/images/pools/scottsdale-spa/cover.webp",
+  "image": "/images/pools/scottsdale-spa/cover-v2.webp",
   "width": "6'11\"",
   "length": "7'1\"",
   "depth": "3'",
@@ -12,10 +12,10 @@
   "type": "Spa",
   "hidden": false,
   "gallery": [
-    "/images/pools/scottsdale-spa/01.webp",
-    "/images/pools/scottsdale-spa/02.webp",
-    "/images/pools/scottsdale-spa/03.webp",
-    "/images/pools/scottsdale-spa/04.webp"
+    "/images/pools/scottsdale-spa/01-v2.webp",
+    "/images/pools/scottsdale-spa/02-v2.webp",
+    "/images/pools/scottsdale-spa/03-v2.webp",
+    "/images/pools/scottsdale-spa/04-v2.webp"
   ],
   "sketchfab": "https://sketchfab.com/models/e2d07962548443438688d37cab879753/embed",
   "pdf": "https://data.dexter.sanjuanpools.net/images/335b55a2-81fc-11f0-88bc-72162e861f80",

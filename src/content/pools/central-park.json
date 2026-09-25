@@ -1,7 +1,7 @@
 {
   "order": 9.5,
   "name": "Central Park",
-  "image": "/images/pools/central-park/cover.webp",
+  "image": "/images/pools/central-park/cover-v2.webp",
   "width": "12'1\"",
   "length": "25'8\"",
   "depth": "4'11\"",
@@ -12,8 +12,8 @@
   "type": "Pool with Spa",
   "hidden": false,
   "gallery": [
-    "/images/pools/central-park/01.webp",
-    "/images/pools/central-park/02.webp"
+    "/images/pools/central-park/01-v2.webp",
+    "/images/pools/central-park/02-v2.webp"
   ],
   "sketchfab": null,
   "pdf": null,
