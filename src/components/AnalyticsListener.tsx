@@ -9,6 +9,7 @@ import { payloadAtribuicao, registrarPagina, registrarVisita } from "@/lib/attri
 export function AnalyticsListener() {
   const pathname = usePathname();
   const sessaoEnviada = useRef(false);
+  const primeiraRota = useRef(true);
 
   useEffect(() => {
     // Runs before anything else touches analytics: the ad click id has to be
@@ -32,7 +33,11 @@ export function AnalyticsListener() {
   useEffect(() => {
     if (!pathname || pathname.startsWith("/admin")) return;
 
-    const r = registrarVisita();
+    // Só a primeira página tem origem externa. Nas trocas de rota seguintes o
+    // `document.referrer` ainda é o da chegada, e reclassificá-lo tirava o
+    // crédito do anúncio (ver registrarVisita).
+    const r = registrarVisita({ interna: !primeiraRota.current });
+    primeiraRota.current = false;
     if (!r) return;
     registrarPagina(pathname);
 
