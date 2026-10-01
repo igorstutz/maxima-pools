@@ -1,6 +1,7 @@
 {
   "header": {
     "logo": "/images/logo/maxima-logo.webp",
+    "logoLight": "/images/logo/maxima-logo-white.webp",
     "menu": [
       { "label": "Home", "href": "/" },
       {
@@ -54,7 +55,7 @@
     "cta": { "label": "Free Estimate", "href": "/contact" }
   },
   "footer": {
-    "logo": "/images/logo/maxima-logo.webp",
+    "logo": "/images/logo/maxima-logo-white.webp",
     "tagline": "Family-owned pool builder and hardscaper serving Columbus, Ohio. Authorized San Juan Pools dealer.",
     "contact": {
       "phone": { "display": "(614) 384-5081", "href": "tel:+16143845081", "note": "Mon–Fri, 8am–5pm" },

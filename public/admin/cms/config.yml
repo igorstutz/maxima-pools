@@ -3860,7 +3860,8 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: "Logo", name: logo, widget: image }
+              - { label: "Logo", name: logo, widget: image, hint: "Color version, shown once the menu turns white on scroll." }
+              - { label: "Logo (white)", name: logoLight, widget: image, hint: "White version, shown over the top of the page (hero)." }
               - label: "Menu items"
                 name: menu
                 widget: list
@@ -3895,7 +3896,7 @@ collections:
             widget: object
             collapsed: true
             fields:
-              - { label: "Logo", name: logo, widget: image }
+              - { label: "Logo", name: logo, widget: image, hint: "Shown on the dark footer — use the white version." }
               - { label: "Tagline", name: tagline, widget: text }
               - label: "Contact"
                 name: contact

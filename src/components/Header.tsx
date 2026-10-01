@@ -62,15 +62,29 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="shrink-0">
+          {/* Sobre o hero: a logo branca oficial (filtro CSS achatava o
+              símbolo da piscina num bloco sólido). Troca com fade pela
+              colorida quando o header fica branco. */}
+          <Link href="/" className="relative shrink-0">
             <Image
               src={header.logo}
               alt="Maxima Pools"
               width={160}
               height={50}
               className={`h-10 sm:h-12 w-auto ${
-                animate ? "transition-all duration-500" : ""
-              } ${scrolled ? "" : "brightness-0 invert"}`}
+                animate ? "transition-opacity duration-500" : ""
+              } ${scrolled ? "opacity-100" : "opacity-0"}`}
+              priority
+            />
+            <Image
+              src={header.logoLight}
+              alt=""
+              aria-hidden
+              width={160}
+              height={50}
+              className={`absolute inset-0 h-10 sm:h-12 w-auto ${
+                animate ? "transition-opacity duration-500" : ""
+              } ${scrolled ? "opacity-0" : "opacity-100"}`}
               priority
             />
           </Link>
