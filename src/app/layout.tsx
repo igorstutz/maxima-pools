@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { SiteChrome } from "@/components/SiteChrome";
 import { AnalyticsListener } from "@/components/AnalyticsListener";
 import tracking from "@/content/settings/tracking.json";
 
@@ -207,9 +208,9 @@ oaiq("init",{pixelId:"${OAI_PIXEL_ID}",debug:location.search.indexOf("oaiqdebug"
           />
         </noscript>
         <AnalyticsListener />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SiteChrome header={<Header />} footer={<Footer />}>
+          <main>{children}</main>
+        </SiteChrome>
         {/* Optional extra tracking/scripts managed from the CMS. Rendered into
             the static HTML, so any <script> here executes on page load. */}
         {tracking.extraBodyCode ? (
