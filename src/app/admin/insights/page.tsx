@@ -24,6 +24,7 @@ import {
 import {
   AdminNav,
   PeriodFilter,
+  contaNasMetricas,
   useAdminData,
   useDateRange,
   type Preset,
@@ -161,10 +162,22 @@ export default function AdminInsightsPage() {
   const leads = useMemo(
     () =>
       (data?.submissions ?? []).filter((s: Submission) => {
-        if (!s.ts) return false;
+        // Lead marcado como inválido fica fora das contas (ver contaNasMetricas).
+        if (!s.ts || !contaNasMetricas(s)) return false;
         const t = new Date(s.ts).getTime();
         return !Number.isNaN(t) && t >= from && t <= to;
       }),
+    [data, from, to],
+  );
+
+  /** Quantos ficaram de fora por terem sido marcados como inválidos — dito na tela. */
+  const invalidos = useMemo(
+    () =>
+      (data?.submissions ?? []).filter((s: Submission) => {
+        if (!s.ts || contaNasMetricas(s)) return false;
+        const t = new Date(s.ts).getTime();
+        return !Number.isNaN(t) && t >= from && t <= to;
+      }).length,
     [data, from, to],
   );
 
@@ -173,7 +186,7 @@ export default function AdminInsightsPage() {
     const janela = to - from;
     if (!Number.isFinite(janela) || janela <= 0 || preset === "all") return null;
     return (data?.submissions ?? []).filter((s: Submission) => {
-      if (!s.ts) return false;
+      if (!s.ts || !contaNasMetricas(s)) return false;
       const t = new Date(s.ts).getTime();
       return !Number.isNaN(t) && t >= from - janela && t < from;
     }).length;
@@ -367,6 +380,13 @@ export default function AdminInsightsPage() {
             detalhe={porOrigem[0] ? `${porOrigem[0].valor} leads` : "no data yet"}
           />
         </div>
+
+        {invalidos > 0 && (
+          <p className="-mt-3 mb-6 text-xs text-gray-500">
+            {invalidos} lead{invalidos === 1 ? "" : "s"} marked invalid in this period{" "}
+            {invalidos === 1 ? "is" : "are"} left out of these numbers.
+          </p>
+        )}
 
         <div className="mb-6 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
           <div className="mb-5 flex flex-wrap items-start justify-between gap-3">

@@ -87,7 +87,18 @@ export type Submission = {
   email_error?: string | null;
   /** De onde veio, medido — não o que a pessoa declarou em `source`. */
   attribution?: Atribuicao | null;
+  /** Marcado no painel como válido ou inválido (review.php). Sem marcação: ainda não revisado. */
+  review?: { status: Revisao; at?: string } | null;
 };
+
+export type Revisao = "valid" | "invalid";
+
+/**
+ * O que entra nas contas de Insights e Attribution: lead que não foi marcado
+ * como inválido. Spam e teste inflariam o volume e a conversão dos canais;
+ * lead ainda não revisado conta, porque a maioria é de verdade.
+ */
+export const contaNasMetricas = (s: Submission) => s.review?.status !== "invalid";
 
 /** Nome para exibição. */
 export function nomeDoLead(s: Submission): string {

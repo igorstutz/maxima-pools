@@ -48,7 +48,12 @@ $callsRaw    = read_jsonl(ADMIN_PRIVATE_DIR . '/call-clicks.log', 20000);
 // Jornadas gravadas antes da revisão 2 do rastreador têm uma sessão falsa
 // "Organic Search" depois do clique no anúncio. Ver attr_consertar().
 require_once __DIR__ . '/../attribution-parse.php';
+// Válido/inválido, marcado no painel (review.php). Fica fora do log porque o id
+// do lead é o hash da linha: reescrevê-la perderia o lead de vista.
+$revisoes = json_decode((string)@file_get_contents(ADMIN_PRIVATE_DIR . '/lead-review.json'), true);
+$revisoes = is_array($revisoes) ? $revisoes : [];
 foreach ($submissions as &$s) {
+    if (isset($s['id'], $revisoes[$s['id']]) && is_array($revisoes[$s['id']])) $s['review'] = $revisoes[$s['id']];
     if (is_array($s['attribution'] ?? null)) $s['attribution'] = attr_consertar_ia(attr_consertar($s['attribution']));
 }
 unset($s);

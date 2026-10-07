@@ -27,6 +27,7 @@ import {
   AdminNav,
   PeriodFilter,
   canalDoLead,
+  contaNasMetricas,
   useAdminData,
   useDateRange,
   type Atribuicao,
@@ -106,7 +107,14 @@ export default function AdminAttributionPage() {
   };
 
   const leads = useMemo(
-    () => (data?.submissions ?? []).filter((s) => noPeriodo(s.ts)),
+    () => (data?.submissions ?? []).filter((s) => contaNasMetricas(s) && noPeriodo(s.ts)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [data, from, to],
+  );
+  // Inválido não é contato: spam derrubaria a conversão justamente do canal
+  // que o atraiu. Fica de fora, e a tela diz quantos.
+  const invalidos = useMemo(
+    () => (data?.submissions ?? []).filter((s) => !contaNasMetricas(s) && noPeriodo(s.ts)).length,
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [data, from, to],
   );
@@ -296,6 +304,13 @@ export default function AdminAttributionPage() {
             detalhe={porCanal[0] ? `${porCanal[0].valor} contacts` : "no data yet"}
           />
         </div>
+
+        {invalidos > 0 && (
+          <p className="-mt-3 mb-6 text-xs text-gray-500">
+            {invalidos} lead{invalidos === 1 ? "" : "s"} marked invalid in this period{" "}
+            {invalidos === 1 ? "is" : "are"} left out of these numbers.
+          </p>
+        )}
 
         <Cartao
           titulo="Contacts by channel"
