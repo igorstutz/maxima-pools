@@ -162,6 +162,18 @@ export function classificar(url: URL, referrer: string): Toque {
     };
   }
 
+  // 1b. Anúncio do Google sem gclid: o Google às vezes manda só gad_source e
+  // gad_campaignid (visto em 2026-10-04). Sem identificador de clique não dá
+  // para mandar conversão ao Ads, mas o canal é certo — sem isto virava "Direct".
+  if (p.get("gad_source") || p.get("gad_campaignid")) {
+    return {
+      ...base,
+      channel: "Google Ads",
+      source: utmSource || "google",
+      medium: utmMedium || "cpc",
+    };
+  }
+
   // 2. UTM declarada pela campanha.
   if (utmMedium || utmSource) {
     const porMeio = (): string => {

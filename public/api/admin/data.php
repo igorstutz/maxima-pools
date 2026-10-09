@@ -113,6 +113,11 @@ for ($i = 0; $i < 13; $i++) {
         if ($ts === '') continue;
         $dia = substr($ts, 0, 10);
         $canal = attr_canal_ia((string)($s['channel'] ?? 'Direct'), (string)($s['source'] ?? ''));
+        // Anúncio do Google que chegou só com gad_source, sem gclid: o rastreador
+        // antigo gravava "Direct". Corrigido em attribution.ts; isto acerta o log.
+        if ($canal === 'Direct' && preg_match('/[?&]gad_(source|campaignid)=/', (string)($s['landing'] ?? ''))) {
+            $canal = 'Google Ads';
+        }
         $chave = $dia . '|' . $canal;
         if (!isset($sessions[$chave])) {
             $sessions[$chave] = ['day' => $dia, 'channel' => $canal, 'count' => 0, 'visitors' => []];
